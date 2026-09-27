@@ -1,0 +1,1638 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Chapter 22: Strategies using Exchange Traded Interest Rate Derivatives | NISM Series V-D Notes</title>
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Google Fonts & Lucide Icons -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+  <script src="https://unpkg.com/lucide@latest"></script>
+
+  <!-- KaTeX for formula rendering -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.min.css">
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.min.js"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/contrib/auto-render.min.js" onload="renderMathInElement(document.body);"></script>
+
+  <!-- Global Module & Chapter Navigation Sidebar -->
+    <!-- Modern Documentation Design System & Zoom Engine -->
+  <link rel="stylesheet" href="modern-docs.css">
+  <script defer src="nav-sidebar.js"></script>
+
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+            display: ['"Space Grotesk"', 'sans-serif']
+          },
+          colors: {
+            brand: {
+              50: '#f5f3ff',
+              100: '#ede9fe',
+              500: '#8b5cf6',
+              600: '#7c3aed',
+              700: '#6d28d9',
+            }
+          }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    body { font-family: 'Plus Jakarta Sans', sans-serif; }
+    .exam-highlight {
+      background: linear-gradient(135deg, rgba(254, 243, 199, 0.7), rgba(253, 230, 138, 0.4));
+      border: 1px solid rgba(245, 158, 11, 0.35);
+      border-radius: 14px;
+    }
+    .key-concept {
+      background: linear-gradient(135deg, rgba(245, 243, 255, 0.9), rgba(237, 233, 254, 0.5));
+      border: 1px solid rgba(124, 58, 237, 0.35);
+      border-radius: 14px;
+    }
+    .formula-card {
+      background: linear-gradient(135deg, #1e1b4b 0%, #0f172a 100%);
+    }
+  </style>
+</head>
+<body class="bg-slate-50 text-slate-900 min-h-screen flex flex-col selection:bg-purple-600 selection:text-white">
+
+  <!-- Header -->
+  <header class="sticky top-0 z-50 bg-white/90 backdrop-blur-md border-b border-slate-200">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
+      <div class="flex items-center gap-3">
+        <a href="module3.html" class="flex items-center gap-2 text-slate-500 hover:text-slate-900 transition-colors">
+          <div class="w-9 h-9 rounded-xl bg-purple-50 hover:bg-purple-100 flex items-center justify-center text-purple-700 transition-colors">
+            <i data-lucide="arrow-left" class="w-4 h-4"></i>
+          </div>
+        </a>
+        <div>
+          <div class="flex items-center gap-2">
+            <span class="text-xs font-bold uppercase tracking-wider text-purple-600 bg-purple-50 px-2 py-0.5 rounded">Module 3</span>
+            <span class="text-xs text-slate-400 font-medium">Chapter 22 of 22</span>
+          </div>
+          <h1 class="font-display font-bold text-base sm:text-lg text-slate-900 leading-tight">Strategies using Exchange Traded Interest Rate Derivatives</h1>
+        </div>
+      </div>
+
+      <!-- Chapter Navigation & Weightage -->
+      <div class="flex items-center gap-3">
+        <span class="hidden sm:inline-flex items-center gap-1 px-3 py-1 rounded-full text-xs font-bold bg-amber-50 text-amber-700 border border-amber-200">
+          <i data-lucide="award" class="w-3.5 h-3.5"></i>
+          Weightage: 6 Marks
+        </span>
+        <a href="#interactive-quiz" class="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-lg text-xs font-bold bg-purple-600 hover:bg-purple-700 text-white shadow-sm transition-all">
+          <i data-lucide="help-circle" class="w-3.5 h-3.5"></i>
+          <span>Chapter Quiz (12 MCQs)</span>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Grid Layout -->
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 grid grid-cols-1 lg:grid-cols-12 gap-8 flex-grow">
+    
+    <!-- Table of Contents Sidebar (Desktop) -->
+    <aside class="hidden lg:block lg:col-span-3">
+      <div class="sticky top-24 space-y-4">
+        <!-- Chapter Switcher (3 Module Dropdowns) -->
+        <div id="sidebar-chapter-switcher"></div>
+
+        <div class="bg-white p-5 rounded-2xl border border-slate-200 shadow-sm max-h-[calc(100vh-120px)] overflow-y-auto">
+          <h2 class="text-xs font-bold text-slate-400 uppercase tracking-wider mb-3">Chapter 22 Contents</h2>
+          <nav class="space-y-1 text-xs">
+            <a href="#section-1" class="block px-2.5 py-1.5 rounded-lg text-slate-600 hover:bg-purple-50 hover:text-purple-700 transition-colors">22.1 Market Participants (⚡ Fast-Track)</a>
+            <a href="#section-2" class="block px-2.5 py-1.5 rounded-lg text-amber-800 font-semibold bg-amber-50/70 hover:bg-amber-100 transition-colors">22.2 Hedging with ETIRD (⭐ High Yield)</a>
+            <a href="#section-2-1" class="block pl-5 py-1 text-slate-500 hover:text-purple-600 text-[11px]">&bull; Short Hedge (3 Scenarios)</a>
+            <a href="#section-2-2" class="block pl-5 py-1 text-slate-500 hover:text-purple-600 text-[11px]">&bull; Duration Hedge Ratio Formula</a>
+            <a href="#section-2-3" class="block pl-5 py-1 text-slate-500 hover:text-purple-600 text-[11px]">&bull; Hedging Future Borrowings</a>
+            <a href="#section-2-4" class="block pl-5 py-1 text-slate-500 hover:text-purple-600 text-[11px]">&bull; Long Hedge (Cash Inflows)</a>
+            <a href="#section-2-5" class="block pl-5 py-1 text-slate-500 hover:text-purple-600 text-[11px]">&bull; Short vs. Long Hedge Master Matrix</a>
+            <a href="#section-3" class="block px-2.5 py-1.5 rounded-lg text-amber-800 font-semibold bg-amber-50/70 hover:bg-amber-100 transition-colors">22.3 Option Strategies on Bonds (⭐ High Yield)</a>
+            <a href="#section-3-1" class="block pl-5 py-1 text-slate-500 hover:text-purple-600 text-[11px]">&bull; Vertical Spreads (Debit & Credit)</a>
+            <a href="#section-3-2" class="block pl-5 py-1 text-slate-500 hover:text-purple-600 text-[11px]">&bull; Straddle & Strangle Payoffs</a>
+            <a href="#section-3-3" class="block pl-5 py-1 text-slate-500 hover:text-purple-600 text-[11px]">&bull; Covered Call & Protective Put</a>
+            <a href="#section-3-4" class="block pl-5 py-1 text-slate-500 hover:text-purple-600 text-[11px]">&bull; Long Call Butterfly Spread</a>
+            <a href="#section-3-5" class="block pl-5 py-1 text-slate-500 hover:text-purple-600 text-[11px]">&bull; Options Master Payoff Summary</a>
+            <a href="#section-4" class="block px-2.5 py-1.5 rounded-lg text-slate-600 hover:bg-purple-50 hover:text-purple-700 transition-colors">22.4 Speculative Trading & Duration</a>
+            <a href="#section-4-1" class="block pl-5 py-1 text-slate-500 hover:text-purple-600 text-[11px]">&bull; View-Based Trading & Short Sale Ban</a>
+            <a href="#section-4-2" class="block pl-5 py-1 text-slate-500 hover:text-purple-600 text-[11px]">&bull; Lengthening vs. Shortening Duration</a>
+            <a href="#section-5" class="block px-2.5 py-1.5 rounded-lg text-amber-800 font-semibold bg-amber-50/70 hover:bg-amber-100 transition-colors">22.5 Arbitrage & Synthetic Securities (⭐)</a>
+            <a href="#section-5-1" class="block pl-5 py-1 text-slate-500 hover:text-purple-600 text-[11px]">&bull; Regular Cash-and-Carry Arbitrage</a>
+            <a href="#section-5-2" class="block pl-5 py-1 text-slate-500 hover:text-purple-600 text-[11px]">&bull; Reverse Cash-and-Carry Arbitrage</a>
+            <a href="#section-5-3" class="block pl-5 py-1 text-slate-500 hover:text-purple-600 text-[11px]">&bull; Synthetic 3M T-Bills for Yield Pick-up</a>
+            <a href="#section-5-4" class="block pl-5 py-1 text-slate-500 hover:text-purple-600 text-[11px]">&bull; Arbitrage Risks & Market Frictions</a>
+            <a href="#section-6" class="block px-2.5 py-1.5 rounded-lg text-slate-600 hover:bg-purple-50 hover:text-purple-700 transition-colors">22.6 Spread Trading using ETIRD</a>
+            <a href="#section-6-1" class="block pl-5 py-1 text-slate-500 hover:text-purple-600 text-[11px]">&bull; Basis Trading Mechanics</a>
+            <a href="#section-6-2" class="block pl-5 py-1 text-slate-500 hover:text-purple-600 text-[11px]">&bull; Calendar Spreads (Time Spreads)</a>
+            <a href="#section-6-3" class="block pl-5 py-1 text-slate-500 hover:text-purple-600 text-[11px]">&bull; Inter-Bond Spreads (Steepener vs Flattener)</a>
+            <a href="#section-7" class="block px-2.5 py-1.5 rounded-lg text-rose-800 font-semibold bg-rose-50/70 hover:bg-rose-100 transition-colors">22.7 Limitations of ETIRD (Hedger Risks ⭐)</a>
+            <a href="#section-7-1" class="block pl-5 py-1 text-slate-500 hover:text-purple-600 text-[11px]">&bull; The 5 Key Hedging Limitations</a>
+            <a href="#section-7-2" class="block pl-5 py-1 text-slate-500 hover:text-purple-600 text-[11px]">&bull; Advantages vs Limitations Scorecard</a>
+            <a href="#interactive-quiz" class="block px-2.5 py-1.5 rounded-lg text-purple-700 font-bold bg-purple-50 hover:bg-purple-100 transition-colors mt-2">Practice Quiz (12 Questions)</a>
+          </nav>
+        </div>
+
+        <!-- Quick Exam Focus Card -->
+        <div class="p-4 rounded-2xl bg-gradient-to-br from-purple-700 to-indigo-800 text-white shadow-sm text-xs">
+          <div class="flex items-center gap-1.5 font-bold mb-1.5">
+            <i data-lucide="zap" class="w-4 h-4 text-amber-300"></i>
+            <span>Exam Focus Insights (6 Marks)</span>
+          </div>
+          <p class="text-purple-100 leading-relaxed space-y-1.5">
+            <span>Frequently tested formulas & concepts in Chapter 22:</span><br>
+            <strong>1. Duration Hedge Ratio:</strong> \(N = \frac{MD_p \times V_p}{MD_f \times P_f \times \text{Lot Size}}\).<br>
+            <strong>2. Basis Risk:</strong> Difference between Spot & Futures prices; convex curvature error.<br>
+            <strong>3. Synthetic Securities:</strong> Long 15Y Bond + Short 3M IRF = Synthetic 3M T-Bill.<br>
+            <strong>4. Spreads:</strong> Bull put & Bear call are <em>Credit Spreads</em>; Bull call & Bear put are <em>Debit Spreads</em>.<br>
+            <strong>5. Yield Curve Plays:</strong> Steepener (Long 5Y, Short 10Y) vs. Flattener (Long 10Y, Short 5Y).
+          </p>
+        </div>
+      </div>
+    </aside>
+
+    <!-- Main Study Notes Area -->
+    <div class="lg:col-span-9 space-y-10">
+
+      <!-- Topic 22.1: Market Participants (Fast-Track Refresher) -->
+      <section id="section-1" class="bg-white rounded-3xl p-6 sm:p-8 border border-slate-200/90 shadow-sm space-y-5">
+        <div class="flex items-center justify-between">
+          <div class="flex items-center gap-2 text-xs font-bold text-slate-500 uppercase tracking-wider">
+            <span class="w-2 h-2 rounded-full bg-slate-400"></span> Section 22.1 &bull; ⚡ Fast-Track Refresher
+          </div>
+          <span class="px-2 py-0.5 rounded text-[11px] font-semibold bg-slate-100 text-slate-600">Core Foundations</span>
+        </div>
+        <h2 class="font-display text-xl sm:text-2xl font-bold text-slate-900">Market Participants in Interest Rate Derivatives</h2>
+        <p class="text-xs sm:text-sm text-slate-600 leading-relaxed">
+          The participants in Exchange Traded Interest Rate Derivatives (ETIRD) are broadly classified into three categories based on their commercial exposure, risk profile, and trading objectives:
+        </p>
+
+        <!-- Participants Comparison Cards -->
+        <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 text-xs sm:text-sm">
+          <div class="p-4 bg-slate-50 rounded-2xl border border-slate-200 space-y-2">
+            <div class="flex items-center gap-2 text-purple-700 font-bold">
+              <i data-lucide="shield-check" class="w-4 h-4"></i>
+              <span>1. Hedgers</span>
+            </div>
+            <p class="text-slate-600 text-xs leading-relaxed">
+              <strong>Real Commercial Exposure:</strong> Own balance sheet exposure to interest rate fluctuations (e.g. mutual funds holding bonds, banks, primary dealers, insurers, or corporate debt issuers).
+            </p>
+            <p class="text-slate-600 text-xs leading-relaxed">
+              <strong>Primary Objective:</strong> Neutralize or transfer price risk to lock in portfolio valuation or fix future borrowing / investment yields.
+            </p>
+          </div>
+
+          <div class="p-4 bg-slate-50 rounded-2xl border border-slate-200 space-y-2">
+            <div class="flex items-center gap-2 text-blue-700 font-bold">
+              <i data-lucide="trending-up" class="w-4 h-4"></i>
+              <span>2. Speculators / Traders</span>
+            </div>
+            <p class="text-slate-600 text-xs leading-relaxed">
+              <strong>No Commercial Exposure:</strong> Assume interest rate risk voluntarily by taking directional views on yield curve movements.
+            </p>
+            <p class="text-slate-600 text-xs leading-relaxed">
+              <strong>Vital Market Function:</strong> Act as counterparties to hedgers and inject essential liquidity and trading depth into the exchange order books.
+            </p>
+          </div>
+
+          <div class="p-4 bg-slate-50 rounded-2xl border border-slate-200 space-y-2">
+            <div class="flex items-center gap-2 text-emerald-700 font-bold">
+              <i data-lucide="scale" class="w-4 h-4"></i>
+              <span>3. Arbitrageurs</span>
+            </div>
+            <p class="text-slate-600 text-xs leading-relaxed">
+              <strong>Lock in Risk-Free Spreads:</strong> Continuously identify price discrepancies between cash and derivatives markets, or across contracts.
+            </p>
+            <p class="text-slate-600 text-xs leading-relaxed">
+              <strong>Market Function:</strong> Simultaneously enter offsetting positions to capture mispricings without directional risk, enforcing price discovery equilibrium.
+            </p>
+          </div>
+        </div>
+
+        <!-- Participants Comparison Table -->
+        <div class="overflow-x-auto rounded-xl border border-slate-200">
+          <table class="w-full text-left text-xs border-collapse">
+            <thead class="bg-slate-100/80 text-slate-700 font-bold uppercase text-[11px] tracking-wider">
+              <tr>
+                <th class="p-3 border-b border-slate-200">Parameter</th>
+                <th class="p-3 border-b border-slate-200 text-purple-800">Hedger</th>
+                <th class="p-3 border-b border-slate-200 text-blue-800">Speculator</th>
+                <th class="p-3 border-b border-slate-200 text-emerald-800">Arbitrageur</th>
+              </tr>
+            </thead>
+            <tbody class="divide-y divide-slate-200 bg-white">
+              <tr>
+                <td class="p-3 font-semibold text-slate-900">Underlying Risk Exposure</td>
+                <td class="p-3 text-slate-600">Yes (owns bond portfolio or future borrowing/lending obligation)</td>
+                <td class="p-3 text-slate-600">No underlying commercial asset exposure</td>
+                <td class="p-3 text-slate-600">Directional exposure neutralized through offsetting legs</td>
+              </tr>
+              <tr>
+                <td class="p-3 font-semibold text-slate-900">Primary Objective</td>
+                <td class="p-3 text-slate-600">Eliminate/mitigate interest rate price risk</td>
+                <td class="p-3 text-slate-600">Earn leveraged returns from directional market moves</td>
+                <td class="p-3 text-slate-600">Lock in risk-free spread between mispriced instruments</td>
+              </tr>
+              <tr>
+                <td class="p-3 font-semibold text-slate-900">Position Structure</td>
+                <td class="p-3 text-slate-600">Covered / Hedged against physical cash holding</td>
+                <td class="p-3 text-slate-600">Naked leveraged derivative contracts</td>
+                <td class="p-3 text-slate-600">Simultaneous opposite long and short positions</td>
+              </tr>
+              <tr>
+                <td class="p-3 font-semibold text-slate-900">Market Role</td>
+                <td class="p-3 text-slate-600">Risk transfer demand</td>
+                <td class="p-3 text-slate-600">Provides continuous liquidity and absorbs price risk</td>
+                <td class="p-3 text-slate-600">Enforces pricing efficiency and eliminates mispricings</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <!-- Topic 22.2: Hedging with ETIRD (Deep-Dive ⭐) -->
+      <section id="section-2" class="bg-white rounded-3xl p-6 sm:p-8 border border-slate-200/90 shadow-sm space-y-6">
+        <div class="flex items-center justify-between">
+          <div class="flex items-center gap-2 text-xs font-bold text-amber-700 uppercase tracking-wider">
+            <span class="w-2 h-2 rounded-full bg-amber-500"></span> Section 22.2 &bull; ⭐ Super High Exam Yield
+          </div>
+          <span class="px-2.5 py-0.5 rounded text-[11px] font-bold bg-amber-100 text-amber-800">Critical Core Strategies</span>
+        </div>
+        <h2 class="font-display text-xl sm:text-2xl font-bold text-slate-900">Hedging through Exchange Traded Interest Rate Derivatives</h2>
+        <p class="text-xs sm:text-sm text-slate-600 leading-relaxed">
+          Before entering any hedging or trading transaction in ETIRD, a market participant must establish three foundational parameters:
+        </p>
+
+        <!-- 3 Parameters Table -->
+        <div class="overflow-x-auto rounded-2xl border border-slate-200">
+          <table class="w-full text-left text-xs border-collapse">
+            <thead class="bg-purple-50 text-purple-900 font-bold uppercase text-[11px] tracking-wider">
+              <tr>
+                <th class="p-3 border-b border-purple-200">Parameter</th>
+                <th class="p-3 border-b border-purple-200">Basis of Selection</th>
+                <th class="p-3 border-b border-purple-200">Practical Application in India</th>
+              </tr>
+            </thead>
+            <tbody class="divide-y divide-slate-200 bg-white">
+              <tr>
+                <td class="p-3 font-bold text-slate-900">1. Instrument</td>
+                <td class="p-3 text-slate-700">Linked to the <strong>tenor</strong> of interest rate being hedged.</td>
+                <td class="p-3 text-slate-600">For 3-Month rates &rarr; <strong>91-Day T-Bill futures</strong>.<br>For 10-Year rates &rarr; <strong>10Y GOI Bond futures or options</strong>.</td>
+              </tr>
+              <tr>
+                <td class="p-3 font-bold text-slate-900">2. Market Side</td>
+                <td class="p-3 text-slate-700">Linked to the <strong>expected direction</strong> of rates & inverse bond price relationship.</td>
+                <td class="p-3 text-slate-600">
+                  <div class="space-y-1">
+                    <div><strong>Rates expected to Increase (Bond Prices Fall):</strong> Short GOI bond futures, Buy GOI bond Put options, Sell T-Bills futures, Buy Overnight MIBOR futures.</div>
+                    <div><strong>Rates expected to Decrease (Bond Prices Rise):</strong> Buy GOI bond futures, Buy GOI bond Call options, Buy T-Bills futures, Sell Overnight MIBOR futures.</div>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td class="p-3 font-bold text-slate-900">3. Contract Month</td>
+                <td class="p-3 text-slate-700">Linked to the <strong>timing</strong> of expected rate change or cash obligation.</td>
+                <td class="p-3 text-slate-600">Expiry month must closely align with the date cash obligation is anticipated (e.g. 1-month or 3-month contract).</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <!-- 22.2.1 Short Hedge Deep-Dive -->
+        <div id="section-2-1" class="pt-4 border-t border-slate-200 space-y-4">
+          <div class="flex items-center gap-2">
+            <span class="px-2 py-0.5 rounded text-xs font-bold bg-purple-100 text-purple-800">22.2.1</span>
+            <h3 class="font-display text-lg sm:text-xl font-bold text-slate-900">Short Hedge: Protecting Existing Bond Portfolios Against Rising Yields</h3>
+          </div>
+          <p class="text-xs sm:text-sm text-slate-600 leading-relaxed">
+            A fixed-income portfolio holder is <strong>long on debt securities</strong> and naturally <strong>short on interest rates</strong>. When interest rates rise, bond prices fall, triggering mark-to-market (MTM) losses. To protect against this price decline, the investor executes a <strong>Short Hedge</strong> by selling bond futures contracts. Any MTM decline on the physical bonds is cushioned by gains on the short futures position.
+          </p>
+
+          <!-- Textbook Case Study: 3 Scenarios -->
+          <div class="p-5 rounded-2xl bg-amber-50/60 border border-amber-200 space-y-3">
+            <div class="flex items-center justify-between">
+              <span class="text-xs font-bold text-amber-900 uppercase tracking-wide flex items-center gap-1.5">
+                <i data-lucide="book-open" class="w-4 h-4 text-amber-600"></i> Textbook Case Study &bull; 3 Scenario Comparison (Sep-Oct 2021)
+              </span>
+              <span class="text-[11px] font-semibold text-amber-700 bg-amber-100 px-2 py-0.5 rounded">Super High Exam Yield</span>
+            </div>
+            <p class="text-xs sm:text-sm text-slate-700 leading-relaxed">
+              <strong>Context:</strong> On September 20, 2021, an investor holds <strong>₹5.00 Crore</strong> of 6.10% GOI 2031 at clean price ₹100.00 (Yield 6.10%). RBI's monetary policy review is scheduled in October 2021. The investor expects yields to increase (bond prices to fall) and anticipates a new bond issuance at a higher coupon in late October. What are the investor's three choices?
+            </p>
+            <div class="grid grid-cols-1 sm:grid-cols-3 gap-3 text-xs">
+              <div class="p-3 bg-white rounded-xl border border-amber-200">
+                <strong>Scenario I:</strong> Sell bond immediately & invest proceeds in short-term T-Bills @ 3.20% for 38 days.
+              </div>
+              <div class="p-3 bg-white rounded-xl border border-amber-200">
+                <strong>Scenario II:</strong> Hold bond unhedged till October 28, 2021.
+              </div>
+              <div class="p-3 bg-white rounded-xl border border-amber-200">
+                <strong>Scenario III:</strong> Hold bond and hedge with IRF (Sell 250 lots of Oct 2021 expiry at ₹99.95).
+              </div>
+            </div>
+          </div>
+
+          <!-- 3 Scenarios Full Comparison Table -->
+          <div class="overflow-x-auto rounded-2xl border border-slate-200 shadow-sm">
+            <table class="w-full text-left text-xs border-collapse">
+              <thead class="bg-slate-900 text-white font-bold uppercase text-[11px] tracking-wider">
+                <tr>
+                  <th class="p-3">Calculation Element</th>
+                  <th class="p-3 text-slate-300">Scenario I (Sell Bond & Buy T-Bills)</th>
+                  <th class="p-3 text-rose-300">Scenario II (Hold Bond Unhedged)</th>
+                  <th class="p-3 text-emerald-300">Scenario III (Hold Bond & Hedge with IRF)</th>
+                </tr>
+              </thead>
+              <tbody class="divide-y divide-slate-200 bg-white">
+                <tr>
+                  <td class="p-3 font-semibold text-slate-900">Trade Date & Clean Price</td>
+                  <td class="p-3 text-slate-600">Sep 20, 2021 @ ₹100.00</td>
+                  <td class="p-3 text-slate-600">Oct 28, 2021 @ ₹98.36 (Yield 6.32%)</td>
+                  <td class="p-3 text-slate-600">Oct 28, 2021 @ ₹98.36 (Yield 6.32%)</td>
+                </tr>
+                <tr>
+                  <td class="p-3 font-semibold text-slate-900">Settlement Date (T+1)</td>
+                  <td class="p-3 text-slate-600">Sep 21, 2021</td>
+                  <td class="p-3 text-slate-600">Oct 29, 2021</td>
+                  <td class="p-3 text-slate-600">Oct 29, 2021</td>
+                </tr>
+                <tr>
+                  <td class="p-3 font-semibold text-slate-900">Accrued Interest on Bond</td>
+                  <td class="p-3 text-slate-600">₹1.169167 (69 days, 30/360 basis)</td>
+                  <td class="p-3 text-slate-600">₹1.81306 (107 days, 30/360 basis)</td>
+                  <td class="p-3 text-slate-600">₹1.81306 (107 days, 30/360 basis)</td>
+                </tr>
+                <tr>
+                  <td class="p-3 font-semibold text-slate-900">Underlying Consideration (A)</td>
+                  <td class="p-3 text-slate-600">₹50,584,583.33 deployed in T-Bills</td>
+                  <td class="p-3 font-bold text-rose-700">₹50,086,527.78</td>
+                  <td class="p-3 font-semibold text-slate-700">₹50,086,527.78</td>
+                </tr>
+                <tr>
+                  <td class="p-3 font-semibold text-slate-900">Interest / Derivatives Profit (B)</td>
+                  <td class="p-3 text-slate-600">T-Bills return (38 days @ 3.20%) = <strong>₹168,522.89</strong></td>
+                  <td class="p-3 text-slate-400">Nil (No derivative position)</td>
+                  <td class="p-3 font-bold text-emerald-700">
+                    Profit on Short IRF = (99.95 - 98.36) &times; 250 &times; 2,000 = <strong>₹7,95,000.00</strong>
+                  </td>
+                </tr>
+                <tr class="bg-slate-50 font-bold">
+                  <td class="p-3 text-slate-900">Total Amount Available on Expiry</td>
+                  <td class="p-3 text-slate-800">₹50,753,106.22 (₹5.075 Cr)</td>
+                  <td class="p-3 text-rose-700">₹50,086,527.78 (₹5.008 Cr)</td>
+                  <td class="p-3 text-emerald-700 bg-emerald-50/70 rounded-r-lg font-bold">
+                    ₹50,881,527.78 (₹5.088 Cr) ⭐ Highest!
+                  </td>
+                </tr>
+                <tr>
+                  <td class="p-3 font-semibold text-slate-900">Key Advantage</td>
+                  <td class="p-3 text-slate-600">Eliminates interest rate risk entirely</td>
+                  <td class="p-3 text-slate-600">Earns full accrued bond coupon; gains if yield falls</td>
+                  <td class="p-3 text-emerald-800 font-semibold">Earns higher bond accrued coupon + locks in selling price</td>
+                </tr>
+                <tr>
+                  <td class="p-3 font-semibold text-slate-900">Key Limitation</td>
+                  <td class="p-3 text-slate-600">Forfeits higher coupon on bond holding</td>
+                  <td class="p-3 text-rose-700 font-medium">Suffers major capital loss as yields rise</td>
+                  <td class="p-3 text-slate-600">Subject to basis risk, impact costs, and foregoes price appreciation if yields fall</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <!-- 22.2.2 Portfolio-Based Hedging & Duration-Based Hedge Ratio -->
+        <div id="section-2-2" class="pt-6 border-t border-slate-200 space-y-4">
+          <div class="flex items-center gap-2">
+            <span class="px-2 py-0.5 rounded text-xs font-bold bg-amber-100 text-amber-800">22.2.2</span>
+            <h3 class="font-display text-lg sm:text-xl font-bold text-slate-900">Portfolio-Based Hedging & Duration-Based Hedge Ratio ⭐</h3>
+          </div>
+          <p class="text-xs sm:text-sm text-slate-600 leading-relaxed">
+            In reality, institutional investors manage diversified bond portfolios consisting of multiple securities with varying maturities and coupons. Standardized IRF contracts are available only on select benchmark G-Secs. To immunize the portfolio or alter its duration, managers calculate the <strong>Duration-Based Hedge Ratio</strong>:
+          </p>
+
+          <!-- Mathematical Derivation & Formula Card -->
+          <div class="p-5 rounded-2xl formula-card text-white space-y-3">
+            <div class="flex items-center justify-between border-b border-indigo-800/80 pb-2">
+              <span class="text-xs font-bold text-amber-300 uppercase tracking-wider">Mathematical Foundation & Formulas</span>
+              <span class="text-xs text-indigo-300">NISM Workbook Core Equation</span>
+            </div>
+            <p class="text-xs text-slate-300 leading-relaxed">
+              To neutralize portfolio sensitivity to small yield changes ($\Delta V_P + N \cdot \Delta V_F = 0$), where $\Delta V \approx -MD \cdot V \cdot \Delta y$:
+            </p>
+            <div class="py-2 text-center text-sm sm:text-base font-display text-purple-200">
+              $$HR = \frac{MD_{\text{portfolio}} \times V_{\text{portfolio}}}{MD_{\text{ctd}} \times P_{\text{ctd}}}$$
+            </div>
+            <div class="p-3 rounded-xl bg-white/5 border border-white/10 text-xs sm:text-sm space-y-2">
+              <div class="font-mono text-amber-300 font-bold">
+                Formula for Number of Futures Contracts (N):
+              </div>
+              <div class="text-center font-display text-base text-white py-1">
+                $$N = \frac{MD_P \times V_P}{MD_F \times P_F \times \text{Lot Size}}$$
+              </div>
+              <p class="text-slate-300 text-xs">
+                Where \(MD_P\) = Portfolio Modified Duration, \(V_P\) = Portfolio Market Value, \(MD_F\) = Futures Modified Duration, \(P_F\) = Futures Price per unit, and \(\text{Lot Size} = 2,000\) units (Face value ₹2 Lakhs per contract).
+              </p>
+            </div>
+          </div>
+
+          <!-- Numerical Problem Step-by-Step -->
+          <div class="p-5 rounded-2xl bg-slate-900 text-white space-y-3">
+            <div class="flex items-center justify-between border-b border-slate-800 pb-2">
+              <span class="text-xs font-bold text-amber-400 uppercase tracking-wider">Textbook Numerical Problem (Exam Favorite)</span>
+              <span class="text-xs text-slate-400">Step-by-Step Solution</span>
+            </div>
+            <p class="text-xs sm:text-sm text-slate-300 leading-relaxed">
+              <strong>Question:</strong> An investor holds a <strong>₹26.00 Crore</strong> portfolio of GOI bonds with a portfolio modified duration of <strong>6.1</strong>. The 1-month GOI bond futures contract duration is <strong>4.7</strong> and trades at <strong>₹98.50</strong> (Lot size = 2,000 units). How many futures contracts are needed to fully hedge the portfolio?
+            </p>
+            <div class="p-3.5 rounded-xl bg-white/5 border border-white/10 text-xs sm:text-sm font-mono space-y-2 text-slate-200">
+              <div><strong>Step 1: Calculate Numerator (Dollar Duration of Portfolio)</strong></div>
+              <div class="text-slate-300">= 26,00,00,000 &times; 6.1 = <strong>1,58,60,00,000</strong></div>
+              <div><strong>Step 2: Calculate Denominator (Dollar Duration of 1 Futures Contract)</strong></div>
+              <div class="text-slate-300">= 98.50 &times; 4.7 &times; 2,000 = <strong>9,25,900</strong></div>
+              <div class="pt-1 text-emerald-400 font-bold">
+                Step 3: Solve for N = \(\frac{1,586,000,000}{925,900} = 1,712.92 \approx\) <strong>1,713 Lots</strong>
+              </div>
+            </div>
+
+            <!-- Target Duration Adjustment Formula -->
+            <div class="p-3 rounded-xl bg-indigo-950/60 border border-indigo-700/50 text-xs text-indigo-200 space-y-1">
+              <span class="font-bold text-indigo-300">Target Duration Formula (Altering Duration):</span>
+              <p>If instead of full immunization (target duration = 0), the manager wants to adjust portfolio duration from \(MD_P\) to a target \(MD_T\):</p>
+              <div class="text-center font-mono text-sm text-white py-1">
+                $$N = \frac{(MD_T - MD_P) \times V_P}{MD_F \times P_F \times \text{Lot Size}}$$
+              </div>
+              <p class="text-indigo-300 text-[11px]">If \(MD_T < MD_P\), \(N\) is negative (sell futures to shorten duration). If \(MD_T > MD_P\), \(N\) is positive (buy futures to lengthen duration).</p>
+            </div>
+
+            <div class="p-3 bg-amber-500/10 rounded-xl border border-amber-500/30 text-xs text-amber-300 flex items-start gap-2">
+              <i data-lucide="alert-triangle" class="w-4 h-4 text-amber-400 shrink-0 mt-0.5"></i>
+              <span><strong>Convexity Limitation:</strong> Duration is a linear first-order approximation valid strictly for <em>marginal yield changes</em>. For substantial yield shifts, the non-linear curvature (<strong>Convexity</strong>) causes actual bond prices to deviate from duration estimates, generating basis risk.</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- 22.2.3 Hedging Future Borrowings & 22.2.4 Long Hedge -->
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 pt-6 border-t border-slate-200">
+          
+          <!-- Hedging Future Borrowing -->
+          <div id="section-2-3" class="p-5 rounded-2xl bg-slate-50 border border-slate-200 space-y-3">
+            <div class="flex items-center gap-2">
+              <span class="px-2 py-0.5 rounded text-xs font-bold bg-blue-100 text-blue-800">22.2.3</span>
+              <h4 class="font-display font-bold text-base text-slate-900">Hedging Future Borrowings</h4>
+            </div>
+            <p class="text-xs text-slate-600 leading-relaxed">
+              <strong>Corporate Need:</strong> A company plans to issue 10-year NCDs after 1 month at a spread of 50 bps over G-Secs. It faces the risk of rising interest rates before the issuance.
+            </p>
+            <div class="p-3 bg-white rounded-xl border border-slate-200 text-xs space-y-1.5">
+              <div>&bull; <strong>Hedge Action:</strong> Sells IRF contracts on Aug 14 @ ₹95.60 (Yield 7.93%).</div>
+              <div>&bull; <strong>At Settlement (Sep 24):</strong> FSP drops to ₹94.80 (Yield rises to 8.08%).</div>
+              <div class="text-emerald-700 font-bold">&bull; Derivatives Gain = ₹0.80 per bond (95.60 - 94.80).</div>
+              <p class="text-slate-500 text-[11px] pt-1">
+                The ₹0.80 gain on IRF offsets the higher coupon payable on the newly issued NCDs, locking in the borrowing cost. <em>(Note: Corporate credit spread widening remains an unhedged basis risk).</em>
+              </p>
+            </div>
+          </div>
+
+          <!-- Long Hedge -->
+          <div id="section-2-4" class="p-5 rounded-2xl bg-slate-50 border border-slate-200 space-y-3">
+            <div class="flex items-center gap-2">
+              <span class="px-2 py-0.5 rounded text-xs font-bold bg-emerald-100 text-emerald-800">22.2.4</span>
+              <h4 class="font-display font-bold text-base text-slate-900">Long Hedge: Locking In Yields for Cash Inflows</h4>
+            </div>
+            <p class="text-xs text-slate-600 leading-relaxed">
+              <strong>Institutional Need:</strong> A life insurance company expects a <strong>₹200 Crore</strong> premium inflow or bond maturity in late March. It fears interest rates will decline (bond prices surge) before the cash can be deployed.
+            </p>
+            <div class="p-3 bg-white rounded-xl border border-slate-200 text-xs space-y-1.5">
+              <div>&bull; <strong>Hedge Action:</strong> Buys 10,000 lots of 6.45% GOI 2029 IRF @ ₹99.60 (Yield 6.51%).</div>
+              <div>&bull; <strong>At Expiry:</strong> Bond price surges to ₹101.58 (Yield drops to 6.23%).</div>
+              <div class="text-emerald-700 font-bold">&bull; Derivatives Profit = (101.58 - 99.60) &times; 10,000 &times; 2,000 = ₹3.96 Crore!</div>
+              <p class="text-slate-500 text-[11px] pt-1">
+                The ₹3.96 Cr profit cushions the lower yield at which the ₹200 Cr cash must now be invested in physical bonds. If rates rose instead (price fell to ₹99.00), futures loss would be ₹1.20 Cr (cost of protection).
+              </p>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- 22.2.5 Master Comparison Table: Short Hedge vs Long Hedge -->
+        <div id="section-2-5" class="pt-6 border-t border-slate-200 space-y-3">
+          <h4 class="font-display font-bold text-sm sm:text-base text-slate-900 flex items-center gap-2">
+            <i data-lucide="split" class="w-4 h-4 text-purple-600"></i>
+            Master Comparison: Short Hedge vs. Long Hedge
+          </h4>
+          <div class="overflow-x-auto rounded-xl border border-slate-200">
+            <table class="w-full text-left text-xs border-collapse">
+              <thead class="bg-slate-100 text-slate-700 font-bold uppercase text-[11px]">
+                <tr>
+                  <th class="p-3">Dimension</th>
+                  <th class="p-3 text-purple-800">Short Hedge (Selling Derivatives)</th>
+                  <th class="p-3 text-emerald-800">Long Hedge (Buying Derivatives)</th>
+                </tr>
+              </thead>
+              <tbody class="divide-y divide-slate-200 bg-white">
+                <tr>
+                  <td class="p-3 font-semibold text-slate-900">Underlying Market Exposure</td>
+                  <td class="p-3 text-slate-600">Holds physical bonds OR plans to borrow money / issue NCDs in future.</td>
+                  <td class="p-3 text-slate-600">Expects cash inflows (premiums, maturity, subscriptions) to invest in future.</td>
+                </tr>
+                <tr>
+                  <td class="p-3 font-semibold text-slate-900">Interest Rate Fear</td>
+                  <td class="p-3 text-slate-600">Interest rates will <strong>rise</strong> &rarr; Bond prices drop / Borrowing cost rises.</td>
+                  <td class="p-3 text-slate-600">Interest rates will <strong>fall</strong> &rarr; Bond prices surge / Reinvestment yield drops.</td>
+                </tr>
+                <tr>
+                  <td class="p-3 font-semibold text-slate-900">Futures Position</td>
+                  <td class="p-3 font-bold text-rose-700">Sell (Short) Bond Futures / T-Bill Futures</td>
+                  <td class="p-3 font-bold text-emerald-700">Buy (Long) Bond Futures / T-Bill Futures</td>
+                </tr>
+                <tr>
+                  <td class="p-3 font-semibold text-slate-900">Alternative Options Leg</td>
+                  <td class="p-3 text-slate-600">Buy Put Option on GOI Bonds (limits risk to premium)</td>
+                  <td class="p-3 text-slate-600">Buy Call Option on GOI Bonds (limits risk to premium)</td>
+                </tr>
+                <tr>
+                  <td class="p-3 font-semibold text-slate-900">Payoff Mechanism</td>
+                  <td class="p-3 text-slate-600">Futures profit offsets portfolio MTM loss or higher coupon paid.</td>
+                  <td class="p-3 text-slate-600">Futures profit supplements cash to compensate for lower reinvestment yield.</td>
+                </tr>
+                <tr>
+                  <td class="p-3 font-semibold text-slate-900">Downside / Adverse Case</td>
+                  <td class="p-3 text-slate-600">If rates fall, investor loses on futures, forfeiting portfolio capital appreciation.</td>
+                  <td class="p-3 text-slate-600">If rates rise, investor suffers futures loss, offsetting higher physical yield.</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+      </section>
+
+      <!-- Topic 22.3: Option Strategies on Bonds (Deep-Dive ⭐) -->
+      <section id="section-3" class="bg-white rounded-3xl p-6 sm:p-8 border border-slate-200/90 shadow-sm space-y-6">
+        <div class="flex items-center justify-between">
+          <div class="flex items-center gap-2 text-xs font-bold text-amber-700 uppercase tracking-wider">
+            <span class="w-2 h-2 rounded-full bg-amber-500"></span> Section 22.3 &bull; ⭐ Super High Exam Yield
+          </div>
+          <span class="px-2.5 py-0.5 rounded text-[11px] font-bold bg-purple-100 text-purple-800">Spreads & Exotic Payoffs</span>
+        </div>
+        <h2 class="font-display text-xl sm:text-2xl font-bold text-slate-900">Option Trading Strategies on Bonds</h2>
+        <p class="text-xs sm:text-sm text-slate-600 leading-relaxed">
+          Exchange Traded Interest Rate Options (ETIRO) allow tailored asymmetric payoff structures. Spreads combine options on the identical underlying GOI security:
+          <strong>Vertical Spreads</strong> have the same expiry with different strikes; 
+          <strong>Horizontal (Calendar) Spreads</strong> have the same strike with different expiries; and 
+          <strong>Diagonal Spreads</strong> differ across both strikes and expiries.
+        </p>
+
+        <!-- 22.3.1 Vertical Spreads Master Grid -->
+        <div id="section-3-1" class="space-y-4">
+          <h3 class="font-display text-lg font-bold text-slate-900 flex items-center gap-2">
+            <i data-lucide="layers" class="w-5 h-5 text-purple-600"></i>
+            Vertical Spreads Matrix (Calls & Puts)
+          </h3>
+
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-4 text-xs">
+            
+            <!-- Bull Call Spread -->
+            <div class="p-4 rounded-2xl bg-slate-50 border border-slate-200 space-y-2">
+              <div class="flex items-center justify-between">
+                <span class="font-bold text-slate-900 text-sm">Bullish Vertical Spread (Using Calls)</span>
+                <span class="px-2 py-0.5 rounded bg-blue-100 text-blue-800 text-[10px] font-bold uppercase">Debit Spread</span>
+              </div>
+              <p class="text-slate-600"><strong>Legs:</strong> Buy Lower Strike Call (\(X_1\)) + Sell Higher Strike Call (\(X_2\)).</p>
+              <div class="p-2.5 bg-white rounded-xl border border-slate-200 space-y-1">
+                <div>&bull; <strong>Textbook Setup:</strong> Buy 98.75 Call @ 0.45, Sell 99.50 Call @ 0.20.</div>
+                <div>&bull; <strong>Net Premium Paid (Max Loss):</strong> 0.45 - 0.20 = <strong>₹0.25</strong>.</div>
+                <div>&bull; <strong>Max Profit:</strong> (99.50 - 98.75) - 0.25 = <strong>₹0.50</strong> (at &ge; ₹99.50).</div>
+                <div>&bull; <strong>BEP:</strong> Lower Strike + Net Debit = 98.75 + 0.25 = <strong>₹99.00</strong>.</div>
+              </div>
+            </div>
+
+            <!-- Bull Put Spread -->
+            <div class="p-4 rounded-2xl bg-slate-50 border border-slate-200 space-y-2">
+              <div class="flex items-center justify-between">
+                <span class="font-bold text-slate-900 text-sm">Bullish Vertical Spread (Using Puts)</span>
+                <span class="px-2 py-0.5 rounded bg-emerald-100 text-emerald-800 text-[10px] font-bold uppercase">Credit Spread</span>
+              </div>
+              <p class="text-slate-600"><strong>Legs:</strong> Sell Higher Strike Put (\(X_2\)) + Buy Lower Strike Put (\(X_1\)).</p>
+              <div class="p-2.5 bg-white rounded-xl border border-slate-200 space-y-1">
+                <div>&bull; <strong>Textbook Setup:</strong> Sell 99.50 Put @ 0.40, Buy 99.00 Put @ 0.10.</div>
+                <div>&bull; <strong>Net Premium Received (Max Profit):</strong> 0.40 - 0.10 = <strong>₹0.30</strong>.</div>
+                <div>&bull; <strong>Max Loss:</strong> (99.50 - 99.00) - 0.30 = <strong>₹0.20</strong> (at &le; ₹99.00).</div>
+                <div>&bull; <strong>BEP:</strong> Higher Strike - Net Credit = 99.50 - 0.30 = <strong>₹99.20</strong>.</div>
+              </div>
+            </div>
+
+            <!-- Bear Call Spread -->
+            <div class="p-4 rounded-2xl bg-slate-50 border border-slate-200 space-y-2">
+              <div class="flex items-center justify-between">
+                <span class="font-bold text-slate-900 text-sm">Bearish Vertical Spread (Using Calls)</span>
+                <span class="px-2 py-0.5 rounded bg-emerald-100 text-emerald-800 text-[10px] font-bold uppercase">Credit Spread</span>
+              </div>
+              <p class="text-slate-600"><strong>Legs:</strong> Sell Lower Strike Call (\(X_1\)) + Buy Higher Strike Call (\(X_2\)).</p>
+              <div class="p-2.5 bg-white rounded-xl border border-slate-200 space-y-1">
+                <div>&bull; <strong>Textbook Setup:</strong> Sell 98.50 Call @ 0.60, Buy 99.25 Call @ 0.20.</div>
+                <div>&bull; <strong>Net Premium Received (Max Profit):</strong> 0.60 - 0.20 = <strong>₹0.40</strong>.</div>
+                <div>&bull; <strong>Max Loss:</strong> (99.25 - 98.50) - 0.40 = <strong>₹0.35</strong> (at &ge; ₹99.25).</div>
+                <div>&bull; <strong>BEP:</strong> Lower Strike + Net Credit = 98.50 + 0.40 = <strong>₹98.90</strong>.</div>
+              </div>
+            </div>
+
+            <!-- Bear Put Spread -->
+            <div class="p-4 rounded-2xl bg-slate-50 border border-slate-200 space-y-2">
+              <div class="flex items-center justify-between">
+                <span class="font-bold text-slate-900 text-sm">Bearish Vertical Spread (Using Puts)</span>
+                <span class="px-2 py-0.5 rounded bg-blue-100 text-blue-800 text-[10px] font-bold uppercase">Debit Spread</span>
+              </div>
+              <p class="text-slate-600"><strong>Legs:</strong> Buy Higher Strike Put (\(X_2\)) + Sell Lower Strike Put (\(X_1\)).</p>
+              <div class="p-2.5 bg-white rounded-xl border border-slate-200 space-y-1">
+                <div>&bull; <strong>Textbook Setup:</strong> Buy 99.50 Put @ 0.40, Sell 99.00 Put @ 0.25.</div>
+                <div>&bull; <strong>Net Premium Paid (Max Loss):</strong> 0.40 - 0.25 = <strong>₹0.15</strong>.</div>
+                <div>&bull; <strong>Max Profit:</strong> (99.50 - 99.00) - 0.15 = <strong>₹0.35</strong> (at &le; ₹99.00).</div>
+                <div>&bull; <strong>BEP:</strong> Higher Strike - Net Debit = 99.50 - 0.15 = <strong>₹99.35</strong>.</div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- 22.3.2 Straddle & Strangle Payoffs -->
+        <div id="section-3-2" class="pt-6 border-t border-slate-200 space-y-4">
+          <h3 class="font-display text-lg font-bold text-slate-900 flex items-center gap-2">
+            <i data-lucide="activity" class="w-5 h-5 text-purple-600"></i>
+            Volatility Plays: Straddles & Strangles on Bonds
+          </h3>
+
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-4 text-xs">
+            
+            <!-- Long & Short Straddle -->
+            <div class="p-4 rounded-2xl bg-purple-50/50 border border-purple-200 space-y-2">
+              <span class="font-bold text-purple-900 text-sm block">Straddle (Same Strike, Same Expiry)</span>
+              <p class="text-slate-700"><strong>Textbook Setup:</strong> Strike ₹99.00. Call Prem = 0.30, Put Prem = 0.20. Combined Prem = ₹0.50.</p>
+              <div class="space-y-1.5 pt-1">
+                <div class="p-2.5 bg-white rounded-xl border border-purple-200">
+                  <span class="font-bold text-purple-800">Long Straddle (Buy ATM Call + Buy ATM Put):</span><br>
+                  &bull; <em>Market Outlook:</em> High volatility expected (major rate event).<br>
+                  &bull; <em>Max Loss:</em> ₹0.50 (if bond expires exactly at ₹99.00).<br>
+                  &bull; <em>Max Profit:</em> Unlimited in either direction.<br>
+                  &bull; <em>BEPs:</em> Lower = \(99.00 - 0.50 = \mathbf{98.50}\); Upper = \(99.00 + 0.50 = \mathbf{99.50}\).
+                </div>
+                <div class="p-2.5 bg-white rounded-xl border border-purple-200">
+                  <span class="font-bold text-purple-800">Short Straddle (Sell ATM Call + Sell ATM Put):</span><br>
+                  &bull; <em>Market Outlook:</em> Stable / range-bound market (yields stay flat).<br>
+                  &bull; <em>Max Profit:</em> ₹0.50 (if bond expires at ₹99.00).<br>
+                  &bull; <em>Max Loss:</em> Unlimited in either direction beyond BEPs.
+                </div>
+              </div>
+            </div>
+
+            <!-- Long & Short Strangle -->
+            <div class="p-4 rounded-2xl bg-purple-50/50 border border-purple-200 space-y-2">
+              <span class="font-bold text-purple-900 text-sm block">Strangle (Different Strikes, OTM, Same Expiry)</span>
+              <p class="text-slate-700"><strong>Textbook Setup:</strong> Buy 99.25 Call @ 0.20 + Buy 98.75 Put @ 0.15. Total Prem = ₹0.35.</p>
+              <div class="space-y-1.5 pt-1">
+                <div class="p-2.5 bg-white rounded-xl border border-purple-200">
+                  <span class="font-bold text-purple-800">Long Strangle (Buy OTM Call + Buy OTM Put):</span><br>
+                  &bull; <em>Market Outlook:</em> Massive breakout expected at lower premium outlay than straddle.<br>
+                  &bull; <em>Max Loss:</em> ₹0.35 (if bond expires anywhere between ₹98.75 and ₹99.25).<br>
+                  &bull; <em>BEPs:</em> Lower = \(98.75 - 0.35 = \mathbf{98.40}\); Upper = \(99.25 + 0.35 = \mathbf{99.60}\).
+                </div>
+                <div class="p-2.5 bg-white rounded-xl border border-purple-200">
+                  <span class="font-bold text-purple-800">Short Strangle (Sell OTM Call + Sell OTM Put):</span><br>
+                  &bull; <em>Market Outlook:</em> Bond price remains safely within the 98.75 - 99.25 corridor.<br>
+                  &bull; <em>Max Profit:</em> ₹0.35 (between 98.75 and 99.25).<br>
+                  &bull; <em>Max Loss:</em> Unlimited beyond 98.40 or 99.60.
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- 22.3.3 Covered Call & Protective Put -->
+        <div id="section-3-3" class="pt-6 border-t border-slate-200 space-y-4">
+          <h3 class="font-display text-lg font-bold text-slate-900 flex items-center gap-2">
+            <i data-lucide="shield" class="w-5 h-5 text-purple-600"></i>
+            Synthetic Positions: Covered Call vs. Protective Put
+          </h3>
+
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-4 text-xs">
+            
+            <!-- Covered Call -->
+            <div class="p-4 rounded-2xl bg-slate-50 border border-slate-200 space-y-2">
+              <div class="flex items-center justify-between">
+                <span class="font-bold text-slate-900 text-sm">Covered Call on Bonds</span>
+                <span class="px-2 py-0.5 rounded bg-indigo-100 text-indigo-800 text-[10px] font-bold">Synthetic Short Put</span>
+              </div>
+              <p class="text-slate-600 leading-relaxed">
+                <strong>Strategy:</strong> Buy/hold underlying GOI bond at ₹99.50 + Sell OTM Call at strike ₹100.00 @ ₹0.10 premium.
+              </p>
+              <div class="p-3 bg-white rounded-xl border border-slate-200 space-y-1">
+                <div>&bull; <strong>Purpose:</strong> Generate additional yield on long-term bond holdings during flat/moderately bullish phases.</div>
+                <div>&bull; <strong>Max Profit:</strong> (100.00 - 99.50) + 0.10 = <strong>₹0.60</strong> (upside is capped at ₹100.10).</div>
+                <div>&bull; <strong>Downside Risk:</strong> Substantial if bond crashes (cushioned by ₹0.10 fee). BEP = <strong>₹99.40</strong>.</div>
+                <div>&bull; <em>Arbitrage Implication:</em> If a 100 Put trades at 0.50, trader creates synthetic short put for 0.60 and buys the cash put for 0.50, locking <strong>₹0.10 risk-free profit</strong>!</div>
+              </div>
+            </div>
+
+            <!-- Protective Put -->
+            <div class="p-4 rounded-2xl bg-slate-50 border border-slate-200 space-y-2">
+              <div class="flex items-center justify-between">
+                <span class="font-bold text-slate-900 text-sm">Protective Put on Bonds</span>
+                <span class="px-2 py-0.5 rounded bg-emerald-100 text-emerald-800 text-[10px] font-bold">Synthetic Long Call</span>
+              </div>
+              <p class="text-slate-600 leading-relaxed">
+                <strong>Strategy:</strong> Buy/hold underlying GOI bond at ₹99.50 + Buy ATM Put at strike ₹99.50 @ ₹0.20 premium.
+              </p>
+              <div class="p-3 bg-white rounded-xl border border-slate-200 space-y-1">
+                <div>&bull; <strong>Purpose:</strong> Put a firm floor under portfolio losses while maintaining 100% upside participation if rates fall.</div>
+                <div>&bull; <strong>Max Loss:</strong> Strictly capped at the put premium = <strong>₹0.20</strong> (regardless of bond crash severity).</div>
+                <div>&bull; <strong>Max Profit:</strong> Unlimited as bond price surges.</div>
+                <div>&bull; <strong>BEP:</strong> 99.50 + 0.20 = <strong>₹99.70</strong>.</div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- 22.3.4 Long Call Butterfly Spread -->
+        <div id="section-3-4" class="pt-6 border-t border-slate-200 space-y-3">
+          <div class="flex items-center justify-between">
+            <h3 class="font-display text-lg font-bold text-slate-900 flex items-center gap-2">
+              <i data-lucide="git-commit" class="w-5 h-5 text-purple-600"></i>
+              Long Call Butterfly Spread on Bonds (3 Strikes, 4 Contracts) ⭐
+            </h3>
+            <span class="px-2.5 py-0.5 rounded text-[11px] font-bold bg-amber-100 text-amber-800">Exam Favorite Numerical</span>
+          </div>
+          <p class="text-xs sm:text-sm text-slate-600 leading-relaxed">
+            A direction-neutral strategy combining a Bull Spread and a Bear Spread designed for environments with <strong>very low anticipated volatility</strong>. It uses four options across three equidistant strike prices:
+          </p>
+
+          <div class="overflow-x-auto rounded-2xl border border-slate-200">
+            <table class="w-full text-left text-xs border-collapse">
+              <thead class="bg-slate-100 text-slate-700 font-bold uppercase text-[11px]">
+                <tr>
+                  <th class="p-3">Option Leg</th>
+                  <th class="p-3">Position</th>
+                  <th class="p-3">Strike</th>
+                  <th class="p-3">Premium</th>
+                  <th class="p-3">Lots</th>
+                  <th class="p-3">Cash Flow</th>
+                </tr>
+              </thead>
+              <tbody class="divide-y divide-slate-200 bg-white">
+                <tr>
+                  <td class="p-3 font-semibold text-slate-900">1. Lower ITM Call</td>
+                  <td class="p-3 text-blue-700 font-bold">Long (Buy)</td>
+                  <td class="p-3">₹98.50</td>
+                  <td class="p-3">₹0.60</td>
+                  <td class="p-3">1 Lot</td>
+                  <td class="p-3 text-rose-600">-₹0.60</td>
+                </tr>
+                <tr>
+                  <td class="p-3 font-semibold text-slate-900">2. Middle ATM Call</td>
+                  <td class="p-3 text-purple-700 font-bold">Short (Sell)</td>
+                  <td class="p-3">₹99.00</td>
+                  <td class="p-3">₹0.30</td>
+                  <td class="p-3 font-bold">2 Lots</td>
+                  <td class="p-3 text-emerald-600">+₹0.60 (2 &times; 0.30)</td>
+                </tr>
+                <tr>
+                  <td class="p-3 font-semibold text-slate-900">3. Higher OTM Call</td>
+                  <td class="p-3 text-blue-700 font-bold">Long (Buy)</td>
+                  <td class="p-3">₹99.50</td>
+                  <td class="p-3">₹0.20</td>
+                  <td class="p-3">1 Lot</td>
+                  <td class="p-3 text-rose-600">-₹0.20</td>
+                </tr>
+                <tr class="bg-slate-50 font-bold">
+                  <td colspan="5" class="p-3 text-slate-900">Net Cost of Strategy (Initial Debit / Max Loss)</td>
+                  <td class="p-3 text-rose-700">-₹0.20 ⭐</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <!-- Butterfly Key Metrics Grid -->
+          <div class="grid grid-cols-1 sm:grid-cols-3 gap-3 text-xs pt-1">
+            <div class="p-3.5 bg-purple-50 rounded-xl border border-purple-200">
+              <span class="text-slate-500 block text-[11px] uppercase tracking-wider font-semibold">Maximum Profit</span>
+              <span class="font-display font-bold text-base text-purple-900">₹0.30 per unit</span>
+              <p class="text-slate-600 text-[11px] mt-0.5">(Occurs if bond expires exactly at ₹99.00 ATM strike: 99.00 - 98.50 - 0.20 = 0.30)</p>
+            </div>
+            <div class="p-3.5 bg-rose-50 rounded-xl border border-rose-200">
+              <span class="text-slate-500 block text-[11px] uppercase tracking-wider font-semibold">Maximum Loss</span>
+              <span class="font-display font-bold text-base text-rose-900">₹0.20 per unit</span>
+              <p class="text-slate-600 text-[11px] mt-0.5">(Capped at net debit; occurs if price &le; 98.50 or &ge; 99.50)</p>
+            </div>
+            <div class="p-3.5 bg-emerald-50 rounded-xl border border-emerald-200">
+              <span class="text-slate-500 block text-[11px] uppercase tracking-wider font-semibold">Breakeven Points (BEPs)</span>
+              <span class="font-display font-bold text-base text-emerald-900">98.70 & 99.30</span>
+              <p class="text-slate-600 text-[11px] mt-0.5">Lower: 98.50 + 0.20 | Upper: 99.50 - 0.20</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- 22.3.5 Master Option Strategies Summary Table -->
+        <div id="section-3-5" class="pt-6 border-t border-slate-200 space-y-3">
+          <h4 class="font-display font-bold text-sm sm:text-base text-slate-900 flex items-center gap-2">
+            <i data-lucide="table" class="w-4 h-4 text-purple-600"></i>
+            Master Summary: ETIRD Option Strategies Payoff Matrix
+          </h4>
+          <div class="overflow-x-auto rounded-xl border border-slate-200">
+            <table class="w-full text-left text-xs border-collapse">
+              <thead class="bg-purple-900 text-white font-bold uppercase text-[11px]">
+                <tr>
+                  <th class="p-3">Strategy Name</th>
+                  <th class="p-3">Outlook on Bond Price</th>
+                  <th class="p-3">Cashflow Type</th>
+                  <th class="p-3">Max Profit</th>
+                  <th class="p-3">Max Loss</th>
+                  <th class="p-3">Breakeven Point (BEP)</th>
+                </tr>
+              </thead>
+              <tbody class="divide-y divide-slate-200 bg-white">
+                <tr>
+                  <td class="p-3 font-bold text-slate-900">Bull Call Spread</td>
+                  <td class="p-3 text-emerald-700 font-semibold">Moderately Bullish</td>
+                  <td class="p-3 text-rose-700 font-semibold">Net Debit</td>
+                  <td class="p-3 text-slate-700">\((X_2 - X_1) - \text{Debit}\)</td>
+                  <td class="p-3 text-slate-700">Net Debit Paid</td>
+                  <td class="p-3 text-slate-700">\(X_1 + \text{Net Debit}\)</td>
+                </tr>
+                <tr>
+                  <td class="p-3 font-bold text-slate-900">Bull Put Spread</td>
+                  <td class="p-3 text-emerald-700 font-semibold">Moderately Bullish</td>
+                  <td class="p-3 text-emerald-700 font-semibold">Net Credit</td>
+                  <td class="p-3 text-slate-700">Net Credit Received</td>
+                  <td class="p-3 text-slate-700">\((X_2 - X_1) - \text{Credit}\)</td>
+                  <td class="p-3 text-slate-700">\(X_2 - \text{Net Credit}\)</td>
+                </tr>
+                <tr>
+                  <td class="p-3 font-bold text-slate-900">Bear Call Spread</td>
+                  <td class="p-3 text-rose-700 font-semibold">Moderately Bearish</td>
+                  <td class="p-3 text-emerald-700 font-semibold">Net Credit</td>
+                  <td class="p-3 text-slate-700">Net Credit Received</td>
+                  <td class="p-3 text-slate-700">\((X_2 - X_1) - \text{Credit}\)</td>
+                  <td class="p-3 text-slate-700">\(X_1 + \text{Net Credit}\)</td>
+                </tr>
+                <tr>
+                  <td class="p-3 font-bold text-slate-900">Bear Put Spread</td>
+                  <td class="p-3 text-rose-700 font-semibold">Moderately Bearish</td>
+                  <td class="p-3 text-rose-700 font-semibold">Net Debit</td>
+                  <td class="p-3 text-slate-700">\((X_2 - X_1) - \text{Debit}\)</td>
+                  <td class="p-3 text-slate-700">Net Debit Paid</td>
+                  <td class="p-3 text-slate-700">\(X_2 - \text{Net Debit}\)</td>
+                </tr>
+                <tr>
+                  <td class="p-3 font-bold text-slate-900">Long Straddle</td>
+                  <td class="p-3 text-purple-700 font-semibold">Very High Volatility</td>
+                  <td class="p-3 text-rose-700 font-semibold">Net Debit</td>
+                  <td class="p-3 text-emerald-700 font-bold">Unlimited</td>
+                  <td class="p-3 text-slate-700">Total Premium Paid</td>
+                  <td class="p-3 text-slate-700">\(X \pm \text{Total Premium}\)</td>
+                </tr>
+                <tr>
+                  <td class="p-3 font-bold text-slate-900">Short Straddle</td>
+                  <td class="p-3 text-blue-700 font-semibold">Flat / Range-bound</td>
+                  <td class="p-3 text-emerald-700 font-semibold">Net Credit</td>
+                  <td class="p-3 text-slate-700">Total Premium Received</td>
+                  <td class="p-3 text-rose-700 font-bold">Unlimited</td>
+                  <td class="p-3 text-slate-700">\(X \pm \text{Total Premium}\)</td>
+                </tr>
+                <tr>
+                  <td class="p-3 font-bold text-slate-900">Covered Call</td>
+                  <td class="p-3 text-slate-700">Neutral to Mild Bullish</td>
+                  <td class="p-3 text-emerald-700 font-semibold">Premium Inflow</td>
+                  <td class="p-3 text-slate-700">\((X - S_0) + \text{Premium}\)</td>
+                  <td class="p-3 text-slate-700">Substantial (\(S_0 - \text{Prem}\))</td>
+                  <td class="p-3 text-slate-700">\(S_0 - \text{Premium}\)</td>
+                </tr>
+                <tr>
+                  <td class="p-3 font-bold text-slate-900">Protective Put</td>
+                  <td class="p-3 text-emerald-700 font-semibold">Bullish with Hard Floor</td>
+                  <td class="p-3 text-rose-700 font-semibold">Premium Outflow</td>
+                  <td class="p-3 text-emerald-700 font-bold">Unlimited</td>
+                  <td class="p-3 text-slate-700">Put Premium Paid</td>
+                  <td class="p-3 text-slate-700">\(S_0 + \text{Premium}\)</td>
+                </tr>
+                <tr>
+                  <td class="p-3 font-bold text-slate-900">Long Call Butterfly</td>
+                  <td class="p-3 text-blue-700 font-semibold">Zero / Very Low Volatility</td>
+                  <td class="p-3 text-rose-700 font-semibold">Net Debit</td>
+                  <td class="p-3 text-slate-700">\((X_2 - X_1) - \text{Debit}\)</td>
+                  <td class="p-3 text-slate-700">Net Debit Paid</td>
+                  <td class="p-3 text-slate-700">\(X_1 + \text{Debit}\) & \(X_3 - \text{Debit}\)</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+      </section>
+
+      <!-- Topic 22.4: Speculative Trading & Duration Management -->
+      <section id="section-4" class="bg-white rounded-3xl p-6 sm:p-8 border border-slate-200/90 shadow-sm space-y-5">
+        <div class="flex items-center justify-between">
+          <div class="flex items-center gap-2 text-xs font-bold text-slate-500 uppercase tracking-wider">
+            <span class="w-2 h-2 rounded-full bg-slate-400"></span> Section 22.4 &bull; Directional & Duration Management
+          </div>
+          <span class="px-2 py-0.5 rounded text-[11px] font-semibold bg-slate-100 text-slate-600">Portfolio Structuring</span>
+        </div>
+        <h2 class="font-display text-xl sm:text-2xl font-bold text-slate-900">Speculative Trading & Altering Portfolio Duration</h2>
+        <p class="text-xs sm:text-sm text-slate-600 leading-relaxed">
+          Unlike hedgers who offset pre-existing balance sheet risks, speculators enter positions voluntarily to capitalize on expected interest rate fluctuations. Active fund managers also deploy bond futures to swiftly and cost-effectively adjust portfolio duration without disturbing underlying physical bond portfolios.
+        </p>
+
+        <!-- 22.4.1 View-Based Trading & Short Sale Ban -->
+        <div id="section-4-1" class="grid grid-cols-1 md:grid-cols-2 gap-4 text-xs">
+          
+          <div class="p-4 bg-slate-50 rounded-2xl border border-slate-200 space-y-2">
+            <h4 class="font-display font-bold text-sm text-slate-900 flex items-center gap-2">
+              <i data-lucide="trending-up" class="w-4 h-4 text-emerald-600"></i>
+              Bullish Directional Trading (Yields Falling)
+            </h4>
+            <p class="text-slate-600 leading-relaxed">
+              When expecting interest rates to drop (bond prices to appreciate), a trader can choose between:
+            </p>
+            <ul class="list-disc pl-4 space-y-1 text-slate-700">
+              <li><strong>Buy Physical Bonds:</strong> Requires 100% upfront capital (₹5 Lakhs buys ₹5 Lakhs face value). Returns are capped to physical price increase + accrued coupon.</li>
+              <li><strong>Buy IRF Contracts (20x Leverage):</strong> With a 5% margin, ₹5 Lakhs controls <strong>₹1.00 Crore</strong> notional value, multiplying capital returns (e.g. ₹97,000 profit vs ₹6,600 on physical bond).</li>
+              <li><strong>Buy IRF + Invest Surplus in CDs:</strong> Unleveraged approach where ₹5 Lakhs cash is parked in 24-day Certificates of Deposit (earning ₹2,300), generating total returns of ₹7,150.</li>
+            </ul>
+          </div>
+
+          <div class="p-4 bg-slate-50 rounded-2xl border border-slate-200 space-y-2">
+            <h4 class="font-display font-bold text-sm text-slate-900 flex items-center gap-2">
+              <i data-lucide="ban" class="w-4 h-4 text-rose-600"></i>
+              Bearish View & The Physical Short-Sale Ban
+            </h4>
+            <p class="text-slate-600 leading-relaxed">
+              In India, RBI regulations prohibit retail investors and most institutional participants from naked short selling of Government of India securities in the physical cash market.
+            </p>
+            <div class="p-3 bg-amber-50 rounded-xl border border-amber-200 text-amber-950 font-medium">
+              <strong>The ETIRD Advantage:</strong> Exchange-traded bond derivatives provide the only seamless, transparent, and legally accessible vehicle to express a bearish view by either <strong>selling GOI Bond Futures</strong> or <strong>buying GOI Bond Put Options</strong> without needing physical bond borrowing.
+            </div>
+          </div>
+
+        </div>
+
+        <!-- 22.4.2 Lengthening vs Shortening Duration -->
+        <div id="section-4-2" class="p-5 rounded-2xl bg-purple-50/60 border border-purple-200 space-y-3 text-xs">
+          <h4 class="font-display font-bold text-sm sm:text-base text-slate-900 flex items-center gap-2">
+            <i data-lucide="clock" class="w-4 h-4 text-purple-700"></i>
+            Dynamic Portfolio Duration Alteration
+          </h4>
+          <p class="text-slate-700 leading-relaxed">
+            Fund managers who develop strong convictions on monetary policy actions adjust their portfolio duration to maximize performance:
+          </p>
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+            <div class="p-3.5 bg-white rounded-xl border border-purple-200 space-y-1">
+              <div class="font-bold text-purple-900 flex items-center gap-1.5">
+                <i data-lucide="arrow-up-right" class="w-4 h-4 text-emerald-600"></i>
+                Lengthening Duration (Bullish on Yields)
+              </div>
+              <p class="text-slate-600">When yields are expected to decline, the manager <strong>buys GOI bond futures</strong>. This magnifies the portfolio's capital gain without selling short-dated liquid paper or purchasing illiquid long-dated cash bonds.</p>
+            </div>
+            <div class="p-3.5 bg-white rounded-xl border border-purple-200 space-y-1">
+              <div class="font-bold text-purple-900 flex items-center gap-1.5">
+                <i data-lucide="arrow-down-right" class="w-4 h-4 text-rose-600"></i>
+                Shortening Duration (Bearish on Yields)
+              </div>
+              <p class="text-slate-600">When yields are expected to spike, the manager <strong>sells GOI bond futures</strong>. This compresses effective duration toward zero or desired benchmark levels, immunizing against price declines without paying secondary market illiquidity haircuts.</p>
+            </div>
+          </div>
+        </div>
+
+      </section>
+
+      <!-- Topic 22.5: Arbitrage & Synthetic Securities (Deep-Dive ⭐) -->
+      <section id="section-5" class="bg-white rounded-3xl p-6 sm:p-8 border border-slate-200/90 shadow-sm space-y-6">
+        <div class="flex items-center justify-between">
+          <div class="flex items-center gap-2 text-xs font-bold text-emerald-700 uppercase tracking-wider">
+            <span class="w-2 h-2 rounded-full bg-emerald-500"></span> Section 22.5 &bull; ⭐ Super High Exam Yield
+          </div>
+          <span class="px-2.5 py-0.5 rounded text-[11px] font-bold bg-emerald-100 text-emerald-800">Cash-and-Carry & Synthetics</span>
+        </div>
+        <h2 class="font-display text-xl sm:text-2xl font-bold text-slate-900">Arbitrage Transactions & Creating Synthetic Securities</h2>
+        <p class="text-xs sm:text-sm text-slate-600 leading-relaxed">
+          Arbitrageurs enforce market efficiency by simultaneously buying and selling mispriced instruments across spot and derivative markets. Crucially, their profits are locked in at trade inception, carrying zero directional exposure to interest rate shifts.
+        </p>
+
+        <!-- 22.5.1 Regular Cash-and-Carry vs 22.5.2 Reverse Cash-and-Carry -->
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 text-xs">
+          
+          <!-- Regular Cash and Carry -->
+          <div id="section-5-1" class="p-5 rounded-2xl bg-slate-50 border border-slate-200 space-y-3">
+            <div class="flex items-center justify-between">
+              <h3 class="font-display font-bold text-sm sm:text-base text-slate-900">22.5.1 Regular Cash-and-Carry Arbitrage</h3>
+              <span class="px-2 py-0.5 rounded bg-emerald-100 text-emerald-800 text-[10px] font-bold uppercase">Futures Overpriced</span>
+            </div>
+            <p class="text-slate-600 leading-relaxed">
+              <strong>Condition:</strong> Futures market price exceeds theoretical carry price (\(F > S_0 + \text{Carry} - \text{Coupon}\)).
+            </p>
+            <div class="p-3 bg-white rounded-xl border border-slate-200 space-y-1.5">
+              <div>&bull; <strong>Action:</strong> Buy bond in spot market @ ₹102.60 + Borrow funds in Repo @ 5% + Sell IRF @ ₹102.62 (500 lots, ₹10 Cr FV).</div>
+              <div class="pt-1 font-semibold text-slate-900">Payoff at Expiry (Bond at ₹102.30 vs ₹102.80):</div>
+              <div class="p-2 rounded bg-slate-50 font-mono text-[11px] text-slate-700 space-y-1">
+                <div>If Price = ₹102.30: Accrued ₹4.42L + IRF Gain ₹3.20L - Bond Loss ₹3.00L - Repo Cost ₹2.95L = <strong>+₹167,599</strong></div>
+                <div>If Price = ₹102.80: Accrued ₹4.42L + Bond Gain ₹2.00L - IRF Loss ₹1.80L - Repo Cost ₹2.95L = <strong>+₹167,599</strong></div>
+              </div>
+              <p class="text-emerald-700 font-bold text-[11px] pt-1">
+                Net payoff is identically positive at ₹167,599 in both price outcomes!
+              </p>
+            </div>
+          </div>
+
+          <!-- Reverse Cash and Carry -->
+          <div id="section-5-2" class="p-5 rounded-2xl bg-slate-50 border border-slate-200 space-y-3">
+            <div class="flex items-center justify-between">
+              <h3 class="font-display font-bold text-sm sm:text-base text-slate-900">22.5.2 Reverse Cash-and-Carry Arbitrage</h3>
+              <span class="px-2 py-0.5 rounded bg-blue-100 text-blue-800 text-[10px] font-bold uppercase">Futures Underpriced</span>
+            </div>
+            <p class="text-slate-600 leading-relaxed">
+              <strong>Condition:</strong> Futures market price trades below theoretical fair value (\(F < S_0 + \text{Carry} - \text{Coupon}\)).
+            </p>
+            <div class="p-3 bg-white rounded-xl border border-slate-200 space-y-1.5">
+              <div>&bull; <strong>Action:</strong> Sell bond in spot market @ ₹102.60 + Lend money in Repo @ 5% + Buy IRF @ ₹102.40 (500 lots, ₹10 Cr FV).</div>
+              <div class="pt-1 font-semibold text-slate-900">Payoff at Expiry (Bond at ₹102.30 vs ₹102.80):</div>
+              <div class="p-2 rounded bg-slate-50 font-mono text-[11px] text-slate-700 space-y-1">
+                <div>If Price = ₹102.30: Bond Profit ₹3.00L + Repo Interest ₹2.95L - Accrued ₹4.42L - IRF Loss ₹1.00L = <strong>+₹52,401</strong></div>
+                <div>If Price = ₹102.80: IRF Profit ₹4.00L + Repo Interest ₹2.95L - Accrued ₹4.42L - Bond Loss ₹2.00L = <strong>+₹52,401</strong></div>
+              </div>
+              <p class="text-blue-700 font-bold text-[11px] pt-1">
+                Net payoff is identically positive at ₹52,401 in both price outcomes!
+              </p>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- 22.5.3 Synthetic Money Market Yields -->
+        <div id="section-5-3" class="p-5 rounded-2xl bg-purple-50/60 border border-purple-200 space-y-3">
+          <div class="flex items-center justify-between">
+            <span class="text-xs font-bold text-purple-900 uppercase tracking-wider flex items-center gap-1.5">
+              <i data-lucide="sparkles" class="w-4 h-4 text-purple-600"></i> Section 22.5.3 &bull; Synthetic Money Market Securities
+            </span>
+            <span class="text-[11px] font-semibold text-purple-700 bg-purple-100 px-2 py-0.5 rounded">High Exam Yield</span>
+          </div>
+          <h4 class="font-display font-bold text-base text-slate-900">Synthetic 3-Month T-Bills for Yield Enhancement</h4>
+          <p class="text-xs sm:text-sm text-slate-700 leading-relaxed">
+            Consider an institutional investor who wishes to invest surplus liquidity for <strong>3 months</strong>. Instead of buying a plain 3-month Treasury Bill in the secondary cash market:
+          </p>
+          <div class="p-4 bg-white rounded-xl border border-purple-200 text-xs space-y-2 text-slate-700">
+            <div class="p-2.5 rounded-lg bg-purple-50 font-mono font-bold text-purple-900 text-center text-xs sm:text-sm">
+              Synthetic 3M T-Bill = Long Position in 15-Year GOI Bond + Short Position in 3-Month Bond Futures
+            </div>
+            <p class="leading-relaxed">
+              <strong>How it works:</strong> The investor purchases a high-yielding 15-year GOI bond in the spot market and simultaneously shorts 3-month bond futures contracts on that bond. Because the futures contract locks in the precise selling price at the end of 3 months, the effective maturity of the 15-year bond collapses to exactly 3 months with zero residual price volatility.
+            </p>
+            <p class="font-semibold text-purple-950">
+              <strong>Yield Pick-Up / Enhancement:</strong> Whenever the implied yield of the synthetic T-Bill exceeds the prevailing spot market yield of cash 91-Day T-Bills, fund managers exploit this structure to earn superior risk-free returns.
+            </p>
+          </div>
+        </div>
+
+        <!-- 22.5.4 Arbitrage Risks & Market Frictions -->
+        <div id="section-5-4" class="p-4 bg-amber-50/60 rounded-2xl border border-amber-200 space-y-2 text-xs">
+          <div class="flex items-center gap-2 text-amber-900 font-bold">
+            <i data-lucide="alert-octagon" class="w-4 h-4 text-amber-600"></i>
+            <span>Real-World Arbitrage Risks & Frictions (Textbook Warning)</span>
+          </div>
+          <p class="text-slate-700 leading-relaxed">
+            In theory, arbitrage is risk-free. In practice, arbitrageurs face substantial operational risks:
+          </p>
+          <div class="grid grid-cols-1 sm:grid-cols-3 gap-3 pt-1">
+            <div class="p-2.5 bg-white rounded-lg border border-amber-200">
+              <strong>1. Leg Execution Risk:</strong> If one leg executes and the other experiences illiquidity or price movement, the trader gets stuck with naked exposure.
+            </div>
+            <div class="p-2.5 bg-white rounded-lg border border-amber-200">
+              <strong>2. Regulatory Hurdles:</strong> Reverse cash-and-carry requires short selling physical bonds, which is prohibited for mutual funds and retail entities.
+            </div>
+            <div class="p-2.5 bg-white rounded-lg border border-amber-200">
+              <strong>3. Transaction & Impact Costs:</strong> Brokerage, repo haircuts, margin costs, and NDS-OM market depth can easily consume small basis profits.
+            </div>
+          </div>
+        </div>
+
+      </section>
+
+      <!-- Topic 22.6: Spread Trading using ETIRD -->
+      <section id="section-6" class="bg-white rounded-3xl p-6 sm:p-8 border border-slate-200/90 shadow-sm space-y-5">
+        <div class="flex items-center justify-between">
+          <div class="flex items-center gap-2 text-xs font-bold text-slate-500 uppercase tracking-wider">
+            <span class="w-2 h-2 rounded-full bg-slate-400"></span> Section 22.6 &bull; Advanced ETIRD Trading
+          </div>
+          <span class="px-2 py-0.5 rounded text-[11px] font-semibold bg-slate-100 text-slate-600">Spread Mechanisms</span>
+        </div>
+        <h2 class="font-display text-xl sm:text-2xl font-bold text-slate-900">Trading Spreads using ETIRD</h2>
+        <p class="text-xs sm:text-sm text-slate-600 leading-relaxed">
+          Spread trading exploits relative price differences rather than outright market direction. Traders take simultaneous long and short positions across different contract months (time spreads) or different underlying bonds (yield curve spreads).
+        </p>
+
+        <!-- 22.6.1 Basis Trading Mechanics -->
+        <div id="section-6-1" class="p-5 rounded-2xl bg-slate-50 border border-slate-200 space-y-3 text-xs">
+          <div class="flex items-center gap-2">
+            <span class="w-2 h-2 rounded-full bg-purple-600"></span>
+            <h3 class="font-display font-bold text-sm sm:text-base text-slate-900">22.6.1 Basis Trading (Spot vs. Futures Basis)</h3>
+          </div>
+          <p class="text-slate-600 leading-relaxed">
+            <strong>Basis</strong> is defined as: \(\text{Basis} = \text{Spot Clean Price} - \text{Futures Clean Price}\). At expiry, the basis must mathematically converge to zero (\(\text{Basis}_T \to 0\)).
+          </p>
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+            <div class="p-3 bg-white rounded-xl border border-slate-200 space-y-1">
+              <strong class="text-purple-900">Long the Basis (Basis Widening Expected):</strong>
+              <p class="text-slate-600">Buy underlying G-Sec in spot market + Sell Bond Futures. Used when futures are overpriced relative to cash. As basis widens or converges to fair carry, the trade generates profit.</p>
+            </div>
+            <div class="p-3 bg-white rounded-xl border border-slate-200 space-y-1">
+              <strong class="text-purple-900">Short the Basis (Basis Narrowing Expected):</strong>
+              <p class="text-slate-600">Sell underlying G-Sec in spot market + Buy Bond Futures. Used when futures are underpriced relative to cash. Profits as the discounted futures price catches up to cash.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 text-xs sm:text-sm">
+          
+          <!-- 22.6.2 Calendar Spread -->
+          <div id="section-6-2" class="p-5 rounded-2xl bg-slate-50 border border-slate-200 space-y-3">
+            <div class="flex items-center gap-2">
+              <span class="w-2 h-2 rounded-full bg-purple-600"></span>
+              <h3 class="font-display font-bold text-base text-slate-900">22.6.2 Calendar Spread (Time Spread)</h3>
+            </div>
+            <p class="text-slate-600 text-xs leading-relaxed">
+              Involves simultaneously buying a contract of one expiry month and selling the exact same contract of a different expiry month (e.g. Near-Month vs. Mid-Month) on the same underlying bond.
+            </p>
+            <div class="p-3 bg-white rounded-xl border border-slate-200 text-xs space-y-1">
+              <div><strong>Textbook Example:</strong> Sell Sep 6.10% GOI 2031 IRF @ ₹99.00 and Buy Oct IRF @ ₹99.05 (initial spread = ₹0.05).</div>
+              <div>Later, Sep trades at ₹98.80 and Oct trades at ₹98.95 (spread widens to ₹0.15).</div>
+              <div class="font-bold text-emerald-700">Net Gain = (0.15 - 0.05) &times; 2,000 = ₹200 per lot!</div>
+              <p class="text-slate-500 text-[11px] pt-1">
+                <strong>Exchange Benefits:</strong> Exchanges levy significantly lower calendar spread margins and offer a dedicated <em>Spread Order Book</em> that executes both legs simultaneously, eliminating execution risk.
+              </p>
+            </div>
+          </div>
+
+          <!-- 22.6.3 Inter-Bond Spreads & Yield Curve Plays -->
+          <div id="section-6-3" class="p-5 rounded-2xl bg-slate-50 border border-slate-200 space-y-3">
+            <div class="flex items-center gap-2">
+              <span class="w-2 h-2 rounded-full bg-indigo-600"></span>
+              <h3 class="font-display font-bold text-base text-slate-900">22.6.3 Inter-Bond Spreads (Yield Curve Plays)</h3>
+            </div>
+            <p class="text-slate-600 text-xs leading-relaxed">
+              Simultaneous long and short futures positions on <strong>two different underlying GOI securities</strong> with the same contract expiry:
+            </p>
+            <div class="p-3 bg-white rounded-xl border border-slate-200 text-xs space-y-1.5">
+              <div>&bull; <strong>Intra-Bucket Spread:</strong> Buy 6.10% GOI 2031 and Sell 5.85% GOI 2030 (captures on-the-run liquidity premium within the 10Y bucket).</div>
+              <div>&bull; <strong>Inter-Bucket Spread (Yield Curve Trading):</strong></div>
+              <div class="p-2 rounded bg-purple-50 text-[11px] space-y-1">
+                <div><strong>Steepener Trade:</strong> Buy 5Y Bond Futures + Sell 10Y Bond Futures (profits when yield curve steepens & 5Y yields drop faster).</div>
+                <div><strong>Flattener Trade:</strong> Buy 10Y Bond Futures + Sell 5Y Bond Futures (profits when yield curve flattens & long-term yields fall relative to short-term).</div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </section>
+
+      <!-- Topic 22.7: Limitations of ETIRD (Hedger Risks ⭐) -->
+      <section id="section-7" class="bg-white rounded-3xl p-6 sm:p-8 border border-slate-200/90 shadow-sm space-y-5">
+        <div class="flex items-center justify-between">
+          <div class="flex items-center gap-2 text-xs font-bold text-rose-700 uppercase tracking-wider">
+            <span class="w-2 h-2 rounded-full bg-rose-500"></span> Section 22.7 &bull; ⭐ Super High Exam Yield
+          </div>
+          <span class="px-2.5 py-0.5 rounded text-[11px] font-bold bg-rose-100 text-rose-800">Hedger Risks & Shortcomings</span>
+        </div>
+        <h2 class="font-display text-xl sm:text-2xl font-bold text-slate-900">Limitations of ETIRD for Hedgers</h2>
+        <p class="text-xs sm:text-sm text-slate-600 leading-relaxed">
+          While ETIRDs offer exchange-guaranteed settlement, transparency, and liquidity, hedgers face fundamental structural limitations that prevent <em>perfect hedges</em>:
+        </p>
+
+        <!-- 5 Core Limitations Cards -->
+        <div id="section-7-1" class="grid grid-cols-1 sm:grid-cols-2 gap-4 text-xs">
+          
+          <div class="p-4 bg-rose-50/50 rounded-2xl border border-rose-200 space-y-1.5">
+            <div class="flex items-center gap-2 text-rose-800 font-bold text-sm">
+              <i data-lucide="alert-circle" class="w-4 h-4"></i>
+              <span>1. Basis Risk (Core Tested Concept ⭐)</span>
+            </div>
+            <p class="text-slate-600 leading-relaxed">
+              Standardized single-bond IRFs rarely move in perfect 1:1 correlation with an investor's custom debt portfolio. Fluctuations in the spot-futures basis and non-linear convexity divergence for large yield shifts create hedging slippage.
+            </p>
+          </div>
+
+          <div class="p-4 bg-rose-50/50 rounded-2xl border border-rose-200 space-y-1.5">
+            <div class="flex items-center gap-2 text-rose-800 font-bold text-sm">
+              <i data-lucide="calendar-off" class="w-4 h-4"></i>
+              <span>2. Maturity Date Mismatch</span>
+            </div>
+            <p class="text-slate-600 leading-relaxed">
+              GOI Bond Futures contracts expire strictly on the <strong>last Thursday of the contract month</strong>. If the hedger's physical bond maturity, corporate cash outflow, or liability date occurs on any other calendar day, an unavoidable maturity timing mismatch arises.
+            </p>
+          </div>
+
+          <div class="p-4 bg-rose-50/50 rounded-2xl border border-rose-200 space-y-1.5">
+            <div class="flex items-center gap-2 text-rose-800 font-bold text-sm">
+              <i data-lucide="file-x" class="w-4 h-4"></i>
+              <span>3. Non-Availability on Corporate Debt & SDLs</span>
+            </div>
+            <p class="text-slate-600 leading-relaxed">
+              ETIRDs exist almost exclusively on benchmark Central Government dated securities. Hedgers holding corporate debt, State Development Loans (SDLs), or retail housing loans cannot achieve a perfect hedge because corporate credit spreads fluctuate independently of sovereign benchmark yields.
+            </p>
+          </div>
+
+          <div class="p-4 bg-rose-50/50 rounded-2xl border border-rose-200 space-y-1.5">
+            <div class="flex items-center gap-2 text-rose-800 font-bold text-sm">
+              <i data-lucide="trending-down" class="w-4 h-4"></i>
+              <span>4. Yield Curve Reshaping Risk</span>
+            </div>
+            <p class="text-slate-600 leading-relaxed">
+              Duration-based hedging relies on the assumption of parallel yield curve shifts. In reality, yield curves experience non-parallel reshaping (steepening, flattening, or twists). A portfolio with varying tenors will suffer residual losses when curve slopes twist.
+            </p>
+          </div>
+
+          <div class="p-4 bg-rose-50/50 rounded-2xl border border-rose-200 space-y-1.5 sm:col-span-2">
+            <div class="flex items-center gap-2 text-rose-800 font-bold text-sm">
+              <i data-lucide="refresh-cw" class="w-4 h-4"></i>
+              <span>5. Cash Settlement Timing Slippage & Liquidity Divergence</span>
+            </div>
+            <p class="text-slate-600 leading-relaxed">
+              ETIRDs in India are settled in <strong>cash</strong> based on the weighted average NDS-OM price of the last two trading hours. Execution price slippage and timing lags between unwinding exchange-traded contracts and executing bulk block trades in the OTC cash debt market can generate small value erosions.
+            </p>
+          </div>
+
+        </div>
+
+        <!-- 22.7.2 Advantages vs Limitations Scorecard -->
+        <div id="section-7-2" class="p-4 rounded-xl bg-purple-50 text-purple-900 text-xs border border-purple-200 space-y-2">
+          <div class="flex items-center gap-2 font-bold text-purple-950">
+            <i data-lucide="check-check" class="w-4 h-4 text-purple-600"></i>
+            <span>Why Hedgers Still Rely on ETIRD Despite Limitations:</span>
+          </div>
+          <div class="grid grid-cols-1 sm:grid-cols-3 gap-3 text-slate-700 pt-1">
+            <div class="p-2.5 bg-white rounded-lg border border-purple-200">
+              <strong>1. Zero Counterparty Credit Risk:</strong> Guaranteed novation and daily MTM settlement by the Exchange Clearing Corporation.
+            </div>
+            <div class="p-2.5 bg-white rounded-lg border border-purple-200">
+              <strong>2. High Transparency & Discovery:</strong> Centralized nationwide electronic limit order books provide real-time price discovery.
+            </div>
+            <div class="p-2.5 bg-white rounded-lg border border-purple-200">
+              <strong>3. Low Entry Barriers:</strong> Standardized small lot size (₹2 Lakhs face value) enables granular risk calibration.
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Interactive Quiz Section -->
+      <section id="interactive-quiz" class="bg-gradient-to-br from-purple-950 via-slate-900 to-indigo-950 rounded-3xl p-6 sm:p-10 text-white shadow-xl space-y-8">
+        <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 border-b border-purple-800/80 pb-6">
+          <div>
+            <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-purple-500/20 text-purple-300 text-xs font-semibold mb-2">
+              <i data-lucide="check-circle" class="w-3.5 h-3.5 text-purple-400"></i>
+              Chapter 22 Exam Practice
+            </div>
+            <h2 class="font-display text-2xl sm:text-3xl font-bold text-white">Interactive Assessment Test</h2>
+            <p class="text-xs sm:text-sm text-slate-300 mt-1">12 official and high-yield MCQs covering duration hedge ratio, spread strategies, payoffs, and limitations.</p>
+          </div>
+          <div id="quiz-badge" class="flex items-center gap-2 px-4 py-2 rounded-xl bg-white/10 backdrop-blur-md border border-white/10 text-xs font-semibold">
+            <span id="answered-count">0</span> / 12 Answered
+          </div>
+        </div>
+
+        <!-- Quiz Container Form -->
+        <form id="quiz-form" class="space-y-6">
+          <div id="questions-container" class="space-y-6">
+            <!-- Questions rendered dynamically via JS -->
+          </div>
+
+          <!-- Submit / Action Button Bar -->
+          <div class="pt-6 border-t border-purple-800/80 flex flex-col sm:flex-row items-center justify-between gap-4">
+            <button type="button" id="submit-quiz-btn" onclick="submitQuiz()" class="w-full sm:w-auto px-8 py-3.5 rounded-xl bg-purple-600 hover:bg-purple-500 text-white font-bold text-sm shadow-lg shadow-purple-600/30 transition-all flex items-center justify-center gap-2">
+              <i data-lucide="send" class="w-4 h-4"></i>
+              <span>Submit Assessment & View Solutions</span>
+            </button>
+            <button type="button" id="reset-quiz-btn" onclick="resetQuiz()" class="hidden w-full sm:w-auto px-6 py-3.5 rounded-xl bg-white/10 hover:bg-white/20 text-slate-200 font-semibold text-sm transition-all flex items-center justify-center gap-2">
+              <i data-lucide="rotate-ccw" class="w-4 h-4"></i>
+              <span>Retake Quiz</span>
+            </button>
+          </div>
+        </form>
+
+        <!-- Quiz Result & Scorecard Modal/Card (Hidden until submit) -->
+        <div id="quiz-results" class="hidden rounded-2xl bg-white/10 p-6 sm:p-8 border border-white/15 backdrop-blur-lg space-y-6">
+          <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+            <div>
+              <span id="result-status-badge" class="px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider"></span>
+              <h3 class="font-display text-2xl font-bold mt-2 text-white">Your Chapter 22 Scorecard</h3>
+            </div>
+            <div class="text-right">
+              <span id="score-display" class="font-display text-4xl font-extrabold text-purple-300">0 / 12</span>
+              <span id="percentage-display" class="block text-xs text-slate-300 mt-0.5">0%</span>
+            </div>
+          </div>
+          <p id="result-summary-text" class="text-sm text-slate-200 leading-relaxed"></p>
+        </div>
+
+      </section>
+
+      <!-- Bottom Navigation -->
+      <div class="flex flex-col sm:flex-row items-center justify-between gap-4 p-6 rounded-2xl bg-white border border-slate-200">
+        <a href="module3-ch21.html" class="inline-flex items-center gap-2 text-sm font-semibold text-slate-600 hover:text-purple-600 transition-colors">
+          <i data-lucide="arrow-left" class="w-4 h-4"></i>
+          <span>Previous: Chapter 21 (Exchange Traded Interest Rate Options)</span>
+        </a>
+        <div class="flex items-center gap-3">
+          <a href="module3.html" class="inline-flex items-center gap-2 px-4 py-2 rounded-xl bg-purple-50 text-purple-700 hover:bg-purple-100 font-semibold text-xs transition-colors">
+            <i data-lucide="grid" class="w-3.5 h-3.5"></i>
+            <span>Module 3 Overview</span>
+          </a>
+          <a href="index.html" class="inline-flex items-center gap-2 px-4 py-2 rounded-xl bg-slate-900 hover:bg-slate-800 text-white font-semibold text-xs transition-colors">
+            <i data-lucide="home" class="w-3.5 h-3.5"></i>
+            <span>Homepage</span>
+          </a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="bg-slate-900 text-slate-400 py-6 border-t border-slate-800 text-center text-xs">
+    NISM Series V-D Certification Examination Notes &bull; Module 3: Interest Rate Derivatives &bull; Chapter 22 (Strategies using ETIRD)
+  </footer>
+
+  <!-- Interactive Quiz Logic -->
+  <script>
+    const questionsData = [
+      {
+        id: 1,
+        question: "Hedging for multiple bonds of varying maturities in a debt portfolio using single bond futures can be executed by using which of the following?",
+        options: [
+          { text: "Duration based hedge ratio", key: "a" },
+          { text: "Market value ratio", key: "b" },
+          { text: "Years to maturity ratio", key: "c" },
+          { text: "Convexity neutral ratio", key: "d" }
+        ],
+        correct: "a",
+        explanation: "As per the NISM workbook, hedging multiple bonds in a portfolio against interest rate risk is accomplished using the Duration-Based Hedge Ratio: N = (Portfolio Mod Dur * Portfolio MV) / (Futures Mod Dur * Futures Price * Lot Size)."
+      },
+      {
+        id: 2,
+        question: "In a Bullish Vertical Spread using Put options (Bull Put Spread), the trader executes which of the following combinations?",
+        options: [
+          { text: "Buys put option with lower strike and sells put option with higher strike", key: "a" },
+          { text: "Buys put option with higher strike and sells put option with lower strike", key: "b" },
+          { text: "Buys call option with lower strike and sells put option with higher strike", key: "c" },
+          { text: "Sells both lower strike put and higher strike put options", key: "d" }
+        ],
+        correct: "a",
+        explanation: "A Bullish Vertical Spread using Puts (Bull Put Spread) is a net credit spread created by selling a higher-strike put (receiving a larger premium) and purchasing a lower-strike put (paying a smaller premium for downside crash protection)."
+      },
+      {
+        id: 3,
+        question: "If an investor or fund manager strongly expects interest rates in the economy will go up in the near future, what position should they take in the GOI Bond Futures market today?",
+        options: [
+          { text: "Sell GOI Bond Futures", key: "a" },
+          { text: "Buy GOI Bond Futures", key: "b" },
+          { text: "Buy underlying physical bonds", key: "c" },
+          { text: "Sell overnight MIBOR futures", key: "d" }
+        ],
+        correct: "a",
+        explanation: "Because bond prices and interest rates move inversely, an increase in interest rates causes bond prices to drop. To hedge existing holdings or speculate on this decline, the participant should sell (short) GOI Bond Futures."
+      },
+      {
+        id: 4,
+        question: "A strategy where a trader buys a futures/options contract of a particular month and simultaneously sells the exact same contract for a different maturity month is known as a:",
+        options: [
+          { text: "Calendar Spread", key: "a" },
+          { text: "Diagonal Spread", key: "b" },
+          { text: "Inter-bond Spread", key: "c" },
+          { text: "Butterfly Spread", key: "d" }
+        ],
+        correct: "a",
+        explanation: "A Calendar Spread (or Time / Horizontal Spread) involves simultaneously taking opposite positions in contracts on the identical underlying asset but having different expiration dates (e.g. Near-Month vs. Mid-Month)."
+      },
+      {
+        id: 5,
+        question: "The limitation of Exchange Traded Interest Rate Derivatives (ETIRD) for hedgers arises mainly due to:",
+        options: [
+          { text: "Standardised contract specifications (fixed last Thursday expiry & fixed lot size)", key: "a" },
+          { text: "Non-availability on all kinds of underlying fixed income instruments (such as corporate bonds and SDLs)", key: "b" },
+          { text: "Both (a) and (b) above", key: "c" },
+          { text: "Counterparty default risk from the clearing house", key: "d" }
+        ],
+        correct: "c",
+        explanation: "ETIRD limitations stem from standardized contract terms (last Thursday expiry mismatch) and product non-availability on corporate debt / non-G-sec securities, giving rise to basis risk. Clearing corporations eliminate counterparty risk."
+      },
+      {
+        id: 6,
+        question: "An investor holds a ₹26 Crore portfolio of GOI bonds with a modified duration of 6.1. The 1-month GOI bond futures duration is 4.7, trading price is ₹98.50, and lot size is 2,000 units. How many futures contracts are needed to fully hedge the portfolio?",
+        options: [
+          { text: "1,245 lots", key: "a" },
+          { text: "1,713 lots", key: "b" },
+          { text: "2,150 lots", key: "c" },
+          { text: "2,600 lots", key: "d" }
+        ],
+        correct: "b",
+        explanation: "Using Duration Hedge Ratio: N = (260,000,000 * 6.1) / (98.50 * 4.7 * 2,000) = 1,586,000,000 / 925,900 ≈ 1,712.92 ≈ 1,713 lots."
+      },
+      {
+        id: 7,
+        question: "In the textbook short-hedge case study (₹5 Cr bond holding, yields rising from 6.10% to 6.32%), which strategy yielded the highest total cash available upon expiry?",
+        options: [
+          { text: "Holding the bond unhedged (₹5.008 Cr)", key: "a" },
+          { text: "Selling the bond immediately and investing in 38-day T-Bills (₹5.075 Cr)", key: "b" },
+          { text: "Holding the bond and hedging with short IRF contracts (₹5.088 Cr)", key: "c" },
+          { text: "All three strategies yielded identical cash flows", key: "d" }
+        ],
+        correct: "c",
+        explanation: "Holding the physical bond and hedging with 250 lots of IRF locked in ₹50,881,527.78 (₹5.088 Cr) because the investor retained ₹1.813 Cr of accrued coupon on the bond while capturing ₹7.95 Lakhs profit on the short futures position."
+      },
+      {
+        id: 8,
+        question: "In a Long Call Butterfly Spread on bonds using strikes 98.50 (ITM @ 0.60), 99.00 (ATM @ 0.30), and 99.50 (OTM @ 0.20), what are the maximum profit and net cost (maximum loss)?",
+        options: [
+          { text: "Max Profit: ₹0.30; Max Loss: ₹0.20", key: "a" },
+          { text: "Max Profit: ₹0.50; Max Loss: ₹0.30", key: "b" },
+          { text: "Max Profit: ₹0.60; Max Loss: ₹0.40", key: "c" },
+          { text: "Max Profit: ₹0.20; Max Loss: ₹0.30", key: "d" }
+        ],
+        correct: "a",
+        explanation: "Net debit (Max Loss) = Buy 1 @ 0.60 + Buy 1 @ 0.20 - Sell 2 @ 0.30 = 0.80 - 0.60 = ₹0.20. Max profit occurs at strike 99.00 = (99.00 - 98.50) - 0.20 = ₹0.30."
+      },
+      {
+        id: 9,
+        question: "A trader establishes a Long Straddle on GOI bonds by buying a 99.00 Call @ ₹0.30 and a 99.00 Put @ ₹0.20. What are the two Breakeven Points (BEPs) and the maximum loss?",
+        options: [
+          { text: "BEPs: 98.50 and 99.50; Max Loss: ₹0.50", key: "a" },
+          { text: "BEPs: 98.70 and 99.30; Max Loss: ₹0.30", key: "b" },
+          { text: "BEPs: 98.00 and 100.00; Max Loss: Unlimited", key: "c" },
+          { text: "BEPs: 99.00 and 99.50; Max Loss: ₹0.20", key: "d" }
+        ],
+        correct: "a",
+        explanation: "Total premium paid = 0.30 + 0.20 = ₹0.50 (which is the Maximum Loss occurring if the bond expires at ₹99.00). Lower BEP = Strike - Total Premium = 99.00 - 0.50 = 98.50. Upper BEP = Strike + Total Premium = 99.00 + 0.50 = 99.50."
+      },
+      {
+        id: 10,
+        question: "How can an institutional investor synthetically replicate a riskless 3-Month T-Bill for yield enhancement using Exchange Traded Interest Rate Derivatives?",
+        options: [
+          { text: "Buy 15-Year GOI Bond and Sell 3-Month Bond Futures on the same bond", key: "a" },
+          { text: "Sell 15-Year GOI Bond and Buy 3-Month Bond Futures on the same bond", key: "b" },
+          { text: "Buy 91-Day T-Bills and Buy 10-Year GOI Bond Futures", key: "c" },
+          { text: "Sell 3-Month T-Bills and Buy Overnight MIBOR Futures", key: "d" }
+        ],
+        correct: "a",
+        explanation: "Holding the 15-year bond captures the higher long-term coupon, while simultaneously shorting 3-month futures effectively shortens its maturity to 3 months and locks in the future disposal price, creating a synthetic 3-month risk-free T-Bill."
+      },
+      {
+        id: 11,
+        question: "A Covered Call strategy executed by holding an underlying GOI bond at ₹99.50 and selling a Call option with strike ₹100.00 at ₹0.10 generates a payoff profile that synthetically mimics which position?",
+        options: [
+          { text: "A Short Put position", key: "a" },
+          { text: "A Long Put position", key: "b" },
+          { text: "A Long Call position", key: "c" },
+          { text: "A Long Straddle position", key: "d" }
+        ],
+        correct: "a",
+        explanation: "By Put-Call Parity (Long Asset + Short Call = Synthetic Short Put). The covered call caps upside gains (at ₹100.10) while retaining downside risk below the ₹99.40 breakeven, identically mirroring a short put payoff."
+      },
+      {
+        id: 12,
+        question: "Why does using standard GOI Bond Futures to hedge a prospective corporate bond (NCD) issuance create Basis Risk for the corporate borrower?",
+        options: [
+          { text: "Because the corporate credit spread over G-Secs may widen or narrow independently of sovereign yields", key: "a" },
+          { text: "Because corporate bonds are traded on international exchanges while IRFs trade in India", key: "b" },
+          { text: "Because corporate debt has zero interest rate sensitivity", key: "c" },
+          { text: "Because G-Sec futures contracts are physically settled while NCDs are cash settled", key: "d" }
+        ],
+        correct: "a",
+        explanation: "While GOI bond futures hedge benchmark sovereign interest rate swings, corporate borrowing costs include a corporate credit spread (e.g. 50 bps over G-Secs). Any widening in this credit spread cannot be hedged via G-Sec IRF, creating basis risk."
+      }
+    ];
+
+    let userAnswers = {};
+
+    function renderQuiz() {
+      const container = document.getElementById("questions-container");
+      container.innerHTML = "";
+
+      questionsData.forEach((q, index) => {
+        const qDiv = document.createElement("div");
+        qDiv.className = "p-5 rounded-2xl bg-white/5 border border-white/10 space-y-4 transition-all";
+        qDiv.id = `q-box-${q.id}`;
+
+        let optionsHtml = "";
+        q.options.forEach(opt => {
+          optionsHtml += `
+            <label class="flex items-center gap-3 p-3.5 rounded-xl bg-white/5 hover:bg-white/10 border border-white/5 cursor-pointer text-xs sm:text-sm transition-all" onclick="selectOption(${q.id}, '${opt.key}')" id="label-${q.id}-${opt.key}">
+              <input type="radio" name="question-${q.id}" value="${opt.key}" class="w-4 h-4 text-purple-500 focus:ring-0 focus:ring-offset-0 bg-transparent border-slate-500">
+              <span class="font-bold text-purple-300 w-5 uppercase">${opt.key}.</span>
+              <span class="text-slate-200">${opt.text}</span>
+            </label>
+          `;
+        });
+
+        qDiv.innerHTML = `
+          <div class="flex items-start justify-between gap-2">
+            <span class="text-xs font-bold text-purple-400 uppercase tracking-wider">Question ${index + 1} of ${questionsData.length}</span>
+            <span id="badge-${q.id}" class="text-xs px-2 py-0.5 rounded-full bg-white/5 text-slate-400 font-medium">Unanswered</span>
+          </div>
+          <h4 class="font-display font-semibold text-sm sm:text-base text-white leading-snug">${q.question}</h4>
+          <div class="space-y-2 mt-3">
+            ${optionsHtml}
+          </div>
+          <div id="explanation-${q.id}" class="hidden p-4 rounded-xl text-xs sm:text-sm mt-3 space-y-1"></div>
+        `;
+        container.appendChild(qDiv);
+      });
+      lucide.createIcons();
+    }
+
+    function selectOption(qId, key) {
+      userAnswers[qId] = key;
+      const count = Object.keys(userAnswers).length;
+      document.getElementById("answered-count").innerText = count;
+      
+      const badge = document.getElementById(`badge-${qId}`);
+      if (badge) {
+        badge.innerText = "Answered";
+        badge.className = "text-xs px-2 py-0.5 rounded-full bg-purple-500/20 text-purple-300 font-medium";
+      }
+
+      // Highlight selected label
+      const q = questionsData.find(item => item.id === qId);
+      q.options.forEach(opt => {
+        const lbl = document.getElementById(`label-${qId}-${opt.key}`);
+        if (opt.key === key) {
+          lbl.className = "flex items-center gap-3 p-3.5 rounded-xl bg-purple-600/30 border border-purple-400/50 cursor-pointer text-xs sm:text-sm transition-all";
+        } else {
+          lbl.className = "flex items-center gap-3 p-3.5 rounded-xl bg-white/5 hover:bg-white/10 border border-white/5 cursor-pointer text-xs sm:text-sm transition-all";
+        }
+      });
+    }
+
+    function submitQuiz() {
+      let score = 0;
+      questionsData.forEach(q => {
+        const selected = userAnswers[q.id];
+        const isCorrect = selected === q.correct;
+        if (isCorrect) score++;
+
+        const explanationDiv = document.getElementById(`explanation-${q.id}`);
+        explanationDiv.classList.remove("hidden");
+
+        if (isCorrect) {
+          explanationDiv.className = "p-4 rounded-xl text-xs sm:text-sm mt-3 bg-emerald-950/60 border border-emerald-600 text-emerald-200 space-y-1";
+          explanationDiv.innerHTML = `<div class="font-bold text-emerald-400 flex items-center gap-1.5"><i data-lucide="check" class="w-4 h-4"></i> Correct!</div><p>${q.explanation}</p>`;
+        } else {
+          explanationDiv.className = "p-4 rounded-xl text-xs sm:text-sm mt-3 bg-rose-950/60 border border-rose-600 text-rose-200 space-y-1";
+          explanationDiv.innerHTML = `<div class="font-bold text-rose-400 flex items-center gap-1.5"><i data-lucide="x" class="w-4 h-4"></i> Incorrect (Correct Answer: ${q.correct.toUpperCase()})</div><p>${q.explanation}</p>`;
+        }
+      });
+
+      // Show results scorecard
+      const percentage = Math.round((score / questionsData.length) * 100);
+      const passed = percentage >= 60;
+      
+      const resultsDiv = document.getElementById("quiz-results");
+      resultsDiv.classList.remove("hidden");
+
+      const statusBadge = document.getElementById("result-status-badge");
+      statusBadge.innerText = passed ? "Status: Passed (60%+ Benchmark)" : "Status: Needs Revision";
+      statusBadge.className = passed ? "px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider bg-emerald-500 text-emerald-950" : "px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider bg-amber-500 text-amber-950";
+
+      document.getElementById("score-display").innerText = `${score} / ${questionsData.length}`;
+      document.getElementById("percentage-display").innerText = `${percentage}% Score (Passing criteria: 60%)`;
+
+      document.getElementById("result-summary-text").innerText = passed
+        ? `Excellent! You scored ${percentage}%, successfully clearing the NISM Series V-D benchmark of 60%. Review the detailed explanations above to master all Chapter 22 strategy calculations.`
+        : `You scored ${percentage}%. Review the core concepts on Duration Hedge Ratio, Short Hedge scenario cashflows, and Vertical Spreads before retaking the test.`;
+
+      document.getElementById("submit-quiz-btn").classList.add("hidden");
+      document.getElementById("reset-quiz-btn").classList.remove("hidden");
+
+      resultsDiv.scrollIntoView({ behavior: 'smooth' });
+      lucide.createIcons();
+    }
+
+    function resetQuiz() {
+      userAnswers = {};
+      document.getElementById("answered-count").innerText = "0";
+      document.getElementById("quiz-results").classList.add("hidden");
+      document.getElementById("submit-quiz-btn").classList.remove("hidden");
+      document.getElementById("reset-quiz-btn").classList.add("hidden");
+      renderQuiz();
+      document.getElementById("interactive-quiz").scrollIntoView({ behavior: 'smooth' });
+    }
+
+    // Initialize Quiz & Icons
+    renderQuiz();
+    lucide.createIcons();
+  </script>
+</body>
+</html>

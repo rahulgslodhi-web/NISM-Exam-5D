@@ -1,0 +1,1190 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Chapter 4: Legal and Regulatory Framework | NISM Series V-D Notes</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+  <script src="https://unpkg.com/lucide@latest"></script>
+
+  <!-- KaTeX for formula rendering -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.min.css">
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.min.js"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/contrib/auto-render.min.js" onload="renderMathInElement(document.body);"></script>
+
+  <!-- Global Module & Chapter Navigation Sidebar -->
+    <!-- Modern Documentation Design System & Zoom Engine -->
+  <link rel="stylesheet" href="modern-docs.css">
+  <script defer src="nav-sidebar.js"></script>
+
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+            display: ['"Space Grotesk"', 'sans-serif']
+          }
+        }
+      }
+    }
+  </script>
+</head>
+<body class="bg-slate-50 text-slate-900 min-h-screen flex flex-col selection:bg-blue-500 selection:text-white">
+
+  <!-- Header -->
+  <header class="sticky top-0 z-50 bg-white/90 backdrop-blur-md border-b border-slate-200">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
+      <div class="flex items-center gap-3">
+        <a href="module1.html" class="flex items-center gap-2 text-slate-500 hover:text-slate-900 transition-colors">
+          <div class="w-9 h-9 rounded-xl bg-slate-100 hover:bg-slate-200 flex items-center justify-center text-slate-700 transition-colors">
+            <i data-lucide="arrow-left" class="w-4 h-4"></i>
+          </div>
+        </a>
+        <div>
+          <div class="flex items-center gap-2">
+            <span class="text-xs font-bold uppercase tracking-wider text-blue-600 bg-blue-50 px-2 py-0.5 rounded">Module 1</span>
+            <span class="text-xs text-slate-400 font-medium">Chapter 4 of 12</span>
+          </div>
+          <h1 class="font-display font-bold text-base sm:text-lg text-slate-900 leading-tight">Legal and Regulatory Framework</h1>
+        </div>
+      </div>
+
+      <div class="flex items-center gap-3">
+        <span class="hidden sm:inline-flex items-center gap-1 px-3 py-1 rounded-full text-xs font-bold bg-amber-50 text-amber-700 border border-amber-200">
+          <i data-lucide="award" class="w-3.5 h-3.5"></i>
+          Weightage: 7 Marks
+        </span>
+        <a href="#interactive-quiz" class="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-lg text-xs font-bold bg-blue-600 hover:bg-blue-700 text-white shadow-sm transition-all">
+          <i data-lucide="help-circle" class="w-3.5 h-3.5"></i>
+          <span>Chapter Quiz</span>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Content Grid -->
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 grid grid-cols-1 lg:grid-cols-12 gap-8 flex-grow">
+    
+    <!-- Sidebar Navigation -->
+    <aside class="hidden lg:block lg:col-span-3">
+      <div class="sticky top-24 space-y-4">
+        <!-- Chapter Switcher (3 Module Dropdowns) -->
+        <div id="sidebar-chapter-switcher"></div>
+
+        <div class="bg-white p-5 rounded-2xl border border-slate-200 shadow-sm">
+          <h2 class="text-xs font-bold text-slate-400 uppercase tracking-wider mb-3">Chapter Navigation</h2>
+          <nav class="space-y-1 text-xs">
+            <a href="#section-1" class="block px-2.5 py-1.5 rounded-lg text-slate-600 hover:bg-slate-100 hover:text-blue-600">4.1 Financial Regulators & SEBI Mandate ⚡</a>
+            <a href="#section-2" class="block px-2.5 py-1.5 rounded-lg text-amber-700 font-semibold bg-amber-50/70 hover:bg-amber-100">4.2 Scheme Categorization Framework ⭐</a>
+            <a href="#section-3" class="block px-2.5 py-1.5 rounded-lg text-amber-700 font-semibold bg-amber-50/70 hover:bg-amber-100">4.3 SIF & MF Lite Frameworks ⭐</a>
+            <a href="#section-4" class="block px-2.5 py-1.5 rounded-lg text-amber-700 font-semibold bg-amber-50/70 hover:bg-amber-100">4.4 Investment Restrictions (Schedule 7) ⭐</a>
+            <a href="#section-5" class="block px-2.5 py-1.5 rounded-lg text-amber-700 font-semibold bg-amber-50/70 hover:bg-amber-100">4.5 SEBI Advertisement Code ⭐</a>
+            <a href="#section-6" class="block px-2.5 py-1.5 rounded-lg text-amber-700 font-semibold bg-amber-50/70 hover:bg-amber-100">4.6 Insider Trading (PIT) & Skin in Game ⭐</a>
+            <a href="#section-7" class="block px-2.5 py-1.5 rounded-lg text-slate-600 hover:bg-slate-100 hover:text-blue-600">4.7 Rights, SCORES & AMFI Conduct (AGNI) ⚡</a>
+            <a href="#interactive-quiz" class="block px-2.5 py-1.5 rounded-lg text-blue-700 font-bold bg-blue-50 hover:bg-blue-100 mt-2">Practice Quiz (12 MCQs)</a>
+          </nav>
+        </div>
+
+        <div class="p-4 rounded-2xl bg-gradient-to-br from-blue-600 to-indigo-700 text-white shadow-sm text-xs">
+          <div class="flex items-center gap-1.5 font-bold mb-1.5">
+            <i data-lucide="zap" class="w-4 h-4 text-amber-300"></i>
+            <span>Exam Focus Numbers</span>
+          </div>
+          <p class="text-blue-100 leading-relaxed space-y-1">
+            • <strong>Multi Cap:</strong> Min 25% Large, 25% Mid, 25% Small.<br>
+            • <strong>SIF Min Ticket:</strong> ₹10 Lakhs across strategies.<br>
+            • <strong>Ad Warning:</strong> 14 words running for &ge; 5 secs.<br>
+            • <strong>SCORES 2.0:</strong> Redress within 21 calendar days.<br>
+            • <strong>Max Nominees:</strong> Up to 10 per folio.<br>
+            • <strong>Unclaimed &gt; 3 yrs:</strong> Paid at NAV at end of 3rd yr.<br>
+            • <strong>Fundamental Change:</strong> 30-day exit window at NAV.
+          </p>
+        </div>
+      </div>
+    </aside>
+
+    <!-- Main Notes -->
+    <div class="lg:col-span-9 space-y-8">
+
+      <!-- Section 4.1 -->
+      <section id="section-1" class="bg-white rounded-3xl p-6 sm:p-8 border border-slate-200/90 shadow-sm space-y-5">
+        <div class="flex items-center justify-between">
+          <div class="flex items-center gap-2 text-xs font-bold text-slate-500 uppercase tracking-wider">
+            <span class="w-2 h-2 rounded-full bg-slate-400"></span> Section 4.1 &bull; ⚡ Fast-Track Refresher
+          </div>
+          <span class="px-2 py-0.5 rounded text-[11px] font-semibold bg-slate-100 text-slate-600">Statutory Architecture</span>
+        </div>
+        
+        <div>
+          <h2 class="font-display text-xl sm:text-2xl font-bold text-slate-900">Financial Regulators in India & SEBI's Mandate</h2>
+          <p class="text-xs sm:text-sm text-slate-600 mt-1 leading-relaxed">
+            The Indian financial system is regulated by specialized statutory bodies coordinated under the High-Level Committee on Financial Markets and the Financial Stability and Development Council (FSDC) chaired by the Union Finance Minister.
+          </p>
+        </div>
+
+        <!-- 4 Regulators Grid -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3 text-xs">
+          <div class="p-3.5 bg-slate-50 rounded-xl border border-slate-200">
+            <div class="flex items-center justify-between mb-1.5">
+              <strong class="text-slate-900 font-bold text-sm">RBI</strong>
+              <span class="text-[10px] px-1.5 py-0.5 rounded bg-slate-200 text-slate-700">Central Bank</span>
+            </div>
+            <p class="text-slate-600">Governs banking system, money markets, government securities (G-Secs), foreign exchange (FEMA), and monetary policy.</p>
+          </div>
+
+          <div class="p-3.5 bg-blue-50 rounded-xl border border-blue-200">
+            <div class="flex items-center justify-between mb-1.5">
+              <strong class="text-blue-900 font-bold text-sm">SEBI</strong>
+              <span class="text-[10px] px-1.5 py-0.5 rounded bg-blue-200 text-blue-800">Securities Apex</span>
+            </div>
+            <p class="text-blue-800">Apex statutory regulator for securities markets, stock exchanges, mutual funds, RTAs, custodians, portfolio managers, and SIFs.</p>
+          </div>
+
+          <div class="p-3.5 bg-slate-50 rounded-xl border border-slate-200">
+            <div class="flex items-center justify-between mb-1.5">
+              <strong class="text-slate-900 font-bold text-sm">IRDAI</strong>
+              <span class="text-[10px] px-1.5 py-0.5 rounded bg-slate-200 text-slate-700">Insurance</span>
+            </div>
+            <p class="text-slate-600">Regulates life and general insurance companies, insurance intermediaries, reinsurance, and ULIP market conduct.</p>
+          </div>
+
+          <div class="p-3.5 bg-slate-50 rounded-xl border border-slate-200">
+            <div class="flex items-center justify-between mb-1.5">
+              <strong class="text-slate-900 font-bold text-sm">PFRDA</strong>
+              <span class="text-[10px] px-1.5 py-0.5 rounded bg-slate-200 text-slate-700">Pensions</span>
+            </div>
+            <p class="text-slate-600">Regulates the National Pension System (NPS), Atal Pension Yojana, Pension Funds, Central Recordkeeping Agencies (CRAs), and POPs.</p>
+          </div>
+        </div>
+
+        <!-- SEBI Mandate & Powers -->
+        <div class="p-4 bg-slate-50 rounded-2xl border border-slate-200 space-y-3">
+          <h3 class="font-display text-sm font-bold text-slate-900">SEBI's Statutory Mandate & Regulatory Powers</h3>
+          <p class="text-xs sm:text-sm text-slate-600 leading-relaxed">
+            The <strong>Securities and Exchange Board of India (SEBI)</strong> was established as a statutory body on <strong>April 12, 1992</strong> in accordance with the provisions of the <strong>SEBI Act, 1992</strong>. The Preamble of the SEBI Act mandates a threefold objective:
+          </p>
+          <div class="grid grid-cols-1 sm:grid-cols-3 gap-2.5 text-xs">
+            <div class="p-2.5 bg-white rounded-lg border border-slate-200 text-center font-semibold text-slate-800">
+              1. Protecting the interests of investors in securities
+            </div>
+            <div class="p-2.5 bg-white rounded-lg border border-slate-200 text-center font-semibold text-slate-800">
+              2. Promoting the development of the securities market
+            </div>
+            <div class="p-2.5 bg-white rounded-lg border border-slate-200 text-center font-semibold text-slate-800">
+              3. Regulating the securities market & intermediaries
+            </div>
+          </div>
+          
+          <div class="text-xs text-slate-700 space-y-1.5 pt-2">
+            <p>• <strong>SEBI (Mutual Funds) Regulations, 1996:</strong> Comprehensive regulations governing registration of mutual funds, approval of Sponsors/AMCs/Trustees, portfolio valuation norms, investment limits, disclosure standards, and scheme categorization.</p>
+            <p>• <strong>Regulatory & Investigative Powers:</strong> Under Section 11, 11B (power to issue directions in investor interest), 11D (cease and desist orders), Section 15 (adjudication of monetary penalties), and Section 24 (criminal prosecution through Special Courts), SEBI can conduct inspections, audit books of AMCs/Trustees, levy penalties, freeze folios, and debar errant entities.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Section 4.2 -->
+      <section id="section-2" class="bg-white rounded-3xl p-6 sm:p-8 border border-amber-200 shadow-sm space-y-6">
+        <div class="flex items-center justify-between">
+          <div class="flex items-center gap-2 text-xs font-bold text-amber-700 uppercase tracking-wider">
+            <span class="w-2 h-2 rounded-full bg-amber-500"></span> Section 4.2 &bull; ⭐ Super High Exam Yield
+          </div>
+          <span class="px-2.5 py-0.5 rounded-full text-xs font-extrabold bg-amber-100 text-amber-800 border border-amber-300">
+            SEBI Categorization
+          </span>
+        </div>
+
+        <div>
+          <h2 class="font-display text-xl sm:text-2xl font-bold text-slate-900">Comprehensive SEBI Scheme Categorization Framework</h2>
+          <p class="text-xs sm:text-sm text-slate-600 mt-1 leading-relaxed">
+            Issued in October 2017 (and continuously updated), SEBI's categorization framework ensures <strong>"True to Label"</strong> schemes. An AMC is permitted to offer <strong>only ONE scheme per category</strong> (with strict exceptions for Index Funds/ETFs tracking different indices, overseas FoFs, and Sectoral/Thematic funds).
+          </p>
+        </div>
+
+        <!-- AMFI Standardized Market Cap Definition -->
+        <div class="p-4 bg-amber-50/70 rounded-2xl border border-amber-200 text-xs sm:text-sm text-amber-950 space-y-2">
+          <strong class="font-bold text-amber-900 block flex items-center gap-1.5">
+            <i data-lucide="bookmark-check" class="w-4 h-4 text-amber-600"></i> Standardized Market Capitalization Definition (AMFI Semi-Annual List):
+          </strong>
+          <p class="leading-relaxed">
+            To ensure consistency across all AMCs, AMFI prepares a standardized list of stocks based on average full market capitalization of the preceding 6 months (updated as on June 30 and December 31 each year):
+          </p>
+          <div class="grid grid-cols-1 sm:grid-cols-3 gap-2 pt-1 font-semibold text-xs">
+            <div class="p-2.5 bg-white rounded-xl border border-amber-300 text-center">
+              <span class="text-blue-600 block text-sm font-bold">1st to 100th</span> Large Cap Companies
+            </div>
+            <div class="p-2.5 bg-white rounded-xl border border-amber-300 text-center">
+              <span class="text-indigo-600 block text-sm font-bold">101st to 250th</span> Mid Cap Companies
+            </div>
+            <div class="p-2.5 bg-white rounded-xl border border-amber-300 text-center">
+              <span class="text-purple-600 block text-sm font-bold">251st company onwards</span> Small Cap Companies
+            </div>
+          </div>
+        </div>
+
+        <!-- 1. Equity Schemes (11 Categories) -->
+        <div class="space-y-3">
+          <h3 class="font-display text-base font-bold text-slate-900 flex items-center gap-2">
+            <span class="w-6 h-6 rounded-lg bg-blue-100 text-blue-700 flex items-center justify-center text-xs font-bold">1</span>
+            Equity Schemes (11 Distinct Categories)
+          </h3>
+          <p class="text-xs text-slate-600">All equity schemes (except Multi Cap and ELSS) must allocate a defined minimum percentage to equity according to their investment strategy.</p>
+
+          <div class="overflow-x-auto rounded-2xl border border-slate-200">
+            <table class="w-full text-left text-xs">
+              <thead class="bg-slate-100 text-slate-700 font-bold uppercase border-b border-slate-200">
+                <tr>
+                  <th class="p-3">Category Name</th>
+                  <th class="p-3">Mandatory Portfolio Allocation</th>
+                  <th class="p-3">Key Exam Rules & Distinctions</th>
+                </tr>
+              </thead>
+              <tbody class="divide-y divide-slate-200 text-slate-700">
+                <tr class="hover:bg-slate-50/60">
+                  <td class="p-3 font-semibold text-slate-900">Multi Cap Fund</td>
+                  <td class="p-3"><span class="font-bold text-blue-700">&ge; 75%</span> in equity & equity-related instruments</td>
+                  <td class="p-3 text-slate-600">Mandatory minimum <strong>25% Large Cap</strong>, <strong>25% Mid Cap</strong>, and <strong>25% Small Cap</strong> stocks at all times.</td>
+                </tr>
+                <tr class="hover:bg-slate-50/60 bg-blue-50/30">
+                  <td class="p-3 font-semibold text-slate-900">Flexi Cap Fund</td>
+                  <td class="p-3"><span class="font-bold text-blue-700">&ge; 65%</span> in equity & equity-related instruments</td>
+                  <td class="p-3 text-slate-600">Completely unconstrained! Fund manager can dynamically shift across Large, Mid, and Small cap stocks without minimum caps.</td>
+                </tr>
+                <tr class="hover:bg-slate-50/60">
+                  <td class="p-3 font-semibold text-slate-900">Large Cap Fund</td>
+                  <td class="p-3"><span class="font-bold text-blue-700">&ge; 80%</span> in Large Cap stocks</td>
+                  <td class="p-3 text-slate-600">Must invest at least 80% of total assets in 1st to 100th companies by market cap.</td>
+                </tr>
+                <tr class="hover:bg-slate-50/60">
+                  <td class="p-3 font-semibold text-slate-900">Large & Mid Cap Fund</td>
+                  <td class="p-3"><span class="font-bold text-blue-700">&ge; 35%</span> Large Cap + <span class="font-bold text-blue-700">&ge; 35%</span> Mid Cap</td>
+                  <td class="p-3 text-slate-600">Dual mandate: simultaneous minimum 35% allocation in top 100 stocks and minimum 35% in 101st-250th stocks.</td>
+                </tr>
+                <tr class="hover:bg-slate-50/60">
+                  <td class="p-3 font-semibold text-slate-900">Mid Cap Fund</td>
+                  <td class="p-3"><span class="font-bold text-blue-700">&ge; 65%</span> in Mid Cap stocks</td>
+                  <td class="p-3 text-slate-600">Invests in 101st to 250th companies by market cap.</td>
+                </tr>
+                <tr class="hover:bg-slate-50/60">
+                  <td class="p-3 font-semibold text-slate-900">Small Cap Fund</td>
+                  <td class="p-3"><span class="font-bold text-blue-700">&ge; 65%</span> in Small Cap stocks</td>
+                  <td class="p-3 text-slate-600">Invests in 251st company onwards by market cap.</td>
+                </tr>
+                <tr class="hover:bg-slate-50/60">
+                  <td class="p-3 font-semibold text-slate-900">Dividend Yield Fund</td>
+                  <td class="p-3"><span class="font-bold text-blue-700">&ge; 65%</span> in dividend-yielding stocks</td>
+                  <td class="p-3 text-slate-600">Invests predominantly in companies with a track record of paying regular dividends.</td>
+                </tr>
+                <tr class="hover:bg-slate-50/60">
+                  <td class="p-3 font-semibold text-slate-900">Value Fund / Contra Fund</td>
+                  <td class="p-3"><span class="font-bold text-blue-700">&ge; 65%</span> in equity instruments</td>
+                  <td class="p-3 text-slate-600"><strong>Rule:</strong> An AMC can offer EITHER a Value Fund OR a Contra Fund, NOT both!</td>
+                </tr>
+                <tr class="hover:bg-slate-50/60">
+                  <td class="p-3 font-semibold text-slate-900">Focused Fund</td>
+                  <td class="p-3"><span class="font-bold text-blue-700">&ge; 65%</span> in equity instruments</td>
+                  <td class="p-3 text-slate-600">Concentrated portfolio restricted to a <strong>maximum of 30 stocks</strong>. Must specify cap focus (Large/Mid/Small/Multi).</td>
+                </tr>
+                <tr class="hover:bg-slate-50/60">
+                  <td class="p-3 font-semibold text-slate-900">Sectoral / Thematic Fund</td>
+                  <td class="p-3"><span class="font-bold text-blue-700">&ge; 80%</span> in equity of a specific sector/theme</td>
+                  <td class="p-3 text-slate-600">Focuses on one sector (Banking, Pharma) or theme (ESG, Infrastructure). AMCs can launch multiple schemes in this category.</td>
+                </tr>
+                <tr class="hover:bg-slate-50/60">
+                  <td class="p-3 font-semibold text-slate-900">ELSS (Equity Linked Savings Scheme)</td>
+                  <td class="p-3"><span class="font-bold text-blue-700">&ge; 80%</span> in equity & equity-related</td>
+                  <td class="p-3 text-slate-600">Qualifies for tax deduction under Section 80C. Mandatory statutory <strong>lock-in of 3 years</strong> from allotment date.</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <!-- 2. Debt Schemes (16 Categories) -->
+        <div class="space-y-3">
+          <h3 class="font-display text-base font-bold text-slate-900 flex items-center gap-2">
+            <span class="w-6 h-6 rounded-lg bg-emerald-100 text-emerald-700 flex items-center justify-center text-xs font-bold">2</span>
+            Debt Schemes (16 Categories based on Macaulay Duration & Credit Quality)
+          </h3>
+          <p class="text-xs text-slate-600">Debt schemes are standardized based on the Macaulay duration of the portfolio or specific issuer types.</p>
+
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-3 text-xs">
+            <div class="p-3.5 bg-slate-50 rounded-xl border border-slate-200 space-y-1">
+              <div class="font-bold text-slate-900">1. Overnight Fund</div>
+              <p class="text-slate-600">Securities having maturity of <strong>1 business day</strong>. Nil interest rate and credit risk.</p>
+            </div>
+            <div class="p-3.5 bg-slate-50 rounded-xl border border-slate-200 space-y-1">
+              <div class="font-bold text-slate-900">2. Liquid Fund</div>
+              <p class="text-slate-600">Securities with maturity <strong>up to 91 days only</strong>. Graded exit load if redeemed within 7 days.</p>
+            </div>
+            <div class="p-3.5 bg-slate-50 rounded-xl border border-slate-200 space-y-1">
+              <div class="font-bold text-slate-900">3. Ultra Short Duration Fund</div>
+              <p class="text-slate-600">Macaulay duration of portfolio between <strong>3 months and 6 months</strong>.</p>
+            </div>
+            <div class="p-3.5 bg-slate-50 rounded-xl border border-slate-200 space-y-1">
+              <div class="font-bold text-slate-900">4. Low Duration Fund</div>
+              <p class="text-slate-600">Macaulay duration between <strong>6 months and 12 months</strong>.</p>
+            </div>
+            <div class="p-3.5 bg-slate-50 rounded-xl border border-slate-200 space-y-1">
+              <div class="font-bold text-slate-900">5. Money Market Fund</div>
+              <p class="text-slate-600">Invests in money market instruments having maturity <strong>up to 1 year</strong> (CPs, CDs, T-Bills, TREPS).</p>
+            </div>
+            <div class="p-3.5 bg-slate-50 rounded-xl border border-slate-200 space-y-1">
+              <div class="font-bold text-slate-900">6. Short Duration Fund</div>
+              <p class="text-slate-600">Macaulay duration between <strong>1 year and 3 years</strong>.</p>
+            </div>
+            <div class="p-3.5 bg-slate-50 rounded-xl border border-slate-200 space-y-1">
+              <div class="font-bold text-slate-900">7. Medium Duration Fund</div>
+              <p class="text-slate-600">Macaulay duration between <strong>3 years and 4 years</strong>.</p>
+            </div>
+            <div class="p-3.5 bg-slate-50 rounded-xl border border-slate-200 space-y-1">
+              <div class="font-bold text-slate-900">8. Medium to Long Duration Fund</div>
+              <p class="text-slate-600">Macaulay duration between <strong>4 years and 7 years</strong>.</p>
+            </div>
+            <div class="p-3.5 bg-slate-50 rounded-xl border border-slate-200 space-y-1">
+              <div class="font-bold text-slate-900">9. Long Duration Fund</div>
+              <p class="text-slate-600">Macaulay duration <strong>greater than 7 years</strong>.</p>
+            </div>
+            <div class="p-3.5 bg-slate-50 rounded-xl border border-slate-200 space-y-1">
+              <div class="font-bold text-slate-900">10. Dynamic Bond Fund</div>
+              <p class="text-slate-600">Investment across durations dynamically managed based on interest rate cycle outlook.</p>
+            </div>
+            <div class="p-3.5 bg-slate-50 rounded-xl border border-slate-200 space-y-1">
+              <div class="font-bold text-slate-900">11. Corporate Bond Fund</div>
+              <p class="text-slate-600">Minimum <strong>80%</strong> in highest rated corporate bonds rated <strong>AA+ and above</strong>.</p>
+            </div>
+            <div class="p-3.5 bg-slate-50 rounded-xl border border-slate-200 space-y-1">
+              <div class="font-bold text-slate-900">12. Credit Risk Fund</div>
+              <p class="text-slate-600">Minimum <strong>65%</strong> in corporate bonds rated <strong>AA and below</strong> (excluding AA+ rated instruments).</p>
+            </div>
+            <div class="p-3.5 bg-slate-50 rounded-xl border border-slate-200 space-y-1">
+              <div class="font-bold text-slate-900">13. Banking and PSU Fund</div>
+              <p class="text-slate-600">Minimum <strong>80%</strong> in debt instruments of Banks, Public Sector Undertakings (PSUs), and PFIs.</p>
+            </div>
+            <div class="p-3.5 bg-slate-50 rounded-xl border border-slate-200 space-y-1">
+              <div class="font-bold text-slate-900">14. Gilt Fund</div>
+              <p class="text-slate-600">Minimum <strong>80%</strong> in Government Securities (G-Secs) across maturity horizons. Nil credit risk.</p>
+            </div>
+            <div class="p-3.5 bg-slate-50 rounded-xl border border-slate-200 space-y-1">
+              <div class="font-bold text-slate-900">15. Gilt Fund (10-Yr Constant Maturity)</div>
+              <p class="text-slate-600">Minimum <strong>80%</strong> in G-Secs such that portfolio Macaulay duration is <strong>equal to 10 years</strong>.</p>
+            </div>
+            <div class="p-3.5 bg-slate-50 rounded-xl border border-slate-200 space-y-1">
+              <div class="font-bold text-slate-900">16. Floater Fund</div>
+              <p class="text-slate-600">Minimum <strong>65%</strong> in floating rate instruments (or fixed rate debt swapped to floating rate).</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- 3. Hybrid Schemes (6 Categories) -->
+        <div class="space-y-3">
+          <h3 class="font-display text-base font-bold text-slate-900 flex items-center gap-2">
+            <span class="w-6 h-6 rounded-lg bg-indigo-100 text-indigo-700 flex items-center justify-center text-xs font-bold">3</span>
+            Hybrid Schemes (6 Distinct Categories)
+          </h3>
+          <div class="overflow-x-auto rounded-2xl border border-slate-200">
+            <table class="w-full text-left text-xs">
+              <thead class="bg-slate-100 text-slate-700 font-bold uppercase border-b border-slate-200">
+                <tr>
+                  <th class="p-3">Category Name</th>
+                  <th class="p-3">Equity Allocation</th>
+                  <th class="p-3">Debt Allocation</th>
+                  <th class="p-3">Key Regulatory Conditions</th>
+                </tr>
+              </thead>
+              <tbody class="divide-y divide-slate-200 text-slate-700">
+                <tr>
+                  <td class="p-3 font-semibold text-slate-900">Conservative Hybrid Fund</td>
+                  <td class="p-3 font-semibold text-blue-700">10% to 25%</td>
+                  <td class="p-3 font-semibold text-emerald-700">75% to 90%</td>
+                  <td class="p-3 text-slate-600">Focuses on debt safety with modest equity growth kicker.</td>
+                </tr>
+                <tr class="bg-amber-50/40">
+                  <td class="p-3 font-semibold text-slate-900">Balanced Hybrid OR Aggressive Hybrid</td>
+                  <td class="p-3 font-semibold text-blue-700">Balanced: 40% - 60%<br>Aggressive: 65% - 80%</td>
+                  <td class="p-3 font-semibold text-emerald-700">Balanced: 40% - 60%<br>Aggressive: 20% - 35%</td>
+                  <td class="p-3 text-slate-600"><strong>Rule:</strong> AMC can offer EITHER Balanced Hybrid OR Aggressive Hybrid. No arbitrage allowed in Balanced Hybrid.</td>
+                </tr>
+                <tr>
+                  <td class="p-3 font-semibold text-slate-900">Dynamic Asset Allocation (BAF)</td>
+                  <td class="p-3 font-semibold text-blue-700">0% to 100%</td>
+                  <td class="p-3 font-semibold text-emerald-700">0% to 100%</td>
+                  <td class="p-3 text-slate-600">Dynamically managed based on proprietary quantitative valuation models (e.g., P/E, P/B, yield gap).</td>
+                </tr>
+                <tr>
+                  <td class="p-3 font-semibold text-slate-900">Multi Asset Allocation Fund</td>
+                  <td class="p-3" colspan="2"><span class="font-bold text-indigo-700">At least 3 asset classes</span> with minimum <span class="font-bold text-indigo-700">&ge; 10% in each</span></td>
+                  <td class="p-3 text-slate-600">Usually Equity, Debt, and Gold/Commodities/REITs.</td>
+                </tr>
+                <tr>
+                  <td class="p-3 font-semibold text-slate-900">Arbitrage Fund</td>
+                  <td class="p-3 font-semibold text-blue-700">&ge; 65% in equity</td>
+                  <td class="p-3 text-slate-600">Residual in debt/money mkt</td>
+                  <td class="p-3 text-slate-600">Exploits cash-futures mispricing. Fully hedged, low volatility, taxed as equity fund!</td>
+                </tr>
+                <tr>
+                  <td class="p-3 font-semibold text-slate-900">Equity Savings Fund</td>
+                  <td class="p-3 font-semibold text-blue-700">&ge; 65% total equity</td>
+                  <td class="p-3 font-semibold text-emerald-700">&ge; 10% in debt</td>
+                  <td class="p-3 text-slate-600">Must maintain minimum 10% unhedged equity, minimum 10% hedged (derivative arbitrage), and minimum 10% debt.</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <!-- 4 & 5. Solution Oriented & Other Schemes -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 text-xs">
+          <div class="p-4 bg-purple-50/60 rounded-2xl border border-purple-200 space-y-2">
+            <h4 class="font-display font-bold text-purple-950 flex items-center gap-1.5 text-sm">
+              <i data-lucide="lock" class="w-4 h-4 text-purple-700"></i> Solution Oriented Schemes (5-Year Lock-in)
+            </h4>
+            <p class="text-purple-900">
+              1. <strong>Retirement Fund:</strong> Lock-in of <strong>5 years or till retirement age</strong> (whichever is earlier).<br>
+              2. <strong>Children's Fund:</strong> Lock-in of <strong>5 years or till child attains age of majority</strong> (whichever is earlier).
+            </p>
+          </div>
+
+          <div class="p-4 bg-slate-50 rounded-2xl border border-slate-200 space-y-2">
+            <h4 class="font-display font-bold text-slate-900 flex items-center gap-1.5 text-sm">
+              <i data-lucide="layers" class="w-4 h-4 text-slate-700"></i> Other Schemes (Index, ETF, FoF)
+            </h4>
+            <p class="text-slate-600">
+              • <strong>Index Funds / ETFs:</strong> Minimum <strong>95%</strong> in securities of the tracking index.<br>
+              • <strong>FoF (Domestic):</strong> Minimum <strong>95%</strong> in units of underlying domestic MF.<br>
+              • <strong>FoF (Overseas):</strong> Minimum <strong>95%</strong> in units of overseas mutual funds/ETFs.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Section 4.3 -->
+      <section id="section-3" class="bg-white rounded-3xl p-6 sm:p-8 border border-amber-200 shadow-sm space-y-6">
+        <div class="flex items-center justify-between">
+          <div class="flex items-center gap-2 text-xs font-bold text-amber-700 uppercase tracking-wider">
+            <span class="w-2 h-2 rounded-full bg-amber-500"></span> Section 4.3 &bull; ⭐ Super High Exam Yield
+          </div>
+          <span class="px-2.5 py-0.5 rounded-full text-xs font-extrabold bg-amber-100 text-amber-800 border border-amber-300">
+            SIF & MF Lite Frameworks
+          </span>
+        </div>
+
+        <div>
+          <h2 class="font-display text-xl sm:text-2xl font-bold text-slate-900">Specialized Investment Funds (SIF) & MF Lite</h2>
+          <p class="text-xs sm:text-sm text-slate-600 mt-1 leading-relaxed">
+            The landmark regulatory reforms introduced by SEBI bridge the structural gap between retail mutual funds, PMS, and AIFs, while simultaneously liberalizing passive funds under MF Lite.
+          </p>
+        </div>
+
+        <!-- SIF Framework Deep Dive -->
+        <div class="p-5 rounded-2xl bg-gradient-to-br from-slate-900 to-indigo-950 text-white space-y-4 shadow-md">
+          <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2 border-b border-indigo-800/60 pb-3">
+            <div class="flex items-center gap-2">
+              <span class="px-2.5 py-1 rounded-lg bg-indigo-500/30 border border-indigo-400/40 text-indigo-300 font-bold text-xs">New Asset Class</span>
+              <h3 class="font-display text-lg font-bold text-white">Specialized Investment Fund (SIF)</h3>
+            </div>
+            <span class="text-xs font-bold text-amber-300 bg-amber-500/20 border border-amber-400/30 px-2.5 py-1 rounded-full">
+              Minimum Ticket: ₹10 Lakhs
+            </span>
+          </div>
+
+          <div class="grid grid-cols-1 sm:grid-cols-3 gap-3 text-xs">
+            <div class="p-3 rounded-xl bg-white/5 border border-white/10 space-y-1">
+              <strong class="text-indigo-300 block">Market Positioning</strong>
+              <p class="text-slate-300">Fills the gap between Mutual Funds (₹500), PMS (₹50 Lakhs), and Category III AIFs (₹1 Crore). Designed for sophisticated HNIs.</p>
+            </div>
+            <div class="p-3 rounded-xl bg-white/5 border border-white/10 space-y-1">
+              <strong class="text-indigo-300 block">₹10 Lakh Investment Rule</strong>
+              <p class="text-slate-300">The minimum ticket of ₹10 Lakhs applies per investor across all SIF investment strategies offered by a single AMC.</p>
+            </div>
+            <div class="p-3 rounded-xl bg-white/5 border border-white/10 space-y-1">
+              <strong class="text-indigo-300 block">Derivative Flexibility</strong>
+              <p class="text-slate-300">Permitted to take <strong>unhedged derivative positions</strong>, complex options strategies, and participate in short selling via SLB.</p>
+            </div>
+          </div>
+
+          <div class="space-y-2 text-xs">
+            <strong class="text-amber-200 block text-sm">Three Permitted SIF Investment Strategies:</strong>
+            <div class="grid grid-cols-1 sm:grid-cols-3 gap-2 text-slate-200">
+              <div class="p-2.5 rounded-lg bg-white/5 border border-white/10">
+                <strong>1. Long-Short Equity:</strong> Combines long equity positions with short derivative exposure to generate alpha in bull or bear markets.
+              </div>
+              <div class="p-2.5 rounded-lg bg-white/5 border border-white/10">
+                <strong>2. Inverse / Leveraged Strategies:</strong> Uses exchange-traded derivatives to deliver inverse or multi-factor index returns.
+              </div>
+              <div class="p-2.5 rounded-lg bg-white/5 border border-white/10">
+                <strong>3. Specialized Debt / Hybrid:</strong> Employs structured credit, opportunistic high-yield debt, and dynamic cross-asset derivatives.
+              </div>
+            </div>
+          </div>
+
+          <div class="p-3 rounded-xl bg-indigo-900/40 border border-indigo-700/50 text-xs text-indigo-200">
+            <strong>Mandatory SIF Branding Rule:</strong> SIF offerings must have a <strong>distinct brand name and logo</strong> separate from the regular mutual fund. In all marketing collaterals, the font size of the sponsor/mutual fund's brand name must be <strong>equal to or smaller than</strong> the SIF brand name.
+          </div>
+        </div>
+
+        <!-- Mutual Fund Lite (MF Lite) -->
+        <div class="p-5 rounded-2xl bg-emerald-50/70 border border-emerald-200 space-y-3">
+          <div class="flex items-center justify-between">
+            <h3 class="font-display text-base font-bold text-emerald-950 flex items-center gap-2">
+              <i data-lucide="feather" class="w-5 h-5 text-emerald-600"></i> Mutual Fund Lite (MF Lite) for Passive Schemes
+            </h3>
+            <span class="text-xs font-bold text-emerald-800 bg-emerald-100 border border-emerald-300 px-2 py-0.5 rounded-full">
+              Passive Only
+            </span>
+          </div>
+
+          <p class="text-xs sm:text-sm text-emerald-900 leading-relaxed">
+            SEBI created <strong>MF Lite</strong> as a differentiated, relaxed regulatory regime specifically for AMCs managing <strong>exclusively passive schemes</strong> (Index Funds and Exchange Traded Funds).
+          </p>
+
+          <div class="grid grid-cols-1 sm:grid-cols-3 gap-3 text-xs">
+            <div class="p-3 bg-white rounded-xl border border-emerald-200 space-y-1">
+              <strong class="text-emerald-950 block">Relaxed Sponsor Entry</strong>
+              <p class="text-emerald-800">Lower net worth requirements and relaxed 5-year track record/profitability norms compared to traditional active AMCs.</p>
+            </div>
+            <div class="p-3 bg-white rounded-xl border border-emerald-200 space-y-1">
+              <strong class="text-emerald-950 block">Simplified Governance</strong>
+              <p class="text-emerald-800">Reduced reporting overheads, streamlined trustee oversight, and simplified disclosure mandates since index replication is rule-based.</p>
+            </div>
+            <div class="p-3 bg-white rounded-xl border border-emerald-200 space-y-1">
+              <strong class="text-emerald-950 block">Direct Investor Benefit</strong>
+              <p class="text-emerald-800">Substantially lower compliance and operational costs enable ultra-low <strong>Total Expense Ratios (TER)</strong> for retail passive investors.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Section 4.4 -->
+      <section id="section-4" class="bg-white rounded-3xl p-6 sm:p-8 border border-amber-200 shadow-sm space-y-6">
+        <div class="flex items-center justify-between">
+          <div class="flex items-center gap-2 text-xs font-bold text-amber-700 uppercase tracking-wider">
+            <span class="w-2 h-2 rounded-full bg-amber-500"></span> Section 4.4 &bull; ⭐ Super High Exam Yield
+          </div>
+          <span class="px-2.5 py-0.5 rounded-full text-xs font-extrabold bg-amber-100 text-amber-800 border border-amber-300">
+            Investment Restrictions
+          </span>
+        </div>
+
+        <div>
+          <h2 class="font-display text-xl sm:text-2xl font-bold text-slate-900">Key Investment Restrictions (Schedule 7 & Regulations)</h2>
+          <p class="text-xs sm:text-sm text-slate-600 mt-1 leading-relaxed">
+            The Seventh Schedule of SEBI (Mutual Funds) Regulations, 1996 sets prudential investment limits to prevent concentration risk, self-dealing, and illiquidity.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 text-xs sm:text-sm">
+          <div class="p-4 bg-slate-50 rounded-2xl border border-slate-200 space-y-1.5">
+            <strong class="text-slate-900 block font-bold text-sm">1. Delivery Basis & Derivatives</strong>
+            <p class="text-slate-600 leading-relaxed">
+              Every mutual fund shall buy and sell securities strictly on a <strong>delivery basis</strong> (take actual physical/demat delivery on purchases and deliver upon sales). Speculative intraday square-offs without delivery are prohibited.<br>
+              <strong>Exceptions:</strong> Permitted exchange-traded derivative transactions for hedging/portfolio rebalancing and short selling under SEBI's Securities Lending and Borrowing (SLB) framework.
+            </p>
+          </div>
+
+          <div class="p-4 bg-slate-50 rounded-2xl border border-slate-200 space-y-1.5">
+            <strong class="text-slate-900 block font-bold text-sm">2. Single Issuer Equity Limits</strong>
+            <p class="text-slate-600 leading-relaxed">
+              A mutual fund scheme cannot invest more than <strong>10% of its NAV</strong> in equity shares or equity-related instruments of a single company.<br>
+              <strong>Exception:</strong> In Index funds, ETFs, and Sectoral/Thematic funds, the single issuer limit can go up to the weight of the company in the benchmark index or <strong>12% of NAV</strong> (whichever is higher).
+            </p>
+          </div>
+
+          <div class="p-4 bg-slate-50 rounded-2xl border border-slate-200 space-y-1.5">
+            <strong class="text-slate-900 block font-bold text-sm">3. Single Issuer Debt Limits</strong>
+            <p class="text-slate-600 leading-relaxed">
+              A mutual fund scheme shall not invest more than <strong>10% of its NAV</strong> in debt instruments issued by a single corporate issuer (investment grade rated). Extendable to <strong>12% of NAV</strong> with prior approval of Trustees.<br>
+              <strong>Exemption:</strong> Government Securities (G-Secs), Treasury Bills, and collateralized repos in G-Secs/TREPS are exempt from single issuer limits.
+            </p>
+          </div>
+
+          <div class="p-4 bg-slate-50 rounded-2xl border border-slate-200 space-y-1.5">
+            <strong class="text-slate-900 block font-bold text-sm">4. Group & Sector Exposure Limits</strong>
+            <p class="text-slate-600 leading-relaxed">
+              • <strong>Group Exposure:</strong> Debt schemes cannot invest > <strong>20% of NAV</strong> in debt of a single corporate group (extendable to 25% with Trustee approval).<br>
+              • <strong>Sector Exposure:</strong> Total debt exposure to a single sector cannot exceed <strong>20% of NAV</strong> (additional 10% allowed for HFCs and 5% for retail NBFCs).
+            </p>
+          </div>
+
+          <div class="p-4 bg-slate-50 rounded-2xl border border-slate-200 space-y-1.5">
+            <strong class="text-slate-900 block font-bold text-sm">5. Fund of Funds (FoF) Restrictions</strong>
+            <p class="text-slate-600 leading-relaxed">
+              • A regular mutual fund scheme <strong>CANNOT</strong> invest in any Fund of Funds scheme.<br>
+              • A Fund of Funds scheme <strong>CANNOT</strong> invest in any other Fund of Funds scheme (no daisy-chaining).
+            </p>
+          </div>
+
+          <div class="p-4 bg-slate-50 rounded-2xl border border-slate-200 space-y-1.5">
+            <strong class="text-slate-900 block font-bold text-sm">6. Inter-Scheme Transfers (IST)</strong>
+            <p class="text-slate-600 leading-relaxed">
+              Transfers of securities between schemes of the same mutual fund are permitted ONLY at <strong>prevailing market price</strong> (spot basis) and strictly if the security matches the investment objective of the transferee scheme, after the transferring scheme has explored other market avenues.
+            </p>
+          </div>
+        </div>
+
+        <!-- Unclaimed Dividend & TRI Rule -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 text-xs sm:text-sm">
+          <div class="p-4 bg-blue-50 rounded-2xl border border-blue-200 text-blue-950 space-y-1.5">
+            <strong class="font-bold block text-blue-900">Unclaimed Dividend & Redemption Norms:</strong>
+            <p class="text-blue-900/90 leading-relaxed">
+              Unclaimed amounts must be deployed in call money, liquid, or overnight funds.
+              <br>&bull; Claimed <strong>within 3 years:</strong> Investor receives payment based on <strong>prevailing NAV</strong> (includes accrued interest/returns).
+              <br>&bull; Claimed <strong>AFTER 3 years:</strong> Investor receives payment based on the <strong>NAV at the end of the 3rd year</strong>! Accrued income beyond 3 years transfers to the Investor Education and Protection Fund (IEPF).
+            </p>
+          </div>
+
+          <div class="p-4 bg-indigo-50 rounded-2xl border border-indigo-200 text-indigo-950 space-y-1.5">
+            <strong class="font-bold block text-indigo-900">Mandatory TRI Benchmarking (Feb 1, 2018):</strong>
+            <p class="text-indigo-900/90 leading-relaxed">
+              All mutual fund schemes must benchmark performance against <strong>Total Return Indices (TRI)</strong> rather than Price Return Indices (PRI). TRI captures capital gains plus cash dividends and interest distributions, eliminating misleading alpha claims.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Section 4.5 -->
+      <section id="section-5" class="bg-white rounded-3xl p-6 sm:p-8 border border-amber-200 shadow-sm space-y-6">
+        <div class="flex items-center justify-between">
+          <div class="flex items-center gap-2 text-xs font-bold text-amber-700 uppercase tracking-wider">
+            <span class="w-2 h-2 rounded-full bg-amber-500"></span> Section 4.5 &bull; ⭐ Super High Exam Yield
+          </div>
+          <span class="px-2.5 py-0.5 rounded-full text-xs font-extrabold bg-amber-100 text-amber-800 border border-amber-300">
+            Advertisement Code
+          </span>
+        </div>
+
+        <div>
+          <h2 class="font-display text-xl sm:text-2xl font-bold text-slate-900">SEBI Advertisement Code (Fifth Schedule)</h2>
+          <p class="text-xs sm:text-sm text-slate-600 mt-1 leading-relaxed">
+            The Fifth Schedule regulates all mutual fund promotional materials (print, TV, radio, hoardings, SMS, websites, and digital social media) to guarantee objective, truthful, and non-misleading communication.
+          </p>
+        </div>
+
+        <!-- Warning & Celebrity Rules -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 text-xs sm:text-sm">
+          <div class="p-4 bg-rose-50 rounded-2xl border border-rose-200 text-rose-950 space-y-2">
+            <strong class="font-bold flex items-center gap-1.5 text-rose-900 text-sm">
+              <i data-lucide="ban" class="w-4 h-4 text-rose-600"></i> Strict Ban on Celebrity Endorsements
+            </strong>
+            <p class="leading-relaxed">
+              • <strong>NO Celebrities</strong> (actors, sports stars, entertainers, or financial influencers) are allowed to endorse individual mutual fund schemes or individual AMCs.
+            </p>
+            <p class="leading-relaxed">
+              • <strong>Single Exception:</strong> SEBI permits celebrity endorsement exclusively at the <strong>industry level</strong> through AMFI for general investor awareness campaigns (e.g., <em>"Mutual Funds Sahi Hai"</em>) with <strong>prior approval of SEBI</strong>.
+            </p>
+          </div>
+
+          <div class="p-4 bg-emerald-50 rounded-2xl border border-emerald-200 text-emerald-950 space-y-2">
+            <strong class="font-bold flex items-center gap-1.5 text-emerald-900 text-sm">
+              <i data-lucide="megaphone" class="w-4 h-4 text-emerald-600"></i> Mandatory Standard Warning Rule
+            </strong>
+            <p class="font-semibold italic text-emerald-900">
+              "Mutual Fund investments are subject to market risks, read all scheme related documents carefully."
+            </p>
+            <p class="leading-relaxed">
+              • Exactly <strong>14 words</strong> — no words may be added, omitted, or altered.<br>
+              • In audio-visual media (TV, YouTube, digital video): Both the visual disclaimer and the voiceover must run for <strong>at least 5 seconds</strong> in clear, audible tempo.
+            </p>
+          </div>
+        </div>
+
+        <!-- Performance Disclosure Standards -->
+        <div class="p-4 bg-slate-50 rounded-2xl border border-slate-200 text-xs sm:text-sm text-slate-800 space-y-3">
+          <strong class="text-slate-900 block font-bold text-sm">Standard Performance Disclosures in Advertisements:</strong>
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 text-xs">
+            <div class="p-3 bg-white rounded-xl border border-slate-200 space-y-1">
+              <span class="font-bold text-rose-600 block">&lt; 6 Months Existence</span>
+              Past performance <strong>CANNOT</strong> be advertised under any circumstances!
+            </div>
+            <div class="p-3 bg-white rounded-xl border border-slate-200 space-y-1">
+              <span class="font-bold text-amber-600 block">6 Months to 1 Year Existence</span>
+              Show <strong>simple annualized returns</strong> for the past 6-month period.
+            </div>
+            <div class="p-3 bg-white rounded-xl border border-slate-200 space-y-1">
+              <span class="font-bold text-blue-600 block">1 Year to 3 Years Existence</span>
+              Show <strong>CAGR returns</strong> for 1 Year and Since Inception alongside the benchmark.
+            </div>
+            <div class="p-3 bg-white rounded-xl border border-slate-200 space-y-1">
+              <span class="font-bold text-emerald-600 block">&ge; 3 Years Existence</span>
+              Show CAGR for <strong>1Y, 3Y, 5Y, and Since Inception</strong> + point-to-point rupee growth on a standard investment of <strong>₹10,000</strong>.
+            </div>
+          </div>
+          <p class="text-xs text-slate-500">
+            • <strong>Liquid & Overnight Funds:</strong> May show simple annualized returns for 7 days, 15 days, and 30 days.<br>
+            • <strong>Fund Manager Track Record:</strong> Must disclose performance of ALL other schemes managed by the same fund manager.
+          </p>
+        </div>
+      </section>
+
+      <!-- Section 4.6 -->
+      <section id="section-6" class="bg-white rounded-3xl p-6 sm:p-8 border border-amber-200 shadow-sm space-y-6">
+        <div class="flex items-center justify-between">
+          <div class="flex items-center gap-2 text-xs font-bold text-amber-700 uppercase tracking-wider">
+            <span class="w-2 h-2 rounded-full bg-amber-500"></span> Section 4.6 &bull; ⭐ Super High Exam Yield
+          </div>
+          <span class="px-2.5 py-0.5 rounded-full text-xs font-extrabold bg-amber-100 text-amber-800 border border-amber-300">
+            Insider Trading & Alignment
+          </span>
+        </div>
+
+        <div>
+          <h2 class="font-display text-xl sm:text-2xl font-bold text-slate-900">Prohibition of Insider Trading (PIT) & Skin in the Game</h2>
+          <p class="text-xs sm:text-sm text-slate-600 mt-1 leading-relaxed">
+            SEBI extended the <strong>SEBI (Prohibition of Insider Trading) Regulations, 2015</strong> to mutual funds, establishing rigorous curbs on personal transactions by fund employees and mandating alignment of interest.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 text-xs sm:text-sm">
+          <!-- PIT in Mutual Funds -->
+          <div class="p-4 bg-slate-50 rounded-2xl border border-slate-200 space-y-2">
+            <strong class="font-bold text-slate-900 block text-sm flex items-center gap-1.5">
+              <i data-lucide="shield-alert" class="w-4 h-4 text-blue-600"></i> PIT Framework for Mutual Funds
+            </strong>
+            <p class="text-slate-600 leading-relaxed">
+              • <strong>Unpublished Price Sensitive Information (UPSI):</strong> Advance knowledge of major portfolio changes, bulk purchases/sales, valuation write-downs, impending credit downgrades, or liquidity distress in scheme assets.
+            </p>
+            <p class="text-slate-600 leading-relaxed">
+              • <strong>Designated Persons:</strong> Trustees, AMC Directors, CEO, CIO, Fund Managers, Research Analysts, Dealers, Compliance Officers, and their immediate relatives.
+            </p>
+            <p class="text-slate-600 leading-relaxed">
+              • <strong>Trading Window & Pre-Clearance:</strong> Mandatory pre-clearance of personal trades. Trading windows are closed during sensitive periods to prevent front-running, self-dealing, or exploiting advance portfolio knowledge.
+            </p>
+            <p class="text-slate-600 leading-relaxed">
+              • <strong>Minimum Holding Period:</strong> Mandatory holding period (e.g., 30 days or 6 months) to deter short-term speculative trading in mutual fund units.
+            </p>
+          </div>
+
+          <!-- Alignment of Interest / Skin in the Game -->
+          <div class="p-4 bg-indigo-50/70 rounded-2xl border border-indigo-200 space-y-2">
+            <strong class="font-bold text-indigo-950 block text-sm flex items-center gap-1.5">
+              <i data-lucide="anchor" class="w-4 h-4 text-indigo-600"></i> "Skin in the Game" (Alignment of Interest)
+            </strong>
+            <p class="text-indigo-900 leading-relaxed">
+              To align fund manager interests directly with unitholders, SEBI mandates that Key Employees (Fund Managers, Chief Investment Officers, Research Heads) must receive a minimum percentage (typically <strong>20% of net annual CTC / salary / variable pay</strong>) in the form of units of the mutual fund schemes they manage.
+            </p>
+            <div class="p-3 bg-white rounded-xl border border-indigo-200 text-xs text-indigo-950 space-y-1">
+              <strong>Statutory Lock-in Period:</strong>
+              <p>These units are locked in for a minimum period of <strong>3 years</strong> (or the tenure of the scheme, whichever is less). Units cannot be redeemed or pledged during the lock-in period, ensuring complete fidelity to scheme performance.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Section 4.7 -->
+      <section id="section-7" class="bg-white rounded-3xl p-6 sm:p-8 border border-slate-200/90 shadow-sm space-y-5">
+        <div class="flex items-center justify-between">
+          <div class="flex items-center gap-2 text-xs font-bold text-slate-500 uppercase tracking-wider">
+            <span class="w-2 h-2 rounded-full bg-slate-400"></span> Section 4.7 &bull; ⚡ Fast-Track Refresher
+          </div>
+          <span class="px-2 py-0.5 rounded text-[11px] font-semibold bg-slate-100 text-slate-600">Investor Rights & AMFI Code</span>
+        </div>
+
+        <div>
+          <h2 class="font-display text-xl sm:text-2xl font-bold text-slate-900">Investor Rights, SCORES 2.0 & AMFI Code of Conduct (AGNI)</h2>
+          <p class="text-xs sm:text-sm text-slate-600 mt-1 leading-relaxed">
+            Statutory protections provided to mutual fund unitholders alongside AMFI's disciplinary mechanism against errant distributors.
+          </p>
+        </div>
+
+        <!-- 3 Rights Cards -->
+        <div class="grid grid-cols-1 sm:grid-cols-3 gap-3 text-xs">
+          <div class="p-3.5 bg-slate-50 rounded-xl border border-slate-200 space-y-1">
+            <strong class="text-slate-900 block font-bold text-sm">Up to 10 Nominees</strong>
+            <p class="text-slate-600">Unitholders can register up to 10 nominees per folio with specified percentage shares (split equally if unspecified).</p>
+          </div>
+
+          <div class="p-3.5 bg-slate-50 rounded-xl border border-slate-200 space-y-1">
+            <strong class="text-slate-900 block font-bold text-sm">Fundamental Changes</strong>
+            <p class="text-slate-600">Written notice + ad + mandatory <strong>30-day exit window</strong> to exit at prevailing NAV without any exit load.</p>
+          </div>
+
+          <div class="p-3.5 bg-slate-50 rounded-xl border border-slate-200 space-y-1">
+            <strong class="text-slate-900 block font-bold text-sm">75% Unitholders' Power</strong>
+            <p class="text-slate-600"><strong>75% of unitholders</strong> can pass a resolution to terminate the AMC or wind up any mutual fund scheme.</p>
+          </div>
+        </div>
+
+        <!-- Payout Timelines & SCORES 2.0 -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 text-xs sm:text-sm">
+          <div class="p-4 bg-slate-50 rounded-2xl border border-slate-200 space-y-1.5">
+            <strong class="text-slate-900 block font-bold">Statutory Operational Timelines:</strong>
+            <p class="text-slate-600 leading-relaxed">
+              • <strong>IDCW (Dividend) Payout:</strong> Must be dispatched within <strong>7 working days</strong> from the record date.<br>
+              • <strong>Redemption Proceeds:</strong> Must be dispatched within <strong>3 working days</strong> (T+1 for Liquid funds).<br>
+              • <strong>Annual Report:</strong> Must be emailed or abridged summary sent within <strong>4 months</strong> from closure of financial year.
+            </p>
+          </div>
+
+          <div class="p-4 bg-blue-50 rounded-2xl border border-blue-200 text-blue-950 space-y-1.5">
+            <strong class="font-bold block text-blue-900">Grievance Redressal (SCORES 2.0 & SMART ODR):</strong>
+            <p class="text-blue-900/90 leading-relaxed">
+              Investors lodge unresolved complaints on the web-based <strong>SEBI Complaints Redress System (SCORES 2.0)</strong>.
+              <br>&bull; The AMC is mandated to resolve complaints within <strong>21 calendar days</strong> of receipt.
+              <br>&bull; Unresolved matters escalate automatically to designated supervisory bodies or the <strong>SMART ODR</strong> (Online Dispute Resolution) portal for conciliation and online arbitration.
+            </p>
+          </div>
+        </div>
+
+        <!-- AMFI AGNI Disciplinary Process -->
+        <div class="p-4 bg-amber-50/60 rounded-2xl border border-amber-200 text-xs sm:text-sm text-amber-950 space-y-2">
+          <strong class="text-amber-900 block font-bold flex items-center gap-1.5 text-sm">
+            <i data-lucide="alert-triangle" class="w-4 h-4 text-amber-600"></i> AMFI Code of Conduct Disciplinary Action (AGNI):
+          </strong>
+          <p class="leading-relaxed">
+            Upon receipt of a complaint against an intermediary for violating the AMFI Code of Conduct, AMFI issues a show-cause notice granting <strong>3 weeks</strong> to submit a written explanation.
+          </p>
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-2 text-xs pt-1">
+            <div class="p-2.5 bg-white rounded-lg border border-amber-300">
+              <strong class="text-slate-900 block mb-0.5">First Minor Offense:</strong>
+              Warning letter issued with instructions to rectify conduct.
+            </div>
+            <div class="p-2.5 bg-white rounded-lg border border-amber-300">
+              <strong class="text-rose-700 block mb-0.5">Proven Second Violation:</strong>
+              Immediate <strong>cancellation of AMFI Registration (ARN)</strong> and written intimation to all AMCs to debar the distributor!
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Interactive Quiz Section -->
+      <section id="interactive-quiz" class="bg-gradient-to-br from-blue-900 via-slate-900 to-indigo-950 rounded-3xl p-6 sm:p-10 text-white shadow-xl space-y-8">
+        <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 border-b border-blue-800/80 pb-6">
+          <div>
+            <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-blue-500/20 text-blue-300 text-xs font-semibold mb-2">
+              <i data-lucide="check-circle" class="w-3.5 h-3.5 text-blue-400"></i>
+              Chapter 4 High-Yield Assessment
+            </div>
+            <h2 class="font-display text-2xl sm:text-3xl font-bold text-white">Chapter 4 Interactive Assessment Test</h2>
+            <p class="text-xs sm:text-sm text-slate-300 mt-1">12 high-yield exam MCQs covering SEBI regulations, categorization, SIF, MF Lite, and investor rights.</p>
+          </div>
+          <div class="flex items-center gap-2 px-4 py-2 rounded-xl bg-white/10 backdrop-blur-md border border-white/10 text-xs font-semibold">
+            <span id="answered-count" class="text-blue-300 font-bold">0</span> / 12 Answered
+          </div>
+        </div>
+
+        <form id="quiz-form" class="space-y-6">
+          <div id="questions-container" class="space-y-6"></div>
+
+          <div class="pt-6 border-t border-blue-800/80 flex flex-col sm:flex-row items-center justify-between gap-4">
+            <button type="button" id="submit-quiz-btn" onclick="submitQuiz()" class="w-full sm:w-auto px-8 py-3.5 rounded-xl bg-blue-500 hover:bg-blue-400 text-white font-bold text-sm shadow-lg shadow-blue-500/30 transition-all flex items-center justify-center gap-2">
+              <i data-lucide="send" class="w-4 h-4"></i>
+              <span>Submit Assessment & View Detailed Solutions</span>
+            </button>
+            <button type="button" id="reset-quiz-btn" onclick="resetQuiz()" class="hidden w-full sm:w-auto px-6 py-3.5 rounded-xl bg-white/10 hover:bg-white/20 text-slate-200 font-semibold text-sm transition-all flex items-center justify-center gap-2">
+              <i data-lucide="rotate-ccw" class="w-4 h-4"></i>
+              <span>Retake Quiz</span>
+            </button>
+          </div>
+        </form>
+
+        <!-- Quiz Result & Scorecard -->
+        <div id="quiz-results" class="hidden rounded-2xl bg-white/10 p-6 sm:p-8 border border-white/15 backdrop-blur-lg space-y-6">
+          <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+            <div>
+              <span id="result-status-badge" class="px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider"></span>
+              <h3 class="font-display text-2xl font-bold mt-2 text-white">Your Chapter 4 Scorecard</h3>
+            </div>
+            <div class="text-right">
+              <span id="score-display" class="font-display text-4xl font-extrabold text-blue-300">0 / 12</span>
+              <span id="percentage-display" class="block text-xs text-slate-300 mt-0.5">0%</span>
+            </div>
+          </div>
+          <p id="result-summary-text" class="text-sm text-slate-200 leading-relaxed"></p>
+        </div>
+      </section>
+
+      <!-- Bottom Navigation -->
+      <div class="flex items-center justify-between p-6 rounded-2xl bg-white border border-slate-200">
+        <a href="module1-ch3.html" class="inline-flex items-center gap-2 text-sm font-semibold text-slate-600 hover:text-slate-900 transition-colors">
+          <i data-lucide="arrow-left" class="w-4 h-4"></i>
+          <span>Previous: Chapter 3</span>
+        </a>
+        <a href="module1-ch5.html" class="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl bg-blue-600 hover:bg-blue-700 text-white font-semibold text-sm shadow-sm transition-all">
+          <span>Next: Chapter 5 (Scheme Information Documents)</span>
+          <i data-lucide="arrow-right" class="w-4 h-4"></i>
+        </a>
+      </div>
+
+    </div>
+  </div>
+
+  <footer class="bg-slate-900 text-slate-400 py-6 border-t border-slate-800 text-center text-xs">
+    NISM Series V-D Certification Notes &bull; Module 1: Chapter 4 (Legal and Regulatory Framework) &bull; March 2026 Edition
+  </footer>
+
+  <script>
+    const questionsData = [
+      {
+        id: 1,
+        question: "Which statutory body is the apex regulator for mutual funds in India under the SEBI Act, 1992?",
+        options: [
+          { text: "Securities and Exchange Board of India (SEBI)", key: "a" },
+          { text: "Association of Mutual Funds in India (AMFI)", key: "b" },
+          { text: "Reserve Bank of India (RBI)", key: "c" },
+          { text: "Insurance Regulatory and Development Authority of India (IRDAI)", key: "d" }
+        ],
+        correct: "a",
+        explanation: "SEBI is the statutory apex regulator empowered by the SEBI Act, 1992 to administer the SEBI (Mutual Funds) Regulations, 1996. AMFI is an industry trade body, not a statutory regulator."
+      },
+      {
+        id: 2,
+        question: "Under the SEBI Categorization Framework, what is the mandatory allocation rule for a Multi Cap Fund?",
+        options: [
+          { text: "Minimum 65% in equity dynamically allocated across all market caps", key: "a" },
+          { text: "Minimum 75% in equity, with at least 25% each in Large Cap, Mid Cap, and Small Cap stocks", key: "b" },
+          { text: "Minimum 80% in Large Cap stocks and 20% in Mid Cap stocks", key: "c" },
+          { text: "Minimum 65% in Mid and Small Cap stocks combined", key: "d" }
+        ],
+        correct: "b",
+        explanation: "As per SEBI guidelines, a Multi Cap Fund must invest at least 75% of total assets in equity & equity-related instruments, with a mandatory minimum of 25% in Large Cap, 25% in Mid Cap, and 25% in Small Cap stocks at all times. Flexi Cap funds, by contrast, require 65% equity unconstrained across market caps."
+      },
+      {
+        id: 3,
+        question: "What is the minimum investment threshold per investor for Specialized Investment Funds (SIFs)?",
+        options: [
+          { text: "₹5,000 across all schemes", key: "a" },
+          { text: "₹1 Lakh per scheme", key: "b" },
+          { text: "₹10 Lakhs across all SIF investment strategies in an AMC", key: "c" },
+          { text: "₹50 Lakhs per strategy", key: "d" }
+        ],
+        correct: "c",
+        explanation: "SEBI has specified a minimum ticket size of ₹10 Lakhs per investor across all SIF investment strategies within an AMC. This positions SIFs between retail Mutual Funds and Portfolio Management Services (PMS - ₹50 Lakhs minimum)."
+      },
+      {
+        id: 4,
+        question: "Which of the following statements is 'True' with respect to celebrity endorsements for mutual funds?",
+        options: [
+          { text: "SEBI permits celebrity endorsements at the industry level through AMFI with prior SEBI approval", key: "a" },
+          { text: "Celebrities can endorse individual mutual fund schemes during their New Fund Offers (NFOs)", key: "b" },
+          { text: "AMCs can engage movie stars and sports personalities provided risks are disclosed", key: "c" },
+          { text: "Financial influencers (finfluencers) are exempt from celebrity endorsement prohibitions", key: "d" }
+        ],
+        correct: "a",
+        explanation: "Celebrity endorsements are strictly banned for individual AMCs and schemes. SEBI permits celebrity endorsements exclusively at the industry level through AMFI for general investor awareness with prior SEBI approval."
+      },
+      {
+        id: 5,
+        question: "What are the exact specifications for the standard warning in audio-visual mutual fund advertisements?",
+        options: [
+          { text: "10 words running for at least 3 seconds", key: "a" },
+          { text: "14 words running for at least 5 seconds in both visual text and voiceover", key: "b" },
+          { text: "20 words running for at least 8 seconds", key: "c" },
+          { text: "A rapid voiceover with no minimum duration specified", key: "d" }
+        ],
+        correct: "b",
+        explanation: "The standard warning contains exactly 14 words ('Mutual Fund investments are subject to market risks, read all scheme related documents carefully.') and must run for at least 5 seconds in both legible visual display and clear voiceover."
+      },
+      {
+        id: 6,
+        question: "Within how many calendar days must an AMC resolve investor grievances received through the SEBI SCORES 2.0 portal?",
+        options: [
+          { text: "7 calendar days", key: "a" },
+          { text: "15 calendar days", key: "b" },
+          { text: "21 calendar days", key: "c" },
+          { text: "30 calendar days", key: "d" }
+        ],
+        correct: "c",
+        explanation: "Under SEBI regulations, the asset management company must resolve investor grievances received via SCORES 2.0 within 21 calendar days from the date of receipt."
+      },
+      {
+        id: 7,
+        question: "If there is a change in the fundamental attributes of a mutual fund scheme, what exit option must be provided to unitholders?",
+        options: [
+          { text: "An exit window of at least 30 days to exit at prevailing NAV without any exit load", key: "a" },
+          { text: "Exit at original face value of ₹10 within 15 days", key: "b" },
+          { text: "Exit only upon receiving written consent from 75% unitholders", key: "c" },
+          { text: "No exit option is allowed prior to the close of the financial year", key: "d" }
+        ],
+        correct: "a",
+        explanation: "SEBI mandates that existing unitholders must be given written communication, public notice, and an exit window of at least 30 days to redeem their units at the prevailing NAV without any exit load."
+      },
+      {
+        id: 8,
+        question: "What is the branding and naming rule for Specialized Investment Funds (SIF)?",
+        options: [
+          { text: "SIF must share the exact brand name and logo as the sponsor's existing mutual fund", key: "a" },
+          { text: "SIF must have a distinct brand name and logo; the sponsor brand name font size must be equal to or smaller than the SIF brand name", key: "b" },
+          { text: "SIFs are prohibited from mentioning the sponsor's name anywhere in advertisements", key: "c" },
+          { text: "SIFs can use any branding as approved by AMFI without SEBI restrictions", key: "d" }
+        ],
+        correct: "b",
+        explanation: "SEBI mandates that SIFs must have a distinct brand name and logo separate from the regular mutual fund. In all collaterals, the font size of the sponsor/mutual fund's brand name must be equal to or smaller than the SIF brand name."
+      },
+      {
+        id: 9,
+        question: "Under AMFI's Code of Conduct for Intermediaries (AGNI), what disciplinary action is taken on a proven second violation?",
+        options: [
+          { text: "A monetary penalty of ₹25,000", key: "a" },
+          { text: "A second warning letter with a 30-day compliance timeline", key: "b" },
+          { text: "Immediate cancellation of AMFI Registration (ARN) and notification sent to all AMCs", key: "c" },
+          { text: "Temporary suspension of ARN for 15 days only", key: "d" }
+        ],
+        correct: "c",
+        explanation: "Upon breach of the Code of Conduct, AMFI grants 3 weeks for an explanation. If unsatisfactory, a warning letter is issued. A proven second violation results in immediate cancellation of ARN registration and intimation to all AMCs."
+      },
+      {
+        id: 10,
+        question: "If an investor claims unclaimed dividends or redemption proceeds AFTER 3 years, the payment is calculated on:",
+        options: [
+          { text: "The NAV prevailing on the date of claiming", key: "a" },
+          { text: "The NAV prevailing at the end of the 3rd year", key: "b" },
+          { text: "The original face value of ₹10", key: "c" },
+          { text: "The original principal amount minus administrative expenses", key: "d" }
+        ],
+        correct: "b",
+        explanation: "If claimed within 3 years, the payment includes accrued income based on prevailing NAV. If claimed after 3 years, the payment is based strictly on the NAV at the end of the 3rd year. Subsequent income goes to investor education."
+      },
+      {
+        id: 11,
+        question: "Which of the following describes the investment restriction regarding Fund of Funds (FoF) schemes under Schedule 7?",
+        options: [
+          { text: "A regular mutual fund scheme can invest up to 10% of NAV in a FoF", key: "a" },
+          { text: "A FoF can invest in another FoF provided both belong to the same AMC", key: "b" },
+          { text: "No regular mutual fund scheme can invest in a FoF, and no FoF can invest in another FoF", key: "c" },
+          { text: "FoFs can invest in other FoFs only with prior approval of SEBI", key: "d" }
+        ],
+        correct: "c",
+        explanation: "Under Schedule 7 of SEBI MF Regulations, no mutual fund scheme shall invest in any fund of funds scheme, and no fund of funds scheme shall invest in any other fund of funds scheme."
+      },
+      {
+        id: 12,
+        question: "If a mutual fund scheme has been in existence for less than 6 months, how should its past performance be presented in advertisements?",
+        options: [
+          { text: "Using simple annualized return since inception", key: "a" },
+          { text: "Past performance shall NOT be provided", key: "b" },
+          { text: "By benchmarking directly against Sensex/Nifty", key: "c" },
+          { text: "Using compounded annual growth rate (CAGR)", key: "d" }
+        ],
+        correct: "b",
+        explanation: "SEBI's Advertisement Code strictly mandates that where a scheme has been in existence for less than six months, past performance shall NOT be provided under any circumstances."
+      }
+    ];
+
+    let userAnswers = {};
+
+    function renderQuiz() {
+      const container = document.getElementById("questions-container");
+      container.innerHTML = "";
+
+      questionsData.forEach((q, index) => {
+        const qDiv = document.createElement("div");
+        qDiv.className = "p-5 rounded-2xl bg-white/5 border border-white/10 space-y-4";
+        qDiv.id = `q-box-${q.id}`;
+
+        let optionsHtml = "";
+        q.options.forEach(opt => {
+          optionsHtml += `
+            <label class="flex items-center gap-3 p-3 rounded-xl bg-white/5 hover:bg-white/10 border border-white/5 cursor-pointer text-xs sm:text-sm transition-all" onclick="selectOption(${q.id}, '${opt.key}')" id="label-${q.id}-${opt.key}">
+              <input type="radio" name="question-${q.id}" value="${opt.key}" class="w-4 h-4 text-blue-500 focus:ring-0">
+              <span class="font-bold text-blue-300 w-5 uppercase">${opt.key}.</span>
+              <span class="text-slate-200">${opt.text}</span>
+            </label>
+          `;
+        });
+
+        qDiv.innerHTML = `
+          <div class="flex items-start justify-between gap-2">
+            <span class="text-xs font-bold text-blue-400 uppercase tracking-wider">Question ${index + 1} of ${questionsData.length}</span>
+            <span id="badge-${q.id}" class="text-xs px-2 py-0.5 rounded-full bg-white/5 text-slate-400 font-medium">Unanswered</span>
+          </div>
+          <h4 class="font-display font-semibold text-sm sm:text-base text-white">${q.question}</h4>
+          <div class="space-y-2 mt-3">${optionsHtml}</div>
+          <div id="explanation-${q.id}" class="hidden p-4 rounded-xl text-xs sm:text-sm mt-3 space-y-1"></div>
+        `;
+        container.appendChild(qDiv);
+      });
+      lucide.createIcons();
+    }
+
+    function selectOption(qId, key) {
+      userAnswers[qId] = key;
+      document.getElementById("answered-count").innerText = Object.keys(userAnswers).length;
+      
+      const badge = document.getElementById(`badge-${qId}`);
+      if (badge) {
+        badge.innerText = "Answered";
+        badge.className = "text-xs px-2 py-0.5 rounded-full bg-blue-500/20 text-blue-300 font-medium";
+      }
+
+      const q = questionsData.find(item => item.id === qId);
+      q.options.forEach(opt => {
+        const lbl = document.getElementById(`label-${qId}-${opt.key}`);
+        if (opt.key === key) {
+          lbl.className = "flex items-center gap-3 p-3 rounded-xl bg-blue-600/30 border border-blue-400/50 cursor-pointer text-xs sm:text-sm transition-all";
+        } else {
+          lbl.className = "flex items-center gap-3 p-3 rounded-xl bg-white/5 hover:bg-white/10 border border-white/5 cursor-pointer text-xs sm:text-sm transition-all";
+        }
+      });
+    }
+
+    function submitQuiz() {
+      let score = 0;
+      questionsData.forEach(q => {
+        const selected = userAnswers[q.id];
+        const isCorrect = selected === q.correct;
+        if (isCorrect) score++;
+
+        const explanationDiv = document.getElementById(`explanation-${q.id}`);
+        explanationDiv.classList.remove("hidden");
+
+        if (isCorrect) {
+          explanationDiv.className = "p-4 rounded-xl text-xs sm:text-sm mt-3 bg-emerald-950/60 border border-emerald-600 text-emerald-200";
+          explanationDiv.innerHTML = `
+            <div class="font-bold text-emerald-400 flex items-center gap-1.5">
+              <i data-lucide="check-circle" class="w-4 h-4"></i> Correct!
+            </div>
+            <p class="mt-1 text-slate-200">${q.explanation}</p>
+          `;
+        } else {
+          explanationDiv.className = "p-4 rounded-xl text-xs sm:text-sm mt-3 bg-rose-950/60 border border-rose-600 text-rose-200";
+          explanationDiv.innerHTML = `
+            <div class="font-bold text-rose-400 flex items-center gap-1.5">
+              <i data-lucide="x-circle" class="w-4 h-4"></i> Incorrect (Correct Answer: Option ${q.correct.toUpperCase()})
+            </div>
+            <p class="mt-1 text-slate-200">${q.explanation}</p>
+          `;
+        }
+      });
+
+      const percentage = Math.round((score / questionsData.length) * 100);
+      const passed = percentage >= 60;
+      
+      const resultsDiv = document.getElementById("quiz-results");
+      resultsDiv.classList.remove("hidden");
+
+      const statusBadge = document.getElementById("result-status-badge");
+      statusBadge.innerText = passed ? "Status: Passed (60%+ Benchmark)" : "Status: Needs Revision";
+      statusBadge.className = passed ? "px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider bg-emerald-500 text-emerald-950" : "px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider bg-amber-500 text-amber-950";
+
+      document.getElementById("score-display").innerText = `${score} / ${questionsData.length}`;
+      document.getElementById("percentage-display").innerText = `${percentage}% Score (Passing criteria: 60%)`;
+
+      document.getElementById("result-summary-text").innerText = passed
+        ? `Excellent mastery! You scored ${percentage}%, clearing the NISM certification passing benchmark (60%). You demonstrated strong knowledge of SEBI categorization, SIF, advertising code, and investor rights.`
+        : `You scored ${percentage}%, which is below the 60% NISM passing benchmark. Revisit Section 4.2 (Categorization), Section 4.3 (SIF/MF Lite), and Section 4.5 (Advertisement Code) before attempting again.`;
+
+      document.getElementById("submit-quiz-btn").classList.add("hidden");
+      document.getElementById("reset-quiz-btn").classList.remove("hidden");
+
+      resultsDiv.scrollIntoView({ behavior: 'smooth' });
+      lucide.createIcons();
+    }
+
+    function resetQuiz() {
+      userAnswers = {};
+      document.getElementById("answered-count").innerText = "0";
+      document.getElementById("quiz-results").classList.add("hidden");
+      document.getElementById("submit-quiz-btn").classList.remove("hidden");
+      document.getElementById("reset-quiz-btn").classList.add("hidden");
+      renderQuiz();
+      document.getElementById("interactive-quiz").scrollIntoView({ behavior: 'smooth' });
+    }
+
+    renderQuiz();
+    lucide.createIcons();
+  </script>
+</body>
+</html>

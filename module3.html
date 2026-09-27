@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Module 3: Interest Rate Derivatives | NISM Series V-D Notes</title>
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Google Fonts & Lucide Icons -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+  <script src="https://unpkg.com/lucide@latest"></script>
+
+  <!-- Global Module & Chapter Navigation Sidebar -->
+    <!-- Modern Documentation Design System & Zoom Engine -->
+  <link rel="stylesheet" href="modern-docs.css">
+  <script defer src="nav-sidebar.js"></script>
+
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+            display: ['"Space Grotesk"', 'sans-serif']
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    body { font-family: 'Plus Jakarta Sans', sans-serif; }
+  </style>
+</head>
+<body class="bg-slate-50 text-slate-900 min-h-screen flex flex-col selection:bg-purple-500 selection:text-white antialiased">
+
+  <!-- Header -->
+  <header class="sticky top-0 z-50 bg-white/90 backdrop-blur-md border-b border-slate-200 shadow-sm">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
+      
+      <!-- Back to Home / Logo -->
+      <a href="index.html" class="flex items-center gap-3 group focus:outline-none focus:ring-2 focus:ring-purple-500 rounded-xl p-1">
+        <div class="w-10 h-10 rounded-xl bg-purple-600 flex items-center justify-center text-white font-bold shadow-md shadow-purple-200 group-hover:scale-105 transition-transform">
+          <i data-lucide="arrow-left" class="w-5 h-5 group-hover:-translate-x-0.5 transition-transform"></i>
+        </div>
+        <div>
+          <span class="font-display font-bold text-lg tracking-tight text-slate-900 block leading-tight">Module 3</span>
+          <span class="block text-[11px] text-purple-600 font-bold tracking-wider uppercase">Interest Rate Derivatives</span>
+        </div>
+      </a>
+
+      <!-- Navigation Links (Desktop) -->
+      <nav class="hidden md:flex items-center gap-1.5" aria-label="Module Navigation">
+        <a href="index.html" class="px-3.5 py-2 rounded-xl text-sm font-medium text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors">Home</a>
+        <a href="module1.html" class="px-3.5 py-2 rounded-xl text-sm font-medium text-slate-600 dark:text-slate-400 hover:text-blue-600 dark:hover:text-blue-400 hover:bg-blue-50/60 dark:hover:bg-blue-950/40 transition-colors">Module 1 (70M)</a>
+        <a href="module2.html" class="px-3.5 py-2 rounded-xl text-sm font-medium text-slate-600 dark:text-slate-400 hover:text-emerald-600 dark:hover:text-emerald-400 hover:bg-emerald-50/60 dark:hover:bg-emerald-950/40 transition-colors">Module 2 (50M)</a>
+        <a href="module3.html" class="px-3.5 py-2 rounded-xl text-sm font-bold text-purple-700 dark:text-purple-300 bg-purple-50 dark:bg-purple-950/70 border border-purple-200/60 dark:border-purple-800/60 transition-colors">Module 3 (30M)</a>
+        <a href="mock-tests.html" class="px-3.5 py-2 rounded-xl text-sm font-medium text-slate-600 dark:text-slate-400 hover:text-indigo-600 dark:hover:text-indigo-400 hover:bg-indigo-50/60 dark:hover:bg-indigo-950/40 transition-colors">Mock Tests (150Q)</a>
+      </nav>
+
+      <!-- Header Right: Weightage Badge & Mobile Menu Toggle -->
+      <div class="flex items-center gap-3">
+        <span class="hidden sm:inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-bold bg-purple-50 dark:bg-purple-950/70 text-purple-700 dark:text-purple-300 border border-purple-200 dark:border-purple-800/60">
+          <i data-lucide="award" class="w-3.5 h-3.5 text-purple-600 dark:text-purple-400"></i>
+          Weightage: 30 Marks (20.0%)
+        </span>
+
+        <!-- Mobile Menu Toggle Button -->
+        <button id="mobile-menu-btn" type="button" class="md:hidden inline-flex items-center justify-center p-2 rounded-xl text-slate-600 hover:text-slate-900 hover:bg-slate-100 focus:outline-none focus:ring-2 focus:ring-purple-500 transition-colors" aria-expanded="false" aria-label="Toggle navigation menu">
+          <i data-lucide="menu" id="menu-icon" class="w-6 h-6"></i>
+          <i data-lucide="x" id="close-icon" class="w-6 h-6 hidden"></i>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile Navigation Drawer -->
+    <div id="mobile-menu" class="hidden md:hidden border-t border-slate-200 bg-white/95 backdrop-blur-md px-4 pt-3 pb-4 space-y-1.5 shadow-lg">
+      <div class="flex items-center justify-between pb-2 mb-1 border-b border-slate-100">
+        <span class="text-xs font-bold uppercase tracking-wider text-slate-400">Navigation Hub</span>
+        <span class="text-xs font-bold text-purple-700 bg-purple-50 px-2 py-0.5 rounded-full border border-purple-200">
+          30 Marks Weightage
+        </span>
+      </div>
+      <a href="index.html" class="flex items-center gap-3 px-3.5 py-2.5 rounded-xl text-sm font-medium text-slate-700 hover:bg-slate-100 transition-colors">
+        <i data-lucide="home" class="w-4 h-4 text-slate-500"></i>
+        <span>Home Hub</span>
+      </a>
+      <a href="module1.html" class="flex items-center justify-between px-3.5 py-2.5 rounded-xl text-sm font-medium text-slate-700 hover:bg-blue-50 hover:text-blue-700 transition-colors">
+        <div class="flex items-center gap-3">
+          <i data-lucide="layers" class="w-4 h-4 text-blue-600"></i>
+          <span>Module 1: Mutual Funds & SIF</span>
+        </div>
+        <span class="text-xs px-2 py-0.5 rounded-full bg-blue-100 text-blue-800 font-bold">70M</span>
+      </a>
+      <a href="module2.html" class="flex items-center justify-between px-3.5 py-2.5 rounded-xl text-sm font-medium text-slate-700 hover:bg-emerald-50 hover:text-emerald-700 transition-colors">
+        <div class="flex items-center gap-3">
+          <i data-lucide="trending-up" class="w-4 h-4 text-emerald-600"></i>
+          <span>Module 2: Equity Derivatives</span>
+        </div>
+        <span class="text-xs px-2 py-0.5 rounded-full bg-emerald-100 text-emerald-800 font-bold">50M</span>
+      </a>
+      <a href="module3.html" class="flex items-center justify-between px-3.5 py-2.5 rounded-xl text-sm font-bold text-purple-700 bg-purple-50">
+        <div class="flex items-center gap-3">
+          <i data-lucide="percent" class="w-4 h-4 text-purple-600"></i>
+          <span>Module 3: IR Derivatives</span>
+        </div>
+        <span class="text-xs px-2 py-0.5 rounded-full bg-purple-100 text-purple-800 font-bold">5 Chs</span>
+      </a>
+      <a href="mock-tests.html" class="flex items-center justify-between px-3.5 py-2.5 rounded-xl text-sm font-bold text-indigo-700 bg-indigo-50 border border-indigo-200">
+        <div class="flex items-center gap-3">
+          <i data-lucide="award" class="w-4 h-4 text-indigo-600"></i>
+          <span>Mock Test Center (5 Exams)</span>
+        </div>
+        <span class="text-xs px-2 py-0.5 rounded-full bg-indigo-600 text-white font-bold">150Q</span>
+      </a>
+    </div>
+  </header>
+
+  <!-- Module Banner (Purple / Indigo Dual Tone) -->
+  <section class="bg-gradient-to-b from-purple-50/80 via-indigo-50/30 to-slate-50 py-12 border-b border-slate-200">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex flex-wrap items-center gap-2 mb-4">
+        <span class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-purple-100 text-purple-800 text-xs font-bold">
+          <i data-lucide="percent" class="w-3.5 h-3.5"></i>
+          Chapters 18 to 22 &bull; 30 of 150 Marks
+        </span>
+        <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-indigo-50 text-indigo-800 border border-indigo-200 text-xs font-semibold">
+          <i data-lucide="sparkles" class="w-3.5 h-3.5 text-indigo-600"></i>
+          High-Yield Focus: IRF & Strategies (16 Marks Combined)
+        </span>
+      </div>
+      
+      <h1 class="font-display text-3xl sm:text-4xl font-extrabold text-slate-900 tracking-tight">
+        Module 3: Interest Rate Derivatives
+      </h1>
+      <p class="mt-3 text-slate-600 max-w-3xl leading-relaxed text-sm sm:text-base">
+        Deep quantitative coverage of fixed income instruments, yield curve structure, clean vs dirty bond pricing, Macaulay duration, modified duration, PV01, convexity, cash-settled Interest Rate Futures (IRFs on 6Y, 10Y, 13Y GOI bonds, 91-day T-bills, MIBOR), Exchange Traded Interest Rate Options (ETIRO), and duration-based hedging strategies.
+      </p>
+
+      <!-- Quick Metrics Chips -->
+      <div class="mt-6 flex flex-wrap gap-3 text-xs">
+        <div class="px-3 py-1.5 rounded-xl bg-white border border-slate-200/90 shadow-sm text-slate-700 font-medium flex items-center gap-2">
+          <i data-lucide="book-open" class="w-3.5 h-3.5 text-purple-600"></i>
+          <span>5 Specialized Debt & IRD Chapters</span>
+        </div>
+        <div class="px-3 py-1.5 rounded-xl bg-white border border-slate-200/90 shadow-sm text-slate-700 font-medium flex items-center gap-2">
+          <i data-lucide="help-circle" class="w-3.5 h-3.5 text-purple-600"></i>
+          <span>60 Solved Practice MCQs</span>
+        </div>
+        <div class="px-3 py-1.5 rounded-xl bg-white border border-slate-200/90 shadow-sm text-slate-700 font-medium flex items-center gap-2">
+          <i data-lucide="check-circle" class="w-3.5 h-3.5 text-indigo-600"></i>
+          <span>Updated March 2026 Edition Syllabus</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Chapters Grid -->
+  <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 flex-grow">
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+
+      <!-- Chapter 18 -->
+      <a href="module3-ch18.html" class="group bg-white rounded-2xl p-6 border border-slate-200/90 shadow-sm hover:shadow-lg hover:border-purple-300 transition-all flex flex-col justify-between focus:outline-none focus:ring-2 focus:ring-purple-500">
+        <div>
+          <div class="flex items-center justify-between mb-3">
+            <span class="text-xs font-bold uppercase tracking-wider text-purple-600 bg-purple-50 px-2.5 py-1 rounded-lg">Chapter 18</span>
+            <span class="text-xs font-semibold text-slate-500">Weightage: 6 Marks</span>
+          </div>
+          <h3 class="font-display text-lg font-bold text-slate-900 group-hover:text-purple-600 transition-colors">Intro to Interest Rate & Fixed Income Market</h3>
+          <p class="text-xs text-slate-600 mt-2 leading-relaxed">
+            Debt concepts, nominal vs real interest rates, fixed income types (G-Secs, SDLs, Corporate Bonds, ZCBs, FRBs, AT-1/AT-2 bonds), day count conventions, clean & dirty price, YTM, Macaulay/Modified duration, PV01, convexity, and primary/secondary debt market mechanisms.
+          </p>
+        </div>
+        <div class="mt-5 pt-3 border-t border-slate-100 flex items-center justify-between text-xs font-bold text-purple-600">
+          <span>Read Notes & 12 MCQs</span>
+          <i data-lucide="arrow-right" class="w-3.5 h-3.5 group-hover:translate-x-1 transition-transform"></i>
+        </div>
+      </a>
+
+      <!-- Chapter 19 -->
+      <a href="module3-ch19.html" class="group bg-white rounded-2xl p-6 border border-slate-200/90 shadow-sm hover:shadow-lg hover:border-purple-300 transition-all flex flex-col justify-between focus:outline-none focus:ring-2 focus:ring-purple-500">
+        <div>
+          <div class="flex items-center justify-between mb-3">
+            <span class="text-xs font-bold uppercase tracking-wider text-purple-600 bg-purple-50 px-2.5 py-1 rounded-lg">Chapter 19</span>
+            <span class="text-xs font-semibold text-slate-500">Weightage: 2 Marks</span>
+          </div>
+          <h3 class="font-display text-lg font-bold text-slate-900 group-hover:text-purple-600 transition-colors">Interest Rate Derivatives (OTC)</h3>
+          <p class="text-xs text-slate-600 mt-2 leading-relaxed">
+            Economic role of IRD, Forward Rate Agreements (FRAs), Bond Forwards (RBI 2025 directions), Interest Rate Swaps (IRS / MIBOR OIS), Swaptions, Caps/Floors/Collars, and comparison of OTC vs Exchange Traded Derivatives (ETD).
+          </p>
+        </div>
+        <div class="mt-5 pt-3 border-t border-slate-100 flex items-center justify-between text-xs font-bold text-purple-600">
+          <span>Read Notes & 12 MCQs</span>
+          <i data-lucide="arrow-right" class="w-3.5 h-3.5 group-hover:translate-x-1 transition-transform"></i>
+        </div>
+      </a>
+
+      <!-- Chapter 20 (High Weightage: 10 Marks) -->
+      <a href="module3-ch20.html" class="group bg-gradient-to-br from-white via-white to-purple-50/30 dark:from-slate-900 dark:via-slate-900 dark:to-purple-950/20 rounded-2xl p-6 border border-purple-300 dark:border-purple-500/40 shadow-sm hover:shadow-xl hover:border-purple-400 dark:hover:border-purple-400 transition-all flex flex-col justify-between focus:outline-none focus:ring-2 focus:ring-purple-500">
+        <div>
+          <div class="flex items-center justify-between mb-3">
+            <span class="text-xs font-bold uppercase tracking-wider text-purple-600 dark:text-purple-400 bg-purple-50 dark:bg-purple-950/60 px-2.5 py-1 rounded-lg">Chapter 20</span>
+            <span class="text-xs font-extrabold text-purple-950 dark:text-purple-200 bg-purple-100 dark:bg-purple-950/80 px-2.5 py-0.5 rounded-full border border-purple-300 dark:border-purple-600/60 flex items-center gap-1 shadow-2xs">
+              <i data-lucide="award" class="w-3.5 h-3.5 text-purple-600 dark:text-purple-400"></i>
+              High Weightage: 10 Marks ⭐
+            </span>
+          </div>
+          <h3 class="font-display text-lg font-bold text-slate-900 dark:text-white group-hover:text-purple-600 dark:group-hover:text-purple-400 transition-colors">Exchange Traded Interest Rate Futures</h3>
+          <p class="text-xs text-slate-600 dark:text-slate-400 mt-2 leading-relaxed">
+            Evolution of IRF in India, contract specifications of cash-settled IRF on 6Y, 10Y, 13Y GOI bonds (lot size: Rs 2 Lakhs / 2000 units, tick: 0.0025 = Rs 5), 91-day T-Bill Futures, Overnight MIBOR futures, Corporate Bond Index Futures (CBIF), pricing models, and tick value calculations.
+          </p>
+        </div>
+        <div class="mt-5 pt-3 border-t border-purple-100 dark:border-purple-900/40 flex items-center justify-between text-xs font-bold text-purple-700 dark:text-purple-400">
+          <span>Read Notes & 12 MCQs</span>
+          <i data-lucide="arrow-right" class="w-3.5 h-3.5 group-hover:translate-x-1 transition-transform"></i>
+        </div>
+      </a>
+
+      <!-- Chapter 21 -->
+      <a href="module3-ch21.html" class="group bg-white rounded-2xl p-6 border border-slate-200/90 shadow-sm hover:shadow-lg hover:border-purple-300 transition-all flex flex-col justify-between focus:outline-none focus:ring-2 focus:ring-purple-500">
+        <div>
+          <div class="flex items-center justify-between mb-3">
+            <span class="text-xs font-bold uppercase tracking-wider text-purple-600 bg-purple-50 px-2.5 py-1 rounded-lg">Chapter 21</span>
+            <span class="text-xs font-semibold text-slate-500">Weightage: 6 Marks</span>
+          </div>
+          <h3 class="font-display text-lg font-bold text-slate-900 group-hover:text-purple-600 transition-colors">Exchange Traded Interest Rate Options</h3>
+          <p class="text-xs text-slate-600 mt-2 leading-relaxed">
+            European call & put options on GOI securities, contract specifications (strike interval Rs 0.25, lot: 2000 units), pricing fundamentals, Black 1976 model for bond options, option Greeks in debt options, and put-call parity.
+          </p>
+        </div>
+        <div class="mt-5 pt-3 border-t border-slate-100 flex items-center justify-between text-xs font-bold text-purple-600">
+          <span>Read Notes & 12 MCQs</span>
+          <i data-lucide="arrow-right" class="w-3.5 h-3.5 group-hover:translate-x-1 transition-transform"></i>
+        </div>
+      </a>
+
+      <!-- Chapter 22 -->
+      <a href="module3-ch22.html" class="group bg-white rounded-2xl p-6 border border-slate-200/90 shadow-sm hover:shadow-lg hover:border-purple-300 transition-all flex flex-col justify-between focus:outline-none focus:ring-2 focus:ring-purple-500">
+        <div>
+          <div class="flex items-center justify-between mb-3">
+            <span class="text-xs font-bold uppercase tracking-wider text-purple-600 bg-purple-50 px-2.5 py-1 rounded-lg">Chapter 22</span>
+            <span class="text-xs font-semibold text-slate-500">Weightage: 6 Marks</span>
+          </div>
+          <h3 class="font-display text-lg font-bold text-slate-900 group-hover:text-purple-600 transition-colors">Strategies Using ETIRD</h3>
+          <p class="text-xs text-slate-600 mt-2 leading-relaxed">
+            Short hedge vs Long hedge on bond portfolios, duration-based hedge ratio, hedging future borrowings, arbitrage (cash-and-carry & reverse arbitrage in IRF), creating synthetic T-bills, calendar & inter-bond spreads, and limitations for hedgers.
+          </p>
+        </div>
+        <div class="mt-5 pt-3 border-t border-slate-100 flex items-center justify-between text-xs font-bold text-purple-600">
+          <span>Read Notes & 12 MCQs</span>
+          <i data-lucide="arrow-right" class="w-3.5 h-3.5 group-hover:translate-x-1 transition-transform"></i>
+        </div>
+      </a>
+
+    </div>
+
+    <!-- Navigation Footer (Bidirectional & Responsive) -->
+    <div class="mt-12 flex flex-col sm:flex-row items-center justify-between gap-4 p-6 rounded-2xl bg-white border border-slate-200 shadow-sm">
+      <a href="module2.html" class="inline-flex items-center gap-2 text-sm font-semibold text-slate-600 hover:text-emerald-700 transition-colors">
+        <i data-lucide="arrow-left" class="w-4 h-4"></i>
+        <span>Previous: Module 2 (Equity Derivatives)</span>
+      </a>
+      <div class="flex items-center gap-3">
+        <a href="index.html" class="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl bg-slate-900 hover:bg-slate-800 text-white font-semibold text-sm shadow-sm transition-all hover:gap-3">
+          <i data-lucide="home" class="w-4 h-4"></i>
+          <span>Return to Homepage Hub</span>
+        </a>
+      </div>
+    </div>
+  </main>
+
+  <footer class="bg-slate-900 text-slate-400 py-6 border-t border-slate-800 text-center text-xs">
+    NISM Series V-D Certification Notes &bull; Module 3: Interest Rate Derivatives (March 2026 Edition)
+  </footer>
+
+  <!-- Scripts -->
+  <script>
+    // Mobile navigation toggle
+    const mobileBtn = document.getElementById('mobile-menu-btn');
+    const mobileMenu = document.getElementById('mobile-menu');
+    const menuIcon = document.getElementById('menu-icon');
+    const closeIcon = document.getElementById('close-icon');
+
+    if (mobileBtn && mobileMenu) {
+      mobileBtn.addEventListener('click', () => {
+        const isHidden = mobileMenu.classList.contains('hidden');
+        if (isHidden) {
+          mobileMenu.classList.remove('hidden');
+          menuIcon.classList.add('hidden');
+          closeIcon.classList.remove('hidden');
+          mobileBtn.setAttribute('aria-expanded', 'true');
+        } else {
+          mobileMenu.classList.add('hidden');
+          menuIcon.classList.remove('hidden');
+          closeIcon.classList.add('hidden');
+          mobileBtn.setAttribute('aria-expanded', 'false');
+        }
+      });
+    }
+
+    // Lucide Icons Initialization
+    function initIcons() {
+      if (window.lucide && typeof window.lucide.createIcons === 'function') {
+        window.lucide.createIcons();
+      }
+    }
+    document.addEventListener('DOMContentLoaded', initIcons);
+    initIcons();
+  </script>
+</body>
+</html>

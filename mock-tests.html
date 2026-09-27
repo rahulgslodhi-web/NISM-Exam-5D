@@ -1,0 +1,1615 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>NISM Series V-D Mock Test Center (5 Full Exams • 750 Questions) | Master Portal</title>
+  <meta name="description" content="Take full-length 150-question official mock exams for NISM Series V-D: Mutual Fund & SIF Distributors Certification with 3-hour countdown, negative marking, question navigator palette, and detailed explanations." />
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet" />
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['"Plus Jakarta Sans"', 'system-ui', '-apple-system', 'sans-serif'],
+            mono: ['"JetBrains Mono"', 'monospace'],
+          },
+          colors: {
+            brand: {
+              50: '#eef2ff',
+              100: '#e0e7ff',
+              500: '#6366f1',
+              600: '#4f46e5',
+              700: '#4338ca',
+            }
+          }
+        }
+      }
+    };
+  </script>
+
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+
+  <!-- Custom Stylesheet -->
+  <link rel="stylesheet" href="modern-docs.css" />
+
+  <!-- Mock Test Data Suite -->
+  <script src="mock-tests-data.js"></script>
+
+  <style>
+    /* Question Navigator Grid styling */
+    .palette-btn {
+      width: 32px;
+      height: 32px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 8px;
+      font-size: 11px;
+      font-weight: 700;
+      transition: all 0.15s ease;
+      user-select: none;
+      border: 1.5px solid transparent;
+      cursor: pointer;
+    }
+    .palette-btn.unvisited {
+      background-color: #f1f5f9;
+      color: #64748b;
+      border-color: #e2e8f0;
+    }
+    html.dark .palette-btn.unvisited {
+      background-color: rgba(30, 41, 59, 0.7);
+      color: #94a3b8;
+      border-color: rgba(255, 255, 255, 0.08);
+    }
+    .palette-btn.unanswered {
+      background-color: #fef3c7;
+      color: #b45309;
+      border-color: #fcd34d;
+    }
+    html.dark .palette-btn.unanswered {
+      background-color: rgba(245, 158, 11, 0.2);
+      color: #fde68a;
+      border-color: rgba(245, 158, 11, 0.4);
+    }
+    .palette-btn.answered {
+      background-color: #2563eb;
+      color: #ffffff;
+      border-color: #1d4ed8;
+      box-shadow: 0 1px 3px rgba(37, 99, 235, 0.3);
+    }
+    html.dark .palette-btn.answered {
+      background-color: #3b82f6;
+      color: #ffffff;
+      border-color: #60a5fa;
+      box-shadow: 0 1px 3px rgba(59, 130, 246, 0.4);
+    }
+    .palette-btn.flagged {
+      background-color: #7c3aed;
+      color: #ffffff;
+      border-color: #6d28d9;
+    }
+    html.dark .palette-btn.flagged {
+      background-color: #8b5cf6;
+      color: #ffffff;
+      border-color: #a78bfa;
+    }
+    .palette-btn.answered-flagged {
+      background-color: #059669;
+      color: #ffffff;
+      border-color: #047857;
+      position: relative;
+    }
+    .palette-btn.answered-flagged::after {
+      content: '';
+      position: absolute;
+      top: -2px;
+      right: -2px;
+      width: 7px;
+      height: 7px;
+      background: #c084fc;
+      border-radius: 9999px;
+      border: 1px solid #ffffff;
+    }
+    .palette-btn.current {
+      outline: 2.5px solid #f59e0b;
+      outline-offset: 1.5px;
+      transform: scale(1.08);
+      z-index: 2;
+    }
+    .option-card {
+      transition: all 0.18s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    .option-card:hover {
+      transform: translateY(-1px);
+    }
+  </style>
+</head>
+<body class="bg-slate-50 text-slate-900 min-h-screen flex flex-col selection:bg-indigo-500 selection:text-white antialiased">
+
+  <!-- Header Navigation -->
+  <header id="site-header" class="sticky top-0 z-50 bg-white/95 backdrop-blur-md border-b border-slate-200 shadow-xs">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
+      
+      <!-- Brand Logo -->
+      <a href="index.html" class="flex items-center gap-3 group focus:outline-none focus:ring-2 focus:ring-indigo-500 rounded-xl p-1">
+        <div class="w-10 h-10 rounded-xl bg-gradient-to-tr from-indigo-600 to-violet-500 flex items-center justify-center text-white font-bold shadow-md shadow-indigo-200 group-hover:scale-105 transition-transform">
+          <i data-lucide="award" class="w-5 h-5"></i>
+        </div>
+        <div>
+          <span class="font-display font-bold text-lg tracking-tight text-slate-900 block leading-tight">NISM Series V-D</span>
+          <span class="block text-[11px] text-indigo-600 font-bold tracking-wider uppercase">Exam Mock Test Center</span>
+        </div>
+      </a>
+
+      <!-- Desktop Navigation Links -->
+      <nav class="hidden md:flex items-center gap-1.5" aria-label="Main Navigation">
+        <a href="index.html" class="px-3.5 py-2 rounded-xl text-sm font-medium text-slate-600 hover:text-indigo-600 hover:bg-slate-100 transition-colors">Home</a>
+        <a href="module1.html" class="px-3.5 py-2 rounded-xl text-sm font-medium text-slate-600 hover:text-blue-600 hover:bg-blue-50/60 transition-colors">Module 1 (70M)</a>
+        <a href="module2.html" class="px-3.5 py-2 rounded-xl text-sm font-medium text-slate-600 hover:text-emerald-600 hover:bg-emerald-50/60 transition-colors">Module 2 (50M)</a>
+        <a href="module3.html" class="px-3.5 py-2 rounded-xl text-sm font-medium text-slate-600 hover:text-purple-600 hover:bg-purple-50/60 transition-colors">Module 3 (30M)</a>
+        <a href="mock-tests.html" class="px-3.5 py-2 rounded-xl text-sm font-semibold text-indigo-700 bg-indigo-50/90 border border-indigo-200/80 transition-colors flex items-center gap-1.5 shadow-2xs">
+          <i data-lucide="clipboard-check" class="w-4 h-4 text-indigo-600"></i>
+          <span>Mock Tests (150Q)</span>
+        </a>
+      </nav>
+
+      <!-- Header Right: Edition Badge & Theme Toggle -->
+      <div class="flex items-center gap-3">
+        <span class="hidden sm:inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-semibold bg-emerald-50 text-emerald-700 border border-emerald-200">
+          <span class="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-pulse"></span>
+          March 2026 Edition
+        </span>
+
+        <!-- Theme Toggle Button -->
+        <button 
+          id="mock-page-theme-btn" 
+          type="button" 
+          onclick="window.toggleDarkMode()"
+          class="p-2 rounded-xl border border-slate-200 hover:border-slate-300 text-slate-600 hover:text-slate-900 bg-white hover:bg-slate-50 transition-colors shadow-2xs"
+          title="Toggle Dark / Light Mode (⌘D)"
+          aria-label="Toggle theme"
+        >
+          <i data-lucide="moon" class="w-4 h-4"></i>
+        </button>
+
+        <!-- Mobile Hamburger Button -->
+        <button id="mobile-menu-btn" type="button" class="md:hidden inline-flex items-center justify-center p-2 rounded-xl text-slate-600 hover:text-slate-900 hover:bg-slate-100 transition-colors" aria-expanded="false" aria-label="Toggle navigation menu">
+          <i data-lucide="menu" id="menu-icon" class="w-6 h-6"></i>
+          <i data-lucide="x" id="close-icon" class="w-6 h-6 hidden"></i>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile Dropdown Menu -->
+    <div id="mobile-menu" class="hidden md:hidden border-t border-slate-200 bg-white/95 backdrop-blur-md px-4 pt-3 pb-4 space-y-1.5 shadow-lg">
+      <div class="flex items-center justify-between pb-2 mb-1 border-b border-slate-100">
+        <span class="text-xs font-bold uppercase tracking-wider text-slate-400">Curriculum Navigation</span>
+        <span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-[11px] font-semibold bg-emerald-50 text-emerald-700 border border-emerald-200">
+          750 Questions
+        </span>
+      </div>
+      <a href="index.html" class="flex items-center gap-3 px-3.5 py-2 rounded-xl text-sm font-medium text-slate-700 hover:bg-slate-50">
+        <i data-lucide="home" class="w-4 h-4"></i>
+        <span>Home Hub</span>
+      </a>
+      <a href="module1.html" class="flex items-center justify-between px-3.5 py-2 rounded-xl text-sm font-medium text-slate-700 hover:bg-blue-50">
+        <div class="flex items-center gap-3">
+          <i data-lucide="layers" class="w-4 h-4 text-blue-600"></i>
+          <span>Module 1: Mutual Funds & SIF</span>
+        </div>
+        <span class="text-xs px-2 py-0.5 rounded-full bg-blue-100 text-blue-800 font-bold">70M</span>
+      </a>
+      <a href="module2.html" class="flex items-center justify-between px-3.5 py-2 rounded-xl text-sm font-medium text-slate-700 hover:bg-emerald-50">
+        <div class="flex items-center gap-3">
+          <i data-lucide="trending-up" class="w-4 h-4 text-emerald-600"></i>
+          <span>Module 2: Equity Derivatives</span>
+        </div>
+        <span class="text-xs px-2 py-0.5 rounded-full bg-emerald-100 text-emerald-800 font-bold">50M</span>
+      </a>
+      <a href="module3.html" class="flex items-center justify-between px-3.5 py-2 rounded-xl text-sm font-medium text-slate-700 hover:bg-purple-50">
+        <div class="flex items-center gap-3">
+          <i data-lucide="percent" class="w-4 h-4 text-purple-600"></i>
+          <span>Module 3: Interest Rate Derivatives</span>
+        </div>
+        <span class="text-xs px-2 py-0.5 rounded-full bg-purple-100 text-purple-800 font-bold">30M</span>
+      </a>
+      <a href="mock-tests.html" class="flex items-center justify-between px-3.5 py-2.5 rounded-xl text-sm font-bold text-indigo-700 bg-indigo-50 border border-indigo-200">
+        <div class="flex items-center gap-3">
+          <i data-lucide="clipboard-check" class="w-4 h-4 text-indigo-600"></i>
+          <span>Mock Test Center (5 Exams)</span>
+        </div>
+        <span class="text-xs px-2 py-0.5 rounded-full bg-indigo-600 text-white font-bold">150Q</span>
+      </a>
+    </div>
+  </header>
+
+  <!-- =========================================================================
+       VIEW 1: MOCK TESTS SELECTION DASHBOARD (HUB VIEW)
+       ========================================================================= -->
+  <main id="hub-view" class="flex-grow">
+    
+    <!-- Hero Banner -->
+    <section class="relative py-12 sm:py-16 border-b border-slate-200 bg-gradient-to-b from-indigo-50/60 via-slate-50 to-white">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        
+        <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-indigo-50 border border-indigo-200 text-indigo-700 text-xs font-bold mb-5 shadow-2xs">
+          <i data-lucide="sparkles" class="w-4 h-4 text-indigo-600"></i>
+          <span>Official Examination Simulator &bull; 5 Full-Length Test Series</span>
+        </div>
+
+        <h1 class="font-display text-3xl sm:text-5xl font-extrabold text-slate-900 tracking-tight max-w-4xl mx-auto leading-tight">
+          NISM Series V-D <span class="text-transparent bg-clip-text bg-gradient-to-r from-indigo-600 via-violet-600 to-indigo-600">Full-Length Mock Test</span> Center
+        </h1>
+
+        <p class="mt-4 text-sm sm:text-base lg:text-lg text-slate-600 max-w-3xl mx-auto leading-relaxed">
+          Simulate the real 150-mark NISM certification examination under authentic test conditions. Includes exact negative marking (-0.10 marks per error), 180-minute countdown clock, 150-question navigation palette, live scorecard analytics, and textbook explanations.
+        </p>
+
+        <!-- Exam Parameters Banner -->
+        <div class="mt-8 grid grid-cols-2 sm:grid-cols-4 gap-3 max-w-3xl mx-auto text-left">
+          <div class="p-3.5 rounded-2xl bg-white border border-slate-200 shadow-2xs">
+            <span class="text-[10px] uppercase font-bold text-slate-400 block tracking-wider">Total Questions</span>
+            <span class="text-lg font-extrabold text-slate-900 mt-0.5 block">150 MCQs</span>
+            <span class="text-[10px] text-slate-500">1 mark each</span>
+          </div>
+          <div class="p-3.5 rounded-2xl bg-white border border-slate-200 shadow-2xs">
+            <span class="text-[10px] uppercase font-bold text-slate-400 block tracking-wider">Exam Duration</span>
+            <span class="text-lg font-extrabold text-slate-900 mt-0.5 block">180 Mins</span>
+            <span class="text-[10px] text-slate-500">3 hours countdown</span>
+          </div>
+          <div class="p-3.5 rounded-2xl bg-white border border-slate-200 shadow-2xs">
+            <span class="text-[10px] uppercase font-bold text-emerald-600 block tracking-wider">Passing Score</span>
+            <span class="text-lg font-extrabold text-emerald-700 mt-0.5 block">60% (90M)</span>
+            <span class="text-[10px] text-emerald-600">out of 150 marks</span>
+          </div>
+          <div class="p-3.5 rounded-2xl bg-white border border-slate-200 shadow-2xs">
+            <span class="text-[10px] uppercase font-bold text-rose-500 block tracking-wider">Negative Mark</span>
+            <span class="text-lg font-extrabold text-rose-600 mt-0.5 block">10% (-0.10)</span>
+            <span class="text-[10px] text-rose-500">per wrong answer</span>
+          </div>
+        </div>
+
+        <!-- Mode Toggle Selector -->
+        <div class="mt-8 inline-flex items-center p-1.5 rounded-2xl bg-white border border-slate-200 shadow-sm max-w-md">
+          <button 
+            type="button" 
+            id="mode-btn-timed"
+            onclick="setExamMode('timed')"
+            class="px-4 py-2 rounded-xl text-xs font-bold transition-all flex items-center gap-1.5 bg-indigo-600 text-white shadow-xs"
+          >
+            <i data-lucide="clock" class="w-3.5 h-3.5"></i>
+            <span>Timed Exam (3 Hours)</span>
+          </button>
+          <button 
+            type="button" 
+            id="mode-btn-practice"
+            onclick="setExamMode('practice')"
+            class="px-4 py-2 rounded-xl text-xs font-semibold text-slate-600 hover:text-slate-900 transition-all flex items-center gap-1.5"
+          >
+            <i data-lucide="book-open" class="w-3.5 h-3.5"></i>
+            <span>Self-Paced Practice</span>
+          </button>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Mock Tests Cards Grid -->
+    <section class="py-12 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 mb-8">
+        <div>
+          <h2 class="font-display text-2xl font-bold text-slate-900 tracking-tight">Available Mock Examinations</h2>
+          <p class="text-xs sm:text-sm text-slate-600 mt-1">Select any of the 5 full-length mock exams below to launch your simulation.</p>
+        </div>
+        <div class="flex items-center gap-2 text-xs font-bold text-slate-500 bg-white px-3.5 py-1.5 rounded-xl border border-slate-200 shadow-2xs">
+          <i data-lucide="database" class="w-4 h-4 text-indigo-600"></i>
+          <span>750 Verified Questions Loaded</span>
+        </div>
+      </div>
+
+      <div id="mock-cards-container" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <!-- Rendered dynamically via renderMockCards() -->
+      </div>
+
+    </section>
+
+    <!-- How the Examination Simulator Works -->
+    <section class="py-12 border-t border-slate-200 bg-slate-50/50">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <h3 class="font-display text-xl font-bold text-slate-900 mb-6 flex items-center gap-2">
+          <i data-lucide="info" class="w-5 h-5 text-indigo-600"></i>
+          <span>Exam Simulator Guidance & Rules</span>
+        </h3>
+
+        <div class="grid grid-cols-1 sm:grid-cols-3 gap-6 text-xs text-slate-600 leading-relaxed">
+          <div class="p-5 rounded-2xl bg-white border border-slate-200 shadow-2xs space-y-2">
+            <div class="w-8 h-8 rounded-xl bg-blue-50 text-blue-700 flex items-center justify-center font-bold">1</div>
+            <strong class="text-slate-900 text-sm block">150-Question Palette Navigation</strong>
+            <p>Jump to any question instantly via the question palette grid. Filter by answered, unanswered, or flagged for review to manage your time effectively.</p>
+          </div>
+          <div class="p-5 rounded-2xl bg-white border border-slate-200 shadow-2xs space-y-2">
+            <div class="w-8 h-8 rounded-xl bg-emerald-50 text-emerald-700 flex items-center justify-center font-bold">2</div>
+            <strong class="text-slate-900 text-sm block">Institutional Scoring Formula</strong>
+            <p>Net Marks = (Correct Answers &times; 1.0) &minus; (Incorrect Answers &times; 0.10). Unattempted questions carry zero penalty. Passing threshold is exactly 90 marks (60%).</p>
+          </div>
+          <div class="p-5 rounded-2xl bg-white border border-slate-200 shadow-2xs space-y-2">
+            <div class="w-8 h-8 rounded-xl bg-purple-50 text-purple-700 flex items-center justify-center font-bold">3</div>
+            <strong class="text-slate-900 text-sm block">Full Solution Review & Explanations</strong>
+            <p>After submission, review all 150 questions with official textbook explanations, filter by incorrect answers to analyze gaps, and re-attempt anytime.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- =========================================================================
+       VIEW 2: REAL-TIME EXAM ENGINE (EXAM VIEW)
+       ========================================================================= -->
+  <div id="exam-view" class="hidden flex-grow flex flex-col">
+    
+    <!-- Sticky Exam Sub-Header Bar -->
+    <div class="sticky top-0 z-40 bg-white/95 dark:bg-slate-900/95 backdrop-blur-md border-b border-slate-200 dark:border-slate-800 shadow-xs px-4 sm:px-6 py-2.5">
+      <div class="max-w-7xl mx-auto flex items-center justify-between gap-4">
+        
+        <!-- Left: Exit Button, Test Title & Question Progress -->
+        <div class="flex items-center gap-3 min-w-0">
+          <button 
+            type="button" 
+            onclick="confirmExitExam()"
+            class="px-2.5 py-1.5 rounded-lg border border-slate-200 dark:border-slate-700 hover:bg-slate-100 dark:hover:bg-slate-800 text-slate-600 dark:text-slate-300 text-xs font-semibold flex items-center gap-1 shrink-0 transition-colors"
+            title="Exit to Mock Hub"
+          >
+            <i data-lucide="chevron-left" class="w-3.5 h-3.5"></i>
+            <span class="hidden sm:inline">Exit Exam</span>
+          </button>
+          <div class="min-w-0">
+            <h2 id="exam-title-display" class="font-bold text-xs sm:text-sm text-slate-900 dark:text-white truncate">Mock Test 1</h2>
+            <div class="flex items-center gap-2 text-[11px] text-slate-500 dark:text-slate-400">
+              <span id="exam-question-progress" class="font-semibold text-indigo-600 dark:text-indigo-400">Question 1 of 150</span>
+              <span class="hidden sm:inline">&bull;</span>
+              <span id="exam-attempted-stat" class="hidden sm:inline text-slate-500 dark:text-slate-400">0 Answered</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right: Timer, Theme Toggle, Palette Toggle & Submit Button -->
+        <div class="flex items-center gap-2 sm:gap-3 shrink-0">
+          
+          <!-- Countdown Timer Widget -->
+          <div id="timer-container" class="flex items-center gap-1.5 px-3 py-1.5 rounded-xl bg-slate-100 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 text-slate-800 dark:text-slate-200 font-mono font-bold text-xs sm:text-sm">
+            <i data-lucide="clock" class="w-4 h-4 text-indigo-600 dark:text-indigo-400"></i>
+            <span id="timer-display">03:00:00</span>
+          </div>
+
+          <!-- Exam Theme Toggle Button -->
+          <button 
+            type="button" 
+            onclick="window.toggleDarkMode()"
+            class="p-1.5 sm:px-2.5 sm:py-1.5 rounded-xl border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-800 hover:bg-slate-50 dark:hover:bg-slate-700 text-slate-700 dark:text-slate-300 text-xs font-semibold flex items-center gap-1 shadow-2xs transition-colors"
+            title="Toggle Dark / Light Mode (⌘D)"
+          >
+            <i data-lucide="moon" class="w-3.5 h-3.5 text-indigo-600 dark:text-amber-400"></i>
+            <span class="hidden md:inline">Theme</span>
+          </button>
+
+          <!-- Mobile Palette Drawer Trigger -->
+          <button 
+            type="button" 
+            onclick="togglePaletteDrawer(true)"
+            class="lg:hidden px-3 py-1.5 rounded-xl border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-800 hover:bg-slate-50 dark:hover:bg-slate-700 text-slate-700 dark:text-slate-300 text-xs font-bold flex items-center gap-1.5 shadow-2xs transition-colors"
+          >
+            <i data-lucide="layout-grid" class="w-4 h-4 text-indigo-600 dark:text-indigo-400"></i>
+            <span class="hidden sm:inline">Palette</span>
+          </button>
+
+          <!-- Submit Exam Button -->
+          <button 
+            type="button" 
+            onclick="openSubmitConfirmationModal()"
+            class="px-4 py-1.5 rounded-xl bg-emerald-600 hover:bg-emerald-700 text-white font-bold text-xs shadow-sm transition-all flex items-center gap-1.5"
+          >
+            <i data-lucide="check-circle" class="w-4 h-4"></i>
+            <span>Submit Exam</span>
+          </button>
+
+        </div>
+
+      </div>
+    </div>
+
+    <!-- Exam Body Grid (Question Area + Minimal Question Palette) -->
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-5 grid grid-cols-1 lg:grid-cols-12 gap-6 flex-grow w-full">
+      
+      <!-- Center: Main Question Panel -->
+      <div class="lg:col-span-8 xl:col-span-9 flex flex-col justify-start">
+        
+        <!-- Question Card (Holds Question, Options AND Response Action Controls in ONE compact card) -->
+        <div id="exam-question-card" class="bg-white dark:bg-slate-900 rounded-3xl p-5 sm:p-7 border border-slate-200 dark:border-slate-800 shadow-sm flex flex-col justify-between">
+          
+          <div class="space-y-4">
+            <!-- Header Bar: Question # & Marks Badges -->
+            <div class="flex items-center justify-between pb-3 border-b border-slate-100 dark:border-slate-800/80">
+              <div class="flex items-center gap-2">
+                <span id="q-number-badge" class="px-2.5 py-1 rounded-lg bg-indigo-50 dark:bg-indigo-950/60 border border-indigo-200 dark:border-indigo-800 text-indigo-700 dark:text-indigo-300 font-bold text-xs uppercase tracking-wide">
+                  Question 1 of 150
+                </span>
+                <span class="text-[11px] font-semibold text-slate-500 dark:text-slate-400">
+                  Single Correct MCQ
+                </span>
+              </div>
+
+              <div class="flex items-center gap-2 text-xs">
+                <span class="px-2.5 py-0.5 rounded text-[11px] font-bold bg-emerald-50 dark:bg-emerald-950/60 text-emerald-700 dark:text-emerald-300 border border-emerald-200 dark:border-emerald-800">
+                  +1.0 Mark
+                </span>
+                <span class="px-2.5 py-0.5 rounded text-[11px] font-bold bg-rose-50 dark:bg-rose-950/60 text-rose-700 dark:text-rose-300 border border-rose-200 dark:border-rose-800">
+                  -0.10 Mark
+                </span>
+              </div>
+            </div>
+
+            <!-- Question Content -->
+            <div>
+              <h3 id="current-question-text" class="font-display font-semibold text-base sm:text-lg text-slate-900 dark:text-white leading-relaxed">
+                Loading question text...
+              </h3>
+            </div>
+
+            <!-- Options Container (Right where options end, buttons will follow immediately) -->
+            <div id="current-options-container" class="space-y-2.5 pt-1">
+              <!-- Rendered dynamically -->
+            </div>
+
+            <!-- Practice Mode Inline Explanation Box (Only shown if mode === 'practice') -->
+            <div id="practice-explanation-box" class="hidden p-3.5 rounded-2xl bg-indigo-50/70 dark:bg-indigo-950/50 border border-indigo-200 dark:border-indigo-800 space-y-1 text-xs sm:text-sm">
+              <span class="font-bold text-indigo-900 dark:text-indigo-300 flex items-center gap-1.5">
+                <i data-lucide="lightbulb" class="w-4 h-4 text-indigo-600"></i>
+                Instant Practice Explanation:
+              </span>
+              <p id="practice-explanation-text" class="text-slate-700 dark:text-slate-300 leading-relaxed"></p>
+            </div>
+          </div>
+
+          <!-- Immediate Response Action Controls (Placed right where options end - NO SCROLLING NEEDED!) -->
+          <div id="exam-action-bar" class="pt-4 mt-4 border-t border-slate-100 dark:border-slate-800 flex flex-wrap items-center justify-between gap-2.5">
+            
+            <!-- Left Side: Previous & Clear Response -->
+            <div class="flex items-center gap-2">
+              <button 
+                type="button" 
+                id="btn-prev"
+                onclick="goToPrevQuestion()"
+                class="px-4 py-2 rounded-xl border border-slate-200 dark:border-slate-700 hover:bg-slate-100 dark:hover:bg-slate-800 text-slate-700 dark:text-slate-300 font-semibold text-xs sm:text-sm transition-colors flex items-center gap-1.5"
+              >
+                <i data-lucide="arrow-left" class="w-3.5 h-3.5"></i>
+                <span>Previous</span>
+              </button>
+
+              <button 
+                type="button" 
+                id="btn-clear"
+                onclick="clearCurrentAnswer()"
+                class="px-3.5 py-2 rounded-xl border border-slate-200 dark:border-slate-700 hover:border-rose-300 hover:bg-rose-50/70 hover:text-rose-700 dark:hover:bg-rose-950/30 text-slate-500 dark:text-slate-400 font-medium text-xs sm:text-sm transition-colors flex items-center gap-1.5"
+              >
+                <i data-lucide="rotate-ccw" class="w-3.5 h-3.5"></i>
+                <span>Clear Response</span>
+              </button>
+            </div>
+
+            <!-- Right Side: Mark for Review & Save & Next -->
+            <div class="flex items-center gap-2">
+              <button 
+                type="button" 
+                id="btn-flag"
+                onclick="toggleFlagCurrentQuestion()"
+                class="px-4 py-2 rounded-xl border border-purple-200 dark:border-purple-800 bg-purple-50/70 dark:bg-purple-950/40 hover:bg-purple-100 dark:hover:bg-purple-900/60 text-purple-700 dark:text-purple-300 font-bold text-xs sm:text-sm transition-all flex items-center gap-1.5 shadow-2xs"
+                title="Mark this question for review (Official NISM Examination Protocol)"
+              >
+                <i data-lucide="bookmark" id="flag-icon" class="w-4 h-4 text-purple-600 dark:text-purple-400"></i>
+                <span id="flag-text">Mark for Review</span>
+              </button>
+
+              <button 
+                type="button" 
+                id="btn-next"
+                onclick="goToNextQuestion()"
+                class="px-5 py-2 rounded-xl bg-indigo-600 hover:bg-indigo-700 text-white font-bold text-xs sm:text-sm shadow-sm hover:shadow transition-all flex items-center gap-1.5"
+              >
+                <span id="btn-next-label">Save & Next</span>
+                <i data-lucide="arrow-right" id="btn-next-icon" class="w-3.5 h-3.5"></i>
+              </button>
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+      <!-- Right: Minimalist & Clean 150-Question Palette (Strictly Exam Palette Only) -->
+      <aside id="exam-palette-aside" class="hidden lg:block lg:col-span-4 xl:col-span-3">
+        <div class="sticky top-16 bg-white dark:bg-slate-900 rounded-3xl p-5 border border-slate-200 dark:border-slate-800 shadow-sm space-y-4">
+          
+          <!-- Palette Header & Real-Time Progress -->
+          <div class="flex items-center justify-between pb-3 border-b border-slate-100 dark:border-slate-800">
+            <div>
+              <h4 class="font-bold text-xs sm:text-sm text-slate-900 dark:text-white">Question Palette</h4>
+              <p class="text-[10px] text-slate-500 dark:text-slate-400">150 Questions Total</p>
+            </div>
+            <span id="palette-answered-chip" class="px-2.5 py-0.5 rounded-full text-[10px] font-bold bg-indigo-50 dark:bg-indigo-950/60 text-indigo-700 dark:text-indigo-300 border border-indigo-200 dark:border-indigo-800">
+              0 / 150 Answered
+            </span>
+          </div>
+
+          <!-- Official NISM 4-State Legend with Real-Time Counters -->
+          <div class="grid grid-cols-2 gap-2 text-[10px] font-medium pb-2 border-b border-slate-100 dark:border-slate-800">
+            <div class="flex items-center justify-between p-1.5 rounded-lg bg-blue-50/60 dark:bg-blue-950/30 border border-blue-100 dark:border-blue-900/40">
+              <div class="flex items-center gap-1.5">
+                <span class="w-2.5 h-2.5 rounded bg-blue-600 shrink-0"></span>
+                <span class="font-semibold text-slate-800 dark:text-slate-200">Answered</span>
+              </div>
+              <strong id="legend-count-answered" class="text-blue-700 dark:text-blue-400 font-bold font-mono">0</strong>
+            </div>
+
+            <div class="flex items-center justify-between p-1.5 rounded-lg bg-amber-50/60 dark:bg-amber-950/30 border border-amber-100 dark:border-amber-900/40">
+              <div class="flex items-center gap-1.5">
+                <span class="w-2.5 h-2.5 rounded bg-amber-200 border border-amber-400 shrink-0"></span>
+                <span class="font-semibold text-slate-800 dark:text-slate-200">Unanswered</span>
+              </div>
+              <strong id="legend-count-unanswered" class="text-amber-700 dark:text-amber-400 font-bold font-mono">0</strong>
+            </div>
+
+            <div class="flex items-center justify-between p-1.5 rounded-lg bg-purple-50/60 dark:bg-purple-950/30 border border-purple-100 dark:border-purple-900/40">
+              <div class="flex items-center gap-1.5">
+                <span class="w-2.5 h-2.5 rounded bg-purple-600 shrink-0"></span>
+                <span class="font-semibold text-slate-800 dark:text-slate-200">Marked Review</span>
+              </div>
+              <strong id="legend-count-flagged" class="text-purple-700 dark:text-purple-400 font-bold font-mono">0</strong>
+            </div>
+
+            <div class="flex items-center justify-between p-1.5 rounded-lg bg-slate-50 dark:bg-slate-800/40 border border-slate-200 dark:border-slate-700/60">
+              <div class="flex items-center gap-1.5">
+                <span class="w-2.5 h-2.5 rounded bg-slate-200 dark:bg-slate-700 border border-slate-300 dark:border-slate-600 shrink-0"></span>
+                <span class="font-semibold text-slate-800 dark:text-slate-200">Not Visited</span>
+              </div>
+              <strong id="legend-count-unvisited" class="text-slate-600 dark:text-slate-400 font-bold font-mono">150</strong>
+            </div>
+          </div>
+
+          <!-- Filter Tabs for Palette -->
+          <div class="flex items-center gap-1 text-[10px] font-semibold text-slate-500 overflow-x-auto pb-1">
+            <button type="button" onclick="filterPalette('all', this)" class="palette-filter-btn px-2 py-1 rounded-lg bg-indigo-50 text-indigo-700 font-bold">All (150)</button>
+            <button type="button" onclick="filterPalette('answered', this)" class="palette-filter-btn px-2 py-1 rounded-lg hover:bg-slate-100 dark:hover:bg-slate-800 text-slate-600 dark:text-slate-400">Answered</button>
+            <button type="button" onclick="filterPalette('unanswered', this)" class="palette-filter-btn px-2 py-1 rounded-lg hover:bg-slate-100 dark:hover:bg-slate-800 text-slate-600 dark:text-slate-400">Unanswered</button>
+            <button type="button" onclick="filterPalette('flagged', this)" class="palette-filter-btn px-2 py-1 rounded-lg hover:bg-slate-100 dark:hover:bg-slate-800 text-slate-600 dark:text-slate-400">Marked</button>
+          </div>
+
+          <!-- 150 Question Buttons Grid -->
+          <div id="desktop-palette-grid" class="max-h-[360px] overflow-y-auto p-1 grid grid-cols-5 gap-2 nism-custom-scroll">
+            <!-- 150 buttons rendered dynamically -->
+          </div>
+
+        </div>
+      </aside>
+
+    </div>
+
+  </div>
+
+  <!-- =========================================================================
+       VIEW 3: RESULTS SCORECARD & FULL SOLUTION REVIEW (RESULT VIEW)
+       ========================================================================= -->
+  <main id="result-view" class="hidden flex-grow py-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-8">
+    
+    <!-- Top Result Banner -->
+    <div class="bg-white rounded-3xl p-6 sm:p-10 border border-slate-200 shadow-lg text-center space-y-6">
+      
+      <!-- Pass / Fail Status Badge -->
+      <div id="result-pass-badge" class="inline-flex items-center gap-2 px-5 py-2 rounded-full text-sm font-extrabold uppercase tracking-wider shadow-sm">
+        Status: Calculating...
+      </div>
+
+      <!-- Main Score Display -->
+      <div>
+        <div class="flex items-baseline justify-center gap-2">
+          <span id="final-score-marks" class="text-4xl sm:text-6xl font-black text-slate-900 font-display">0.00</span>
+          <span class="text-xl sm:text-2xl font-bold text-slate-400">/ 150 Marks</span>
+        </div>
+        <p id="final-percentage-text" class="text-sm sm:text-base font-bold text-indigo-600 mt-1">0.0% Overall Score (Passing Benchmark: 60%)</p>
+      </div>
+
+      <!-- Performance Metric Breakdown Cards -->
+      <div class="grid grid-cols-2 sm:grid-cols-4 gap-4 max-w-3xl mx-auto text-left">
+        
+        <div class="p-4 rounded-2xl bg-emerald-50/70 border border-emerald-200">
+          <span class="text-[10px] uppercase font-bold text-emerald-800 block">Correct Answers</span>
+          <span id="stat-correct-count" class="text-2xl font-black text-emerald-700 mt-1 block">0</span>
+          <span id="stat-correct-marks" class="text-[11px] font-semibold text-emerald-600">+0.00 Marks</span>
+        </div>
+
+        <div class="p-4 rounded-2xl bg-rose-50/70 border border-rose-200">
+          <span class="text-[10px] uppercase font-bold text-rose-800 block">Incorrect Answers</span>
+          <span id="stat-incorrect-count" class="text-2xl font-black text-rose-700 mt-1 block">0</span>
+          <span id="stat-incorrect-marks" class="text-[11px] font-semibold text-rose-600">-0.00 Marks</span>
+        </div>
+
+        <div class="p-4 rounded-2xl bg-slate-50 border border-slate-200">
+          <span class="text-[10px] uppercase font-bold text-slate-500 block">Unattempted</span>
+          <span id="stat-unattempted-count" class="text-2xl font-black text-slate-700 mt-1 block">0</span>
+          <span class="text-[11px] font-semibold text-slate-400">0.00 Marks Penalty</span>
+        </div>
+
+        <div class="p-4 rounded-2xl bg-indigo-50/70 border border-indigo-200">
+          <span class="text-[10px] uppercase font-bold text-indigo-800 block">Accuracy Rate</span>
+          <span id="stat-accuracy-rate" class="text-2xl font-black text-indigo-700 mt-1 block">0%</span>
+          <span id="stat-total-attempted" class="text-[11px] font-semibold text-indigo-600">0 Attempted</span>
+        </div>
+
+      </div>
+
+      <!-- Performance Message & Guidance -->
+      <div class="max-w-2xl mx-auto p-4 rounded-2xl bg-slate-50 border border-slate-200 text-xs sm:text-sm text-slate-700 leading-relaxed">
+        <p id="result-guidance-text">
+          Review your answers and detailed textbook explanations below to master weak areas.
+        </p>
+      </div>
+
+      <!-- Action Buttons -->
+      <div class="flex flex-wrap items-center justify-center gap-3 pt-2">
+        <button 
+          type="button" 
+          onclick="retakeCurrentExam()"
+          class="px-5 py-2.5 rounded-xl bg-indigo-600 hover:bg-indigo-700 text-white font-bold text-xs sm:text-sm shadow-sm transition-all flex items-center gap-2"
+        >
+          <i data-lucide="rotate-ccw" class="w-4 h-4"></i>
+          <span>Retake This Exam</span>
+        </button>
+        <button 
+          type="button" 
+          onclick="returnToHub()"
+          class="px-5 py-2.5 rounded-xl border border-slate-200 bg-white hover:bg-slate-50 text-slate-700 font-bold text-xs sm:text-sm transition-colors flex items-center gap-2"
+        >
+          <i data-lucide="layout-grid" class="w-4 h-4"></i>
+          <span>Select Another Mock Exam</span>
+        </button>
+      </div>
+
+    </div>
+
+    <!-- Solution Review Section -->
+    <div class="space-y-6">
+      
+      <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+        <div>
+          <h3 class="font-display text-xl sm:text-2xl font-bold text-slate-900">Comprehensive Solutions & Review</h3>
+          <p class="text-xs sm:text-sm text-slate-600">All 150 questions with official explanations and verification.</p>
+        </div>
+
+        <!-- Filter Review Options -->
+        <div class="flex items-center gap-1.5 p-1 rounded-xl bg-white border border-slate-200 text-xs font-semibold text-slate-600">
+          <button type="button" onclick="filterReview('all', this)" class="review-filter-btn px-3 py-1.5 rounded-lg bg-indigo-600 text-white font-bold">All (150)</button>
+          <button type="button" onclick="filterReview('incorrect', this)" class="review-filter-btn px-3 py-1.5 rounded-lg hover:bg-slate-100 text-rose-600">Incorrect Only</button>
+          <button type="button" onclick="filterReview('correct', this)" class="review-filter-btn px-3 py-1.5 rounded-lg hover:bg-slate-100 text-emerald-600">Correct Only</button>
+          <button type="button" onclick="filterReview('unattempted', this)" class="review-filter-btn px-3 py-1.5 rounded-lg hover:bg-slate-100">Unattempted</button>
+        </div>
+      </div>
+
+      <!-- Solutions List Container -->
+      <div id="solutions-review-container" class="space-y-4">
+        <!-- Rendered dynamically -->
+      </div>
+
+    </div>
+
+  </main>
+
+  <!-- =========================================================================
+       MODAL 1: SUBMIT CONFIRMATION MODAL
+       ========================================================================= -->
+  <div id="submit-confirm-modal" class="hidden fixed inset-0 z-50 flex items-center justify-center p-4 bg-slate-900/60 backdrop-blur-xs">
+    <div class="bg-white rounded-3xl p-6 sm:p-7 max-w-md w-full border border-slate-200 shadow-2xl space-y-5 animate-in fade-in zoom-in-95 duration-200">
+      
+      <div class="flex items-center gap-3">
+        <div class="w-10 h-10 rounded-2xl bg-amber-50 text-amber-600 flex items-center justify-center shrink-0 border border-amber-200">
+          <i data-lucide="alert-triangle" class="w-5 h-5"></i>
+        </div>
+        <div>
+          <h4 class="font-bold text-base text-slate-900">Submit Your Examination?</h4>
+          <p class="text-xs text-slate-500">Are you ready to finalize your test?</p>
+        </div>
+      </div>
+
+      <!-- Summary Stats Table -->
+      <div class="rounded-2xl border border-slate-200 bg-slate-50 p-3.5 space-y-2 text-xs">
+        <div class="flex items-center justify-between text-slate-700">
+          <span>Total Questions:</span>
+          <strong class="text-slate-900">150</strong>
+        </div>
+        <div class="flex items-center justify-between text-blue-700 font-semibold">
+          <span>Attempted / Answered:</span>
+          <strong id="modal-stat-answered">0</strong>
+        </div>
+        <div class="flex items-center justify-between text-amber-700 font-semibold">
+          <span>Unattempted / Left Blank:</span>
+          <strong id="modal-stat-unanswered">150</strong>
+        </div>
+        <div class="flex items-center justify-between text-purple-700 font-semibold">
+          <span>Marked for Review:</span>
+          <strong id="modal-stat-flagged">0</strong>
+        </div>
+      </div>
+
+      <p class="text-xs text-slate-500 leading-relaxed">
+        Once submitted, your final score will be calculated with -0.10 negative marking for incorrect choices, and the full solutions will be revealed.
+      </p>
+
+      <div class="flex items-center justify-end gap-2 pt-2">
+        <button 
+          type="button" 
+          onclick="closeSubmitConfirmationModal()"
+          class="px-4 py-2 rounded-xl border border-slate-200 hover:bg-slate-100 text-slate-700 font-semibold text-xs transition-colors"
+        >
+          Keep Writing
+        </button>
+        <button 
+          type="button" 
+          onclick="finalizeAndSubmitExam()"
+          class="px-5 py-2 rounded-xl bg-emerald-600 hover:bg-emerald-700 text-white font-bold text-xs shadow-sm transition-all flex items-center gap-1.5"
+        >
+          <i data-lucide="check" class="w-4 h-4"></i>
+          <span>Confirm & Submit</span>
+        </button>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- =========================================================================
+       MODAL 2: MOBILE QUESTION PALETTE DRAWER
+       ========================================================================= -->
+  <div id="mobile-palette-drawer" class="hidden fixed inset-0 z-50 flex justify-end bg-slate-900/60 backdrop-blur-xs">
+    <div class="bg-white w-full max-w-xs h-full p-5 flex flex-col justify-between shadow-2xl animate-in slide-in-from-right duration-200">
+      
+      <div class="space-y-4 flex-grow flex flex-col min-h-0">
+        <div class="flex items-center justify-between pb-3 border-b border-slate-100 dark:border-slate-800">
+          <div>
+            <h4 class="font-bold text-sm text-slate-900 dark:text-white">Question Palette</h4>
+            <p class="text-[10px] text-slate-500 dark:text-slate-400">150 Questions</p>
+          </div>
+          <button type="button" onclick="togglePaletteDrawer(false)" class="p-1 rounded-lg hover:bg-slate-100 dark:hover:bg-slate-800 text-slate-500">
+            <i data-lucide="x" class="w-5 h-5"></i>
+          </button>
+        </div>
+
+        <!-- Mobile 4-State Legend -->
+        <div class="grid grid-cols-2 gap-1.5 text-[9px] font-medium pb-2 border-b border-slate-100 dark:border-slate-800">
+          <div class="flex items-center justify-between p-1 rounded-md bg-blue-50/70 dark:bg-blue-950/40">
+            <span class="flex items-center gap-1 text-slate-700 dark:text-slate-300">
+              <span class="w-2 h-2 rounded bg-blue-600"></span> Answered
+            </span>
+            <strong id="mob-legend-answered" class="text-blue-700 dark:text-blue-400 font-bold font-mono">0</strong>
+          </div>
+          <div class="flex items-center justify-between p-1 rounded-md bg-amber-50/70 dark:bg-amber-950/40">
+            <span class="flex items-center gap-1 text-slate-700 dark:text-slate-300">
+              <span class="w-2 h-2 rounded bg-amber-200 border border-amber-400"></span> Unanswered
+            </span>
+            <strong id="mob-legend-unanswered" class="text-amber-700 dark:text-amber-400 font-bold font-mono">0</strong>
+          </div>
+          <div class="flex items-center justify-between p-1 rounded-md bg-purple-50/70 dark:bg-purple-950/40">
+            <span class="flex items-center gap-1 text-slate-700 dark:text-slate-300">
+              <span class="w-2 h-2 rounded bg-purple-600"></span> Marked
+            </span>
+            <strong id="mob-legend-flagged" class="text-purple-700 dark:text-purple-400 font-bold font-mono">0</strong>
+          </div>
+          <div class="flex items-center justify-between p-1 rounded-md bg-slate-50 dark:bg-slate-800/40">
+            <span class="flex items-center gap-1 text-slate-700 dark:text-slate-300">
+              <span class="w-2 h-2 rounded bg-slate-200 border border-slate-300"></span> Not Visited
+            </span>
+            <strong id="mob-legend-unvisited" class="text-slate-600 dark:text-slate-400 font-bold font-mono">150</strong>
+          </div>
+        </div>
+
+        <!-- 150 Grid in Drawer -->
+        <div id="mobile-palette-grid" class="flex-grow overflow-y-auto p-1 grid grid-cols-5 gap-2 nism-custom-scroll">
+          <!-- Rendered dynamically -->
+        </div>
+      </div>
+
+      <div class="pt-4 border-t border-slate-100">
+        <button 
+          type="button" 
+          onclick="togglePaletteDrawer(false)"
+          class="w-full py-2 rounded-xl bg-slate-100 hover:bg-slate-200 text-slate-700 font-bold text-xs"
+        >
+          Close Palette
+        </button>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="bg-slate-900 text-slate-400 py-10 border-t border-slate-800 text-center text-xs mt-auto">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-3">
+      <div class="flex items-center justify-center gap-2 text-white font-bold">
+        <i data-lucide="award" class="w-4 h-4 text-indigo-400"></i>
+        <span>NISM Series V-D Examination Preparation Hub</span>
+      </div>
+      <p class="text-slate-500 max-w-xl mx-auto">
+        Updated for March 2026 Edition. 5 full-length mock examinations covering Mutual Funds, SIF, Equity Derivatives, and Interest Rate Derivatives.
+      </p>
+      <div class="pt-2 text-[11px] text-slate-500">
+        &copy; 2026 NISM Series V-D Master Portal. All Rights Reserved.
+      </div>
+    </div>
+  </footer>
+
+  <!-- Application Logic & Engine -->
+  <script>
+    // State Variables
+    let currentExamMode = 'timed'; // 'timed' | 'practice'
+    let activeTestId = null;
+    let activeTestData = null;
+    let currentQuestionIndex = 0; // 0 to 149
+    let userAnswers = {}; // { qId: 'A' | 'B' | 'C' | 'D' }
+    let flaggedQuestions = new Set(); // Set of qIds
+    let visitedQuestions = new Set(); // Set of visited qIds
+    let timerInterval = null;
+    let timeRemainingSeconds = 180 * 60; // 3 hours = 10,800 seconds
+    let activePaletteFilter = 'all'; // 'all' | 'answered' | 'unanswered' | 'flagged'
+    let activeReviewFilter = 'all'; // 'all' | 'incorrect' | 'correct' | 'unattempted'
+
+    // Init Page on Load
+    document.addEventListener("DOMContentLoaded", () => {
+      renderMockCards();
+      setupMobileMenu();
+      lucide.createIcons();
+
+      // Check if URL has ?test=mock1
+      const params = new URLSearchParams(window.location.search);
+      const testParam = params.get("test");
+      if (testParam && window.NISM_MOCK_TESTS && window.NISM_MOCK_TESTS[testParam]) {
+        startMockExam(testParam);
+      }
+    });
+
+    // 1. Render Mock Cards on Selection Hub
+    function renderMockCards() {
+      const container = document.getElementById("mock-cards-container");
+      if (!container || !window.NISM_MOCK_TESTS) return;
+
+      container.innerHTML = "";
+
+      const testKeys = Object.keys(window.NISM_MOCK_TESTS);
+      testKeys.forEach((key, index) => {
+        const test = window.NISM_MOCK_TESTS[key];
+        const savedScore = localStorage.getItem(`nism_score_${key}`);
+        
+        let scoreBadgeHtml = "";
+        if (savedScore) {
+          const parsed = JSON.parse(savedScore);
+          const isPass = parsed.percentage >= 60;
+          scoreBadgeHtml = `
+            <div class="flex items-center justify-between p-2.5 rounded-xl ${isPass ? 'bg-emerald-50 border border-emerald-200' : 'bg-amber-50 border border-amber-200'} text-xs">
+              <span class="font-semibold ${isPass ? 'text-emerald-800' : 'text-amber-800'}">Last Score:</span>
+              <span class="font-bold font-mono ${isPass ? 'text-emerald-700' : 'text-amber-700'}">${parsed.score} / 150 (${parsed.percentage}%)</span>
+            </div>
+          `;
+        }
+
+        const card = document.createElement("div");
+        card.className = "group rounded-3xl bg-white p-6 sm:p-7 border border-slate-200 shadow-sm hover:shadow-xl hover:border-indigo-400 transition-all flex flex-col justify-between";
+        card.innerHTML = `
+          <div>
+            <div class="flex items-center justify-between pb-3 mb-4 border-b border-slate-100">
+              <span class="px-2.5 py-0.5 rounded-full text-[10px] font-bold uppercase tracking-wider bg-${test.badgeColor}-50 text-${test.badgeColor}-700 border border-${test.badgeColor}-200">
+                ${test.badge}
+              </span>
+              <span class="text-[11px] font-mono text-slate-400 font-bold">MOCK 0${index + 1}</span>
+            </div>
+
+            <div class="flex items-center justify-between mb-4">
+              <div class="w-12 h-12 rounded-2xl bg-indigo-50 border border-indigo-200 flex items-center justify-center text-indigo-600 font-bold text-lg shadow-2xs group-hover:scale-105 transition-transform">
+                0${index + 1}
+              </div>
+              <span class="px-3 py-1 rounded-full text-xs font-bold bg-slate-100 text-slate-700 border border-slate-200">
+                150 Marks
+              </span>
+            </div>
+
+            <h3 class="font-display text-lg font-bold text-slate-900 group-hover:text-indigo-600 transition-colors leading-snug">
+              ${test.title}
+            </h3>
+
+            <p class="text-xs text-slate-600 mt-2.5 leading-relaxed">
+              ${test.description}
+            </p>
+
+            <div class="mt-4 flex flex-wrap gap-2 text-[11px] text-slate-500 font-medium">
+              <span class="px-2 py-0.5 rounded-md bg-slate-100 text-slate-600">150 Questions</span>
+              <span class="px-2 py-0.5 rounded-md bg-slate-100 text-slate-600">3 Hours</span>
+              <span class="px-2 py-0.5 rounded-md bg-slate-100 text-slate-600">-0.10 Negative</span>
+            </div>
+
+            <div class="mt-4">
+              ${scoreBadgeHtml}
+            </div>
+          </div>
+
+          <div class="mt-6 pt-4 border-t border-slate-100 flex items-center gap-2">
+            <button 
+              type="button" 
+              onclick="startMockExam('${key}')"
+              class="w-full py-2.5 rounded-xl bg-indigo-600 hover:bg-indigo-700 text-white font-bold text-xs shadow-sm transition-all flex items-center justify-center gap-1.5 group-hover:shadow-md"
+            >
+              <i data-lucide="play" class="w-3.5 h-3.5"></i>
+              <span>${savedScore ? 'Retake Mock Test' : 'Start Mock Test'}</span>
+            </button>
+          </div>
+        `;
+        container.appendChild(card);
+      });
+
+      lucide.createIcons();
+    }
+
+    // 2. Mode Toggle
+    function setExamMode(mode) {
+      currentExamMode = mode;
+      const timedBtn = document.getElementById("mode-btn-timed");
+      const practiceBtn = document.getElementById("mode-btn-practice");
+
+      if (mode === 'timed') {
+        timedBtn.className = "px-4 py-2 rounded-xl text-xs font-bold transition-all flex items-center gap-1.5 bg-indigo-600 text-white shadow-xs";
+        practiceBtn.className = "px-4 py-2 rounded-xl text-xs font-semibold text-slate-600 hover:text-slate-900 transition-all flex items-center gap-1.5";
+      } else {
+        practiceBtn.className = "px-4 py-2 rounded-xl text-xs font-bold transition-all flex items-center gap-1.5 bg-indigo-600 text-white shadow-xs";
+        timedBtn.className = "px-4 py-2 rounded-xl text-xs font-semibold text-slate-600 hover:text-slate-900 transition-all flex items-center gap-1.5";
+      }
+    }
+
+    // 3. Start Mock Exam
+    function startMockExam(testId) {
+      if (!window.NISM_MOCK_TESTS || !window.NISM_MOCK_TESTS[testId]) return;
+
+      activeTestId = testId;
+      activeTestData = window.NISM_MOCK_TESTS[testId];
+      currentQuestionIndex = 0;
+      userAnswers = {};
+      flaggedQuestions.clear();
+      visitedQuestions.clear();
+      visitedQuestions.add(activeTestData.questions[0].id);
+
+      // Activate Exam Mode - Suppresses distractions
+      document.body.classList.add("exam-active");
+
+      // Switch view
+      document.getElementById("hub-view").classList.add("hidden");
+      document.getElementById("result-view").classList.add("hidden");
+      document.getElementById("exam-view").classList.remove("hidden");
+
+      // Setup exam title
+      document.getElementById("exam-title-display").innerText = activeTestData.title;
+
+      // Setup Timer
+      if (currentExamMode === 'timed') {
+        timeRemainingSeconds = 180 * 60;
+        document.getElementById("timer-container").classList.remove("hidden");
+        startTimer();
+      } else {
+        document.getElementById("timer-container").classList.add("hidden");
+      }
+
+      // Build 150 Question Palette
+      buildPalette();
+
+      // Display Question 1
+      loadQuestion(0);
+
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+
+    // 4. Timer Functions
+    function startTimer() {
+      if (timerInterval) clearInterval(timerInterval);
+
+      updateTimerDisplay();
+      timerInterval = setInterval(() => {
+        timeRemainingSeconds--;
+        updateTimerDisplay();
+
+        if (timeRemainingSeconds <= 0) {
+          clearInterval(timerInterval);
+          alert("Time is up! Your examination will now be automatically submitted.");
+          finalizeAndSubmitExam();
+        }
+      }, 1000);
+    }
+
+    function updateTimerDisplay() {
+      const hours = Math.floor(timeRemainingSeconds / 3600);
+      const minutes = Math.floor((timeRemainingSeconds % 3600) / 60);
+      const seconds = timeRemainingSeconds % 60;
+
+      const formatted = 
+        String(hours).padStart(2, '0') + ":" + 
+        String(minutes).padStart(2, '0') + ":" + 
+        String(seconds).padStart(2, '0');
+
+      const timerEl = document.getElementById("timer-display");
+      if (timerEl) {
+        timerEl.innerText = formatted;
+
+        // Color warnings
+        const container = document.getElementById("timer-container");
+        if (timeRemainingSeconds <= 900) { // < 15 mins
+          container.className = "flex items-center gap-1.5 px-3 py-1.5 rounded-xl bg-rose-100 dark:bg-rose-950/50 border border-rose-300 dark:border-rose-800 text-rose-700 dark:text-rose-300 font-mono font-bold text-xs sm:text-sm animate-pulse";
+        } else if (timeRemainingSeconds <= 1800) { // < 30 mins
+          container.className = "flex items-center gap-1.5 px-3 py-1.5 rounded-xl bg-amber-100 dark:bg-amber-950/50 border border-amber-300 dark:border-amber-800 text-amber-800 dark:text-amber-300 font-mono font-bold text-xs sm:text-sm";
+        } else {
+          container.className = "flex items-center gap-1.5 px-3 py-1.5 rounded-xl bg-slate-100 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 text-slate-800 dark:text-slate-200 font-mono font-bold text-xs sm:text-sm";
+        }
+      }
+    }
+
+    // 5. Load Question
+    function loadQuestion(index) {
+      if (!activeTestData || index < 0 || index >= activeTestData.questions.length) return;
+
+      currentQuestionIndex = index;
+      const q = activeTestData.questions[index];
+      visitedQuestions.add(q.id);
+
+      // Update progress header
+      document.getElementById("q-number-badge").innerText = `Question ${q.id} of 150`;
+      document.getElementById("exam-question-progress").innerText = `Question ${q.id} of 150`;
+
+      // Set Question text
+      document.getElementById("current-question-text").innerText = q.question;
+
+      // Update Flag button state
+      const isFlagged = flaggedQuestions.has(q.id);
+      const flagBtn = document.getElementById("btn-flag");
+      const flagText = document.getElementById("flag-text");
+      const flagIcon = document.getElementById("flag-icon");
+      if (flagBtn) {
+        if (isFlagged) {
+          flagBtn.className = "px-4 py-2 rounded-xl bg-purple-600 hover:bg-purple-700 text-white font-bold text-xs sm:text-sm shadow-xs transition-all flex items-center gap-1.5 active-flag";
+          if (flagText) flagText.innerText = "Marked for Review";
+          if (flagIcon) flagIcon.setAttribute("data-lucide", "bookmark-check");
+        } else {
+          flagBtn.className = "px-4 py-2 rounded-xl border border-purple-200 dark:border-purple-800 bg-purple-50/70 dark:bg-purple-950/40 hover:bg-purple-100 dark:hover:bg-purple-900/60 text-purple-700 dark:text-purple-300 font-bold text-xs sm:text-sm transition-all flex items-center gap-1.5 shadow-2xs";
+          if (flagText) flagText.innerText = "Mark for Review";
+          if (flagIcon) flagIcon.setAttribute("data-lucide", "bookmark");
+        }
+      }
+
+      // Render Options (Sleek height & padding to prevent vertical scrolling)
+      const optionsContainer = document.getElementById("current-options-container");
+      optionsContainer.innerHTML = "";
+
+      const currentChosen = userAnswers[q.id];
+
+      q.options.forEach(opt => {
+        const isSelected = currentChosen === opt.key;
+        const optCard = document.createElement("label");
+        optCard.id = `opt-card-${opt.key}`;
+        
+        const baseClass = "option-card flex items-center gap-3 p-3 sm:p-3.5 rounded-2xl border cursor-pointer text-xs sm:text-sm transition-all select-none";
+        const selectedClass = isSelected 
+          ? "bg-indigo-50 dark:bg-indigo-950/50 border-indigo-500 dark:border-indigo-400 shadow-sm ring-2 ring-indigo-200 dark:ring-indigo-800 text-indigo-950 dark:text-white font-semibold"
+          : "bg-white dark:bg-slate-800/80 hover:bg-slate-50 dark:hover:bg-slate-800 border-slate-200 dark:border-slate-700 text-slate-800 dark:text-slate-200 font-normal";
+
+        optCard.className = `${baseClass} ${selectedClass}`;
+        optCard.onclick = () => selectExamOption(q.id, opt.key);
+
+        optCard.innerHTML = `
+          <input 
+            type="radio" 
+            name="q-option-choice" 
+            value="${opt.key}" 
+            ${isSelected ? 'checked' : ''} 
+            class="sr-only" 
+          />
+          <span class="w-7 h-7 min-w-[28px] rounded-xl flex items-center justify-center font-bold text-xs uppercase shrink-0 transition-colors ${
+            isSelected 
+              ? 'bg-indigo-600 text-white shadow-2xs' 
+              : 'bg-slate-100 dark:bg-slate-700 text-slate-600 dark:text-slate-300 border border-slate-200 dark:border-slate-600'
+          }">
+            ${opt.key}
+          </span>
+          <span class="flex-grow leading-relaxed">${opt.text}</span>
+        `;
+        optionsContainer.appendChild(optCard);
+      });
+
+      // Update Prev/Next button states
+      const prevBtn = document.getElementById("btn-prev");
+      if (prevBtn) {
+        prevBtn.disabled = (index === 0);
+        prevBtn.classList.toggle("opacity-40", index === 0);
+        prevBtn.classList.toggle("pointer-events-none", index === 0);
+      }
+
+      const nextBtn = document.getElementById("btn-next");
+      const nextLabel = document.getElementById("btn-next-label");
+      const nextIcon = document.getElementById("btn-next-icon");
+      if (nextBtn) {
+        if (index === activeTestData.questions.length - 1) {
+          nextBtn.className = "px-5 py-2 rounded-xl bg-emerald-600 hover:bg-emerald-700 text-white font-bold text-xs sm:text-sm shadow-sm transition-all flex items-center gap-1.5";
+          if (nextLabel) nextLabel.innerText = "Review & Submit";
+          if (nextIcon) nextIcon.setAttribute("data-lucide", "check-circle");
+          nextBtn.onclick = () => openSubmitConfirmationModal();
+        } else {
+          nextBtn.className = "px-5 py-2 rounded-xl bg-indigo-600 hover:bg-indigo-700 text-white font-bold text-xs sm:text-sm shadow-sm hover:shadow transition-all flex items-center gap-1.5";
+          if (nextLabel) nextLabel.innerText = "Save & Next";
+          if (nextIcon) nextIcon.setAttribute("data-lucide", "arrow-right");
+          nextBtn.onclick = () => goToNextQuestion();
+        }
+      }
+
+      // Practice Mode Explanation handling
+      const practiceBox = document.getElementById("practice-explanation-box");
+      if (practiceBox) {
+        if (currentExamMode === 'practice' && userAnswers[q.id]) {
+          practiceBox.classList.remove("hidden");
+          document.getElementById("practice-explanation-text").innerText = q.explanation || "No explanation provided.";
+        } else {
+          practiceBox.classList.add("hidden");
+        }
+      }
+
+      // Update palette active highlight and live legend stats
+      updatePaletteButtonStates();
+
+      // If user had scrolled down, smoothly scroll to top of exam question
+      if (window.scrollY > 80) {
+        window.scrollTo({ top: 0, behavior: 'instant' });
+      }
+
+      lucide.createIcons();
+    }
+
+    // 6. Select Option
+    function selectExamOption(qId, key) {
+      userAnswers[qId] = key;
+      visitedQuestions.add(qId);
+      loadQuestion(currentQuestionIndex);
+    }
+
+    // 7. Clear Answer
+    function clearCurrentAnswer() {
+      const q = activeTestData.questions[currentQuestionIndex];
+      delete userAnswers[q.id];
+      loadQuestion(currentQuestionIndex);
+    }
+
+    // 8. Toggle Flag for Review
+    function toggleFlagCurrentQuestion() {
+      const q = activeTestData.questions[currentQuestionIndex];
+      if (flaggedQuestions.has(q.id)) {
+        flaggedQuestions.delete(q.id);
+      } else {
+        flaggedQuestions.add(q.id);
+      }
+      loadQuestion(currentQuestionIndex);
+    }
+
+    // 9. Previous & Next Nav
+    function goToPrevQuestion() {
+      if (currentQuestionIndex > 0) {
+        loadQuestion(currentQuestionIndex - 1);
+      }
+    }
+
+    function goToNextQuestion() {
+      if (activeTestData && currentQuestionIndex < activeTestData.questions.length - 1) {
+        loadQuestion(currentQuestionIndex + 1);
+      }
+    }
+
+    // 10. Build 150 Question Palette
+    function buildPalette() {
+      const desktopGrid = document.getElementById("desktop-palette-grid");
+      const mobileGrid = document.getElementById("mobile-palette-grid");
+
+      desktopGrid.innerHTML = "";
+      mobileGrid.innerHTML = "";
+
+      for (let i = 0; i < 150; i++) {
+        const qNum = i + 1;
+
+        // Desktop button
+        const dBtn = document.createElement("button");
+        dBtn.type = "button";
+        dBtn.id = `palette-desk-${qNum}`;
+        dBtn.className = "palette-btn unvisited";
+        dBtn.innerText = qNum;
+        dBtn.onclick = () => loadQuestion(i);
+        desktopGrid.appendChild(dBtn);
+
+        // Mobile button
+        const mBtn = document.createElement("button");
+        mBtn.type = "button";
+        mBtn.id = `palette-mob-${qNum}`;
+        mBtn.className = "palette-btn unvisited";
+        mBtn.innerText = qNum;
+        mBtn.onclick = () => {
+          loadQuestion(i);
+          togglePaletteDrawer(false);
+        };
+        mobileGrid.appendChild(mBtn);
+      }
+    }
+
+    // 11. Update Palette State Classes & Live NISM Counters
+    function updatePaletteButtonStates() {
+      if (!activeTestData) return;
+
+      let countAnswered = 0;
+      let countUnanswered = 0;
+      let countFlagged = 0;
+      let countUnvisited = 0;
+
+      activeTestData.questions.forEach((q, i) => {
+        const qNum = q.id;
+        const isCurrent = (i === currentQuestionIndex);
+        const hasAnswer = Boolean(userAnswers[q.id]);
+        const isFlagged = flaggedQuestions.has(q.id);
+        const isVisited = visitedQuestions.has(q.id) || (i === currentQuestionIndex);
+
+        let statusClass = "unvisited";
+        if (hasAnswer && isFlagged) {
+          statusClass = "answered-flagged";
+          countAnswered++;
+          countFlagged++;
+        } else if (hasAnswer) {
+          statusClass = "answered";
+          countAnswered++;
+        } else if (isFlagged) {
+          statusClass = "flagged";
+          countFlagged++;
+          if (isVisited) countUnanswered++;
+          else countUnvisited++;
+        } else if (isVisited) {
+          statusClass = "unanswered";
+          countUnanswered++;
+        } else {
+          statusClass = "unvisited";
+          countUnvisited++;
+        }
+
+        const dBtn = document.getElementById(`palette-desk-${qNum}`);
+        const mBtn = document.getElementById(`palette-mob-${qNum}`);
+
+        const classList = `palette-btn ${statusClass} ${isCurrent ? 'current' : ''}`;
+        if (dBtn) dBtn.className = classList;
+        if (mBtn) mBtn.className = classList;
+
+        // Apply palette filtering
+        let isVisible = true;
+        if (activePaletteFilter === 'answered' && !hasAnswer) isVisible = false;
+        if (activePaletteFilter === 'unanswered' && (!isVisited || hasAnswer)) isVisible = false;
+        if (activePaletteFilter === 'flagged' && !isFlagged) isVisible = false;
+
+        if (dBtn) dBtn.style.display = isVisible ? 'inline-flex' : 'none';
+        if (mBtn) mBtn.style.display = isVisible ? 'inline-flex' : 'none';
+      });
+
+      // Update Live Legend Counts (Desktop & Mobile)
+      const elAns = document.getElementById("legend-count-answered");
+      const elUnans = document.getElementById("legend-count-unanswered");
+      const elFlag = document.getElementById("legend-count-flagged");
+      const elUnvis = document.getElementById("legend-count-unvisited");
+      if (elAns) elAns.innerText = countAnswered;
+      if (elUnans) elUnans.innerText = countUnanswered;
+      if (elFlag) elFlag.innerText = countFlagged;
+      if (elUnvis) elUnvis.innerText = countUnvisited;
+
+      const mobAns = document.getElementById("mob-legend-answered");
+      const mobUnans = document.getElementById("mob-legend-unanswered");
+      const mobFlag = document.getElementById("mob-legend-flagged");
+      const mobUnvis = document.getElementById("mob-legend-unvisited");
+      if (mobAns) mobAns.innerText = countAnswered;
+      if (mobUnans) mobUnans.innerText = countUnanswered;
+      if (mobFlag) mobFlag.innerText = countFlagged;
+      if (mobUnvis) mobUnvis.innerText = countUnvisited;
+
+      // Update palette header chip and exam sub-header attempted counter
+      const paletteChip = document.getElementById("palette-answered-chip");
+      if (paletteChip) paletteChip.innerText = `${countAnswered} / 150 Answered`;
+      const examStat = document.getElementById("exam-attempted-stat");
+      if (examStat) examStat.innerText = `${countAnswered} Answered`;
+    }
+
+    function filterPalette(filter, btn) {
+      activePaletteFilter = filter;
+      document.querySelectorAll(".palette-filter-btn").forEach(b => {
+        b.className = "palette-filter-btn px-2 py-1 rounded-lg hover:bg-slate-100 text-slate-500 font-semibold";
+      });
+      btn.className = "palette-filter-btn px-2 py-1 rounded-lg bg-indigo-50 text-indigo-700 font-bold";
+      updatePaletteButtonStates();
+    }
+
+    function togglePaletteDrawer(open) {
+      const drawer = document.getElementById("mobile-palette-drawer");
+      if (drawer) {
+        drawer.classList.toggle("hidden", !open);
+      }
+    }
+
+    // 12. Submit Confirmation
+    function openSubmitConfirmationModal() {
+      const answeredCount = Object.keys(userAnswers).length;
+      const unansweredCount = 150 - answeredCount;
+      const flaggedCount = flaggedQuestions.size;
+
+      document.getElementById("modal-stat-answered").innerText = answeredCount;
+      document.getElementById("modal-stat-unanswered").innerText = unansweredCount;
+      document.getElementById("modal-stat-flagged").innerText = flaggedCount;
+
+      document.getElementById("submit-confirm-modal").classList.remove("hidden");
+    }
+
+    function closeSubmitConfirmationModal() {
+      document.getElementById("submit-confirm-modal").classList.add("hidden");
+    }
+
+    function confirmExitExam() {
+      if (confirm("Are you sure you want to exit the exam? Your current progress will be lost unless submitted.")) {
+        clearInterval(timerInterval);
+        returnToHub();
+      }
+    }
+
+    // 13. Finalize and Submit Exam
+    function finalizeAndSubmitExam() {
+      closeSubmitConfirmationModal();
+      clearInterval(timerInterval);
+
+      // Compute Scores
+      let correctCount = 0;
+      let incorrectCount = 0;
+      let unattemptedCount = 0;
+
+      activeTestData.questions.forEach(q => {
+        const chosen = userAnswers[q.id];
+        if (!chosen) {
+          unattemptedCount++;
+        } else if (chosen === q.correct) {
+          correctCount++;
+        } else {
+          incorrectCount++;
+        }
+      });
+
+      // Net Marks Formula: (Correct * 1.0) - (Incorrect * 0.10)
+      const rawScore = (correctCount * 1.0) - (incorrectCount * 0.10);
+      const finalScore = Math.max(0, Math.round(rawScore * 100) / 100);
+      const percentage = Math.round((finalScore / 150) * 1000) / 10;
+      const isPassed = finalScore >= 90;
+
+      // Save to localStorage
+      localStorage.setItem(`nism_score_${activeTestId}`, JSON.stringify({
+        score: finalScore,
+        percentage: percentage,
+        passed: isPassed,
+        date: new Date().toISOString()
+      }));
+
+      // Populate Result View
+      document.getElementById("final-score-marks").innerText = finalScore.toFixed(2);
+      document.getElementById("final-percentage-text").innerText = `${percentage}% Overall Score (Passing Benchmark: 60% / 90 Marks)`;
+
+      const badge = document.getElementById("result-pass-badge");
+      if (isPassed) {
+        badge.innerText = "STATUS: PASSED (CLEARED NISM CERTIFICATION BENCHMARK)";
+        badge.className = "inline-flex items-center gap-2 px-5 py-2 rounded-full text-xs font-extrabold uppercase tracking-wider bg-emerald-500 text-white shadow-sm";
+        document.getElementById("result-guidance-text").innerText = 
+          `Congratulations! You achieved ${finalScore.toFixed(2)} out of 150 marks (${percentage}%), successfully meeting the SEBI/NISM Series V-D passing criteria of 60%. Review your solutions below to reinforce strong concepts.`;
+      } else {
+        badge.innerText = "STATUS: NEEDS REVISION (DID NOT MEET 60% BENCHMARK)";
+        badge.className = "inline-flex items-center gap-2 px-5 py-2 rounded-full text-xs font-extrabold uppercase tracking-wider bg-amber-500 text-slate-900 shadow-sm";
+        document.getElementById("result-guidance-text").innerText = 
+          `You scored ${finalScore.toFixed(2)} out of 150 marks (${percentage}%). The qualifying benchmark is 90.00 marks (60%). Please review the detailed explanations for the incorrect questions below, revisit the high-yield chapters, and re-attempt.`;
+      }
+
+      document.getElementById("stat-correct-count").innerText = correctCount;
+      document.getElementById("stat-correct-marks").innerText = `+${(correctCount * 1.0).toFixed(2)} Marks`;
+
+      document.getElementById("stat-incorrect-count").innerText = incorrectCount;
+      document.getElementById("stat-incorrect-marks").innerText = `-${(incorrectCount * 0.10).toFixed(2)} Marks`;
+
+      document.getElementById("stat-unattempted-count").innerText = unattemptedCount;
+
+      const attemptedTotal = correctCount + incorrectCount;
+      const accuracyRate = attemptedTotal > 0 ? Math.round((correctCount / attemptedTotal) * 100) : 0;
+      document.getElementById("stat-accuracy-rate").innerText = `${accuracyRate}%`;
+      document.getElementById("stat-total-attempted").innerText = `${attemptedTotal} Attempted`;
+
+      // Build Solutions Review List
+      buildSolutionsReview();
+
+      // Switch View
+      document.body.classList.remove("exam-active");
+      document.getElementById("exam-view").classList.add("hidden");
+      document.getElementById("result-view").classList.remove("hidden");
+
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+      lucide.createIcons();
+    }
+
+    // 14. Build Solutions Review List
+    function buildSolutionsReview() {
+      const container = document.getElementById("solutions-review-container");
+      if (!container || !activeTestData) return;
+
+      container.innerHTML = "";
+
+      activeTestData.questions.forEach((q, index) => {
+        const chosen = userAnswers[q.id];
+        const isCorrect = chosen === q.correct;
+        const isUnattempted = !chosen;
+
+        let statusClass = "";
+        let statusBadge = "";
+        let filterTag = "";
+
+        if (isUnattempted) {
+          filterTag = "unattempted";
+          statusClass = "border-slate-200 bg-white";
+          statusBadge = `<span class="px-2.5 py-0.5 rounded text-[11px] font-bold bg-slate-100 text-slate-600">Unattempted (0.00)</span>`;
+        } else if (isCorrect) {
+          filterTag = "correct";
+          statusClass = "border-emerald-200 bg-white";
+          statusBadge = `<span class="px-2.5 py-0.5 rounded text-[11px] font-bold bg-emerald-100 text-emerald-800 flex items-center gap-1"><i data-lucide="check" class="w-3.5 h-3.5"></i> Correct (+1.00)</span>`;
+        } else {
+          filterTag = "incorrect";
+          statusClass = "border-rose-200 bg-white";
+          statusBadge = `<span class="px-2.5 py-0.5 rounded text-[11px] font-bold bg-rose-100 text-rose-800 flex items-center gap-1"><i data-lucide="x" class="w-3.5 h-3.5"></i> Incorrect (-0.10)</span>`;
+        }
+
+        const card = document.createElement("div");
+        card.className = `solution-card p-5 sm:p-6 rounded-2xl border ${statusClass} shadow-2xs space-y-3`;
+        card.dataset.reviewFilter = filterTag;
+
+        let optionsMarkup = "";
+        q.options.forEach(opt => {
+          const isRightOpt = opt.key === q.correct;
+          const isUserChoice = opt.key === chosen;
+
+          let optStyle = "bg-slate-50 border-slate-200 text-slate-700";
+          let badgeIcon = "";
+
+          if (isRightOpt) {
+            optStyle = "bg-emerald-50 border-emerald-400 text-emerald-950 font-bold ring-1 ring-emerald-300";
+            badgeIcon = `<span class="text-xs text-emerald-600 font-bold ml-auto flex items-center gap-1"><i data-lucide="check" class="w-3.5 h-3.5"></i> Correct Answer</span>`;
+          } else if (isUserChoice && !isRightOpt) {
+            optStyle = "bg-rose-50 border-rose-400 text-rose-950 font-bold ring-1 ring-rose-300";
+            badgeIcon = `<span class="text-xs text-rose-600 font-bold ml-auto flex items-center gap-1"><i data-lucide="x" class="w-3.5 h-3.5"></i> Your Choice</span>`;
+          }
+
+          optionsMarkup += `
+            <div class="flex items-center gap-3 p-3 rounded-xl border text-xs sm:text-sm ${optStyle}">
+              <span class="w-6 h-6 rounded-lg flex items-center justify-center font-bold text-xs shrink-0 ${isRightOpt ? 'bg-emerald-600 text-white' : (isUserChoice ? 'bg-rose-600 text-white' : 'bg-slate-200 text-slate-600')}">
+                ${opt.key}
+              </span>
+              <span class="flex-grow">${opt.text}</span>
+              ${badgeIcon}
+            </div>
+          `;
+        });
+
+        card.innerHTML = `
+          <div class="flex items-center justify-between pb-2 border-b border-slate-100">
+            <span class="font-bold text-xs text-indigo-700 uppercase tracking-wide">Question ${q.id} of 150</span>
+            ${statusBadge}
+          </div>
+          <h4 class="font-display font-semibold text-sm sm:text-base text-slate-900 leading-snug">
+            ${q.question}
+          </h4>
+          <div class="space-y-2 pt-1">
+            ${optionsMarkup}
+          </div>
+          <div class="mt-3 p-3.5 rounded-xl bg-slate-50 border border-slate-200 text-xs text-slate-700 leading-relaxed">
+            <strong class="text-slate-900 block mb-1">Official Explanation:</strong>
+            ${q.explanation || "No explanation provided for this question."}
+          </div>
+        `;
+        container.appendChild(card);
+      });
+
+      lucide.createIcons();
+    }
+
+    function filterReview(filter, btn) {
+      activeReviewFilter = filter;
+      document.querySelectorAll(".review-filter-btn").forEach(b => {
+        b.className = "review-filter-btn px-3 py-1.5 rounded-lg hover:bg-slate-100 text-slate-600 font-semibold";
+      });
+      btn.className = "review-filter-btn px-3 py-1.5 rounded-lg bg-indigo-600 text-white font-bold";
+
+      document.querySelectorAll(".solution-card").forEach(card => {
+        if (filter === 'all' || card.dataset.reviewFilter === filter) {
+          card.classList.remove("hidden");
+        } else {
+          card.classList.add("hidden");
+        }
+      });
+    }
+
+    function retakeCurrentExam() {
+      if (activeTestId) {
+        startMockExam(activeTestId);
+      }
+    }
+
+    function returnToHub() {
+      clearInterval(timerInterval);
+      document.body.classList.remove("exam-active");
+      document.getElementById("exam-view").classList.add("hidden");
+      document.getElementById("result-view").classList.add("hidden");
+      document.getElementById("hub-view").classList.remove("hidden");
+      renderMockCards();
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+
+    // Keyboard Shortcuts Navigation inside Exam
+    document.addEventListener("keydown", (e) => {
+      // Only active in exam view
+      const examView = document.getElementById("exam-view");
+      if (!examView || examView.classList.contains("hidden")) return;
+
+      if (e.key === "ArrowRight") {
+        goToNextQuestion();
+      } else if (e.key === "ArrowLeft") {
+        goToPrevQuestion();
+      } else if (e.key.toLowerCase() === "m" || e.key.toLowerCase() === "f") {
+        toggleFlagCurrentQuestion();
+      } else if (e.key.toLowerCase() === "c") {
+        clearCurrentAnswer();
+      } else if (["1", "2", "3", "4"].includes(e.key)) {
+        const keyMap = { "1": "A", "2": "B", "3": "C", "4": "D" };
+        const q = activeTestData.questions[currentQuestionIndex];
+        selectExamOption(q.id, keyMap[e.key]);
+      } else if (["a", "b", "c", "d"].includes(e.key.toLowerCase())) {
+        const q = activeTestData.questions[currentQuestionIndex];
+        selectExamOption(q.id, e.key.toUpperCase());
+      }
+    });
+
+    // Mobile Menu
+    function setupMobileMenu() {
+      const btn = document.getElementById("mobile-menu-btn");
+      const menu = document.getElementById("mobile-menu");
+      const menuIcon = document.getElementById("menu-icon");
+      const closeIcon = document.getElementById("close-icon");
+
+      if (btn && menu) {
+        btn.addEventListener("click", () => {
+          const isHidden = menu.classList.toggle("hidden");
+          menuIcon.classList.toggle("hidden", !isHidden);
+          closeIcon.classList.toggle("hidden", isHidden);
+          btn.setAttribute("aria-expanded", String(!isHidden));
+        });
+      }
+    }
+  </script>
+
+  <!-- Global Navigation & Dock Integration -->
+  <script src="nav-sidebar.js"></script>
+
+</body>
+</html>

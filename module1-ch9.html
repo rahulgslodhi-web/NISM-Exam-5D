@@ -1,0 +1,994 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Chapter 9: Investor Services | NISM Series V-D Notes</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+  <script src="https://unpkg.com/lucide@latest"></script>
+
+  <!-- KaTeX for formula rendering -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.min.css">
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.min.js"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/contrib/auto-render.min.js" onload="renderMathInElement(document.body);"></script>
+
+  <!-- Global Module & Chapter Navigation Sidebar -->
+    <!-- Modern Documentation Design System & Zoom Engine -->
+  <link rel="stylesheet" href="modern-docs.css">
+  <script defer src="nav-sidebar.js"></script>
+
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+            display: ['"Space Grotesk"', 'sans-serif']
+          }
+        }
+      }
+    }
+  </script>
+</head>
+<body class="bg-slate-50 text-slate-900 min-h-screen flex flex-col selection:bg-blue-500 selection:text-white">
+
+  <!-- Header -->
+  <header class="sticky top-0 z-50 bg-white/90 backdrop-blur-md border-b border-slate-200">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
+      <div class="flex items-center gap-3">
+        <a href="module1.html" class="flex items-center gap-2 text-slate-500 hover:text-slate-900 transition-colors">
+          <div class="w-9 h-9 rounded-xl bg-slate-100 hover:bg-slate-200 flex items-center justify-center text-slate-700 transition-colors">
+            <i data-lucide="arrow-left" class="w-4 h-4"></i>
+          </div>
+        </a>
+        <div>
+          <div class="flex items-center gap-2">
+            <span class="text-xs font-bold uppercase tracking-wider text-blue-600 bg-blue-50 px-2 py-0.5 rounded">Module 1</span>
+            <span class="text-xs text-slate-400 font-medium">Chapter 9 of 12</span>
+          </div>
+          <h1 class="font-display font-bold text-base sm:text-lg text-slate-900 leading-tight">Investor Services & Transactions</h1>
+        </div>
+      </div>
+
+      <div class="flex items-center gap-3">
+        <span class="hidden sm:inline-flex items-center gap-1 px-3 py-1 rounded-full text-xs font-bold bg-amber-50 text-amber-700 border border-amber-200">
+          <i data-lucide="award" class="w-3.5 h-3.5"></i>
+          Weightage: 10 Marks ⭐
+        </span>
+        <a href="#interactive-quiz" class="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-lg text-xs font-bold bg-blue-600 hover:bg-blue-700 text-white shadow-sm transition-all">
+          <i data-lucide="help-circle" class="w-3.5 h-3.5"></i>
+          <span>Chapter Quiz</span>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Content Grid -->
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 grid grid-cols-1 lg:grid-cols-12 gap-8 flex-grow">
+    
+    <!-- Sidebar Navigation -->
+    <aside class="hidden lg:block lg:col-span-3">
+      <div class="sticky top-24 space-y-4">
+        <!-- Chapter Switcher (3 Module Dropdowns) -->
+        <div id="sidebar-chapter-switcher"></div>
+
+        <div class="bg-white p-5 rounded-2xl border border-slate-200 shadow-sm">
+          <h2 class="text-xs font-bold text-slate-400 uppercase tracking-wider mb-3">Chapter Navigation</h2>
+          <nav class="space-y-1 text-xs">
+            <a href="#section-1" class="block px-2.5 py-1.5 rounded-lg text-slate-600 hover:bg-slate-100 hover:text-blue-600">9.1 NFO Timelines, Allotment & Cash Rules</a>
+            <a href="#section-2" class="block px-2.5 py-1.5 rounded-lg text-amber-700 font-semibold bg-amber-50/70 hover:bg-amber-100">9.2 Cut-off Timings & Realization Rule ⭐</a>
+            <a href="#section-3" class="block px-2.5 py-1.5 rounded-lg text-amber-700 font-semibold bg-amber-50/70 hover:bg-amber-100">9.3 KYC, Minor Accounts & MAM Protocol ⭐</a>
+            <a href="#section-4" class="block px-2.5 py-1.5 rounded-lg text-amber-700 font-semibold bg-amber-50/70 hover:bg-amber-100">9.4 SIP Math (RCA), STP, SWP & IAF Limits ⭐</a>
+            <a href="#section-5" class="block px-2.5 py-1.5 rounded-lg text-amber-700 font-semibold bg-amber-50/70 hover:bg-amber-100">9.5 Nomination & Bank Change Cooling-off ⭐</a>
+            <a href="#section-6" class="block px-2.5 py-1.5 rounded-lg text-slate-600 hover:bg-slate-100 hover:text-blue-600">9.6 Consolidated Account Statement (CAS)</a>
+            <a href="#section-7" class="block px-2.5 py-1.5 rounded-lg text-slate-600 hover:bg-slate-100 hover:text-blue-600">9.7 SCORES 2.0, SMART ODR & MITRA</a>
+            <a href="#interactive-quiz" class="block px-2.5 py-1.5 rounded-lg text-blue-700 font-bold bg-blue-50 hover:bg-blue-100 mt-2">Practice Quiz (12 MCQs)</a>
+          </nav>
+        </div>
+
+        <div class="p-4 rounded-2xl bg-gradient-to-br from-blue-600 to-indigo-700 text-white shadow-sm text-xs">
+          <div class="flex items-center gap-1.5 font-bold mb-1.5">
+            <i data-lucide="zap" class="w-4 h-4 text-amber-300"></i>
+            <span>Top Tested Thresholds</span>
+          </div>
+          <p class="text-blue-100 leading-relaxed space-y-1">
+            • <strong>NFO Window:</strong> Max 15 days (ELSS: 30 days).<br>
+            • <strong>Allotment / Refund:</strong> 5 business days (15% p.a. penalty).<br>
+            • <strong>Liquid Purchases:</strong> 1:30 PM cut-off (Previous Day NAV).<br>
+            • <strong>Other Schemes:</strong> 3:00 PM + Realization of funds.<br>
+            • <strong>Cash Limit:</strong> ₹50,000 / investor / fund / FY.<br>
+            • <strong>Instant Access (IAF):</strong> Max ₹50,000 or 90% of folio.<br>
+            • <strong>COB Cooling-off:</strong> 10 calendar days.<br>
+            • <strong>CAS Dispatch:</strong> Monthly by 15th, Half-yearly by 21st.<br>
+            • <strong>SCORES 2.0 TAT:</strong> 21 calendar days.
+          </p>
+        </div>
+      </div>
+    </aside>
+
+    <!-- Main Notes -->
+    <div class="lg:col-span-9 space-y-8">
+
+      <!-- Section 9.1 -->
+      <section id="section-1" class="bg-white rounded-3xl p-6 sm:p-8 border border-slate-200/90 shadow-sm space-y-5">
+        <div class="flex items-center justify-between">
+          <div class="flex items-center gap-2 text-xs font-bold text-slate-500 uppercase tracking-wider">
+            <span class="w-2 h-2 rounded-full bg-slate-400"></span> Section 9.1 &bull; Core Regulatory Timelines
+          </div>
+          <span class="text-xs px-2.5 py-1 rounded-full bg-slate-100 text-slate-600 font-semibold">NFO Framework</span>
+        </div>
+        <h2 class="font-display font-bold text-xl sm:text-2xl text-slate-900">New Fund Offer (NFO) Mechanics, Allotment & Cash Limits</h2>
+        
+        <!-- Fast-Track Refresher Box -->
+        <div class="p-4 rounded-2xl bg-slate-50 border border-slate-200 text-xs text-slate-700 space-y-1.5">
+          <div class="flex items-center gap-1.5 font-bold text-slate-900">
+            <i data-lucide="zap" class="w-3.5 h-3.5 text-amber-500"></i>
+            <span>⚡ Fast-Track Refresher: Scheme Launch Basics</span>
+          </div>
+          <p class="leading-relaxed">
+            A <strong>New Fund Offer (NFO)</strong> is the initial launch of a mutual fund scheme by an AMC to raise initial capital from the public. Units are offered at face value (typically ₹10 per unit, except for certain specialized or index schemes). The offer is made through the <strong>Scheme Information Document (SID)</strong> and <strong>Key Information Memorandum (KIM)</strong>.
+          </p>
+        </div>
+
+        <!-- Master Regulatory Timelines Table -->
+        <div class="overflow-x-auto rounded-2xl border border-slate-200">
+          <table class="min-w-full text-xs text-left">
+            <thead class="bg-slate-100 text-slate-700 font-bold uppercase tracking-wider">
+              <tr>
+                <th class="p-3">Process / Milestone</th>
+                <th class="p-3">Statutory Regulatory Limit</th>
+                <th class="p-3 bg-blue-50 text-blue-800">Consequence / Regulatory Penalty</th>
+              </tr>
+            </thead>
+            <tbody class="divide-y divide-slate-200">
+              <tr class="hover:bg-slate-50">
+                <td class="p-3 font-semibold">
+                  <strong>Open-ended Scheme NFO</strong>
+                </td>
+                <td class="p-3 font-bold text-slate-900">Maximum 15 Days</td>
+                <td class="p-3 text-slate-600">Must close within 15 calendar days from opening.</td>
+              </tr>
+              <tr class="hover:bg-slate-50">
+                <td class="p-3 font-semibold">
+                  <strong>ELSS (Tax Saving) NFO</strong>
+                </td>
+                <td class="p-3 font-bold text-indigo-700">Maximum 30 Days</td>
+                <td class="p-3 text-slate-600">Extended duration permitted specifically to facilitate Section 80C tax planning.</td>
+              </tr>
+              <tr class="hover:bg-slate-50">
+                <td class="p-3 font-semibold">
+                  <strong>Close-ended Scheme NFO</strong>
+                </td>
+                <td class="p-3 font-bold text-slate-900">Maximum 15 Days</td>
+                <td class="p-3 text-slate-600">Except Infrastructure Debt Funds (IDF) or special schemes approved by SEBI.</td>
+              </tr>
+              <tr class="hover:bg-slate-50">
+                <td class="p-3 font-semibold text-rose-700">
+                  <strong>Allotment & Refund TAT</strong>
+                </td>
+                <td class="p-3 font-bold text-rose-700">Within 5 Business Days</td>
+                <td class="p-3 font-bold text-rose-700 bg-rose-50/50">
+                  Penalty: AMC must pay interest at <strong>15% per annum</strong> to investors for every day of delay beyond 5 business days!
+                </td>
+              </tr>
+              <tr class="hover:bg-slate-50">
+                <td class="p-3 font-semibold text-emerald-700">
+                  <strong>Re-opening for Continuous Sale</strong>
+                </td>
+                <td class="p-3 font-bold text-emerald-700">Within 5 Business Days</td>
+                <td class="p-3 text-slate-600">Open-ended schemes must reopen for ongoing purchases and redemptions within 5 business days of allotment.</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <!-- Payment Channels & Cash Investment Limit -->
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4 text-xs">
+          <div class="p-4 rounded-2xl bg-slate-50 border border-slate-200 space-y-2">
+            <h3 class="font-bold text-slate-900 text-sm flex items-center gap-1.5">
+              <i data-lucide="credit-card" class="w-4 h-4 text-blue-600"></i>
+              <span>Modern Payment Mechanisms</span>
+            </h3>
+            <ul class="list-disc pl-4 space-y-1.5 text-slate-600 leading-relaxed">
+              <li><strong>ASBA (Application Supported by Blocked Amount):</strong> Mandatory facility for NFO applications through banks where funds stay blocked in investor's bank account until unit allotment.</li>
+              <li><strong>UPI, Net Banking & NEFT/RTGS:</strong> Instant electronic funds transfer.</li>
+              <li><strong>OTM (One Time Mandate) / NACH:</strong> Pre-authorized mandate for automated recurring SIP deductions without manual intervention.</li>
+              <li><strong>Third-Party Payment Ban:</strong> Investments must originate from the unitholder's own bank account. Exceptions allowed only for minors (by parents/guardians up to ₹50k), employer payroll deductions, or custodian for FPIs.</li>
+            </ul>
+          </div>
+
+          <div class="p-4 rounded-2xl bg-amber-50/60 border border-amber-200 space-y-2">
+            <h3 class="font-bold text-amber-900 text-sm flex items-center gap-1.5">
+              <i data-lucide="banknote" class="w-4 h-4 text-amber-600"></i>
+              <span>Cash Transactions in Mutual Funds</span>
+            </h3>
+            <p class="text-slate-700 leading-relaxed">
+              To promote financial inclusion and facilitate small rural investors without immediate banking access:
+            </p>
+            <div class="p-3 bg-white rounded-xl border border-amber-200 font-bold text-amber-950 text-center">
+              Maximum ₹50,000 per Investor, per Mutual Fund, per Financial Year
+            </div>
+            <p class="text-rose-700 font-semibold text-[11px] leading-relaxed">
+              ⭐ Critical Exam Rule: While cash investments are accepted at designated bank branches with challans, <strong>redemptions, dividend (IDCW) payouts, and refunds are NEVER made in cash</strong>. All payouts are remitted strictly via electronic bank transfer to the verified bank account.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Section 9.2 -->
+      <section id="section-2" class="bg-white rounded-3xl p-6 sm:p-8 border border-amber-200 shadow-sm space-y-5">
+        <div class="flex items-center justify-between">
+          <div class="flex items-center gap-2 text-xs font-bold text-amber-700 uppercase tracking-wider">
+            <span class="w-2 h-2 rounded-full bg-amber-500"></span> Section 9.2 &bull; Super High Exam Yield ⭐
+          </div>
+          <span class="text-xs px-2.5 py-1 rounded-full bg-amber-100 text-amber-800 font-bold">Cut-off & Realization</span>
+        </div>
+        <h2 class="font-display font-bold text-xl sm:text-2xl text-slate-900">Applicable NAV Cut-Off Timings & The Uniform Realization Rule</h2>
+        <p class="text-sm text-slate-600 leading-relaxed">
+          Cut-off timings prevent arbitrage, unfair market-timing, and ensure all investors are treated equitably. Under SEBI regulations, <strong>purchase NAV across ALL schemes is determined strictly by the date and time when funds are credited and available for utilization</strong> by the scheme (Uniform Realization Rule), regardless of the investment amount (ticket size).
+        </p>
+
+        <!-- Master Cut-off Table -->
+        <div class="overflow-x-auto rounded-2xl border border-slate-200">
+          <table class="min-w-full text-xs text-left">
+            <thead class="bg-slate-100 text-slate-700 font-bold uppercase tracking-wider">
+              <tr>
+                <th class="p-3">Scheme Category</th>
+                <th class="p-3">Transaction Type</th>
+                <th class="p-3">Cut-off Time</th>
+                <th class="p-3 bg-blue-50 text-blue-800">Applicable NAV Allotment Principle</th>
+              </tr>
+            </thead>
+            <tbody class="divide-y divide-slate-200">
+              <tr class="hover:bg-slate-50">
+                <td class="p-3 font-semibold" rowspan="2">
+                  <strong>Liquid & Overnight Schemes</strong>
+                </td>
+                <td class="p-3 text-emerald-700 font-medium">Subscription / Purchase</td>
+                <td class="p-3 font-bold text-slate-900">1:30 PM</td>
+                <td class="p-3 font-bold text-blue-950 bg-blue-50/40">
+                  NAV of the <strong>Previous Business Day</strong><br>
+                  <span class="text-[11px] font-normal text-slate-600">Provided application is received and funds are credited into the scheme account before 1:30 PM.</span>
+                </td>
+              </tr>
+              <tr class="hover:bg-slate-50">
+                <td class="p-3 text-rose-700 font-medium">Redemption / Repurchase</td>
+                <td class="p-3 font-bold text-slate-900">3:00 PM</td>
+                <td class="p-3 font-bold text-blue-950 bg-blue-50/40">
+                  NAV of the <strong>Same Business Day</strong> (if received &le; 3:00 PM).<br>
+                  <span class="text-[11px] font-normal text-slate-600">NAV of the next business day if received after 3:00 PM.</span>
+                </td>
+              </tr>
+              <tr class="hover:bg-slate-50">
+                <td class="p-3 font-semibold" rowspan="2">
+                  <strong>All Other Schemes</strong><br>
+                  <span class="text-[11px] text-slate-500">(Equity, Debt, Hybrid, FoF, Index, Solution)</span>
+                </td>
+                <td class="p-3 text-emerald-700 font-medium">Subscription / Purchase</td>
+                <td class="p-3 font-bold text-slate-900">3:00 PM</td>
+                <td class="p-3 font-bold text-blue-950 bg-blue-50/40">
+                  Closing NAV of the business day on which <strong>funds are available for utilization before 3:00 PM</strong>.<br>
+                  <span class="text-[11px] font-normal text-slate-600">Applicable to ALL ticket sizes (₹500 or ₹50 Crores alike). If funds realize after 3:00 PM, next day's NAV applies.</span>
+                </td>
+              </tr>
+              <tr class="hover:bg-slate-50">
+                <td class="p-3 text-rose-700 font-medium">Redemption / Repurchase</td>
+                <td class="p-3 font-bold text-slate-900">3:00 PM</td>
+                <td class="p-3 font-bold text-blue-950 bg-blue-50/40">
+                  NAV of the <strong>Same Business Day</strong> (if received &le; 3:00 PM).<br>
+                  <span class="text-[11px] font-normal text-slate-600">NAV of the next business day if received after 3:00 PM. (Realization rule does NOT apply to redemptions).</span>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <!-- Realization Rule Practical Scenarios Grid -->
+        <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 text-xs">
+          <div class="p-4 rounded-2xl bg-slate-50 border border-slate-200 space-y-1.5">
+            <span class="font-bold text-slate-900 block">Scenario A: Online Purchase with UPI</span>
+            <p class="text-slate-600">
+              Investor submits an Equity scheme application at <strong>2:15 PM on Monday</strong> via UPI. Funds credit instantly to scheme bank account at <strong>2:18 PM</strong>.
+            </p>
+            <p class="text-blue-700 font-bold">Applicable NAV: Monday's Closing NAV (Both received & funds realized before 3:00 PM).</p>
+          </div>
+
+          <div class="p-4 rounded-2xl bg-slate-50 border border-slate-200 space-y-1.5">
+            <span class="font-bold text-slate-900 block">Scenario B: Cheque / Delayed NEFT</span>
+            <p class="text-slate-600">
+              Investor submits an Equity scheme form on <strong>Monday at 11:00 AM</strong> with a cheque. The cheque clears and funds credit to scheme account on <strong>Wednesday at 11:30 AM</strong>.
+            </p>
+            <p class="text-blue-700 font-bold">Applicable NAV: Wednesday's Closing NAV (Realization date controls NAV, not form submission date!).</p>
+          </div>
+
+          <div class="p-4 rounded-2xl bg-slate-50 border border-slate-200 space-y-1.5">
+            <span class="font-bold text-slate-900 block">Scenario C: Switch-Out to Switch-In</span>
+            <p class="text-slate-600">
+              Investor switches from Debt Fund to Equity Fund on <strong>Monday at 1:00 PM</strong>. Switch-in NAV depends on when redemption proceeds from Debt Fund reach Equity Fund.
+            </p>
+            <p class="text-blue-700 font-bold">Applicable NAV: Day on which switch-out funds reach the switch-in scheme account before 3:00 PM.</p>
+          </div>
+        </div>
+
+        <!-- Crucial Exam Trap: Sunday/Holiday Liquid Fund Rule -->
+        <div class="p-5 rounded-2xl bg-gradient-to-r from-amber-50 to-orange-50 border border-amber-300 text-xs space-y-2">
+          <div class="flex items-center gap-2 font-bold text-amber-950 text-sm">
+            <i data-lucide="alert-triangle" class="w-4 h-4 text-amber-600"></i>
+            <span>⭐ Crucial Exam Trap: Liquid Fund Friday / Weekend NAV Rule</span>
+          </div>
+          <p class="text-slate-700 leading-relaxed">
+            Liquid and Overnight schemes declare NAV on <strong>all 365 days of the year</strong> (including Saturdays, Sundays, and public holidays). 
+          </p>
+          <div class="p-3 bg-white rounded-xl border border-amber-200 font-medium text-slate-800">
+            <strong>Friday Purchase Case:</strong> If an investor submits an application for a Liquid Fund on <strong>Friday at 12:45 PM</strong> and funds are credited before 1:30 PM:
+            <ul class="list-disc pl-5 mt-1 space-y-0.5 text-blue-900 font-bold">
+              <li>Applicable NAV = Thursday's Closing NAV (Previous Business Day).</li>
+              <li>The investor earns returns for Friday, Saturday, and Sunday!</li>
+            </ul>
+          </div>
+          <p class="text-slate-600 text-[11px]">
+            Conversely, if a purchase is made on a Sunday before 1:30 PM with funds credited, the applicable NAV is <strong>Saturday's NAV</strong>.
+          </p>
+        </div>
+      </section>
+
+      <!-- Section 9.3 -->
+      <section id="section-3" class="bg-white rounded-3xl p-6 sm:p-8 border border-amber-200 shadow-sm space-y-5">
+        <div class="flex items-center justify-between">
+          <div class="flex items-center gap-2 text-xs font-bold text-amber-700 uppercase tracking-wider">
+            <span class="w-2 h-2 rounded-full bg-amber-500"></span> Section 9.3 &bull; Super High Exam Yield ⭐
+          </div>
+          <span class="text-xs px-2.5 py-1 rounded-full bg-amber-100 text-amber-800 font-bold">Account Mechanics</span>
+        </div>
+        <h2 class="font-display font-bold text-xl sm:text-2xl text-slate-900">KYC Architecture, Minor Accounts & Minor Turning Major (MAM)</h2>
+        
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4 text-xs">
+          <!-- Minor Account Rules -->
+          <div class="p-5 rounded-2xl bg-slate-50 border border-slate-200 space-y-2.5">
+            <h3 class="font-bold text-slate-900 text-sm flex items-center gap-2">
+              <i data-lucide="user" class="w-4 h-4 text-blue-600"></i>
+              <span>Account in the Name of a Minor</span>
+            </h3>
+            <ul class="list-disc pl-4 space-y-1.5 text-slate-700 leading-relaxed">
+              <li><strong>Sole Unitholder Mandate:</strong> The minor is strictly the <em>sole unitholder</em>. <strong>Joint holding is strictly prohibited</strong> under any circumstances.</li>
+              <li><strong>Representation:</strong> Folio can only be operated by a Natural Guardian (Father or Mother) or a Court-Appointed Legal Guardian.</li>
+              <li><strong>Proof of DOB:</strong> Mandatory submission of Birth Certificate, Passport, or school leaving certificate establishing exact date of birth.</li>
+              <li><strong>Bank Account Rule:</strong> Payment must originate from and redemptions credit to a bank account in the name of the minor or a joint account of the minor with the guardian.</li>
+              <li><strong>Nomination:</strong> Nomination cannot be made by or on behalf of a minor folio unitholder.</li>
+            </ul>
+          </div>
+
+          <!-- MAM Protocol -->
+          <div class="p-5 rounded-2xl bg-amber-50/70 border border-amber-200 space-y-2.5">
+            <h3 class="font-bold text-amber-950 text-sm flex items-center gap-2">
+              <i data-lucide="shield-alert" class="w-4 h-4 text-amber-700"></i>
+              <span>Minor Attaining Majority (MAM Protocol)</span>
+            </h3>
+            <p class="text-slate-700 leading-relaxed">
+              On the exact calendar date when the minor turns <strong>18 years of age</strong>:
+            </p>
+            <div class="p-3 bg-rose-50 border border-rose-200 rounded-xl text-rose-900 font-bold space-y-1">
+              <div>⚠️ Automatic Transaction Freeze:</div>
+              <p class="font-normal text-slate-700 text-[11px]">
+                All standing instructions (SIPs, STPs, SWPs) and debit permissions are <strong>instantly frozen</strong>. The guardian's operating authority ceases entirely by law.
+              </p>
+            </div>
+            <p class="text-slate-700 leading-relaxed font-semibold text-[11px]">
+              Requirements to Reactivate Folio (MAM Documentation):
+            </p>
+            <ul class="list-disc pl-4 space-y-1 text-slate-700 text-[11px]">
+              <li>MAM Request Form signed by the unitholder (who is now an adult).</li>
+              <li>New PAN & Full independent KYC registration.</li>
+              <li>New bank account in the sole name of the major unitholder.</li>
+              <li>Signature attestation by bank manager or banker's confirmation letter.</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- KYC and CKYCR Summary Card -->
+        <div class="p-4 rounded-2xl bg-blue-50/70 border border-blue-200 text-xs text-slate-700 space-y-2">
+          <span class="font-bold text-blue-900 block text-sm">KYC (Know Your Customer) Framework</span>
+          <p class="leading-relaxed">
+            PAN is the single universal identification key for mutual fund transactions. The <strong>Central KYC Registry (cKYCR)</strong> managed by CERSAI issues a 14-digit KYC Identification Number (KIN). Investors with valid KIN do not need to repeat KYC with different AMCs. For Aadhaar OTP-based e-KYC without biometric validation, the investment limit is capped at <strong>₹50,000 per mutual fund per financial year</strong>.
+          </p>
+        </div>
+      </section>
+
+      <!-- Section 9.4 -->
+      <section id="section-4" class="bg-white rounded-3xl p-6 sm:p-8 border border-amber-200 shadow-sm space-y-5">
+        <div class="flex items-center justify-between">
+          <div class="flex items-center gap-2 text-xs font-bold text-amber-700 uppercase tracking-wider">
+            <span class="w-2 h-2 rounded-full bg-amber-500"></span> Section 9.4 &bull; Super High Exam Yield ⭐
+          </div>
+          <span class="text-xs px-2.5 py-1 rounded-full bg-amber-100 text-amber-800 font-bold">Systematic Plans & IAF</span>
+        </div>
+        <h2 class="font-display font-bold text-xl sm:text-2xl text-slate-900">SIP Mechanics (Rupee Cost Averaging), STP, SWP & Instant Access Facility</h2>
+        
+        <p class="text-sm text-slate-600 leading-relaxed">
+          Systematic facilities instill financial discipline, overcome emotional bias, and optimize asset allocation over time. Understanding the mathematical mechanics of Rupee Cost Averaging is a staple exam topic.
+        </p>
+
+        <!-- Rupee Cost Averaging Numerical Example -->
+        <div class="p-5 rounded-2xl bg-slate-50 border border-slate-200 space-y-3 text-xs">
+          <div class="flex items-center justify-between">
+            <span class="font-bold text-slate-900 text-sm flex items-center gap-1.5">
+              <i data-lucide="calculator" class="w-4 h-4 text-blue-600"></i>
+              <span>Rupee Cost Averaging (RCA) Mathematical Proof</span>
+            </span>
+            <span class="px-2 py-0.5 rounded bg-blue-100 text-blue-800 font-semibold text-[10px]">Step-by-Step Math</span>
+          </div>
+          <p class="text-slate-600">
+            Consider an investor investing <strong>₹1,000 per month</strong> across 4 volatile market months:
+          </p>
+
+          <div class="overflow-x-auto rounded-xl border border-slate-200 bg-white">
+            <table class="min-w-full text-xs text-center">
+              <thead class="bg-slate-100 text-slate-700 font-bold">
+                <tr>
+                  <th class="p-2.5">Month</th>
+                  <th class="p-2.5">Monthly Investment (₹)</th>
+                  <th class="p-2.5">Applicable NAV (₹)</th>
+                  <th class="p-2.5 bg-blue-50 text-blue-800">Units Allotted (Amount / NAV)</th>
+                </tr>
+              </thead>
+              <tbody class="divide-y divide-slate-200">
+                <tr>
+                  <td class="p-2 font-medium">Month 1</td>
+                  <td class="p-2">₹1,000</td>
+                  <td class="p-2">₹20.00</td>
+                  <td class="p-2 font-semibold">50.000 units</td>
+                </tr>
+                <tr>
+                  <td class="p-2 font-medium">Month 2 (Dip)</td>
+                  <td class="p-2">₹1,000</td>
+                  <td class="p-2">₹10.00</td>
+                  <td class="p-2 font-semibold text-emerald-700">100.000 units (More units!)</td>
+                </tr>
+                <tr>
+                  <td class="p-2 font-medium">Month 3 (Recovery)</td>
+                  <td class="p-2">₹1,000</td>
+                  <td class="p-2">₹16.00</td>
+                  <td class="p-2 font-semibold">62.500 units</td>
+                </tr>
+                <tr>
+                  <td class="p-2 font-medium">Month 4 (Rally)</td>
+                  <td class="p-2">₹1,000</td>
+                  <td class="p-2">₹25.00</td>
+                  <td class="p-2 font-semibold text-rose-700">40.000 units (Fewer units)</td>
+                </tr>
+                <tr class="bg-slate-50 font-bold text-slate-900 border-t-2 border-slate-300">
+                  <td class="p-2">Total / Result</td>
+                  <td class="p-2">₹4,000 Total Invested</td>
+                  <td class="p-2 text-slate-600">Arithmetic Mean NAV = ₹17.75</td>
+                  <td class="p-2 text-blue-700 bg-blue-50/50">252.500 Total Units Acquired</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 text-xs pt-1">
+            <div class="p-3 bg-white rounded-xl border border-slate-200 space-y-1">
+              <span class="text-slate-500 font-medium">1. Simple Arithmetic Average Price:</span>
+              <div class="font-bold text-slate-800">
+                (₹20 + ₹10 + ₹16 + ₹25) / 4 = <span class="text-indigo-600">₹17.75 per unit</span>
+              </div>
+            </div>
+            <div class="p-3 bg-emerald-50 rounded-xl border border-emerald-200 space-y-1">
+              <span class="text-emerald-800 font-medium">2. Actual Average Cost per Unit (RCA):</span>
+              <div class="font-bold text-emerald-900">
+                ₹4,000 / 252.50 units = <span class="text-emerald-700">₹15.84 per unit ⭐</span>
+              </div>
+            </div>
+          </div>
+          <p class="text-slate-600 text-[11px] leading-relaxed">
+            <strong>Key Takeaway:</strong> Average purchase cost (₹15.84) is significantly lower than average market NAV (₹17.75). RCA automatically forces investors to acquire more units during market declines and fewer during market surges.
+          </p>
+        </div>
+
+        <!-- Systematic Facilities & IAF Grid -->
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-4 text-xs">
+          <!-- STP -->
+          <div class="p-4 rounded-2xl bg-slate-50 border border-slate-200 space-y-2">
+            <h4 class="font-bold text-slate-900 text-sm flex items-center gap-1.5">
+              <i data-lucide="repeat" class="w-4 h-4 text-indigo-600"></i>
+              <span>Systematic Transfer Plan (STP)</span>
+            </h4>
+            <p class="text-slate-600 leading-relaxed">
+              Transfers a specified amount periodically from a source scheme (typically Liquid/Ultra Short) to a target scheme (typically Equity).
+            </p>
+            <p class="text-amber-800 bg-amber-50 p-2 rounded-lg text-[11px] font-semibold border border-amber-200">
+              Tax Note: Each transfer is treated as a redemption from source scheme (triggering capital gains tax) and purchase in target scheme.
+            </p>
+          </div>
+
+          <!-- SWP -->
+          <div class="p-4 rounded-2xl bg-slate-50 border border-slate-200 space-y-2">
+            <h4 class="font-bold text-slate-900 text-sm flex items-center gap-1.5">
+              <i data-lucide="arrow-down-circle" class="w-4 h-4 text-emerald-600"></i>
+              <span>Systematic Withdrawal Plan (SWP)</span>
+            </h4>
+            <p class="text-slate-600 leading-relaxed">
+              Enables regular cash inflows at chosen intervals (monthly/quarterly). Unitholder specifies fixed rupee amount or fixed units to redeem.
+            </p>
+            <p class="text-emerald-800 bg-emerald-50 p-2 rounded-lg text-[11px] font-semibold border border-emerald-200">
+              Tax Efficiency: Only the capital appreciation component of each withdrawal is taxable, unlike IDCW which is taxed at slab rates on 100% of payout!
+            </p>
+          </div>
+
+          <!-- IAF -->
+          <div class="p-4 rounded-2xl bg-blue-50/70 border border-blue-200 space-y-2">
+            <h4 class="font-bold text-blue-950 text-sm flex items-center gap-1.5">
+              <i data-lucide="zap" class="w-4 h-4 text-blue-600"></i>
+              <span>Instant Access Facility (IAF)</span>
+            </h4>
+            <p class="text-slate-700 leading-relaxed">
+              SEBI framework allowing instant online redemption in Liquid Funds via IMPS/UPI into unitholder's bank account 24x7x365.
+            </p>
+            <div class="p-2.5 bg-white rounded-xl border border-blue-200 font-bold text-blue-900 text-center">
+              Lower of ₹50,000 OR 90% of Folio Value<br>
+              <span class="text-[10px] font-normal text-slate-500">(Per Day, Per Investor)</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Section 9.5 -->
+      <section id="section-5" class="bg-white rounded-3xl p-6 sm:p-8 border border-amber-200 shadow-sm space-y-5">
+        <div class="flex items-center justify-between">
+          <div class="flex items-center gap-2 text-xs font-bold text-amber-700 uppercase tracking-wider">
+            <span class="w-2 h-2 rounded-full bg-amber-500"></span> Section 9.5 &bull; Super High Exam Yield ⭐
+          </div>
+          <span class="text-xs px-2.5 py-1 rounded-full bg-amber-100 text-amber-800 font-bold">Risk & Security</span>
+        </div>
+        <h2 class="font-display font-bold text-xl sm:text-2xl text-slate-900">Nomination Framework, Transmission & Bank Change Cooling-Off</h2>
+        
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4 text-xs">
+          <!-- Nomination & Transmission -->
+          <div class="p-5 rounded-2xl bg-slate-50 border border-slate-200 space-y-2.5">
+            <h3 class="font-bold text-slate-900 text-sm flex items-center gap-2">
+              <i data-lucide="users" class="w-4 h-4 text-blue-600"></i>
+              <span>Nomination & Transmission Rules</span>
+            </h3>
+            <ul class="list-disc pl-4 space-y-1.5 text-slate-700 leading-relaxed">
+              <li><strong>Up to 3 Nominees:</strong> Individual folios (sole or joint) can register up to 3 nominees with exact allocation percentages summing to <strong>exactly 100%</strong>.</li>
+              <li><strong>Minors as Nominees:</strong> Allowed, provided name and address of guardian are specified.</li>
+              <li><strong>Non-Individuals Barred:</strong> Corporates, trusts, partnership firms, and societies cannot nominate.</li>
+              <li><strong>Mandatory Opt-In or Opt-Out:</strong> Unitholders must either nominate OR submit an explicit signed declaration opting out of nomination.</li>
+              <li><strong>Legal Nature:</strong> A nominee is a custodian/trustee holding units until succession is determined by court/will.</li>
+              <li><strong>Transmission on Death:</strong> In joint folios, surviving unitholders become sole holders; in sole folios with nomination, units transmit to nominee upon submitting death certificate and KYC.</li>
+            </ul>
+          </div>
+
+          <!-- Change of Bank Cooling-Off -->
+          <div class="p-5 rounded-2xl bg-amber-50/70 border border-amber-200 space-y-2.5">
+            <h3 class="font-bold text-amber-950 text-sm flex items-center gap-2">
+              <i data-lucide="lock" class="w-4 h-4 text-amber-700"></i>
+              <span>Change of Bank Mandate (COB) Cooling-Off</span>
+            </h3>
+            <p class="text-slate-700 leading-relaxed">
+              To safeguard investors from cyber-fraud, phishing, and fraudulent interception of redemption payouts:
+            </p>
+            <div class="p-3 bg-white rounded-xl border border-amber-300 text-center font-bold text-amber-950">
+              Mandatory 10 Calendar Days Cooling-Off Period
+            </div>
+            <p class="text-slate-700 leading-relaxed">
+              When an investor registers a change of bank mandate:
+            </p>
+            <ul class="list-disc pl-4 space-y-1 text-slate-700 leading-relaxed">
+              <li>Requires proof of both existing (old) and proposed (new) bank accounts.</li>
+              <li>If a redemption request is received <strong>within 10 calendar days</strong> of registering the new bank account, the redemption is either held until cooling-off expires OR proceeds are remitted to the <strong>old existing bank account</strong>.</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <!-- Section 9.6 -->
+      <section id="section-6" class="bg-white rounded-3xl p-6 sm:p-8 border border-slate-200/90 shadow-sm space-y-4">
+        <div class="flex items-center justify-between">
+          <div class="flex items-center gap-2 text-xs font-bold text-slate-500 uppercase tracking-wider">
+            <span class="w-2 h-2 rounded-full bg-slate-400"></span> Section 9.6 &bull; Investor Reporting
+          </div>
+          <span class="text-xs px-2.5 py-1 rounded-full bg-slate-100 text-slate-600 font-semibold">Account Statements</span>
+        </div>
+        <h2 class="font-display font-bold text-xl sm:text-2xl text-slate-900">Consolidated Account Statement (CAS) Dispatches</h2>
+        
+        <p class="text-sm text-slate-600 leading-relaxed">
+          A <strong>Consolidated Account Statement (CAS)</strong> aggregates all financial transactions across all mutual funds and depository accounts (Demat with NSDL and CDSL) linked under a common <strong>Permanent Account Number (PAN)</strong>.
+        </p>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 text-xs">
+          <div class="p-4 rounded-2xl bg-slate-50 border border-slate-200 space-y-2">
+            <div class="flex items-center gap-2 font-bold text-slate-900 text-sm">
+              <i data-lucide="calendar" class="w-4 h-4 text-blue-600"></i>
+              <span>Monthly CAS Dispatch</span>
+            </div>
+            <p class="text-slate-600 leading-relaxed">
+              Dispatched on or before the <strong>15th of the succeeding month</strong> to investors whose folios/demat accounts experienced active financial transactions (purchases, redemptions, switches, SIP/STP/SWP, IDCW) during the preceding month.
+            </p>
+          </div>
+
+          <div class="p-4 rounded-2xl bg-slate-50 border border-slate-200 space-y-2">
+            <div class="flex items-center gap-2 font-bold text-slate-900 text-sm">
+              <i data-lucide="calendar-check" class="w-4 h-4 text-indigo-600"></i>
+              <span>Half-Yearly CAS Dispatch</span>
+            </div>
+            <p class="text-slate-600 leading-relaxed">
+              Dispatched on or before the <strong>21st of the succeeding month</strong> (i.e., by <strong>October 21</strong> for April–September, and <strong>April 21</strong> for October–March) to investors whose folios had <em>no financial transactions</em> during the half-year period, reflecting unit balances and portfolio valuation.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Section 9.7 -->
+      <section id="section-7" class="bg-white rounded-3xl p-6 sm:p-8 border border-slate-200/90 shadow-sm space-y-5">
+        <div class="flex items-center justify-between">
+          <div class="flex items-center gap-2 text-xs font-bold text-slate-500 uppercase tracking-wider">
+            <span class="w-2 h-2 rounded-full bg-slate-400"></span> Section 9.7 &bull; Redressal Architecture
+          </div>
+          <span class="text-xs px-2.5 py-1 rounded-full bg-slate-100 text-slate-600 font-semibold">Investor Protection</span>
+        </div>
+        <h2 class="font-display font-bold text-xl sm:text-2xl text-slate-900">Grievance Redressal Architecture: SCORES 2.0, SMART ODR & MITRA</h2>
+        
+        <p class="text-sm text-slate-600 leading-relaxed">
+          SEBI and AMFI enforce a robust multi-tiered dispute resolution framework to protect retail investors, resolve service deficiencies promptly, and maintain investor confidence in mutual funds.
+        </p>
+
+        <!-- Redressal Architecture Grid -->
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-4 text-xs">
+          <!-- Level 1 & SCORES 2.0 -->
+          <div class="p-4 rounded-2xl bg-blue-50/60 border border-blue-200 space-y-2">
+            <span class="font-bold text-blue-950 text-sm block">SCORES 2.0 Redressal System</span>
+            <p class="text-slate-700 leading-relaxed">
+              SEBI Complaints Redress System upgraded to SCORES 2.0. Key parameters:
+            </p>
+            <ul class="list-disc pl-4 space-y-1 text-slate-700">
+              <li><strong>Turn-Around Time (TAT):</strong> Reduced to <strong>21 calendar days</strong> for the entity (AMC/RTA) to respond.</li>
+              <li><strong>Two-Tier Review:</strong> Tier 1 review by Designated Body (AMFI within 10 days); Tier 2 review by SEBI if complainant is not satisfied.</li>
+              <li>Automated complaint routing and real-time tracking.</li>
+            </ul>
+          </div>
+
+          <!-- SMART ODR -->
+          <div class="p-4 rounded-2xl bg-slate-50 border border-slate-200 space-y-2">
+            <span class="font-bold text-slate-900 text-sm block">SMART ODR Portal</span>
+            <p class="text-slate-600 leading-relaxed">
+              Securities Market Approach for Resolution Through Online Dispute Resolution. Provides online mediation, conciliation, and independent arbitration for unsettled grievances between unitholders and market intermediaries.
+            </p>
+          </div>
+
+          <!-- MITRA Platform -->
+          <div class="p-4 rounded-2xl bg-purple-50/60 border border-purple-200 space-y-2">
+            <span class="font-bold text-purple-950 text-sm block">AMFI MITRA Platform</span>
+            <p class="text-slate-700 leading-relaxed">
+              Mutual Fund Investor Troubleshooter and Resolution Assistant. AMFI's centralized single-window digital portal bridging all RTAs (CAMS & KFintech) and AMCs for unified query tracking, service status, and automated inquiry routing.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Section 9.8 Interactive Quiz -->
+      <section id="interactive-quiz" class="bg-slate-900 text-white rounded-3xl p-6 sm:p-8 border border-slate-800 shadow-xl space-y-6">
+        <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 border-b border-slate-800 pb-5">
+          <div>
+            <div class="flex items-center gap-2 text-xs font-bold text-blue-400 uppercase tracking-wider mb-1">
+              <i data-lucide="check-circle" class="w-4 h-4"></i> Interactive Exam Assessment
+            </div>
+            <h3 class="font-display font-bold text-xl sm:text-2xl text-white">Chapter 9 Practice Quiz (10 Marks Focus)</h3>
+            <p class="text-xs text-slate-400 mt-1">12 Questions covering NFO timelines, cut-off rules, realization thresholds, minor accounts, RCA math, and IAF.</p>
+          </div>
+          <div class="flex items-center gap-3">
+            <div class="text-right">
+              <span class="text-xs text-slate-400">Progress</span>
+              <div class="text-sm font-bold text-blue-400"><span id="answered-count">0</span> / 12</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Questions Container -->
+        <div id="quiz-container" class="space-y-6"></div>
+
+        <!-- Action Bar -->
+        <div class="pt-4 border-t border-slate-800 flex flex-col sm:flex-row items-center justify-between gap-4">
+          <button id="submit-quiz-btn" onclick="submitQuiz()" class="w-full sm:w-auto px-6 py-3 rounded-xl bg-blue-600 hover:bg-blue-500 font-bold text-sm shadow-lg shadow-blue-600/30 transition-all flex items-center justify-center gap-2">
+            <span>Submit Quiz & View Results</span>
+            <i data-lucide="arrow-right" class="w-4 h-4"></i>
+          </button>
+          <button id="reset-quiz-btn" onclick="resetQuiz()" class="hidden w-full sm:w-auto px-6 py-3 rounded-xl bg-slate-800 hover:bg-slate-700 text-slate-300 font-bold text-sm transition-all flex items-center justify-center gap-2">
+            <i data-lucide="rotate-ccw" class="w-4 h-4"></i>
+            <span>Retake Quiz</span>
+          </button>
+        </div>
+
+        <!-- Quiz Results -->
+        <div id="quiz-results" class="hidden p-6 rounded-2xl bg-slate-800/80 border border-slate-700 space-y-4">
+          <div class="flex items-center justify-between">
+            <h4 class="font-display font-bold text-lg text-white">Quiz Score Summary</h4>
+            <span id="result-status-badge" class="px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider"></span>
+          </div>
+          <div class="flex items-baseline gap-3">
+            <span id="score-display" class="font-display font-extrabold text-4xl text-blue-400"></span>
+            <span id="percentage-display" class="text-sm text-slate-400 font-medium"></span>
+          </div>
+          <p id="result-summary-text" class="text-xs sm:text-sm text-slate-300"></p>
+        </div>
+      </section>
+
+      <!-- Navigation Footer -->
+      <footer class="pt-6 border-t border-slate-200 flex items-center justify-between">
+        <a href="module1-ch8.html" class="flex items-center gap-2 px-4 py-2.5 rounded-xl border border-slate-200 bg-white hover:bg-slate-50 text-slate-700 font-medium text-xs transition-colors">
+          <i data-lucide="arrow-left" class="w-4 h-4"></i>
+          <span>Prev: Chapter 8 (Taxation)</span>
+        </a>
+        <a href="module1-ch10.html" class="flex items-center gap-2 px-4 py-2.5 rounded-xl bg-blue-600 hover:bg-blue-700 text-white font-semibold text-xs shadow-sm transition-colors">
+          <span>Next: Chapter 10 (Risk, Return & Performance)</span>
+          <i data-lucide="arrow-right" class="w-4 h-4"></i>
+        </a>
+      </footer>
+
+    </div>
+  </div>
+
+  <script>
+    const questionsData = [
+      {
+        id: 1,
+        question: "What is the maximum number of days a New Fund Offer (NFO) of an open-ended mutual fund scheme (other than ELSS) can remain open for subscription?",
+        options: [
+          { key: "a", text: "10 days" },
+          { key: "b", text: "15 days" },
+          { key: "c", text: "30 days" },
+          { key: "d", text: "45 days" }
+        ],
+        correct: "b",
+        explanation: "SEBI regulations mandate that an NFO of an open-ended scheme (except ELSS schemes which can remain open for up to 30 days) can remain open for a maximum period of 15 days."
+      },
+      {
+        id: 2,
+        question: "Within how many business days from the closure of an NFO must the AMC complete unit allotment or refund excess subscription money, and what is the penalty for delay?",
+        options: [
+          { key: "a", text: "3 business days; penalty of 10% interest p.a." },
+          { key: "b", text: "5 business days; penalty of 15% interest p.a." },
+          { key: "c", text: "7 business days; penalty of 12% interest p.a." },
+          { key: "d", text: "10 business days; penalty of 18% interest p.a." }
+        ],
+        correct: "b",
+        explanation: "Allotment of units or refund of excess application money must be completed within 5 business days from NFO closure. Any delay beyond 5 business days attracts a statutory interest penalty of 15% per annum payable by the AMC to the applicants."
+      },
+      {
+        id: 3,
+        question: "What is the cut-off time for submitting purchase applications in Liquid and Overnight Schemes to be eligible for the previous business day's NAV?",
+        options: [
+          { key: "a", text: "12:00 Noon" },
+          { key: "b", text: "1:00 PM" },
+          { key: "c", text: "1:30 PM" },
+          { key: "d", text: "3:00 PM" }
+        ],
+        correct: "c",
+        explanation: "For Liquid and Overnight funds, the purchase cut-off time is 1:30 PM. Provided the application is received and funds are credited and available for utilization in the scheme bank account before 1:30 PM, the investor gets the NAV of the previous business day."
+      },
+      {
+        id: 4,
+        question: "Under SEBI's Uniform Realization Rule, what governs the applicable NAV for purchase transactions in Equity and Debt funds (other than liquid schemes)?",
+        options: [
+          { key: "a", text: "Only the time when the physical application form is submitted" },
+          { key: "b", text: "The business day on which funds are credited and available for utilization before 3:00 PM, irrespective of ticket size" },
+          { key: "c", text: "Funds realization rule applies only for transactions exceeding ₹2 Lakhs" },
+          { key: "d", text: "The date and time stamped on the bank cheque" }
+        ],
+        correct: "b",
+        explanation: "Across all ticket sizes (whether ₹500 or ₹50 Crores), purchase NAV in mutual fund schemes is allotted strictly based on the business day on which funds reach and are available for utilization by the fund before the 3:00 PM cut-off time."
+      },
+      {
+        id: 5,
+        question: "An investor invests in a Liquid Fund on a Friday at 12:45 PM and the funds are credited to the scheme account before 1:30 PM. Which day's NAV is allotted, and how many days of return does the investor earn over the weekend?",
+        options: [
+          { key: "a", text: "Friday's NAV; earns returns starting Monday" },
+          { key: "b", text: "Thursday's NAV; earns returns for Friday, Saturday, and Sunday" },
+          { key: "c", text: "Saturday's NAV; earns returns only for Sunday" },
+          { key: "d", text: "Monday's NAV; no weekend returns" }
+        ],
+        correct: "b",
+        explanation: "Liquid and Overnight schemes declare NAVs on all 365 days of the year. Because funds were realized before 1:30 PM on Friday, the applicable NAV is Thursday's closing NAV (previous business day), meaning the investor earns returns for Friday, Saturday, and Sunday."
+      },
+      {
+        id: 6,
+        question: "What is the statutory limit for cash investments in mutual funds per investor, and how are redemption proceeds handled for such folios?",
+        options: [
+          { key: "a", text: "₹20,000 per financial year; redemption can be made in cash" },
+          { key: "b", text: "₹50,000 per mutual fund per financial year; redemptions are strictly paid via bank transfer" },
+          { key: "c", text: "₹1,00,000 per mutual fund per financial year; redemption via cash up to ₹10,000" },
+          { key: "d", text: "Cash transactions are completely banned under AML regulations" }
+        ],
+        correct: "b",
+        explanation: "Cash investments are permitted up to ₹50,000 per investor, per mutual fund, per financial year (to aid rural penetration). However, redemptions, dividend payouts, or refunds are strictly prohibited from being paid in cash and must be remitted via bank transfer."
+      },
+      {
+        id: 7,
+        question: "Regarding a mutual fund account opened in the name of a minor, which of the following statements is TRUE?",
+        options: [
+          { key: "a", text: "The minor can hold the folio jointly with their father or mother" },
+          { key: "b", text: "The minor must be the sole unitholder; joint holding is strictly prohibited" },
+          { key: "c", text: "A nominee can be appointed by the guardian on behalf of the minor" },
+          { key: "d", text: "The bank account can be in the name of any third-party adult" }
+        ],
+        correct: "b",
+        explanation: "In a minor's folio, the minor is strictly the sole unitholder. Joint holding is completely prohibited under SEBI regulations. The folio is represented by a natural guardian (father/mother) or legal guardian."
+      },
+      {
+        id: 8,
+        question: "What happens automatically to standing instructions (SIP/STP/SWP) when a minor unitholder attains 18 years of age (Minor Attaining Majority - MAM)?",
+        options: [
+          { key: "a", text: "They continue uninterrupted until the end of the specified tenure" },
+          { key: "b", text: "They are transferred automatically to the guardian's personal folio" },
+          { key: "c", text: "All standing instructions and guardian operations are immediately frozen until MAM formalities are completed" },
+          { key: "d", text: "The AMC automatically liquidates all units and dispatches a cheque to the guardian" }
+        ],
+        correct: "c",
+        explanation: "On the exact date the minor attains 18 years, the guardian's authority automatically ceases and all standing instructions (SIPs, STPs, SWPs) are frozen until the unitholder submits a MAM form with their own PAN, KYC, bank mandate, and specimen signature."
+      },
+      {
+        id: 9,
+        question: "Under the Instant Access Facility (IAF) for Liquid Schemes, what is the maximum redemption limit permitted per day per investor?",
+        options: [
+          { key: "a", text: "₹25,000 or 50% of folio value, whichever is lower" },
+          { key: "b", text: "₹50,000 or 90% of folio value, whichever is lower" },
+          { key: "c", text: "₹1,00,000 or 80% of folio value, whichever is lower" },
+          { key: "d", text: "₹50,000 flat, regardless of folio valuation" }
+        ],
+        correct: "b",
+        explanation: "SEBI permits AMCs to offer Instant Access Facility (IAF) in Liquid Funds capped at ₹50,000 or 90% of the folio's market value, whichever is lower, per day per investor, remitted instantly via IMPS/UPI."
+      },
+      {
+        id: 10,
+        question: "Which of the following conditions is mandatory regarding the nomination framework in mutual funds?",
+        options: [
+          { key: "a", text: "Up to 5 nominees are allowed, and non-individual entities can also nominate" },
+          { key: "b", text: "Up to 3 nominees are allowed with allocations totaling 100%, or an explicit signed opt-out declaration must be submitted" },
+          { key: "c", text: "Nomination is mandatory only for investments exceeding ₹10 Lakhs" },
+          { key: "d", text: "A minor cannot be named as a nominee under any condition" }
+        ],
+        correct: "b",
+        explanation: "Individual unitholders can register up to 3 nominees with percentage allocations summing to exactly 100%. If an investor chooses not to nominate, they must provide an explicit signed declaration opting out of nomination."
+      },
+      {
+        id: 11,
+        question: "What is the mandatory cooling-off period following a change of bank mandate (COB) to safeguard against unauthorized diversion of redemption proceeds?",
+        options: [
+          { key: "a", text: "3 business days" },
+          { key: "b", text: "7 business days" },
+          { key: "c", text: "10 calendar days" },
+          { key: "d", text: "30 calendar days" }
+        ],
+        correct: "c",
+        explanation: "A cooling-off period of 10 calendar days is enforced following any change of bank mandate. Redemption requests received during this cooling-off period are either held or remitted to the verified existing (old) bank account."
+      },
+      {
+        id: 12,
+        question: "What are the regulatory dispatch timelines for monthly and half-yearly Consolidated Account Statements (CAS)?",
+        options: [
+          { key: "a", text: "Monthly CAS by 10th; Half-yearly CAS by 15th" },
+          { key: "b", text: "Monthly CAS by 15th; Half-yearly CAS by 21st of the succeeding month" },
+          { key: "c", text: "Monthly CAS by 21st; Half-yearly CAS by end of month" },
+          { key: "d", text: "Monthly CAS by 5th; Half-yearly CAS by 10th" }
+        ],
+        correct: "b",
+        explanation: "Under SEBI regulations, monthly CAS is dispatched on or before the 15th of the succeeding month for folios with transactions, while half-yearly CAS (for folios with no transactions) is dispatched on or before the 21st of the succeeding month (October 21 and April 21)."
+      }
+    ];
+
+    let userAnswers = {};
+
+    function renderQuiz() {
+      const container = document.getElementById("quiz-container");
+      container.innerHTML = "";
+      questionsData.forEach((q, idx) => {
+        const qDiv = document.createElement("div");
+        qDiv.className = "p-5 rounded-2xl bg-white/5 border border-white/10 space-y-3";
+        
+        let optionsHtml = "";
+        q.options.forEach(opt => {
+          optionsHtml += `
+            <label id="label-${q.id}-${opt.key}" onclick="selectOption(${q.id}, '${opt.key}')" class="flex items-center gap-3 p-3 rounded-xl bg-white/5 hover:bg-white/10 border border-white/5 cursor-pointer text-xs sm:text-sm transition-all">
+              <input type="radio" name="q-${q.id}" value="${opt.key}" class="hidden" />
+              <div class="w-6 h-6 rounded-full border border-slate-500 flex items-center justify-center font-bold text-xs shrink-0">${opt.key.toUpperCase()}</div>
+              <span class="text-slate-300">${opt.text}</span>
+            </label>
+          `;
+        });
+
+        qDiv.innerHTML = `
+          <div class="flex items-center justify-between">
+            <span class="text-xs font-bold text-blue-400">Question ${idx + 1} of ${questionsData.length}</span>
+            <span id="badge-${q.id}" class="text-xs px-2 py-0.5 rounded-full bg-slate-800 text-slate-400">Unanswered</span>
+          </div>
+          <h4 class="font-display font-semibold text-sm sm:text-base text-white">${q.question}</h4>
+          <div class="space-y-2 mt-3">${optionsHtml}</div>
+          <div id="explanation-${q.id}" class="hidden p-4 rounded-xl text-xs sm:text-sm mt-3 space-y-1"></div>
+        `;
+        container.appendChild(qDiv);
+      });
+      lucide.createIcons();
+    }
+
+    function selectOption(qId, key) {
+      userAnswers[qId] = key;
+      document.getElementById("answered-count").innerText = Object.keys(userAnswers).length;
+      
+      const badge = document.getElementById(`badge-${qId}`);
+      if (badge) {
+        badge.innerText = "Answered";
+        badge.className = "text-xs px-2 py-0.5 rounded-full bg-blue-500/20 text-blue-300 font-medium";
+      }
+
+      const q = questionsData.find(item => item.id === qId);
+      q.options.forEach(opt => {
+        const lbl = document.getElementById(`label-${qId}-${opt.key}`);
+        if (opt.key === key) {
+          lbl.className = "flex items-center gap-3 p-3 rounded-xl bg-blue-600/30 border border-blue-400/50 cursor-pointer text-xs sm:text-sm transition-all";
+        } else {
+          lbl.className = "flex items-center gap-3 p-3 rounded-xl bg-white/5 hover:bg-white/10 border border-white/5 cursor-pointer text-xs sm:text-sm transition-all";
+        }
+      });
+    }
+
+    function submitQuiz() {
+      let score = 0;
+      questionsData.forEach(q => {
+        const selected = userAnswers[q.id];
+        const isCorrect = selected === q.correct;
+        if (isCorrect) score++;
+
+        const explanationDiv = document.getElementById(`explanation-${q.id}`);
+        explanationDiv.classList.remove("hidden");
+
+        if (isCorrect) {
+          explanationDiv.className = "p-4 rounded-xl text-xs sm:text-sm mt-3 bg-emerald-950/60 border border-emerald-600 text-emerald-200";
+          explanationDiv.innerHTML = `<div class="font-bold text-emerald-400 flex items-center gap-1.5"><i data-lucide="check" class="w-4 h-4"></i> Correct!</div><p class="mt-1">${q.explanation}</p>`;
+        } else {
+          explanationDiv.className = "p-4 rounded-xl text-xs sm:text-sm mt-3 bg-rose-950/60 border border-rose-600 text-rose-200";
+          explanationDiv.innerHTML = `<div class="font-bold text-rose-400 flex items-center gap-1.5"><i data-lucide="x" class="w-4 h-4"></i> Incorrect (Correct Answer: ${q.correct.toUpperCase()})</div><p class="mt-1">${q.explanation}</p>`;
+        }
+      });
+
+      const percentage = Math.round((score / questionsData.length) * 100);
+      const passed = percentage >= 60;
+      
+      const resultsDiv = document.getElementById("quiz-results");
+      resultsDiv.classList.remove("hidden");
+
+      const statusBadge = document.getElementById("result-status-badge");
+      statusBadge.innerText = passed ? "Status: Passed (60%+ Benchmark)" : "Status: Needs Revision";
+      statusBadge.className = passed ? "px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider bg-emerald-500 text-emerald-950" : "px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider bg-amber-500 text-amber-950";
+
+      document.getElementById("score-display").innerText = `${score} / ${questionsData.length}`;
+      document.getElementById("percentage-display").innerText = `${percentage}% Score (Passing criteria: 60%)`;
+
+      document.getElementById("result-summary-text").innerText = passed
+        ? `Superb! You scored ${percentage}%, mastering high-weightage Chapter 9 investor service rules and cut-off mechanisms.`
+        : `You scored ${percentage}%. Review the cut-off times, realization rules, MAM procedures, and IAF limits above.`;
+
+      document.getElementById("submit-quiz-btn").classList.add("hidden");
+      document.getElementById("reset-quiz-btn").classList.remove("hidden");
+
+      resultsDiv.scrollIntoView({ behavior: 'smooth' });
+      lucide.createIcons();
+    }
+
+    function resetQuiz() {
+      userAnswers = {};
+      document.getElementById("answered-count").innerText = "0";
+      document.getElementById("quiz-results").classList.add("hidden");
+      document.getElementById("submit-quiz-btn").classList.remove("hidden");
+      document.getElementById("reset-quiz-btn").classList.add("hidden");
+      renderQuiz();
+      document.getElementById("interactive-quiz").scrollIntoView({ behavior: 'smooth' });
+    }
+
+    renderQuiz();
+    lucide.createIcons();
+  </script>
+</body>
+</html>

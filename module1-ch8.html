@@ -1,0 +1,990 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Chapter 8: Taxation of Mutual Funds | NISM Series V-D Notes</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+  <script src="https://unpkg.com/lucide@latest"></script>
+
+  <!-- KaTeX for formula rendering -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.min.css">
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.min.js"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/contrib/auto-render.min.js" onload="renderMathInElement(document.body);"></script>
+
+  <!-- Global Module & Chapter Navigation Sidebar -->
+    <!-- Modern Documentation Design System & Zoom Engine -->
+  <link rel="stylesheet" href="modern-docs.css">
+  <script defer src="nav-sidebar.js"></script>
+
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+            display: ['"Space Grotesk"', 'sans-serif']
+          }
+        }
+      }
+    }
+  </script>
+</head>
+<body class="bg-slate-50 text-slate-900 min-h-screen flex flex-col selection:bg-blue-500 selection:text-white">
+
+  <!-- Header -->
+  <header class="sticky top-0 z-50 bg-white/90 backdrop-blur-md border-b border-slate-200">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
+      <div class="flex items-center gap-3">
+        <a href="module1.html" class="flex items-center gap-2 text-slate-500 hover:text-slate-900 transition-colors">
+          <div class="w-9 h-9 rounded-xl bg-slate-100 hover:bg-slate-200 flex items-center justify-center text-slate-700 transition-colors">
+            <i data-lucide="arrow-left" class="w-4 h-4"></i>
+          </div>
+        </a>
+        <div>
+          <div class="flex items-center gap-2">
+            <span class="text-xs font-bold uppercase tracking-wider text-blue-600 bg-blue-50 px-2 py-0.5 rounded">Module 1</span>
+            <span class="text-xs text-slate-400 font-medium">Chapter 8 of 12</span>
+          </div>
+          <h1 class="font-display font-bold text-base sm:text-lg text-slate-900 leading-tight">Taxation of Mutual Funds</h1>
+        </div>
+      </div>
+
+      <div class="flex items-center gap-3">
+        <span class="hidden sm:inline-flex items-center gap-1 px-3 py-1 rounded-full text-xs font-bold bg-amber-50 text-amber-700 border border-amber-200">
+          <i data-lucide="award" class="w-3.5 h-3.5"></i>
+          Weightage: 3 Marks
+        </span>
+        <a href="#interactive-quiz" class="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-lg text-xs font-bold bg-blue-600 hover:bg-blue-700 text-white shadow-sm transition-all">
+          <i data-lucide="help-circle" class="w-3.5 h-3.5"></i>
+          <span>Chapter Quiz (12 MCQs)</span>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Content Grid -->
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 grid grid-cols-1 lg:grid-cols-12 gap-8 flex-grow">
+    
+    <!-- Sidebar Navigation -->
+    <aside class="hidden lg:block lg:col-span-3">
+      <div class="sticky top-24 space-y-4">
+        <!-- Chapter Switcher (3 Module Dropdowns) -->
+        <div id="sidebar-chapter-switcher"></div>
+
+        <div class="bg-white p-5 rounded-2xl border border-slate-200 shadow-sm">
+          <h2 class="text-xs font-bold text-slate-400 uppercase tracking-wider mb-3">Chapter Navigation</h2>
+          <nav class="space-y-1 text-xs">
+            <a href="#section-1" class="block px-2.5 py-1.5 rounded-lg text-slate-600 hover:bg-slate-100 hover:text-blue-600">8.1 Scheme Tax Status & Sec 10(23D)</a>
+            <a href="#section-2" class="block px-2.5 py-1.5 rounded-lg text-amber-700 font-semibold bg-amber-50/70 hover:bg-amber-100">8.2 Budget 2024 Capital Gains Architecture ⭐</a>
+            <a href="#section-3" class="block px-2.5 py-1.5 rounded-lg text-amber-700 font-semibold bg-amber-50/70 hover:bg-amber-100">8.3 IDCW Taxation & TDS under Sec 194K ⭐</a>
+            <a href="#section-4" class="block px-2.5 py-1.5 rounded-lg text-slate-600 hover:bg-slate-100 hover:text-blue-600">8.4 STT, Stamp Duty & ELSS (Sec 80C)</a>
+            <a href="#section-5" class="block px-2.5 py-1.5 rounded-lg text-amber-700 font-semibold bg-amber-50/70 hover:bg-amber-100">8.5 Bonus Stripping & Loss Set-Off Rules ⭐</a>
+            <a href="#interactive-quiz" class="block px-2.5 py-1.5 rounded-lg text-blue-700 font-bold bg-blue-50 hover:bg-blue-100 mt-2">Practice Quiz (12 MCQs)</a>
+          </nav>
+        </div>
+
+        <div class="p-4 rounded-2xl bg-gradient-to-br from-blue-600 to-indigo-700 text-white shadow-sm text-xs space-y-2">
+          <div class="flex items-center gap-1.5 font-bold">
+            <i data-lucide="zap" class="w-4 h-4 text-amber-300"></i>
+            <span>Budget 2024 Exam Numbers</span>
+          </div>
+          <p class="text-blue-100 leading-relaxed text-[11px]">
+            • <strong>Equity LTCG (&gt;12m):</strong> 12.5% (exemption: ₹1.25 Lakhs/FY)<br>
+            • <strong>Equity STCG (&le;12m):</strong> 20% (Sec 111A)<br>
+            • <strong>Specified MFs (&le;35% equity):</strong> Slab rate (deemed STCG u/s 50AA)<br>
+            • <strong>Other Non-Equity (&gt;24m):</strong> 12.5% LTCG, no indexation<br>
+            • <strong>TDS on IDCW (Sec 194K):</strong> 10% on &gt; ₹5,000 / FY<br>
+            • <strong>STT on Equity Redemption:</strong> 0.001% (Seller)<br>
+            • <strong>Stamp Duty on Allotment:</strong> 0.005% uniform<br>
+            • <strong>Bonus Stripping (Sec 94(8)):</strong> 3m before / 9m after
+          </p>
+        </div>
+
+        <div class="p-4 rounded-2xl bg-amber-50 border border-amber-200 text-amber-900 text-xs space-y-1.5">
+          <div class="flex items-center gap-1.5 font-bold">
+            <i data-lucide="alert-triangle" class="w-4 h-4 text-amber-600"></i>
+            <span>Critical Exam Date</span>
+          </div>
+          <p class="text-[11px] leading-relaxed text-slate-700">
+            Revised capital gains rates enacted under <strong>Finance (No. 2) Act, 2024</strong> came into effect from <strong>July 23, 2024</strong>. Section 50AA for debt funds was introduced w.e.f. <strong>April 1, 2023</strong>.
+          </p>
+        </div>
+      </div>
+    </aside>
+
+    <!-- Main Notes -->
+    <div class="lg:col-span-9 space-y-8">
+
+      <!-- Section 8.1 -->
+      <section id="section-1" class="bg-white rounded-3xl p-6 sm:p-8 border border-slate-200/90 shadow-sm space-y-5">
+        <div class="flex items-center justify-between">
+          <div class="flex items-center gap-2 text-xs font-bold text-slate-500 uppercase tracking-wider">
+            <span class="w-2 h-2 rounded-full bg-slate-400"></span> Section 8.1 &bull; Fast-Track Refresher ⚡
+          </div>
+          <span class="text-xs px-2.5 py-1 rounded-full bg-slate-100 text-slate-600 font-semibold">Fund-Level Tax Status</span>
+        </div>
+        
+        <h2 class="font-display font-bold text-xl sm:text-2xl text-slate-900">Tax Status of Mutual Funds & Section 10(23D) Pass-Through</h2>
+        
+        <p class="text-sm text-slate-600 leading-relaxed">
+          Mutual funds in India are constituted as trusts under the Indian Trusts Act, 1882. Under the Income Tax Act, 1961, mutual funds enjoy an overarching tax-exempt pass-through status designed to prevent double taxation of collective investments.
+        </p>
+
+        <!-- Pass-Through Principles Cards -->
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4 text-xs">
+          <div class="p-4 rounded-2xl bg-blue-50/60 border border-blue-200 space-y-2">
+            <div class="flex items-center gap-2 font-bold text-blue-900 text-sm">
+              <i data-lucide="shield-check" class="w-4 h-4 text-blue-600"></i>
+              <span>Section 10(23D) Complete Exemption</span>
+            </div>
+            <p class="text-slate-700 leading-relaxed">
+              Any income earned by a mutual fund registered with SEBI (or set up by a public sector bank, public financial institution, or authorized by the RBI) is <strong>100% exempt from income tax</strong>.
+            </p>
+            <p class="text-slate-600">
+              The fund pays <strong>zero tax</strong> on interest income, dividend earnings, or realized capital gains from trading portfolio assets.
+            </p>
+          </div>
+
+          <div class="p-4 rounded-2xl bg-slate-50 border border-slate-200 space-y-2">
+            <div class="flex items-center gap-2 font-bold text-slate-900 text-sm">
+              <i data-lucide="ban" class="w-4 h-4 text-rose-600"></i>
+              <span>Abolition of DDT (Finance Act 2020)</span>
+            </div>
+            <p class="text-slate-700 leading-relaxed">
+              Prior to April 1, 2020, mutual funds were liable to pay <strong>Dividend Distribution Tax (DDT)</strong> at the scheme level before distributing income.
+            </p>
+            <p class="text-slate-600">
+              Finance Act, 2020 completely abolished DDT. Mutual funds now distribute 100% gross IDCW payouts, and all income distribution is taxed directly in the hands of unitholders.
+            </p>
+          </div>
+        </div>
+
+        <!-- Scheme Classification for Tax Purposes -->
+        <div class="space-y-3 pt-2">
+          <h3 class="font-display font-bold text-base text-slate-900">Statutory Classification of Mutual Funds for Taxation</h3>
+          <p class="text-xs text-slate-600 leading-relaxed">
+            The Income Tax Act classifies mutual funds into specific categories based strictly on their underlying portfolio allocation in domestic equity shares:
+          </p>
+
+          <div class="overflow-x-auto rounded-2xl border border-slate-200">
+            <table class="min-w-full text-xs text-left">
+              <thead class="bg-slate-100 text-slate-700 font-bold uppercase tracking-wider">
+                <tr>
+                  <th class="p-3">Tax Category</th>
+                  <th class="p-3">Statutory Portfolio Criteria</th>
+                  <th class="p-3">Typical Scheme Examples</th>
+                </tr>
+              </thead>
+              <tbody class="divide-y divide-slate-200">
+                <tr class="hover:bg-slate-50">
+                  <td class="p-3 font-semibold text-blue-700">Equity-Oriented Fund</td>
+                  <td class="p-3 text-slate-700">
+                    &ge; <strong>65% of total proceeds</strong> invested in equity shares of domestic listed companies.
+                    <div class="text-[11px] text-slate-500 mt-1">
+                      <em>FoF Equity Condition:</em> Minimum <strong>90%</strong> invested in units of another domestic equity fund traded on a recognized exchange.
+                    </div>
+                  </td>
+                  <td class="p-3 text-slate-600">Large Cap, Mid Cap, Small Cap, Flexi Cap, ELSS, Aggressive Hybrid Schemes (&ge;65% equity).</td>
+                </tr>
+                <tr class="hover:bg-slate-50">
+                  <td class="p-3 font-semibold text-amber-800 bg-amber-50/30">Specified Mutual Fund (Sec 50AA)</td>
+                  <td class="p-3 text-slate-700 bg-amber-50/30">
+                    Not more than <strong>35% of total proceeds</strong> invested in equity shares of domestic companies, acquired on or after <strong>April 1, 2023</strong>.
+                  </td>
+                  <td class="p-3 text-slate-600 bg-amber-50/30">Pure Debt Funds, Liquid, Money Market, Overnight, Conservative Hybrid (&le;35% equity), International FoFs.</td>
+                </tr>
+                <tr class="hover:bg-slate-50">
+                  <td class="p-3 font-semibold text-emerald-800">Other Non-Equity Funds</td>
+                  <td class="p-3 text-slate-700">
+                    Investments where domestic equity is <strong>between &gt;35% and &lt;65%</strong>, or funds investing predominantly in commodities.
+                  </td>
+                  <td class="p-3 text-slate-600">Gold ETFs/Funds, Silver ETFs/Funds, Balanced Hybrid, Dynamic Asset Allocation (if equity 35%-65%).</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </section>
+
+      <!-- Section 8.2 -->
+      <section id="section-2" class="bg-white rounded-3xl p-6 sm:p-8 border border-amber-200 shadow-sm space-y-6">
+        <div class="flex items-center justify-between">
+          <div class="flex items-center gap-2 text-xs font-bold text-amber-700 uppercase tracking-wider">
+            <span class="w-2 h-2 rounded-full bg-amber-500"></span> Section 8.2 &bull; Super High Exam Yield ⭐
+          </div>
+          <span class="text-xs px-2.5 py-1 rounded-full bg-amber-100 text-amber-800 font-bold">Finance (No. 2) Act, 2024</span>
+        </div>
+
+        <h2 class="font-display font-bold text-xl sm:text-2xl text-slate-900">Capital Gains Taxation Architecture (Budget 2024 Overhaul)</h2>
+        
+        <p class="text-sm text-slate-600 leading-relaxed">
+          The <strong>Finance (No. 2) Act, 2024</strong> (Budget 2024) introduced a landmark rationalization of capital gains tax rates, holding periods, and exemption thresholds effective from <strong>July 23, 2024</strong>. Questions on these exact revised rates and categories are guaranteed in the exam.
+        </p>
+
+        <!-- Master Capital Gains Table -->
+        <div class="space-y-2">
+          <div class="flex items-center justify-between text-xs">
+            <span class="font-bold text-slate-700 uppercase tracking-wider">Post-Budget 2024 Master Capital Gains Tax Matrix</span>
+            <span class="text-[11px] text-slate-400">Effective July 23, 2024</span>
+          </div>
+          <div class="overflow-x-auto rounded-2xl border border-slate-200">
+            <table class="min-w-full text-xs text-left">
+              <thead class="bg-slate-100 text-slate-700 font-bold uppercase tracking-wider">
+                <tr>
+                  <th class="p-3">Category</th>
+                  <th class="p-3">Domestic Equity %</th>
+                  <th class="p-3">LTCG Holding Period Threshold</th>
+                  <th class="p-3 bg-rose-50 text-rose-800">Short-Term Capital Gains (STCG)</th>
+                  <th class="p-3 bg-emerald-50 text-emerald-800">Long-Term Capital Gains (LTCG)</th>
+                  <th class="p-3">Indexation Benefit</th>
+                </tr>
+              </thead>
+              <tbody class="divide-y divide-slate-200">
+                <tr class="hover:bg-slate-50">
+                  <td class="p-3 font-semibold text-blue-700">Equity-Oriented Funds</td>
+                  <td class="p-3 font-mono font-bold">&ge; 65%</td>
+                  <td class="p-3 font-bold text-slate-800">&gt; 12 Months</td>
+                  <td class="p-3 font-bold text-rose-700 bg-rose-50/40">
+                    20% <br><span class="text-[10px] font-normal text-slate-500">(Sec 111A - increased from 15%)</span>
+                  </td>
+                  <td class="p-3 font-bold text-emerald-700 bg-emerald-50/40">
+                    12.5% on gains exceeding ₹1,25,000 / FY<br><span class="text-[10px] font-normal text-slate-500">(Sec 112A - increased from 10%)</span>
+                  </td>
+                  <td class="p-3 font-semibold text-rose-600">NO Indexation</td>
+                </tr>
+                <tr class="hover:bg-slate-50">
+                  <td class="p-3 font-semibold text-amber-800 bg-amber-50/30">Specified Mutual Funds (Sec 50AA)</td>
+                  <td class="p-3 font-mono font-bold text-slate-700 bg-amber-50/30">&le; 35%</td>
+                  <td class="p-3 font-bold text-slate-600 bg-amber-50/30">Any duration (Deemed STCG)</td>
+                  <td class="p-3 font-bold text-rose-700 bg-rose-50/40" colspan="2">
+                    Taxed at unitholder's applicable <strong>Income Tax Slab Rate</strong> under Section 50AA (for units acquired on or after 1-Apr-2023).
+                  </td>
+                  <td class="p-3 font-semibold text-rose-600 bg-amber-50/30">NO Indexation</td>
+                </tr>
+                <tr class="hover:bg-slate-50">
+                  <td class="p-3 font-semibold text-purple-700">Other Non-Equity Funds (Gold/Silver/Hybrids)</td>
+                  <td class="p-3 font-mono font-bold">&gt; 35% to &lt; 65%</td>
+                  <td class="p-3 font-bold text-slate-800">&gt; 24 Months<br><span class="text-[10px] font-normal text-slate-500">(Reduced from 36m)</span></td>
+                  <td class="p-3 font-bold text-rose-700 bg-rose-50/40">
+                    Taxed at applicable Slab Rate
+                  </td>
+                  <td class="p-3 font-bold text-emerald-700 bg-emerald-50/40">
+                    12.5% without indexation<br><span class="text-[10px] font-normal text-slate-500">(Section 112)</span>
+                  </td>
+                  <td class="p-3 font-semibold text-rose-600">NO Indexation</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <!-- Detailed Rules Breakdown -->
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4 text-xs">
+          <div class="p-4 rounded-2xl bg-slate-50 border border-slate-200 space-y-2">
+            <h3 class="font-bold text-slate-900 text-sm">Category 1: Equity Funds (Sec 111A & 112A)</h3>
+            <ul class="space-y-1.5 text-slate-600 leading-relaxed list-disc pl-4">
+              <li><strong>Holding Period:</strong> 12 months is the dividing line. Up to 12 months is STCG; more than 12 months is LTCG.</li>
+              <li><strong>STCG (Sec 111A):</strong> Tax rate hiked from 15% to <strong>20%</strong> (plus 4% cess and applicable surcharge).</li>
+              <li><strong>LTCG (Sec 112A):</strong> Tax rate hiked from 10% to <strong>12.5%</strong>.</li>
+              <li><strong>Annual Exemption Limit:</strong> Increased from ₹1,00,000 to <strong>₹1,25,000 per financial year</strong>. The 12.5% tax applies only to aggregate net equity capital gains in excess of ₹1.25 Lakhs.</li>
+              <li><strong>Grandfathering Clause:</strong> Capital gains up to <strong>January 31, 2018</strong> remain grandfathered (exempt) using the fair market value formula.</li>
+            </ul>
+          </div>
+
+          <div class="p-4 rounded-2xl bg-slate-50 border border-slate-200 space-y-2">
+            <h3 class="font-bold text-slate-900 text-sm">Category 2: Specified Debt Funds (Sec 50AA)</h3>
+            <ul class="space-y-1.5 text-slate-600 leading-relaxed list-disc pl-4">
+              <li><strong>Applicability:</strong> Funds where domestic equity is &le; 35%, acquired on or after <strong>April 1, 2023</strong>.</li>
+              <li><strong>Deemed Short-Term:</strong> Any gain arising from transfer or redemption is <em>deemed to be short-term capital gains</em>, irrespective of whether the unitholder held the fund for 6 months or 7 years.</li>
+              <li><strong>Tax Rate:</strong> Added to unitholder's total income and taxed at the <strong>applicable marginal slab rate</strong>.</li>
+              <li><strong>Indexation Abolished:</strong> Cost Inflation Index (CII) benefit was eliminated for these funds.</li>
+              <li><strong>Grandfathered Debt Units:</strong> Units acquired <em>before April 1, 2023</em> retain LTCG status if held &gt; 36 months (taxed at 20% with indexation or 12.5% without indexation).</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Worked Numerical Examples 1 & 2 -->
+        <div class="space-y-4 pt-2">
+          <h3 class="font-display font-bold text-base text-slate-900">Step-by-Step Practical Tax Calculations</h3>
+
+          <!-- Example 1 -->
+          <div class="p-5 rounded-2xl bg-emerald-50/70 border border-emerald-200 space-y-3 text-xs">
+            <div class="flex items-center justify-between">
+              <span class="font-bold text-emerald-900 uppercase tracking-wider">Numerical Example 1: Equity Fund Capital Gains Computation</span>
+              <span class="px-2 py-0.5 rounded bg-emerald-200 text-emerald-900 font-bold text-[10px]">Post-Budget 2024 Rules</span>
+            </div>
+            <p class="text-slate-700">
+              An investor buys 10,000 units of an Equity Diversified Fund on <strong>10-Aug-2023</strong> at NAV of ₹50 (Total Cost = ₹5,00,000).<br>
+              &bull; <strong>Sale 1 (15-Jun-2024):</strong> Redeems 5,000 units at NAV ₹65 (Holding: ~10 months &rarr; STCG).<br>
+              &bull; <strong>Sale 2 (20-Oct-2024):</strong> Redeems remaining 5,000 units at NAV ₹85 (Holding: ~14 months &rarr; LTCG).
+            </p>
+            
+            <div class="bg-white p-4 rounded-xl border border-emerald-200/80 space-y-2">
+              <div class="font-semibold text-slate-800">Step 1: Compute STCG (Sale 1 - Holding &le; 12 months):</div>
+              <p class="text-slate-600 font-mono pl-3">
+                Proceeds: 5,000 &times; ₹65 = ₹3,25,000 | Cost: 5,000 &times; ₹50 = ₹2,50,000<br>
+                Net STCG = ₹3,25,000 - ₹2,50,000 = <strong>₹75,000</strong><br>
+                Tax under Section 111A @ 20% = ₹75,000 &times; 20% = <strong>₹15,000</strong>
+              </p>
+
+              <div class="font-semibold text-slate-800 pt-1">Step 2: Compute LTCG (Sale 2 - Holding &gt; 12 months):</div>
+              <p class="text-slate-600 font-mono pl-3">
+                Proceeds: 5,000 &times; ₹85 = ₹4,25,000 | Cost: 5,000 &times; ₹50 = ₹2,50,000<br>
+                Gross LTCG = ₹4,25,000 - ₹2,50,000 = <strong>₹1,75,000</strong><br>
+                Less: Annual Exemption u/s 112A = <strong>₹1,25,000</strong><br>
+                Taxable LTCG = ₹1,75,000 - ₹1,25,000 = <strong>₹50,000</strong><br>
+                Tax under Section 112A @ 12.5% = ₹50,000 &times; 12.5% = <strong>₹6,250</strong>
+              </p>
+
+              <div class="font-semibold text-slate-800 pt-1">Step 3: Total Base Tax Liability:</div>
+              <p class="text-slate-700 font-mono pl-3">
+                Total Base Tax = ₹15,000 (STCG) + ₹6,250 (LTCG) = <strong>₹21,250</strong> (plus 4% Health & Education Cess = ₹850 &rarr; Total ₹22,100).
+              </p>
+            </div>
+          </div>
+
+          <!-- Example 2 -->
+          <div class="p-5 rounded-2xl bg-amber-50/70 border border-amber-200 space-y-3 text-xs">
+            <div class="flex items-center justify-between">
+              <span class="font-bold text-amber-900 uppercase tracking-wider">Numerical Example 2: Debt Fund (Sec 50AA) vs Equity Fund Tax Disparity</span>
+              <span class="px-2 py-0.5 rounded bg-amber-200 text-amber-900 font-bold text-[10px]">High Slab Impact</span>
+            </div>
+            <p class="text-slate-700">
+              Investor "Ramesh" is in the <strong>30% tax bracket</strong>. He holds two investments for <strong>3 years</strong>, each generating a net capital gain of <strong>₹2,00,000</strong> upon redemption in FY 2024-25.
+            </p>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+              <div class="p-3 bg-white rounded-xl border border-amber-200 space-y-1">
+                <span class="font-bold text-blue-900">Case A: Equity Fund (&gt;12m)</span>
+                <p class="text-slate-600 font-mono">
+                  Gain: ₹2,00,000<br>
+                  Exemption: ₹1,25,000<br>
+                  Taxable Gain: ₹75,000<br>
+                  Tax @ 12.5%: <strong>₹9,375</strong><br>
+                  Add Cess (4%): ₹375<br>
+                  <strong class="text-blue-700">Total Tax: ₹9,750</strong> (Effective Rate: 4.88%)
+                </p>
+              </div>
+
+              <div class="p-3 bg-white rounded-xl border border-amber-200 space-y-1">
+                <span class="font-bold text-rose-900">Case B: Specified Debt Fund (Sec 50AA)</span>
+                <p class="text-slate-600 font-mono">
+                  Gain: ₹2,00,000<br>
+                  Exemption: ₹0 (No exemption)<br>
+                  Taxable Gain: ₹2,00,000<br>
+                  Tax @ 30% Slab: <strong>₹60,000</strong><br>
+                  Add Cess (4%): ₹2,400<br>
+                  <strong class="text-rose-700">Total Tax: ₹62,400</strong> (Effective Rate: 31.2%)
+                </p>
+              </div>
+            </div>
+            <p class="text-[11px] text-amber-900 font-medium">
+              Takeaway for Distributors: Due to Section 50AA, high-tax-bracket investors face significantly higher tax liability in debt funds compared to equity funds for identical capital gains.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Section 8.3 -->
+      <section id="section-3" class="bg-white rounded-3xl p-6 sm:p-8 border border-amber-200 shadow-sm space-y-5">
+        <div class="flex items-center justify-between">
+          <div class="flex items-center gap-2 text-xs font-bold text-amber-700 uppercase tracking-wider">
+            <span class="w-2 h-2 rounded-full bg-amber-500"></span> Section 8.3 &bull; Super High Exam Yield ⭐
+          </div>
+          <span class="text-xs px-2.5 py-1 rounded-full bg-amber-100 text-amber-800 font-bold">Dividend & TDS Norms</span>
+        </div>
+
+        <h2 class="font-display font-bold text-xl sm:text-2xl text-slate-900">Taxation of IDCW (Dividends) & TDS under Section 194K</h2>
+        
+        <p class="text-sm text-slate-600 leading-relaxed">
+          Income Distribution cum Capital Withdrawal (IDCW) represents dividend payouts declared by mutual fund schemes from distributable reserves. Since the abolition of scheme-level DDT, IDCW taxation is entirely transferred to the investor's tax computation.
+        </p>
+
+        <!-- Tax Treatment Grid -->
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4 text-xs">
+          <div class="p-4 rounded-2xl bg-slate-50 border border-slate-200 space-y-2">
+            <h3 class="font-bold text-slate-900 text-sm">Taxability in Hands of Unitholder</h3>
+            <p class="text-slate-600 leading-relaxed">
+              All IDCW payouts (whether from equity, debt, or hybrid schemes) are taxed under the head <strong>"Income from Other Sources"</strong> at the investor's <strong>applicable marginal income tax slab rate</strong>.
+            </p>
+            <div class="p-3 bg-blue-50/80 rounded-xl border border-blue-200 text-blue-900 font-semibold">
+              <span class="font-bold">Expense Deduction (Section 57):</span> Only interest expense incurred for borrowing money to invest in units is deductible, capped at a maximum of <strong>20% of gross dividend income</strong>. No other expense (advisory, depository charges) is deductible.
+            </div>
+          </div>
+
+          <div class="p-4 rounded-2xl bg-slate-50 border border-slate-200 space-y-2">
+            <h3 class="font-bold text-slate-900 text-sm">TDS Architecture under Section 194K</h3>
+            <p class="text-slate-600 leading-relaxed">
+              When an AMC pays or credits IDCW to a resident unitholder, it must withhold Tax Deducted at Source (TDS) under Section 194K:
+            </p>
+            <div class="p-3 bg-amber-50 rounded-xl border border-amber-200 font-bold text-amber-900 text-center">
+              10% TDS if IDCW exceeds ₹5,000 per financial year per AMC
+            </div>
+            <ul class="space-y-1 text-[11px] text-slate-600 list-disc pl-4">
+              <li><strong>Section 206AA:</strong> If PAN is not provided (or is invalid/inoperative due to non-linking with Aadhaar), TDS is deducted at <strong>20%</strong>.</li>
+              <li><strong>Form 15G / 15H:</strong> Resident investors whose estimated total income is below the taxable exemption limit can submit Form 15G (aged &lt;60) or Form 15H (senior citizens aged &ge;60) to receive IDCW without TDS.</li>
+              <li><strong>NRI Investors:</strong> Governed by <strong>Section 195</strong>. TDS is deducted at <strong>20%</strong> (plus applicable surcharge & 4% cess). NRIs can claim Double Taxation Avoidance Agreement (DTAA) treaty rates by providing a Tax Residency Certificate (TRC) and Form 10F.</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- IDCW vs Growth Comparison Matrix -->
+        <div class="space-y-2 pt-2">
+          <h3 class="font-display font-bold text-base text-slate-900">Why Growth Option is Financially Superior to IDCW</h3>
+          <p class="text-xs text-slate-600">
+            Exam questions frequently test the comparative tax advantages of the Growth Option over the IDCW Option:
+          </p>
+          <div class="overflow-x-auto rounded-2xl border border-slate-200">
+            <table class="min-w-full text-xs text-left">
+              <thead class="bg-slate-100 text-slate-700 font-bold uppercase tracking-wider">
+                <tr>
+                  <th class="p-3">Parameter</th>
+                  <th class="p-3 text-emerald-800 bg-emerald-50/50">Growth Option</th>
+                  <th class="p-3 text-amber-800 bg-amber-50/50">IDCW (Payout / Reinvestment)</th>
+                </tr>
+              </thead>
+              <tbody class="divide-y divide-slate-200">
+                <tr class="hover:bg-slate-50">
+                  <td class="p-3 font-semibold">Tax Incidence Timing</td>
+                  <td class="p-3 font-bold text-emerald-700">Deferred until actual redemption</td>
+                  <td class="p-3 font-bold text-rose-700">Immediate every time IDCW is paid</td>
+                </tr>
+                <tr class="hover:bg-slate-50">
+                  <td class="p-3 font-semibold">Applicable Tax Rate (Equity)</td>
+                  <td class="p-3 text-slate-700">12.5% LTCG (&gt;12m) or 20% STCG (&le;12m)</td>
+                  <td class="p-3 text-slate-700">Full Marginal Slab Rate (up to 30% + surcharge + cess)</td>
+                </tr>
+                <tr class="hover:bg-slate-50">
+                  <td class="p-3 font-semibold">TDS Deductions</td>
+                  <td class="p-3 text-emerald-700 font-semibold">Zero TDS for resident individuals</td>
+                  <td class="p-3 text-rose-700 font-semibold">10% TDS u/s 194K if IDCW &gt; ₹5,000 / FY</td>
+                </tr>
+                <tr class="hover:bg-slate-50">
+                  <td class="p-3 font-semibold">Compounding Efficiency</td>
+                  <td class="p-3 text-slate-700">100% of profits stay invested to compound</td>
+                  <td class="p-3 text-slate-700">Broken by annual tax drag and TDS deductions</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </section>
+
+      <!-- Section 8.4 -->
+      <section id="section-4" class="bg-white rounded-3xl p-6 sm:p-8 border border-slate-200/90 shadow-sm space-y-5">
+        <div class="flex items-center justify-between">
+          <div class="flex items-center gap-2 text-xs font-bold text-slate-500 uppercase tracking-wider">
+            <span class="w-2 h-2 rounded-full bg-slate-400"></span> Section 8.4 &bull; Fast-Track Refresher ⚡
+          </div>
+          <span class="text-xs px-2.5 py-1 rounded-full bg-slate-100 text-slate-600 font-semibold">STT, Stamp Duty & 80C</span>
+        </div>
+
+        <h2 class="font-display font-bold text-xl sm:text-2xl text-slate-900">Securities Transaction Tax (STT), Stamp Duty & ELSS (Sec 80C)</h2>
+        
+        <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 text-xs">
+          <!-- STT Card -->
+          <div class="p-4 rounded-2xl bg-slate-50 border border-slate-200 space-y-2">
+            <div class="flex items-center gap-1.5 font-bold text-slate-900 text-sm">
+              <i data-lucide="receipt" class="w-4 h-4 text-blue-600"></i>
+              <span>Securities Transaction Tax</span>
+            </div>
+            <p class="text-slate-600 leading-relaxed">
+              Levied <strong>strictly on equity-oriented mutual funds</strong>.
+            </p>
+            <div class="p-2.5 rounded-xl bg-white border border-slate-200 space-y-1 font-mono text-[11px]">
+              <div>&bull; <strong>Purchase from AMC:</strong> NIL STT</div>
+              <div>&bull; <strong>Redemption / Repurchase:</strong> <strong>0.001%</strong> payable by seller</div>
+              <div>&bull; <strong>ETF on Stock Exchange:</strong> 0.001% on sale (delivery)</div>
+              <div>&bull; <strong>Debt & Other Funds:</strong> Zero STT</div>
+            </div>
+          </div>
+
+          <!-- Stamp Duty Card -->
+          <div class="p-4 rounded-2xl bg-slate-50 border border-slate-200 space-y-2">
+            <div class="flex items-center gap-1.5 font-bold text-slate-900 text-sm">
+              <i data-lucide="stamp" class="w-4 h-4 text-purple-600"></i>
+              <span>Indian Stamp Duty</span>
+            </div>
+            <p class="text-slate-600 leading-relaxed">
+              Uniform pan-India stamp duty of <strong>0.005%</strong> governed by Indian Stamp Act, 1899.
+            </p>
+            <div class="p-2.5 rounded-xl bg-white border border-slate-200 space-y-1 font-mono text-[11px]">
+              <div>&bull; <strong>Charged On:</strong> All unit issuances (Lumpsum, SIP, STP-in, Reinvested IDCW)</div>
+              <div>&bull; <strong>Deducted:</strong> Upfront from investment before allotment</div>
+              <div>&bull; <strong>Redemption:</strong> NIL Stamp Duty</div>
+            </div>
+          </div>
+
+          <!-- ELSS Card -->
+          <div class="p-4 rounded-2xl bg-slate-50 border border-slate-200 space-y-2">
+            <div class="flex items-center gap-1.5 font-bold text-slate-900 text-sm">
+              <i data-lucide="lock" class="w-4 h-4 text-emerald-600"></i>
+              <span>ELSS under Section 80C</span>
+            </div>
+            <p class="text-slate-600 leading-relaxed">
+              Tax deduction up to <strong>₹1,50,000 per financial year</strong> under Section 80C.
+            </p>
+            <div class="p-2.5 rounded-xl bg-white border border-slate-200 space-y-1 text-[11px]">
+              <div>&bull; <strong>Lock-in Period:</strong> Mandatory <strong>3 years</strong> from allotment</div>
+              <div>&bull; <strong>SIP Lock-in Rule:</strong> Each SIP instalment has its <em>own distinct 3-year lock-in</em></div>
+              <div>&bull; <strong>Tax Regime:</strong> Available <em>ONLY</em> under Old Tax Regime; NOT under New Regime (Sec 115BAC)</div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Section 8.5 -->
+      <section id="section-5" class="bg-white rounded-3xl p-6 sm:p-8 border border-amber-200 shadow-sm space-y-6">
+        <div class="flex items-center justify-between">
+          <div class="flex items-center gap-2 text-xs font-bold text-amber-700 uppercase tracking-wider">
+            <span class="w-2 h-2 rounded-full bg-amber-500"></span> Section 8.5 &bull; Super High Exam Yield ⭐
+          </div>
+          <span class="text-xs px-2.5 py-1 rounded-full bg-amber-100 text-amber-800 font-bold">Anti-Avoidance & Set-Off</span>
+        </div>
+
+        <h2 class="font-display font-bold text-xl sm:text-2xl text-slate-900">Bonus Stripping (Sec 94(8)) & Loss Set-Off Framework</h2>
+        
+        <p class="text-sm text-slate-600 leading-relaxed">
+          The Income Tax Act contains strict anti-avoidance provisions to prevent taxpayers from engineering artificial capital losses to offset taxable gains, paired with rigid set-off rules.
+        </p>
+
+        <!-- Bonus Stripping Deep Dive -->
+        <div class="p-5 rounded-2xl bg-rose-50/70 border border-rose-200 space-y-3 text-xs">
+          <div class="flex items-center gap-2 text-rose-950 font-bold text-sm">
+            <i data-lucide="shield-alert" class="w-4 h-4 text-rose-600"></i>
+            <span>Bonus Stripping (Section 94(8)) Rules & Disallowance</span>
+          </div>
+          <p class="text-slate-700 leading-relaxed">
+            Section 94(8) targets taxpayers who buy units cum-bonus to artificially create a capital loss upon post-bonus NAV reduction. Bonus stripping triggers if <strong>ALL THREE</strong> conditions are satisfied:
+          </p>
+
+          <div class="grid grid-cols-1 sm:grid-cols-3 gap-3 font-medium text-slate-800">
+            <div class="p-3 bg-white rounded-xl border border-rose-200 space-y-1">
+              <span class="font-bold text-rose-800">Condition 1: Purchase</span>
+              <p class="text-slate-600 text-[11px]">Investor acquires units within <strong>3 months prior</strong> to the record date of bonus issue.</p>
+            </div>
+            <div class="p-3 bg-white rounded-xl border border-rose-200 space-y-1">
+              <span class="font-bold text-rose-800">Condition 2: Allotment</span>
+              <p class="text-slate-600 text-[11px]">Investor is allotted bonus units without payment on the record date.</p>
+            </div>
+            <div class="p-3 bg-white rounded-xl border border-rose-200 space-y-1">
+              <span class="font-bold text-rose-800">Condition 3: Sale</span>
+              <p class="text-slate-600 text-[11px]">Investor sells or redeems original units within <strong>9 months after</strong> record date while retaining bonus units.</p>
+            </div>
+          </div>
+
+          <div class="p-4 bg-white rounded-xl border border-rose-300 space-y-2">
+            <div class="font-bold text-rose-900">Legal Consequence of Bonus Stripping:</div>
+            <p class="text-slate-700 leading-relaxed">
+              1. The capital loss arising on the sale of the original units is <strong>completely disallowed</strong> and cannot be set off against any capital gains.<br>
+              2. The disallowed loss is <strong>added to the cost of acquisition of the bonus units</strong> retained by the unitholder, adjusting their future capital gains liability.
+            </p>
+          </div>
+        </div>
+
+        <!-- Numerical Example 3: Bonus Stripping Worked Out -->
+        <div class="p-5 rounded-2xl bg-slate-50 border border-slate-200 space-y-3 text-xs">
+          <div class="flex items-center justify-between">
+            <span class="font-bold text-slate-800 uppercase tracking-wider">Numerical Example 3: Step-by-Step Bonus Stripping Mechanics</span>
+            <span class="px-2 py-0.5 rounded bg-slate-200 text-slate-800 font-bold text-[10px]">Exam Scenario</span>
+          </div>
+          <p class="text-slate-700">
+            <strong>Case Facts:</strong><br>
+            &bull; 1-May: Investor buys 1,000 units at NAV ₹100 (Total investment: ₹1,00,000).<br>
+            &bull; 1-Jun: Fund announces 1:1 bonus issue (Record date: 15-Jun &rarr; Bought within 3 months).<br>
+            &bull; 15-Jun: Investor receives 1,000 bonus units at zero cost (Total units = 2,000; NAV adjusts to ₹50).<br>
+            &bull; 1-Aug: Investor sells the original 1,000 units at NAV ₹50 (Sale within 9 months).
+          </p>
+
+          <div class="bg-white p-4 rounded-xl border border-slate-200 space-y-2 font-mono text-slate-700">
+            <div>Proceeds from original 1,000 units = 1,000 &times; ₹50 = ₹50,000</div>
+            <div>Cost of original 1,000 units = 1,000 &times; ₹100 = ₹1,00,000</div>
+            <div>Apparent Short-Term Capital Loss = ₹50,000 - ₹1,00,000 = <strong class="text-rose-600">-₹50,000</strong></div>
+            <div class="text-rose-700 font-bold pt-1">&rarr; Under Section 94(8), this ₹50,000 loss is DISALLOWED for set-off!</div>
+            <div class="text-emerald-700 font-bold">&rarr; Cost of acquisition of the 1,000 bonus units becomes: ₹0 + ₹50,000 = ₹50,000 (i.e. ₹50/unit).</div>
+          </div>
+        </div>
+
+        <!-- Loss Set-off Rules -->
+        <div class="space-y-3 pt-2">
+          <h3 class="font-display font-bold text-base text-slate-900">Capital Loss Set-Off & Carry Forward Rules (Sections 70, 71 & 74)</h3>
+          
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-4 text-xs">
+            <div class="p-4 rounded-2xl bg-blue-50/70 border border-blue-200 space-y-2">
+              <h4 class="font-bold text-blue-900 text-sm">Intra-Head Set-Off (Section 70)</h4>
+              <ul class="space-y-1.5 text-slate-700 list-disc pl-4">
+                <li><strong>Short-Term Capital Loss (STCL):</strong> Can be set off against <em>both</em> Short-Term Capital Gains (STCG) and Long-Term Capital Gains (LTCG).</li>
+                <li><strong>Long-Term Capital Loss (LTCL):</strong> Can <em>ONLY</em> be set off against Long-Term Capital Gains (LTCG). It can <strong>NEVER</strong> be set off against STCG.</li>
+              </ul>
+            </div>
+
+            <div class="p-4 rounded-2xl bg-slate-50 border border-slate-200 space-y-2">
+              <h4 class="font-bold text-slate-900 text-sm">Inter-Head Set-Off & Carry Forward (Sec 71 & 74)</h4>
+              <ul class="space-y-1.5 text-slate-700 list-disc pl-4">
+                <li><strong>Inter-Head Ban (Sec 71):</strong> Capital losses cannot be set off against any other income head (Salary, Business Income, House Property, or Other Sources).</li>
+                <li><strong>8-Year Carry Forward (Sec 74):</strong> Unabsorbed losses can be carried forward for up to <strong>8 consecutive assessment years</strong>.</li>
+                <li><strong>Mandatory ITR Filing:</strong> Return of income must be filed on or before the due date under <strong>Section 139(1)</strong> to carry forward capital losses.</li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Loss Set-off Matrix Table -->
+          <div class="p-4 rounded-2xl bg-white border border-slate-200 space-y-2 text-xs">
+            <span class="font-bold text-slate-800">Set-Off Eligibility Summary Table</span>
+            <div class="overflow-x-auto">
+              <table class="min-w-full text-xs text-left">
+                <thead class="bg-slate-100 text-slate-700 font-bold uppercase">
+                  <tr>
+                    <th class="p-2.5">Nature of Loss</th>
+                    <th class="p-2.5">Set-off against STCG?</th>
+                    <th class="p-2.5">Set-off against LTCG?</th>
+                    <th class="p-2.5">Set-off against Salary/Business?</th>
+                  </tr>
+                </thead>
+                <tbody class="divide-y divide-slate-200">
+                  <tr>
+                    <td class="p-2.5 font-bold text-rose-700">Short-Term Capital Loss (STCL)</td>
+                    <td class="p-2.5 text-emerald-600 font-bold">YES &check;</td>
+                    <td class="p-2.5 text-emerald-600 font-bold">YES &check;</td>
+                    <td class="p-2.5 text-rose-600 font-bold">NO &cross;</td>
+                  </tr>
+                  <tr>
+                    <td class="p-2.5 font-bold text-purple-700">Long-Term Capital Loss (LTCL)</td>
+                    <td class="p-2.5 text-rose-600 font-bold">NO &cross; (Strictly Prohibited)</td>
+                    <td class="p-2.5 text-emerald-600 font-bold">YES &check;</td>
+                    <td class="p-2.5 text-rose-600 font-bold">NO &cross;</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Section 8.6 Interactive Quiz -->
+      <section id="interactive-quiz" class="bg-slate-900 text-white rounded-3xl p-6 sm:p-8 border border-slate-800 shadow-xl space-y-6">
+        <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 border-b border-slate-800 pb-5">
+          <div>
+            <div class="flex items-center gap-2 text-xs font-bold text-blue-400 uppercase tracking-wider mb-1">
+              <i data-lucide="check-circle" class="w-4 h-4"></i> Interactive Exam Assessment
+            </div>
+            <h3 class="font-display font-bold text-xl sm:text-2xl text-white">Chapter 8 Practice Quiz</h3>
+            <p class="text-xs text-slate-400 mt-1">12 Exam-Standard Questions covering Budget 2024 capital gains rates, IDCW TDS, Sec 50AA, bonus stripping, and loss set-off.</p>
+          </div>
+          <div class="flex items-center gap-3">
+            <div class="text-right">
+              <span class="text-xs text-slate-400">Progress</span>
+              <div class="text-sm font-bold text-blue-400"><span id="answered-count">0</span> / 12</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Questions Container -->
+        <div id="quiz-container" class="space-y-6"></div>
+
+        <!-- Action Bar -->
+        <div class="pt-4 border-t border-slate-800 flex flex-col sm:flex-row items-center justify-between gap-4">
+          <button id="submit-quiz-btn" onclick="submitQuiz()" class="w-full sm:w-auto px-6 py-3 rounded-xl bg-blue-600 hover:bg-blue-500 font-bold text-sm shadow-lg shadow-blue-600/30 transition-all flex items-center justify-center gap-2">
+            <span>Submit Quiz & View Results</span>
+            <i data-lucide="arrow-right" class="w-4 h-4"></i>
+          </button>
+          <button id="reset-quiz-btn" onclick="resetQuiz()" class="hidden w-full sm:w-auto px-6 py-3 rounded-xl bg-slate-800 hover:bg-slate-700 text-slate-300 font-bold text-sm transition-all flex items-center justify-center gap-2">
+            <i data-lucide="rotate-ccw" class="w-4 h-4"></i>
+            <span>Retake Quiz</span>
+          </button>
+        </div>
+
+        <!-- Quiz Results -->
+        <div id="quiz-results" class="hidden p-6 rounded-2xl bg-slate-800/80 border border-slate-700 space-y-4">
+          <div class="flex items-center justify-between">
+            <h4 class="font-display font-bold text-lg text-white">Quiz Score Summary</h4>
+            <span id="result-status-badge" class="px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider"></span>
+          </div>
+          <div class="flex items-baseline gap-3">
+            <span id="score-display" class="font-display font-extrabold text-4xl text-blue-400"></span>
+            <span id="percentage-display" class="text-sm text-slate-400 font-medium"></span>
+          </div>
+          <p id="result-summary-text" class="text-xs sm:text-sm text-slate-300"></p>
+        </div>
+      </section>
+
+      <!-- Navigation Footer -->
+      <footer class="pt-6 border-t border-slate-200 flex items-center justify-between">
+        <a href="module1-ch7.html" class="flex items-center gap-2 px-4 py-2.5 rounded-xl border border-slate-200 bg-white hover:bg-slate-50 text-slate-700 font-medium text-xs transition-colors">
+          <i data-lucide="arrow-left" class="w-4 h-4"></i>
+          <span>Prev: Chapter 7 (NAV & TER)</span>
+        </a>
+        <a href="module1-ch9.html" class="flex items-center gap-2 px-4 py-2.5 rounded-xl bg-blue-600 hover:bg-blue-700 text-white font-semibold text-xs shadow-sm transition-colors">
+          <span>Next: Chapter 9 (Investor Services)</span>
+          <i data-lucide="arrow-right" class="w-4 h-4"></i>
+        </a>
+      </footer>
+
+    </div>
+  </div>
+
+  <script>
+    const questionsData = [
+      {
+        id: 1,
+        question: "Under Section 10(23D) of the Income Tax Act, 1961, what is the tax status of income earned by a SEBI-registered mutual fund?",
+        options: [
+          { key: "a", text: "Taxed at a concessional corporate rate of 15%" },
+          { key: "b", text: "100% exempt from income tax on all capital gains, dividends, and interest" },
+          { key: "c", text: "Subject to Minimum Alternate Tax (MAT) of 9%" },
+          { key: "d", text: "Exempt only on capital gains, while interest income is taxed at 30%" }
+        ],
+        correct: "b",
+        explanation: "Section 10(23D) provides a blanket pass-through exemption: all earnings of a SEBI-registered mutual fund (capital gains, interest, dividends) are 100% exempt from income tax at the fund level."
+      },
+      {
+        id: 2,
+        question: "Under the Finance (No. 2) Act, 2024, what is the rate of tax and annual exemption limit on Long-Term Capital Gains (LTCG) from equity-oriented mutual funds under Section 112A?",
+        options: [
+          { key: "a", text: "10% on gains exceeding ₹1,00,000 per financial year" },
+          { key: "b", text: "12.5% on gains exceeding ₹1,25,000 per financial year (without indexation)" },
+          { key: "c", text: "15% on gains exceeding ₹2,00,000 per financial year" },
+          { key: "d", text: "20% with Cost Inflation Indexation on all gains" }
+        ],
+        correct: "b",
+        explanation: "Finance (No. 2) Act, 2024 revised the Section 112A equity LTCG rate to 12.5% (without indexation) and increased the annual exemption limit from ₹1,00,000 to ₹1,25,000 per financial year w.e.f. July 23, 2024."
+      },
+      {
+        id: 3,
+        question: "What is the revised tax rate on Short-Term Capital Gains (STCG) from equity-oriented mutual funds under Section 111A as enacted in Budget 2024?",
+        options: [
+          { key: "a", text: "15%" },
+          { key: "b", text: "20%" },
+          { key: "c", text: "12.5%" },
+          { key: "d", text: "Taxed at the investor's marginal income tax slab rate" }
+        ],
+        correct: "b",
+        explanation: "The tax rate on Short-Term Capital Gains (STCG) on equity-oriented units (held for 12 months or less) was raised from 15% to 20% under Section 111A by the Finance (No. 2) Act, 2024."
+      },
+      {
+        id: 4,
+        question: "How are capital gains from 'Specified Mutual Funds' (holding &le; 35% in domestic equity) acquired on or after April 1, 2023 taxed under Section 50AA?",
+        options: [
+          { key: "a", text: "At 12.5% without indexation if held for more than 24 months" },
+          { key: "b", text: "At 20% with indexation benefit if held for more than 36 months" },
+          { key: "c", text: "Deemed to be short-term capital gains and taxed at the investor's applicable slab rate, regardless of holding period" },
+          { key: "d", text: "Completely tax-free up to ₹1,25,000 per financial year" }
+        ],
+        correct: "c",
+        explanation: "Under Section 50AA, capital gains from Specified Mutual Funds (debt funds holding &le;35% in domestic equity acquired on/after 1-Apr-2023) are deemed to be short-term capital gains and taxed at the investor's marginal slab rate without any indexation."
+      },
+      {
+        id: 5,
+        question: "For non-equity mutual funds investing between 35% and 65% in domestic equity (or Gold/Silver funds), what is the LTCG holding period threshold and tax rate post-Budget 2024?",
+        options: [
+          { key: "a", text: "> 12 months; taxed at 20%" },
+          { key: "b", text: "> 24 months; taxed at 12.5% without indexation" },
+          { key: "c", text: "> 36 months; taxed at 20% with indexation" },
+          { key: "d", text: "> 36 months; taxed at applicable slab rate" }
+        ],
+        correct: "b",
+        explanation: "Under Budget 2024, the holding period threshold for other non-equity funds (35%-65% equity, gold/silver ETFs/funds) was reduced to more than 24 months for LTCG, and the LTCG tax rate is 12.5% without indexation."
+      },
+      {
+        id: 6,
+        question: "What is the threshold limit and rate of TDS under Section 194K on IDCW (dividend) payouts made by an AMC to a resident individual unitholder in a financial year?",
+        options: [
+          { key: "a", text: "5% TDS on IDCW exceeding ₹2,500" },
+          { key: "b", text: "10% TDS on IDCW exceeding ₹5,000 per financial year" },
+          { key: "c", text: "20% TDS on IDCW exceeding ₹10,000 per financial year" },
+          { key: "d", text: "10% TDS on all IDCW amounts with no threshold" }
+        ],
+        correct: "b",
+        explanation: "Under Section 194K, an AMC must deduct 10% TDS on IDCW (dividend) paid or credited to a resident unitholder if the aggregate payout exceeds ₹5,000 in a financial year. If PAN is missing or inoperative, 20% TDS applies under Section 206AA."
+      },
+      {
+        id: 7,
+        question: "What rate of Securities Transaction Tax (STT) is payable by an investor upon the redemption or repurchase of equity-oriented mutual fund units?",
+        options: [
+          { key: "a", text: "0.1% on the redemption value" },
+          { key: "b", text: "0.001% payable by the seller on redemption" },
+          { key: "c", text: "0.025% payable by both buyer and seller" },
+          { key: "d", text: "NIL, as STT applies only to direct equity shares" }
+        ],
+        correct: "b",
+        explanation: "STT on the redemption of units of equity-oriented mutual funds is 0.001% (payable by the selling unitholder and deducted by the AMC). Purchase of units from the AMC attracts NIL STT."
+      },
+      {
+        id: 8,
+        question: "Under the Indian Stamp Act, 1899, what rate of stamp duty is levied upfront on the issuance and allotment of mutual fund units across India?",
+        options: [
+          { key: "a", text: "0.005% on the gross investment amount" },
+          { key: "b", text: "0.015% on the gross investment amount" },
+          { key: "c", text: "0.001% on the redemption proceeds" },
+          { key: "d", text: "0.05% levied only on debt schemes" }
+        ],
+        correct: "a",
+        explanation: "A uniform stamp duty rate of 0.005% is deducted upfront on all purchase transactions (lumpsum, SIP instalments, STP-in, and dividend reinvestment) across all Indian states."
+      },
+      {
+        id: 9,
+        question: "Which of the following statements regarding tax benefits for Equity Linked Savings Schemes (ELSS) under Section 80C is correct?",
+        options: [
+          { key: "a", text: "Deduction up to ₹1.5 Lakhs is available under both Old and New Tax Regimes with a 1-year lock-in" },
+          { key: "b", text: "Deduction up to ₹1.5 Lakhs is available only under the Old Tax Regime, with a mandatory 3-year lock-in per instalment" },
+          { key: "c", text: "ELSS has a 5-year lock-in period similar to tax-saving bank fixed deposits" },
+          { key: "d", text: "Redemptions from ELSS after 3 years are completely exempt from LTCG tax" }
+        ],
+        correct: "b",
+        explanation: "ELSS qualifies for deduction under Section 80C up to ₹1,50,000 per financial year strictly under the Old Tax Regime. It has a mandatory 3-year lock-in period from unit allotment (each SIP instalment has its own 3-year lock-in). LTCG on redemption is taxable under Section 112A."
+      },
+      {
+        id: 10,
+        question: "Under the Bonus Stripping provisions of Section 94(8), what are the statutory time periods before and after the record date?",
+        options: [
+          { key: "a", text: "Bought within 1 month prior; original units sold within 3 months after" },
+          { key: "b", text: "Bought within 3 months prior; original units sold within 9 months after" },
+          { key: "c", text: "Bought within 6 months prior; original units sold within 12 months after" },
+          { key: "d", text: "Bought within 3 months prior; original units sold within 3 months after" }
+        ],
+        correct: "b",
+        explanation: "Section 94(8) bonus stripping triggers if units are bought within 3 months prior to the record date, bonus units are received, and the original units are sold within 9 months after the record date while retaining bonus units."
+      },
+      {
+        id: 11,
+        question: "According to intra-head set-off rules under Section 70, which of the following statements regarding capital losses is TRUE?",
+        options: [
+          { key: "a", text: "Long-Term Capital Loss (LTCL) can be set off against both STCG and LTCG" },
+          { key: "b", text: "Long-Term Capital Loss (LTCL) can ONLY be set off against Long-Term Capital Gains (LTCG)" },
+          { key: "c", text: "Short-Term Capital Loss (STCL) can only be set off against Short-Term Capital Gains" },
+          { key: "d", text: "Capital losses can be set off against business profits or salary income" }
+        ],
+        correct: "b",
+        explanation: "Under Section 70, Long-Term Capital Loss (LTCL) can strictly and ONLY be set off against Long-Term Capital Gains (LTCG). In contrast, Short-Term Capital Loss (STCL) can be set off against both STCG and LTCG."
+      },
+      {
+        id: 12,
+        question: "An investor redeems equity-oriented mutual fund units in October 2024 and realizes net long-term capital gains of ₹2,75,000. What is the basic tax payable under Section 112A (excluding cess)?",
+        options: [
+          { key: "a", text: "₹34,375" },
+          { key: "b", text: "₹18,750" },
+          { key: "c", text: "₹15,000" },
+          { key: "d", text: "₹27,500" }
+        ],
+        correct: "b",
+        explanation: "Annual exemption under Sec 112A = ₹1,25,000. Taxable LTCG = ₹2,75,000 - ₹1,25,000 = ₹1,50,000. Basic tax at 12.5% = ₹1,50,000 &times; 12.5% = ₹18,750."
+      }
+    ];
+
+    let userAnswers = {};
+
+    function renderQuiz() {
+      const container = document.getElementById("quiz-container");
+      container.innerHTML = "";
+      questionsData.forEach((q, idx) => {
+        const qDiv = document.createElement("div");
+        qDiv.className = "p-5 rounded-2xl bg-white/5 border border-white/10 space-y-3";
+        
+        let optionsHtml = "";
+        q.options.forEach(opt => {
+          optionsHtml += `
+            <label id="label-${q.id}-${opt.key}" onclick="selectOption(${q.id}, '${opt.key}')" class="flex items-center gap-3 p-3 rounded-xl bg-white/5 hover:bg-white/10 border border-white/5 cursor-pointer text-xs sm:text-sm transition-all">
+              <input type="radio" name="q-${q.id}" value="${opt.key}" class="hidden" />
+              <div class="w-6 h-6 rounded-full border border-slate-500 flex items-center justify-center font-bold text-xs shrink-0">${opt.key.toUpperCase()}</div>
+              <span class="text-slate-300">${opt.text}</span>
+            </label>
+          `;
+        });
+
+        qDiv.innerHTML = `
+          <div class="flex items-center justify-between">
+            <span class="text-xs font-bold text-blue-400">Question ${idx + 1} of ${questionsData.length}</span>
+            <span id="badge-${q.id}" class="text-xs px-2 py-0.5 rounded-full bg-slate-800 text-slate-400">Unanswered</span>
+          </div>
+          <h4 class="font-display font-semibold text-sm sm:text-base text-white">${q.question}</h4>
+          <div class="space-y-2 mt-3">${optionsHtml}</div>
+          <div id="explanation-${q.id}" class="hidden p-4 rounded-xl text-xs sm:text-sm mt-3 space-y-1"></div>
+        `;
+        container.appendChild(qDiv);
+      });
+      lucide.createIcons();
+    }
+
+    function selectOption(qId, key) {
+      userAnswers[qId] = key;
+      document.getElementById("answered-count").innerText = Object.keys(userAnswers).length;
+      
+      const badge = document.getElementById(`badge-${qId}`);
+      if (badge) {
+        badge.innerText = "Answered";
+        badge.className = "text-xs px-2 py-0.5 rounded-full bg-blue-500/20 text-blue-300 font-medium";
+      }
+
+      const q = questionsData.find(item => item.id === qId);
+      q.options.forEach(opt => {
+        const lbl = document.getElementById(`label-${qId}-${opt.key}`);
+        if (opt.key === key) {
+          lbl.className = "flex items-center gap-3 p-3 rounded-xl bg-blue-600/30 border border-blue-400/50 cursor-pointer text-xs sm:text-sm transition-all";
+        } else {
+          lbl.className = "flex items-center gap-3 p-3 rounded-xl bg-white/5 hover:bg-white/10 border border-white/5 cursor-pointer text-xs sm:text-sm transition-all";
+        }
+      });
+    }
+
+    function submitQuiz() {
+      let score = 0;
+      questionsData.forEach(q => {
+        const selected = userAnswers[q.id];
+        const isCorrect = selected === q.correct;
+        if (isCorrect) score++;
+
+        const explanationDiv = document.getElementById(`explanation-${q.id}`);
+        explanationDiv.classList.remove("hidden");
+
+        if (isCorrect) {
+          explanationDiv.className = "p-4 rounded-xl text-xs sm:text-sm mt-3 bg-emerald-950/60 border border-emerald-600 text-emerald-200";
+          explanationDiv.innerHTML = `<div class="font-bold text-emerald-400 flex items-center gap-1.5"><i data-lucide="check" class="w-4 h-4"></i> Correct!</div><p class="mt-1">${q.explanation}</p>`;
+        } else {
+          explanationDiv.className = "p-4 rounded-xl text-xs sm:text-sm mt-3 bg-rose-950/60 border border-rose-600 text-rose-200";
+          explanationDiv.innerHTML = `<div class="font-bold text-rose-400 flex items-center gap-1.5"><i data-lucide="x" class="w-4 h-4"></i> Incorrect (Correct Answer: ${q.correct.toUpperCase()})</div><p class="mt-1">${q.explanation}</p>`;
+        }
+      });
+
+      const percentage = Math.round((score / questionsData.length) * 100);
+      const passed = percentage >= 60;
+      
+      const resultsDiv = document.getElementById("quiz-results");
+      resultsDiv.classList.remove("hidden");
+
+      const statusBadge = document.getElementById("result-status-badge");
+      statusBadge.innerText = passed ? "Status: Passed (60%+ Benchmark)" : "Status: Needs Revision";
+      statusBadge.className = passed ? "px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider bg-emerald-500 text-emerald-950" : "px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider bg-amber-500 text-amber-950";
+
+      document.getElementById("score-display").innerText = `${score} / ${questionsData.length}`;
+      document.getElementById("percentage-display").innerText = `${percentage}% Score (Passing criteria: 60%)`;
+
+      document.getElementById("result-summary-text").innerText = passed
+        ? `Excellent! You scored ${percentage}%, mastering the latest Budget 2024 tax rules, Section 50AA, IDCW TDS thresholds, and anti-avoidance provisions.`
+        : `You scored ${percentage}%. Re-read Section 8.2 on Budget 2024 rates (20% STCG, 12.5% LTCG above ₹1.25L), Section 50AA debt rules, Section 194K TDS, and Section 94(8) bonus stripping.`;
+
+      document.getElementById("submit-quiz-btn").classList.add("hidden");
+      document.getElementById("reset-quiz-btn").classList.remove("hidden");
+
+      resultsDiv.scrollIntoView({ behavior: 'smooth' });
+      lucide.createIcons();
+    }
+
+    function resetQuiz() {
+      userAnswers = {};
+      document.getElementById("answered-count").innerText = "0";
+      document.getElementById("quiz-results").classList.add("hidden");
+      document.getElementById("submit-quiz-btn").classList.remove("hidden");
+      document.getElementById("reset-quiz-btn").classList.add("hidden");
+      renderQuiz();
+      document.getElementById("interactive-quiz").scrollIntoView({ behavior: 'smooth' });
+    }
+
+    renderQuiz();
+    lucide.createIcons();
+  </script>
+</body>
+</html>

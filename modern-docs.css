@@ -1,0 +1,3542 @@
+/* ==========================================================================
+   NISM Series V-D: macOS Design System & Apple Spring Animation Engine
+   Featuring:
+   - Full Dark & Light Mode Engine with macOS Graphite / Sonoma Palette
+   - Zero Left Strips (Symmetrical macOS Squircles & Uniform Highlight Pills)
+   - Liquid Glassmorphism (Vibrancy, Frosting & Ambient Specular Glow)
+   - Apple Spring Physics & Magnification Dock
+   - macOS Spotlight Search (⌘K / Ctrl+K)
+   - macOS Window Chrome with Interactive Traffic Lights
+   - Independent Sidebar Scrolling Architecture
+   - Seamless Zoom Scaling (75% - 175%)
+   ========================================================================== */
+
+/* 1. Design Tokens: Light & Dark Palettes */
+:root {
+  --macos-font: -apple-system, BlinkMacSystemFont, "SF Pro Display", "SF Pro Text", "Plus Jakarta Sans", system-ui, sans-serif;
+  --macos-spring: cubic-bezier(0.16, 1, 0.3, 1);
+  --macos-spring-bounce: cubic-bezier(0.34, 1.56, 0.64, 1);
+  --macos-ease: cubic-bezier(0.25, 1, 0.5, 1);
+  
+  /* Light Mode Colors */
+  --macos-glass-bg: rgba(255, 255, 255, 0.82);
+  --macos-glass-border: rgba(255, 255, 255, 0.7);
+  --macos-border-subtle: #e2e8f0;
+  --macos-shadow-ambient: 0 1px 3px rgba(0, 0, 0, 0.04), 0 4px 16px -2px rgba(15, 23, 42, 0.04);
+  --macos-shadow-elevated: 0 14px 34px -8px rgba(15, 23, 42, 0.09), 0 2px 6px -1px rgba(15, 23, 42, 0.04);
+  --macos-radius-squircle: 18px;
+  --macos-radius-pill: 9999px;
+  --macos-bg-canvas: #f1f5f9;
+  --macos-text-primary: #0f172a;
+  --macos-text-secondary: #334155;
+  --macos-card-bg: #ffffff;
+}
+
+html.dark {
+  /* Dark Mode Colors (macOS Dark Graphite) */
+  --macos-glass-bg: rgba(15, 23, 42, 0.82);
+  --macos-glass-border: rgba(255, 255, 255, 0.12);
+  --macos-border-subtle: rgba(51, 65, 85, 0.7);
+  --macos-shadow-ambient: 0 2px 8px rgba(0, 0, 0, 0.4), 0 1px 2px rgba(0, 0, 0, 0.3);
+  --macos-shadow-elevated: 0 20px 40px -12px rgba(0, 0, 0, 0.7), 0 2px 8px rgba(0, 0, 0, 0.4);
+  --macos-bg-canvas: #0b0f19;
+  --macos-text-primary: #f8fafc;
+  --macos-text-secondary: #94a3b8;
+  --macos-card-bg: #131b2e;
+  color-scheme: dark;
+}
+
+/* 2. Global Typography & Canvas */
+html {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+  scroll-behavior: smooth;
+  font-family: var(--macos-font);
+}
+
+body {
+  font-family: var(--macos-font);
+  color: var(--macos-text-primary);
+  background-color: var(--macos-bg-canvas) !important;
+  overflow-x: hidden;
+  line-height: 1.6;
+  letter-spacing: -0.01em;
+  transition: background-color 0.25s ease, color 0.2s ease;
+}
+
+/* Light mode body */
+html:not(.dark) body {
+  background-color: #f1f5f9 !important;
+  color: #0f172a !important;
+}
+
+/* Dark mode body */
+html.dark body {
+  background-color: #0b0f19 !important;
+  color: #f1f5f9 !important;
+}
+
+/* 3. Fluid Container Scaling (Seamless zoom from 75% to 175%) */
+.max-w-7xl {
+  max-width: 92rem !important; /* 1472px fluid expansion */
+  width: 100% !important;
+  transition: max-width 0.25s var(--macos-spring);
+}
+
+@media (min-width: 1536px) {
+  .max-w-7xl {
+    max-width: 98rem !important;
+  }
+}
+
+/* 4. macOS Vibrancy & Liquid Glassmorphism */
+header.sticky {
+  background: rgba(255, 255, 255, 0.78) !important;
+  backdrop-filter: blur(24px) saturate(190%) !important;
+  -webkit-backdrop-filter: blur(24px) saturate(190%) !important;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.06) !important;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.02) !important;
+  transition: background 0.25s ease, border-color 0.25s ease !important;
+}
+
+html.dark header.sticky {
+  background: rgba(15, 23, 42, 0.82) !important;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08) !important;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4) !important;
+}
+
+.macos-glass {
+  background: var(--macos-glass-bg) !important;
+  backdrop-filter: blur(20px) saturate(180%) !important;
+  -webkit-backdrop-filter: blur(20px) saturate(180%) !important;
+  border: 1px solid var(--macos-glass-border) !important;
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.8), var(--macos-shadow-ambient) !important;
+}
+
+html.dark .macos-glass {
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.1), var(--macos-shadow-ambient) !important;
+}
+
+/* 5. Independent Sidebar Scroll Architecture */
+aside.nism-docs-sidebar,
+aside.lg\:col-span-3,
+aside {
+  position: -webkit-sticky !important;
+  position: sticky !important;
+  top: 4.5rem !important;
+  height: calc(100vh - 5.25rem) !important;
+  max-height: calc(100vh - 5.25rem) !important;
+  align-self: start !important;
+  z-index: 30 !important;
+  overflow: visible !important;
+}
+
+aside.nism-docs-sidebar > div.sticky,
+aside > div.sticky,
+.nism-sidebar-sticky {
+  position: relative !important;
+  top: 0 !important;
+  height: 100% !important;
+  max-height: calc(100vh - 5.25rem) !important;
+  overflow-y: auto !important;
+  overscroll-behavior: contain !important;
+  -webkit-overflow-scrolling: touch !important;
+  scrollbar-width: thin !important;
+  scrollbar-color: rgba(148, 163, 184, 0.4) transparent !important;
+  padding-bottom: 3.5rem !important;
+  padding-right: 4px !important;
+}
+
+/* macOS Minimalist Scrollbars */
+aside > div.sticky::-webkit-scrollbar,
+.nism-sidebar-sticky::-webkit-scrollbar,
+.nism-custom-scroll::-webkit-scrollbar,
+.overflow-x-auto::-webkit-scrollbar {
+  width: 5px;
+  height: 5px;
+}
+
+aside > div.sticky::-webkit-scrollbar-track,
+.nism-sidebar-sticky::-webkit-scrollbar-track,
+.nism-custom-scroll::-webkit-scrollbar-track,
+.overflow-x-auto::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+aside > div.sticky::-webkit-scrollbar-thumb,
+.nism-sidebar-sticky::-webkit-scrollbar-thumb,
+.nism-custom-scroll::-webkit-scrollbar-thumb,
+.overflow-x-auto::-webkit-scrollbar-thumb {
+  background: rgba(148, 163, 184, 0.35);
+  border-radius: 9999px;
+  transition: background 0.2s ease;
+}
+
+aside > div.sticky::-webkit-scrollbar-thumb:hover,
+.nism-sidebar-sticky::-webkit-scrollbar-thumb:hover,
+.nism-custom-scroll::-webkit-scrollbar-thumb:hover,
+.overflow-x-auto::-webkit-scrollbar-thumb:hover {
+  background: rgba(100, 116, 139, 0.65);
+}
+
+html.dark aside > div.sticky::-webkit-scrollbar-thumb,
+html.dark .nism-sidebar-sticky::-webkit-scrollbar-thumb,
+html.dark .nism-custom-scroll::-webkit-scrollbar-thumb,
+html.dark .overflow-x-auto::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+html.dark aside > div.sticky::-webkit-scrollbar-thumb:hover,
+html.dark .nism-sidebar-sticky::-webkit-scrollbar-thumb:hover,
+html.dark .nism-custom-scroll::-webkit-scrollbar-thumb:hover,
+html.dark .overflow-x-auto::-webkit-scrollbar-thumb:hover {
+  background: rgba(255, 255, 255, 0.4);
+}
+
+/* 6. Responsive Sidebar Reflow on Zoom (Active down to 960px) */
+@media (min-width: 960px) and (max-width: 1023px) {
+  .lg\:grid-cols-12 {
+    display: grid !important;
+    grid-template-columns: 285px minmax(0, 1fr) !important;
+    gap: 1.5rem !important;
+  }
+  aside.hidden.lg\:block {
+    display: block !important;
+    grid-column: 1 !important;
+  }
+  .lg\:col-span-9 {
+    grid-column: 2 !important;
+  }
+  .macos-dock .chapters-btn {
+    display: none !important;
+  }
+}
+
+/* 7. macOS Window Chrome & Traffic Lights */
+.macos-window {
+  border-radius: var(--macos-radius-squircle) !important;
+  border: 1px solid rgba(226, 232, 240, 0.85) !important;
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.8), var(--macos-shadow-ambient) !important;
+  overflow: hidden !important;
+  background: #ffffff !important;
+  transition: transform 0.2s var(--macos-spring), box-shadow 0.2s var(--macos-spring), background-color 0.25s ease, border-color 0.25s ease !important;
+}
+
+html.dark .macos-window {
+  background: #131b2e !important;
+  border-color: rgba(255, 255, 255, 0.12) !important;
+  box-shadow: 0 16px 36px -8px rgba(0, 0, 0, 0.6), inset 0 1px 0 rgba(255, 255, 255, 0.1) !important;
+}
+
+.macos-window-header {
+  height: 38px;
+  padding: 0 14px;
+  background: linear-gradient(180deg, #fbfcfd 0%, #f1f5f9 100%);
+  border-bottom: 1px solid rgba(226, 232, 240, 0.9);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  user-select: none;
+  transition: background 0.25s ease, border-color 0.25s ease;
+}
+
+html.dark .macos-window-header {
+  background: linear-gradient(180deg, #1c263c 0%, #131b2e 100%) !important;
+  border-bottom-color: rgba(255, 255, 255, 0.1) !important;
+}
+
+.macos-traffic-lights {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+}
+
+.macos-traffic-lights .traffic-light {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: transform 0.15s var(--macos-spring);
+}
+
+.macos-traffic-lights .traffic-light.close {
+  background: #ff5f56;
+  border: 1px solid #e0443e;
+}
+
+.macos-traffic-lights .traffic-light.minimize {
+  background: #ffbd2e;
+  border: 1px solid #dea123;
+}
+
+.macos-traffic-lights .traffic-light.maximize {
+  background: #27c93f;
+  border: 1px solid #1aab29;
+}
+
+.macos-traffic-lights .traffic-light::after {
+  content: "";
+  font-size: 8px;
+  font-weight: 900;
+  line-height: 1;
+  opacity: 0;
+  color: rgba(0, 0, 0, 0.6);
+  transition: opacity 0.15s ease;
+}
+
+.macos-traffic-lights:hover .traffic-light.close::after {
+  content: "×";
+  opacity: 1;
+}
+
+.macos-traffic-lights:hover .traffic-light.minimize::after {
+  content: "–";
+  opacity: 1;
+}
+
+.macos-traffic-lights:hover .traffic-light.maximize::after {
+  content: "+";
+  opacity: 1;
+}
+
+.macos-window-title {
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: #475569;
+  letter-spacing: -0.01em;
+  text-align: center;
+}
+
+html.dark .macos-window-title {
+  color: #e2e8f0 !important;
+}
+
+/* 8. Modern Cards with macOS Squircle Styling (Zero Left Strip) */
+section.bg-white,
+div.bg-white.rounded-3xl,
+div.bg-white.rounded-2xl,
+a.group.bg-white.rounded-2xl,
+a.bg-white.rounded-2xl {
+  border-color: rgba(226, 232, 240, 0.95) !important;
+  border-radius: var(--macos-radius-squircle) !important;
+  box-shadow: 0 4px 20px -2px rgba(15, 23, 42, 0.05), 0 1px 3px 0 rgba(0, 0, 0, 0.03) !important;
+  transition: transform 0.22s var(--macos-spring), box-shadow 0.22s var(--macos-spring), border-color 0.2s ease, background-color 0.25s ease !important;
+}
+
+/* Clickable card links lift smoothly on hover */
+a.group.bg-white.rounded-2xl:hover,
+a.bg-white.rounded-2xl:hover,
+a.group.rounded-2xl:hover,
+a.group.rounded-3xl:hover {
+  transform: translateY(-3px);
+  box-shadow: var(--macos-shadow-elevated) !important;
+}
+
+/* Static content sections should NEVER jump on hover */
+section.bg-white:hover,
+div.bg-white.rounded-3xl:hover,
+div.bg-white.rounded-2xl:hover {
+  transform: none !important;
+  border-color: rgba(203, 213, 225, 0.95) !important;
+}
+
+/* Light Mode Module Themed Hover Accents */
+a[href*="module1"]:hover,
+a[class*="hover:border-blue"]:hover {
+  border-color: #60a5fa !important;
+  box-shadow: 0 14px 30px -8px rgba(37, 99, 235, 0.15), 0 2px 6px -1px rgba(37, 99, 235, 0.08) !important;
+}
+
+a[href*="module2"]:hover,
+a[class*="hover:border-emerald"]:hover {
+  border-color: #34d399 !important;
+  box-shadow: 0 14px 30px -8px rgba(16, 185, 129, 0.15), 0 2px 6px -1px rgba(16, 185, 129, 0.08) !important;
+}
+
+a[href*="module3"]:hover,
+a[class*="hover:border-purple"]:hover {
+  border-color: #c084fc !important;
+  box-shadow: 0 14px 30px -8px rgba(168, 85, 247, 0.15), 0 2px 6px -1px rgba(168, 85, 247, 0.08) !important;
+}
+
+a[class*="border-amber"]:hover {
+  border-color: #f59e0b !important;
+  box-shadow: 0 14px 30px -8px rgba(245, 158, 11, 0.15), 0 2px 6px -1px rgba(245, 158, 11, 0.08) !important;
+}
+
+/* Dark Mode Cards & High-Weightage Chapter Highlights */
+html.dark section.bg-white,
+html.dark div.bg-white.rounded-3xl,
+html.dark div.bg-white.rounded-2xl,
+html.dark a.group.bg-white.rounded-2xl,
+html.dark a.bg-white.rounded-2xl,
+html.dark .bg-white {
+  background-color: #131b2e !important;
+  border-color: rgba(255, 255, 255, 0.1) !important;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.35) !important;
+  color: #f1f5f9 !important;
+}
+
+/* Neutralize light gradients on dark mode cards & provide rich luminous dark surfaces */
+html.dark [class*="via-white"],
+html.dark [class*="from-white"] {
+  background-image: none !important;
+  background-color: #131b2e !important;
+}
+
+html.dark div[class*="from-emerald-50"],
+html.dark div[class*="from-emerald-50/"] {
+  background: linear-gradient(135deg, rgba(6, 78, 59, 0.35) 0%, rgba(19, 78, 74, 0.25) 50%, rgba(19, 27, 46, 0.9) 100%) !important;
+  border-color: rgba(16, 185, 129, 0.4) !important;
+}
+
+html.dark div[class*="from-amber-50"],
+html.dark div[class*="from-amber-50/"] {
+  background: linear-gradient(135deg, rgba(120, 53, 15, 0.35) 0%, rgba(19, 27, 46, 0.95) 60%, #131b2e 100%) !important;
+  border-color: rgba(245, 158, 11, 0.4) !important;
+}
+
+html.dark div[class*="from-blue-50"],
+html.dark div[class*="from-blue-50/"] {
+  background: linear-gradient(135deg, rgba(30, 58, 138, 0.35) 0%, rgba(19, 27, 46, 0.95) 60%, #131b2e 100%) !important;
+  border-color: rgba(59, 130, 246, 0.4) !important;
+}
+
+html.dark div[class*="from-purple-50"],
+html.dark div[class*="from-purple-50/"] {
+  background: linear-gradient(135deg, rgba(88, 28, 135, 0.35) 0%, rgba(19, 27, 46, 0.95) 60%, #131b2e 100%) !important;
+  border-color: rgba(168, 85, 247, 0.4) !important;
+}
+
+html.dark div[class*="from-indigo-50"],
+html.dark div[class*="from-indigo-50/"] {
+  background: linear-gradient(135deg, rgba(49, 46, 129, 0.35) 0%, rgba(19, 27, 46, 0.95) 60%, #131b2e 100%) !important;
+  border-color: rgba(99, 102, 241, 0.4) !important;
+}
+
+/* Dark Mode Module Hero Banners */
+html.dark section.bg-gradient-to-b {
+  background: linear-gradient(180deg, rgba(15, 23, 42, 0.98) 0%, #0c1220 100%) !important;
+  border-bottom-color: rgba(255, 255, 255, 0.08) !important;
+}
+
+/* High Weightage Cards: Luminous Accented Surfaces in Dark Mode */
+html.dark a.group[class*="border-amber-300"],
+html.dark a.group[class*="border-amber-400"],
+html.dark div[class*="border-amber-300"],
+html.dark div[class*="border-amber-300/80"] {
+  background: linear-gradient(135deg, rgba(245, 158, 11, 0.14) 0%, rgba(19, 27, 46, 0.95) 55%, #131b2e 100%) !important;
+  border-color: rgba(245, 158, 11, 0.45) !important;
+  box-shadow: 0 4px 24px -2px rgba(0, 0, 0, 0.4), inset 0 1px 0 rgba(245, 158, 11, 0.25) !important;
+}
+
+html.dark a.group[class*="border-amber-300"]:hover,
+html.dark a.group[class*="border-amber-400"]:hover {
+  border-color: rgba(245, 158, 11, 0.75) !important;
+  box-shadow: 0 20px 40px -10px rgba(0, 0, 0, 0.7), 0 0 25px rgba(245, 158, 11, 0.2) !important;
+}
+
+html.dark a.group[class*="border-emerald-300"],
+html.dark a.group[class*="border-emerald-400"],
+html.dark div[class*="border-emerald-300"],
+html.dark div[class*="border-emerald-200"] {
+  background: linear-gradient(135deg, rgba(16, 185, 129, 0.14) 0%, rgba(19, 27, 46, 0.95) 55%, #131b2e 100%) !important;
+  border-color: rgba(16, 185, 129, 0.45) !important;
+  box-shadow: 0 4px 24px -2px rgba(0, 0, 0, 0.4), inset 0 1px 0 rgba(16, 185, 129, 0.25) !important;
+}
+
+html.dark a.group[class*="border-emerald-300"]:hover,
+html.dark a.group[class*="border-emerald-400"]:hover {
+  border-color: rgba(16, 185, 129, 0.75) !important;
+  box-shadow: 0 20px 40px -10px rgba(0, 0, 0, 0.7), 0 0 25px rgba(16, 185, 129, 0.2) !important;
+}
+
+html.dark a.group[class*="border-teal-300"],
+html.dark a.group[class*="border-teal-400"],
+html.dark div[class*="border-teal-300"] {
+  background: linear-gradient(135deg, rgba(20, 184, 166, 0.14) 0%, rgba(19, 27, 46, 0.95) 55%, #131b2e 100%) !important;
+  border-color: rgba(20, 184, 166, 0.45) !important;
+  box-shadow: 0 4px 24px -2px rgba(0, 0, 0, 0.4), inset 0 1px 0 rgba(20, 184, 166, 0.25) !important;
+}
+
+html.dark a.group[class*="border-teal-300"]:hover,
+html.dark a.group[class*="border-teal-400"]:hover {
+  border-color: rgba(20, 184, 166, 0.75) !important;
+  box-shadow: 0 20px 40px -10px rgba(0, 0, 0, 0.7), 0 0 25px rgba(20, 184, 166, 0.2) !important;
+}
+
+html.dark a.group[class*="border-purple-300"],
+html.dark a.group[class*="border-purple-400"],
+html.dark div[class*="border-purple-300"],
+html.dark div[class*="border-purple-300/80"] {
+  background: linear-gradient(135deg, rgba(168, 85, 247, 0.14) 0%, rgba(19, 27, 46, 0.95) 55%, #131b2e 100%) !important;
+  border-color: rgba(168, 85, 247, 0.45) !important;
+  box-shadow: 0 4px 24px -2px rgba(0, 0, 0, 0.4), inset 0 1px 0 rgba(168, 85, 247, 0.25) !important;
+}
+
+html.dark a.group[class*="border-purple-300"]:hover,
+html.dark a.group[class*="border-purple-400"]:hover {
+  border-color: rgba(168, 85, 247, 0.75) !important;
+  box-shadow: 0 20px 40px -10px rgba(0, 0, 0, 0.7), 0 0 25px rgba(168, 85, 247, 0.2) !important;
+}
+
+html.dark a.group.bg-white.rounded-2xl:hover,
+html.dark a.bg-white.rounded-2xl:hover,
+html.dark a.group.rounded-2xl:hover {
+  border-color: rgba(99, 102, 241, 0.4) !important;
+  box-shadow: 0 16px 36px -8px rgba(0, 0, 0, 0.6), inset 0 1px 0 rgba(255, 255, 255, 0.12) !important;
+  transform: translateY(-3px);
+}
+
+html.dark section.bg-white:hover,
+html.dark div.bg-white.rounded-3xl:hover,
+html.dark div.bg-white.rounded-2xl:hover {
+  transform: none !important;
+  border-color: rgba(255, 255, 255, 0.16) !important;
+}
+
+/* 9. Apple Tactile Press Micro-Interaction */
+button,
+a.btn,
+.macos-press,
+.group summary {
+  transition: transform 0.15s var(--macos-spring), background-color 0.15s ease, opacity 0.15s ease;
+}
+
+button:active,
+a.btn:active,
+.macos-press:active {
+  transform: scale(0.97) !important;
+}
+
+/* 10. macOS Accordion Spring Transition */
+details summary::-webkit-details-marker {
+  display: none;
+}
+
+details summary i[data-lucide="chevron-down"] {
+  transition: transform 0.25s var(--macos-spring);
+}
+
+details[open] summary i[data-lucide="chevron-down"] {
+  transform: rotate(180deg);
+}
+
+/* 11. macOS Spotlight Search Modal (Cmd+K) */
+.macos-spotlight-backdrop {
+  position: fixed;
+  inset: 0;
+  z-index: 100;
+  background: rgba(15, 23, 42, 0.45);
+  backdrop-filter: blur(16px) saturate(170%);
+  -webkit-backdrop-filter: blur(16px) saturate(170%);
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  padding-top: 13vh;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.2s var(--macos-spring);
+}
+
+.macos-spotlight-backdrop.open {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.macos-spotlight-modal {
+  width: 640px;
+  max-width: 100%;
+  background: rgba(255, 255, 255, 0.96);
+  backdrop-filter: blur(30px) saturate(200%);
+  -webkit-backdrop-filter: blur(30px) saturate(200%);
+  border: 1px solid rgba(255, 255, 255, 0.85);
+  border-radius: 20px;
+  box-shadow: 0 25px 50px -12px rgba(15, 23, 42, 0.28), 0 0 0 1px rgba(0, 0, 0, 0.06);
+  overflow: hidden;
+  transform: scale(0.95) translateY(-8px);
+  transition: transform 0.24s var(--macos-spring-bounce), background-color 0.25s ease, border-color 0.25s ease;
+}
+
+.macos-spotlight-backdrop.open .macos-spotlight-modal {
+  transform: scale(1) translateY(0);
+}
+
+html.dark .macos-spotlight-modal {
+  background: rgba(15, 23, 42, 0.94) !important;
+  border: 1px solid rgba(255, 255, 255, 0.14) !important;
+  box-shadow: 0 30px 65px -12px rgba(0, 0, 0, 0.8), 0 0 0 1px rgba(255, 255, 255, 0.08) !important;
+}
+
+.spotlight-search-header {
+  display: flex;
+  align-items: center;
+  padding: 1rem 1.25rem;
+  border-bottom: 1px solid rgba(226, 232, 240, 0.8);
+  gap: 0.75rem;
+  transition: border-color 0.25s ease;
+}
+
+html.dark .spotlight-search-header {
+  border-bottom-color: rgba(255, 255, 255, 0.1) !important;
+}
+
+.spotlight-search-input {
+  flex: 1;
+  background: transparent;
+  border: none;
+  outline: none;
+  font-size: 1rem;
+  font-weight: 500;
+  color: #0f172a;
+}
+
+html.dark .spotlight-search-input {
+  color: #f8fafc !important;
+}
+
+.spotlight-search-input::placeholder {
+  color: #94a3b8;
+}
+
+html.dark .spotlight-search-input::placeholder {
+  color: #64748b !important;
+}
+
+.spotlight-results {
+  max-height: 380px;
+  overflow-y: auto;
+  padding: 0.5rem;
+}
+
+.spotlight-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.625rem 0.875rem;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: background-color 0.12s ease;
+  text-decoration: none;
+}
+
+.spotlight-item:hover,
+.spotlight-item.active {
+  background: #f1f5f9;
+}
+
+html.dark .spotlight-item:hover {
+  background: rgba(30, 41, 59, 0.8) !important;
+}
+
+.spotlight-item.active {
+  background: #4f46e5 !important;
+  color: #ffffff !important;
+}
+
+.spotlight-item.active .spotlight-title,
+.spotlight-item.active .spotlight-sub {
+  color: #ffffff !important;
+}
+
+html.dark .spotlight-item .spotlight-title {
+  color: #f8fafc !important;
+}
+
+html.dark .spotlight-item .spotlight-sub {
+  color: #94a3b8 !important;
+}
+
+.spotlight-footer {
+  padding: 0.625rem 1.25rem;
+  background: #f8fafc;
+  border-top: 1px solid rgba(226, 232, 240, 0.8);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 0.6875rem;
+  color: #64748b;
+  transition: background 0.25s ease, border-color 0.25s ease;
+}
+
+html.dark .spotlight-footer {
+  background: #0d1424 !important;
+  border-top-color: rgba(255, 255, 255, 0.1) !important;
+  color: #94a3b8 !important;
+}
+
+.spotlight-kbd {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.125rem 0.375rem;
+  background: #ffffff;
+  border: 1px solid #cbd5e1;
+  border-radius: 6px;
+  font-family: inherit;
+  font-weight: 700;
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.05);
+}
+
+html.dark .spotlight-kbd {
+  background: #1e293b !important;
+  border-color: rgba(255, 255, 255, 0.18) !important;
+  color: #cbd5e1 !important;
+}
+
+/* 12. macOS Floating Dock Capsule */
+.macos-dock {
+  position: fixed;
+  bottom: 1.25rem;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 45;
+  display: flex;
+  align-items: center;
+  gap: 0.35rem;
+  padding: 0.375rem 0.625rem;
+  background: rgba(255, 255, 255, 0.82);
+  backdrop-filter: blur(24px) saturate(200%);
+  -webkit-backdrop-filter: blur(24px) saturate(200%);
+  border: 1px solid rgba(255, 255, 255, 0.7);
+  border-radius: var(--macos-radius-pill);
+  box-shadow: 0 12px 30px -4px rgba(15, 23, 42, 0.16), 0 0 0 1px rgba(0, 0, 0, 0.05);
+  transition: transform 0.25s var(--macos-spring), background 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease;
+}
+
+.macos-dock:hover {
+  box-shadow: 0 16px 36px -4px rgba(15, 23, 42, 0.22), 0 0 0 1px rgba(0, 0, 0, 0.08);
+}
+
+html.dark .macos-dock {
+  background: rgba(15, 23, 42, 0.85) !important;
+  border: 1px solid rgba(255, 255, 255, 0.14) !important;
+  box-shadow: 0 16px 36px -4px rgba(0, 0, 0, 0.6), 0 0 0 1px rgba(255, 255, 255, 0.08) !important;
+}
+
+.macos-dock-item {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  background: rgba(241, 245, 249, 0.8);
+  color: #334155;
+  border: 1px solid rgba(226, 232, 240, 0.6);
+  cursor: pointer;
+  transition: transform 0.2s var(--macos-spring), background-color 0.15s ease, color 0.15s ease, border-color 0.15s ease;
+  position: relative;
+}
+
+.macos-dock-item:hover {
+  transform: scale(1.18) translateY(-4px);
+  background: #ffffff;
+  color: #4f46e5;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.macos-dock-item:active {
+  transform: scale(1.05) translateY(-2px);
+}
+
+html.dark .macos-dock-item {
+  background: rgba(30, 41, 59, 0.8) !important;
+  color: #cbd5e1 !important;
+  border: 1px solid rgba(255, 255, 255, 0.1) !important;
+}
+
+html.dark .macos-dock-item:hover {
+  background: #1e293b !important;
+  color: #818cf8 !important;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.4) !important;
+}
+
+.macos-dock-item.primary {
+  background: #4f46e5 !important;
+  color: #ffffff !important;
+  border-color: #4338ca !important;
+}
+
+.macos-dock-item.primary:hover {
+  background: #4338ca !important;
+  color: #ffffff !important;
+}
+
+.macos-dock-tooltip {
+  position: absolute;
+  bottom: calc(100% + 10px);
+  left: 50%;
+  transform: translateX(-50%) translateY(4px);
+  background: rgba(15, 23, 42, 0.9);
+  backdrop-filter: blur(8px);
+  color: #ffffff;
+  font-size: 0.6875rem;
+  font-weight: 600;
+  padding: 0.25rem 0.5rem;
+  border-radius: 6px;
+  white-space: nowrap;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.15s ease, transform 0.15s var(--macos-spring);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.macos-dock-item:hover .macos-dock-tooltip {
+  opacity: 1;
+  transform: translateX(-50%) translateY(0);
+}
+
+/* 13. Top Real-time Reading Progress Bar */
+#nism-reading-progress {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 3px;
+  background: linear-gradient(90deg, #3b82f6 0%, #6366f1 50%, #10b981 100%);
+  z-index: 9999;
+  pointer-events: none;
+  transition: width 0.1s ease-out;
+  box-shadow: 0 0 8px rgba(99, 102, 241, 0.5);
+}
+
+/* ==========================================================================
+   14. Zero Left Strip: macOS Symmetrical Pill & Squircle Highlighting
+   ========================================================================== */
+.toc-active {
+  background-color: rgba(99, 102, 241, 0.12) !important;
+  color: #4338ca !important;
+  font-weight: 700 !important;
+  border: 1px solid rgba(99, 102, 241, 0.25) !important;
+  padding-left: 0.75rem !important;
+  padding-right: 0.75rem !important;
+  border-radius: 8px !important;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.03) !important;
+}
+
+html.dark .toc-active {
+  background-color: rgba(99, 102, 241, 0.25) !important;
+  color: #a5b4fc !important;
+  border: 1px solid rgba(165, 180, 252, 0.3) !important;
+}
+
+/* Global Left Strip Removal for Exam Callouts & Highlight Boxes */
+.exam-highlight,
+.key-concept,
+.formula-box,
+.exam-callout,
+.crisis-callout,
+.success-callout {
+  border-left: none !important;
+  border: 1px solid rgba(0, 0, 0, 0.08) !important;
+  border-radius: var(--macos-radius-squircle) !important;
+  box-shadow: var(--macos-shadow-ambient) !important;
+}
+
+/* ==========================================================================
+   14B. Light Mode Exhaustive Typography, Cards, Callout & Contrast Engine
+   Delivers WCAG AAA/AA High-Contrast Legibility & Elegant Visual Hierarchy
+   ========================================================================== */
+
+/* --- A. Light Mode Canvas & Typography Hierarchy --- */
+html:not(.dark) h1,
+html:not(.dark) h2,
+html:not(.dark) h3,
+html:not(.dark) h4 {
+  color: #0f172a !important;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+}
+
+html:not(.dark) p,
+html:not(.dark) li {
+  color: #334155;
+  line-height: 1.65;
+}
+
+html:not(.dark) strong,
+html:not(.dark) b {
+  color: #0f172a !important;
+  font-weight: 700;
+}
+
+/* Light Mode Slate Scale Readability Boost */
+html:not(.dark) .text-slate-950,
+html:not(.dark) .text-slate-900,
+html:not(.dark) .text-gray-900 {
+  color: #0f172a !important;
+}
+
+html:not(.dark) .text-slate-800,
+html:not(.dark) .text-gray-800 {
+  color: #1e293b !important;
+}
+
+html:not(.dark) .text-slate-700,
+html:not(.dark) .text-gray-700 {
+  color: #334155 !important;
+}
+
+html:not(.dark) .text-slate-600,
+html:not(.dark) .text-gray-600 {
+  color: #334155 !important;
+}
+
+html:not(.dark) .text-slate-500,
+html:not(.dark) .text-gray-500 {
+  color: #475569 !important;
+}
+
+html:not(.dark) .text-slate-400,
+html:not(.dark) .text-gray-400 {
+  color: #64748b !important;
+}
+
+/* --- B. macOS Light Mode Window, Cards & Dividers --- */
+html:not(.dark) .macos-window {
+  background: #ffffff !important;
+  border: 1px solid #e2e8f0 !important;
+  box-shadow: 0 10px 25px -5px rgba(15, 23, 42, 0.07), 0 8px 10px -6px rgba(15, 23, 42, 0.04) !important;
+}
+
+html:not(.dark) .macos-window-header {
+  background: linear-gradient(180deg, #ffffff 0%, #f8fafc 100%) !important;
+  border-bottom: 1px solid #e2e8f0 !important;
+}
+
+html:not(.dark) .macos-window-title {
+  color: #0f172a !important;
+  font-weight: 700 !important;
+}
+
+/* --- C. Slate / Neutral Sub-Cards & Metric Grids --- */
+html:not(.dark) .bg-slate-50,
+html:not(.dark) [class*="bg-slate-50/"],
+html:not(.dark) .bg-gray-50 {
+  background-color: #f8fafc !important;
+  border: 1px solid #e2e8f0 !important;
+  color: #334155 !important;
+}
+
+html:not(.dark) .bg-slate-50 strong,
+html:not(.dark) .bg-slate-50 b,
+html:not(.dark) [class*="bg-slate-50/"] strong,
+html:not(.dark) [class*="bg-slate-50/"] b {
+  color: #0f172a !important;
+}
+
+html:not(.dark) .bg-slate-100 {
+  background-color: #f1f5f9 !important;
+  border-color: #cbd5e1 !important;
+  color: #1e293b !important;
+}
+
+html:not(.dark) .border-slate-100,
+html:not(.dark) .border-slate-200,
+html:not(.dark) [class*="border-slate-200/"],
+html:not(.dark) .border-slate-300 {
+  border-color: #e2e8f0 !important;
+}
+
+/* --- D. AMBER & YELLOW BOXES (Super High Exam Yield ⭐, Key Rules, Cut-offs) --- */
+html:not(.dark) .bg-amber-50,
+html:not(.dark) [class*="bg-amber-50/"],
+html:not(.dark) .bg-yellow-50,
+html:not(.dark) .exam-highlight,
+html:not(.dark) .exam-callout {
+  background: linear-gradient(135deg, #fffdf5 0%, #fef9c3 100%) !important;
+  border: 1.5px solid #fcd34d !important;
+  color: #78350f !important;
+  border-radius: var(--macos-radius-squircle) !important;
+  box-shadow: 0 2px 8px rgba(245, 158, 11, 0.08) !important;
+}
+
+html:not(.dark) [class*="bg-amber-50"] strong,
+html:not(.dark) [class*="bg-amber-50"] b,
+html:not(.dark) .exam-highlight strong,
+html:not(.dark) .exam-highlight b,
+html:not(.dark) .exam-callout strong,
+html:not(.dark) .exam-callout b {
+  color: #92400e !important;
+}
+
+html:not(.dark) [class*="bg-amber-50"] p,
+html:not(.dark) [class*="bg-amber-50"] li,
+html:not(.dark) .exam-highlight p,
+html:not(.dark) .exam-highlight li,
+html:not(.dark) .exam-callout p,
+html:not(.dark) .exam-callout li {
+  color: #78350f !important;
+}
+
+html:not(.dark) .text-amber-950,
+html:not(.dark) .text-amber-900,
+html:not(.dark) [class*="text-amber-900/"] {
+  color: #78350f !important;
+}
+
+html:not(.dark) .text-amber-800 {
+  color: #92400e !important;
+}
+
+html:not(.dark) .text-amber-700,
+html:not(.dark) .text-amber-600 {
+  color: #b45309 !important;
+  font-weight: 600;
+}
+
+/* Inner white cards inside amber callouts */
+html:not(.dark) [class*="bg-amber-50"] .bg-white,
+html:not(.dark) .exam-highlight .bg-white,
+html:not(.dark) .exam-callout .bg-white,
+html:not(.dark) [class*="bg-amber-50"] [class*="bg-white/"] {
+  background-color: #ffffff !important;
+  border: 1px solid #fde68a !important;
+  color: #1e293b !important;
+  box-shadow: 0 1px 3px rgba(245, 158, 11, 0.08) !important;
+}
+
+/* Amber Badges */
+html:not(.dark) span[class*="bg-amber-100"],
+html:not(.dark) span[class*="bg-amber-50"],
+html:not(.dark) span[class*="bg-amber-200"] {
+  background-color: #fef3c7 !important;
+  color: #92400e !important;
+  border: 1px solid #fcd34d !important;
+  font-weight: 700 !important;
+}
+
+/* --- E. BLUE & INDIGO BOXES (Module 1 Foundation, Regulatory Framework, Core Concepts) --- */
+html:not(.dark) .bg-blue-50,
+html:not(.dark) [class*="bg-blue-50/"],
+html:not(.dark) .formula-box {
+  background: linear-gradient(135deg, #f0f7ff 0%, #e0f2fe 100%) !important;
+  border: 1.5px solid #93c5fd !important;
+  color: #1e3a8a !important;
+  border-radius: var(--macos-radius-squircle) !important;
+  box-shadow: 0 2px 8px rgba(37, 99, 235, 0.08) !important;
+}
+
+html:not(.dark) .bg-indigo-50,
+html:not(.dark) [class*="bg-indigo-50/"],
+html:not(.dark) .key-concept {
+  background: linear-gradient(135deg, #eef2ff 0%, #e0e7ff 100%) !important;
+  border: 1.5px solid #a5b4fc !important;
+  color: #312e81 !important;
+  border-radius: var(--macos-radius-squircle) !important;
+  box-shadow: 0 2px 8px rgba(79, 70, 229, 0.08) !important;
+}
+
+html:not(.dark) [class*="bg-blue-50"] strong,
+html:not(.dark) [class*="bg-blue-50"] b,
+html:not(.dark) .formula-box strong,
+html:not(.dark) .formula-box b {
+  color: #1d4ed8 !important;
+}
+
+html:not(.dark) [class*="bg-blue-50"] p,
+html:not(.dark) [class*="bg-blue-50"] li,
+html:not(.dark) .formula-box p,
+html:not(.dark) .formula-box li {
+  color: #1e3a8a !important;
+}
+
+html:not(.dark) [class*="bg-indigo-50"] strong,
+html:not(.dark) [class*="bg-indigo-50"] b,
+html:not(.dark) .key-concept strong,
+html:not(.dark) .key-concept b {
+  color: #3730a3 !important;
+}
+
+html:not(.dark) [class*="bg-indigo-50"] p,
+html:not(.dark) [class*="bg-indigo-50"] li,
+html:not(.dark) .key-concept p,
+html:not(.dark) .key-concept li {
+  color: #312e81 !important;
+}
+
+html:not(.dark) .text-blue-950,
+html:not(.dark) .text-blue-900,
+html:not(.dark) [class*="text-blue-900/"] {
+  color: #1e3a8a !important;
+}
+
+html:not(.dark) .text-blue-800,
+html:not(.dark) .text-blue-700 {
+  color: #1d4ed8 !important;
+}
+
+html:not(.dark) .text-blue-600 {
+  color: #2563eb !important;
+}
+
+html:not(.dark) .text-indigo-950,
+html:not(.dark) .text-indigo-900 {
+  color: #312e81 !important;
+}
+
+html:not(.dark) .text-indigo-800,
+html:not(.dark) .text-indigo-700 {
+  color: #3730a3 !important;
+}
+
+html:not(.dark) .text-indigo-600 {
+  color: #4f46e5 !important;
+}
+
+/* Inner white cards inside blue / indigo */
+html:not(.dark) [class*="bg-blue-50"] .bg-white,
+html:not(.dark) .formula-box .bg-white,
+html:not(.dark) [class*="bg-indigo-50"] .bg-white,
+html:not(.dark) .key-concept .bg-white {
+  background-color: #ffffff !important;
+  border: 1px solid #bfdbfe !important;
+  color: #1e293b !important;
+  box-shadow: 0 1px 3px rgba(37, 99, 235, 0.08) !important;
+}
+
+/* Blue & Indigo Badges */
+html:not(.dark) span[class*="bg-blue-100"],
+html:not(.dark) span[class*="bg-blue-50"] {
+  background-color: #eff6ff !important;
+  color: #1d4ed8 !important;
+  border: 1px solid #bfdbfe !important;
+  font-weight: 700 !important;
+}
+
+html:not(.dark) span[class*="bg-indigo-100"],
+html:not(.dark) span[class*="bg-indigo-50"] {
+  background-color: #eef2ff !important;
+  color: #3730a3 !important;
+  border: 1px solid #c7d2fe !important;
+  font-weight: 700 !important;
+}
+
+/* --- F. EMERALD & GREEN BOXES (Module 2 Derivatives, Arbitrage, Success Callouts) --- */
+html:not(.dark) .bg-emerald-50,
+html:not(.dark) [class*="bg-emerald-50/"],
+html:not(.dark) .bg-green-50,
+html:not(.dark) .success-callout {
+  background: linear-gradient(135deg, #ecfdf5 0%, #d1fae5 100%) !important;
+  border: 1.5px solid #6ee7b7 !important;
+  color: #064e3b !important;
+  border-radius: var(--macos-radius-squircle) !important;
+  box-shadow: 0 2px 8px rgba(5, 150, 105, 0.08) !important;
+}
+
+html:not(.dark) [class*="bg-emerald-50"] strong,
+html:not(.dark) [class*="bg-emerald-50"] b,
+html:not(.dark) .success-callout strong,
+html:not(.dark) .success-callout b {
+  color: #065f46 !important;
+}
+
+html:not(.dark) [class*="bg-emerald-50"] p,
+html:not(.dark) [class*="bg-emerald-50"] li,
+html:not(.dark) .success-callout p,
+html:not(.dark) .success-callout li {
+  color: #064e3b !important;
+}
+
+html:not(.dark) .text-emerald-950,
+html:not(.dark) .text-emerald-900 {
+  color: #064e3b !important;
+}
+
+html:not(.dark) .text-emerald-800,
+html:not(.dark) .text-emerald-700 {
+  color: #047857 !important;
+}
+
+html:not(.dark) .text-emerald-600 {
+  color: #059669 !important;
+}
+
+/* Inner white cards inside emerald */
+html:not(.dark) [class*="bg-emerald-50"] .bg-white,
+html:not(.dark) .success-callout .bg-white {
+  background-color: #ffffff !important;
+  border: 1px solid #a7f3d0 !important;
+  color: #1e293b !important;
+  box-shadow: 0 1px 3px rgba(5, 150, 105, 0.08) !important;
+}
+
+/* Emerald Badges */
+html:not(.dark) span[class*="bg-emerald-100"],
+html:not(.dark) span[class*="bg-emerald-50"],
+html:not(.dark) span[class*="bg-emerald-200"] {
+  background-color: #ecfdf5 !important;
+  color: #047857 !important;
+  border: 1px solid #a7f3d0 !important;
+  font-weight: 700 !important;
+}
+
+/* --- G. PURPLE & VIOLET BOXES (Module 3 Fixed Income, IRD, Bond Calculations) --- */
+html:not(.dark) .bg-purple-50,
+html:not(.dark) [class*="bg-purple-50/"],
+html:not(.dark) .bg-violet-50 {
+  background: linear-gradient(135deg, #faf5ff 0%, #f3e8ff 100%) !important;
+  border: 1.5px solid #d8b4fe !important;
+  color: #4c1d95 !important;
+  border-radius: var(--macos-radius-squircle) !important;
+  box-shadow: 0 2px 8px rgba(124, 58, 237, 0.08) !important;
+}
+
+html:not(.dark) [class*="bg-purple-50"] strong,
+html:not(.dark) [class*="bg-purple-50"] b {
+  color: #581c87 !important;
+}
+
+html:not(.dark) [class*="bg-purple-50"] p,
+html:not(.dark) [class*="bg-purple-50"] li {
+  color: #4c1d95 !important;
+}
+
+html:not(.dark) .text-purple-950,
+html:not(.dark) .text-purple-900 {
+  color: #4c1d95 !important;
+}
+
+html:not(.dark) .text-purple-800,
+html:not(.dark) .text-purple-700 {
+  color: #6d28d9 !important;
+}
+
+html:not(.dark) .text-purple-600 {
+  color: #7c3aed !important;
+}
+
+/* Inner white cards inside purple */
+html:not(.dark) [class*="bg-purple-50"] .bg-white {
+  background-color: #ffffff !important;
+  border: 1px solid #e9d5ff !important;
+  color: #1e293b !important;
+  box-shadow: 0 1px 3px rgba(124, 58, 237, 0.08) !important;
+}
+
+/* Purple Badges */
+html:not(.dark) span[class*="bg-purple-100"],
+html:not(.dark) span[class*="bg-purple-50"] {
+  background-color: #faf5ff !important;
+  color: #6d28d9 !important;
+  border: 1px solid #ddd6fe !important;
+  font-weight: 700 !important;
+}
+
+/* --- H. ROSE & RED BOXES (Regulatory Prohibitions, Penalties, Crisis Warnings) --- */
+html:not(.dark) .bg-rose-50,
+html:not(.dark) [class*="bg-rose-50/"],
+html:not(.dark) .bg-red-50,
+html:not(.dark) .crisis-callout {
+  background: linear-gradient(135deg, #fff1f2 0%, #ffe4e6 100%) !important;
+  border: 1.5px solid #fca5a5 !important;
+  color: #881337 !important;
+  border-radius: var(--macos-radius-squircle) !important;
+  box-shadow: 0 2px 8px rgba(225, 29, 72, 0.08) !important;
+}
+
+html:not(.dark) [class*="bg-rose-50"] strong,
+html:not(.dark) [class*="bg-rose-50"] b,
+html:not(.dark) .crisis-callout strong,
+html:not(.dark) .crisis-callout b {
+  color: #9f1239 !important;
+}
+
+html:not(.dark) [class*="bg-rose-50"] p,
+html:not(.dark) [class*="bg-rose-50"] li,
+html:not(.dark) .crisis-callout p,
+html:not(.dark) .crisis-callout li {
+  color: #881337 !important;
+}
+
+html:not(.dark) .text-rose-950,
+html:not(.dark) .text-rose-900,
+html:not(.dark) .text-red-950 {
+  color: #881337 !important;
+}
+
+html:not(.dark) .text-rose-800,
+html:not(.dark) .text-rose-700 {
+  color: #be123c !important;
+}
+
+html:not(.dark) .text-rose-600 {
+  color: #e11d48 !important;
+}
+
+/* Inner white cards inside rose */
+html:not(.dark) [class*="bg-rose-50"] .bg-white,
+html:not(.dark) .crisis-callout .bg-white {
+  background-color: #ffffff !important;
+  border: 1px solid #fecdd3 !important;
+  color: #1e293b !important;
+  box-shadow: 0 1px 3px rgba(225, 29, 72, 0.08) !important;
+}
+
+/* --- I. INLINE FORMULAS, MONOSPACE MATH & CODE --- */
+html:not(.dark) span.font-mono.bg-white,
+html:not(.dark) span.font-mono[class*="bg-white"],
+html:not(.dark) span.font-mono {
+  background-color: #ffffff !important;
+  border: 1px solid #cbd5e1 !important;
+  color: #0f172a !important;
+  font-weight: 700 !important;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.04) !important;
+  border-radius: 6px;
+  padding: 0.15rem 0.4rem;
+}
+
+html:not(.dark) code:not(pre code) {
+  background: #f1f5f9 !important;
+  color: #3730a3 !important;
+  border: 1px solid #e2e8f0 !important;
+  font-weight: 600;
+  padding: 0.15rem 0.35rem;
+  border-radius: 6px;
+}
+
+html:not(.dark) pre {
+  background-color: #f8fafc !important;
+  border: 1px solid #e2e8f0 !important;
+  color: #0f172a !important;
+}
+
+/* --- J. TABLES IN LIGHT MODE --- */
+html:not(.dark) table {
+  background-color: #ffffff !important;
+  border: 1px solid #e2e8f0 !important;
+}
+
+html:not(.dark) table th {
+  background-color: #f1f5f9 !important;
+  color: #0f172a !important;
+  font-weight: 700 !important;
+  border-bottom: 2px solid #cbd5e1 !important;
+}
+
+html:not(.dark) table td {
+  color: #334155 !important;
+  border-bottom: 1px solid #f1f5f9 !important;
+}
+
+html:not(.dark) table tbody tr:hover {
+  background-color: #f8fafc !important;
+}
+
+html:not(.dark) tr.bg-slate-50,
+html:not(.dark) tr.bg-gray-50 {
+  background-color: #f8fafc !important;
+}
+
+html:not(.dark) tr[class*="bg-amber-50"] {
+  background-color: #fffdf5 !important;
+}
+
+html:not(.dark) tr[class*="bg-blue-50"] {
+  background-color: #f0f7ff !important;
+}
+
+html:not(.dark) tr[class*="bg-emerald-50"] {
+  background-color: #ecfdf5 !important;
+}
+
+html:not(.dark) tr[class*="bg-purple-50"] {
+  background-color: #faf5ff !important;
+}
+
+/* Callouts Dark Mode Overrides */
+html.dark .exam-highlight {
+  background: linear-gradient(135deg, rgba(120, 53, 15, 0.35), rgba(69, 26, 3, 0.2)) !important;
+  border-color: rgba(245, 158, 11, 0.4) !important;
+  color: #fef3c7 !important;
+}
+
+html.dark .key-concept {
+  background: linear-gradient(135deg, rgba(49, 46, 129, 0.35), rgba(30, 27, 75, 0.2)) !important;
+  border-color: rgba(99, 102, 241, 0.4) !important;
+  color: #e0e7ff !important;
+}
+
+html.dark .formula-box {
+  background: linear-gradient(135deg, rgba(30, 58, 138, 0.35), rgba(15, 23, 42, 0.4)) !important;
+  border-color: rgba(59, 130, 246, 0.4) !important;
+  color: #dbeafe !important;
+}
+
+html.dark .crisis-callout {
+  background: linear-gradient(135deg, rgba(136, 19, 55, 0.35), rgba(69, 10, 10, 0.2)) !important;
+  border-color: rgba(244, 63, 94, 0.4) !important;
+  color: #ffe4e6 !important;
+}
+
+html.dark .success-callout {
+  background: linear-gradient(135deg, rgba(6, 78, 59, 0.35), rgba(2, 44, 34, 0.2)) !important;
+  border-color: rgba(16, 185, 129, 0.4) !important;
+  color: #d1fae5 !important;
+}
+
+html.dark .exam-callout {
+  background: linear-gradient(135deg, rgba(120, 53, 15, 0.35), rgba(69, 26, 3, 0.2)) !important;
+  border-color: rgba(245, 158, 11, 0.4) !important;
+  color: #fef3c7 !important;
+}
+
+html.dark .glass-card {
+  background: rgba(19, 27, 46, 0.88) !important;
+  border-color: rgba(255, 255, 255, 0.12) !important;
+}
+
+/* ==========================================================================
+   15. Dark Mode Exhaustive Typography, Cards & Box Contrast Engine
+   Ensures WCAG AAA/AA Legibility Across All 22 Chapters & Hub Pages
+   ========================================================================== */
+
+/* --- A. Global Typography Hierarchy --- */
+html.dark .text-slate-950,
+html.dark .text-slate-900,
+html.dark .text-gray-900 {
+  color: #ffffff !important;
+}
+
+html.dark .text-slate-800,
+html.dark .text-gray-800 {
+  color: #f8fafc !important;
+}
+
+html.dark .text-slate-700,
+html.dark .text-gray-700 {
+  color: #e2e8f0 !important;
+}
+
+html.dark .text-slate-600,
+html.dark .text-gray-600 {
+  color: #cbd5e1 !important;
+}
+
+html.dark .text-slate-500,
+html.dark .text-gray-500 {
+  color: #94a3b8 !important;
+}
+
+html.dark .text-slate-400,
+html.dark .text-gray-400 {
+  color: #94a3b8 !important;
+}
+
+html.dark .text-slate-300,
+html.dark .text-gray-300 {
+  color: #cbd5e1 !important;
+}
+
+html.dark .text-slate-200,
+html.dark .text-gray-200 {
+  color: #e2e8f0 !important;
+}
+
+/* --- B. White Cards, Modals & Translucent White Surfaces --- */
+html.dark .bg-white,
+html.dark .bg-white\/95,
+html.dark .bg-white\/90,
+html.dark .bg-white\/80,
+html.dark .bg-white\/70,
+html.dark .bg-white\/60,
+html.dark [class*=" bg-white/9"],
+html.dark [class^="bg-white/9"],
+html.dark [class*=" bg-white/8"],
+html.dark [class^="bg-white/8"],
+html.dark [class*=" bg-white/7"],
+html.dark [class^="bg-white/7"],
+html.dark [class*=" bg-white/6"],
+html.dark [class^="bg-white/6"] {
+  background-color: #151d30 !important;
+  border-color: rgba(255, 255, 255, 0.12) !important;
+  color: #f1f5f9 !important;
+}
+
+/* Mobile dropdown menu */
+html.dark #mobile-menu {
+  background-color: rgba(15, 23, 42, 0.98) !important;
+  border-color: rgba(255, 255, 255, 0.1) !important;
+}
+
+/* --- C. Slate / Gray Elevated Cards, Grids & Sub-cards --- */
+html.dark .bg-slate-50,
+html.dark .bg-slate-50\/50,
+html.dark .bg-slate-50\/60,
+html.dark .bg-slate-50\/70,
+html.dark .bg-slate-50\/80,
+html.dark .bg-gray-50,
+html.dark [class*=" bg-slate-50/"],
+html.dark [class^="bg-slate-50/"] {
+  background-color: #161f36 !important;
+  border-color: rgba(255, 255, 255, 0.1) !important;
+  color: #f1f5f9 !important;
+}
+
+html.dark .bg-slate-100,
+html.dark .bg-slate-100\/80,
+html.dark .bg-gray-100,
+html.dark [class*=" bg-slate-100/"],
+html.dark [class^="bg-slate-100/"] {
+  background-color: #1e2942 !important;
+  border-color: rgba(255, 255, 255, 0.14) !important;
+  color: #f8fafc !important;
+}
+
+html.dark .bg-slate-200,
+html.dark .bg-slate-200\/60,
+html.dark .bg-slate-200\/70,
+html.dark .bg-gray-200,
+html.dark [class*=" bg-slate-200/"],
+html.dark [class^="bg-slate-200/"] {
+  background-color: #273553 !important;
+  border-color: rgba(255, 255, 255, 0.18) !important;
+  color: #ffffff !important;
+}
+
+/* Slate Borders */
+html.dark .border-slate-100,
+html.dark .border-slate-200,
+html.dark .border-slate-200\/80,
+html.dark .border-slate-200\/90,
+html.dark .border-slate-300,
+html.dark .border-gray-200,
+html.dark .border-gray-300,
+html.dark [class*=" border-slate-"],
+html.dark [class^="border-slate-"] {
+  border-color: rgba(255, 255, 255, 0.1) !important;
+}
+
+/* --- D. AMBER & YELLOW BOXES (Super High Exam Yield Callouts & Grids) --- */
+html.dark .bg-amber-50,
+html.dark .bg-amber-50\/10,
+html.dark .bg-amber-50\/20,
+html.dark .bg-amber-50\/30,
+html.dark .bg-amber-50\/40,
+html.dark .bg-amber-50\/50,
+html.dark .bg-amber-50\/60,
+html.dark .bg-amber-50\/70,
+html.dark .bg-amber-50\/80,
+html.dark .bg-amber-50\/90,
+html.dark .bg-yellow-50,
+html.dark [class*=" bg-amber-50/"],
+html.dark [class^="bg-amber-50/"] {
+  background-color: rgba(245, 158, 11, 0.14) !important;
+  border-color: rgba(245, 158, 11, 0.35) !important;
+  color: #fde68a !important;
+}
+
+html.dark .bg-amber-100,
+html.dark .bg-amber-100\/60,
+html.dark .bg-amber-100\/70,
+html.dark .bg-amber-200,
+html.dark [class*=" bg-amber-100/"],
+html.dark [class^="bg-amber-100/"] {
+  background-color: rgba(245, 158, 11, 0.24) !important;
+  border-color: rgba(245, 158, 11, 0.45) !important;
+  color: #fef3c7 !important;
+}
+
+/* Amber Typography */
+html.dark .text-amber-950,
+html.dark .text-amber-900,
+html.dark .text-amber-900\/90,
+html.dark [class*=" text-amber-900/"],
+html.dark [class^="text-amber-900/"] {
+  color: #fef3c7 !important;
+}
+
+html.dark .text-amber-800 {
+  color: #fde68a !important;
+}
+
+html.dark .text-amber-700,
+html.dark .text-amber-600 {
+  color: #fcd34d !important;
+}
+
+html.dark .text-amber-500,
+html.dark .text-amber-400 {
+  color: #fbbf24 !important;
+}
+
+html.dark .border-amber-100,
+html.dark .border-amber-200,
+html.dark .border-amber-200\/80,
+html.dark .border-amber-300,
+html.dark .border-amber-300\/80,
+html.dark .border-amber-400,
+html.dark .border-amber-400\/30,
+html.dark .border-amber-400\/60,
+html.dark [class*=" border-amber-"],
+html.dark [class^="border-amber-"] {
+  border-color: rgba(245, 158, 11, 0.35) !important;
+}
+
+/* Nested elements & inner cards in amber callouts */
+html.dark [class*="bg-amber-50"] strong,
+html.dark [class*="bg-amber-50"] b,
+html.dark [class*="bg-amber-50"] h2,
+html.dark [class*="bg-amber-50"] h3,
+html.dark [class*="bg-amber-50"] h4,
+html.dark .bg-amber-50 strong,
+html.dark .bg-amber-50 b {
+  color: #fef3c7 !important;
+}
+
+html.dark [class*="bg-amber-50"] p,
+html.dark [class*="bg-amber-50"] li,
+html.dark .bg-amber-50 p,
+html.dark .bg-amber-50 li {
+  color: #fde68a !important;
+}
+
+html.dark [class*="bg-amber-50"] .bg-white,
+html.dark [class*="bg-amber-50"] [class*="bg-white/"],
+html.dark .bg-amber-50 .bg-white {
+  background-color: rgba(15, 23, 42, 0.8) !important;
+  border-color: rgba(245, 158, 11, 0.35) !important;
+  color: #fef3c7 !important;
+}
+
+/* --- E. BLUE BOXES (Module 1 Foundation, Regulatory Framework & Notes) --- */
+html.dark .bg-blue-50,
+html.dark .bg-blue-50\/10,
+html.dark .bg-blue-50\/20,
+html.dark .bg-blue-50\/30,
+html.dark .bg-blue-50\/40,
+html.dark .bg-blue-50\/50,
+html.dark .bg-blue-50\/60,
+html.dark .bg-blue-50\/70,
+html.dark .bg-blue-50\/80,
+html.dark [class*=" bg-blue-50/"],
+html.dark [class^="bg-blue-50/"] {
+  background-color: rgba(59, 130, 246, 0.14) !important;
+  border-color: rgba(59, 130, 246, 0.35) !important;
+  color: #bfdbfe !important;
+}
+
+html.dark .bg-blue-100,
+html.dark .bg-blue-100\/60,
+html.dark .bg-blue-200,
+html.dark .bg-blue-200\/70,
+html.dark [class*=" bg-blue-100/"],
+html.dark [class^="bg-blue-100/"] {
+  background-color: rgba(59, 130, 246, 0.24) !important;
+  border-color: rgba(59, 130, 246, 0.45) !important;
+  color: #dbeafe !important;
+}
+
+/* Blue Typography */
+html.dark .text-blue-950,
+html.dark .text-blue-900,
+html.dark .text-blue-900\/90,
+html.dark [class*=" text-blue-900/"],
+html.dark [class^="text-blue-900/"] {
+  color: #dbeafe !important;
+}
+
+html.dark .text-blue-800 {
+  color: #bfdbfe !important;
+}
+
+html.dark .text-blue-700,
+html.dark .text-blue-600 {
+  color: #93c5fd !important;
+}
+
+html.dark .text-blue-500,
+html.dark .text-blue-400 {
+  color: #60a5fa !important;
+}
+
+html.dark .border-blue-100,
+html.dark .border-blue-200,
+html.dark .border-blue-200\/60,
+html.dark .border-blue-200\/80,
+html.dark .border-blue-300,
+html.dark .border-blue-300\/80,
+html.dark .border-blue-400\/50,
+html.dark [class*=" border-blue-"],
+html.dark [class^="border-blue-"] {
+  border-color: rgba(59, 130, 246, 0.35) !important;
+}
+
+/* Nested elements & inner cards in blue callouts */
+html.dark [class*="bg-blue-50"] strong,
+html.dark [class*="bg-blue-50"] b,
+html.dark [class*="bg-blue-50"] h2,
+html.dark [class*="bg-blue-50"] h3,
+html.dark [class*="bg-blue-50"] h4,
+html.dark .bg-blue-50 strong,
+html.dark .bg-blue-50 b {
+  color: #dbeafe !important;
+}
+
+html.dark [class*="bg-blue-50"] p,
+html.dark [class*="bg-blue-50"] li,
+html.dark .bg-blue-50 p,
+html.dark .bg-blue-50 li {
+  color: #bfdbfe !important;
+}
+
+html.dark [class*="bg-blue-50"] .bg-white,
+html.dark [class*="bg-blue-50"] [class*="bg-white/"],
+html.dark .bg-blue-50 .bg-white {
+  background-color: rgba(15, 23, 42, 0.8) !important;
+  border-color: rgba(59, 130, 246, 0.35) !important;
+  color: #dbeafe !important;
+}
+
+/* --- F. EMERALD & GREEN BOXES (Module 2 Derivatives, MF Lite, Success Callouts) --- */
+html.dark .bg-emerald-50,
+html.dark .bg-emerald-50\/20,
+html.dark .bg-emerald-50\/30,
+html.dark .bg-emerald-50\/40,
+html.dark .bg-emerald-50\/50,
+html.dark .bg-emerald-50\/60,
+html.dark .bg-emerald-50\/70,
+html.dark .bg-emerald-50\/80,
+html.dark .bg-green-50,
+html.dark [class*=" bg-emerald-50/"],
+html.dark [class^="bg-emerald-50/"] {
+  background-color: rgba(16, 185, 129, 0.14) !important;
+  border-color: rgba(16, 185, 129, 0.35) !important;
+  color: #a7f3d0 !important;
+}
+
+html.dark .bg-emerald-100,
+html.dark .bg-emerald-100\/60,
+html.dark .bg-emerald-100\/70,
+html.dark .bg-emerald-200,
+html.dark .bg-emerald-200\/80,
+html.dark [class*=" bg-emerald-100/"],
+html.dark [class^="bg-emerald-100/"] {
+  background-color: rgba(16, 185, 129, 0.24) !important;
+  border-color: rgba(16, 185, 129, 0.45) !important;
+  color: #d1fae5 !important;
+}
+
+/* Emerald Typography */
+html.dark .text-emerald-950,
+html.dark .text-emerald-900 {
+  color: #d1fae5 !important;
+}
+
+html.dark .text-emerald-800 {
+  color: #a7f3d0 !important;
+}
+
+html.dark .text-emerald-700,
+html.dark .text-emerald-600 {
+  color: #6ee7b7 !important;
+}
+
+html.dark .text-emerald-500,
+html.dark .text-emerald-400 {
+  color: #34d399 !important;
+}
+
+html.dark .border-emerald-100,
+html.dark .border-emerald-200,
+html.dark .border-emerald-200\/60,
+html.dark .border-emerald-200\/80,
+html.dark .border-emerald-300,
+html.dark .border-emerald-300\/60,
+html.dark .border-emerald-400,
+html.dark .border-emerald-400\/50,
+html.dark [class*=" border-emerald-"],
+html.dark [class^="border-emerald-"] {
+  border-color: rgba(16, 185, 129, 0.35) !important;
+}
+
+/* Nested elements & inner cards in emerald callouts */
+html.dark [class*="bg-emerald-50"] strong,
+html.dark [class*="bg-emerald-50"] b,
+html.dark [class*="bg-emerald-50"] h2,
+html.dark [class*="bg-emerald-50"] h3,
+html.dark [class*="bg-emerald-50"] h4,
+html.dark .bg-emerald-50 strong,
+html.dark .bg-emerald-50 b {
+  color: #d1fae5 !important;
+}
+
+html.dark [class*="bg-emerald-50"] p,
+html.dark [class*="bg-emerald-50"] li,
+html.dark .bg-emerald-50 p,
+html.dark .bg-emerald-50 li {
+  color: #a7f3d0 !important;
+}
+
+html.dark [class*="bg-emerald-50"] .bg-white,
+html.dark [class*="bg-emerald-50"] [class*="bg-white/"],
+html.dark .bg-emerald-50 .bg-white {
+  background-color: rgba(15, 23, 42, 0.8) !important;
+  border-color: rgba(16, 185, 129, 0.35) !important;
+  color: #d1fae5 !important;
+}
+
+/* --- G. PURPLE & VIOLET BOXES (Module 3 Fixed Income & IR Derivatives) --- */
+html.dark .bg-purple-50,
+html.dark .bg-purple-50\/20,
+html.dark .bg-purple-50\/30,
+html.dark .bg-purple-50\/40,
+html.dark .bg-purple-50\/50,
+html.dark .bg-purple-50\/60,
+html.dark .bg-purple-50\/70,
+html.dark .bg-purple-50\/80,
+html.dark .bg-violet-50,
+html.dark [class*=" bg-purple-50/"],
+html.dark [class^="bg-purple-50/"] {
+  background-color: rgba(168, 85, 247, 0.14) !important;
+  border-color: rgba(168, 85, 247, 0.35) !important;
+  color: #e9d5ff !important;
+}
+
+html.dark .bg-purple-100,
+html.dark .bg-purple-100\/50,
+html.dark .bg-purple-100\/70,
+html.dark .bg-purple-200,
+html.dark [class*=" bg-purple-100/"],
+html.dark [class^="bg-purple-100/"] {
+  background-color: rgba(168, 85, 247, 0.24) !important;
+  border-color: rgba(168, 85, 247, 0.45) !important;
+  color: #f3e8ff !important;
+}
+
+/* Purple Typography */
+html.dark .text-purple-950,
+html.dark .text-purple-900 {
+  color: #f3e8ff !important;
+}
+
+html.dark .text-purple-800 {
+  color: #e9d5ff !important;
+}
+
+html.dark .text-purple-700,
+html.dark .text-purple-600,
+html.dark .text-violet-700,
+html.dark .text-violet-600 {
+  color: #d8b4fe !important;
+}
+
+html.dark .text-purple-500,
+html.dark .text-purple-400 {
+  color: #c084fc !important;
+}
+
+html.dark .border-purple-100,
+html.dark .border-purple-200,
+html.dark .border-purple-200\/60,
+html.dark .border-purple-200\/80,
+html.dark .border-purple-300,
+html.dark .border-purple-300\/80,
+html.dark .border-purple-400,
+html.dark .border-purple-400\/30,
+html.dark .border-violet-200,
+html.dark [class*=" border-purple-"],
+html.dark [class^="border-purple-"] {
+  border-color: rgba(168, 85, 247, 0.35) !important;
+}
+
+/* Nested elements & inner cards in purple callouts */
+html.dark [class*="bg-purple-50"] strong,
+html.dark [class*="bg-purple-50"] b,
+html.dark [class*="bg-purple-50"] h2,
+html.dark [class*="bg-purple-50"] h3,
+html.dark [class*="bg-purple-50"] h4,
+html.dark .bg-purple-50 strong,
+html.dark .bg-purple-50 b {
+  color: #f3e8ff !important;
+}
+
+html.dark [class*="bg-purple-50"] p,
+html.dark [class*="bg-purple-50"] li,
+html.dark .bg-purple-50 p,
+html.dark .bg-purple-50 li {
+  color: #e9d5ff !important;
+}
+
+html.dark [class*="bg-purple-50"] .bg-white,
+html.dark [class*="bg-purple-50"] [class*="bg-white/"],
+html.dark .bg-purple-50 .bg-white {
+  background-color: rgba(15, 23, 42, 0.8) !important;
+  border-color: rgba(168, 85, 247, 0.35) !important;
+  color: #f3e8ff !important;
+}
+
+/* --- H. INDIGO BOXES (Formula Highlights & Core Key Concepts) --- */
+html.dark .bg-indigo-50,
+html.dark .bg-indigo-50\/20,
+html.dark .bg-indigo-50\/30,
+html.dark .bg-indigo-50\/40,
+html.dark .bg-indigo-50\/50,
+html.dark .bg-indigo-50\/60,
+html.dark .bg-indigo-50\/70,
+html.dark .bg-indigo-50\/80,
+html.dark [class*=" bg-indigo-50/"],
+html.dark [class^="bg-indigo-50/"] {
+  background-color: rgba(99, 102, 241, 0.14) !important;
+  border-color: rgba(99, 102, 241, 0.35) !important;
+  color: #c7d2fe !important;
+}
+
+html.dark .bg-indigo-100,
+html.dark .bg-indigo-200,
+html.dark [class*=" bg-indigo-100/"],
+html.dark [class^="bg-indigo-100/"] {
+  background-color: rgba(99, 102, 241, 0.24) !important;
+  border-color: rgba(99, 102, 241, 0.45) !important;
+  color: #e0e7ff !important;
+}
+
+/* Indigo Typography */
+html.dark .text-indigo-950,
+html.dark .text-indigo-900,
+html.dark .text-indigo-900\/80,
+html.dark .text-indigo-900\/90,
+html.dark [class*=" text-indigo-900/"],
+html.dark [class^="text-indigo-900/"] {
+  color: #e0e7ff !important;
+}
+
+html.dark .text-indigo-800 {
+  color: #c7d2fe !important;
+}
+
+html.dark .text-indigo-700,
+html.dark .text-indigo-600 {
+  color: #a5b4fc !important;
+}
+
+html.dark .text-indigo-500,
+html.dark .text-indigo-400 {
+  color: #818cf8 !important;
+}
+
+html.dark .border-indigo-100,
+html.dark .border-indigo-200,
+html.dark .border-indigo-200\/80,
+html.dark .border-indigo-300,
+html.dark .border-indigo-400,
+html.dark .border-indigo-400\/40,
+html.dark .border-indigo-400\/50,
+html.dark [class*=" border-indigo-"],
+html.dark [class^="border-indigo-"] {
+  border-color: rgba(99, 102, 241, 0.35) !important;
+}
+
+/* Nested elements & inner cards in indigo callouts */
+html.dark [class*="bg-indigo-50"] strong,
+html.dark [class*="bg-indigo-50"] b,
+html.dark [class*="bg-indigo-50"] h2,
+html.dark [class*="bg-indigo-50"] h3,
+html.dark [class*="bg-indigo-50"] h4,
+html.dark .bg-indigo-50 strong,
+html.dark .bg-indigo-50 b {
+  color: #e0e7ff !important;
+}
+
+html.dark [class*="bg-indigo-50"] p,
+html.dark [class*="bg-indigo-50"] li,
+html.dark .bg-indigo-50 p,
+html.dark .bg-indigo-50 li {
+  color: #c7d2fe !important;
+}
+
+html.dark [class*="bg-indigo-50"] .bg-white,
+html.dark [class*="bg-indigo-50"] [class*="bg-white/"],
+html.dark .bg-indigo-50 .bg-white {
+  background-color: rgba(15, 23, 42, 0.8) !important;
+  border-color: rgba(99, 102, 241, 0.35) !important;
+  color: #e0e7ff !important;
+}
+
+/* --- I. ROSE & RED BOXES (Regulatory Prohibitions & Crisis Warnings) --- */
+html.dark .bg-rose-50,
+html.dark .bg-rose-50\/30,
+html.dark .bg-rose-50\/40,
+html.dark .bg-rose-50\/50,
+html.dark .bg-rose-50\/60,
+html.dark .bg-rose-50\/70,
+html.dark .bg-rose-50\/80,
+html.dark .bg-red-50,
+html.dark [class*=" bg-rose-50/"],
+html.dark [class^="bg-rose-50/"] {
+  background-color: rgba(244, 63, 94, 0.14) !important;
+  border-color: rgba(244, 63, 94, 0.35) !important;
+  color: #fecdd3 !important;
+}
+
+html.dark .bg-rose-100,
+html.dark .bg-rose-100\/70,
+html.dark .bg-rose-200,
+html.dark .bg-rose-200\/70,
+html.dark .bg-red-200,
+html.dark [class*=" bg-rose-100/"],
+html.dark [class^="bg-rose-100/"] {
+  background-color: rgba(244, 63, 94, 0.24) !important;
+  border-color: rgba(244, 63, 94, 0.45) !important;
+  color: #ffe4e6 !important;
+}
+
+/* Rose Typography */
+html.dark .text-rose-950,
+html.dark .text-rose-900,
+html.dark .text-rose-900\/90,
+html.dark .text-red-950,
+html.dark [class*=" text-rose-900/"],
+html.dark [class^="text-rose-900/"] {
+  color: #ffe4e6 !important;
+}
+
+html.dark .text-rose-800 {
+  color: #fecdd3 !important;
+}
+
+html.dark .text-rose-700,
+html.dark .text-rose-600,
+html.dark .text-red-700,
+html.dark .text-red-600 {
+  color: #fda4af !important;
+}
+
+html.dark .text-rose-500,
+html.dark .text-rose-400 {
+  color: #fb7185 !important;
+}
+
+html.dark .border-rose-100,
+html.dark .border-rose-200,
+html.dark .border-rose-300,
+html.dark .border-red-200,
+html.dark .border-red-400,
+html.dark [class*=" border-rose-"],
+html.dark [class^="border-rose-"] {
+  border-color: rgba(244, 63, 94, 0.35) !important;
+}
+
+/* Nested elements & inner cards in rose callouts */
+html.dark [class*="bg-rose-50"] strong,
+html.dark [class*="bg-rose-50"] b,
+html.dark [class*="bg-rose-50"] h2,
+html.dark [class*="bg-rose-50"] h3,
+html.dark [class*="bg-rose-50"] h4,
+html.dark .bg-rose-50 strong,
+html.dark .bg-rose-50 b {
+  color: #ffe4e6 !important;
+}
+
+html.dark [class*="bg-rose-50"] p,
+html.dark [class*="bg-rose-50"] li,
+html.dark .bg-rose-50 p,
+html.dark .bg-rose-50 li {
+  color: #fecdd3 !important;
+}
+
+html.dark [class*="bg-rose-50"] .bg-white,
+html.dark [class*="bg-rose-50"] [class*="bg-white/"],
+html.dark .bg-rose-50 .bg-white {
+  background-color: rgba(15, 23, 42, 0.8) !important;
+  border-color: rgba(244, 63, 94, 0.35) !important;
+  color: #ffe4e6 !important;
+}
+
+/* --- J. TEAL & CYAN BOXES --- */
+html.dark .bg-teal-50,
+html.dark .bg-teal-50\/30,
+html.dark .bg-teal-100,
+html.dark .bg-teal-200\/80,
+html.dark .bg-cyan-50\/50,
+html.dark .bg-cyan-50\/60,
+html.dark .bg-cyan-100,
+html.dark [class*=" bg-teal-50/"],
+html.dark [class^="bg-teal-50/"],
+html.dark [class*=" bg-cyan-50/"],
+html.dark [class^="bg-cyan-50/"] {
+  background-color: rgba(20, 184, 166, 0.14) !important;
+  border-color: rgba(20, 184, 166, 0.35) !important;
+  color: #99f6e4 !important;
+}
+
+html.dark .text-teal-950,
+html.dark .text-teal-900,
+html.dark .text-cyan-950,
+html.dark .text-cyan-900 {
+  color: #ccfbf1 !important;
+}
+
+html.dark .text-teal-800,
+html.dark .text-cyan-800 {
+  color: #99f6e4 !important;
+}
+
+html.dark .text-teal-700,
+html.dark .text-teal-600,
+html.dark .text-cyan-700,
+html.dark .text-cyan-600 {
+  color: #5eead4 !important;
+}
+
+html.dark .border-teal-100,
+html.dark .border-teal-200,
+html.dark .border-teal-300,
+html.dark .border-teal-400,
+html.dark .border-cyan-200,
+html.dark .border-cyan-200\/80,
+html.dark .border-cyan-300,
+html.dark [class*=" border-teal-"],
+html.dark [class*=" border-cyan-"] {
+  border-color: rgba(20, 184, 166, 0.35) !important;
+}
+
+/* --- K. ORANGE & LIME BOXES --- */
+html.dark .bg-orange-50,
+html.dark .bg-orange-100,
+html.dark .bg-lime-50,
+html.dark [class*=" bg-orange-50/"],
+html.dark [class^="bg-orange-50/"] {
+  background-color: rgba(249, 115, 22, 0.14) !important;
+  border-color: rgba(249, 115, 22, 0.35) !important;
+  color: #fed7aa !important;
+}
+
+html.dark .text-orange-950,
+html.dark .text-orange-900,
+html.dark .text-lime-900 {
+  color: #ffedd5 !important;
+}
+
+html.dark .text-orange-800,
+html.dark .text-orange-700,
+html.dark .text-lime-700 {
+  color: #fdba74 !important;
+}
+
+html.dark .border-orange-300,
+html.dark .border-orange-400,
+html.dark .border-lime-300,
+html.dark [class*=" border-orange-"],
+html.dark [class*=" border-lime-"] {
+  border-color: rgba(249, 115, 22, 0.35) !important;
+}
+
+/* --- L. Table Alternating Rows with Pastel Tints in Dark Mode --- */
+html.dark tr.bg-purple-50\/30,
+html.dark tr[class*="bg-purple-50"] {
+  background-color: rgba(168, 85, 247, 0.12) !important;
+}
+
+html.dark tr.bg-amber-50\/30,
+html.dark tr.bg-amber-50\/40,
+html.dark tr[class*="bg-amber-50"] {
+  background-color: rgba(245, 158, 11, 0.12) !important;
+}
+
+html.dark tr.bg-emerald-50\/40,
+html.dark tr[class*="bg-emerald-50"] {
+  background-color: rgba(16, 185, 129, 0.12) !important;
+}
+
+html.dark tr.bg-blue-50\/30,
+html.dark tr[class*="bg-blue-50"] {
+  background-color: rgba(59, 130, 246, 0.12) !important;
+}
+
+/* --- M. Inline Formula Spans & Code --- */
+html.dark span.font-mono.bg-white,
+html.dark span.font-mono[class*="bg-white"] {
+  background-color: #1a233a !important;
+  border-color: rgba(255, 255, 255, 0.16) !important;
+  color: #e2e8f0 !important;
+}
+
+/* --- N. Sidebar Quick Tips, Cheat Sheets & TOC Accordions --- */
+html.dark aside [class*="bg-amber-50"],
+html.dark aside [class*="bg-blue-50"],
+html.dark aside [class*="bg-purple-50"] {
+  background-color: #141c2f !important;
+  border-color: rgba(255, 255, 255, 0.12) !important;
+}
+
+html.dark aside [class*="bg-amber-50"] [class*="bg-white"],
+html.dark aside [class*="bg-blue-50"] [class*="bg-white"],
+html.dark aside [class*="bg-purple-50"] [class*="bg-white"] {
+  background-color: #1c263c !important;
+  border-color: rgba(255, 255, 255, 0.1) !important;
+  color: #f1f5f9 !important;
+}
+
+html.dark details summary[class*="bg-slate-50"] {
+  background-color: #161f36 !important;
+  color: #f1f5f9 !important;
+}
+
+html.dark nav a[class*="bg-amber-50"] {
+  background-color: rgba(245, 158, 11, 0.18) !important;
+  color: #fde68a !important;
+}
+
+html.dark nav a[class*="bg-blue-50"] {
+  background-color: rgba(59, 130, 246, 0.18) !important;
+  color: #bfdbfe !important;
+}
+
+/* 16. Touch & Scroll Responsive Tables */
+.overflow-x-auto {
+  max-width: 100% !important;
+  overflow-x: auto !important;
+  -webkit-overflow-scrolling: touch !important;
+  border-radius: 0.875rem !important;
+  scrollbar-width: thin !important;
+}
+
+table {
+  border-collapse: separate !important;
+  border-spacing: 0 !important;
+  width: 100% !important;
+}
+
+html.dark table th {
+  background-color: #18233a !important;
+  color: #f8fafc !important;
+  border-color: rgba(255, 255, 255, 0.12) !important;
+}
+
+html.dark table td {
+  color: #e2e8f0 !important;
+  border-color: rgba(255, 255, 255, 0.08) !important;
+}
+
+html.dark tr.bg-slate-50,
+html.dark tr.bg-gray-50 {
+  background-color: rgba(255, 255, 255, 0.03) !important;
+}
+
+html.dark table tbody tr:hover {
+  background-color: rgba(99, 102, 241, 0.08) !important;
+}
+
+/* 17. KaTeX and Math Overflow Protection */
+.katex-display,
+.katex,
+pre,
+code {
+  max-width: 100% !important;
+}
+
+.katex-display {
+  overflow-x: auto !important;
+  overflow-y: hidden !important;
+  padding: 0.5rem 0 !important;
+}
+
+html.dark code:not(pre code) {
+  background: rgba(255, 255, 255, 0.1) !important;
+  color: #a5b4fc !important;
+}
+
+html.dark pre {
+  background-color: #0d1424 !important;
+  border-color: rgba(255, 255, 255, 0.1) !important;
+}
+
+/* 18. Fluid Zoom Grid Reflow */
+@media (max-width: 1280px) {
+  .grid-cols-4 {
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)) !important;
+  }
+}
+
+@media (max-width: 1120px) {
+  .lg\:grid-cols-3 {
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)) !important;
+  }
+}
+
+@media (max-width: 768px) {
+  .grid-cols-2 {
+    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)) !important;
+  }
+}
+
+/* 19. Media Responsiveness */
+img, svg {
+  max-width: 100%;
+  height: auto;
+}
+
+/* ==========================================================================
+   20. macOS Interactive Quiz Engine (Flawless Light & Dark Mode)
+   ========================================================================== */
+
+/* --- A. LIGHT MODE QUIZ ENGINE --- */
+html:not(.dark) #interactive-quiz {
+  background: #ffffff !important;
+  color: #0f172a !important;
+  border: 1px solid #e2e8f0 !important;
+  box-shadow: 0 10px 25px -5px rgba(15, 23, 42, 0.06), 0 8px 10px -6px rgba(15, 23, 42, 0.04) !important;
+}
+
+/* Light Mode Headers, Badges & Dividers */
+html:not(.dark) #interactive-quiz .border-indigo-800\/80,
+html:not(.dark) #interactive-quiz .border-blue-800\/80,
+html:not(.dark) #interactive-quiz .border-purple-800\/80,
+html:not(.dark) #interactive-quiz .border-slate-800,
+html:not(.dark) #interactive-quiz .border-slate-700,
+html:not(.dark) #interactive-quiz .border-b,
+html:not(.dark) #interactive-quiz .border-t {
+  border-color: #e2e8f0 !important;
+}
+
+html:not(.dark) #interactive-quiz h2,
+html:not(.dark) #interactive-quiz h3 {
+  color: #0f172a !important;
+}
+
+html:not(.dark) #interactive-quiz p {
+  color: #475569 !important;
+}
+
+/* Module Header Chips (Themed) */
+html:not(.dark) #interactive-quiz div[class*="indigo-500/20"],
+html:not(.dark) #interactive-quiz div[class*="blue-500/20"] {
+  background: #eff6ff !important;
+  color: #1d4ed8 !important;
+  border: 1px solid #bfdbfe !important;
+}
+html:not(.dark) #interactive-quiz div[class*="indigo-500/20"] *,
+html:not(.dark) #interactive-quiz div[class*="blue-500/20"] * {
+  color: #1d4ed8 !important;
+}
+
+html:not(.dark) #interactive-quiz div[class*="emerald-500/20"] {
+  background: #ecfdf5 !important;
+  color: #047857 !important;
+  border: 1px solid #a7f3d0 !important;
+}
+html:not(.dark) #interactive-quiz div[class*="emerald-500/20"] * {
+  color: #047857 !important;
+}
+
+html:not(.dark) #interactive-quiz div[class*="purple-500/20"] {
+  background: #faf5ff !important;
+  color: #6d28d9 !important;
+  border: 1px solid #ddd6fe !important;
+}
+html:not(.dark) #interactive-quiz div[class*="purple-500/20"] * {
+  color: #6d28d9 !important;
+}
+
+/* Question Counter Badges */
+html:not(.dark) #interactive-quiz span[class*="text-indigo-400"],
+html:not(.dark) #interactive-quiz span[class*="text-blue-400"] {
+  color: #2563eb !important;
+  font-weight: 700 !important;
+}
+html:not(.dark) #interactive-quiz span[class*="text-emerald-400"] {
+  color: #059669 !important;
+  font-weight: 700 !important;
+}
+html:not(.dark) #interactive-quiz span[class*="text-purple-400"] {
+  color: #7c3aed !important;
+  font-weight: 700 !important;
+}
+
+html:not(.dark) #interactive-quiz #quiz-badge,
+html:not(.dark) #interactive-quiz .bg-white\/10 {
+  background: #f1f5f9 !important;
+  border-color: #e2e8f0 !important;
+  color: #334155 !important;
+}
+
+html:not(.dark) #interactive-quiz #answered-count {
+  color: #2563eb !important;
+  font-weight: 700 !important;
+}
+
+/* Light Mode Question Card */
+html:not(.dark) #interactive-quiz #questions-container > div,
+html:not(.dark) #interactive-quiz #quiz-container > div,
+html:not(.dark) #interactive-quiz [id^="q-box-"],
+html:not(.dark) #interactive-quiz [id^="q-div-"] {
+  background: #f8fafc !important;
+  border: 1px solid #e2e8f0 !important;
+  border-radius: 18px !important;
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.04) !important;
+}
+
+html:not(.dark) #interactive-quiz [id^="q-box-"] h4,
+html:not(.dark) #interactive-quiz [id^="q-div-"] h4,
+html:not(.dark) #interactive-quiz #questions-container h4,
+html:not(.dark) #interactive-quiz #quiz-container h4 {
+  color: #0f172a !important;
+  font-weight: 700 !important;
+}
+
+/* Light Mode Question Badges (Answered / Unanswered) */
+html:not(.dark) #interactive-quiz [id^="badge-"] {
+  background: #f1f5f9 !important;
+  color: #475569 !important;
+  border: 1px solid #cbd5e1 !important;
+}
+
+html:not(.dark) #interactive-quiz [id^="badge-"][class*="indigo"],
+html:not(.dark) #interactive-quiz [id^="badge-"][class*="blue"] {
+  background: #eff6ff !important;
+  color: #1d4ed8 !important;
+  border-color: #bfdbfe !important;
+}
+
+html:not(.dark) #interactive-quiz [id^="badge-"][class*="emerald"] {
+  background: #ecfdf5 !important;
+  color: #047857 !important;
+  border-color: #a7f3d0 !important;
+}
+
+html:not(.dark) #interactive-quiz [id^="badge-"][class*="purple"] {
+  background: #faf5ff !important;
+  color: #6d28d9 !important;
+  border-color: #ddd6fe !important;
+}
+
+/* Light Mode Options — Unselected State */
+html:not(.dark) #interactive-quiz label[id^="label-"],
+html:not(.dark) #interactive-quiz label {
+  background: #ffffff !important;
+  border: 1.5px solid #cbd5e1 !important;
+  color: #0f172a !important;
+  border-radius: 14px !important;
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.04) !important;
+  cursor: pointer !important;
+  transition: all 0.18s cubic-bezier(0.16, 1, 0.3, 1) !important;
+}
+
+html:not(.dark) #interactive-quiz label:not([class*="600"]):not([class*="900"]):not([class*="950"]):not(:has(input:checked)):hover {
+  background: #f8fafc !important;
+  border-color: #94a3b8 !important;
+  color: #0f172a !important;
+  transform: translateY(-1px) !important;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.06) !important;
+}
+
+#interactive-quiz input[type="radio"] {
+  position: absolute !important;
+  opacity: 0 !important;
+  width: 0 !important;
+  height: 0 !important;
+  pointer-events: none !important;
+}
+
+html:not(.dark) #interactive-quiz label span,
+html:not(.dark) #interactive-quiz label p,
+html:not(.dark) #interactive-quiz label div:not([class*="rounded"]) {
+  color: #1e293b !important;
+  font-size: 0.8125rem !important;
+  line-height: 1.5 !important;
+  font-weight: 500 !important;
+}
+
+/* Unselected Option Circular Letter/Index Pill */
+html:not(.dark) #interactive-quiz label [id^="radio-circle-"],
+html:not(.dark) #interactive-quiz label .uppercase,
+html:not(.dark) #interactive-quiz label div[class*="rounded-full"],
+html:not(.dark) #interactive-quiz label div.rounded-full,
+html:not(.dark) #interactive-quiz label span.w-5 {
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  width: 28px !important;
+  min-width: 28px !important;
+  height: 28px !important;
+  background: #f1f5f9 !important;
+  color: #334155 !important;
+  border: 1.5px solid #cbd5e1 !important;
+  border-radius: 9999px !important;
+  font-weight: 700 !important;
+  font-size: 0.75rem !important;
+  flex-shrink: 0 !important;
+  text-transform: uppercase !important;
+  transition: all 0.15s ease !important;
+}
+
+html:not(.dark) #interactive-quiz label:not([class*="600"]):not([class*="900"]):not([class*="950"]):hover [id^="radio-circle-"],
+html:not(.dark) #interactive-quiz label:not([class*="600"]):not([class*="900"]):not([class*="950"]):hover .uppercase,
+html:not(.dark) #interactive-quiz label:not([class*="600"]):not([class*="900"]):not([class*="950"]):hover div[class*="rounded-full"],
+html:not(.dark) #interactive-quiz label:not([class*="600"]):not([class*="900"]):not([class*="950"]):hover div.rounded-full,
+html:not(.dark) #interactive-quiz label:not([class*="600"]):not([class*="900"]):not([class*="950"]):hover span.w-5 {
+  background: #e2e8f0 !important;
+  border-color: #64748b !important;
+  color: #0f172a !important;
+}
+
+/* Light Mode Options — SELECTED STATE (Module-Themed & High Contrast) */
+/* 1. Module 1: Blue / Indigo */
+html:not(.dark) #interactive-quiz label[class*="blue-600/30"],
+html:not(.dark) #interactive-quiz label[class*="indigo-600/30"],
+html:not(.dark) #interactive-quiz label[class*="indigo-600/40"],
+html:not(.dark) #interactive-quiz label.quiz-selected-opt,
+html:not(.dark) #interactive-quiz label:has(input:checked) {
+  background: #eff6ff !important;
+  border: 2px solid #2563eb !important;
+  box-shadow: 0 0 0 3.5px rgba(37, 99, 235, 0.18), 0 2px 6px rgba(37, 99, 235, 0.12) !important;
+}
+
+html:not(.dark) #interactive-quiz label[class*="blue-600/30"] span,
+html:not(.dark) #interactive-quiz label[class*="indigo-600/30"] span,
+html:not(.dark) #interactive-quiz label[class*="indigo-600/40"] span,
+html:not(.dark) #interactive-quiz label.quiz-selected-opt span,
+html:not(.dark) #interactive-quiz label:has(input:checked) span {
+  color: #0f172a !important;
+  font-weight: 700 !important;
+}
+
+html:not(.dark) #interactive-quiz label[class*="blue-600/30"] [id^="radio-circle-"],
+html:not(.dark) #interactive-quiz label[class*="indigo-600/30"] [id^="radio-circle-"],
+html:not(.dark) #interactive-quiz label[class*="indigo-600/40"] [id^="radio-circle-"],
+html:not(.dark) #interactive-quiz label.quiz-selected-opt [id^="radio-circle-"],
+html:not(.dark) #interactive-quiz label:has(input:checked) [id^="radio-circle-"],
+html:not(.dark) #interactive-quiz label[class*="blue-600/30"] .uppercase,
+html:not(.dark) #interactive-quiz label[class*="indigo-600/30"] .uppercase,
+html:not(.dark) #interactive-quiz label[class*="indigo-600/40"] .uppercase,
+html:not(.dark) #interactive-quiz label.quiz-selected-opt .uppercase,
+html:not(.dark) #interactive-quiz label:has(input:checked) .uppercase,
+html:not(.dark) #interactive-quiz label[class*="blue-600/30"] div[class*="rounded-full"],
+html:not(.dark) #interactive-quiz label[class*="indigo-600/30"] div[class*="rounded-full"],
+html:not(.dark) #interactive-quiz label[class*="indigo-600/40"] div[class*="rounded-full"],
+html:not(.dark) #interactive-quiz label.quiz-selected-opt div[class*="rounded-full"],
+html:not(.dark) #interactive-quiz label:has(input:checked) div[class*="rounded-full"],
+html:not(.dark) #interactive-quiz label[class*="blue-600/30"] div.rounded-full,
+html:not(.dark) #interactive-quiz label.quiz-selected-opt div.rounded-full,
+html:not(.dark) #interactive-quiz label:has(input:checked) div.rounded-full,
+html:not(.dark) #interactive-quiz label[class*="blue-600/30"] span.w-5,
+html:not(.dark) #interactive-quiz label.quiz-selected-opt span.w-5,
+html:not(.dark) #interactive-quiz label:has(input:checked) span.w-5 {
+  background: #2563eb !important;
+  border-color: #1d4ed8 !important;
+  color: #ffffff !important;
+  box-shadow: 0 2px 6px rgba(37, 99, 235, 0.4) !important;
+}
+
+/* 2. Module 2: Emerald / Teal */
+html:not(.dark) #interactive-quiz label[class*="emerald-600/30"] {
+  background: #ecfdf5 !important;
+  border: 2px solid #059669 !important;
+  box-shadow: 0 0 0 3.5px rgba(16, 185, 129, 0.18), 0 2px 6px rgba(5, 150, 105, 0.12) !important;
+}
+
+html:not(.dark) #interactive-quiz label[class*="emerald-600/30"] span {
+  color: #064e3b !important;
+  font-weight: 700 !important;
+}
+
+html:not(.dark) #interactive-quiz label[class*="emerald-600/30"] [id^="radio-circle-"],
+html:not(.dark) #interactive-quiz label[class*="emerald-600/30"] .uppercase,
+html:not(.dark) #interactive-quiz label[class*="emerald-600/30"] div[class*="rounded-full"],
+html:not(.dark) #interactive-quiz label[class*="emerald-600/30"] div.rounded-full,
+html:not(.dark) #interactive-quiz label[class*="emerald-600/30"] span.w-5 {
+  background: #059669 !important;
+  border-color: #047857 !important;
+  color: #ffffff !important;
+  box-shadow: 0 2px 6px rgba(5, 150, 105, 0.4) !important;
+}
+
+/* 3. Module 3: Purple / Indigo */
+html:not(.dark) #interactive-quiz label[class*="purple-600/30"] {
+  background: #faf5ff !important;
+  border: 2px solid #7c3aed !important;
+  box-shadow: 0 0 0 3.5px rgba(124, 58, 237, 0.18), 0 2px 6px rgba(124, 58, 237, 0.12) !important;
+}
+
+html:not(.dark) #interactive-quiz label[class*="purple-600/30"] span {
+  color: #3b0764 !important;
+  font-weight: 700 !important;
+}
+
+html:not(.dark) #interactive-quiz label[class*="purple-600/30"] [id^="radio-circle-"],
+html:not(.dark) #interactive-quiz label[class*="purple-600/30"] .uppercase,
+html:not(.dark) #interactive-quiz label[class*="purple-600/30"] div[class*="rounded-full"],
+html:not(.dark) #interactive-quiz label[class*="purple-600/30"] div.rounded-full,
+html:not(.dark) #interactive-quiz label[class*="purple-600/30"] span.w-5 {
+  background: #7c3aed !important;
+  border-color: #6d28d9 !important;
+  color: #ffffff !important;
+  box-shadow: 0 2px 6px rgba(124, 58, 237, 0.4) !important;
+}
+
+/* Post-Submit Revealed Answers in Light Mode */
+/* Correct Answer (Green) */
+html:not(.dark) #interactive-quiz label[class*="emerald-900"],
+html:not(.dark) #interactive-quiz label[class*="emerald-950"] {
+  background: #ecfdf5 !important;
+  border: 2px solid #10b981 !important;
+  box-shadow: 0 0 0 3.5px rgba(16, 185, 129, 0.2) !important;
+}
+html:not(.dark) #interactive-quiz label[class*="emerald-900"] span,
+html:not(.dark) #interactive-quiz label[class*="emerald-950"] span {
+  color: #064e3b !important;
+  font-weight: 700 !important;
+}
+html:not(.dark) #interactive-quiz label[class*="emerald-900"] [id^="radio-circle-"],
+html:not(.dark) #interactive-quiz label[class*="emerald-950"] [id^="radio-circle-"],
+html:not(.dark) #interactive-quiz label[class*="emerald-900"] div[class*="rounded-full"],
+html:not(.dark) #interactive-quiz label[class*="emerald-950"] div[class*="rounded-full"],
+html:not(.dark) #interactive-quiz label[class*="emerald-900"] div.rounded-full,
+html:not(.dark) #interactive-quiz label[class*="emerald-950"] div.rounded-full,
+html:not(.dark) #interactive-quiz label[class*="emerald-900"] span.w-5,
+html:not(.dark) #interactive-quiz label[class*="emerald-950"] span.w-5 {
+  background: #10b981 !important;
+  border-color: #059669 !important;
+  color: #ffffff !important;
+}
+
+/* Incorrect Chosen Answer (Rose) */
+html:not(.dark) #interactive-quiz label[class*="rose-900"],
+html:not(.dark) #interactive-quiz label[class*="rose-950"] {
+  background: #fff1f2 !important;
+  border: 2px solid #f43f5e !important;
+  box-shadow: 0 0 0 3.5px rgba(244, 63, 94, 0.2) !important;
+}
+html:not(.dark) #interactive-quiz label[class*="rose-900"] span,
+html:not(.dark) #interactive-quiz label[class*="rose-950"] span {
+  color: #881337 !important;
+  font-weight: 700 !important;
+}
+html:not(.dark) #interactive-quiz label[class*="rose-900"] [id^="radio-circle-"],
+html:not(.dark) #interactive-quiz label[class*="rose-950"] [id^="radio-circle-"],
+html:not(.dark) #interactive-quiz label[class*="rose-900"] div[class*="rounded-full"],
+html:not(.dark) #interactive-quiz label[class*="rose-950"] div[class*="rounded-full"],
+html:not(.dark) #interactive-quiz label[class*="rose-900"] div.rounded-full,
+html:not(.dark) #interactive-quiz label[class*="rose-950"] div.rounded-full,
+html:not(.dark) #interactive-quiz label[class*="rose-900"] span.w-5,
+html:not(.dark) #interactive-quiz label[class*="rose-950"] span.w-5 {
+  background: #f43f5e !important;
+  border-color: #e11d48 !important;
+  color: #ffffff !important;
+}
+
+/* Other Unchosen Options (Muted) */
+html:not(.dark) #interactive-quiz label.opacity-50,
+html:not(.dark) #interactive-quiz label[class*="opacity-50"] {
+  background: #f8fafc !important;
+  border: 1px solid #e2e8f0 !important;
+  opacity: 0.55 !important;
+}
+html:not(.dark) #interactive-quiz label.opacity-50 *,
+html:not(.dark) #interactive-quiz label[class*="opacity-50"] * {
+  color: #64748b !important;
+}
+
+/* Light Mode Explanations */
+html:not(.dark) #interactive-quiz [id^="explanation-"][class*="emerald"] {
+  background: #f0fdf4 !important;
+  border: 1.5px solid #86efac !important;
+  border-radius: 14px !important;
+}
+html:not(.dark) #interactive-quiz [id^="explanation-"][class*="emerald"] .font-bold,
+html:not(.dark) #interactive-quiz [id^="explanation-"][class*="emerald"] [class*="text-emerald"] {
+  color: #15803d !important;
+  font-weight: 700 !important;
+}
+html:not(.dark) #interactive-quiz [id^="explanation-"][class*="emerald"] p {
+  color: #1e293b !important;
+  font-size: 0.8125rem !important;
+  line-height: 1.6 !important;
+}
+
+html:not(.dark) #interactive-quiz [id^="explanation-"][class*="rose"] {
+  background: #fff1f2 !important;
+  border: 1.5px solid #fecdd3 !important;
+  border-radius: 14px !important;
+}
+html:not(.dark) #interactive-quiz [id^="explanation-"][class*="rose"] .font-bold,
+html:not(.dark) #interactive-quiz [id^="explanation-"][class*="rose"] [class*="text-rose"] {
+  color: #e11d48 !important;
+  font-weight: 700 !important;
+}
+html:not(.dark) #interactive-quiz [id^="explanation-"][class*="rose"] p {
+  color: #1e293b !important;
+  font-size: 0.8125rem !important;
+  line-height: 1.6 !important;
+}
+
+/* Light Mode Scorecard */
+html:not(.dark) #interactive-quiz #quiz-results {
+  background: #f8fafc !important;
+  border: 2px solid #cbd5e1 !important;
+  color: #0f172a !important;
+  box-shadow: 0 10px 30px -5px rgba(15, 23, 42, 0.08) !important;
+}
+html:not(.dark) #interactive-quiz #quiz-results h3,
+html:not(.dark) #interactive-quiz #quiz-results h4 {
+  color: #0f172a !important;
+}
+html:not(.dark) #interactive-quiz #quiz-results #score-display {
+  color: #2563eb !important;
+}
+html:not(.dark) #interactive-quiz #quiz-results #percentage-display {
+  color: #64748b !important;
+}
+html:not(.dark) #interactive-quiz #quiz-results p {
+  color: #334155 !important;
+}
+
+/* Light Mode Buttons */
+html:not(.dark) #interactive-quiz #submit-quiz-btn {
+  background: #2563eb !important;
+  color: #ffffff !important;
+  box-shadow: 0 4px 14px rgba(37, 99, 235, 0.25) !important;
+}
+html:not(.dark) #interactive-quiz #submit-quiz-btn:hover {
+  background: #1d4ed8 !important;
+}
+
+html:not(.dark) #interactive-quiz #reset-quiz-btn {
+  background: #f1f5f9 !important;
+  color: #334155 !important;
+  border: 1px solid #cbd5e1 !important;
+}
+html:not(.dark) #interactive-quiz #reset-quiz-btn:hover {
+  background: #e2e8f0 !important;
+  color: #0f172a !important;
+}
+
+
+/* --- B. DARK MODE QUIZ ENGINE --- */
+html.dark #interactive-quiz {
+  background: #111827 !important;
+  color: #f8fafc !important;
+  border: 1px solid rgba(255, 255, 255, 0.1) !important;
+  box-shadow: 0 20px 40px -10px rgba(0, 0, 0, 0.5) !important;
+}
+
+/* Dark Mode Headers, Badges & Dividers */
+html.dark #interactive-quiz .border-indigo-800\/80,
+html.dark #interactive-quiz .border-blue-800\/80,
+html.dark #interactive-quiz .border-purple-800\/80,
+html.dark #interactive-quiz .border-slate-800,
+html.dark #interactive-quiz .border-slate-700,
+html.dark #interactive-quiz .border-b,
+html.dark #interactive-quiz .border-t {
+  border-color: rgba(255, 255, 255, 0.08) !important;
+}
+
+html.dark #interactive-quiz h2,
+html.dark #interactive-quiz h3 {
+  color: #ffffff !important;
+}
+
+html.dark #interactive-quiz p {
+  color: #94a3b8 !important;
+}
+
+html.dark #interactive-quiz #quiz-badge,
+html.dark #interactive-quiz .bg-white\/10 {
+  background: rgba(255, 255, 255, 0.08) !important;
+  border-color: rgba(255, 255, 255, 0.12) !important;
+  color: #e2e8f0 !important;
+}
+
+html.dark #interactive-quiz #answered-count {
+  color: #818cf8 !important;
+  font-weight: 700 !important;
+}
+
+/* Dark Mode Question Card */
+html.dark #interactive-quiz #questions-container > div,
+html.dark #interactive-quiz #quiz-container > div,
+html.dark #interactive-quiz [id^="q-box-"],
+html.dark #interactive-quiz [id^="q-div-"] {
+  background: #1a2337 !important;
+  border: 1px solid rgba(255, 255, 255, 0.08) !important;
+  border-radius: 18px !important;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25) !important;
+}
+
+html.dark #interactive-quiz [id^="q-box-"] h4,
+html.dark #interactive-quiz [id^="q-div-"] h4,
+html.dark #interactive-quiz #questions-container h4,
+html.dark #interactive-quiz #quiz-container h4 {
+  color: #ffffff !important;
+  font-weight: 700 !important;
+}
+
+/* Dark Mode Question Badges */
+html.dark #interactive-quiz [id^="badge-"] {
+  background: rgba(255, 255, 255, 0.06) !important;
+  color: #94a3b8 !important;
+  border: 1px solid rgba(255, 255, 255, 0.08) !important;
+}
+
+html.dark #interactive-quiz [id^="badge-"][class*="indigo"],
+html.dark #interactive-quiz [id^="badge-"][class*="blue"] {
+  background: rgba(99, 102, 241, 0.25) !important;
+  color: #c7d2fe !important;
+  border-color: rgba(99, 102, 241, 0.4) !important;
+}
+
+/* Dark Mode Options — Unselected State */
+html.dark #interactive-quiz label[id^="label-"],
+html.dark #interactive-quiz label {
+  background: rgba(255, 255, 255, 0.04) !important;
+  border: 1.5px solid rgba(255, 255, 255, 0.1) !important;
+  color: #e2e8f0 !important;
+  border-radius: 14px !important;
+  transition: all 0.15s ease !important;
+}
+
+html.dark #interactive-quiz label:hover {
+  background: rgba(255, 255, 255, 0.08) !important;
+  border-color: rgba(255, 255, 255, 0.2) !important;
+  color: #ffffff !important;
+}
+
+html.dark #interactive-quiz label span {
+  color: #e2e8f0 !important;
+  font-size: 0.8125rem !important;
+  line-height: 1.4 !important;
+}
+
+html.dark #interactive-quiz label [id^="radio-circle-"],
+html.dark #interactive-quiz label .uppercase,
+html.dark #interactive-quiz label div[class*="rounded-full"],
+html.dark #interactive-quiz label div.rounded-full,
+html.dark #interactive-quiz label span.w-5 {
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  width: 26px !important;
+  min-width: 26px !important;
+  height: 26px !important;
+  background: rgba(255, 255, 255, 0.08) !important;
+  color: #cbd5e1 !important;
+  border: 1.5px solid rgba(255, 255, 255, 0.16) !important;
+  border-radius: 9999px !important;
+  font-weight: 700 !important;
+  font-size: 0.75rem !important;
+  flex-shrink: 0 !important;
+  transition: all 0.15s ease !important;
+}
+
+html.dark #interactive-quiz label:hover [id^="radio-circle-"],
+html.dark #interactive-quiz label:hover .uppercase,
+html.dark #interactive-quiz label:hover div[class*="rounded-full"],
+html.dark #interactive-quiz label:hover div.rounded-full,
+html.dark #interactive-quiz label:hover span.w-5 {
+  background: rgba(255, 255, 255, 0.14) !important;
+  border-color: rgba(255, 255, 255, 0.3) !important;
+  color: #ffffff !important;
+}
+
+/* Dark Mode Options — SELECTED STATE (Luminous & Distinct) */
+/* 1. Module 1: Blue / Indigo */
+html.dark #interactive-quiz label[class*="blue-600/30"],
+html.dark #interactive-quiz label[class*="indigo-600/30"],
+html.dark #interactive-quiz label[class*="indigo-600/40"],
+html.dark #interactive-quiz label.quiz-selected-opt,
+html.dark #interactive-quiz label:has(input:checked) {
+  background: rgba(37, 99, 235, 0.28) !important;
+  border: 2px solid #60a5fa !important;
+  box-shadow: 0 0 0 3px rgba(96, 165, 250, 0.25), 0 4px 12px rgba(37, 99, 235, 0.3) !important;
+}
+
+html.dark #interactive-quiz label[class*="blue-600/30"] span,
+html.dark #interactive-quiz label[class*="indigo-600/30"] span,
+html.dark #interactive-quiz label[class*="indigo-600/40"] span,
+html.dark #interactive-quiz label.quiz-selected-opt span,
+html.dark #interactive-quiz label:has(input:checked) span {
+  color: #ffffff !important;
+  font-weight: 700 !important;
+}
+
+html.dark #interactive-quiz label[class*="blue-600/30"] [id^="radio-circle-"],
+html.dark #interactive-quiz label[class*="indigo-600/30"] [id^="radio-circle-"],
+html.dark #interactive-quiz label[class*="indigo-600/40"] [id^="radio-circle-"],
+html.dark #interactive-quiz label.quiz-selected-opt [id^="radio-circle-"],
+html.dark #interactive-quiz label:has(input:checked) [id^="radio-circle-"],
+html.dark #interactive-quiz label[class*="blue-600/30"] .uppercase,
+html.dark #interactive-quiz label[class*="indigo-600/30"] .uppercase,
+html.dark #interactive-quiz label[class*="indigo-600/40"] .uppercase,
+html.dark #interactive-quiz label.quiz-selected-opt .uppercase,
+html.dark #interactive-quiz label:has(input:checked) .uppercase,
+html.dark #interactive-quiz label[class*="blue-600/30"] div[class*="rounded-full"],
+html.dark #interactive-quiz label[class*="indigo-600/30"] div[class*="rounded-full"],
+html.dark #interactive-quiz label[class*="indigo-600/40"] div[class*="rounded-full"],
+html.dark #interactive-quiz label.quiz-selected-opt div[class*="rounded-full"],
+html.dark #interactive-quiz label:has(input:checked) div[class*="rounded-full"],
+html.dark #interactive-quiz label[class*="blue-600/30"] div.rounded-full,
+html.dark #interactive-quiz label.quiz-selected-opt div.rounded-full,
+html.dark #interactive-quiz label:has(input:checked) div.rounded-full,
+html.dark #interactive-quiz label[class*="blue-600/30"] span.w-5,
+html.dark #interactive-quiz label.quiz-selected-opt span.w-5,
+html.dark #interactive-quiz label:has(input:checked) span.w-5 {
+  background: #3b82f6 !important;
+  border-color: #60a5fa !important;
+  color: #ffffff !important;
+  box-shadow: 0 0 10px rgba(59, 130, 246, 0.5) !important;
+}
+
+/* 2. Module 2: Emerald / Teal */
+html.dark #interactive-quiz label[class*="emerald-600/30"] {
+  background: rgba(16, 185, 129, 0.24) !important;
+  border: 2px solid #34d399 !important;
+  box-shadow: 0 0 0 3px rgba(52, 211, 153, 0.25), 0 4px 12px rgba(16, 185, 129, 0.3) !important;
+}
+html.dark #interactive-quiz label[class*="emerald-600/30"] span {
+  color: #ffffff !important;
+  font-weight: 700 !important;
+}
+html.dark #interactive-quiz label[class*="emerald-600/30"] [id^="radio-circle-"],
+html.dark #interactive-quiz label[class*="emerald-600/30"] .uppercase,
+html.dark #interactive-quiz label[class*="emerald-600/30"] div[class*="rounded-full"],
+html.dark #interactive-quiz label[class*="emerald-600/30"] div.rounded-full,
+html.dark #interactive-quiz label[class*="emerald-600/30"] span.w-5 {
+  background: #10b981 !important;
+  border-color: #34d399 !important;
+  color: #ffffff !important;
+  box-shadow: 0 0 10px rgba(16, 185, 129, 0.5) !important;
+}
+
+/* 3. Module 3: Purple / Indigo */
+html.dark #interactive-quiz label[class*="purple-600/30"] {
+  background: rgba(139, 92, 246, 0.24) !important;
+  border: 2px solid #a78bfa !important;
+  box-shadow: 0 0 0 3px rgba(167, 139, 250, 0.25), 0 4px 12px rgba(139, 92, 246, 0.3) !important;
+}
+html.dark #interactive-quiz label[class*="purple-600/30"] span {
+  color: #ffffff !important;
+  font-weight: 700 !important;
+}
+html.dark #interactive-quiz label[class*="purple-600/30"] [id^="radio-circle-"],
+html.dark #interactive-quiz label[class*="purple-600/30"] .uppercase,
+html.dark #interactive-quiz label[class*="purple-600/30"] div[class*="rounded-full"],
+html.dark #interactive-quiz label[class*="purple-600/30"] div.rounded-full,
+html.dark #interactive-quiz label[class*="purple-600/30"] span.w-5 {
+  background: #8b5cf6 !important;
+  border-color: #a78bfa !important;
+  color: #ffffff !important;
+  box-shadow: 0 0 10px rgba(139, 92, 246, 0.5) !important;
+}
+
+/* Dark Mode Explanations */
+html.dark #interactive-quiz [id^="explanation-"][class*="emerald"] {
+  background: rgba(6, 78, 59, 0.45) !important;
+  border: 1.5px solid rgba(52, 211, 153, 0.4) !important;
+  color: #d1fae5 !important;
+  border-radius: 14px !important;
+}
+html.dark #interactive-quiz [id^="explanation-"][class*="emerald"] * {
+  color: #a7f3d0 !important;
+}
+html.dark #interactive-quiz [id^="explanation-"][class*="emerald"] .font-bold {
+  color: #34d399 !important;
+}
+
+html.dark #interactive-quiz [id^="explanation-"][class*="rose"] {
+  background: rgba(136, 19, 55, 0.45) !important;
+  border: 1.5px solid rgba(248, 113, 113, 0.4) !important;
+  color: #ffe4e6 !important;
+  border-radius: 14px !important;
+}
+html.dark #interactive-quiz [id^="explanation-"][class*="rose"] * {
+  color: #fca5a5 !important;
+}
+html.dark #interactive-quiz [id^="explanation-"][class*="rose"] .font-bold {
+  color: #f87171 !important;
+}
+
+/* Dark Mode Scorecard */
+html.dark #interactive-quiz #quiz-results {
+  background: #1a2337 !important;
+  border: 2px solid rgba(255, 255, 255, 0.12) !important;
+  color: #f8fafc !important;
+  box-shadow: 0 16px 36px -8px rgba(0, 0, 0, 0.6) !important;
+}
+html.dark #interactive-quiz #quiz-results h3,
+html.dark #interactive-quiz #quiz-results h4 {
+  color: #ffffff !important;
+}
+html.dark #interactive-quiz #quiz-results #score-display {
+  color: #60a5fa !important;
+}
+html.dark #interactive-quiz #quiz-results #percentage-display {
+  color: #94a3b8 !important;
+}
+html.dark #interactive-quiz #quiz-results p {
+  color: #e2e8f0 !important;
+}
+
+/* Dark Mode Buttons */
+html.dark #interactive-quiz #submit-quiz-btn {
+  background: #3b82f6 !important;
+  color: #ffffff !important;
+  box-shadow: 0 4px 16px rgba(59, 130, 246, 0.4) !important;
+}
+html.dark #interactive-quiz #submit-quiz-btn:hover {
+  background: #2563eb !important;
+}
+
+html.dark #interactive-quiz #reset-quiz-btn {
+  background: rgba(255, 255, 255, 0.08) !important;
+  color: #e2e8f0 !important;
+  border: 1px solid rgba(255, 255, 255, 0.15) !important;
+}
+html.dark #interactive-quiz #reset-quiz-btn:hover {
+  background: rgba(255, 255, 255, 0.15) !important;
+  color: #ffffff !important;
+}
+
+/* 21. Theme Switch Button Aesthetics */
+.theme-toggle-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 34px;
+  height: 34px;
+  border-radius: 10px;
+  background: rgba(241, 245, 249, 0.85);
+  border: 1px solid rgba(226, 232, 240, 0.85);
+  color: #475569;
+  cursor: pointer;
+  transition: transform 0.2s var(--macos-spring), background 0.15s ease, color 0.15s ease, border-color 0.15s ease;
+}
+
+.theme-toggle-btn:hover {
+  transform: scale(1.08);
+  background: #ffffff;
+  color: #f59e0b;
+  border-color: #cbd5e1;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+.theme-toggle-btn:active {
+  transform: scale(0.95);
+}
+
+html.dark .theme-toggle-btn {
+  background: rgba(30, 41, 59, 0.85);
+  border-color: rgba(255, 255, 255, 0.14);
+  color: #fcd34d;
+}
+
+html.dark .theme-toggle-btn:hover {
+  background: #1e293b;
+  color: #fef08a;
+  border-color: rgba(255, 255, 255, 0.25);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.4);
+}
+
+/* ==========================================================================
+   22. macOS Interactive Formula Lab & Quick Revision Modals
+   ========================================================================== */
+.macos-formula-backdrop {
+  position: fixed;
+  inset: 0;
+  z-index: 105;
+  background: rgba(15, 23, 42, 0.45);
+  backdrop-filter: blur(16px) saturate(170%);
+  -webkit-backdrop-filter: blur(16px) saturate(170%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1.5rem;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.22s var(--macos-spring);
+}
+
+.macos-formula-backdrop.open {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.macos-formula-modal {
+  width: 780px;
+  max-width: 100%;
+  max-height: 88vh;
+  background: rgba(255, 255, 255, 0.96);
+  backdrop-filter: blur(32px) saturate(200%);
+  -webkit-backdrop-filter: blur(32px) saturate(200%);
+  border: 1px solid rgba(255, 255, 255, 0.85);
+  border-radius: 22px;
+  box-shadow: 0 25px 60px -12px rgba(15, 23, 42, 0.32), 0 0 0 1px rgba(0, 0, 0, 0.06);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  transform: scale(0.95) translateY(-10px);
+  transition: transform 0.24s var(--macos-spring-bounce), background-color 0.25s ease, border-color 0.25s ease;
+}
+
+.macos-formula-backdrop.open .macos-formula-modal {
+  transform: scale(1) translateY(0);
+}
+
+html.dark .macos-formula-modal {
+  background: rgba(15, 23, 42, 0.95) !important;
+  border: 1px solid rgba(255, 255, 255, 0.14) !important;
+  box-shadow: 0 30px 70px -12px rgba(0, 0, 0, 0.8), 0 0 0 1px rgba(255, 255, 255, 0.08) !important;
+}
+
+/* macOS Native Segmented Tabs (Formula Lab, Cram Sheet, Dialogs) */
+.formula-lab-tabs,
+.macos-segmented-control {
+  display: flex;
+  align-items: center;
+  gap: 0.35rem;
+  padding: 0.45rem 0.85rem;
+  background: #f1f5f9;
+  border-bottom: 1px solid rgba(226, 232, 240, 0.9);
+  overflow-x: auto;
+  scrollbar-width: thin;
+}
+
+html.dark .formula-lab-tabs,
+html.dark .macos-segmented-control {
+  background: #090e1a !important;
+  border-bottom-color: rgba(255, 255, 255, 0.08) !important;
+}
+
+.formula-lab-tab,
+.macos-segmented-tab {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.375rem;
+  padding: 0.4rem 0.85rem;
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: #64748b;
+  border-radius: 9px;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: all 0.18s var(--macos-spring);
+  border: 1px solid transparent;
+  background: transparent;
+  user-select: none;
+}
+
+.formula-lab-tab:hover,
+.macos-segmented-tab:hover {
+  color: #0f172a;
+  background: rgba(255, 255, 255, 0.75);
+}
+
+.formula-lab-tab.active,
+.macos-segmented-tab.active {
+  background: #ffffff !important;
+  color: #4338ca !important;
+  border-color: rgba(203, 213, 225, 0.9) !important;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.06), 0 1px 2px rgba(0, 0, 0, 0.04) !important;
+  font-weight: 700 !important;
+}
+
+html.dark .formula-lab-tab,
+html.dark .macos-segmented-tab {
+  color: #94a3b8;
+}
+
+html.dark .formula-lab-tab:hover,
+html.dark .macos-segmented-tab:hover {
+  color: #f8fafc;
+  background: rgba(255, 255, 255, 0.08);
+}
+
+html.dark .formula-lab-tab.active,
+html.dark .macos-segmented-tab.active {
+  background: #1e293b !important;
+  color: #ffffff !important;
+  border-color: rgba(99, 102, 241, 0.5) !important;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.4), inset 0 1px 0 rgba(255, 255, 255, 0.15) !important;
+  font-weight: 700 !important;
+}
+
+/* Calculator Inputs & Result Display */
+.calc-input {
+  width: 100%;
+  padding: 0.5rem 0.75rem;
+  font-size: 0.8125rem;
+  font-weight: 600;
+  border-radius: 10px;
+  border: 1px solid #cbd5e1;
+  background: #ffffff;
+  color: #0f172a;
+  outline: none;
+  transition: border-color 0.15s ease, box-shadow 0.15s ease;
+}
+
+.calc-input:focus {
+  border-color: #6366f1;
+  box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.15);
+}
+
+html.dark .calc-input {
+  background: #1e293b;
+  border-color: rgba(255, 255, 255, 0.15);
+  color: #f8fafc;
+}
+
+html.dark .calc-input:focus {
+  border-color: #818cf8;
+  box-shadow: 0 0 0 3px rgba(129, 140, 248, 0.25);
+}
+
+select.calc-input {
+  cursor: pointer;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' stroke='%2364748b'%3E%3Cpath stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M19 9l-7 7-7-7'%3E%3C/path%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 0.75rem center;
+  background-size: 1rem;
+  padding-right: 2rem;
+}
+
+select.calc-input option {
+  background-color: #ffffff;
+  color: #0f172a;
+}
+
+html.dark select.calc-input {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' stroke='%2394a3b8'%3E%3Cpath stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M19 9l-7 7-7-7'%3E%3C/path%3E%3C/svg%3E");
+}
+
+html.dark select.calc-input option {
+  background-color: #1e293b;
+  color: #f8fafc;
+}
+
+.calc-result-box {
+  border-radius: 14px;
+  padding: 1rem;
+  background: linear-gradient(135deg, rgba(238, 242, 255, 0.8), rgba(224, 231, 255, 0.4));
+  border: 1px solid rgba(99, 102, 241, 0.25);
+  box-shadow: var(--macos-shadow-ambient);
+}
+
+html.dark .calc-result-box {
+  background: linear-gradient(135deg, rgba(30, 41, 59, 0.8), rgba(15, 23, 42, 0.6)) !important;
+  border-color: rgba(99, 102, 241, 0.35) !important;
+}
+
+/* Shortcuts & Cheatsheet Modals */
+.macos-sheet-modal {
+  width: 680px;
+  max-width: 100%;
+  max-height: 85vh;
+  background: rgba(255, 255, 255, 0.96);
+  backdrop-filter: blur(32px) saturate(200%);
+  -webkit-backdrop-filter: blur(32px) saturate(200%);
+  border: 1px solid rgba(255, 255, 255, 0.85);
+  border-radius: 22px;
+  box-shadow: 0 25px 60px -12px rgba(15, 23, 42, 0.32), 0 0 0 1px rgba(0, 0, 0, 0.06);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  transform: scale(0.95) translateY(-10px);
+  transition: transform 0.24s var(--macos-spring-bounce), background-color 0.25s ease;
+}
+
+.macos-formula-backdrop.open .macos-sheet-modal {
+  transform: scale(1) translateY(0);
+}
+
+html.dark .macos-sheet-modal {
+  background: rgba(15, 23, 42, 0.95) !important;
+  border: 1px solid rgba(255, 255, 255, 0.14) !important;
+}
+
+/* ==========================================================================
+   14. macOS Study Progress Tracking Engine
+   ========================================================================== */
+.sidebar-progress-container {
+  padding: 0.75rem 1rem;
+  border-bottom: 1px solid #f1f5f9;
+  background: rgba(248, 250, 252, 0.6);
+}
+
+html.dark .sidebar-progress-container {
+  border-bottom-color: rgba(255, 255, 255, 0.08);
+  background: rgba(15, 23, 42, 0.4);
+}
+
+.chapter-check-btn {
+  width: 18px;
+  height: 18px;
+  border-radius: 5px;
+  border: 1.5px solid #cbd5e1;
+  background: #ffffff;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.15s ease;
+  flex-shrink: 0;
+}
+
+.chapter-check-btn:hover {
+  border-color: #10b981;
+  background: #ecfdf5;
+}
+
+.chapter-check-btn.completed {
+  background: #10b981;
+  border-color: #10b981;
+  color: #ffffff;
+}
+
+html.dark .chapter-check-btn {
+  background: #1e293b;
+  border-color: #475569;
+}
+
+html.dark .chapter-check-btn.completed {
+  background: #10b981;
+  border-color: #10b981;
+  color: #ffffff;
+}
+
+.chapter-completion-card {
+  margin-top: 3rem;
+  margin-bottom: 2rem;
+  padding: 1.5rem;
+  border-radius: 20px;
+  background: linear-gradient(135deg, rgba(240, 253, 244, 0.8), rgba(236, 253, 245, 0.4));
+  border: 1px solid rgba(16, 185, 129, 0.3);
+  box-shadow: var(--macos-shadow-ambient);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  text-align: center;
+}
+
+@media (min-width: 640px) {
+  .chapter-completion-card {
+    flex-direction: row;
+    text-align: left;
+  }
+}
+
+html.dark .chapter-completion-card {
+  background: linear-gradient(135deg, rgba(6, 78, 59, 0.3), rgba(15, 23, 42, 0.6)) !important;
+  border-color: rgba(16, 185, 129, 0.4) !important;
+}
+
+/* ==========================================================================
+   15. Spotlight 2.0 Group Dividers
+   ========================================================================== */
+.spotlight-group-title {
+  padding: 0.5rem 1rem 0.25rem;
+  font-size: 0.6875rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: #94a3b8;
+}
+
+html.dark .spotlight-group-title {
+  color: #64748b;
+}
+
+/* ==========================================================================
+   16. High-Fidelity Print & PDF Export Engine
+   ========================================================================== */
+@media print {
+  .macos-dock-container,
+  .macos-sidebar-fixed,
+  .mobile-drawer-overlay,
+  .mobile-drawer,
+  .macos-spotlight-backdrop,
+  .macos-formula-backdrop,
+  .macos-reading-progress,
+  #nism-header-theme-btn,
+  #mobile-menu-btn,
+  .chapter-completion-card,
+  header,
+  footer {
+    display: none !important;
+  }
+
+  body {
+    background: #ffffff !important;
+    color: #000000 !important;
+    font-size: 11pt !important;
+    line-height: 1.5 !important;
+  }
+
+  main {
+    margin: 0 !important;
+    padding: 0 !important;
+    max-width: 100% !important;
+    width: 100% !important;
+  }
+
+  .glass-card,
+  .formula-card,
+  table,
+  tr,
+  blockquote {
+    break-inside: avoid !important;
+    page-break-inside: avoid !important;
+  }
+
+  a {
+    text-decoration: none !important;
+    color: #000000 !important;
+  }
+}
+
+/* ==========================================================================
+   17. Mock Test Center High-Fidelity Light & Dark Mode Engine
+   ========================================================================== */
+
+/* Light Mode Card & Container Elevation */
+html:not(.dark) #hub-view .bg-white,
+html:not(.dark) #exam-view .bg-white,
+html:not(.dark) #result-view .bg-white,
+html:not(.dark) .solution-card {
+  background-color: #ffffff !important;
+  border-color: #e2e8f0 !important;
+  box-shadow: 0 4px 20px -2px rgba(15, 23, 42, 0.05), 0 1px 3px 0 rgba(0, 0, 0, 0.03) !important;
+}
+
+html:not(.dark) .option-card {
+  background-color: #ffffff !important;
+  border-color: #cbd5e1 !important;
+  color: #1e293b !important;
+}
+
+html:not(.dark) .option-card:hover {
+  background-color: #f8fafc !important;
+  border-color: #94a3b8 !important;
+}
+
+html:not(.dark) .option-card.bg-indigo-50 {
+  background-color: #eff6ff !important;
+  border-color: #2563eb !important;
+  color: #0f172a !important;
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.15) !important;
+}
+
+/* Dark Mode Mock Test Engine */
+html.dark #hub-view .bg-white,
+html.dark #exam-view .bg-white,
+html.dark #result-view .bg-white,
+html.dark #submit-confirm-modal .bg-white,
+html.dark #mobile-palette-drawer .bg-white,
+html.dark .solution-card {
+  background-color: #151d30 !important;
+  border-color: rgba(255, 255, 255, 0.12) !important;
+  color: #f8fafc !important;
+}
+
+html.dark .option-card {
+  background-color: #161f36 !important;
+  border-color: rgba(255, 255, 255, 0.12) !important;
+  color: #e2e8f0 !important;
+}
+
+html.dark .option-card:hover {
+  background-color: #1e2942 !important;
+  border-color: rgba(99, 102, 241, 0.5) !important;
+}
+
+html.dark .option-card.bg-indigo-50 {
+  background-color: rgba(49, 46, 129, 0.4) !important;
+  border-color: #818cf8 !important;
+  color: #ffffff !important;
+  box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.25) !important;
+}
+
+html.dark #timer-container {
+  background-color: #1e293b !important;
+  border-color: rgba(255, 255, 255, 0.15) !important;
+  color: #f8fafc !important;
+}
+
+html.dark .solution-card.border-emerald-200 {
+  background-color: rgba(6, 78, 59, 0.2) !important;
+  border-color: rgba(16, 185, 129, 0.4) !important;
+}
+
+html.dark .solution-card.border-rose-200 {
+  background-color: rgba(136, 19, 55, 0.2) !important;
+  border-color: rgba(244, 63, 94, 0.4) !important;
+}
+
+/* Exam Active State - Distraction-Free Proctored Mode */
+body.exam-active #site-header,
+body.exam-active #nism-macos-dock,
+body.exam-active #nism-reading-progress,
+body.exam-active #nism-mobile-drawer,
+body.exam-active #nism-mobile-overlay,
+body.exam-active #sidebar-chapter-switcher {
+  display: none !important;
+}
+
+body.exam-active #exam-view > div:first-child {
+  top: 0 !important;
+}
+
+/* Exam Action Buttons & Palette High-Fidelity Styling */
+#btn-flag.active-flag {
+  background-color: #7c3aed !important;
+  border-color: #6d28d9 !important;
+  color: #ffffff !important;
+  box-shadow: 0 1px 3px rgba(124, 58, 237, 0.35) !important;
+}
+
+#btn-flag.active-flag i {
+  color: #ffffff !important;
+}
+
+html.dark #exam-view #btn-prev,
+html.dark #exam-view #btn-clear {
+  background-color: #1e293b !important;
+  border-color: rgba(255, 255, 255, 0.12) !important;
+  color: #cbd5e1 !important;
+}
+
+html.dark #exam-view #btn-prev:hover,
+html.dark #exam-view #btn-clear:hover {
+  background-color: #334155 !important;
+  color: #ffffff !important;
+}
+
+html.dark #btn-flag {
+  background-color: rgba(124, 58, 237, 0.15) !important;
+  border-color: rgba(167, 139, 250, 0.35) !important;
+  color: #c4b5fd !important;
+}
+
+html.dark #btn-flag:hover {
+  background-color: rgba(124, 58, 237, 0.28) !important;
+}
+
+html.dark #btn-flag.active-flag {
+  background-color: #7c3aed !important;
+  border-color: #8b5cf6 !important;
+  color: #ffffff !important;
+  box-shadow: 0 1px 4px rgba(139, 92, 246, 0.5) !important;
+}
+
+html.dark #exam-palette-aside .bg-white {
+  background-color: #151d30 !important;
+  border-color: rgba(255, 255, 255, 0.1) !important;
+}
+
+html.dark .palette-filter-btn {
+  color: #94a3b8 !important;
+}
+
+html.dark .palette-filter-btn.active {
+  background-color: rgba(99, 102, 241, 0.25) !important;
+  color: #a5b4fc !important;
+}
+
+

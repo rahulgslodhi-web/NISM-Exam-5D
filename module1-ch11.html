@@ -1,0 +1,1118 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Chapter 11: Mutual Fund Scheme Performance | NISM Series V-D Notes</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+  <script src="https://unpkg.com/lucide@latest"></script>
+
+  <!-- KaTeX for formula rendering -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.min.css">
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.min.js"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/contrib/auto-render.min.js" onload="renderMathInElement(document.body);"></script>
+
+  <!-- Global Module & Chapter Navigation Sidebar -->
+    <!-- Modern Documentation Design System & Zoom Engine -->
+  <link rel="stylesheet" href="modern-docs.css">
+  <script defer src="nav-sidebar.js"></script>
+
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+            display: ['"Space Grotesk"', 'sans-serif']
+          }
+        }
+      }
+    }
+  </script>
+</head>
+<body class="bg-slate-50 text-slate-900 min-h-screen flex flex-col selection:bg-blue-500 selection:text-white">
+
+  <!-- Header -->
+  <header class="sticky top-0 z-50 bg-white/90 backdrop-blur-md border-b border-slate-200">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
+      <div class="flex items-center gap-3">
+        <a href="module1.html" class="flex items-center gap-2 text-slate-500 hover:text-slate-900 transition-colors">
+          <div class="w-9 h-9 rounded-xl bg-slate-100 hover:bg-slate-200 flex items-center justify-center text-slate-700 transition-colors">
+            <i data-lucide="arrow-left" class="w-4 h-4"></i>
+          </div>
+        </a>
+        <div>
+          <div class="flex items-center gap-2">
+            <span class="text-xs font-bold uppercase tracking-wider text-blue-600 bg-blue-50 px-2 py-0.5 rounded">Module 1</span>
+            <span class="text-xs text-slate-400 font-medium">Chapter 11 of 12</span>
+          </div>
+          <h1 class="font-display font-bold text-base sm:text-lg text-slate-900 leading-tight">Mutual Fund Scheme Performance</h1>
+        </div>
+      </div>
+
+      <div class="flex items-center gap-3">
+        <span class="hidden sm:inline-flex items-center gap-1 px-3 py-1 rounded-full text-xs font-bold bg-amber-50 text-amber-700 border border-amber-200">
+          <i data-lucide="award" class="w-3.5 h-3.5"></i>
+          Weightage: 5 Marks
+        </span>
+        <a href="#interactive-quiz" class="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-lg text-xs font-bold bg-blue-600 hover:bg-blue-700 text-white shadow-sm transition-all">
+          <i data-lucide="help-circle" class="w-3.5 h-3.5"></i>
+          <span>Chapter Quiz</span>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Content Grid -->
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 grid grid-cols-1 lg:grid-cols-12 gap-8 flex-grow">
+    
+    <!-- Sidebar Navigation -->
+    <aside class="hidden lg:block lg:col-span-3">
+      <div class="sticky top-24 space-y-4">
+        <!-- Chapter Switcher (3 Module Dropdowns) -->
+        <div id="sidebar-chapter-switcher"></div>
+
+        <div class="bg-white p-5 rounded-2xl border border-slate-200 shadow-sm">
+          <h2 class="text-xs font-bold text-slate-400 uppercase tracking-wider mb-3">Chapter Navigation</h2>
+          <nav class="space-y-1 text-xs">
+            <a href="#section-1" class="block px-2.5 py-1.5 rounded-lg text-slate-600 hover:bg-slate-100 hover:text-blue-600">11.1 Benchmarking & TRI Mandate</a>
+            <a href="#section-2" class="block px-2.5 py-1.5 rounded-lg text-amber-700 font-semibold bg-amber-50/70 hover:bg-amber-100">11.2 Two-Tier Benchmark Architecture ⭐</a>
+            <a href="#section-3" class="block px-2.5 py-1.5 rounded-lg text-amber-700 font-semibold bg-amber-50/70 hover:bg-amber-100">11.3 Risk-Adjusted Ratios (Sharpe, Treynor, Sortino) ⭐</a>
+            <a href="#section-4" class="block px-2.5 py-1.5 rounded-lg text-amber-700 font-semibold bg-amber-50/70 hover:bg-amber-100">11.4 Jensen's Alpha & Information Ratio ⭐</a>
+            <a href="#section-5" class="block px-2.5 py-1.5 rounded-lg text-amber-700 font-semibold bg-amber-50/70 hover:bg-amber-100">11.5 Tracking Error vs. Tracking Difference ⭐</a>
+            <a href="#section-6" class="block px-2.5 py-1.5 rounded-lg text-amber-700 font-semibold bg-amber-50/70 hover:bg-amber-100">11.6 SEBI Performance Advertising Norms ⭐</a>
+            <a href="#section-7" class="block px-2.5 py-1.5 rounded-lg text-indigo-700 font-semibold bg-indigo-50/70 hover:bg-indigo-100">11.7 SIF Performance Dynamics 🚀</a>
+            <a href="#interactive-quiz" class="block px-2.5 py-1.5 rounded-lg text-blue-700 font-bold bg-blue-50 hover:bg-blue-100 mt-2">Practice Quiz (12 MCQs)</a>
+          </nav>
+        </div>
+
+        <div class="p-4 rounded-2xl bg-gradient-to-br from-blue-600 to-indigo-700 text-white shadow-sm text-xs space-y-2">
+          <div class="flex items-center gap-1.5 font-bold">
+            <i data-lucide="zap" class="w-4 h-4 text-amber-300"></i>
+            <span>Exam Formula Rules</span>
+          </div>
+          <p class="text-blue-100 leading-relaxed text-[11px] space-y-1">
+            • <strong>Sharpe:</strong> (R<sub>p</sub> - R<sub>f</sub>) / &sigma; (Total Risk)<br>
+            • <strong>Treynor:</strong> (R<sub>p</sub> - R<sub>f</sub>) / &beta; (Systematic Risk)<br>
+            • <strong>Sortino:</strong> (R<sub>p</sub> - R<sub>f</sub>) / Downside Deviation<br>
+            • <strong>Alpha:</strong> R<sub>p</sub> - [R<sub>f</sub> + &beta;(R<sub>m</sub> - R<sub>f</sub>)]<br>
+            • <strong>IR:</strong> (R<sub>p</sub> - R<sub>b</sub>) / Tracking Error<br>
+            • <strong>Max Tracking Error (Passive):</strong> 2.00%
+          </p>
+        </div>
+      </div>
+    </aside>
+
+    <!-- Main Notes -->
+    <div class="lg:col-span-9 space-y-8">
+
+      <!-- Section 11.1 -->
+      <section id="section-1" class="bg-white rounded-3xl p-6 sm:p-8 border border-slate-200/90 shadow-sm space-y-5">
+        <div class="flex items-center justify-between">
+          <div class="flex items-center gap-2 text-xs font-bold text-slate-500 uppercase tracking-wider">
+            <span class="w-2 h-2 rounded-full bg-slate-400"></span> Section 11.1 &bull; Fast-Track Refresher
+          </div>
+          <span class="text-xs px-2.5 py-1 rounded-full bg-slate-100 text-slate-600 font-semibold">Benchmarking Principles</span>
+        </div>
+        
+        <div>
+          <h2 class="font-display font-bold text-xl sm:text-2xl text-slate-900">Benchmarking & Total Return Index (TRI) Mandate</h2>
+          <p class="text-sm text-slate-600 mt-1">Understanding the shift from Price Return Index (PRI) to Total Return Index (TRI) and why SEBI made it compulsory.</p>
+        </div>
+
+        <div class="space-y-4 text-xs text-slate-700 leading-relaxed">
+          <p>
+            A <strong>benchmark</strong> is an unmanaged, standardized basket of securities that serves as an objective baseline against which a mutual fund scheme's risk, return, and portfolio manager skill are judged. A fund's absolute return is meaningless in isolation: generating 15% when the broader market gained 25% is underperformance, while generating 8% when the broader market dropped 5% demonstrates superior management.
+          </p>
+
+          <!-- PRI vs TRI Comparison Grid -->
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-4 pt-1">
+            <div class="p-4 rounded-2xl bg-rose-50/60 border border-rose-200 space-y-2">
+              <div class="flex items-center justify-between">
+                <span class="font-bold text-rose-900 text-sm">Price Return Index (PRI) — Discontinued</span>
+                <span class="text-[10px] uppercase tracking-wider font-bold bg-rose-200/70 text-rose-800 px-2 py-0.5 rounded">Pre-Feb 2018</span>
+              </div>
+              <p class="text-slate-600">
+                Measures <strong>only capital price movements</strong> of constituent stocks. Completely ignores dividends distributed by companies in the index.
+              </p>
+              <div class="p-3 bg-white rounded-xl border border-rose-200 text-rose-900">
+                <strong>Flaw / Distortion:</strong> Mutual fund NAVs automatically receive and reinvest dividends from portfolio holdings. Comparing a dividend-accumulating NAV against a price-only PRI created an <em>artificial optical alpha of 1.5% to 2.5% p.a.</em>, flattering active managers unfairly.
+              </div>
+            </div>
+
+            <div class="p-4 rounded-2xl bg-emerald-50/60 border border-emerald-200 space-y-2">
+              <div class="flex items-center justify-between">
+                <span class="font-bold text-emerald-900 text-sm">Total Return Index (TRI) — Mandatory</span>
+                <span class="text-[10px] uppercase tracking-wider font-bold bg-emerald-200 text-emerald-800 px-2 py-0.5 rounded">SEBI Mandate</span>
+              </div>
+              <p class="text-slate-700">
+                Measures <strong>both capital gains AND dividend reinvestment</strong>. Assumes gross dividends declared by index constituents are immediately reinvested back into the index on the ex-dividend date.
+              </p>
+              <div class="p-3 bg-white rounded-xl border border-emerald-200 text-emerald-900">
+                <strong>Fair & Transparent:</strong> SEBI mandated effective February 1, 2018, that all equity and hybrid mutual funds must benchmark performance exclusively against the Total Return Index (TRI), eliminating phantom alpha.
+              </div>
+            </div>
+          </div>
+
+          <!-- Master Table: PRI vs TRI -->
+          <div class="overflow-x-auto rounded-2xl border border-slate-200 mt-3">
+            <table class="min-w-full text-xs text-left">
+              <thead class="bg-slate-100 text-slate-700 font-bold uppercase tracking-wider">
+                <tr>
+                  <th class="p-3">Attribute</th>
+                  <th class="p-3">Price Return Index (PRI)</th>
+                  <th class="p-3">Total Return Index (TRI)</th>
+                </tr>
+              </thead>
+              <tbody class="divide-y divide-slate-200">
+                <tr class="hover:bg-slate-50">
+                  <td class="p-3 font-semibold text-slate-800">Components Included</td>
+                  <td class="p-3 text-slate-600">Stock price fluctuations only (Capital appreciation/depreciation)</td>
+                  <td class="p-3 font-semibold text-emerald-800">Stock price movements + All corporate dividend cash flows</td>
+                </tr>
+                <tr class="hover:bg-slate-50">
+                  <td class="p-3 font-semibold text-slate-800">Parity with Mutual Fund NAV</td>
+                  <td class="p-3 text-rose-700">Mismatched (Fund NAV holds dividends, PRI does not)</td>
+                  <td class="p-3 text-emerald-700 font-semibold">Perfect Parity (Both fund NAV and TRI capture dividends)</td>
+                </tr>
+                <tr class="hover:bg-slate-50">
+                  <td class="p-3 font-semibold text-slate-800">Historical Return Difference</td>
+                  <td class="p-3 text-slate-600">Lower by roughly 1.5% to 2.5% per annum</td>
+                  <td class="p-3 text-slate-700">Higher by roughly 1.5% to 2.5% per annum due to compounding</td>
+                </tr>
+                <tr class="hover:bg-slate-50">
+                  <td class="p-3 font-semibold text-slate-800">SEBI Regulatory Status</td>
+                  <td class="p-3 text-rose-600 font-semibold">Disallowed for performance benchmarking</td>
+                  <td class="p-3 text-emerald-800 font-bold">Mandatory across all equity & hybrid schemes</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </section>
+
+      <!-- Section 11.2 -->
+      <section id="section-2" class="bg-white rounded-3xl p-6 sm:p-8 border border-amber-200 shadow-sm space-y-5">
+        <div class="flex items-center justify-between">
+          <div class="flex items-center gap-2 text-xs font-bold text-amber-700 uppercase tracking-wider">
+            <span class="w-2 h-2 rounded-full bg-amber-500"></span> Section 11.2 &bull; Super High Exam Yield ⭐
+          </div>
+          <span class="text-xs px-2.5 py-1 rounded-full bg-amber-100 text-amber-800 font-bold">SEBI Two-Tier Framework</span>
+        </div>
+
+        <div>
+          <h2 class="font-display font-bold text-xl sm:text-2xl text-slate-900">Two-Tier Benchmark Architecture & AMFI Category Indices</h2>
+          <p class="text-sm text-slate-600 mt-1">To eliminate "benchmark gaming", SEBI instituted a standardized two-tier framework across all scheme categories.</p>
+        </div>
+
+        <div class="space-y-4 text-xs text-slate-700 leading-relaxed">
+          <p>
+            Historically, AMCs frequently changed benchmarks or picked easier indices (e.g., a mid-cap fund comparing itself against Nifty 50) to make fund managers look skillful. Effective April 1, 2022, SEBI created a standardized <strong>Two-Tier Benchmarking Framework</strong>:
+          </p>
+
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <div class="p-4 rounded-2xl bg-blue-50/60 border border-blue-200 space-y-2">
+              <div class="flex items-center justify-between">
+                <span class="font-bold text-blue-900 text-sm">Tier-1 Benchmark (Compulsory)</span>
+                <span class="text-[10px] font-bold bg-blue-200 text-blue-800 px-2 py-0.5 rounded">Mandatory</span>
+              </div>
+              <p class="text-slate-700">
+                Reflects the <strong>broad category</strong> to which the scheme belongs. AMFI issues a single, standardized list of Tier-1 indices for all schemes. <strong>Every fund in a category must use an AMFI-prescribed Tier-1 benchmark.</strong>
+              </p>
+              <ul class="list-disc pl-4 space-y-1 text-slate-600">
+                <li>Ensures an apple-to-apple comparison among peers in the same category.</li>
+                <li>AMC cannot arbitrarily select a narrow or easier index for Tier-1.</li>
+              </ul>
+            </div>
+
+            <div class="p-4 rounded-2xl bg-purple-50/60 border border-purple-200 space-y-2">
+              <div class="flex items-center justify-between">
+                <span class="font-bold text-purple-900 text-sm">Tier-2 Benchmark (Optional)</span>
+                <span class="text-[10px] font-bold bg-purple-200 text-purple-800 px-2 py-0.5 rounded">AMC Discretion</span>
+              </div>
+              <p class="text-slate-700">
+                Reflects the <strong>bespoke investment style, sector, or thematic strategy</strong> within the broad category.
+              </p>
+              <ul class="list-disc pl-4 space-y-1 text-slate-600">
+                <li>Optional for broad funds; highly recommended for thematic/sectoral funds.</li>
+                <li>Allows fund managers to demonstrate skill against their specialized strategy.</li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- AMFI Category-to-Benchmark Master Table -->
+          <div class="pt-2">
+            <h3 class="font-bold text-sm text-slate-900 mb-2">Standardized Tier-1 Benchmarks Prescribed by AMFI</h3>
+            <div class="overflow-x-auto rounded-2xl border border-slate-200">
+              <table class="min-w-full text-xs text-left">
+                <thead class="bg-slate-100 text-slate-700 font-bold uppercase tracking-wider">
+                  <tr>
+                    <th class="p-3">SEBI Category</th>
+                    <th class="p-3">Standard AMFI Tier-1 Benchmark (TRI)</th>
+                    <th class="p-3">Illustrative Tier-2 Benchmark (Optional)</th>
+                  </tr>
+                </thead>
+                <tbody class="divide-y divide-slate-200">
+                  <tr class="hover:bg-slate-50">
+                    <td class="p-3 font-semibold text-slate-900">Large Cap Fund</td>
+                    <td class="p-3 font-mono text-blue-700">Nifty 100 TRI or S&P BSE 100 TRI</td>
+                    <td class="p-3 text-slate-500">Nifty 50 TRI (if mega-cap focused)</td>
+                  </tr>
+                  <tr class="hover:bg-slate-50">
+                    <td class="p-3 font-semibold text-slate-900">Large & Mid Cap Fund</td>
+                    <td class="p-3 font-mono text-blue-700">Nifty LargeMidcap 250 TRI or S&P BSE LargeMidCap 250 TRI</td>
+                    <td class="p-3 text-slate-500">Custom 50:50 blend</td>
+                  </tr>
+                  <tr class="hover:bg-slate-50">
+                    <td class="p-3 font-semibold text-slate-900">Mid Cap Fund</td>
+                    <td class="p-3 font-mono text-blue-700">Nifty Midcap 150 TRI or S&P BSE MidCap 150 TRI</td>
+                    <td class="p-3 text-slate-500">Nifty Midcap 50 TRI</td>
+                  </tr>
+                  <tr class="hover:bg-slate-50">
+                    <td class="p-3 font-semibold text-slate-900">Small Cap Fund</td>
+                    <td class="p-3 font-mono text-blue-700">Nifty Smallcap 250 TRI or S&P BSE SmallCap 250 TRI</td>
+                    <td class="p-3 text-slate-500">Nifty Smallcap 100 TRI</td>
+                  </tr>
+                  <tr class="hover:bg-slate-50">
+                    <td class="p-3 font-semibold text-slate-900">Flexi Cap / Focused / ELSS</td>
+                    <td class="p-3 font-mono text-blue-700">Nifty 500 TRI or S&P BSE 500 TRI</td>
+                    <td class="p-3 text-slate-500">Nifty 500 Value 50 TRI (if value bias)</td>
+                  </tr>
+                  <tr class="hover:bg-slate-50">
+                    <td class="p-3 font-semibold text-slate-900">Multi Cap Fund</td>
+                    <td class="p-3 font-mono text-blue-700">Nifty 500 Multicap 50:25:25 TRI</td>
+                    <td class="p-3 text-slate-500">S&P BSE 500 Multicap 50:25:25 TRI</td>
+                  </tr>
+                  <tr class="hover:bg-slate-50">
+                    <td class="p-3 font-semibold text-slate-900">Sectoral / Thematic Fund</td>
+                    <td class="p-3 font-mono text-blue-700">Broader Sector/Thematic Index (e.g. Nifty Bank TRI)</td>
+                    <td class="p-3 text-slate-500">Narrower Sub-segment (e.g. Nifty Private Bank TRI)</td>
+                  </tr>
+                  <tr class="hover:bg-slate-50">
+                    <td class="p-3 font-semibold text-slate-900">Balanced Advantage / DAA</td>
+                    <td class="p-3 font-mono text-blue-700">NIFTY 50 Hybrid Composite Debt 50:50 Index</td>
+                    <td class="p-3 text-slate-500">Dynamic model-based customized index</td>
+                  </tr>
+                  <tr class="hover:bg-slate-50">
+                    <td class="p-3 font-semibold text-slate-900">Overnight / Liquid Fund</td>
+                    <td class="p-3 font-mono text-blue-700">CRISIL Liquid Overnight Index / NIFTY Liquid Index A-I</td>
+                    <td class="p-3 text-slate-500">NIFTY 1D Rate Index</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+
+          <!-- Additional Benchmark Callout -->
+          <div class="p-4 rounded-2xl bg-amber-50/70 border border-amber-200 text-amber-950 space-y-1">
+            <span class="font-bold flex items-center gap-1.5">
+              <i data-lucide="info" class="w-4 h-4 text-amber-700"></i>
+              Additional Benchmark (Standard Universal Benchmark)
+            </span>
+            <p class="text-[11px] text-amber-900 leading-relaxed">
+              In addition to Tier-1 and Tier-2, SEBI mandates disclosure of an <strong>Additional Standard Benchmark</strong> across all fund factsheets and advertisements. For equity funds, this is universally <strong>Nifty 50 TRI</strong> or <strong>S&P BSE Sensex TRI</strong>. For debt funds, it is the <strong>CRISIL 10 Year Gilt Index</strong> (10-Year GoI Bond).
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Section 11.3 -->
+      <section id="section-3" class="bg-white rounded-3xl p-6 sm:p-8 border border-amber-200 shadow-sm space-y-5">
+        <div class="flex items-center justify-between">
+          <div class="flex items-center gap-2 text-xs font-bold text-amber-700 uppercase tracking-wider">
+            <span class="w-2 h-2 rounded-full bg-amber-500"></span> Section 11.3 &bull; Super High Exam Yield ⭐
+          </div>
+          <span class="text-xs px-2.5 py-1 rounded-full bg-amber-100 text-amber-800 font-bold">Core Performance Ratios</span>
+        </div>
+
+        <div>
+          <h2 class="font-display font-bold text-xl sm:text-2xl text-slate-900">Risk-Adjusted Ratios: Sharpe, Treynor & Sortino</h2>
+          <p class="text-sm text-slate-600 mt-1">Evaluating excess return generated per unit of risk assumed. Higher is always better.</p>
+        </div>
+
+        <div class="space-y-5 text-xs text-slate-700 leading-relaxed">
+          <p>
+            Raw returns are deeply deceptive. A fund delivering 18% return by taking extreme, gut-wrenching volatility is inferior to a fund delivering 16% return with minimal volatility. Modern Portfolio Theory provides three foundational ratios to evaluate risk-adjusted return:
+          </p>
+
+          <!-- 3 Ratio Cards -->
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+            
+            <!-- Sharpe Ratio Card -->
+            <div class="p-4 rounded-2xl bg-blue-50/50 border border-blue-200 space-y-2">
+              <div class="flex items-center justify-between">
+                <span class="font-bold text-blue-900 text-sm">Sharpe Ratio</span>
+                <span class="text-[10px] font-bold bg-blue-200 text-blue-800 px-2 py-0.5 rounded">Total Risk</span>
+              </div>
+              <div class="p-2.5 bg-white rounded-xl border border-blue-200 font-mono text-center text-xs font-bold text-blue-900">
+                Sharpe = (R<sub>p</sub> - R<sub>f</sub>) / &sigma;<sub>p</sub>
+              </div>
+              <p class="text-slate-600 text-[11px] leading-relaxed">
+                • <strong>Numerator:</strong> Excess return over risk-free rate.<br>
+                • <strong>Denominator:</strong> Standard Deviation (&sigma;<sub>p</sub>) = <em>Total Risk</em> (Systematic + Unsystematic).<br>
+                • <strong>Best Used For:</strong> Evaluating a fund that constitutes the investor's <em>entire portfolio</em>.
+              </p>
+            </div>
+
+            <!-- Treynor Ratio Card -->
+            <div class="p-4 rounded-2xl bg-indigo-50/50 border border-indigo-200 space-y-2">
+              <div class="flex items-center justify-between">
+                <span class="font-bold text-indigo-900 text-sm">Treynor Ratio</span>
+                <span class="text-[10px] font-bold bg-indigo-200 text-indigo-800 px-2 py-0.5 rounded">Systematic Risk</span>
+              </div>
+              <div class="p-2.5 bg-white rounded-xl border border-indigo-200 font-mono text-center text-xs font-bold text-indigo-900">
+                Treynor = (R<sub>p</sub> - R<sub>f</sub>) / &beta;<sub>p</sub>
+              </div>
+              <p class="text-slate-600 text-[11px] leading-relaxed">
+                • <strong>Numerator:</strong> Excess return over risk-free rate.<br>
+                • <strong>Denominator:</strong> Beta (&beta;<sub>p</sub>) = <em>Systematic (Market) Risk</em> only.<br>
+                • <strong>Best Used For:</strong> Evaluating a fund as an <em>addition to a large, well-diversified portfolio</em> where specific risk is eliminated.
+              </p>
+            </div>
+
+            <!-- Sortino Ratio Card -->
+            <div class="p-4 rounded-2xl bg-emerald-50/50 border border-emerald-200 space-y-2">
+              <div class="flex items-center justify-between">
+                <span class="font-bold text-emerald-900 text-sm">Sortino Ratio</span>
+                <span class="text-[10px] font-bold bg-emerald-200 text-emerald-800 px-2 py-0.5 rounded">Downside Risk</span>
+              </div>
+              <div class="p-2.5 bg-white rounded-xl border border-emerald-200 font-mono text-center text-xs font-bold text-emerald-900">
+                Sortino = (R<sub>p</sub> - R<sub>f</sub>) / &sigma;<sub>d</sub>
+              </div>
+              <p class="text-slate-600 text-[11px] leading-relaxed">
+                • <strong>Numerator:</strong> Excess return over risk-free or MAR.<br>
+                • <strong>Denominator:</strong> Downside Deviation (&sigma;<sub>d</sub>) = <em>Downside Volatility</em> only.<br>
+                • <strong>Best Used For:</strong> Investors who welcome upside volatility but dread loss of capital and deep drawdowns.
+              </p>
+            </div>
+
+          </div>
+
+          <!-- Comprehensive Comparison Table -->
+          <div class="overflow-x-auto rounded-2xl border border-slate-200 mt-3">
+            <table class="min-w-full text-xs text-left">
+              <thead class="bg-slate-100 text-slate-700 font-bold uppercase tracking-wider">
+                <tr>
+                  <th class="p-3">Ratio</th>
+                  <th class="p-3">Formula</th>
+                  <th class="p-3">Risk Metric (Denominator)</th>
+                  <th class="p-3">Theoretical Context</th>
+                  <th class="p-3">Primary Exam Trap</th>
+                </tr>
+              </thead>
+              <tbody class="divide-y divide-slate-200">
+                <tr class="hover:bg-slate-50">
+                  <td class="p-3 font-bold text-blue-900">Sharpe Ratio</td>
+                  <td class="p-3 font-mono text-slate-800 bg-slate-50">(R<sub>p</sub> - R<sub>f</sub>) / &sigma;<sub>p</sub></td>
+                  <td class="p-3 font-semibold text-slate-700">Standard Deviation (&sigma;)</td>
+                  <td class="p-3 text-slate-600">Assumes investor holds only this scheme (full standalone risk matters).</td>
+                  <td class="p-3 text-rose-700 font-medium">Penalizes positive upside surges as "volatility".</td>
+                </tr>
+                <tr class="hover:bg-slate-50">
+                  <td class="p-3 font-bold text-indigo-900">Treynor Ratio</td>
+                  <td class="p-3 font-mono text-slate-800 bg-slate-50">(R<sub>p</sub> - R<sub>f</sub>) / &beta;<sub>p</sub></td>
+                  <td class="p-3 font-semibold text-slate-700">Beta (&beta;)</td>
+                  <td class="p-3 text-slate-600">Assumes unsystematic risk is completely diversified away; only market beta remains.</td>
+                  <td class="p-3 text-rose-700 font-medium">Misleading if the fund is poorly diversified (ignores specific risk).</td>
+                </tr>
+                <tr class="hover:bg-slate-50">
+                  <td class="p-3 font-bold text-emerald-900">Sortino Ratio</td>
+                  <td class="p-3 font-mono text-slate-800 bg-slate-50">(R<sub>p</sub> - MAR) / &sigma;<sub>d</sub></td>
+                  <td class="p-3 font-semibold text-slate-700">Downside Deviation (&sigma;<sub>d</sub>)</td>
+                  <td class="p-3 text-slate-600">Asymmetric risk preference: investors only care about negative swings below a hurdle rate.</td>
+                  <td class="p-3 text-rose-700 font-medium">Requires large sample size of negative return periods to be statistically sound.</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <!-- Numerical Solved Examples Box -->
+          <div class="p-4 rounded-2xl bg-slate-50 border border-slate-200 space-y-3">
+            <div class="flex items-center gap-1.5 font-bold text-slate-900 text-sm">
+              <i data-lucide="calculator" class="w-4 h-4 text-blue-600"></i>
+              <span>Practical Solved Numerical: Comparing Two Schemes</span>
+            </div>
+            <p class="text-slate-600">
+              Consider two schemes evaluated in the market when the 91-day T-bill risk-free rate (R<sub>f</sub>) is <strong>6%</strong>:
+            </p>
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+              <div class="p-3 bg-white rounded-xl border border-slate-200 space-y-1">
+                <span class="font-bold text-blue-900">Scheme Blue (Aggressive Multi Cap)</span>
+                <p class="text-slate-600">
+                  • Annualized Return (R<sub>p</sub>): 18%<br>
+                  • Standard Deviation (&sigma;): 16%<br>
+                  • Portfolio Beta (&beta;): 1.20<br>
+                  • Downside Deviation (&sigma;<sub>d</sub>): 6%
+                </p>
+                <div class="pt-2 border-t border-slate-100 font-mono text-[11px] text-blue-950 font-bold space-y-0.5">
+                  <div>Sharpe = (18 - 6) / 16 = <strong>0.75</strong></div>
+                  <div>Treynor = (18 - 6) / 1.20 = <strong>10.00%</strong></div>
+                  <div>Sortino = (18 - 6) / 6 = <strong>2.00</strong></div>
+                </div>
+              </div>
+
+              <div class="p-3 bg-white rounded-xl border border-slate-200 space-y-1">
+                <span class="font-bold text-emerald-900">Scheme Green (Disciplined Large Cap)</span>
+                <p class="text-slate-600">
+                  • Annualized Return (R<sub>p</sub>): 15%<br>
+                  • Standard Deviation (&sigma;): 10%<br>
+                  • Portfolio Beta (&beta;): 0.75<br>
+                  • Downside Deviation (&sigma;<sub>d</sub>): 5%
+                </p>
+                <div class="pt-2 border-t border-slate-100 font-mono text-[11px] text-emerald-950 font-bold space-y-0.5">
+                  <div>Sharpe = (15 - 6) / 10 = <strong>0.90</strong> (Superior Standalone)</div>
+                  <div>Treynor = (15 - 6) / 0.75 = <strong>12.00%</strong> (Superior Addition)</div>
+                  <div>Sortino = (15 - 6) / 5 = <strong>1.80</strong></div>
+                </div>
+              </div>
+            </div>
+            <div class="p-3 rounded-xl bg-amber-50 border border-amber-200 text-amber-900 text-[11px]">
+              <strong>Exam Takeaway:</strong> Even though Scheme Blue generated 3% higher raw return (18% vs 15%), Scheme Green delivered significantly higher <strong>Sharpe (0.90 vs 0.75)</strong> and higher <strong>Treynor (12% vs 10%)</strong> because it assumed vastly lower volatility and market risk.
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Section 11.4 -->
+      <section id="section-4" class="bg-white rounded-3xl p-6 sm:p-8 border border-amber-200 shadow-sm space-y-5">
+        <div class="flex items-center justify-between">
+          <div class="flex items-center gap-2 text-xs font-bold text-amber-700 uppercase tracking-wider">
+            <span class="w-2 h-2 rounded-full bg-amber-500"></span> Section 11.4 &bull; Super High Exam Yield ⭐
+          </div>
+          <span class="text-xs px-2.5 py-1 rounded-full bg-amber-100 text-amber-800 font-bold">CAPM & Active Skill</span>
+        </div>
+
+        <div>
+          <h2 class="font-display font-bold text-xl sm:text-2xl text-slate-900">Jensen's Alpha (&alpha;) & Information Ratio (IR)</h2>
+          <p class="text-sm text-slate-600 mt-1">Measuring pure active manager outperformance and tracking risk efficiency.</p>
+        </div>
+
+        <div class="space-y-5 text-xs text-slate-700 leading-relaxed">
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+            
+            <!-- Jensen's Alpha Section -->
+            <div class="p-4 rounded-2xl bg-slate-50 border border-slate-200 space-y-2.5">
+              <span class="font-bold text-slate-900 text-sm">1. Jensen's Alpha (&alpha;) — CAPM Outperformance</span>
+              <p class="text-slate-600">
+                Derived from the <strong>Capital Asset Pricing Model (CAPM)</strong>. It measures the excess return generated by the fund manager above the expected return required for the systematic risk (&beta;) assumed.
+              </p>
+              <div class="p-3 bg-white rounded-xl border border-slate-200 font-mono text-[11px] text-slate-900">
+                Expected Return E(R<sub>p</sub>) = R<sub>f</sub> + &beta;<sub>p</sub> &times; (R<sub>m</sub> - R<sub>f</sub>)<br>
+                <strong>Jensen's Alpha (&alpha;) = Actual R<sub>p</sub> - E(R<sub>p</sub>)</strong>
+              </div>
+              <ul class="list-disc pl-4 space-y-1 text-slate-700 text-[11px]">
+                <li><strong>Positive Alpha (&alpha; &gt; 0):</strong> The manager generated superior returns via security selection / market timing (value added).</li>
+                <li><strong>Zero Alpha (&alpha; = 0):</strong> Return exactly matches the CAPM expectation for the beta taken.</li>
+                <li><strong>Negative Alpha (&alpha; &lt; 0):</strong> The manager destroyed value, underperforming the risk-adjusted benchmark (dragged by expenses or poor stock picks).</li>
+              </ul>
+            </div>
+
+            <!-- Information Ratio Section -->
+            <div class="p-4 rounded-2xl bg-blue-50/50 border border-blue-200 space-y-2.5">
+              <span class="font-bold text-blue-900 text-sm">2. Information Ratio (IR) — Active Return vs Active Risk</span>
+              <p class="text-slate-600">
+                Measures the consistency with which an active manager generates excess return relative to the benchmark index, normalized by active risk (Tracking Error).
+              </p>
+              <div class="p-3 bg-white rounded-xl border border-blue-200 font-mono text-[11px] text-blue-900">
+                Active Return = R<sub>p</sub> - R<sub>b</sub><br>
+                <strong>Information Ratio = (R<sub>p</sub> - R<sub>b</sub>) / Tracking Error</strong>
+              </div>
+              <ul class="list-disc pl-4 space-y-1 text-slate-700 text-[11px]">
+                <li><strong>SEBI Mandate:</strong> Daily disclosure of Information Ratio on AMC websites and AMFI for all active schemes.</li>
+                <li><strong>Benchmark IR:</strong> &gt;0.50 is good; &gt;0.75 is very strong; &gt;1.00 represents exceptional, persistent manager skill.</li>
+              </ul>
+            </div>
+
+          </div>
+
+          <!-- Detailed Solved Math Example for Exam -->
+          <div class="p-4 rounded-2xl bg-amber-50/70 border border-amber-200 space-y-3">
+            <span class="font-bold text-amber-950 text-xs flex items-center gap-1.5">
+              <i data-lucide="help-circle" class="w-4 h-4 text-amber-700"></i>
+              Exam Numerical Walkthrough: Calculating Jensen's Alpha & Information Ratio
+            </span>
+            <div class="p-3 bg-white rounded-xl border border-amber-200 text-slate-800 space-y-2 text-xs">
+              <p>
+                <strong>Problem:</strong> A mutual fund delivers an actual return of <strong>16%</strong>. The risk-free rate is <strong>6%</strong>, the benchmark market return is <strong>12%</strong>, the fund's Beta is <strong>1.20</strong>, and its Tracking Error is <strong>4%</strong>.
+              </p>
+              <div class="font-mono text-[11px] space-y-1 text-slate-700 border-t border-slate-100 pt-2">
+                <div><strong>Step 1: Calculate Market Risk Premium (R<sub>m</sub> - R<sub>f</sub>)</strong> = 12% - 6% = 6.0%</div>
+                <div><strong>Step 2: Calculate CAPM Expected Return E(R<sub>p</sub>)</strong> = R<sub>f</sub> + &beta; &times; (R<sub>m</sub> - R<sub>f</sub>) = 6% + 1.20 &times; 6% = 6% + 7.2% = <strong>13.2%</strong></div>
+                <div><strong>Step 3: Calculate Jensen's Alpha (&alpha;)</strong> = Actual R<sub>p</sub> - Expected Return = 16% - 13.2% = <strong class="text-emerald-700">+2.8%</strong></div>
+                <div><strong>Step 4: Calculate Information Ratio (IR)</strong> = (R<sub>p</sub> - R<sub>b</sub>) / Tracking Error = (16% - 12%) / 4% = 4% / 4% = <strong class="text-blue-700">1.00</strong></div>
+              </div>
+            </div>
+            <p class="text-[11px] text-amber-900">
+              <strong>Interpretation:</strong> The fund manager generated 2.8% pure alpha above CAPM expectations, and an Information Ratio of 1.00 confirms exceptional active consistency.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Section 11.5 -->
+      <section id="section-5" class="bg-white rounded-3xl p-6 sm:p-8 border border-amber-200 shadow-sm space-y-5">
+        <div class="flex items-center justify-between">
+          <div class="flex items-center gap-2 text-xs font-bold text-amber-700 uppercase tracking-wider">
+            <span class="w-2 h-2 rounded-full bg-amber-500"></span> Section 11.5 &bull; Super High Exam Yield ⭐
+          </div>
+          <span class="text-xs px-2.5 py-1 rounded-full bg-amber-100 text-amber-800 font-bold">Passive Fund Replication</span>
+        </div>
+
+        <div>
+          <h2 class="font-display font-bold text-xl sm:text-2xl text-slate-900">Tracking Error vs. Tracking Difference for Index Funds & ETFs</h2>
+          <p class="text-sm text-slate-600 mt-1">Understanding the critical metrics used to evaluate passive index replication efficiency.</p>
+        </div>
+
+        <div class="space-y-4 text-xs text-slate-700 leading-relaxed">
+          <p>
+            In passive management (Index Funds and ETFs), the fund manager does not attempt to beat the benchmark; their sole objective is to <strong>replicate the benchmark index as faithfully as possible</strong>. Two distinct metrics evaluate this replication quality:
+          </p>
+
+          <!-- Master Table: TE vs TD -->
+          <div class="overflow-x-auto rounded-2xl border border-slate-200">
+            <table class="min-w-full text-xs text-left">
+              <thead class="bg-slate-100 text-slate-700 font-bold uppercase tracking-wider">
+                <tr>
+                  <th class="p-3">Attribute</th>
+                  <th class="p-3">Tracking Difference (TD)</th>
+                  <th class="p-3">Tracking Error (TE)</th>
+                </tr>
+              </thead>
+              <tbody class="divide-y divide-slate-200">
+                <tr class="hover:bg-slate-50">
+                  <td class="p-3 font-semibold text-slate-800">Mathematical Definition</td>
+                  <td class="p-3 font-mono text-slate-700">R<sub>scheme</sub> - R<sub>benchmark</sub></td>
+                  <td class="p-3 font-mono text-slate-700">&sigma;(R<sub>scheme, t</sub> - R<sub>benchmark, t</sub>) &times; &radic;250</td>
+                </tr>
+                <tr class="hover:bg-slate-50">
+                  <td class="p-3 font-semibold text-slate-800">What it Measures</td>
+                  <td class="p-3 text-slate-600">The <strong>simple arithmetic quantum</strong> of under/outperformance over a specified period.</td>
+                  <td class="p-3 text-slate-600">The <strong>annualized volatility/dispersion</strong> of daily return differences (consistency of tracking).</td>
+                </tr>
+                <tr class="hover:bg-slate-50">
+                  <td class="p-3 font-semibold text-slate-800">Typical Value / Sign</td>
+                  <td class="p-3 text-slate-600">Usually <em>negative</em> (due to Total Expense Ratio and cash drag).</td>
+                  <td class="p-3 text-slate-600">Always <em>positive</em> (standard deviation cannot be negative). Desired close to 0%.</td>
+                </tr>
+                <tr class="hover:bg-slate-50">
+                  <td class="p-3 font-semibold text-slate-800">Reporting Horizon</td>
+                  <td class="p-3 text-slate-600">Disclosed for 1-yr, 3-yr, 5-yr, 10-yr, and since inception.</td>
+                  <td class="p-3 text-slate-600">Calculated over past 3-year trailing daily returns (or since inception).</td>
+                </tr>
+                <tr class="hover:bg-slate-50">
+                  <td class="p-3 font-semibold text-slate-800">SEBI Regulatory Limit</td>
+                  <td class="p-3 text-slate-600">No fixed numerical ceiling (governed by TER limits).</td>
+                  <td class="p-3 font-bold text-rose-700">Must NOT exceed 2.00% for Index Funds and ETFs.</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <!-- 6 Primary Drivers of TE and TD -->
+          <div class="p-4 rounded-2xl bg-slate-50 border border-slate-200 space-y-2">
+            <span class="font-bold text-slate-900 text-xs">Primary Causes of Tracking Difference and Tracking Error:</span>
+            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-3 pt-1">
+              <div class="p-2.5 bg-white rounded-xl border border-slate-200 space-y-0.5">
+                <span class="font-semibold text-slate-800">1. Total Expense Ratio (TER)</span>
+                <p class="text-slate-500 text-[11px]">The index has 0% cost, while the fund deducts daily recurring TER from NAV.</p>
+              </div>
+              <div class="p-2.5 bg-white rounded-xl border border-slate-200 space-y-0.5">
+                <span class="font-semibold text-slate-800">2. Cash Drag</span>
+                <p class="text-slate-500 text-[11px]">Funds hold 0.5% - 2% in liquid cash for daily redemptions, diluting equity gains.</p>
+              </div>
+              <div class="p-2.5 bg-white rounded-xl border border-slate-200 space-y-0.5">
+                <span class="font-semibold text-slate-800">3. Dividend Reinvestment Lag</span>
+                <p class="text-slate-500 text-[11px]">Index reinvests dividends on ex-date; fund receives cash weeks later.</p>
+              </div>
+              <div class="p-2.5 bg-white rounded-xl border border-slate-200 space-y-0.5">
+                <span class="font-semibold text-slate-800">4. Rebalancing & Brokerage</span>
+                <p class="text-slate-500 text-[11px]">Brokerage, STT, and market impact cost incurred during index rebalancing.</p>
+              </div>
+              <div class="p-2.5 bg-white rounded-xl border border-slate-200 space-y-0.5">
+                <span class="font-semibold text-slate-800">5. Corporate Actions</span>
+                <p class="text-slate-500 text-[11px]">Rights issues, bonus shares, spin-offs, and stock splits timing mismatch.</p>
+              </div>
+              <div class="p-2.5 bg-white rounded-xl border border-slate-200 space-y-0.5">
+                <span class="font-semibold text-slate-800">6. Circuit Filters & Illiquidity</span>
+                <p class="text-slate-500 text-[11px]">Constituent stocks hitting upper/lower circuits prevent immediate execution.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="p-3.5 rounded-xl bg-blue-50 border border-blue-200 text-blue-900 text-xs flex items-center gap-2">
+            <i data-lucide="alert-triangle" class="w-4 h-4 text-blue-700 shrink-0"></i>
+            <span><strong>SEBI Compliance Rule:</strong> If Tracking Error for any Index Fund or ETF exceeds <strong>2%</strong>, the AMC must immediately report this to the Board of Trustees and prominently publish the breach on its website.</span>
+          </div>
+        </div>
+      </section>
+
+      <!-- Section 11.6 -->
+      <section id="section-6" class="bg-white rounded-3xl p-6 sm:p-8 border border-amber-200 shadow-sm space-y-5">
+        <div class="flex items-center justify-between">
+          <div class="flex items-center gap-2 text-xs font-bold text-amber-700 uppercase tracking-wider">
+            <span class="w-2 h-2 rounded-full bg-amber-500"></span> Section 11.6 &bull; Super High Exam Yield ⭐
+          </div>
+          <span class="text-xs px-2.5 py-1 rounded-full bg-amber-100 text-amber-800 font-bold">SEBI Advertising Code</span>
+        </div>
+
+        <div>
+          <h2 class="font-display font-bold text-xl sm:text-2xl text-slate-900">SEBI Performance Advertising & Factsheet Standards</h2>
+          <p class="text-sm text-slate-600 mt-1">Strict regulatory rules governing public performance claims, period horizons, and disclosures.</p>
+        </div>
+
+        <div class="space-y-4 text-xs text-slate-700 leading-relaxed">
+          <p>
+            SEBI's Advertising Code (Sixth Schedule to SEBI Mutual Fund Regulations) protects investors against selective, cherry-picked, or misleading performance claims:
+          </p>
+
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+            
+            <div class="p-4 rounded-2xl bg-slate-50 border border-slate-200 space-y-2">
+              <span class="font-bold text-slate-900 text-sm">Mandatory Time Periods (CAGR)</span>
+              <p class="text-slate-600">
+                For all mutual fund schemes in existence for <strong>more than 1 year</strong>, performance must be presented in Compounded Annual Growth Rate (CAGR) for:
+              </p>
+              <div class="p-2.5 bg-white rounded-xl border border-slate-200 font-semibold text-blue-900">
+                • Past 1 Year &bull; Past 3 Years &bull; Past 5 Years &bull; Since Inception
+              </div>
+              <p class="text-slate-500 text-[11px]">
+                If the scheme has been in existence for less than 5 years but more than 3 years: 1-yr, 3-yr, and inception returns must be given.
+              </p>
+            </div>
+
+            <div class="p-4 rounded-2xl bg-slate-50 border border-slate-200 space-y-2">
+              <span class="font-bold text-slate-900 text-sm">Standard Initial Investment of ₹10,000</span>
+              <p class="text-slate-600">
+                Along with percentage CAGR returns, advertisements must illustrate the rupee growth of a standard initial investment of <strong>₹10,000</strong> across:
+              </p>
+              <div class="p-2.5 bg-white rounded-xl border border-slate-200 font-semibold text-slate-800">
+                1. Scheme NAV &bull; 2. Tier-1 Benchmark &bull; 3. Additional Benchmark
+              </div>
+              <p class="text-slate-500 text-[11px]">
+                Investors can clearly see how ₹10,000 grew in the scheme vs the category index vs broad market index.
+              </p>
+            </div>
+
+          </div>
+
+          <!-- Multi-Scheme Fund Manager Disclosure Rule -->
+          <div class="p-4 rounded-2xl bg-amber-50/70 border border-amber-200 space-y-2">
+            <span class="font-bold text-amber-950 text-xs flex items-center gap-1.5">
+              <i data-lucide="users" class="w-4 h-4 text-amber-700"></i>
+              Fund Manager Multi-Scheme Disclosure Rule (Anti-Cherry-Picking)
+            </span>
+            <p class="text-amber-900 text-xs leading-relaxed">
+              If an AMC publishes an advertisement highlighting the superior performance of any <strong>one scheme</strong>, it is mandatory to disclose the performance of <strong>ALL other schemes managed by the same fund manager</strong> in the same advertisement!
+            </p>
+            <div class="p-3 bg-white rounded-xl border border-amber-200 text-slate-700 text-[11px] space-y-1">
+              <strong>What if the fund manager manages more than 6 schemes?</strong><br>
+              The AMC must disclose the performance of at least the <strong>top 3 and bottom 3 schemes</strong> managed by that fund manager based on trailing 1-year returns, preventing the fund house from hiding poor-performing schemes.
+            </div>
+          </div>
+
+          <!-- Short-Lived Schemes Rules -->
+          <div class="p-4 rounded-2xl bg-slate-50 border border-slate-200 space-y-2">
+            <span class="font-bold text-slate-900 text-xs">Period Restrictions for Schemes in Existence for Less Than 1 Year</span>
+            <ul class="list-disc pl-4 space-y-1.5 text-slate-600 text-[11px]">
+              <li><strong>Schemes &lt; 6 months old:</strong> Strictly <strong>PROHIBITED</strong> from advertising any performance figures to the public.</li>
+              <li><strong>Schemes &gt; 6 months but &lt; 1 year old:</strong> Cannot advertise annualized returns (except for money market schemes, liquid schemes, and overnight schemes).</li>
+              <li><strong>Liquid / Overnight / Money Market Schemes:</strong> Permitted to disclose <em>simple annualized returns</em> for short standard windows: <strong>7 days, 15 days, 30 days, 3 months (90 days), and 6 months (180 days)</strong>.</li>
+            </ul>
+          </div>
+
+          <!-- Monthly Factsheet Disclosure -->
+          <div class="p-4 rounded-2xl bg-blue-50/60 border border-blue-200 space-y-2">
+            <span class="font-bold text-blue-900 text-xs flex items-center gap-1.5">
+              <i data-lucide="file-text" class="w-4 h-4 text-blue-700"></i>
+              Monthly Factsheet Publishing Mandate
+            </span>
+            <p class="text-slate-700 text-xs leading-relaxed">
+              AMCs must publish monthly scheme factsheets on their websites within <strong>10 calendar days</strong> of each month-end. Factsheets must disclose: Scheme AUM, top 10 portfolio holdings, sector allocation, Total Expense Ratio (TER), Potential Risk Class (PRC) Matrix for debt, Risk-o-meter (scheme and Tier-1 benchmark), Sharpe Ratio, Beta, Tracking Error, and Information Ratio.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Section 11.7 -->
+      <section id="section-7" class="bg-white rounded-3xl p-6 sm:p-8 border border-indigo-200 shadow-sm space-y-4">
+        <div class="flex items-center justify-between">
+          <div class="flex items-center gap-2 text-xs font-bold text-indigo-700 uppercase tracking-wider">
+            <span class="w-2 h-2 rounded-full bg-indigo-500"></span> Section 11.7 &bull; Specialized Focus 🚀
+          </div>
+          <span class="text-xs px-2.5 py-1 rounded-full bg-indigo-100 text-indigo-800 font-bold">March 2026 SIF Curriculum</span>
+        </div>
+
+        <div>
+          <h2 class="font-display font-bold text-xl sm:text-2xl text-slate-900">Performance Dynamics for Specialized Investment Funds (SIF)</h2>
+          <p class="text-sm text-slate-600 mt-1">Advanced metrics and evaluation frameworks for high-conviction, non-linear strategies.</p>
+        </div>
+
+        <div class="space-y-3 text-xs text-slate-700 leading-relaxed">
+          <p>
+            Under the March 2026 NISM Series V-D curriculum, <strong>Specialized Investment Funds (SIF)</strong> bridge traditional mutual funds and private alternative funds (minimum ticket size: ₹10 Lakhs). Because SIFs can deploy unconstrained long-short equity, derivative overlays, and structured credit strategies, traditional performance metrics must be adapted:
+          </p>
+
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-1">
+            <div class="p-3.5 rounded-2xl bg-slate-50 border border-slate-200 space-y-1.5">
+              <span class="font-bold text-slate-900">1. Sortino & Tail-Risk Metrics over Sharpe</span>
+              <p class="text-slate-600 text-[11px]">
+                Because derivative strategies create asymmetric (non-normal) return distributions, the Sharpe ratio's assumption of bell-curve normality fails. SIF distributors must evaluate <strong>Sortino Ratio</strong>, <strong>Maximum Drawdown (MDD)</strong>, and <strong>Value at Risk (VaR)</strong> to protect against catastrophic tail losses.
+              </p>
+            </div>
+
+            <div class="p-3.5 rounded-2xl bg-slate-50 border border-slate-200 space-y-1.5">
+              <span class="font-bold text-slate-900">2. Hurdle Rates & High-Water Marks</span>
+              <p class="text-slate-600 text-[11px]">
+                SIFs that incorporate performance-linked incentive fees must operate under a strict <strong>High-Water Mark (HWM)</strong> principle and hurdle rate (e.g., T-Bill + 400 bps). Performance fees cannot be levied until all previous historical losses are fully recouped.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Section 11.8 Interactive Quiz -->
+      <section id="interactive-quiz" class="bg-slate-900 text-white rounded-3xl p-6 sm:p-8 border border-slate-800 shadow-xl space-y-6">
+        <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 border-b border-slate-800 pb-5">
+          <div>
+            <div class="flex items-center gap-2 text-xs font-bold text-blue-400 uppercase tracking-wider mb-1">
+              <i data-lucide="check-circle" class="w-4 h-4"></i> Interactive Exam Assessment
+            </div>
+            <h3 class="font-display font-bold text-xl sm:text-2xl text-white">Chapter 11 Practice Quiz</h3>
+            <p class="text-xs text-slate-400 mt-1">12 Exam-grade MCQs covering TRI rules, Sharpe, Treynor, Sortino, Jensen's Alpha, Tracking Error, and Advertising Norms.</p>
+          </div>
+          <div class="flex items-center gap-3">
+            <div class="text-right">
+              <span class="text-xs text-slate-400">Progress</span>
+              <div class="text-sm font-bold text-blue-400"><span id="answered-count">0</span> / 12</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Questions Container -->
+        <div id="quiz-container" class="space-y-6"></div>
+
+        <!-- Action Bar -->
+        <div class="pt-4 border-t border-slate-800 flex flex-col sm:flex-row items-center justify-between gap-4">
+          <button id="submit-quiz-btn" onclick="submitQuiz()" class="w-full sm:w-auto px-6 py-3 rounded-xl bg-blue-600 hover:bg-blue-500 font-bold text-sm shadow-lg shadow-blue-600/30 transition-all flex items-center justify-center gap-2 cursor-pointer">
+            <span>Submit Quiz & View Results</span>
+            <i data-lucide="arrow-right" class="w-4 h-4"></i>
+          </button>
+          <button id="reset-quiz-btn" onclick="resetQuiz()" class="hidden w-full sm:w-auto px-6 py-3 rounded-xl bg-slate-800 hover:bg-slate-700 text-slate-300 font-bold text-sm transition-all flex items-center justify-center gap-2 cursor-pointer">
+            <i data-lucide="rotate-ccw" class="w-4 h-4"></i>
+            <span>Retake Quiz</span>
+          </button>
+        </div>
+
+        <!-- Quiz Results -->
+        <div id="quiz-results" class="hidden p-6 rounded-2xl bg-slate-800/80 border border-slate-700 space-y-4">
+          <div class="flex items-center justify-between">
+            <h4 class="font-display font-bold text-lg text-white">Quiz Score Summary</h4>
+            <span id="result-status-badge" class="px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider"></span>
+          </div>
+          <div class="flex items-baseline gap-3">
+            <span id="score-display" class="font-display font-extrabold text-4xl text-blue-400"></span>
+            <span id="percentage-display" class="text-sm text-slate-400 font-medium"></span>
+          </div>
+          <p id="result-summary-text" class="text-xs sm:text-sm text-slate-300"></p>
+        </div>
+      </section>
+
+      <!-- Navigation Footer -->
+      <footer class="pt-6 border-t border-slate-200 flex items-center justify-between">
+        <a href="module1-ch10.html" class="flex items-center gap-2 px-4 py-2.5 rounded-xl border border-slate-200 bg-white hover:bg-slate-50 text-slate-700 font-medium text-xs transition-colors">
+          <i data-lucide="arrow-left" class="w-4 h-4"></i>
+          <span>Prev: Chapter 10 (Risk, Return)</span>
+        </a>
+        <a href="module1-ch12.html" class="flex items-center gap-2 px-4 py-2.5 rounded-xl bg-blue-600 hover:bg-blue-700 text-white font-semibold text-xs shadow-sm transition-colors">
+          <span>Next: Chapter 12 (Scheme Selection)</span>
+          <i data-lucide="arrow-right" class="w-4 h-4"></i>
+        </a>
+      </footer>
+
+    </div>
+  </div>
+
+  <script>
+    const questionsData = [
+      {
+        id: 1,
+        question: "Why did SEBI mandate that equity and hybrid mutual funds must benchmark their performance against the Total Return Index (TRI) instead of the Price Return Index (PRI)?",
+        options: [
+          { key: "a", text: "TRI eliminates market volatility and standard deviation from benchmark calculations" },
+          { key: "b", text: "Mutual fund NAVs receive dividends, so benchmarking against PRI created an artificial optical alpha of 1.5% to 2.5% p.a." },
+          { key: "c", text: "PRI is published only once a month, making daily NAV comparison impossible" },
+          { key: "d", text: "TRI guarantees that mutual fund returns will never fall below the risk-free rate" }
+        ],
+        correct: "b",
+        explanation: "Mutual funds collect and reinvest dividends from portfolio stocks, boosting fund NAV. Because PRI ignores dividend cash flows, comparing funds to PRI made fund managers appear to outperform by 1.5% to 2.5% merely by capturing dividend yield. Benchmarking against TRI provides true, transparent parity."
+      },
+      {
+        id: 2,
+        question: "Under SEBI's Two-Tier Benchmarking Architecture, what is the role and characteristic of the Tier-1 Benchmark?",
+        options: [
+          { key: "a", text: "It reflects the fund manager's subjective personal investment philosophy and is chosen entirely at the AMC's discretion" },
+          { key: "b", text: "It reflects the broad category to which the scheme belongs and is standardized across the industry by AMFI" },
+          { key: "c", text: "It is an unhedged foreign index such as the S&P 500 or MSCI World" },
+          { key: "d", text: "It is strictly a 10-year Government of India sovereign bond index" }
+        ],
+        correct: "b",
+        explanation: "Tier-1 benchmarks are mandatory and reflect the broad scheme category (e.g., Nifty 100 TRI for Large Cap, Nifty Midcap 150 TRI for Mid Cap). AMFI standardizes Tier-1 indices to ensure fair peer-group comparisons and eliminate benchmark gaming."
+      },
+      {
+        id: 3,
+        question: "What is the denominator in the Sharpe Ratio formula?",
+        options: [
+          { key: "a", text: "Portfolio Beta (Systematic Risk)" },
+          { key: "b", text: "Downside Deviation (Semi-Variance)" },
+          { key: "c", text: "Standard Deviation of Portfolio Returns (Total Risk)" },
+          { key: "d", text: "Annualized Tracking Error" }
+        ],
+        correct: "c",
+        explanation: "Sharpe Ratio = (R_p - R_f) / &sigma;_p. The denominator is the standard deviation (&sigma;), which measures Total Risk (both systematic and unsystematic volatility combined). This makes Sharpe ideal when evaluating an investor's entire portfolio."
+      },
+      {
+        id: 4,
+        question: "When is the Treynor Ratio more appropriate than the Sharpe Ratio for evaluating a mutual fund scheme?",
+        options: [
+          { key: "a", text: "When the scheme constitutes the investor's single, standalone investment" },
+          { key: "b", text: "When the scheme is evaluated as an addition to an already large, well-diversified portfolio" },
+          { key: "c", text: "When evaluating an overnight or liquid fund with zero beta" },
+          { key: "d", text: "When the scheme has a negative standard deviation" }
+        ],
+        correct: "b",
+        explanation: "The Treynor Ratio divides excess returns by Beta (systematic risk). It assumes that unsystematic risk has already been eliminated through broader diversification, making it ideal for evaluating funds that serve as components of a larger, diversified portfolio."
+      },
+      {
+        id: 5,
+        question: "Which risk-adjusted performance metric focuses exclusively on downside volatility and ignores upside returns?",
+        options: [
+          { key: "a", text: "Sharpe Ratio" },
+          { key: "b", text: "Treynor Ratio" },
+          { key: "c", text: "Sortino Ratio" },
+          { key: "d", text: "Information Ratio" }
+        ],
+        correct: "c",
+        explanation: "The Sortino Ratio replaces total standard deviation with downside deviation in the denominator. It penalizes only those returns that fall below a minimum acceptable return (MAR) or risk-free rate, recognizing that investors welcome upside volatility."
+      },
+      {
+        id: 6,
+        question: "A scheme generates an actual return of 16.0%. The risk-free rate is 6.0%, market return is 12.0%, and the scheme Beta is 1.20. What is Jensen's Alpha?",
+        options: [
+          { key: "a", text: "+2.80%" },
+          { key: "b", text: "+1.20%" },
+          { key: "c", text: "-0.80%" },
+          { key: "d", text: "+4.00%" }
+        ],
+        correct: "a",
+        explanation: "Expected Return E(R_p) = R_f + Beta &times; (R_m - R_f) = 6.0% + 1.20 &times; (12.0% - 6.0%) = 6.0% + 7.2% = 13.2%. Jensen's Alpha = Actual Return - Expected Return = 16.0% - 13.2% = +2.80%."
+      },
+      {
+        id: 7,
+        question: "What does a positive Jensen's Alpha (&alpha; > 0) signify about a mutual fund manager?",
+        options: [
+          { key: "a", text: "The fund manager took higher systematic risk than the broader market" },
+          { key: "b", text: "The fund manager added value through superior stock selection or market timing beyond CAPM expectations" },
+          { key: "c", text: "The fund has a tracking error of zero against its Tier-1 benchmark" },
+          { key: "d", text: "The fund's total expense ratio (TER) exceeds the SEBI regulatory cap" }
+        ],
+        correct: "b",
+        explanation: "A positive Jensen's Alpha signifies that the fund manager generated surplus return beyond what was expected for the amount of systematic market risk (&beta;) assumed, proving genuine managerial value-add."
+      },
+      {
+        id: 8,
+        question: "How is the Information Ratio (IR) mathematically calculated?",
+        options: [
+          { key: "a", text: "Portfolio Return divided by Benchmark Return" },
+          { key: "b", text: "Active Return (R_p - R_b) divided by Tracking Error" },
+          { key: "c", text: "Excess Return (R_p - R_f) divided by Beta" },
+          { key: "d", text: "Total Return divided by Expense Ratio" }
+        ],
+        correct: "b",
+        explanation: "Information Ratio = (R_p - R_b) / Tracking Error. It evaluates active excess return generated per unit of active risk (volatility of active returns) taken relative to the benchmark."
+      },
+      {
+        id: 9,
+        question: "What is the fundamental difference between Tracking Difference (TD) and Tracking Error (TE)?",
+        options: [
+          { key: "a", text: "TD is an annualized standard deviation, while TE is an absolute arithmetic difference" },
+          { key: "b", text: "TD is the simple arithmetic difference between scheme and benchmark returns, while TE is the annualized standard deviation of daily return differences" },
+          { key: "c", text: "TD applies only to active equity schemes, while TE applies only to liquid debt funds" },
+          { key: "d", text: "TD is capped by SEBI at 2%, whereas TE has no regulatory ceiling" }
+        ],
+        correct: "b",
+        explanation: "Tracking Difference is the simple arithmetic difference in annualized returns (R_scheme - R_benchmark). Tracking Error is the annualized standard deviation of daily excess returns, measuring the consistency/volatility of tracking."
+      },
+      {
+        id: 10,
+        question: "Under SEBI regulations, what is the maximum permissible Tracking Error for an open-ended Index Fund or ETF?",
+        options: [
+          { key: "a", text: "0.50%" },
+          { key: "b", text: "1.00%" },
+          { key: "c", text: "2.00%" },
+          { key: "d", text: "5.00%" }
+        ],
+        correct: "c",
+        explanation: "SEBI mandates that for Index Funds and ETFs, Tracking Error based on daily returns for the past 3-year period (or since inception) must not exceed 2.00%. Any breach must be reported to the Board of Trustees and published on the AMC website."
+      },
+      {
+        id: 11,
+        question: "When advertising past performance of a mutual fund scheme, what standard initial investment value must be illustrated in rupee terms?",
+        options: [
+          { key: "a", text: "₹1,000" },
+          { key: "b", text: "₹5,000" },
+          { key: "c", text: "₹10,000" },
+          { key: "d", text: "₹1,00,000" }
+        ],
+        correct: "c",
+        explanation: "SEBI advertising guidelines require illustrating past performance alongside the growth of an initial standard investment of ₹10,000 across 1-yr, 3-yr, 5-yr, and since-inception periods."
+      },
+      {
+        id: 12,
+        question: "A fund manager manages 8 schemes. If the AMC issues an advertisement showcasing the stellar performance of Scheme 1, what disclosure is mandatory regarding the other schemes?",
+        options: [
+          { key: "a", text: "No disclosures are required for any other schemes" },
+          { key: "b", text: "The AMC must disclose the performance of all other schemes, or at least the top 3 and bottom 3 schemes managed by that fund manager" },
+          { key: "c", text: "The AMC only needs to disclose schemes that delivered positive alpha" },
+          { key: "d", text: "The AMC only needs to disclose the fund manager's educational qualifications" }
+        ],
+        correct: "b",
+        explanation: "Under SEBI advertising norms, advertising one scheme requires disclosing the performance of all schemes managed by that fund manager. If the manager manages more than 6 schemes, the AMC must disclose at least the top 3 and bottom 3 schemes managed based on 1-year performance."
+      }
+    ];
+
+    let userAnswers = {};
+
+    function renderQuiz() {
+      const container = document.getElementById("quiz-container");
+      container.innerHTML = "";
+      questionsData.forEach((q, idx) => {
+        const qDiv = document.createElement("div");
+        qDiv.className = "p-5 rounded-2xl bg-white/5 border border-white/10 space-y-3";
+        
+        let optionsHtml = "";
+        q.options.forEach(opt => {
+          optionsHtml += `
+            <label id="label-${q.id}-${opt.key}" onclick="selectOption(${q.id}, '${opt.key}')" class="flex items-center gap-3 p-3 rounded-xl bg-white/5 hover:bg-white/10 border border-white/5 cursor-pointer text-xs sm:text-sm transition-all">
+              <input type="radio" name="q-${q.id}" value="${opt.key}" class="hidden" />
+              <div id="bullet-${q.id}-${opt.key}" class="w-6 h-6 rounded-full border border-slate-500 flex items-center justify-center font-bold text-xs shrink-0">${opt.key.toUpperCase()}</div>
+              <span class="text-slate-300">${opt.text}</span>
+            </label>
+          `;
+        });
+
+        qDiv.innerHTML = `
+          <div class="flex items-center justify-between">
+            <span class="text-xs font-bold text-blue-400">Question ${idx + 1} of ${questionsData.length}</span>
+            <span id="badge-${q.id}" class="text-xs px-2 py-0.5 rounded-full bg-slate-800 text-slate-400">Unanswered</span>
+          </div>
+          <h4 class="font-display font-semibold text-sm sm:text-base text-white">${q.question}</h4>
+          <div class="space-y-2 mt-3">${optionsHtml}</div>
+          <div id="explanation-${q.id}" class="hidden p-4 rounded-xl text-xs sm:text-sm mt-3 space-y-1"></div>
+        `;
+        container.appendChild(qDiv);
+      });
+      lucide.createIcons();
+    }
+
+    function selectOption(qId, key) {
+      userAnswers[qId] = key;
+      document.getElementById("answered-count").innerText = Object.keys(userAnswers).length;
+      
+      const badge = document.getElementById(`badge-${qId}`);
+      if (badge) {
+        badge.innerText = "Answered";
+        badge.className = "text-xs px-2 py-0.5 rounded-full bg-blue-500/20 text-blue-300 font-medium";
+      }
+
+      const q = questionsData.find(item => item.id === qId);
+      q.options.forEach(opt => {
+        const lbl = document.getElementById(`label-${qId}-${opt.key}`);
+        const bullet = document.getElementById(`bullet-${qId}-${opt.key}`);
+        if (opt.key === key) {
+          lbl.className = "flex items-center gap-3 p-3 rounded-xl bg-blue-600/30 border border-blue-400/50 cursor-pointer text-xs sm:text-sm transition-all";
+          bullet.className = "w-6 h-6 rounded-full bg-blue-500 text-white font-bold text-xs shrink-0 flex items-center justify-center";
+        } else {
+          lbl.className = "flex items-center gap-3 p-3 rounded-xl bg-white/5 hover:bg-white/10 border border-white/5 cursor-pointer text-xs sm:text-sm transition-all";
+          bullet.className = "w-6 h-6 rounded-full border border-slate-500 flex items-center justify-center font-bold text-xs shrink-0 text-slate-400";
+        }
+      });
+    }
+
+    function submitQuiz() {
+      let score = 0;
+      questionsData.forEach(q => {
+        const selected = userAnswers[q.id];
+        const isCorrect = selected === q.correct;
+        if (isCorrect) score++;
+
+        const explanationDiv = document.getElementById(`explanation-${q.id}`);
+        explanationDiv.classList.remove("hidden");
+
+        // Highlight options
+        q.options.forEach(opt => {
+          const lbl = document.getElementById(`label-${q.id}-${opt.key}`);
+          const bullet = document.getElementById(`bullet-${q.id}-${opt.key}`);
+          lbl.onclick = null; // disable further clicks
+
+          if (opt.key === q.correct) {
+            lbl.className = "flex items-center gap-3 p-3 rounded-xl bg-emerald-900/40 border border-emerald-500 text-xs sm:text-sm";
+            bullet.className = "w-6 h-6 rounded-full bg-emerald-500 text-slate-950 font-bold text-xs shrink-0 flex items-center justify-center";
+          } else if (opt.key === selected && !isCorrect) {
+            lbl.className = "flex items-center gap-3 p-3 rounded-xl bg-rose-900/40 border border-rose-500 text-xs sm:text-sm";
+            bullet.className = "w-6 h-6 rounded-full bg-rose-500 text-white font-bold text-xs shrink-0 flex items-center justify-center";
+          } else {
+            lbl.className = "flex items-center gap-3 p-3 rounded-xl bg-white/5 opacity-50 border border-transparent text-xs sm:text-sm";
+          }
+        });
+
+        if (isCorrect) {
+          explanationDiv.className = "p-4 rounded-xl text-xs sm:text-sm mt-3 bg-emerald-950/60 border border-emerald-600 text-emerald-200";
+          explanationDiv.innerHTML = `<div class="font-bold text-emerald-400 flex items-center gap-1.5"><i data-lucide="check" class="w-4 h-4"></i> Correct!</div><p class="mt-1">${q.explanation}</p>`;
+        } else {
+          explanationDiv.className = "p-4 rounded-xl text-xs sm:text-sm mt-3 bg-rose-950/60 border border-rose-600 text-rose-200";
+          explanationDiv.innerHTML = `<div class="font-bold text-rose-400 flex items-center gap-1.5"><i data-lucide="x" class="w-4 h-4"></i> Incorrect (Correct Answer: ${q.correct.toUpperCase()})</div><p class="mt-1">${q.explanation}</p>`;
+        }
+      });
+
+      const percentage = Math.round((score / questionsData.length) * 100);
+      const passed = percentage >= 60;
+      
+      const resultsDiv = document.getElementById("quiz-results");
+      resultsDiv.classList.remove("hidden");
+
+      const statusBadge = document.getElementById("result-status-badge");
+      statusBadge.innerText = passed ? "Status: Passed (60%+ Benchmark)" : "Status: Needs Revision";
+      statusBadge.className = passed ? "px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider bg-emerald-500 text-emerald-950" : "px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider bg-amber-500 text-amber-950";
+
+      document.getElementById("score-display").innerText = `${score} / ${questionsData.length}`;
+      document.getElementById("percentage-display").innerText = `${percentage}% Score (Passing criteria: 60%)`;
+
+      document.getElementById("result-summary-text").innerText = passed
+        ? `Brilliant performance! You scored ${percentage}%, demonstrating full mastery of Sharpe, Treynor, Sortino, Jensen's Alpha, Tracking Error rules, and SEBI advertising standards.`
+        : `You scored ${percentage}%. Revisit Sharpe vs Treynor denominators, Jensen's Alpha CAPM formula, the 2% Tracking Error cap, and the fund manager multi-scheme disclosure rules.`;
+
+      document.getElementById("submit-quiz-btn").classList.add("hidden");
+      document.getElementById("reset-quiz-btn").classList.remove("hidden");
+
+      resultsDiv.scrollIntoView({ behavior: 'smooth' });
+      lucide.createIcons();
+    }
+
+    function resetQuiz() {
+      userAnswers = {};
+      document.getElementById("answered-count").innerText = "0";
+      document.getElementById("quiz-results").classList.add("hidden");
+      document.getElementById("submit-quiz-btn").classList.remove("hidden");
+      document.getElementById("reset-quiz-btn").classList.add("hidden");
+      renderQuiz();
+      document.getElementById("interactive-quiz").scrollIntoView({ behavior: 'smooth' });
+    }
+
+    renderQuiz();
+    lucide.createIcons();
+  </script>
+</body>
+</html>

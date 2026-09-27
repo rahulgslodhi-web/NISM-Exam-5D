@@ -1,0 +1,1138 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Chapter 12: Mutual Fund Scheme Selection | NISM Series V-D Notes</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+  <script src="https://unpkg.com/lucide@latest"></script>
+
+  <!-- KaTeX for formula rendering -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.min.css">
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.min.js"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/contrib/auto-render.min.js" onload="renderMathInElement(document.body);"></script>
+
+  <!-- Global Module & Chapter Navigation Sidebar -->
+    <!-- Modern Documentation Design System & Zoom Engine -->
+  <link rel="stylesheet" href="modern-docs.css">
+  <script defer src="nav-sidebar.js"></script>
+
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+            display: ['"Space Grotesk"', 'sans-serif']
+          }
+        }
+      }
+    }
+  </script>
+</head>
+<body class="bg-slate-50 text-slate-900 min-h-screen flex flex-col selection:bg-blue-500 selection:text-white">
+
+  <!-- Header -->
+  <header class="sticky top-0 z-50 bg-white/90 backdrop-blur-md border-b border-slate-200">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
+      <div class="flex items-center gap-3">
+        <a href="module1.html" class="flex items-center gap-2 text-slate-500 hover:text-slate-900 transition-colors">
+          <div class="w-9 h-9 rounded-xl bg-slate-100 hover:bg-slate-200 flex items-center justify-center text-slate-700 transition-colors">
+            <i data-lucide="arrow-left" class="w-4 h-4"></i>
+          </div>
+        </a>
+        <div>
+          <div class="flex items-center gap-2">
+            <span class="text-xs font-bold uppercase tracking-wider text-blue-600 bg-blue-50 px-2 py-0.5 rounded">Module 1</span>
+            <span class="text-xs text-slate-400 font-medium">Chapter 12 of 12</span>
+          </div>
+          <h1 class="font-display font-bold text-base sm:text-lg text-slate-900 leading-tight">Mutual Fund Scheme Selection</h1>
+        </div>
+      </div>
+
+      <div class="flex items-center gap-3">
+        <span class="hidden sm:inline-flex items-center gap-1 px-3 py-1 rounded-full text-xs font-bold bg-amber-50 text-amber-700 border border-amber-200">
+          <i data-lucide="award" class="w-3.5 h-3.5"></i>
+          Weightage: 10 Marks ⭐
+        </span>
+        <a href="#interactive-quiz" class="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-lg text-xs font-bold bg-blue-600 hover:bg-blue-700 text-white shadow-sm transition-all">
+          <i data-lucide="help-circle" class="w-3.5 h-3.5"></i>
+          <span>Chapter Quiz</span>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Content Grid -->
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 grid grid-cols-1 lg:grid-cols-12 gap-8 flex-grow">
+    
+    <!-- Sidebar Navigation -->
+    <aside class="hidden lg:block lg:col-span-3">
+      <div class="sticky top-24 space-y-4">
+        <!-- Chapter Switcher (3 Module Dropdowns) -->
+        <div id="sidebar-chapter-switcher"></div>
+
+        <div class="bg-white p-5 rounded-2xl border border-slate-200 shadow-sm">
+          <h2 class="text-xs font-bold text-slate-400 uppercase tracking-wider mb-3">Chapter Navigation</h2>
+          <nav class="space-y-1 text-xs">
+            <a href="#section-1" class="block px-2.5 py-1.5 rounded-lg text-slate-600 hover:bg-slate-100 hover:text-blue-600">12.1 Strategic vs. Tactical Asset Allocation</a>
+            <a href="#section-2" class="block px-2.5 py-1.5 rounded-lg text-amber-700 font-semibold bg-amber-50/70 hover:bg-amber-100">12.2 Core & Satellite Strategy ⭐</a>
+            <a href="#section-3" class="block px-2.5 py-1.5 rounded-lg text-amber-700 font-semibold bg-amber-50/70 hover:bg-amber-100">12.3 Equity Scheme Selection & PTR Formula ⭐</a>
+            <a href="#section-4" class="block px-2.5 py-1.5 rounded-lg text-amber-700 font-semibold bg-amber-50/70 hover:bg-amber-100">12.4 Debt Scheme Selection & Duration Matching ⭐</a>
+            <a href="#section-5" class="block px-2.5 py-1.5 rounded-lg text-slate-600 hover:bg-slate-100 hover:text-blue-600">12.5 Investor Risk Profiling: Capacity vs. Appetite</a>
+            <a href="#section-6" class="block px-2.5 py-1.5 rounded-lg text-amber-700 font-semibold bg-amber-50/70 hover:bg-amber-100">12.6 Distributor Code of Conduct & Anti-Churning ⭐</a>
+            <a href="#interactive-quiz" class="block px-2.5 py-1.5 rounded-lg text-blue-700 font-bold bg-blue-50 hover:bg-blue-100 mt-2">Practice Quiz (12 MCQs)</a>
+          </nav>
+        </div>
+
+        <div class="p-4 rounded-2xl bg-gradient-to-br from-blue-600 to-indigo-700 text-white shadow-sm text-xs">
+          <div class="flex items-center gap-1.5 font-bold mb-1.5">
+            <i data-lucide="zap" class="w-4 h-4 text-amber-300"></i>
+            <span>Exam Focus Highlights</span>
+          </div>
+          <p class="text-blue-100 leading-relaxed space-y-1">
+            • <strong>Core & Satellite:</strong> Core (65–80% passive/large-cap); Satellite (20–35% tactical/alpha).<br>
+            • <strong>PTR Formula:</strong> Min(Purchases, Sales) / Avg Daily AUM.<br>
+            • <strong>Duration Matching:</strong> Immunizes portfolio as price risk cancels reinvestment risk.<br>
+            • <strong>Risk Hierarchy:</strong> Capacity (Financial Ability) strictly overrides Appetite (Psychological).<br>
+            • <strong>Prohibited:</strong> Churning, commission rebating, and guaranteed return claims.
+          </p>
+        </div>
+      </div>
+    </aside>
+
+    <!-- Main Notes -->
+    <div class="lg:col-span-9 space-y-8">
+
+      <!-- Section 12.1 -->
+      <section id="section-1" class="bg-white rounded-3xl p-6 sm:p-8 border border-slate-200/90 shadow-sm space-y-5">
+        <div class="flex items-center justify-between">
+          <div class="flex items-center gap-2 text-xs font-bold text-slate-500 uppercase tracking-wider">
+            <span class="w-2 h-2 rounded-full bg-slate-400"></span> Section 12.1 &bull; Fast-Track Refresher & Framework
+          </div>
+          <span class="text-xs px-2.5 py-1 rounded-full bg-slate-100 text-slate-600 font-semibold">Asset Allocation</span>
+        </div>
+        
+        <div>
+          <h2 class="font-display font-bold text-xl sm:text-2xl text-slate-900">Strategic vs. Tactical vs. Dynamic Asset Allocation</h2>
+          <p class="text-xs sm:text-sm text-slate-600 mt-1">
+            Empirical financial research (Brinson, Hood & Beebower) confirms that over <strong>90% of portfolio return variability</strong> over time is determined by broad asset allocation rather than individual security selection or market timing.
+          </p>
+        </div>
+
+        <!-- Master Comparison Table -->
+        <div class="overflow-x-auto rounded-2xl border border-slate-200">
+          <table class="min-w-full text-xs text-left">
+            <thead class="bg-slate-100 text-slate-700 font-bold uppercase tracking-wider">
+              <tr>
+                <th class="p-3">Attribute</th>
+                <th class="p-3 bg-blue-50/70 text-blue-900">Strategic Asset Allocation (SAA)</th>
+                <th class="p-3 bg-emerald-50/70 text-emerald-900">Tactical Asset Allocation (TAA)</th>
+                <th class="p-3 bg-purple-50/70 text-purple-900">Dynamic Asset Allocation (DAA)</th>
+              </tr>
+            </thead>
+            <tbody class="divide-y divide-slate-200">
+              <tr class="hover:bg-slate-50">
+                <td class="p-3 font-semibold text-slate-900">Primary Objective</td>
+                <td class="p-3 text-slate-700">Long-term wealth creation aligned to investor life goals and risk profile.</td>
+                <td class="p-3 text-slate-700">Short/medium-term alpha generation and opportunistic mispricing capture.</td>
+                <td class="p-3 text-slate-700">Systematic downside mitigation and rule-based counter-cyclical exposure.</td>
+              </tr>
+              <tr class="hover:bg-slate-50">
+                <td class="p-3 font-semibold text-slate-900">Time Horizon</td>
+                <td class="p-3 text-slate-700">Long-term (5 to 30+ years).</td>
+                <td class="p-3 text-slate-700">Short to intermediate (3 months to 2 years).</td>
+                <td class="p-3 text-slate-700">Continuous / algorithmically rebalanced daily/monthly.</td>
+              </tr>
+              <tr class="hover:bg-slate-50">
+                <td class="p-3 font-semibold text-slate-900">Decision Driver</td>
+                <td class="p-3 text-slate-700">Investor risk capacity, time horizon, and return target.</td>
+                <td class="p-3 text-slate-700">Macro trends, valuation metrics (P/E, P/B, yield gap), and sentiment.</td>
+                <td class="p-3 text-slate-700">Pre-defined quantitative models (e.g. Balanced Advantage Funds / BAF).</td>
+              </tr>
+              <tr class="hover:bg-slate-50">
+                <td class="p-3 font-semibold text-slate-900">Rebalancing Trigger</td>
+                <td class="p-3 text-slate-700">Fixed calendar intervals (e.g. annual) or corridor threshold drift (&plusmn;5% or 10%).</td>
+                <td class="p-3 text-slate-700">Market turning points, sudden valuation distortions, or policy shifts.</td>
+                <td class="p-3 text-slate-700">Automated signals (e.g., trailing P/E ratios, moving averages).</td>
+              </tr>
+              <tr class="hover:bg-slate-50">
+                <td class="p-3 font-semibold text-slate-900">Market Dependency</td>
+                <td class="p-3 text-slate-700">Remains constant through economic bull and bear cycles.</td>
+                <td class="p-3 text-slate-700">Deviates intentionally from the baseline strategic target.</td>
+                <td class="p-3 text-slate-700">Dynamically shifts equity between 30% and 80% based on model inputs.</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <!-- Case Study: SAA Rebalancing vs TAA Shift -->
+        <div class="p-4 rounded-2xl bg-slate-50 border border-slate-200 text-xs space-y-2">
+          <div class="flex items-center gap-2 font-bold text-slate-900 text-sm">
+            <i data-lucide="book-open" class="w-4 h-4 text-blue-600"></i>
+            <span>Practical Scenario: SAA Rebalancing vs. TAA Tactical Move</span>
+          </div>
+          <p class="text-slate-700 leading-relaxed">
+            <strong>Investor Sunita (Age 42):</strong> Strategic Baseline (SAA) is set at <strong>65% Equity : 35% Debt</strong> for her retirement fund.
+          </p>
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 pt-1">
+            <div class="p-3 rounded-xl bg-white border border-slate-200 space-y-1">
+              <span class="font-bold text-blue-900 block">SAA Threshold Rebalancing</span>
+              <p class="text-slate-600">Following an equity bull run, equity surges to 76% and debt drops to 24%. Under SAA rules, the advisor trims 11% equity and allocates it to debt to restore the target 65:35 balance, locking in gains and reducing risk.</p>
+            </div>
+            <div class="p-3 rounded-xl bg-white border border-slate-200 space-y-1">
+              <span class="font-bold text-emerald-900 block">TAA Opportunistic Tilt</span>
+              <p class="text-slate-600">During a severe macroeconomic correction where equity valuations plunge to attractive levels (Nifty trailing P/E &lt; 18), the advisor tactically overweights equity to 75% for 9 months, trimming back to 65% when valuations normalize.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Section 12.2 -->
+      <section id="section-2" class="bg-white rounded-3xl p-6 sm:p-8 border border-amber-200 shadow-sm space-y-6">
+        <div class="flex items-center justify-between">
+          <div class="flex items-center gap-2 text-xs font-bold text-amber-700 uppercase tracking-wider">
+            <span class="w-2 h-2 rounded-full bg-amber-500"></span> Section 12.2 &bull; Super High Exam Yield ⭐
+          </div>
+          <span class="text-xs px-2.5 py-1 rounded-full bg-amber-100 text-amber-800 font-bold">Portfolio Construction</span>
+        </div>
+        
+        <div>
+          <h2 class="font-display font-bold text-xl sm:text-2xl text-slate-900">The Core and Satellite Portfolio Construction Strategy</h2>
+          <p class="text-xs sm:text-sm text-slate-600 mt-1">
+            The Core and Satellite framework is the industry-standard architecture for constructing robust, cost-effective mutual fund portfolios. It blends reliable passive beta with tactical active alpha generation.
+          </p>
+        </div>
+
+        <!-- Visual Architecture Diagram -->
+        <div class="p-5 rounded-2xl bg-gradient-to-r from-blue-50 via-indigo-50 to-purple-50 border border-indigo-100 space-y-4">
+          <div class="flex items-center justify-between text-xs font-bold">
+            <span class="text-blue-900 flex items-center gap-1.5"><i data-lucide="shield" class="w-4 h-4 text-blue-600"></i> Core Component (65% to 80%)</span>
+            <span class="text-purple-900 flex items-center gap-1.5"><i data-lucide="rocket" class="w-4 h-4 text-purple-600"></i> Satellite Component (20% to 35%)</span>
+          </div>
+
+          <!-- Progress Bar Diagram -->
+          <div class="w-full h-8 rounded-xl overflow-hidden flex shadow-inner border border-slate-200">
+            <div class="bg-blue-600 text-white font-bold text-xs flex items-center justify-center transition-all" style="width: 75%;">
+              CORE: 75% (Stability & Broad Market Beta)
+            </div>
+            <div class="bg-purple-600 text-white font-bold text-xs flex items-center justify-center transition-all" style="width: 25%;">
+              SATELLITE: 25% (Alpha)
+            </div>
+          </div>
+
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-4 text-xs pt-1">
+            <div class="p-3.5 rounded-xl bg-white/80 border border-blue-200 space-y-1.5">
+              <span class="font-bold text-blue-900 text-sm">Core Portfolio (65% – 80%)</span>
+              <p class="text-slate-600 leading-relaxed">
+                The permanent structural foundation of the portfolio. Protects capital against catastrophic market events while capturing broad equity compounding.
+              </p>
+              <div class="text-[11px] text-slate-700 bg-blue-50/60 p-2 rounded-lg">
+                <strong>Eligible Scheme Categories:</strong> Nifty 50 / BSE Sensex Index Funds, Large Cap Active Funds, Flexi Cap Funds, Sovereign G-Sec Funds, Banking & PSU Debt Funds.
+              </div>
+            </div>
+
+            <div class="p-3.5 rounded-xl bg-white/80 border border-purple-200 space-y-1.5">
+              <span class="font-bold text-purple-900 text-sm">Satellite Portfolio (20% – 35%)</span>
+              <p class="text-slate-600 leading-relaxed">
+                Opportunistic high-conviction allocations designed to generate excess returns (alpha) across favorable economic cycles.
+              </p>
+              <div class="text-[11px] text-slate-700 bg-purple-50/60 p-2 rounded-lg">
+                <strong>Eligible Scheme Categories:</strong> Mid Cap & Small Cap Funds, Sectoral / Thematic Funds (e.g. Infrastructure, Healthcare, Tech), Specialized Investment Funds (SIF), Credit Risk Funds.
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Comparative Feature Table -->
+        <div class="overflow-x-auto rounded-2xl border border-slate-200">
+          <table class="min-w-full text-xs text-left">
+            <thead class="bg-slate-100 text-slate-700 font-bold uppercase tracking-wider">
+              <tr>
+                <th class="p-3">Feature</th>
+                <th class="p-3 bg-blue-50 text-blue-900">Core Portfolio</th>
+                <th class="p-3 bg-purple-50 text-purple-900">Satellite Portfolio</th>
+              </tr>
+            </thead>
+            <tbody class="divide-y divide-slate-200">
+              <tr class="hover:bg-slate-50">
+                <td class="p-3 font-semibold text-slate-900">Recommended Allocation</td>
+                <td class="p-3 font-bold text-blue-800">65% to 80%</td>
+                <td class="p-3 font-bold text-purple-800">20% to 35%</td>
+              </tr>
+              <tr class="hover:bg-slate-50">
+                <td class="p-3 font-semibold text-slate-900">Target Risk-Return Profile</td>
+                <td class="p-3 text-slate-700">Market benchmark return (Beta) with low-to-moderate volatility.</td>
+                <td class="p-3 text-slate-700">Excess market return (Alpha) with higher volatility and drawdown risk.</td>
+              </tr>
+              <tr class="hover:bg-slate-50">
+                <td class="p-3 font-semibold text-slate-900">Expense Ratio (TER) & Turnover</td>
+                <td class="p-3 text-slate-700">Low TER, low portfolio turnover ratio (&lt; 30%), highly cost-efficient.</td>
+                <td class="p-3 text-slate-700">Higher TER, tactical turnover (&gt; 70-100%), active trading strategy.</td>
+              </tr>
+              <tr class="hover:bg-slate-50">
+                <td class="p-3 font-semibold text-slate-900">Holding Period & Review</td>
+                <td class="p-3 text-slate-700">Long-term buy-and-hold; reviewed annually for rebalancing.</td>
+                <td class="p-3 text-slate-700">Medium-term cyclical holding; actively reviewed quarterly or semi-annually.</td>
+              </tr>
+              <tr class="hover:bg-slate-50">
+                <td class="p-3 font-semibold text-slate-900">Consequence of Strategy Failure</td>
+                <td class="p-3 text-slate-700">Minimal threat to investor's foundational life goals.</td>
+                <td class="p-3 text-slate-700">Drawdowns are strictly bounded because total exposure is capped at 35%.</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <!-- Concrete ₹1 Crore Sample Allocation Table -->
+        <div class="p-4 rounded-2xl bg-amber-50/60 border border-amber-200 text-xs space-y-3">
+          <div class="flex items-center gap-2 font-bold text-amber-900 text-sm">
+            <i data-lucide="pie-chart" class="w-4 h-4 text-amber-700"></i>
+            <span>Model Implementation: ₹1 Crore Portfolio Blueprint</span>
+          </div>
+          <div class="overflow-x-auto bg-white rounded-xl border border-amber-200">
+            <table class="min-w-full text-xs text-left">
+              <thead class="bg-amber-100/60 text-amber-900 font-bold">
+                <tr>
+                  <th class="p-2.5">Component</th>
+                  <th class="p-2.5">Allocation (%)</th>
+                  <th class="p-2.5">Rupee Value</th>
+                  <th class="p-2.5">Scheme Categories Included</th>
+                </tr>
+              </thead>
+              <tbody class="divide-y divide-slate-100 text-slate-700">
+                <tr>
+                  <td class="p-2.5 font-semibold text-blue-900">Core: Passive Large-Cap</td>
+                  <td class="p-2.5 font-bold">40%</td>
+                  <td class="p-2.5 font-mono">₹40,00,000</td>
+                  <td class="p-2.5">Nifty 50 Index Fund + Nifty Next 50 Index Fund</td>
+                </tr>
+                <tr>
+                  <td class="p-2.5 font-semibold text-blue-900">Core: Quality Debt</td>
+                  <td class="p-2.5 font-bold">30%</td>
+                  <td class="p-2.5 font-mono">₹30,00,000</td>
+                  <td class="p-2.5">Short Duration Fund + Banking & PSU Debt Fund (AAA rated)</td>
+                </tr>
+                <tr>
+                  <td class="p-2.5 font-semibold text-purple-900">Satellite: Mid & Small Cap</td>
+                  <td class="p-2.5 font-bold">15%</td>
+                  <td class="p-2.5 font-mono">₹15,00,000</td>
+                  <td class="p-2.5">Nifty Midcap 150 Quality 50 / Actively Managed Small Cap Fund</td>
+                </tr>
+                <tr>
+                  <td class="p-2.5 font-semibold text-purple-900">Satellite: Tactical / SIF</td>
+                  <td class="p-2.5 font-bold">15%</td>
+                  <td class="p-2.5 font-mono">₹15,00,000</td>
+                  <td class="p-2.5">Specialized Investment Fund (SIF) / Sectoral Thematic Strategy</td>
+                </tr>
+                <tr class="bg-slate-50 font-bold text-slate-900">
+                  <td class="p-2.5">Total Portfolio</td>
+                  <td class="p-2.5">100%</td>
+                  <td class="p-2.5 font-mono">₹1,00,00,000</td>
+                  <td class="p-2.5">Core (70%) + Satellite (30%) Balance</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </section>
+
+      <!-- Section 12.3 -->
+      <section id="section-3" class="bg-white rounded-3xl p-6 sm:p-8 border border-amber-200 shadow-sm space-y-6">
+        <div class="flex items-center justify-between">
+          <div class="flex items-center gap-2 text-xs font-bold text-amber-700 uppercase tracking-wider">
+            <span class="w-2 h-2 rounded-full bg-amber-500"></span> Section 12.3 &bull; Super High Exam Yield ⭐
+          </div>
+          <span class="text-xs px-2.5 py-1 rounded-full bg-amber-100 text-amber-800 font-bold">Equity Selection & PTR</span>
+        </div>
+        
+        <div>
+          <h2 class="font-display font-bold text-xl sm:text-2xl text-slate-900">Selecting Equity Schemes: The Quantitative & Qualitative Framework</h2>
+          <p class="text-xs sm:text-sm text-slate-600 mt-1">
+            Selecting mutual fund schemes requires looking beyond past 1-year trailing returns. Distributors must evaluate risk-adjusted ratios, portfolio churn, portfolio concentration, and fund manager continuity.
+          </p>
+        </div>
+
+        <!-- The PTR Formula & Walkthrough -->
+        <div class="p-5 rounded-2xl bg-slate-50 border border-slate-200 space-y-4 text-xs">
+          <div class="flex items-center justify-between">
+            <span class="font-bold text-slate-900 text-sm flex items-center gap-1.5">
+              <i data-lucide="calculator" class="w-4 h-4 text-blue-600"></i>
+              Portfolio Turnover Ratio (PTR) Formula & Computation
+            </span>
+            <span class="px-2 py-0.5 rounded bg-blue-100 text-blue-800 font-mono font-bold text-[11px]">Formula Mandate</span>
+          </div>
+
+          <div class="bg-white p-4 rounded-xl border border-slate-300 font-mono text-slate-900 text-xs sm:text-sm shadow-sm space-y-1">
+            <div class="text-center font-bold text-blue-900">
+              PTR = Lower of [ Total Purchases OR Total Sales during the period ] &divide; Average Daily Net Assets (AUM)
+            </div>
+          </div>
+
+          <div class="p-4 rounded-xl bg-blue-50/70 border border-blue-200 space-y-2">
+            <span class="font-bold text-blue-950 block text-xs uppercase tracking-wide">⭐ Step-by-Step Practical Numerical Walkthrough:</span>
+            <p class="text-slate-700 leading-relaxed">
+              <strong>Given Data for Scheme Alpha:</strong><br>
+              • Scheme Average Daily AUM over the last 12 months = <strong>₹3,000 Crores</strong><br>
+              • Total equity securities purchased during the year = <strong>₹950 Crores</strong><br>
+              • Total equity securities sold during the year = <strong>₹600 Crores</strong>
+            </p>
+            <div class="bg-white p-3 rounded-lg border border-blue-200 font-mono text-[11px] text-slate-800 space-y-1">
+              <div>1. Determine Numerator: Min(Purchases, Sales) = Min(₹950 Cr, ₹600 Cr) = <strong>₹600 Crores</strong></div>
+              <div>2. Determine Denominator: Average Daily Net Assets = <strong>₹3,000 Crores</strong></div>
+              <div>3. PTR Calculation: ₹600 Cr &divide; ₹3,000 Cr = <strong>0.20 or 20%</strong></div>
+            </div>
+            <p class="text-slate-700 font-medium">
+              <strong>Interpretation:</strong> A PTR of 20% indicates that only one-fifth of the scheme portfolio was replaced over the year, demonstrating a disciplined, high-conviction <em>buy-and-hold strategy</em> with minimal transaction brokerage costs.
+            </p>
+          </div>
+
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+            <div class="p-3.5 rounded-xl bg-emerald-50/60 border border-emerald-200 space-y-1">
+              <span class="font-bold text-emerald-900">Low PTR (&lt; 30%) Characteristics</span>
+              <ul class="list-disc pl-4 space-y-1 text-slate-700">
+                <li>High conviction, patient long-term compounding.</li>
+                <li>Lower brokerage, exchange fees, and STT costs.</li>
+                <li>Reduced short-term capital gains tax friction.</li>
+              </ul>
+            </div>
+            <div class="p-3.5 rounded-xl bg-rose-50/60 border border-rose-200 space-y-1">
+              <span class="font-bold text-rose-900">High PTR (&gt; 100%) Characteristics</span>
+              <ul class="list-disc pl-4 space-y-1 text-slate-700">
+                <li>Aggressive momentum trading and frequent sector rotation.</li>
+                <li>High transaction drag impacting net investor NAV.</li>
+                <li>Indicates lack of long-term conviction or strategy drift.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <!-- Concentration & Qualitative Evaluation Grid -->
+        <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 text-xs">
+          <div class="p-4 rounded-2xl bg-slate-50 border border-slate-200 space-y-2">
+            <div class="font-bold text-slate-900 text-sm flex items-center gap-1.5">
+              <i data-lucide="layers" class="w-4 h-4 text-blue-600"></i>
+              <span>Concentration Risk</span>
+            </div>
+            <p class="text-slate-600 leading-relaxed">
+              Examine the <strong>Top 10 Stocks</strong> and <strong>Top 3 Sectors</strong> exposure:
+            </p>
+            <ul class="list-disc pl-4 space-y-1 text-slate-700">
+              <li><strong>Broadly Diversified:</strong> Top 10 stocks hold &lt; 35% of AUM.</li>
+              <li><strong>Concentrated / Focused:</strong> Top 10 stocks exceed 50–65% of AUM (SEBI limits Focused Funds to max 30 stocks).</li>
+              <li>Excessive sector exposure (&gt; 35% in BFSI or Tech) heightens cyclical volatility.</li>
+            </ul>
+          </div>
+
+          <div class="p-4 rounded-2xl bg-slate-50 border border-slate-200 space-y-2">
+            <div class="font-bold text-slate-900 text-sm flex items-center gap-1.5">
+              <i data-lucide="scale" class="w-4 h-4 text-emerald-600"></i>
+              <span>Fund Size / AUM Impact</span>
+            </div>
+            <p class="text-slate-600 leading-relaxed">
+              AUM impact differs sharply across market-cap categories:
+            </p>
+            <ul class="list-disc pl-4 space-y-1 text-slate-700">
+              <li><strong>Large-Cap Funds:</strong> Giant AUM (&gt; ₹40,000 Cr) is manageable due to high liquidity of Nifty 100 stocks.</li>
+              <li><strong>Small-Cap Funds:</strong> Very large AUM (&gt; ₹20,000 Cr) causes liquidity drag, market impact cost, or forces cash hoarding.</li>
+            </ul>
+          </div>
+
+          <div class="p-4 rounded-2xl bg-slate-50 border border-slate-200 space-y-2">
+            <div class="font-bold text-slate-900 text-sm flex items-center gap-1.5">
+              <i data-lucide="user-check" class="w-4 h-4 text-purple-600"></i>
+              <span>Manager Tenure & AMC</span>
+            </div>
+            <p class="text-slate-600 leading-relaxed">
+              Qualitative governance pillars:
+            </p>
+            <ul class="list-disc pl-4 space-y-1 text-slate-700">
+              <li><strong>Manager Tenure:</strong> Minimum 3 to 5 years continuity across complete bull and bear market cycles.</li>
+              <li><strong>Process-Driven AMC:</strong> Investment philosophy governed by strong internal research committees, not individual star managers.</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <!-- Section 12.4 -->
+      <section id="section-4" class="bg-white rounded-3xl p-6 sm:p-8 border border-amber-200 shadow-sm space-y-6">
+        <div class="flex items-center justify-between">
+          <div class="flex items-center gap-2 text-xs font-bold text-amber-700 uppercase tracking-wider">
+            <span class="w-2 h-2 rounded-full bg-amber-500"></span> Section 12.4 &bull; Super High Exam Yield ⭐
+          </div>
+          <span class="text-xs px-2.5 py-1 rounded-full bg-amber-100 text-amber-800 font-bold">Debt Selection & Duration Matching</span>
+        </div>
+        
+        <div>
+          <h2 class="font-display font-bold text-xl sm:text-2xl text-slate-900">Debt Scheme Selection: Macaulay Duration Matching & The Immunization Principle</h2>
+          <p class="text-xs sm:text-sm text-slate-600 mt-1">
+            In fixed-income investing, capital safety is achieved not by chasing yields, but through strict alignment of the investor's planned investment horizon with the fund's <strong>Macaulay Duration</strong>.
+          </p>
+        </div>
+
+        <!-- The Immunization Mechanism Callout -->
+        <div class="p-5 rounded-2xl bg-gradient-to-br from-amber-500/10 via-blue-500/10 to-indigo-500/10 border border-amber-300/80 space-y-3 text-xs">
+          <div class="flex items-center gap-2 font-bold text-amber-950 text-sm">
+            <i data-lucide="shield-check" class="w-5 h-5 text-amber-600"></i>
+            <span>⭐ The Immunization Principle: How Duration Matching Neutralizes Interest Rate Shocks</span>
+          </div>
+          <p class="text-slate-700 leading-relaxed">
+            Every debt fund faces two opposing, offsetting forces when benchmark interest rates change:
+          </p>
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+            <div class="p-3 bg-white/90 rounded-xl border border-slate-200 space-y-1">
+              <span class="font-bold text-rose-900 block">1. Price Risk (Capital Value)</span>
+              <p class="text-slate-600">When interest rates rise, existing bond prices drop, causing a negative capital impact on the scheme NAV.</p>
+            </div>
+            <div class="p-3 bg-white/90 rounded-xl border border-slate-200 space-y-1">
+              <span class="font-bold text-emerald-900 block">2. Reinvestment Risk (Coupon Compounding)</span>
+              <p class="text-slate-600">When interest rates rise, periodic coupon cash flows and maturing bond proceeds are reinvested at higher prevailing yields.</p>
+            </div>
+          </div>
+          <div class="p-3 bg-white rounded-xl border border-amber-300 font-semibold text-slate-800">
+            <strong>The Mathematical Equilibrium:</strong> At the exact point where <em>Investor Holding Period = Macaulay Duration</em>, the capital loss from rising rates is <strong>identically offset</strong> by the compounded gains from reinvesting coupons at higher rates. The investor is fully <strong>immunized</strong> against rate volatility!
+          </div>
+        </div>
+
+        <!-- Master SEBI Debt Scheme Selection & Duration Matching Table -->
+        <div class="space-y-2">
+          <h3 class="text-xs font-bold text-slate-700 uppercase tracking-wider">SEBI Debt Fund Categorization & Investment Horizon Matching Guide</h3>
+          <div class="overflow-x-auto rounded-2xl border border-slate-200">
+            <table class="min-w-full text-xs text-left">
+              <thead class="bg-slate-100 text-slate-700 font-bold uppercase tracking-wider">
+                <tr>
+                  <th class="p-3">Target Time Horizon</th>
+                  <th class="p-3">SEBI Debt Scheme Category</th>
+                  <th class="p-3 bg-blue-50 text-blue-900">Mandated Macaulay Duration / Maturity</th>
+                  <th class="p-3">Primary Risk Exposure</th>
+                  <th class="p-3">Ideal Practical Use Case</th>
+                </tr>
+              </thead>
+              <tbody class="divide-y divide-slate-200">
+                <tr class="hover:bg-slate-50">
+                  <td class="p-3 font-semibold text-slate-900">1 day to 10 days</td>
+                  <td class="p-3 font-bold text-blue-900">Overnight Fund</td>
+                  <td class="p-3 font-mono text-blue-800 bg-blue-50/40">1 day maturity</td>
+                  <td class="p-3 text-slate-600">Zero credit & interest rate risk</td>
+                  <td class="p-3 text-slate-600">Corporate treasury cash, parking between trade dates</td>
+                </tr>
+                <tr class="hover:bg-slate-50">
+                  <td class="p-3 font-semibold text-slate-900">10 days to 3 months</td>
+                  <td class="p-3 font-bold text-blue-900">Liquid Fund</td>
+                  <td class="p-3 font-mono text-blue-800 bg-blue-50/40">Maturity &le; 91 days</td>
+                  <td class="p-3 text-slate-600">Negligible interest rate risk; graded exit load (7 days)</td>
+                  <td class="p-3 text-slate-600">Emergency reserve fund, STP source to equity funds</td>
+                </tr>
+                <tr class="hover:bg-slate-50">
+                  <td class="p-3 font-semibold text-slate-900">3 months to 6 months</td>
+                  <td class="p-3 font-bold text-blue-900">Ultra Short Duration Fund</td>
+                  <td class="p-3 font-mono text-blue-800 bg-blue-50/40">3 months to 6 months</td>
+                  <td class="p-3 text-slate-600">Very low duration risk</td>
+                  <td class="p-3 text-slate-600">Near-term corporate advance tax payments, fee reserves</td>
+                </tr>
+                <tr class="hover:bg-slate-50">
+                  <td class="p-3 font-semibold text-slate-900">6 months to 12 months</td>
+                  <td class="p-3 font-bold text-blue-900">Low Duration Fund</td>
+                  <td class="p-3 font-mono text-blue-800 bg-blue-50/40">6 months to 12 months</td>
+                  <td class="p-3 text-slate-600">Low duration risk</td>
+                  <td class="p-3 text-slate-600">Short-term personal goals, capital expenditure funding</td>
+                </tr>
+                <tr class="hover:bg-slate-50">
+                  <td class="p-3 font-semibold text-slate-900">Up to 1 year</td>
+                  <td class="p-3 font-bold text-blue-900">Money Market Fund</td>
+                  <td class="p-3 font-mono text-blue-800 bg-blue-50/40">Maturity up to 1 year</td>
+                  <td class="p-3 text-slate-600">Invests in Commercial Papers, CDs, T-Bills</td>
+                  <td class="p-3 text-slate-600">High-liquidity conservative cash management</td>
+                </tr>
+                <tr class="hover:bg-slate-50">
+                  <td class="p-3 font-semibold text-slate-900">1 year to 3 years</td>
+                  <td class="p-3 font-bold text-blue-900">Short Duration Fund</td>
+                  <td class="p-3 font-mono text-blue-800 bg-blue-50/40">1 year to 3 years</td>
+                  <td class="p-3 text-slate-600">Moderate interest rate sensitivity</td>
+                  <td class="p-3 text-slate-600">Core debt allocation for medium-term conservative investors</td>
+                </tr>
+                <tr class="hover:bg-slate-50">
+                  <td class="p-3 font-semibold text-slate-900">3 years to 4 years</td>
+                  <td class="p-3 font-bold text-blue-900">Medium Duration Fund</td>
+                  <td class="p-3 font-mono text-blue-800 bg-blue-50/40">3 years to 4 years</td>
+                  <td class="p-3 text-slate-600">Moderate-to-high interest rate risk</td>
+                  <td class="p-3 text-slate-600">3-4 year financial milestones</td>
+                </tr>
+                <tr class="hover:bg-slate-50">
+                  <td class="p-3 font-semibold text-slate-900">4 years to 7 years</td>
+                  <td class="p-3 font-bold text-blue-900">Medium to Long Duration</td>
+                  <td class="p-3 font-mono text-blue-800 bg-blue-50/40">4 years to 7 years</td>
+                  <td class="p-3 text-slate-600">High duration risk; capital gains during rate cuts</td>
+                  <td class="p-3 text-slate-600">Positioning for interest rate reduction cycles</td>
+                </tr>
+                <tr class="hover:bg-slate-50">
+                  <td class="p-3 font-semibold text-slate-900">&gt; 7 years</td>
+                  <td class="p-3 font-bold text-blue-900">Long Duration Fund</td>
+                  <td class="p-3 font-mono text-blue-800 bg-blue-50/40">&gt; 7 years</td>
+                  <td class="p-3 text-slate-600">Extreme interest rate volatility</td>
+                  <td class="p-3 text-slate-600">Institutional liability matching (pension funds, PF trusts)</td>
+                </tr>
+                <tr class="hover:bg-slate-50">
+                  <td class="p-3 font-semibold text-slate-900">Flexible (3-5+ years)</td>
+                  <td class="p-3 font-bold text-indigo-900">Dynamic Bond Fund</td>
+                  <td class="p-3 font-mono text-indigo-800 bg-indigo-50/40">Unconstrained duration</td>
+                  <td class="p-3 text-slate-600">Fund manager active duration calls risk</td>
+                  <td class="p-3 text-slate-600">Investors wishing to delegate rate-cycle timing to the fund manager</td>
+                </tr>
+                <tr class="hover:bg-slate-50">
+                  <td class="p-3 font-semibold text-slate-900">1 to 5+ years</td>
+                  <td class="p-3 font-bold text-emerald-900">Corporate Bond Fund</td>
+                  <td class="p-3 font-mono text-emerald-800 bg-emerald-50/40">&ge; 80% in AA+ & AAA paper</td>
+                  <td class="p-3 text-slate-600">High credit safety, low default risk</td>
+                  <td class="p-3 text-slate-600">Investors seeking higher yield than G-Sec with pristine credit</td>
+                </tr>
+                <tr class="hover:bg-slate-50">
+                  <td class="p-3 font-semibold text-slate-900">3 to 5 years</td>
+                  <td class="p-3 font-bold text-rose-900">Credit Risk Fund</td>
+                  <td class="p-3 font-mono text-rose-800 bg-rose-50/40">&ge; 65% in AA & below paper</td>
+                  <td class="p-3 text-rose-700 font-semibold">High default risk, rating downgrades, illiquidity</td>
+                  <td class="p-3 text-slate-600">Sophisticated HNI investors seeking credit spread capture</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <!-- YTM and Modified Duration Metrics -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 text-xs">
+          <!-- YTM Concept -->
+          <div class="p-4 rounded-2xl bg-slate-50 border border-slate-200 space-y-2">
+            <span class="font-bold text-slate-900 text-sm">Yield to Maturity (YTM) vs. Net Yield</span>
+            <div class="bg-white p-2.5 rounded-xl border border-slate-200 font-mono text-[11px] text-blue-900">
+              Expected Net Yield &approx; Portfolio YTM &minus; Total Expense Ratio (TER)
+            </div>
+            <p class="text-slate-600 leading-relaxed">
+              <strong>Crucial Exam Caveat:</strong> YTM is <em>not a guaranteed return</em>! It is an internal rate of return (IRR) that holds true ONLY if:
+            </p>
+            <ul class="list-disc pl-4 space-y-0.5 text-slate-700">
+              <li>All underlying securities are held until final maturity.</li>
+              <li>Every issuer pays coupons and principal without any credit default.</li>
+              <li>All intermediate coupon inflows are reinvested at the exact same YTM rate.</li>
+            </ul>
+          </div>
+
+          <!-- Modified Duration Rule of Thumb -->
+          <div class="p-4 rounded-2xl bg-slate-50 border border-slate-200 space-y-2">
+            <span class="font-bold text-slate-900 text-sm">Modified Duration (MD) Sensitivity Rule</span>
+            <div class="bg-white p-2.5 rounded-xl border border-slate-200 font-mono text-[11px] text-slate-900">
+              % Change in Bond Price &approx; &minus; Modified Duration &times; &Delta;Yield (%)
+            </div>
+            <p class="text-slate-600 leading-relaxed">
+              <strong>Practical Calculation Example:</strong><br>
+              A Medium Duration Fund has a Modified Duration of <strong>4.2 years</strong>. If RBI cuts the repo rate and market yields drop by <strong>0.50% (-50 bps)</strong>:
+            </p>
+            <div class="bg-emerald-50 p-2 rounded-lg border border-emerald-200 font-mono text-[11px] text-emerald-900">
+              % Price Gain &approx; &minus; 4.2 &times; (&minus;0.50%) = <strong>+2.10% Capital Appreciation</strong>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Section 12.5 -->
+      <section id="section-5" class="bg-white rounded-3xl p-6 sm:p-8 border border-slate-200/90 shadow-sm space-y-5">
+        <div class="flex items-center justify-between">
+          <div class="flex items-center gap-2 text-xs font-bold text-slate-500 uppercase tracking-wider">
+            <span class="w-2 h-2 rounded-full bg-slate-400"></span> Section 12.5 &bull; Refresher & Life-Cycle Framework
+          </div>
+          <span class="text-xs px-2.5 py-1 rounded-full bg-slate-100 text-slate-600 font-semibold">Investor Profiling</span>
+        </div>
+        
+        <div>
+          <h2 class="font-display font-bold text-xl sm:text-2xl text-slate-900">Investor Risk Profiling: Risk Capacity vs. Risk Appetite</h2>
+          <p class="text-xs sm:text-sm text-slate-600 mt-1">
+            SEBI mandates that every mutual fund distributor carry out an objective risk assessment of the client before recommending any financial product.
+          </p>
+        </div>
+
+        <!-- Comparative Cards -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 text-xs">
+          <div class="p-5 rounded-2xl bg-blue-50/60 border border-blue-200 space-y-2">
+            <div class="flex items-center justify-between">
+              <span class="font-bold text-blue-950 text-sm">Risk Capacity (Financial Ability)</span>
+              <span class="px-2 py-0.5 rounded bg-blue-200/70 text-blue-900 font-bold text-[10px]">Objective</span>
+            </div>
+            <p class="text-slate-700 leading-relaxed">
+              The investor's <strong>mathematical and financial ability</strong> to absorb portfolio losses without altering their standard of living or jeopardizing essential life goals (e.g. child education, retirement).
+            </p>
+            <div class="pt-1 space-y-1 text-slate-600">
+              <strong>Governed by:</strong> Dependable regular income, net worth, existing liabilities/EMIs, number of financial dependents, investment time horizon, and emergency liquidity reserve.
+            </div>
+          </div>
+
+          <div class="p-5 rounded-2xl bg-rose-50/60 border border-rose-200 space-y-2">
+            <div class="flex items-center justify-between">
+              <span class="font-bold text-rose-950 text-sm">Risk Appetite / Tolerance</span>
+              <span class="px-2 py-0.5 rounded bg-rose-200/70 text-rose-900 font-bold text-[10px]">Subjective / Psychological</span>
+            </div>
+            <p class="text-slate-700 leading-relaxed">
+              The investor's <strong>emotional and behavioral willingness</strong> to endure market volatility and portfolio drawdowns without panicking or liquidating investments at market bottoms.
+            </p>
+            <div class="pt-1 space-y-1 text-slate-600">
+              <strong>Governed by:</strong> Personality traits, emotional resilience, financial literacy, prior market trauma, and behavioral biases (e.g. severe loss aversion).
+            </div>
+          </div>
+        </div>
+
+        <!-- Cardinal Rule Callout -->
+        <div class="p-4 rounded-2xl bg-amber-50 border border-amber-300 text-xs space-y-1">
+          <span class="font-bold text-amber-950 text-sm flex items-center gap-1.5">
+            <i data-lucide="alert-triangle" class="w-4 h-4 text-amber-700"></i>
+            ⭐ Cardinal Exam Rule: Risk Capacity Strictly Overrides Risk Appetite!
+          </span>
+          <p class="text-slate-700 leading-relaxed">
+            If a client has a <strong>High Risk Appetite</strong> (eager to gamble in aggressive small-cap/thematic funds) but has <strong>Low Risk Capacity</strong> (low income, high debt, retiring in 18 months), the distributor <strong>must NOT</strong> recommend high-risk equity products. The financial ability to survive losses always takes precedence over psychological desire!
+          </p>
+        </div>
+
+        <!-- Life Cycle & SWP vs IDCW in Retirement -->
+        <div class="p-4 rounded-2xl bg-slate-50 border border-slate-200 space-y-3 text-xs">
+          <span class="font-bold text-slate-900 text-sm block">Retirement Distribution Phase: Systematic Withdrawal Plan (SWP) vs. IDCW (Payout)</span>
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+            <div class="p-3 rounded-xl bg-white border border-slate-200 space-y-1">
+              <span class="font-bold text-rose-900 block">IDCW (Income Distribution cum Capital Withdrawal)</span>
+              <ul class="list-disc pl-4 space-y-1 text-slate-600">
+                <li>Dividends are declared at AMC discretion; cash flow is unpredictable.</li>
+                <li><strong>Tax Drag:</strong> 100% of the dividend received is taxed as ordinary income at the investor's applicable slab rates (up to 39%).</li>
+              </ul>
+            </div>
+            <div class="p-3 rounded-xl bg-white border border-emerald-300 space-y-1">
+              <span class="font-bold text-emerald-900 block">SWP (Systematic Withdrawal Plan) - Recommended</span>
+              <ul class="list-disc pl-4 space-y-1 text-slate-600">
+                <li>Predictable, customized cash flow chosen by the investor.</li>
+                <li><strong>High Tax Efficiency:</strong> Each redemption comprises principal return + capital gain. <em>Tax is levied ONLY on the capital gain component</em>, not the entire withdrawal!</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Section 12.6 -->
+      <section id="section-6" class="bg-white rounded-3xl p-6 sm:p-8 border border-amber-200 shadow-sm space-y-6">
+        <div class="flex items-center justify-between">
+          <div class="flex items-center gap-2 text-xs font-bold text-amber-700 uppercase tracking-wider">
+            <span class="w-2 h-2 rounded-full bg-amber-500"></span> Section 12.6 &bull; Super High Exam Yield ⭐
+          </div>
+          <span class="text-xs px-2.5 py-1 rounded-full bg-amber-100 text-amber-800 font-bold">Code of Conduct</span>
+        </div>
+        
+        <div>
+          <h2 class="font-display font-bold text-xl sm:text-2xl text-slate-900">Mutual Fund Distributor Code of Conduct & Regulatory Compliance</h2>
+          <p class="text-xs sm:text-sm text-slate-600 mt-1">
+            SEBI and AMFI enforce strict fiduciary standards on distributors. Violations attract immediate suspension, ARN cancellation, commission clawback, and regulatory debarment.
+          </p>
+        </div>
+
+        <div class="space-y-4 text-xs sm:text-sm">
+          <!-- Strict Prohibitions Box -->
+          <div class="p-5 rounded-2xl bg-rose-50/70 border border-rose-300 space-y-3">
+            <h3 class="font-bold text-rose-950 text-sm flex items-center gap-2">
+              <i data-lucide="ban" class="w-4 h-4 text-rose-600"></i>
+              Strict Regulatory Prohibitions (Absolute "DON'TS")
+            </h3>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-3 text-xs">
+              <div class="p-3 bg-white/90 rounded-xl border border-rose-200 space-y-1">
+                <span class="font-bold text-rose-900">1. Portfolio Churning</span>
+                <p class="text-slate-700 leading-relaxed">
+                  Advising or inducing clients to frequently redeem and reinvest between schemes to generate transaction volumes or earn fresh trail commissions.
+                </p>
+              </div>
+
+              <div class="p-3 bg-white/90 rounded-xl border border-rose-200 space-y-1">
+                <span class="font-bold text-rose-900">2. Commission Rebating / Pass-Back</span>
+                <p class="text-slate-700 leading-relaxed">
+                  Passing back, sharing, or rebating any part of distributor commission to the investor in cash, gifts, discounts, or indirect benefits. Strictly illegal.
+                </p>
+              </div>
+
+              <div class="p-3 bg-white/90 rounded-xl border border-rose-200 space-y-1">
+                <span class="font-bold text-rose-900">3. Guaranteed Return Claims</span>
+                <p class="text-slate-700 leading-relaxed">
+                  Promising, assuring, or indicating fixed returns or guaranteed capital safety on any open-ended mutual fund scheme.
+                </p>
+              </div>
+
+              <div class="p-3 bg-white/90 rounded-xl border border-rose-200 space-y-1">
+                <span class="font-bold text-rose-900">4. Handling Investor Cash / Cheques</span>
+                <p class="text-slate-700 leading-relaxed">
+                  Accepting cheques in distributor's personal or firm name. Cheques must be drawn strictly in favor of the scheme/AMC. Cash is capped at ₹50,000/year.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Mandatory Affirmative Duties Box -->
+          <div class="p-5 rounded-2xl bg-emerald-50/70 border border-emerald-300 space-y-3">
+            <h3 class="font-bold text-emerald-950 text-sm flex items-center gap-2">
+              <i data-lucide="check-square" class="w-4 h-4 text-emerald-600"></i>
+              Mandatory Affirmative Duties (Absolute "DO'S")
+            </h3>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-3 text-xs">
+              <div class="p-3 bg-white/90 rounded-xl border border-emerald-200 space-y-1">
+                <span class="font-bold text-emerald-900">Product Suitability</span>
+                <p class="text-slate-700">Ensure the recommended scheme aligns strictly with the client's financial goals, horizon, and objective risk capacity.</p>
+              </div>
+
+              <div class="p-3 bg-white/90 rounded-xl border border-emerald-200 space-y-1">
+                <span class="font-bold text-emerald-900">Commission Disclosure</span>
+                <p class="text-slate-700">Disclose all trail commission rates received across competing mutual fund houses to the investor upfront.</p>
+              </div>
+
+              <div class="p-3 bg-white/90 rounded-xl border border-emerald-200 space-y-1">
+                <span class="font-bold text-emerald-900">EUIN Quoting</span>
+                <p class="text-slate-700">Mandatorily quote the Employee Unique Identification Number (EUIN) on every application to maintain personal advisory accountability.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Section 12.7 Interactive Quiz -->
+      <section id="interactive-quiz" class="bg-slate-900 text-white rounded-3xl p-6 sm:p-8 border border-slate-800 shadow-xl space-y-6">
+        <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 border-b border-slate-800 pb-5">
+          <div>
+            <div class="flex items-center gap-2 text-xs font-bold text-blue-400 uppercase tracking-wider mb-1">
+              <i data-lucide="check-circle" class="w-4 h-4"></i> Interactive Exam Assessment
+            </div>
+            <h3 class="font-display font-bold text-xl sm:text-2xl text-white">Chapter 12 Practice Quiz</h3>
+            <p class="text-xs text-slate-400 mt-1">12 Exam-standard questions covering Core & Satellite, PTR calculation, duration matching, and distributor code of conduct.</p>
+          </div>
+          <div class="flex items-center gap-3">
+            <div class="text-right">
+              <span class="text-xs text-slate-400">Progress</span>
+              <div class="text-sm font-bold text-blue-400"><span id="answered-count">0</span> / 12</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Questions Container -->
+        <div id="quiz-container" class="space-y-6"></div>
+
+        <!-- Action Bar -->
+        <div class="pt-4 border-t border-slate-800 flex flex-col sm:flex-row items-center justify-between gap-4">
+          <button id="submit-quiz-btn" onclick="submitQuiz()" class="w-full sm:w-auto px-6 py-3 rounded-xl bg-blue-600 hover:bg-blue-500 font-bold text-sm shadow-lg shadow-blue-600/30 transition-all flex items-center justify-center gap-2 cursor-pointer">
+            <span>Submit Quiz & View Results</span>
+            <i data-lucide="arrow-right" class="w-4 h-4"></i>
+          </button>
+          <button id="reset-quiz-btn" onclick="resetQuiz()" class="hidden w-full sm:w-auto px-6 py-3 rounded-xl bg-slate-800 hover:bg-slate-700 text-slate-300 font-bold text-sm transition-all flex items-center justify-center gap-2 cursor-pointer">
+            <i data-lucide="rotate-ccw" class="w-4 h-4"></i>
+            <span>Retake Quiz</span>
+          </button>
+        </div>
+
+        <!-- Quiz Results -->
+        <div id="quiz-results" class="hidden p-6 rounded-2xl bg-slate-800/80 border border-slate-700 space-y-4">
+          <div class="flex items-center justify-between">
+            <h4 class="font-display font-bold text-lg text-white">Quiz Score Summary</h4>
+            <span id="result-status-badge" class="px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider"></span>
+          </div>
+          <div class="flex items-baseline gap-3">
+            <span id="score-display" class="font-display font-extrabold text-4xl text-blue-400"></span>
+            <span id="percentage-display" class="text-sm text-slate-400 font-medium"></span>
+          </div>
+          <p id="result-summary-text" class="text-xs sm:text-sm text-slate-300"></p>
+        </div>
+      </section>
+
+      <!-- Navigation Footer -->
+      <footer class="pt-6 border-t border-slate-200 flex items-center justify-between">
+        <a href="module1-ch11.html" class="flex items-center gap-2 px-4 py-2.5 rounded-xl border border-slate-200 bg-white hover:bg-slate-50 text-slate-700 font-medium text-xs transition-colors">
+          <i data-lucide="arrow-left" class="w-4 h-4"></i>
+          <span>Prev: Chapter 11 (Performance)</span>
+        </a>
+        <a href="module2.html" class="flex items-center gap-2 px-4 py-2.5 rounded-xl bg-blue-600 hover:bg-blue-700 text-white font-semibold text-xs shadow-sm transition-colors">
+          <span>Proceed to Module 2 Hub</span>
+          <i data-lucide="arrow-right" class="w-4 h-4"></i>
+        </a>
+      </footer>
+
+    </div>
+  </div>
+
+  <script>
+    const questionsData = [
+      {
+        id: 1,
+        question: "In a standard Core and Satellite portfolio construction architecture, what is the typical recommended percentage allocation to the Core component?",
+        options: [
+          { key: "a", text: "20% to 35%" },
+          { key: "b", text: "40% to 50%" },
+          { key: "c", text: "65% to 80%" },
+          { key: "d", text: "90% to 100%" }
+        ],
+        correct: "c",
+        explanation: "The Core portfolio represents 65% to 80% of total investments, composed of broad-market, low-cost diversified funds (Index Funds, Large Cap, Sovereign/AAA Debt), while the Satellite portion represents 20% to 35% for tactical alpha generation."
+      },
+      {
+        id: 2,
+        question: "An equity mutual fund scheme has an Average Daily AUM of ₹4,000 Crores over the year. During this period, the fund manager bought equity shares worth ₹1,200 Crores and sold equity shares worth ₹800 Crores. What is the Portfolio Turnover Ratio (PTR) of the scheme?",
+        options: [
+          { key: "a", text: "50%" },
+          { key: "b", text: "20%" },
+          { key: "c", text: "30%" },
+          { key: "d", text: "25%" }
+        ],
+        correct: "b",
+        explanation: "PTR = Lower of Purchases or Sales divided by Average AUM. Here, Min(₹1,200 Cr, ₹800 Cr) = ₹800 Cr. PTR = ₹800 Cr / ₹4,000 Cr = 0.20 or 20%."
+      },
+      {
+        id: 3,
+        question: "What does an unusually high Portfolio Turnover Ratio (PTR) of 160% in an equity mutual fund scheme indicate?",
+        options: [
+          { key: "a", text: "The fund follows a strict long-term buy-and-hold philosophy" },
+          { key: "b", text: "The fund manager is actively churning stocks frequently, incurring higher transaction brokerage and potential tax drag" },
+          { key: "c", text: "The fund guarantees 160% annual returns to investors" },
+          { key: "d", text: "The fund has zero equity exposure" }
+        ],
+        correct: "b",
+        explanation: "A high PTR (>100%) indicates rapid trading and portfolio churn, which increases trading costs (brokerage, STT, impact cost) and generates short-term capital gains friction."
+      },
+      {
+        id: 4,
+        question: "An investor has a fixed financial goal maturing in 2 years. Which debt scheme category is most suitable to match duration and immunize interest rate risk?",
+        options: [
+          { key: "a", text: "Long Duration Fund (Macaulay Duration > 7 years)" },
+          { key: "b", text: "Short Duration Fund (Macaulay Duration 1 year to 3 years)" },
+          { key: "c", text: "Overnight Fund (1 day maturity)" },
+          { key: "d", text: "Credit Risk Fund (AA and below rated paper)" }
+        ],
+        correct: "b",
+        explanation: "By matching the 2-year time horizon with a Short Duration Fund (Macaulay Duration between 1 and 3 years), the investor immunizes the portfolio against interest rate shocks."
+      },
+      {
+        id: 5,
+        question: "What is the primary operational mechanism behind Macaulay Duration matching (The Immunization Principle)?",
+        options: [
+          { key: "a", text: "It completely eliminates credit default risk of the corporate issuers" },
+          { key: "b", text: "The capital loss from rising interest rates is exactly offset by higher reinvestment yields on future coupons" },
+          { key: "c", text: "It doubles the coupon rate of the underlying bonds" },
+          { key: "d", text: "It makes the fund returns entirely tax-exempt" }
+        ],
+        correct: "b",
+        explanation: "When investment horizon equals Macaulay Duration, the negative price risk (capital loss) from rate increases is precisely cancelled out by positive reinvestment risk (reinvesting cash flows at higher yields)."
+      },
+      {
+        id: 6,
+        question: "In investor profiling, how do Risk Capacity and Risk Appetite differ, and what is the regulatory hierarchy?",
+        options: [
+          { key: "a", text: "Risk Capacity is emotional, Risk Appetite is financial; Appetite overrides Capacity" },
+          { key: "b", text: "Risk Capacity is the objective financial ability to sustain losses; Risk Appetite is subjective psychological tolerance; Capacity strictly overrides Appetite" },
+          { key: "c", text: "Both terms have identical regulatory definitions and can be used interchangeably" },
+          { key: "d", text: "Risk Capacity applies only to institutional investors, while Risk Appetite applies to retail investors" }
+        ],
+        correct: "b",
+        explanation: "Risk Capacity is the objective financial ability to absorb losses without failing goals. Risk Appetite is emotional tolerance. In suitability assessments, Risk Capacity strictly overrides Appetite."
+      },
+      {
+        id: 7,
+        question: "Which of the following distributor actions constitutes 'Portfolio Churning' and is strictly prohibited by SEBI and AMFI?",
+        options: [
+          { key: "a", text: "Recommending an annual rebalancing from equity to debt to restore the strategic asset allocation" },
+          { key: "b", text: "Advising a client to switch from one scheme to another without any economic rationale, solely to generate transaction commissions" },
+          { key: "c", text: "Assisting a client in setting up a Systematic Transfer Plan (STP) from a Liquid Fund to an Index Fund" },
+          { key: "d", text: "Recommending an arbitrage fund to an investor seeking tax-efficient short-term parking" }
+        ],
+        correct: "b",
+        explanation: "Portfolio churning is inducing unnecessary switches between schemes to generate distributor commissions. It is a serious violation resulting in ARN suspension/cancellation."
+      },
+      {
+        id: 8,
+        question: "A high-net-worth investor demands a 0.25% cash rebate from the distributor's trail commission as a condition for investing ₹5 Crores. How should the distributor respond under SEBI/AMFI rules?",
+        options: [
+          { key: "a", text: "Agree to rebate the commission since the investment size exceeds ₹1 Crore" },
+          { key: "b", text: "Offer the rebate in gold coins instead of cash to bypass the cash restriction" },
+          { key: "c", text: "Refuse the request immediately, as commission rebating or pass-back in any form (cash or kind) is strictly illegal" },
+          { key: "d", text: "Rebate the commission only if approved in writing by the Asset Management Company" }
+        ],
+        correct: "c",
+        explanation: "SEBI and AMFI Code of Conduct strictly prohibits distributors from rebating or passing back any portion of their commission to investors, in cash or kind, regardless of investment size."
+      },
+      {
+        id: 9,
+        question: "What does the Yield to Maturity (YTM) of a debt mutual fund scheme represent to an investor?",
+        options: [
+          { key: "a", text: "A guaranteed fixed return guaranteed by the AMC and Trustee" },
+          { key: "b", text: "The weighted average IRR if all underlying bonds are held to maturity without default and coupons are reinvested at YTM" },
+          { key: "c", text: "The past 1-year historical CAGR of the scheme" },
+          { key: "d", text: "The monthly dividend distribution rate announced by the fund manager" }
+        ],
+        correct: "b",
+        explanation: "YTM is the portfolio's weighted average expected annualized yield assuming all bonds are held until maturity, zero credit defaults occur, and all coupons are reinvested at the same rate. It is NOT guaranteed."
+      },
+      {
+        id: 10,
+        question: "Which of the following investment decisions is classified as Tactical Asset Allocation (TAA)?",
+        options: [
+          { key: "a", text: "Maintaining an immutable 70:30 equity-to-debt ratio for a 25-year retirement goal" },
+          { key: "b", text: "Temporarily shifting 10% from debt to equity because a steep market crash has created an attractive valuation anomaly" },
+          { key: "c", text: "Investing ₹10,000 every month through a systematic investment plan (SIP)" },
+          { key: "d", text: "Holding 6 months of living expenses in a liquid fund as an emergency reserve" }
+        ],
+        correct: "b",
+        explanation: "Tactical Asset Allocation (TAA) involves deliberate, short-to-medium-term deviations from the baseline strategic allocation to capitalize on market valuation anomalies or cyclical economic trends."
+      },
+      {
+        id: 11,
+        question: "Why is a Systematic Withdrawal Plan (SWP) significantly more tax-efficient than the IDCW (Payout) option for a retired investor in the 30% tax bracket?",
+        options: [
+          { key: "a", text: "SWP cash flows are completely exempt from income tax under Section 10(23D)" },
+          { key: "b", text: "In an SWP, tax is levied only on the capital gain component of the redeemed units (not the principal), whereas 100% of IDCW payouts are taxed at the investor's 30% slab rate" },
+          { key: "c", text: "IDCW payouts are subjected to an immediate 50% penalty by SEBI" },
+          { key: "d", text: "SWP provides guaranteed returns backed by the Government of India" }
+        ],
+        correct: "b",
+        explanation: "Under SWP, each cash flow is a redemption of units consisting of return of capital (tax-free) and capital gains. Only the capital gain is taxed (at favorable LTCG/STCG rates). In contrast, 100% of IDCW payouts are taxable at the investor's marginal slab rate."
+      },
+      {
+        id: 12,
+        question: "What is the regulatory significance of quoting the Employee Unique Identification Number (EUIN) on mutual fund application forms?",
+        options: [
+          { key: "a", text: "It guarantees that the investor will receive direct plan expense ratios" },
+          { key: "b", text: "It identifies the specific sales person who interacted with and advised the client, ensuring accountability against mis-selling" },
+          { key: "c", text: "It allows the sales person to receive cash commissions directly from the AMC" },
+          { key: "d", text: "It waives the KYC requirements for retail investors" }
+        ],
+        correct: "b",
+        explanation: "The EUIN system was introduced by AMFI/SEBI to fix personal accountability on the individual sales employee/RM who provided advice or execution, preventing mis-selling and aiding dispute resolution."
+      }
+    ];
+
+    let userAnswers = {};
+
+    function renderQuiz() {
+      const container = document.getElementById("quiz-container");
+      container.innerHTML = "";
+      questionsData.forEach((q, idx) => {
+        const qDiv = document.createElement("div");
+        qDiv.className = "p-5 rounded-2xl bg-white/5 border border-white/10 space-y-3";
+        
+        let optionsHtml = "";
+        q.options.forEach(opt => {
+          optionsHtml += `
+            <label id="label-${q.id}-${opt.key}" onclick="selectOption(${q.id}, '${opt.key}')" class="flex items-center gap-3 p-3 rounded-xl bg-white/5 hover:bg-white/10 border border-white/5 cursor-pointer text-xs sm:text-sm transition-all">
+              <input type="radio" name="q-${q.id}" value="${opt.key}" class="hidden" />
+              <div id="circle-${q.id}-${opt.key}" class="w-6 h-6 rounded-full border border-slate-500 flex items-center justify-center font-bold text-xs shrink-0 text-slate-300">${opt.key.toUpperCase()}</div>
+              <span class="text-slate-300">${opt.text}</span>
+            </label>
+          `;
+        });
+
+        qDiv.innerHTML = `
+          <div class="flex items-center justify-between">
+            <span class="text-xs font-bold text-blue-400">Question ${idx + 1} of ${questionsData.length}</span>
+            <span id="badge-${q.id}" class="text-xs px-2.5 py-0.5 rounded-full bg-slate-800 text-slate-400 font-medium">Unanswered</span>
+          </div>
+          <h4 class="font-display font-semibold text-sm sm:text-base text-white leading-snug">${q.question}</h4>
+          <div class="space-y-2 mt-3">${optionsHtml}</div>
+          <div id="explanation-${q.id}" class="hidden p-4 rounded-xl text-xs sm:text-sm mt-3 space-y-1"></div>
+        `;
+        container.appendChild(qDiv);
+      });
+      lucide.createIcons();
+    }
+
+    function selectOption(qId, key) {
+      userAnswers[qId] = key;
+      document.getElementById("answered-count").innerText = Object.keys(userAnswers).length;
+      
+      const badge = document.getElementById(`badge-${qId}`);
+      if (badge) {
+        badge.innerText = "Answered";
+        badge.className = "text-xs px-2.5 py-0.5 rounded-full bg-blue-500/20 text-blue-300 font-medium border border-blue-500/30";
+      }
+
+      const q = questionsData.find(item => item.id === qId);
+      q.options.forEach(opt => {
+        const lbl = document.getElementById(`label-${qId}-${opt.key}`);
+        const circle = document.getElementById(`circle-${qId}-${opt.key}`);
+        if (opt.key === key) {
+          lbl.className = "flex items-center gap-3 p-3 rounded-xl bg-blue-600/30 border border-blue-400/60 cursor-pointer text-xs sm:text-sm transition-all shadow-sm";
+          circle.className = "w-6 h-6 rounded-full bg-blue-600 text-white font-bold text-xs shrink-0 flex items-center justify-center border border-blue-400";
+        } else {
+          lbl.className = "flex items-center gap-3 p-3 rounded-xl bg-white/5 hover:bg-white/10 border border-white/5 cursor-pointer text-xs sm:text-sm transition-all";
+          circle.className = "w-6 h-6 rounded-full border border-slate-500 flex items-center justify-center font-bold text-xs shrink-0 text-slate-300";
+        }
+      });
+    }
+
+    function submitQuiz() {
+      let score = 0;
+      questionsData.forEach(q => {
+        const selected = userAnswers[q.id];
+        const isCorrect = selected === q.correct;
+        if (isCorrect) score++;
+
+        const explanationDiv = document.getElementById(`explanation-${q.id}`);
+        explanationDiv.classList.remove("hidden");
+
+        // Color coding options
+        q.options.forEach(opt => {
+          const lbl = document.getElementById(`label-${q.id}-${opt.key}`);
+          const circle = document.getElementById(`circle-${q.id}-${opt.key}`);
+          lbl.onclick = null; // disable further clicks
+          lbl.classList.remove("cursor-pointer");
+
+          if (opt.key === q.correct) {
+            lbl.className = "flex items-center gap-3 p-3 rounded-xl bg-emerald-950/60 border border-emerald-500 text-emerald-200 text-xs sm:text-sm";
+            circle.className = "w-6 h-6 rounded-full bg-emerald-600 text-white font-bold text-xs shrink-0 flex items-center justify-center";
+          } else if (opt.key === selected && !isCorrect) {
+            lbl.className = "flex items-center gap-3 p-3 rounded-xl bg-rose-950/60 border border-rose-500 text-rose-200 text-xs sm:text-sm";
+            circle.className = "w-6 h-6 rounded-full bg-rose-600 text-white font-bold text-xs shrink-0 flex items-center justify-center";
+          }
+        });
+
+        if (isCorrect) {
+          explanationDiv.className = "p-4 rounded-xl text-xs sm:text-sm mt-3 bg-emerald-950/60 border border-emerald-600/80 text-emerald-200 space-y-1";
+          explanationDiv.innerHTML = `<div class="font-bold text-emerald-400 flex items-center gap-1.5"><i data-lucide="check-circle" class="w-4 h-4"></i> Correct!</div><p class="leading-relaxed">${q.explanation}</p>`;
+        } else {
+          explanationDiv.className = "p-4 rounded-xl text-xs sm:text-sm mt-3 bg-rose-950/60 border border-rose-600/80 text-rose-200 space-y-1";
+          explanationDiv.innerHTML = `<div class="font-bold text-rose-400 flex items-center gap-1.5"><i data-lucide="x-circle" class="w-4 h-4"></i> Incorrect (Correct Answer: Option ${q.correct.toUpperCase()})</div><p class="leading-relaxed">${q.explanation}</p>`;
+        }
+      });
+
+      const percentage = Math.round((score / questionsData.length) * 100);
+      const passed = percentage >= 60;
+      
+      const resultsDiv = document.getElementById("quiz-results");
+      resultsDiv.classList.remove("hidden");
+
+      const statusBadge = document.getElementById("result-status-badge");
+      statusBadge.innerText = passed ? "Passed (60%+ Benchmark)" : "Needs Revision (<60%)";
+      statusBadge.className = passed ? "px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider bg-emerald-500 text-emerald-950" : "px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider bg-amber-500 text-amber-950";
+
+      document.getElementById("score-display").innerText = `${score} / ${questionsData.length}`;
+      document.getElementById("percentage-display").innerText = `${percentage}% Score (Passing Benchmark: 60%)`;
+
+      document.getElementById("result-summary-text").innerText = passed
+        ? `Exceptional work! You scored ${percentage}%, demonstrating comprehensive mastery over Chapter 12: Mutual Fund Scheme Selection and concluding Module 1 with full distinction!`
+        : `You scored ${percentage}%. Please review the Core & Satellite allocation rules, PTR computation, Macaulay duration matching principles, and MFD Code of Conduct prohibitions before retaking.`;
+
+      document.getElementById("submit-quiz-btn").classList.add("hidden");
+      document.getElementById("reset-quiz-btn").classList.remove("hidden");
+
+      resultsDiv.scrollIntoView({ behavior: 'smooth' });
+      lucide.createIcons();
+    }
+
+    function resetQuiz() {
+      userAnswers = {};
+      document.getElementById("answered-count").innerText = "0";
+      document.getElementById("quiz-results").classList.add("hidden");
+      document.getElementById("submit-quiz-btn").classList.remove("hidden");
+      document.getElementById("reset-quiz-btn").classList.add("hidden");
+      renderQuiz();
+      document.getElementById("interactive-quiz").scrollIntoView({ behavior: 'smooth' });
+    }
+
+    renderQuiz();
+    lucide.createIcons();
+  </script>
+</body>
+</html>

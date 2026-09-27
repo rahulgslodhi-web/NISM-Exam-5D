@@ -1,0 +1,1538 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Chapter 2: Concept and Role of a Mutual Fund | NISM Series V-D Notes</title>
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Google Fonts & Lucide Icons -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+  <script src="https://unpkg.com/lucide@latest"></script>
+
+  <!-- KaTeX for formula rendering -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.min.css">
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.min.js"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/contrib/auto-render.min.js" onload="renderMathInElement(document.body);"></script>
+
+  <!-- Global Module & Chapter Navigation Sidebar -->
+    <!-- Modern Documentation Design System & Zoom Engine -->
+  <link rel="stylesheet" href="modern-docs.css">
+  <script defer src="nav-sidebar.js"></script>
+
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+            display: ['"Space Grotesk"', 'sans-serif']
+          },
+          colors: {
+            brand: {
+              50: '#eef2ff',
+              100: '#e0e7ff',
+              500: '#6366f1',
+              600: '#4f46e5',
+              700: '#4338ca',
+            }
+          }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    body { font-family: 'Plus Jakarta Sans', sans-serif; }
+    .exam-highlight {
+      background: linear-gradient(135deg, rgba(254, 243, 199, 0.7), rgba(253, 230, 138, 0.4));
+      border: 1px solid rgba(245, 158, 11, 0.35);
+      border-radius: 14px;
+    }
+    .key-concept {
+      background: linear-gradient(135deg, rgba(238, 242, 255, 0.8), rgba(224, 231, 255, 0.4));
+      border: 1px solid rgba(79, 70, 229, 0.3);
+      border-radius: 14px;
+    }
+  </style>
+</head>
+<body class="bg-slate-50 text-slate-900 min-h-screen flex flex-col selection:bg-indigo-500 selection:text-white">
+
+  <!-- Header -->
+  <header class="sticky top-0 z-50 bg-white/90 backdrop-blur-md border-b border-slate-200">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
+      <div class="flex items-center gap-3">
+        <a href="module1.html" class="flex items-center gap-2 text-slate-500 hover:text-slate-900 transition-colors">
+          <div class="w-9 h-9 rounded-xl bg-slate-100 hover:bg-slate-200 flex items-center justify-center text-slate-700 transition-colors">
+            <i data-lucide="arrow-left" class="w-4 h-4"></i>
+          </div>
+        </a>
+        <div>
+          <div class="flex items-center gap-2">
+            <span class="text-xs font-bold uppercase tracking-wider text-blue-600 bg-blue-50 px-2 py-0.5 rounded">Module 1</span>
+            <span class="text-xs text-slate-400 font-medium">Chapter 2 of 12</span>
+          </div>
+          <h1 class="font-display font-bold text-base sm:text-lg text-slate-900 leading-tight">Concept & Role of a Mutual Fund</h1>
+        </div>
+      </div>
+
+      <!-- Chapter Navigation & Weightage -->
+      <div class="flex items-center gap-3">
+        <span class="hidden sm:inline-flex items-center gap-1 px-3 py-1 rounded-full text-xs font-bold bg-amber-50 text-amber-700 border border-amber-200">
+          <i data-lucide="award" class="w-3.5 h-3.5"></i>
+          Weightage: 4 Marks
+        </span>
+        <a href="#interactive-quiz" class="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-lg text-xs font-bold bg-blue-600 hover:bg-blue-700 text-white shadow-sm transition-all">
+          <i data-lucide="help-circle" class="w-3.5 h-3.5"></i>
+          <span>Chapter Quiz</span>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Grid Layout -->
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 grid grid-cols-1 lg:grid-cols-12 gap-8 flex-grow">
+    
+    <!-- Table of Contents Sidebar (Desktop) -->
+    <aside class="hidden lg:block lg:col-span-3">
+      <div class="sticky top-20 space-y-3">
+        <!-- Chapter Switcher (3 Module Dropdowns) -->
+        <div id="sidebar-chapter-switcher"></div>
+
+        <!-- In-Page Section Jump (Collapsible) -->
+        <details class="group rounded-2xl bg-white border border-slate-200 shadow-sm overflow-hidden text-xs">
+          <summary class="flex items-center justify-between p-3.5 cursor-pointer select-none bg-slate-50/70 hover:bg-slate-100 transition-colors font-bold text-slate-700">
+            <span class="flex items-center gap-2">
+              <i data-lucide="bookmark" class="w-3.5 h-3.5 text-blue-600"></i>
+              <span>On This Page (Sections)</span>
+            </span>
+            <i data-lucide="chevron-down" class="w-3.5 h-3.5 text-slate-400 transition-transform duration-200 group-open:rotate-180"></i>
+          </summary>
+          <nav class="p-3 pt-1 space-y-1 text-xs max-h-56 overflow-y-auto border-t border-slate-100">
+            <a href="#section-1" class="block px-2.5 py-1.5 rounded-lg text-slate-600 hover:bg-slate-100 hover:text-blue-600 transition-colors">2.1 Concept of MF & Role in Economy</a>
+            <a href="#section-2" class="block px-2.5 py-1.5 rounded-lg text-slate-600 hover:bg-slate-100 hover:text-blue-600 transition-colors">2.2 Core Concepts (NAV, AUM, MTM)</a>
+            <a href="#section-3" class="block px-2.5 py-1.5 rounded-lg text-slate-600 hover:bg-slate-100 hover:text-blue-600 transition-colors">2.3 Advantages & Limitations</a>
+            <a href="#section-4" class="block px-2.5 py-1.5 rounded-lg text-slate-600 hover:bg-slate-100 hover:text-blue-600 transition-colors">2.4 Structural Classification & ETFs</a>
+            <a href="#section-5" class="block px-2.5 py-1.5 rounded-lg text-amber-700 font-semibold bg-amber-50/70 hover:bg-amber-100 transition-colors">2.5 Active vs Passive & MF Lite ⭐</a>
+            <a href="#section-6" class="block px-2.5 py-1.5 rounded-lg text-amber-700 font-semibold bg-amber-50/70 hover:bg-amber-100 transition-colors">2.6 SEBI 13 Equity Schemes & Market Caps ⭐</a>
+            <a href="#section-7" class="block px-2.5 py-1.5 rounded-lg text-amber-700 font-semibold bg-amber-50/70 hover:bg-amber-100 transition-colors">2.7 SEBI 17 Debt Schemes & Durations ⭐</a>
+            <a href="#section-8" class="block px-2.5 py-1.5 rounded-lg text-amber-700 font-semibold bg-amber-50/70 hover:bg-amber-100 transition-colors">2.8 Hybrid (7 Types) & Life Cycle Funds ⭐</a>
+            <a href="#section-9" class="block px-2.5 py-1.5 rounded-lg text-slate-600 hover:bg-slate-100 hover:text-blue-600 transition-colors">2.9 Other Schemes, REITs, InvITs & SM REITs</a>
+            <a href="#section-10" class="block px-2.5 py-1.5 rounded-lg text-purple-700 font-bold bg-purple-50 hover:bg-purple-100 transition-colors">2.10 SEBI Specialized Investment Fund (SIF) ⭐⭐</a>
+            <a href="#section-11" class="block px-2.5 py-1.5 rounded-lg text-slate-600 hover:bg-slate-100 hover:text-blue-600 transition-colors">2.11 Growth of Indian MF Industry</a>
+            <a href="#interactive-quiz" class="block px-2.5 py-1.5 rounded-lg text-blue-700 font-bold bg-blue-50 hover:bg-blue-100 transition-colors mt-2">Practice Quiz (12 Questions)</a>
+          </nav>
+        </details>
+
+        <!-- Quick Tip Card -->
+        <div class="p-4 rounded-2xl bg-gradient-to-br from-blue-600 to-indigo-700 text-white shadow-sm text-xs space-y-2">
+          <div class="flex items-center gap-1.5 font-bold">
+            <i data-lucide="zap" class="w-4 h-4 text-amber-300"></i>
+            <span>NISM V-D High-Yield Insights</span>
+          </div>
+          <p class="text-indigo-100 leading-relaxed">
+            Exam heavily focuses on:
+            <br>&bull; <strong>SIF minimum ticket:</strong> ₹10 Lakhs across strategies of same AMC.
+            <br>&bull; <strong>SIF max short exposure:</strong> 25% unhedged derivative limit.
+            <br>&bull; <strong>Market Cap tiers:</strong> Large (1-100), Mid (101-250), Small (251+).
+            <br>&bull; <strong>MF Lite:</strong> Lightweight framework for purely passive funds.
+          </p>
+        </div>
+      </div>
+    </aside>
+
+    <!-- Main Study Notes Area -->
+    <div class="lg:col-span-9 space-y-10">
+
+      <!-- Section 2.1 -->
+      <section id="section-1" class="bg-white rounded-3xl p-6 sm:p-8 border border-slate-200/90 shadow-sm space-y-5">
+        <div class="flex items-center justify-between">
+          <div class="flex items-center gap-2 text-xs font-bold text-slate-500 uppercase tracking-wider">
+            <span class="w-2 h-2 rounded-full bg-slate-400"></span> Section 2.1 &bull; Quick Refresher
+          </div>
+          <span class="px-2 py-0.5 rounded text-[11px] font-semibold bg-slate-100 text-slate-600">Core Concept</span>
+        </div>
+        <h2 class="font-display text-xl sm:text-2xl font-bold text-slate-900">Concept of a Mutual Fund & Its Economic Role</h2>
+        
+        <!-- Crucial Concept Note -->
+        <div class="p-4 rounded-2xl bg-indigo-50/80 border border-indigo-200 text-xs sm:text-sm text-indigo-950 space-y-2">
+          <p class="font-bold flex items-center gap-2 text-indigo-900">
+            <i data-lucide="info" class="w-4 h-4 text-indigo-600 shrink-0"></i>
+            Key Distributor Principle: Investing "Through", Not "In"
+          </p>
+          <p class="leading-relaxed">
+            Technically, one does <strong>not invest in</strong> a mutual fund, but <strong>invests through</strong> a mutual fund. A mutual fund is not an asset class that competes with shares or bonds; it is a <strong>pass-through vehicle</strong> (constituted as a <strong>Trust</strong>) that pools money from investors to purchase an underlying portfolio of equities, debt, gold, or money market instruments.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 text-xs sm:text-sm">
+          <div class="p-4 bg-slate-50 rounded-2xl border border-slate-200 space-y-1.5">
+            <span class="font-bold text-slate-900 block flex items-center gap-1.5">
+              <i data-lucide="share-2" class="w-4 h-4 text-blue-600"></i> 1. Pass-Through Vehicle
+            </span>
+            <p class="text-slate-600">
+              All profits, capital gains, interest, dividends, or losses belong solely to the unitholders. No other entity (Sponsor, Trustee, AMC) participates in the profits or losses; they only earn regulatory-capped fees.
+            </p>
+          </div>
+          <div class="p-4 bg-slate-50 rounded-2xl border border-slate-200 space-y-1.5">
+            <span class="font-bold text-slate-900 block flex items-center gap-1.5">
+              <i data-lucide="building-2" class="w-4 h-4 text-emerald-600"></i> 2. Capital Formation
+            </span>
+            <p class="text-slate-600">
+              Mobilizes retail household savings into corporate equity and debt financing, funding national infrastructure, generating employment, and boosting tax revenues.
+            </p>
+          </div>
+          <div class="p-4 bg-slate-50 rounded-2xl border border-slate-200 space-y-1.5">
+            <span class="font-bold text-slate-900 block flex items-center gap-1.5">
+              <i data-lucide="shield-check" class="w-4 h-4 text-amber-600"></i> 3. Market Stabilizer ⭐
+            </span>
+            <p class="text-slate-600">
+              Acts as a domestic counterforce to volatile Foreign Portfolio Investor (FPI) flows. In <strong>2022 and 2025</strong>, domestic SIP inflows absorbed massive FPI selling, providing market resilience.
+            </p>
+          </div>
+        </div>
+
+        <!-- Investment Objective vs Investment Policy -->
+        <div class="p-4 rounded-2xl bg-slate-50 border border-slate-200 text-xs sm:text-sm space-y-3">
+          <h4 class="font-bold text-slate-900 flex items-center gap-2">
+            <i data-lucide="target" class="w-4 h-4 text-indigo-600"></i> Investment Objective vs. Investment Policy
+          </h4>
+          <p class="text-slate-600">
+            Every scheme has a pre-announced <strong>Investment Objective</strong> stated in the Scheme Information Document (SID) addressing safety, liquidity, and return expectations. To achieve this, the AMC formulates an <strong>Investment Policy</strong> which specifies two critical aspects:
+          </p>
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 pt-1">
+            <div class="p-3 bg-white rounded-xl border border-slate-200">
+              <strong class="text-slate-900 text-xs block">1. Asset Allocation</strong>
+              Permissible percentage allocation across equity, debt, money market, and gold/commodities.
+            </div>
+            <div class="p-3 bg-white rounded-xl border border-slate-200">
+              <strong class="text-slate-900 text-xs block">2. Investment Style & Concentration</strong>
+              Growth style vs. Value/Contra style; Top-down vs. Bottom-up; Focused (concentrated) vs. Well-diversified.
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Section 2.2 -->
+      <section id="section-2" class="bg-white rounded-3xl p-6 sm:p-8 border border-slate-200/90 shadow-sm space-y-5">
+        <div class="flex items-center justify-between">
+          <div class="flex items-center gap-2 text-xs font-bold text-slate-500 uppercase tracking-wider">
+            <span class="w-2 h-2 rounded-full bg-slate-400"></span> Section 2.2 &bull; Quick Refresher
+          </div>
+          <span class="px-2 py-0.5 rounded text-[11px] font-semibold bg-indigo-50 text-indigo-700 border border-indigo-200">Key Metrics</span>
+        </div>
+        <h2 class="font-display text-xl sm:text-2xl font-bold text-slate-900">Core Concepts & Valuation Terminology</h2>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 text-xs sm:text-sm">
+          
+          <div class="p-4 bg-slate-50 rounded-2xl border border-slate-200 space-y-1">
+            <strong class="text-indigo-900 font-bold block text-sm">Units & Face Value</strong>
+            <p class="text-slate-600">
+              An investor's capital is divided into fractional units. Standard face value is typically <strong>₹10 per unit</strong> (can also be ₹100 or ₹1,000 for liquid/overnight funds). Used primarily for accounting.
+            </p>
+            <div class="text-[11px] font-mono text-slate-500 bg-white p-1.5 rounded border border-slate-200 mt-1">
+              Unit Capital = Units Issued &times; Face Value
+            </div>
+          </div>
+
+          <div class="p-4 bg-slate-50 rounded-2xl border border-slate-200 space-y-1">
+            <strong class="text-indigo-900 font-bold block text-sm">Net Asset Value (NAV) ⭐</strong>
+            <p class="text-slate-600">
+              The true intrinsic worth per unit. Also represents the <strong>net realizable liquidation value per unit</strong> if all assets are sold and liabilities paid. Deducts recurring expenses daily.
+            </p>
+            <div class="text-[11px] font-mono text-indigo-600 bg-white p-1.5 rounded border border-slate-200 mt-1">
+              NAV = Net Assets &divide; Outstanding Units
+            </div>
+          </div>
+
+          <div class="p-4 bg-slate-50 rounded-2xl border border-slate-200 space-y-1">
+            <strong class="text-indigo-900 font-bold block text-sm">Assets Under Management (AUM)</strong>
+            <p class="text-slate-600">
+              Total market value of all investments held by the scheme (<span class="font-mono text-slate-800 font-semibold">NAV &times; Outstanding Units</span>). Rises with market appreciation & net inflows; drops on market fall, redemptions & IDCW.
+            </p>
+          </div>
+
+          <div class="p-4 bg-slate-50 rounded-2xl border border-slate-200 space-y-1">
+            <strong class="text-indigo-900 font-bold block text-sm">Mark to Market (MTM)</strong>
+            <p class="text-slate-600">
+              The daily process of valuing every security in the scheme's portfolio at current fair market price. Daily MTM drives daily NAV fluctuations.
+            </p>
+          </div>
+
+          <div class="p-4 bg-slate-50 rounded-2xl border border-slate-200 space-y-1">
+            <strong class="text-indigo-900 font-bold block text-sm">Recurring Expenses (TER)</strong>
+            <p class="text-slate-600">
+              Annual management fees, custodian, registrar, and audit charges deducted daily from scheme assets as a percentage of AUM. Higher expenses lower the NAV.
+            </p>
+          </div>
+
+          <div class="p-4 bg-slate-50 rounded-2xl border border-slate-200 space-y-1">
+            <strong class="text-indigo-900 font-bold block text-sm">IDCW Option</strong>
+            <p class="text-slate-600">
+              Formerly called "Dividend Option". Renamed by SEBI to <strong>Income Distribution Cum Capital Withdrawal</strong> to clarify that payments are capital withdrawals, not corporate dividends.
+            </p>
+          </div>
+
+        </div>
+
+        <!-- NAV Calculation Formula Banner -->
+        <div class="p-4 rounded-2xl bg-indigo-50 border border-indigo-200 text-xs sm:text-sm text-indigo-950">
+          <p class="font-bold flex items-center gap-1.5 mb-1 text-indigo-900">
+            <i data-lucide="calculator" class="w-4 h-4 text-indigo-600"></i> Standard NAV Formula:
+          </p>
+          <div class="py-2 text-center overflow-x-auto">
+            $$	ext{NAV} = rac{	ext{Market Value of Investments} + 	ext{Receivables \& Accrued Income} + 	ext{Other Assets} - (	ext{Accrued Expenses} + 	ext{Other Liabilities})}{	ext{Number of Units Outstanding at Valuation Date}}$$
+          </div>
+        </div>
+      </section>
+
+      <!-- Section 2.3 -->
+      <section id="section-3" class="bg-white rounded-3xl p-6 sm:p-8 border border-slate-200/90 shadow-sm space-y-5">
+        <div class="flex items-center justify-between">
+          <div class="flex items-center gap-2 text-xs font-bold text-slate-500 uppercase tracking-wider">
+            <span class="w-2 h-2 rounded-full bg-slate-400"></span> Section 2.3 &bull; Quick Refresher
+          </div>
+          <span class="px-2 py-0.5 rounded text-[11px] font-semibold bg-slate-100 text-slate-600">Pros vs Cons</span>
+        </div>
+        <h2 class="font-display text-xl sm:text-2xl font-bold text-slate-900">Advantages & Limitations of Mutual Funds</h2>
+
+        <!-- Advantages Grid -->
+        <div>
+          <h3 class="font-display font-bold text-slate-800 text-sm sm:text-base mb-3 flex items-center gap-2">
+            <i data-lucide="check-circle-2" class="w-4 h-4 text-emerald-600"></i> Core Advantages for Investors
+          </h3>
+          <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-3 text-xs">
+            <div class="p-3 bg-emerald-50/50 rounded-xl border border-emerald-100">
+              <strong class="text-emerald-950 block mb-1">1. Professional Management</strong>
+              Experienced fund managers, dedicated research analysts, corporate actions handling, and daily portfolio accounting.
+            </div>
+            <div class="p-3 bg-emerald-50/50 rounded-xl border border-emerald-100">
+              <strong class="text-emerald-950 block mb-1">2. Affordable Diversification</strong>
+              Achieve proportionate ownership in 40-60 diversified securities even with an investment of just <strong>₹500</strong>.
+            </div>
+            <div class="p-3 bg-emerald-50/50 rounded-xl border border-emerald-100">
+              <strong class="text-emerald-950 block mb-1">3. Economies of Scale ⭐</strong>
+              Large pooled corpus spreads fixed research and office costs, and enables negotiating lower brokerage and transaction fees.
+            </div>
+            <div class="p-3 bg-emerald-50/50 rounded-xl border border-emerald-100">
+              <strong class="text-emerald-950 block mb-1">4. High Transparency</strong>
+              Three key sources: Scheme documents (SID, SAI, KIM), monthly factsheets (complete portfolio disclosures), and daily NAV.
+            </div>
+            <div class="p-3 bg-emerald-50/50 rounded-xl border border-emerald-100">
+              <strong class="text-emerald-950 block mb-1">5. Tax Deferral & Section 80C</strong>
+              Growth plans compound tax-free until withdrawal. ELSS allows up to ₹1,50,000 tax deduction under Sec 80C (Old Regime).
+            </div>
+            <div class="p-3 bg-emerald-50/50 rounded-xl border border-emerald-100">
+              <strong class="text-emerald-950 block mb-1">6. Systematic Discipline</strong>
+              Automated SIP (regular investing), SWP (regular cash flow), and STP (staggered allocation across funds).
+            </div>
+          </div>
+        </div>
+
+        <!-- Limitations Grid -->
+        <div>
+          <h3 class="font-display font-bold text-slate-800 text-sm sm:text-base mb-3 flex items-center gap-2">
+            <i data-lucide="alert-triangle" class="w-4 h-4 text-amber-600"></i> Structural Limitations of Mutual Funds
+          </h3>
+          <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3 text-xs">
+            <div class="p-3.5 bg-rose-50/60 rounded-xl border border-rose-100">
+              <strong class="text-rose-950 block mb-1">No Customization ⭐</strong>
+              Unlike PMS (Portfolio Management Services) where wealthy investors tailor portfolios, a mutual fund unitholder cannot choose or exclude specific stocks.
+            </div>
+            <div class="p-3.5 bg-rose-50/60 rounded-xl border border-rose-100">
+              <strong class="text-rose-950 block mb-1">Choice Overload</strong>
+              Thousands of scheme options make selection complex (mitigated by SEBI categorization & distributor guidance).
+            </div>
+            <div class="p-3.5 bg-rose-50/60 rounded-xl border border-rose-100">
+              <strong class="text-rose-950 block mb-1">No Control on Costs</strong>
+              Operating and management expenses are deducted uniformly across all unitholders proportional to their unit holdings.
+            </div>
+            <div class="p-3.5 bg-rose-50/60 rounded-xl border border-rose-100">
+              <strong class="text-rose-950 block mb-1">No Guaranteed Return</strong>
+              Mutual funds are pass-through vehicles without guaranteed yields. Returns depend on underlying market movements and manager skills.
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Section 2.4 -->
+      <section id="section-4" class="bg-white rounded-3xl p-6 sm:p-8 border border-slate-200/90 shadow-sm space-y-5">
+        <div class="flex items-center justify-between">
+          <div class="flex items-center gap-2 text-xs font-bold text-slate-500 uppercase tracking-wider">
+            <span class="w-2 h-2 rounded-full bg-slate-400"></span> Section 2.4 &bull; Structural Classification
+          </div>
+          <span class="px-2 py-0.5 rounded text-[11px] font-semibold bg-blue-50 text-blue-700">Scheme Structures</span>
+        </div>
+        <h2 class="font-display text-xl sm:text-2xl font-bold text-slate-900">Open-Ended, Close-Ended, Interval Funds & ETFs</h2>
+
+        <!-- Comparison Table -->
+        <div class="overflow-x-auto rounded-2xl border border-slate-200 text-xs">
+          <table class="min-w-full text-left">
+            <thead class="bg-slate-100 text-slate-700 font-bold border-b border-slate-200">
+              <tr>
+                <th class="p-3">Feature</th>
+                <th class="p-3">Open-Ended Funds</th>
+                <th class="p-3">Close-Ended Funds</th>
+                <th class="p-3">Interval Funds</th>
+              </tr>
+            </thead>
+            <tbody class="divide-y divide-slate-100 text-slate-600">
+              <tr class="hover:bg-slate-50">
+                <td class="p-3 font-bold text-slate-900">Maturity Period</td>
+                <td class="p-3 text-emerald-700 font-medium">Perpetual (No fixed maturity)</td>
+                <td class="p-3 text-rose-700 font-medium">Fixed maturity (Ceases on maturity date)</td>
+                <td class="p-3">Largely close-ended with periodic open windows</td>
+              </tr>
+              <tr class="hover:bg-slate-50">
+                <td class="p-3 font-bold text-slate-900">Post-NFO Transactions</td>
+                <td class="p-3">Directly with AMC on all business days at NAV</td>
+                <td class="p-3">NO transaction with AMC; only counter-party trades on stock exchange</td>
+                <td class="p-3">Direct with AMC during "Transaction Periods"; exchange-listed otherwise</td>
+              </tr>
+              <tr class="hover:bg-slate-50">
+                <td class="p-3 font-bold text-slate-900">Unit Capital</td>
+                <td class="p-3 text-indigo-700 font-semibold">Fluctuating (Expands on inflows, shrinks on redemptions)</td>
+                <td class="p-3 text-slate-800 font-semibold">Fixed & Stable (Trades between investors on exchange)</td>
+                <td class="p-3">Variable during transaction periods, fixed in interval periods</td>
+              </tr>
+              <tr class="hover:bg-slate-50">
+                <td class="p-3 font-bold text-slate-900">Stock Exchange Listing</td>
+                <td class="p-3">Not mandatory (optional)</td>
+                <td class="p-3 text-amber-900 font-semibold bg-amber-50/50">Compulsory listing on recognized exchange (except ELSS)</td>
+                <td class="p-3 text-amber-900 font-semibold bg-amber-50/50">Compulsory listing on recognized exchange</td>
+              </tr>
+              <tr class="hover:bg-slate-50">
+                <td class="p-3 font-bold text-slate-900">Price vs. NAV</td>
+                <td class="p-3">Transacts exactly at current NAV (adjusted for exit load)</td>
+                <td class="p-3 text-rose-700">Market price usually trades at a <strong>discount to NAV</strong> (buyer bargaining power)</td>
+                <td class="p-3">NAV during transaction windows; market price discount on exchange</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <!-- Interval Funds Rules & ETF Box -->
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4 text-xs sm:text-sm">
+          
+          <div class="p-4 rounded-2xl bg-amber-50/80 border border-amber-200 text-amber-950 space-y-2">
+            <h4 class="font-bold flex items-center gap-2 text-amber-900">
+              <i data-lucide="clock" class="w-4 h-4 text-amber-600"></i> Interval Fund Specific Rules ⭐
+            </h4>
+            <p class="leading-relaxed">
+              &bull; <strong>Transaction Period:</strong> Window when units can be bought/redeemed with the fund. Minimum duration = <strong>2 working days</strong>.<br>
+              &bull; <strong>Interval Period:</strong> Period between transaction windows. Minimum duration = <strong>15 calendar days</strong>.<br>
+              &bull; No redemption allowed outside the transaction period.<br>
+              &bull; <em>Note:</em> Close-ended and interval SIF strategies must also be compulsorily listed on stock exchanges.
+            </p>
+          </div>
+
+          <div class="p-4 rounded-2xl bg-slate-50 border border-slate-200 space-y-2">
+            <h4 class="font-bold flex items-center gap-2 text-slate-900">
+              <i data-lucide="bar-chart-3" class="w-4 h-4 text-indigo-600"></i> Exchange Traded Funds (ETFs)
+            </h4>
+            <p class="text-slate-600 leading-relaxed">
+              Passive schemes traded intraday on stock exchanges. While open-ended funds transact at a single end-of-day NAV, ETFs allow continuous real-time execution throughout the trading session. Authorised Participants (APs) create and redeem units in creation units to keep market prices tightly aligned with real-time NAV.
+            </p>
+          </div>
+
+        </div>
+      </section>
+
+      <!-- Section 2.5 -->
+      <section id="section-5" class="bg-white rounded-3xl p-6 sm:p-8 border border-amber-200 shadow-sm space-y-5">
+        <div class="flex items-center justify-between">
+          <div class="flex items-center gap-2 text-xs font-bold text-amber-700 uppercase tracking-wider">
+            <span class="w-2 h-2 rounded-full bg-amber-500"></span> Section 2.5 &bull; High Exam Yield
+          </div>
+          <span class="px-2.5 py-0.5 rounded-full text-xs font-extrabold bg-amber-100 text-amber-800 border border-amber-300">
+            ⭐ 2026 Regulatory Update
+          </span>
+        </div>
+        
+        <h2 class="font-display text-xl sm:text-2xl font-bold text-slate-900">Active vs. Passive Funds & The SEBI "MF Lite" Framework</h2>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4 text-xs sm:text-sm">
+          <div class="p-4 rounded-2xl bg-slate-50 border border-slate-200 space-y-2">
+            <span class="px-2.5 py-0.5 rounded-full text-xs font-bold bg-blue-100 text-blue-800">Actively Managed Funds</span>
+            <p class="text-slate-600 leading-relaxed">
+              Fund managers exercise full analytical discretion to select, overweight, or underweight stocks and bonds to beat a benchmark index (generate <strong>Alpha</strong>). Carries higher research and operational expenses (higher TER).
+            </p>
+          </div>
+          <div class="p-4 rounded-2xl bg-slate-50 border border-slate-200 space-y-2">
+            <span class="px-2.5 py-0.5 rounded-full text-xs font-bold bg-purple-100 text-purple-800">Passively Managed Funds (Index/ETFs)</span>
+            <p class="text-slate-600 leading-relaxed">
+              Replicate a chosen underlying benchmark (e.g., Nifty 50 or Sensex) in identical proportion and weightage. Objective is to mirror index returns with minimum <strong>tracking error</strong>, not to beat the market. Very low expense ratios.
+            </p>
+          </div>
+        </div>
+
+        <!-- MF Lite Deep Dive Banner -->
+        <div class="p-5 rounded-2xl bg-gradient-to-r from-amber-50 via-orange-50 to-amber-50 border border-amber-300 space-y-3">
+          <div class="flex items-center gap-2">
+            <span class="w-7 h-7 rounded-lg bg-amber-500 text-white flex items-center justify-center font-bold text-xs">NEW</span>
+            <h3 class="font-display font-bold text-slate-900 text-base">Mutual Fund Lite ("MF Lite") Framework (Chapter X, SEBI MF Regulations 2026) ⭐</h3>
+          </div>
+          <p class="text-xs sm:text-sm text-slate-700 leading-relaxed">
+            Effective December 31, 2024, SEBI introduced the <strong>Mutual Fund Lite (MF Lite)</strong> regulatory framework to drive low-cost passive investing and deepen retail market penetration in India:
+          </p>
+          <div class="grid grid-cols-1 sm:grid-cols-3 gap-3 text-xs">
+            <div class="p-3 bg-white rounded-xl border border-amber-200">
+              <strong class="text-amber-950 block mb-1">1. Exclusive Scope</strong>
+              An "MF Lite" can launch <strong>only passive schemes</strong>: Index Funds, Exchange Traded Funds (ETFs), Fund of Funds (FoFs) investing in passive schemes.
+            </div>
+            <div class="p-3 bg-white rounded-xl border border-amber-200">
+              <strong class="text-amber-950 block mb-1">2. Relaxed Compliance</strong>
+              Significantly lower net-worth eligibility criteria and streamlined operational and reporting requirements for sponsoring AMCs.
+            </div>
+            <div class="p-3 bg-white rounded-xl border border-amber-200">
+              <strong class="text-amber-950 block mb-1">3. Investor Benefit</strong>
+              Eliminates costly overheads of active fund research desks, leading to rock-bottom TERs and wider distribution through fintech channels.
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Section 2.6 -->
+      <section id="section-6" class="bg-white rounded-3xl p-6 sm:p-8 border border-amber-200 shadow-sm space-y-5">
+        <div class="flex items-center justify-between">
+          <div class="flex items-center gap-2 text-xs font-bold text-amber-700 uppercase tracking-wider">
+            <span class="w-2 h-2 rounded-full bg-amber-500"></span> Section 2.6 &bull; Super High Exam Yield
+          </div>
+          <span class="px-2.5 py-0.5 rounded-full text-xs font-extrabold bg-amber-100 text-amber-800 border border-amber-300">
+            ⭐ SEBI Categorization Framework
+          </span>
+        </div>
+
+        <div>
+          <h2 class="font-display text-xl sm:text-2xl font-bold text-slate-900">SEBI Categorization: Equity Schemes (13 Sub-Categories) & Market Caps</h2>
+          <p class="text-xs sm:text-sm text-slate-600 mt-1">
+            SEBI issued standardization circulars to ensure "one scheme per category" and establish uniform, transparent investment parameters across all AMCs.
+          </p>
+        </div>
+
+        <!-- Market Cap Definitions Box -->
+        <div class="p-4 rounded-2xl bg-indigo-50 border border-indigo-200 space-y-2">
+          <h3 class="font-display font-bold text-indigo-950 text-sm flex items-center gap-2">
+            <i data-lucide="layers" class="w-4 h-4 text-indigo-600"></i> SEBI Market Capitalization Tiers (Box 2.2) ⭐
+          </h3>
+          <p class="text-xs text-indigo-900">
+            All AMCs must strictly adhere to the unified AMFI list of listed companies ranked by full market capitalization (updated half-yearly):
+          </p>
+          <div class="grid grid-cols-1 sm:grid-cols-3 gap-3 text-xs pt-1">
+            <div class="p-3 bg-white rounded-xl border border-indigo-100">
+              <strong class="text-blue-900 block text-xs">Large Cap Companies</strong>
+              <span class="font-mono font-bold text-indigo-700 text-sm">1st to 100th</span> company in full market cap
+            </div>
+            <div class="p-3 bg-white rounded-xl border border-indigo-100">
+              <strong class="text-blue-900 block text-xs">Mid Cap Companies</strong>
+              <span class="font-mono font-bold text-indigo-700 text-sm">101st to 250th</span> company in full market cap
+            </div>
+            <div class="p-3 bg-white rounded-xl border border-indigo-100">
+              <strong class="text-blue-900 block text-xs">Small Cap Companies</strong>
+              <span class="font-mono font-bold text-indigo-700 text-sm">251st company onwards</span> in full market cap
+            </div>
+          </div>
+        </div>
+
+        <!-- 13 Equity Schemes Comprehensive Table -->
+        <div class="overflow-x-auto rounded-2xl border border-slate-200 text-xs">
+          <table class="min-w-full text-left">
+            <thead class="bg-slate-100 text-slate-700 font-bold border-b border-slate-200">
+              <tr>
+                <th class="p-3 w-12">#</th>
+                <th class="p-3 w-48">Scheme Category</th>
+                <th class="p-3 w-64">Minimum Investment Mandate</th>
+                <th class="p-3">Key Exam Rules & Nuances</th>
+              </tr>
+            </thead>
+            <tbody class="divide-y divide-slate-100 text-slate-600">
+              <tr class="hover:bg-slate-50 bg-amber-50/40">
+                <td class="p-3 font-bold text-amber-900">1</td>
+                <td class="p-3 font-bold text-amber-900">Multi Cap Fund ⭐</td>
+                <td class="p-3 text-amber-950 font-medium">Min <strong>75%</strong> in equity: <strong>25% Large + 25% Mid + 25% Small Cap</strong></td>
+                <td class="p-3 text-amber-900">Mandatory equal 25% allocation floors across all three cap segments. Residual 25% unconstrained.</td>
+              </tr>
+              <tr class="hover:bg-slate-50">
+                <td class="p-3 font-bold text-slate-900">2</td>
+                <td class="p-3 font-bold text-slate-900">Large Cap Fund</td>
+                <td class="p-3">Min <strong>80%</strong> of total assets in Large Cap stocks</td>
+                <td class="p-3">Focuses on Top 100 established market leaders.</td>
+              </tr>
+              <tr class="hover:bg-slate-50">
+                <td class="p-3 font-bold text-slate-900">3</td>
+                <td class="p-3 font-bold text-slate-900">Large & Mid Cap Fund</td>
+                <td class="p-3">Min <strong>35% Large Cap</strong> AND min <strong>35% Mid Cap</strong></td>
+                <td class="p-3">Blends stability of large caps with high growth of mid caps. Total equity min 70%.</td>
+              </tr>
+              <tr class="hover:bg-slate-50">
+                <td class="p-3 font-bold text-slate-900">4</td>
+                <td class="p-3 font-bold text-slate-900">Mid Cap Fund</td>
+                <td class="p-3">Min <strong>65%</strong> in Mid Cap stocks (101st-250th)</td>
+                <td class="p-3">Higher return potential than large caps with higher volatility.</td>
+              </tr>
+              <tr class="hover:bg-slate-50">
+                <td class="p-3 font-bold text-slate-900">5</td>
+                <td class="p-3 font-bold text-slate-900">Small Cap Fund</td>
+                <td class="p-3">Min <strong>65%</strong> in Small Cap stocks (251st onwards)</td>
+                <td class="p-3">Highest liquidity risk and volatility among market cap funds.</td>
+              </tr>
+              <tr class="hover:bg-slate-50">
+                <td class="p-3 font-bold text-slate-900">6</td>
+                <td class="p-3 font-bold text-slate-900">Dividend Yield Fund</td>
+                <td class="p-3">Min <strong>80%</strong> in dividend-yielding stocks</td>
+                <td class="p-3">Invests in cash-rich companies with consistent dividend histories.</td>
+              </tr>
+              <tr class="hover:bg-slate-50 bg-indigo-50/30">
+                <td class="p-3 font-bold text-indigo-900">7</td>
+                <td class="p-3 font-bold text-indigo-900">Value Fund ⭐</td>
+                <td class="p-3 text-indigo-950">Min <strong>80%</strong> in equity (Value investment strategy)</td>
+                <td class="p-3 text-indigo-900" rowspan="2">AMC can offer <strong>both</strong> Value and Contra funds ONLY if scheme portfolio overlap is <strong>&le; 50%</strong>.</td>
+              </tr>
+              <tr class="hover:bg-slate-50 bg-indigo-50/30">
+                <td class="p-3 font-bold text-indigo-900">8</td>
+                <td class="p-3 font-bold text-indigo-900">Contra Fund ⭐</td>
+                <td class="p-3 text-indigo-950">Min <strong>80%</strong> in equity (Contrarian strategy)</td>
+              </tr>
+              <tr class="hover:bg-slate-50">
+                <td class="p-3 font-bold text-slate-900">9</td>
+                <td class="p-3 font-bold text-slate-900">Focused Fund</td>
+                <td class="p-3">Min <strong>80%</strong> in equity; <strong>Maximum 30 stocks</strong></td>
+                <td class="p-3">Must declare focus universe in SID (e.g. focused large-cap, focused multi-cap).</td>
+              </tr>
+              <tr class="hover:bg-slate-50 bg-amber-50/30">
+                <td class="p-3 font-bold text-amber-900">10</td>
+                <td class="p-3 font-bold text-amber-900">Sectoral Fund ⭐</td>
+                <td class="p-3">Min <strong>80%</strong> in a specific sector (e.g. Banking, Pharma)</td>
+                <td class="p-3 text-amber-900" rowspan="2">No more than <strong>50% overlap</strong> with other sectoral/thematic & equity schemes (except large cap).</td>
+              </tr>
+              <tr class="hover:bg-slate-50 bg-amber-50/30">
+                <td class="p-3 font-bold text-amber-900">11</td>
+                <td class="p-3 font-bold text-amber-900">Thematic Fund ⭐</td>
+                <td class="p-3">Min <strong>80%</strong> in a specific theme (e.g. Infrastructure, ESG)</td>
+              </tr>
+              <tr class="hover:bg-slate-50">
+                <td class="p-3 font-bold text-slate-900">12</td>
+                <td class="p-3 font-bold text-slate-900">ELSS – Tax Saver Fund</td>
+                <td class="p-3">Min <strong>80%</strong> in equity & equity related instruments</td>
+                <td class="p-3">Statutory lock-in of <strong>3 years</strong>. Section 80C tax deduction up to ₹1.5 Lakhs (Old Tax Regime).</td>
+              </tr>
+              <tr class="hover:bg-slate-50 bg-blue-50/40">
+                <td class="p-3 font-bold text-blue-900">13</td>
+                <td class="p-3 font-bold text-blue-900">Flexi Cap Fund ⭐</td>
+                <td class="p-3 text-blue-950 font-medium">Min <strong>65%</strong> in equity & equity related instruments</td>
+                <td class="p-3 text-blue-900">Dynamic allocation across large, mid, and small cap without any mandatory minimum floor (unlike Multi Cap).</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <!-- ESG Strategies Callout -->
+        <div class="p-3.5 rounded-xl bg-slate-50 border border-slate-200 text-xs text-slate-700">
+          <strong class="text-slate-900">ESG Sub-Strategies under Thematic:</strong> AMCs can launch ESG funds with one of 6 defined strategies: (a) Exclusion, (b) Integration, (c) Best-in-class & Positive Screening, (d) Impact investing, (e) Sustainable objectives, (f) Transition or transition-related investments.
+        </div>
+      </section>
+
+      <!-- Section 2.7 -->
+      <section id="section-7" class="bg-white rounded-3xl p-6 sm:p-8 border border-amber-200 shadow-sm space-y-5">
+        <div class="flex items-center justify-between">
+          <div class="flex items-center gap-2 text-xs font-bold text-amber-700 uppercase tracking-wider">
+            <span class="w-2 h-2 rounded-full bg-amber-500"></span> Section 2.7 &bull; High Exam Yield
+          </div>
+          <span class="px-2.5 py-0.5 rounded-full text-xs font-extrabold bg-amber-100 text-amber-800 border border-amber-300">
+            ⭐ 17 Debt Scheme Categories
+          </span>
+        </div>
+
+        <div>
+          <h2 class="font-display text-xl sm:text-2xl font-bold text-slate-900">SEBI Categorization: Debt Schemes (17 Sub-Categories)</h2>
+          <p class="text-xs sm:text-sm text-slate-600 mt-1">
+            Debt schemes are categorized primarily by <strong>Macaulay Duration</strong> (interest rate risk profile) and <strong>Credit Quality</strong>.
+          </p>
+        </div>
+
+        <!-- Duration Bands Visual Summary -->
+        <div class="grid grid-cols-2 sm:grid-cols-4 lg:grid-cols-8 gap-2 text-center text-xs">
+          <div class="p-2.5 bg-slate-50 rounded-xl border border-slate-200">
+            <span class="text-indigo-600 font-bold block">Overnight</span>
+            1 Day
+          </div>
+          <div class="p-2.5 bg-slate-50 rounded-xl border border-slate-200">
+            <span class="text-indigo-600 font-bold block">Liquid</span>
+            &le; 91 Days
+          </div>
+          <div class="p-2.5 bg-slate-50 rounded-xl border border-slate-200">
+            <span class="text-indigo-600 font-bold block">Ultra Short</span>
+            3 - 6 Mos
+          </div>
+          <div class="p-2.5 bg-slate-50 rounded-xl border border-slate-200">
+            <span class="text-indigo-600 font-bold block">Low Dur.</span>
+            6 - 12 Mos
+          </div>
+          <div class="p-2.5 bg-slate-50 rounded-xl border border-slate-200">
+            <span class="text-indigo-600 font-bold block">Money Mkt</span>
+            &le; 1 Year
+          </div>
+          <div class="p-2.5 bg-slate-50 rounded-xl border border-slate-200">
+            <span class="text-indigo-600 font-bold block">Short Term</span>
+            1 - 3 Yrs
+          </div>
+          <div class="p-2.5 bg-slate-50 rounded-xl border border-slate-200">
+            <span class="text-indigo-600 font-bold block">Medium</span>
+            3 - 4 Yrs
+          </div>
+          <div class="p-2.5 bg-slate-50 rounded-xl border border-slate-200">
+            <span class="text-indigo-600 font-bold block">Long Term</span>
+            &gt; 7 Yrs
+          </div>
+        </div>
+
+        <!-- Complete 17 Debt Categories Table -->
+        <div class="overflow-x-auto rounded-2xl border border-slate-200 text-xs">
+          <table class="min-w-full text-left">
+            <thead class="bg-slate-100 text-slate-700 font-bold border-b border-slate-200">
+              <tr>
+                <th class="p-3 w-12">#</th>
+                <th class="p-3 w-48">Debt Scheme</th>
+                <th class="p-3 w-56">Duration / Maturity Mandate</th>
+                <th class="p-3">Key Characteristic / Asset Criteria</th>
+              </tr>
+            </thead>
+            <tbody class="divide-y divide-slate-100 text-slate-600">
+              <tr class="hover:bg-slate-50">
+                <td class="p-3 font-bold text-slate-900">1</td>
+                <td class="p-3 font-bold text-slate-900">Overnight Fund</td>
+                <td class="p-3">Securities maturing in <strong>1 day</strong></td>
+                <td class="p-3">Virtually zero interest rate & credit risk. Can deploy &le; 5% in G-Secs/T-Bills &le; 30 days for collateral/margin.</td>
+              </tr>
+              <tr class="hover:bg-slate-50">
+                <td class="p-3 font-bold text-slate-900">2</td>
+                <td class="p-3 font-bold text-slate-900">Liquid Fund</td>
+                <td class="p-3">Maturity <strong>up to 91 days only</strong></td>
+                <td class="p-3">High liquidity, 7-day graded exit load structure to discourage hot money.</td>
+              </tr>
+              <tr class="hover:bg-slate-50">
+                <td class="p-3 font-bold text-slate-900">3</td>
+                <td class="p-3 font-bold text-slate-900">Ultra-Short-Term Fund</td>
+                <td class="p-3">Macaulay duration: <strong>3 to 6 months</strong></td>
+                <td class="p-3">Debt & money market instruments.</td>
+              </tr>
+              <tr class="hover:bg-slate-50">
+                <td class="p-3 font-bold text-slate-900">4</td>
+                <td class="p-3 font-bold text-slate-900">Low Duration / Ultra Short to Short</td>
+                <td class="p-3">Macaulay duration: <strong>6 to 12 months</strong></td>
+                <td class="p-3">Low duration debt & money market instruments.</td>
+              </tr>
+              <tr class="hover:bg-slate-50">
+                <td class="p-3 font-bold text-slate-900">5</td>
+                <td class="p-3 font-bold text-slate-900">Money Market Fund</td>
+                <td class="p-3">Maturity <strong>up to 1 year</strong></td>
+                <td class="p-3">CPs, CDs, T-Bills, and Tri-Party Repos (TREPS).</td>
+              </tr>
+              <tr class="hover:bg-slate-50">
+                <td class="p-3 font-bold text-slate-900">6</td>
+                <td class="p-3 font-bold text-slate-900">Short Term Fund</td>
+                <td class="p-3">Macaulay duration: <strong>1 to 3 years</strong></td>
+                <td class="p-3">Moderate duration risk; suitable for 1-3 year horizon.</td>
+              </tr>
+              <tr class="hover:bg-slate-50">
+                <td class="p-3 font-bold text-slate-900">7</td>
+                <td class="p-3 font-bold text-slate-900">Medium Term Fund</td>
+                <td class="p-3">Macaulay duration: <strong>3 to 4 years</strong></td>
+                <td class="p-3">Portfolio Macaulay duration under anticipated adverse situations: 1 to 4 years.</td>
+              </tr>
+              <tr class="hover:bg-slate-50">
+                <td class="p-3 font-bold text-slate-900">8</td>
+                <td class="p-3 font-bold text-slate-900">Medium to Long Term Fund</td>
+                <td class="p-3">Macaulay duration: <strong>4 to 7 years</strong></td>
+                <td class="p-3">Portfolio Macaulay duration under adverse situations: 1 to 7 years.</td>
+              </tr>
+              <tr class="hover:bg-slate-50">
+                <td class="p-3 font-bold text-slate-900">9</td>
+                <td class="p-3 font-bold text-slate-900">Long Term Fund</td>
+                <td class="p-3">Macaulay duration <strong>&gt; 7 years</strong></td>
+                <td class="p-3">High price sensitivity to interest rate movements.</td>
+              </tr>
+              <tr class="hover:bg-slate-50">
+                <td class="p-3 font-bold text-slate-900">10</td>
+                <td class="p-3 font-bold text-slate-900">Dynamic Bond Fund</td>
+                <td class="p-3"><strong>Flexible duration across maturities</strong></td>
+                <td class="p-3">Fund manager actively alters duration based on interest rate outlook.</td>
+              </tr>
+              <tr class="hover:bg-slate-50 bg-emerald-50/40">
+                <td class="p-3 font-bold text-emerald-900">11</td>
+                <td class="p-3 font-bold text-emerald-900">Corporate Bond Fund ⭐</td>
+                <td class="p-3 font-medium text-emerald-950">Min <strong>80% in AA+ & above</strong></td>
+                <td class="p-3 text-emerald-900">Invests strictly in highest-rated corporate debt. Low credit default risk.</td>
+              </tr>
+              <tr class="hover:bg-slate-50 bg-rose-50/40">
+                <td class="p-3 font-bold text-rose-900">12</td>
+                <td class="p-3 font-bold text-rose-900">Credit Risk Fund ⭐</td>
+                <td class="p-3 font-medium text-rose-950">Min <strong>65% in AA & below</strong></td>
+                <td class="p-3 text-rose-900"><strong>Strictly excludes AA+ rated bonds</strong>. Return-emphasizing names like "High Yield" or "Credit Opportunities" strictly banned by SEBI!</td>
+              </tr>
+              <tr class="hover:bg-slate-50">
+                <td class="p-3 font-bold text-slate-900">13</td>
+                <td class="p-3 font-bold text-slate-900">Banking & PSU Debt Fund</td>
+                <td class="p-3">Min <strong>80%</strong> in Banks, PSUs, PFIs, Municipal Bonds</td>
+                <td class="p-3">High safety backed by public sector standing and municipal backing.</td>
+              </tr>
+              <tr class="hover:bg-slate-50">
+                <td class="p-3 font-bold text-slate-900">14</td>
+                <td class="p-3 font-bold text-slate-900">Gilt Fund</td>
+                <td class="p-3">Min <strong>80%</strong> in G-Secs (across maturity)</td>
+                <td class="p-3">Zero credit default risk; subject to sovereign interest rate risk.</td>
+              </tr>
+              <tr class="hover:bg-slate-50">
+                <td class="p-3 font-bold text-slate-900">15</td>
+                <td class="p-3 font-bold text-slate-900">10-yr Constant Maturity Gilt</td>
+                <td class="p-3">Min <strong>80%</strong> in G-Secs; Duration = <strong>10 years</strong></td>
+                <td class="p-3">Strictly targets the 10-year benchmark sovereign yield curve point.</td>
+              </tr>
+              <tr class="hover:bg-slate-50">
+                <td class="p-3 font-bold text-slate-900">16</td>
+                <td class="p-3 font-bold text-slate-900">Floating Interest Rate Fund</td>
+                <td class="p-3">Min <strong>65%</strong> in floating rate debt</td>
+                <td class="p-3">Includes fixed rate debt converted to floating rate via interest rate swaps.</td>
+              </tr>
+              <tr class="hover:bg-slate-50">
+                <td class="p-3 font-bold text-slate-900">17</td>
+                <td class="p-3 font-bold text-slate-900">Sectoral Debt Fund</td>
+                <td class="p-3">Min <strong>80%</strong> in AA+ and above debt of sector</td>
+                <td class="p-3">Permitted sectors: <em>Financial Services, Energy, Infrastructure, Housing, Real Estate</em>.</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <!-- Section 2.8 -->
+      <section id="section-8" class="bg-white rounded-3xl p-6 sm:p-8 border border-amber-200 shadow-sm space-y-5">
+        <div class="flex items-center justify-between">
+          <div class="flex items-center gap-2 text-xs font-bold text-amber-700 uppercase tracking-wider">
+            <span class="w-2 h-2 rounded-full bg-amber-500"></span> Section 2.8 &bull; High Exam Yield
+          </div>
+          <span class="px-2.5 py-0.5 rounded-full text-xs font-extrabold bg-amber-100 text-amber-800 border border-amber-300">
+            ⭐ 7 Hybrid Schemes & Glide Path
+          </span>
+        </div>
+
+        <div>
+          <h2 class="font-display text-xl sm:text-2xl font-bold text-slate-900">Hybrid Schemes (7 Categories) & Life Cycle Funds</h2>
+          <p class="text-xs sm:text-sm text-slate-600 mt-1">
+            Hybrid funds combine growth (equity) with stability (debt). AMCs can offer only one type per hybrid category.
+          </p>
+        </div>
+
+        <!-- 7 Hybrid Schemes Table -->
+        <div class="overflow-x-auto rounded-2xl border border-slate-200 text-xs">
+          <table class="min-w-full text-left">
+            <thead class="bg-slate-100 text-slate-700 font-bold border-b border-slate-200">
+              <tr>
+                <th class="p-3 w-12">#</th>
+                <th class="p-3 w-52">Hybrid Category</th>
+                <th class="p-3 w-64">Mandated Asset Allocation</th>
+                <th class="p-3">Key Exam Nuance</th>
+              </tr>
+            </thead>
+            <tbody class="divide-y divide-slate-100 text-slate-600">
+              <tr class="hover:bg-slate-50">
+                <td class="p-3 font-bold text-slate-900">1</td>
+                <td class="p-3 font-bold text-slate-900">Conservative Hybrid Fund</td>
+                <td class="p-3"><strong>75% - 90% Debt</strong> + <strong>10% - 25% Equity</strong></td>
+                <td class="p-3">Primary focus on capital preservation with slight equity kicker.</td>
+              </tr>
+              <tr class="hover:bg-slate-50 bg-amber-50/40">
+                <td class="p-3 font-bold text-amber-900">2</td>
+                <td class="p-3 font-bold text-amber-900">Balanced Hybrid Fund ⭐</td>
+                <td class="p-3 text-amber-950 font-medium"><strong>40% - 60% Equity</strong> + <strong>40% - 60% Debt</strong></td>
+                <td class="p-3 text-amber-900"><strong>NO Arbitrage is permitted</strong> in Balanced Hybrid. AMC cannot offer both Balanced and Aggressive Hybrid (must choose one).</td>
+              </tr>
+              <tr class="hover:bg-slate-50">
+                <td class="p-3 font-bold text-slate-900">3</td>
+                <td class="p-3 font-bold text-slate-900">Aggressive Hybrid Fund</td>
+                <td class="p-3"><strong>65% - 80% Equity</strong> + <strong>20% - 35% Debt</strong></td>
+                <td class="p-3">Equity-oriented for taxation purposes (qualifies as equity fund).</td>
+              </tr>
+              <tr class="hover:bg-slate-50">
+                <td class="p-3 font-bold text-slate-900">4</td>
+                <td class="p-3 font-bold text-slate-900">Dynamic Asset Allocation (BAF)</td>
+                <td class="p-3"><strong>0% - 100% Equity</strong> / <strong>0% - 100% Debt</strong></td>
+                <td class="p-3">Commonly known as Balanced Advantage Fund. Uses in-house valuation models (P/E, P/B, yield gap) to dynamically swing allocation.</td>
+              </tr>
+              <tr class="hover:bg-slate-50 bg-indigo-50/40">
+                <td class="p-3 font-bold text-indigo-900">5</td>
+                <td class="p-3 font-bold text-indigo-900">Multi Asset Allocation Fund ⭐</td>
+                <td class="p-3 text-indigo-950 font-medium">At least <strong>3 asset classes</strong> with min <strong>10% in each</strong></td>
+                <td class="p-3 text-indigo-900"><strong>Foreign securities are NOT treated as a separate asset class</strong> for meeting this 10% threshold!</td>
+              </tr>
+              <tr class="hover:bg-slate-50">
+                <td class="p-3 font-bold text-slate-900">6</td>
+                <td class="p-3 font-bold text-slate-900">Arbitrage Fund ⭐</td>
+                <td class="p-3">Min <strong>65% in equity/equity arbitrage</strong></td>
+                <td class="p-3">Simultaneous cash-futures arbitrage. Debt limited strictly to G-Secs &lt; 1 yr and repo of government bonds. Low volatility.</td>
+              </tr>
+              <tr class="hover:bg-slate-50">
+                <td class="p-3 font-bold text-slate-900">7</td>
+                <td class="p-3 font-bold text-slate-900">Equity Savings Fund</td>
+                <td class="p-3">Min <strong>65% Equity</strong> (gross) + min <strong>10% Debt</strong>; Net unhedged equity: <strong>15% - 40%</strong></td>
+                <td class="p-3">Combines outright directional equity, arbitrage, and fixed income debt. Hedged/unhedged split must be stated in SID.</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <!-- Life Cycle Funds Feature Card -->
+        <div class="p-5 rounded-2xl bg-gradient-to-br from-blue-50 to-indigo-50 border border-blue-200 space-y-3">
+          <div class="flex items-center justify-between">
+            <h3 class="font-display font-bold text-blue-950 text-base flex items-center gap-2">
+              <i data-lucide="trending-down" class="w-5 h-5 text-blue-600"></i> Category D: Life Cycle Funds (Glide Path Strategy) ⭐
+            </h3>
+            <span class="px-2.5 py-0.5 rounded-full text-xs font-bold bg-blue-200 text-blue-900">Exam Essential</span>
+          </div>
+          <p class="text-xs sm:text-sm text-blue-900 leading-relaxed">
+            Designed to support <strong>goal-based investing</strong> (such as retirement or higher education) through a pre-determined <strong>glide path strategy</strong>. As the scheme approaches maturity, the asset allocation dynamically and automatically <strong>decreases equity exposure and increases debt exposure</strong> to lock in gains and shield against market downturns.
+          </p>
+          <div class="grid grid-cols-1 sm:grid-cols-3 gap-3 text-xs pt-1">
+            <div class="p-3 bg-white rounded-xl border border-blue-200">
+              <strong class="text-blue-950 block mb-1">Eligible Asset Classes</strong>
+              Equity, Debt, InvITs, Exchange Traded Commodity Derivatives (ETCDs), Gold & Silver ETFs.
+            </div>
+            <div class="p-3 bg-white rounded-xl border border-blue-200">
+              <strong class="text-blue-950 block mb-1">Tenure Limits</strong>
+              Minimum tenure of <strong>5 years</strong>, maximum tenure of <strong>30 years</strong>; launched only in <strong>multiples of 5 years</strong>.
+            </div>
+            <div class="p-3 bg-white rounded-xl border border-blue-200">
+              <strong class="text-blue-950 block mb-1">AMC Scheme Cap</strong>
+              A maximum of <strong>6 Life Cycle Funds</strong> can be active for subscription by an AMC at any given point in time.
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Section 2.9 -->
+      <section id="section-9" class="bg-white rounded-3xl p-6 sm:p-8 border border-slate-200/90 shadow-sm space-y-5">
+        <div class="flex items-center justify-between">
+          <div class="flex items-center gap-2 text-xs font-bold text-slate-500 uppercase tracking-wider">
+            <span class="w-2 h-2 rounded-full bg-slate-400"></span> Section 2.9 &bull; Specialized Vehicles
+          </div>
+          <span class="px-2 py-0.5 rounded text-[11px] font-semibold bg-slate-100 text-slate-600">REITs, InvITs & Debt</span>
+        </div>
+        <h2 class="font-display text-xl sm:text-2xl font-bold text-slate-900">Other Schemes, Real Estate & Infrastructure Vehicles</h2>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4 text-xs sm:text-sm">
+          
+          <div class="p-4 rounded-2xl bg-slate-50 border border-slate-200 space-y-2">
+            <h4 class="font-bold text-slate-900 flex items-center gap-1.5">
+              <i data-lucide="layers" class="w-4 h-4 text-indigo-600"></i> Category E: Other Schemes
+            </h4>
+            <p class="text-slate-600 leading-relaxed">
+              &bull; <strong>Index Funds / ETFs:</strong> Minimum <strong>95%</strong> in securities of the replicated/tracked index.<br>
+              &bull; <strong>Fund of Funds (Domestic/Overseas):</strong> Minimum <strong>95%</strong> in the underlying fund.<br>
+              &bull; <strong>Single Scheme Exception:</strong> AMCs are restricted to 1 scheme per category, <em>except</em>: (1) Index/ETFs tracking different indices, (2) FoFs investing in different underlying schemes, (3) Sectoral/Thematic funds with different sectors/themes.
+            </p>
+          </div>
+
+          <div class="p-4 rounded-2xl bg-slate-50 border border-slate-200 space-y-2">
+            <h4 class="font-bold text-slate-900 flex items-center gap-1.5">
+              <i data-lucide="calendar" class="w-4 h-4 text-indigo-600"></i> FMPs, TMFs & Capital Protection Funds
+            </h4>
+            <p class="text-slate-600 leading-relaxed">
+              &bull; <strong>Fixed Maturity Plans (FMPs):</strong> Closed-end debt schemes whose portfolio maturity strictly matches scheme tenure (passive buy-and-hold).<br>
+              &bull; <strong>Target Maturity Funds (TMFs):</strong> Open-ended passive debt funds with a fixed maturity date (2-14 yrs), investing in G-Secs/SDLs to eliminate reinvestment risk.<br>
+              &bull; <strong>Capital Protection Oriented Funds:</strong> Closed-end hybrids where principal is invested in debt to compound to 100% at maturity; remainder in equity derivatives.
+            </p>
+          </div>
+
+        </div>
+
+        <!-- Real Estate & Infrastructure Table -->
+        <div class="p-5 rounded-2xl bg-slate-50 border border-slate-200 space-y-3">
+          <h3 class="font-display font-bold text-slate-900 text-sm sm:text-base flex items-center gap-2">
+            <i data-lucide="building" class="w-4 h-4 text-emerald-600"></i> Real Estate & Infrastructure Investment Instruments (REITs, InvITs, SM REITs, IDFs) ⭐
+          </h3>
+          <div class="overflow-x-auto rounded-xl border border-slate-200 text-xs bg-white">
+            <table class="min-w-full text-left">
+              <thead class="bg-slate-100 text-slate-700 font-bold border-b border-slate-200">
+                <tr>
+                  <th class="p-2.5">Vehicle</th>
+                  <th class="p-2.5">Minimum Asset Value</th>
+                  <th class="p-2.5">Minimum Initial Offer</th>
+                  <th class="p-2.5">Minimum Subscription & Lot</th>
+                  <th class="p-2.5">Key Regulations</th>
+                </tr>
+              </thead>
+              <tbody class="divide-y divide-slate-100 text-slate-600">
+                <tr class="hover:bg-slate-50">
+                  <td class="p-2.5 font-bold text-slate-900">REIT (Real Estate)</td>
+                  <td class="p-2.5">&ge; <strong>₹500 Crore</strong></td>
+                  <td class="p-2.5">&ge; <strong>₹250 Crore</strong></td>
+                  <td class="p-2.5 font-medium text-emerald-700">₹10,000 - ₹15,000; Traded lot = <strong>1 Unit</strong></td>
+                  <td class="p-2.5">Commercial rent-yielding properties. Units listed on stock exchange.</td>
+                </tr>
+                <tr class="hover:bg-slate-50">
+                  <td class="p-2.5 font-bold text-slate-900">InvIT (Infrastructure)</td>
+                  <td class="p-2.5">&ge; <strong>₹500 Crore</strong></td>
+                  <td class="p-2.5">&ge; <strong>₹250 Crore</strong></td>
+                  <td class="p-2.5 font-medium text-emerald-700">₹10,000 - ₹15,000; Traded lot = <strong>1 Unit</strong></td>
+                  <td class="p-2.5">Toll roads, power grids, pipelines. Units listed on stock exchange.</td>
+                </tr>
+                <tr class="hover:bg-slate-50 bg-amber-50/40">
+                  <td class="p-2.5 font-bold text-amber-900">SM REITs ⭐</td>
+                  <td class="p-2.5 font-bold text-amber-900">Min <strong>₹50 Crore</strong>; Capped at <strong>₹500 Crore</strong></td>
+                  <td class="p-2.5">Specified in scheme</td>
+                  <td class="p-2.5">Regulated under SEBI SM REIT norms</td>
+                  <td class="p-2.5">Fractional ownership of commercial real estate brought under formal SEBI regulatory net.</td>
+                </tr>
+                <tr class="hover:bg-slate-50">
+                  <td class="p-2.5 font-bold text-slate-900">IDF-MF (Infra Debt Fund)</td>
+                  <td class="p-2.5">Min <strong>90%</strong> in infra debt / securitized debt</td>
+                  <td class="p-2.5">Institutional focus</td>
+                  <td class="p-2.5">5-year minimum tenure</td>
+                  <td class="p-2.5">Close-ended trust-based fund regulated by SEBI (vs company IDF regulated by RBI). Sponsored by banks/NBFCs.</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </section>
+
+      <!-- Section 2.10 - SIF SUPER HIGH YIELD -->
+      <section id="section-10" class="bg-white rounded-3xl p-6 sm:p-8 border-2 border-purple-400 shadow-md space-y-6">
+        <div class="flex items-center justify-between">
+          <div class="flex items-center gap-2 text-xs font-bold text-purple-700 uppercase tracking-wider">
+            <span class="w-2.5 h-2.5 rounded-full bg-purple-600 animate-pulse"></span> Section 2.10 &bull; Super High Exam Yield
+          </div>
+          <span class="px-3 py-1 rounded-full text-xs font-extrabold bg-purple-100 text-purple-900 border border-purple-300">
+            ⭐⭐ NEW PRODUCT LINE: SIF
+          </span>
+        </div>
+
+        <div>
+          <h2 class="font-display text-2xl sm:text-3xl font-extrabold text-slate-900">
+            SEBI Specialized Investment Fund (SIF) Product Line
+          </h2>
+          <p class="text-xs sm:text-sm text-slate-600 mt-2 leading-relaxed">
+            To bridge the product and ticket size gap between standard Mutual Funds (₹500 min, highly restricted shorting) and PMS (₹50 Lakhs min) / AIFs (₹1 Crore min), SEBI amended the Mutual Funds Regulations to establish the <strong>Specialized Investment Fund (SIF)</strong>.
+          </p>
+        </div>
+
+        <!-- SIF Core Rule Card -->
+        <div class="p-4 rounded-2xl bg-purple-50 border border-purple-200 flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+          <div>
+            <span class="text-xs font-bold uppercase tracking-wider text-purple-700">Crucial NISM Series V-D Mandate</span>
+            <h3 class="font-display font-bold text-lg text-purple-950">Minimum Investment Ticket Size: ₹10 Lakhs</h3>
+            <p class="text-xs text-purple-800 mt-0.5">
+              The investor must commit a <strong>minimum of ₹10 Lakhs</strong> across all investment strategies of the same AMC.
+            </p>
+          </div>
+          <div class="shrink-0">
+            <span class="px-4 py-2 rounded-xl bg-purple-600 text-white font-mono font-bold text-sm shadow-sm">
+              Min ₹10,00,000
+            </span>
+          </div>
+        </div>
+
+        <!-- Permitted SIF Investment Strategies -->
+        <div>
+          <h3 class="font-display font-bold text-slate-900 text-base mb-3 flex items-center gap-2">
+            <i data-lucide="layers" class="w-4 h-4 text-purple-600"></i> The 7 Permitted SIF Investment Strategies
+          </h3>
+          <p class="text-xs text-slate-600 mb-3">
+            AMCs can offer only <strong>ONE investment strategy per SIF category</strong> to avoid strategy proliferation:
+          </p>
+
+          <div class="space-y-3 text-xs sm:text-sm">
+            
+            <!-- Group A: Equity Strategies -->
+            <div class="p-4 rounded-2xl bg-slate-50 border border-slate-200 space-y-3">
+              <span class="px-2.5 py-0.5 rounded-md text-xs font-bold bg-blue-100 text-blue-800 uppercase tracking-wide">
+                A. Equity Oriented Investment Strategies
+              </span>
+              
+              <div class="grid grid-cols-1 md:grid-cols-3 gap-3">
+                <div class="p-3 bg-white rounded-xl border border-slate-200 space-y-1">
+                  <strong class="text-slate-900 block font-bold text-xs">1. Equity Long-Short Fund</strong>
+                  <p class="text-slate-600 text-xs leading-relaxed">
+                    &bull; Min <strong>80%</strong> in equity & equity related instruments.<br>
+                    &bull; Max short exposure via unhedged derivatives: <strong>25% of NAV</strong>.<br>
+                    &bull; Structure: Open-ended or Interval.<br>
+                    &bull; Redemptions: Daily or lesser frequency.
+                  </p>
+                </div>
+
+                <div class="p-3 bg-white rounded-xl border border-slate-200 space-y-1">
+                  <strong class="text-slate-900 block font-bold text-xs">2. Equity Ex-Top 100 Long-Short</strong>
+                  <p class="text-slate-600 text-xs leading-relaxed">
+                    &bull; Min <strong>65%</strong> in stocks <em>excluding the top 100</em> by market cap (Mid & Small caps).<br>
+                    &bull; Max short exposure: <strong>25% of NAV</strong> in other than large-cap stocks.<br>
+                    &bull; Structure: Open-ended or Interval.<br>
+                    &bull; Redemptions: Daily or lesser frequency.
+                  </p>
+                </div>
+
+                <div class="p-3 bg-white rounded-xl border border-slate-200 space-y-1">
+                  <strong class="text-slate-900 block font-bold text-xs">3. Sector Rotation Long-Short</strong>
+                  <p class="text-slate-600 text-xs leading-relaxed">
+                    &bull; Operates at the <strong>sector level</strong>: if shorting a sector, <em>all stocks</em> from that sector must be held short.<br>
+                    &bull; Min <strong>80%</strong> in equity; Maximum <strong>4 sectors</strong>.<br>
+                    &bull; Max short exposure: <strong>25% of NAV</strong>.<br>
+                    &bull; Redemptions: Daily or lesser frequency.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Group B: Debt Strategies -->
+            <div class="p-4 rounded-2xl bg-slate-50 border border-slate-200 space-y-3">
+              <span class="px-2.5 py-0.5 rounded-md text-xs font-bold bg-emerald-100 text-emerald-800 uppercase tracking-wide">
+                B. Debt Oriented Investment Strategies
+              </span>
+
+              <div class="grid grid-cols-1 md:grid-cols-2 gap-3">
+                <div class="p-3 bg-white rounded-xl border border-slate-200 space-y-1">
+                  <strong class="text-slate-900 block font-bold text-xs">1. Debt Long-Short Fund</strong>
+                  <p class="text-slate-600 text-xs leading-relaxed">
+                    &bull; <strong>Interval fund</strong> investing across duration.<br>
+                    &bull; Unhedged short exposure via exchange-traded debt derivatives.<br>
+                    &bull; Redemptions: <strong>Once a week</strong> or lesser frequency.
+                  </p>
+                </div>
+
+                <div class="p-3 bg-white rounded-xl border border-slate-200 space-y-1">
+                  <strong class="text-slate-900 block font-bold text-xs">2. Sectoral Debt Long-Short Fund</strong>
+                  <p class="text-slate-600 text-xs leading-relaxed">
+                    &bull; <strong>Interval fund</strong> investing in debt of minimum <strong>2 sectors</strong>.<br>
+                    &bull; Max exposure to a single sector: <strong>75%</strong>.<br>
+                    &bull; Short positions must cover <em>all instruments</em> of that sector; Max short: <strong>25% of NAV</strong>.<br>
+                    &bull; Redemptions: <strong>Once a week</strong> or lesser frequency.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Group C: Hybrid Strategies -->
+            <div class="p-4 rounded-2xl bg-slate-50 border border-slate-200 space-y-3">
+              <span class="px-2.5 py-0.5 rounded-md text-xs font-bold bg-purple-100 text-purple-800 uppercase tracking-wide">
+                C. Hybrid Investment Strategies
+              </span>
+
+              <div class="grid grid-cols-1 md:grid-cols-2 gap-3">
+                <div class="p-3 bg-white rounded-xl border border-slate-200 space-y-1">
+                  <strong class="text-slate-900 block font-bold text-xs">1. Active Asset Allocator Long-Short Fund</strong>
+                  <p class="text-slate-600 text-xs leading-relaxed">
+                    &bull; <strong>Interval fund</strong> dynamically investing across equity, debt, derivatives, commodity derivatives, REITs, and InvITs.<br>
+                    &bull; Max short positions in equity/debt derivatives: <strong>25% of NAV</strong>.<br>
+                    &bull; Redemptions: <strong>Two times a week</strong> or lesser frequency.
+                  </p>
+                </div>
+
+                <div class="p-3 bg-white rounded-xl border border-slate-200 space-y-1">
+                  <strong class="text-slate-900 block font-bold text-xs">2. Hybrid Long-Short Fund</strong>
+                  <p class="text-slate-600 text-xs leading-relaxed">
+                    &bull; <strong>Interval fund</strong> investing in equity, debt, and their derivatives.<br>
+                    &bull; Mandatory minimum: <strong>25% Equity</strong> and <strong>25% Debt</strong>.<br>
+                    &bull; Max unhedged short exposure in equity & debt: <strong>25% of net assets</strong>.<br>
+                    &bull; Redemptions: <strong>Two times a week</strong> or lesser frequency.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- SIF Summary Grid Note -->
+        <div class="p-3.5 rounded-xl bg-purple-100/70 border border-purple-200 text-xs text-purple-950 flex items-center gap-3">
+          <i data-lucide="info" class="w-5 h-5 text-purple-700 shrink-0"></i>
+          <div>
+            <strong>Exam Note on SIF Redemption Frequencies:</strong> Equity SIF strategies allow <em>daily or lesser</em> redemption; Debt SIF strategies allow <em>once a week or lesser</em>; Hybrid SIF strategies allow <em>twice a week or lesser</em>. All close-ended/interval SIF schemes must be compulsorily listed on stock exchanges.
+          </div>
+        </div>
+      </section>
+
+      <!-- Section 2.11 -->
+      <section id="section-11" class="bg-white rounded-3xl p-6 sm:p-8 border border-slate-200/90 shadow-sm space-y-5">
+        <div class="flex items-center justify-between">
+          <div class="flex items-center gap-2 text-xs font-bold text-slate-500 uppercase tracking-wider">
+            <span class="w-2 h-2 rounded-full bg-slate-400"></span> Section 2.11 &bull; Industry Facts
+          </div>
+          <span class="px-2 py-0.5 rounded text-[11px] font-semibold bg-slate-100 text-slate-600">Macro Data</span>
+        </div>
+        <h2 class="font-display text-xl sm:text-2xl font-bold text-slate-900">Growth of the Mutual Fund Industry in India</h2>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 text-center">
+          
+          <div class="p-4 bg-slate-50 rounded-2xl border border-slate-200">
+            <span class="text-xs text-slate-500 font-semibold uppercase block">Industry AUM (Feb 2026)</span>
+            <span class="font-display font-extrabold text-2xl text-indigo-600 mt-1 block">₹82.03 Lakh Cr</span>
+            <span class="text-[11px] text-slate-400 mt-0.5 block">Up from ₹11.89L Cr in 2015 (19.3% CAGR)</span>
+          </div>
+
+          <div class="p-4 bg-slate-50 rounded-2xl border border-slate-200">
+            <span class="text-xs text-slate-500 font-semibold uppercase block">Investor Folios (Mar 2026)</span>
+            <span class="font-display font-extrabold text-2xl text-emerald-600 mt-1 block">27.39 Crore</span>
+            <span class="text-[11px] text-slate-400 mt-0.5 block">Surged from 4.8 Cr folios in 2010</span>
+          </div>
+
+          <div class="p-4 bg-slate-50 rounded-2xl border border-slate-200">
+            <span class="text-xs text-slate-500 font-semibold uppercase block">Monthly SIP (Mar 2026)</span>
+            <span class="font-display font-extrabold text-2xl text-purple-600 mt-1 block">₹32,087 Cr</span>
+            <span class="text-[11px] text-slate-400 mt-0.5 block">SIP AUM at ₹15.11 Lakh Crore</span>
+          </div>
+
+          <div class="p-4 bg-slate-50 rounded-2xl border border-slate-200">
+            <span class="text-xs text-slate-500 font-semibold uppercase block">Financial Assets Share</span>
+            <span class="font-display font-extrabold text-2xl text-amber-600 mt-1 block">14% (from 10%)</span>
+            <span class="text-[11px] text-slate-400 mt-0.5 block">Bank deposits dropped from 71% to 65%</span>
+          </div>
+
+        </div>
+      </section>
+
+      <!-- Interactive Quiz Section -->
+      <section id="interactive-quiz" class="bg-gradient-to-br from-indigo-900 to-slate-900 rounded-3xl p-6 sm:p-10 text-white shadow-xl space-y-8">
+        <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 border-b border-indigo-800/80 pb-6">
+          <div>
+            <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-indigo-500/20 text-indigo-300 text-xs font-semibold mb-2">
+              <i data-lucide="check-circle" class="w-3.5 h-3.5 text-indigo-400"></i>
+              Chapter 2 Exam Practice
+            </div>
+            <h2 class="font-display text-2xl sm:text-3xl font-bold text-white">Interactive Assessment Test</h2>
+            <p class="text-xs sm:text-sm text-slate-300 mt-1">12 official textbook & high-yield MCQs covering SIF, SEBI scheme categories, market caps & rules.</p>
+          </div>
+          <div id="quiz-badge" class="flex items-center gap-2 px-4 py-2 rounded-xl bg-white/10 backdrop-blur-md border border-white/10 text-xs font-semibold">
+            <span id="answered-count">0</span> / 12 Answered
+          </div>
+        </div>
+
+        <!-- Quiz Container Form -->
+        <form id="quiz-form" class="space-y-6">
+          <div id="questions-container" class="space-y-6">
+            <!-- Questions rendered via JS -->
+          </div>
+
+          <!-- Submit / Action Button Bar -->
+          <div class="pt-6 border-t border-indigo-800/80 flex flex-col sm:flex-row items-center justify-between gap-4">
+            <button type="button" id="submit-quiz-btn" onclick="submitQuiz()" class="w-full sm:w-auto px-8 py-3.5 rounded-xl bg-indigo-500 hover:bg-indigo-400 text-white font-bold text-sm shadow-lg shadow-indigo-500/30 transition-all flex items-center justify-center gap-2">
+              <i data-lucide="send" class="w-4 h-4"></i>
+              <span>Submit Assessment & View Solutions</span>
+            </button>
+            <button type="button" id="reset-quiz-btn" onclick="resetQuiz()" class="hidden w-full sm:w-auto px-6 py-3.5 rounded-xl bg-white/10 hover:bg-white/20 text-slate-200 font-semibold text-sm transition-all flex items-center justify-center gap-2">
+              <i data-lucide="rotate-ccw" class="w-4 h-4"></i>
+              <span>Retake Quiz</span>
+            </button>
+          </div>
+        </form>
+
+        <!-- Quiz Result & Scorecard Modal/Card (Hidden until submit) -->
+        <div id="quiz-results" class="hidden rounded-2xl bg-white/10 p-6 sm:p-8 border border-white/15 backdrop-blur-lg space-y-6">
+          <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+            <div>
+              <span id="result-status-badge" class="px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider"></span>
+              <h3 class="font-display text-2xl font-bold mt-2 text-white">Your Quiz Scorecard</h3>
+            </div>
+            <div class="text-right">
+              <span id="score-display" class="font-display text-4xl font-extrabold text-indigo-300">0 / 12</span>
+              <span id="percentage-display" class="block text-xs text-slate-300 mt-0.5">0%</span>
+            </div>
+          </div>
+          <p id="result-summary-text" class="text-sm text-slate-200 leading-relaxed"></p>
+        </div>
+
+      </section>
+
+      <!-- Bottom Navigation -->
+      <div class="flex items-center justify-between p-6 rounded-2xl bg-white border border-slate-200">
+        <a href="module1-ch1.html" class="inline-flex items-center gap-2 px-4 py-2.5 rounded-xl text-sm font-semibold text-slate-700 bg-slate-100 hover:bg-slate-200 transition-colors">
+          <i data-lucide="arrow-left" class="w-4 h-4"></i>
+          <span>Prev: Chapter 1 (Landscape)</span>
+        </a>
+        <a href="module1.html" class="hidden sm:inline-flex items-center gap-2 text-sm font-semibold text-slate-600 hover:text-slate-900">
+          <i data-lucide="grid" class="w-4 h-4"></i>
+          <span>Module 1 Overview</span>
+        </a>
+        <a href="module1-ch3.html" class="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl bg-blue-600 hover:bg-blue-700 text-white font-semibold text-sm shadow-sm transition-all">
+          <span>Next: Chapter 3 (Legal Structure)</span>
+          <i data-lucide="arrow-right" class="w-4 h-4"></i>
+        </a>
+      </div>
+
+    </div>
+  </div>
+
+  <footer class="bg-slate-900 text-slate-400 py-6 border-t border-slate-800 text-center text-xs">
+    NISM Series V-D Certification Notes &bull; Module 1: Chapter 2 (Concept and Role of a Mutual Fund)
+  </footer>
+
+  <!-- Quiz Script -->
+  <script>
+    const questionsData = [
+      {
+        id: 1,
+        question: "Which metric indicates how much money can be generated per unit of a mutual fund scheme in case the scheme is to be liquidated?",
+        options: [
+          { text: "Assets Under Management (AUM)", key: "a" },
+          { text: "Net Asset Value (NAV)", key: "b" },
+          { text: "Market price on stock exchange", key: "c" },
+          { text: "Exit load value", key: "d" }
+        ],
+        correct: "b",
+        explanation: "Net Asset Value (NAV) represents the true realizable worth of a single unit of a mutual fund scheme. In the event of scheme liquidation, NAV reflects how much money each unit generates after all portfolio holdings are converted to cash and liabilities are cleared."
+      },
+      {
+        id: 2,
+        question: "Which of the following is a distinct advantage of investing through a mutual fund compared to direct investing?",
+        options: [
+          { text: "Fully customized portfolio according to the investor's wishes", key: "a" },
+          { text: "Convenience to buy individual stocks and bonds directly from the mutual fund", key: "b" },
+          { text: "Economies of scale leading to lower costs of research and operations", key: "c" },
+          { text: "Guaranteed minimum capital return regardless of market downturns", key: "d" }
+        ],
+        correct: "c",
+        explanation: "By pooling large sums from thousands of investors, mutual funds achieve significant economies of scale. Investment research and administrative costs are spread across investors, and larger transaction volumes enable negotiating superior rates with brokers. Customized portfolios are offered under Portfolio Management Services (PMS), not mutual funds."
+      },
+      {
+        id: 3,
+        question: "Which amongst the following categories of mutual funds has a fixed maturity date and is compulsorily listed on a recognized stock exchange to provide liquidity?",
+        options: [
+          { text: "Open-ended funds", key: "a" },
+          { text: "Exchange Traded Funds (ETFs)", key: "b" },
+          { text: "Close-ended funds", key: "c" },
+          { text: "Overnight funds", key: "d" }
+        ],
+        correct: "c",
+        explanation: "Close-ended funds operate with a pre-decided, fixed maturity date. Post-NFO, investors cannot buy or redeem units directly with the AMC; liquidity is provided through compulsory listing of the units on a recognized stock exchange (except for ELSS)."
+      },
+      {
+        id: 4,
+        question: "Under SEBI scheme categorization regulations, an AMC can launch multiple schemes in the Sectoral and Thematic equity category provided that:",
+        options: [
+          { text: "No more than 50% of the scheme's portfolio overlaps with other sectoral/thematic schemes and other equity schemes (except Large Cap)", key: "a" },
+          { text: "The schemes have zero portfolio overlap whatsoever", key: "b" },
+          { text: "The AMC launches a maximum of only 2 sectoral schemes in total", key: "c" },
+          { text: "All stocks in the sector are large-cap companies", key: "d" }
+        ],
+        correct: "a",
+        explanation: "For any scheme offering in the sectoral/thematic equity category, Mutual Funds must ensure that no more than 50% of the scheme's portfolio overlaps with other equity schemes in the sectoral/thematic category and other equity schemes categories, except for the large cap scheme."
+      },
+      {
+        id: 5,
+        question: "In a SEBI-defined Life Cycle Fund, how does the asset allocation glide path dynamically evolve as the fund moves towards its target maturity date?",
+        options: [
+          { text: "Equity component moves up, debt component comes down", key: "a" },
+          { text: "Equity component moves down, debt component goes up", key: "b" },
+          { text: "Equity component moves up, gold component comes down", key: "c" },
+          { text: "Debt component moves down, commodity component moves up", key: "d" }
+        ],
+        correct: "b",
+        explanation: "Life Cycle Funds follow a pre-determined glide path strategy for goal-based investing. To reduce risk over time as the target milestone nears, the fund manager systematically trims equity exposure and expands debt exposure."
+      },
+      {
+        id: 6,
+        question: "What is the minimum investment requirement mandated by SEBI for the new Specialized Investment Fund (SIF) product line?",
+        options: [
+          { text: "₹500 across all equity schemes", key: "a" },
+          { text: "₹1,00,000 per strategy", key: "b" },
+          { text: "₹10 Lakhs from the investor across all investment strategies of the same AMC", key: "c" },
+          { text: "₹50 Lakhs per unitholder per scheme", key: "d" }
+        ],
+        correct: "c",
+        explanation: "SEBI introduced the Specialized Investment Fund (SIF) as a bridge between Mutual Funds and PMS. The minimum required investment amount is ₹10 Lakhs from the investor across all investment strategies offered by the same AMC."
+      },
+      {
+        id: 7,
+        question: "Under the SIF Equity Long-Short Fund strategy, what is the maximum permitted unhedged short exposure through derivative positions?",
+        options: [
+          { text: "10% of NAV", key: "a" },
+          { text: "25% of NAV", key: "b" },
+          { text: "50% of NAV", key: "c" },
+          { text: "100% of NAV", key: "d" }
+        ],
+        correct: "b",
+        explanation: "Under the SIF Equity Long-Short strategy, the minimum investment in equity and equity-related instruments is 80% and the maximum short exposure through unhedged derivative positions in equity and equity-related instruments is restricted to 25% of NAV."
+      },
+      {
+        id: 8,
+        question: "As per SEBI's uniform definition, how are 'Mid Cap' companies categorized in terms of market capitalization?",
+        options: [
+          { text: "1st to 100th company in terms of full market capitalization", key: "a" },
+          { text: "101st to 250th company in terms of full market capitalization", key: "b" },
+          { text: "251st company onwards in terms of full market capitalization", key: "c" },
+          { text: "Companies with market capitalization between ₹5,000 Cr and ₹20,000 Cr", key: "d" }
+        ],
+        correct: "b",
+        explanation: "SEBI defines market cap categories based on the AMFI ranking of full market capitalization: Large Cap = 1st to 100th company; Mid Cap = 101st to 250th company; Small Cap = 251st company onwards."
+      },
+      {
+        id: 9,
+        question: "Under SEBI regulations, what is the mandatory minimum allocation across market caps in a 'Multi Cap Fund'?",
+        options: [
+          { text: "Minimum 65% in equity dynamically allocated across any market caps", key: "a" },
+          { text: "Minimum 75% in equity, with at least 25% each in large cap, mid cap, and small cap companies", key: "b" },
+          { text: "Minimum 80% in large cap companies and 20% in mid/small caps", key: "c" },
+          { text: "Minimum 50% in large caps and 25% in mid caps", key: "d" }
+        ],
+        correct: "b",
+        explanation: "A Multi Cap Fund must have at least 75% total assets in equity and equity-related instruments, distributed with at least 25% in Large Cap, 25% in Mid Cap, and 25% in Small Cap companies. (Flexi Cap funds, in contrast, require 65% equity without rigid market cap floors)."
+      },
+      {
+        id: 10,
+        question: "Under SEBI debt categorization norms, what is the portfolio mandate for a 'Credit Risk Fund'?",
+        options: [
+          { text: "Minimum 80% investment in AA+ and above rated corporate bonds", key: "a" },
+          { text: "Minimum 65% in corporate bonds rated AA (excludes AA+) and below", key: "b" },
+          { text: "Minimum 80% in G-Secs with Macaulay duration equal to 10 years", key: "c" },
+          { text: "Minimum 95% in AAA-rated banking debt", key: "d" }
+        ],
+        correct: "b",
+        explanation: "A Credit Risk Fund must invest at least 65% of total assets in corporate bonds rated AA and below (specifically excluding AA+ rated corporate bonds). SEBI also prohibits return-emphasizing words like 'Credit Opportunities' or 'High Yield' in the scheme's name."
+      },
+      {
+        id: 11,
+        question: "Which of the following is TRUE regarding the SEBI-mandated 'Multi Asset Allocation Fund'?",
+        options: [
+          { text: "It must invest in at least 2 asset classes with at least 25% in each", key: "a" },
+          { text: "Foreign securities are treated as an independent separate asset class", key: "b" },
+          { text: "It must invest in at least 3 asset classes with a minimum allocation of 10% each; foreign securities are NOT treated as a separate asset class", key: "c" },
+          { text: "Arbitrage positions can substitute for one mandatory asset class", key: "d" }
+        ],
+        correct: "c",
+        explanation: "A Multi Asset Allocation Fund is an open-ended scheme investing in at least three asset classes with a minimum allocation of at least 10% each in all three asset classes. SEBI specifically clarifies that foreign securities are NOT treated as a separate asset class for this requirement."
+      },
+      {
+        id: 12,
+        question: "What is the primary regulatory purpose of the 'MF Lite' framework introduced under Chapter X of the SEBI Mutual Fund Regulations?",
+        options: [
+          { text: "To eliminate mutual fund distributors and replace them with direct algorithmic platforms", key: "a" },
+          { text: "To provide a relaxed regulatory and compliance regime exclusively for passively managed schemes (Index Funds, ETFs, FoFs) to reduce costs and foster indexing", key: "b" },
+          { text: "To allow active equity funds to invest in unlisted private equity and startup shares", key: "c" },
+          { text: "To restrict mutual funds from charging more than 0.10% total expense ratio across all equity categories", key: "d" }
+        ],
+        correct: "b",
+        explanation: "The MF Lite framework (effective Dec 31, 2024 / SEBI MF Regulations 2026 Chapter X) is a simplified, lightweight regulatory regime for mutual funds that offer only passive schemes (Index Funds, ETFs, FoFs). By lowering net worth and operational hurdles, it spurs low-cost passive index investing across India."
+      }
+    ];
+
+    let userAnswers = {};
+
+    function renderQuiz() {
+      const container = document.getElementById("questions-container");
+      container.innerHTML = "";
+
+      questionsData.forEach((q, index) => {
+        const qDiv = document.createElement("div");
+        qDiv.className = "p-5 rounded-2xl bg-white/5 border border-white/10 space-y-4 transition-all";
+        qDiv.id = `q-box-${q.id}`;
+
+        let optionsHtml = "";
+        q.options.forEach(opt => {
+          optionsHtml += `
+            <label class="flex items-center gap-3 p-3 rounded-xl bg-white/5 hover:bg-white/10 border border-white/5 cursor-pointer text-xs sm:text-sm transition-all" onclick="selectOption(${q.id}, '${opt.key}')" id="label-${q.id}-${opt.key}">
+              <input type="radio" name="question-${q.id}" value="${opt.key}" class="w-4 h-4 text-indigo-500 focus:ring-0 focus:ring-offset-0 bg-transparent border-slate-500">
+              <span class="font-bold text-indigo-300 w-5 uppercase">${opt.key}.</span>
+              <span class="text-slate-200">${opt.text}</span>
+            </label>
+          `;
+        });
+
+        qDiv.innerHTML = `
+          <div class="flex items-start justify-between gap-2">
+            <span class="text-xs font-bold text-indigo-400 uppercase tracking-wider">Question ${index + 1} of ${questionsData.length}</span>
+            <span id="badge-${q.id}" class="text-xs px-2 py-0.5 rounded-full bg-white/5 text-slate-400 font-medium">Unanswered</span>
+          </div>
+          <h4 class="font-display font-semibold text-sm sm:text-base text-white">${q.question}</h4>
+          <div class="space-y-2 mt-3">
+            ${optionsHtml}
+          </div>
+          <div id="explanation-${q.id}" class="hidden p-4 rounded-xl text-xs sm:text-sm mt-3 space-y-1"></div>
+        `;
+        container.appendChild(qDiv);
+      });
+      lucide.createIcons();
+    }
+
+    function selectOption(qId, key) {
+      userAnswers[qId] = key;
+      const count = Object.keys(userAnswers).length;
+      document.getElementById("answered-count").innerText = count;
+      
+      const badge = document.getElementById(`badge-${qId}`);
+      if (badge) {
+        badge.innerText = "Answered";
+        badge.className = "text-xs px-2 py-0.5 rounded-full bg-indigo-500/20 text-indigo-300 font-medium";
+      }
+
+      // Highlight selected label
+      const q = questionsData.find(item => item.id === qId);
+      q.options.forEach(opt => {
+        const lbl = document.getElementById(`label-${qId}-${opt.key}`);
+        if (opt.key === key) {
+          lbl.className = "flex items-center gap-3 p-3 rounded-xl bg-indigo-600/30 border border-indigo-400/50 cursor-pointer text-xs sm:text-sm transition-all";
+        } else {
+          lbl.className = "flex items-center gap-3 p-3 rounded-xl bg-white/5 hover:bg-white/10 border border-white/5 cursor-pointer text-xs sm:text-sm transition-all";
+        }
+      });
+    }
+
+    function submitQuiz() {
+      let score = 0;
+      questionsData.forEach(q => {
+        const selected = userAnswers[q.id];
+        const isCorrect = selected === q.correct;
+        if (isCorrect) score++;
+
+        const explanationDiv = document.getElementById(`explanation-${q.id}`);
+        explanationDiv.classList.remove("hidden");
+
+        if (isCorrect) {
+          explanationDiv.className = "p-4 rounded-xl text-xs sm:text-sm mt-3 bg-emerald-950/60 border border-emerald-600 text-emerald-200 space-y-1";
+          explanationDiv.innerHTML = `<div class="font-bold text-emerald-400 flex items-center gap-1.5"><i data-lucide="check" class="w-4 h-4"></i> Correct!</div><p>${q.explanation}</p>`;
+        } else {
+          explanationDiv.className = "p-4 rounded-xl text-xs sm:text-sm mt-3 bg-rose-950/60 border border-rose-600 text-rose-200 space-y-1";
+          explanationDiv.innerHTML = `<div class="font-bold text-rose-400 flex items-center gap-1.5"><i data-lucide="x" class="w-4 h-4"></i> Incorrect (Correct Answer: ${q.correct.toUpperCase()})</div><p>${q.explanation}</p>`;
+        }
+      });
+
+      // Show results scorecard
+      const percentage = Math.round((score / questionsData.length) * 100);
+      const passed = percentage >= 60;
+      
+      const resultsDiv = document.getElementById("quiz-results");
+      resultsDiv.classList.remove("hidden");
+
+      const statusBadge = document.getElementById("result-status-badge");
+      statusBadge.innerText = passed ? "Status: Passed (60%+ Benchmark)" : "Status: Needs Revision";
+      statusBadge.className = passed ? "px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider bg-emerald-500 text-emerald-950" : "px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider bg-amber-500 text-amber-950";
+
+      document.getElementById("score-display").innerText = `${score} / ${questionsData.length}`;
+      document.getElementById("percentage-display").innerText = `${percentage}% Score (Passing criteria: 60%)`;
+
+      document.getElementById("result-summary-text").innerText = passed
+        ? `Excellent performance! You scored ${percentage}%, clearing the NISM Series V-D passing threshold of 60%. You have demonstrated solid command over SIF regulations, SEBI scheme categories, and mutual fund structural rules.`
+        : `You scored ${percentage}%. Review the high-yield sections on SIF strategies, SEBI equity/debt categorization limits, and Life Cycle funds before re-attempting.`;
+
+      document.getElementById("submit-quiz-btn").classList.add("hidden");
+      document.getElementById("reset-quiz-btn").classList.remove("hidden");
+
+      resultsDiv.scrollIntoView({ behavior: 'smooth' });
+      lucide.createIcons();
+    }
+
+    function resetQuiz() {
+      userAnswers = {};
+      document.getElementById("answered-count").innerText = "0";
+      document.getElementById("quiz-results").classList.add("hidden");
+      document.getElementById("submit-quiz-btn").classList.remove("hidden");
+      document.getElementById("reset-quiz-btn").classList.add("hidden");
+      renderQuiz();
+      document.getElementById("interactive-quiz").scrollIntoView({ behavior: 'smooth' });
+    }
+
+    // Initialize Quiz
+    renderQuiz();
+    lucide.createIcons();
+  </script>
+</body>
+</html>

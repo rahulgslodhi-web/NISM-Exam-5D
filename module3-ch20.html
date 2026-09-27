@@ -1,0 +1,1104 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Chapter 20: Exchange Traded Interest Rate Futures | NISM Series V-D Notes</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+  <script src="https://unpkg.com/lucide@latest"></script>
+
+  <!-- KaTeX for formula rendering -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.min.css">
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.min.js"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/contrib/auto-render.min.js" onload="renderMathInElement(document.body);"></script>
+
+  <!-- Global Module & Chapter Navigation Sidebar -->
+    <!-- Modern Documentation Design System & Zoom Engine -->
+  <link rel="stylesheet" href="modern-docs.css">
+  <script defer src="nav-sidebar.js"></script>
+
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+            display: ['"Space Grotesk"', 'sans-serif']
+          }
+        }
+      }
+    }
+  </script>
+</head>
+<body class="bg-slate-50 text-slate-900 min-h-screen flex flex-col selection:bg-purple-500 selection:text-white">
+
+  <!-- Header -->
+  <header class="sticky top-0 z-50 bg-white/95 backdrop-blur-md border-b border-slate-200 shadow-sm">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
+      <div class="flex items-center gap-3">
+        <a href="module3.html" class="flex items-center gap-2 text-slate-500 hover:text-slate-900 transition-colors">
+          <div class="w-9 h-9 rounded-xl bg-slate-100 hover:bg-slate-200 flex items-center justify-center text-slate-700 transition-colors">
+            <i data-lucide="arrow-left" class="w-4 h-4"></i>
+          </div>
+        </a>
+        <div>
+          <div class="flex items-center gap-2">
+            <span class="text-xs font-bold uppercase tracking-wider text-purple-600 bg-purple-50 px-2 py-0.5 rounded">Module 3</span>
+            <span class="text-xs text-slate-400 font-medium">Chapter 20 of 22</span>
+          </div>
+          <h1 class="font-display font-bold text-base sm:text-lg text-slate-900 leading-tight">Exchange Traded Interest Rate Futures (IRF)</h1>
+        </div>
+      </div>
+
+      <div class="flex items-center gap-3">
+        <span class="hidden sm:inline-flex items-center gap-1 px-3 py-1 rounded-full text-xs font-bold bg-amber-50 text-amber-700 border border-amber-200">
+          <i data-lucide="award" class="w-3.5 h-3.5"></i>
+          Weightage: 10 Marks ⭐
+        </span>
+        <a href="#interactive-quiz" class="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-lg text-xs font-bold bg-purple-600 hover:bg-purple-700 text-white shadow-sm transition-all">
+          <i data-lucide="help-circle" class="w-3.5 h-3.5"></i>
+          <span>Chapter Quiz (12 MCQs)</span>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Content Grid -->
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 grid grid-cols-1 lg:grid-cols-12 gap-8 flex-grow">
+    
+    <!-- Sidebar Navigation -->
+    <aside class="hidden lg:block lg:col-span-3">
+      <div class="sticky top-24 space-y-4">
+        <!-- Chapter Switcher (3 Module Dropdowns) -->
+        <div id="sidebar-chapter-switcher"></div>
+
+        <div class="bg-white p-5 rounded-2xl border border-slate-200 shadow-sm">
+          <h2 class="text-xs font-bold text-slate-400 uppercase tracking-wider mb-3">Chapter Navigation</h2>
+          <nav class="space-y-1 text-xs">
+            <a href="#fast-track" class="block px-2.5 py-1.5 rounded-lg text-slate-600 hover:bg-slate-100 hover:text-purple-600 font-medium">⚡ Fast-Track Exam Blueprint</a>
+            <a href="#section-1" class="block px-2.5 py-1.5 rounded-lg text-amber-800 font-semibold bg-amber-50/80 hover:bg-amber-100">20.1 Contract Specs & Tick Value (₹5) ⭐</a>
+            <a href="#section-2" class="block px-2.5 py-1.5 rounded-lg text-slate-600 hover:bg-slate-100 hover:text-purple-600">20.2 Underlying Instruments (10-Yr vs 91-DTB)</a>
+            <a href="#section-3" class="block px-2.5 py-1.5 rounded-lg text-amber-800 font-semibold bg-amber-50/80 hover:bg-amber-100">20.3 Cost of Carry Pricing Model ⭐</a>
+            <a href="#section-4" class="block px-2.5 py-1.5 rounded-lg text-amber-800 font-semibold bg-amber-50/80 hover:bg-amber-100">20.4 Cash Settlement & FSP (NDS-OM) ⭐</a>
+            <a href="#section-5" class="block px-2.5 py-1.5 rounded-lg text-slate-600 hover:bg-slate-100 hover:text-purple-600">20.5 Margining & Risk Containment</a>
+            <a href="#section-6" class="block px-2.5 py-1.5 rounded-lg text-amber-800 font-semibold bg-amber-50/80 hover:bg-amber-100">20.6 Hedging & Duration Immunization ⭐</a>
+            <a href="#interactive-quiz" class="block px-2.5 py-1.5 rounded-lg text-purple-700 font-bold bg-purple-50 hover:bg-purple-100 mt-2">Practice Quiz (12 MCQs)</a>
+          </nav>
+        </div>
+
+        <!-- Quick Memorization Box -->
+        <div class="p-4 rounded-2xl bg-gradient-to-br from-purple-700 via-purple-800 to-indigo-900 text-white shadow-md text-xs space-y-2.5">
+          <div class="flex items-center gap-1.5 font-bold text-amber-300">
+            <i data-lucide="zap" class="w-4 h-4"></i>
+            <span>Must-Memorize Exam Numbers</span>
+          </div>
+          <ul class="space-y-1.5 text-purple-100 leading-relaxed text-[11.5px]">
+            <li>• <strong>Lot Size:</strong> 2,000 bonds (₹2,00,000 Face Value).</li>
+            <li>• <strong>Tick Size:</strong> ₹0.0025 (0.25 paise = 1/4th paisa).</li>
+            <li>• <strong>Tick Value:</strong> 2,000 &times; 0.0025 = <strong>₹5.00</strong>.</li>
+            <li>• <strong>Trading Hours:</strong> 9:00 AM to 5:00 PM.</li>
+            <li>• <strong>Expiry:</strong> Last Thursday of contract month.</li>
+            <li>• <strong>FSP Determination:</strong> NDS-OM last 2 hrs VWAP (3:00 PM to 5:00 PM).</li>
+            <li>• <strong>Extreme Loss Margin (ELM):</strong> 0.5% (Upfront).</li>
+            <li>• <strong>Settlement:</strong> 100% Cash Settled in INR.</li>
+          </ul>
+        </div>
+
+        <!-- Important Formula Reminder Card -->
+        <div class="p-4 rounded-2xl bg-amber-50/90 border border-amber-200 text-amber-900 shadow-sm text-xs space-y-2">
+          <div class="flex items-center gap-1.5 font-bold text-amber-800">
+            <i data-lucide="calculator" class="w-4 h-4 text-amber-600"></i>
+            <span>Key Formulas</span>
+          </div>
+          <div class="space-y-1 font-mono text-[11px] text-amber-950">
+            <div class="p-1.5 bg-white/80 rounded border border-amber-200">
+              <strong>Tick Value:</strong> Lot Size &times; Tick Size = 2,000 &times; ₹0.0025 = ₹5.00
+            </div>
+            <div class="p-1.5 bg-white/80 rounded border border-amber-200">
+              <strong>91-DTB Quotation:</strong> 100 - Annualized Yield
+            </div>
+            <div class="p-1.5 bg-white/80 rounded border border-amber-200">
+              <strong>Hedge Ratio (N):</strong><br>
+              - (V<sub>p</sub> &times; D<sub>p</sub>) / (V<sub>f</sub> &times; D<sub>f</sub>)
+            </div>
+          </div>
+        </div>
+      </div>
+    </aside>
+
+    <!-- Main Content Area -->
+    <div class="lg:col-span-9 space-y-8">
+
+      <!-- Fast-Track Exam Blueprint -->
+      <section id="fast-track" class="bg-gradient-to-r from-purple-900 via-indigo-900 to-slate-900 text-white rounded-3xl p-6 sm:p-8 shadow-lg space-y-4">
+        <div class="flex flex-wrap items-center justify-between gap-2">
+          <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-bold bg-amber-400/20 text-amber-300 border border-amber-400/30">
+            <i data-lucide="sparkles" class="w-3.5 h-3.5"></i>
+            10-Mark High Yield Chapter
+          </span>
+          <span class="text-xs text-purple-200 font-medium">March 2026 Curriculum Aligned</span>
+        </div>
+        <div>
+          <h2 class="font-display font-extrabold text-2xl sm:text-3xl text-white">Exchange Traded Interest Rate Futures (IRF)</h2>
+          <p class="text-sm text-purple-200 mt-1 leading-relaxed">
+            Chapter 20 carries <strong>10 full marks</strong> in the NISM Series V-D exam. The regulator tests exact contract parameters (Lot Size = 2,000 bonds, Tick Size = ₹0.0025, Tick Value = ₹5.00), the cost of carry dirty/clean pricing mechanism, cash settlement via NDS-OM VWAP, and practical portfolio duration immunization.
+          </p>
+        </div>
+        <div class="grid grid-cols-2 sm:grid-cols-4 gap-3 pt-2">
+          <div class="p-3 rounded-xl bg-white/10 border border-white/10 backdrop-blur-sm">
+            <div class="text-[11px] text-purple-200">Contract Lot Size</div>
+            <div class="text-base font-bold text-white mt-0.5">2,000 Bonds</div>
+            <div class="text-[10px] text-purple-300">₹2 Lakhs Face Value</div>
+          </div>
+          <div class="p-3 rounded-xl bg-white/10 border border-white/10 backdrop-blur-sm">
+            <div class="text-[11px] text-purple-200">Tick Value</div>
+            <div class="text-base font-bold text-amber-300 mt-0.5">₹5.00 / Tick</div>
+            <div class="text-[10px] text-purple-300">Tick Size: ₹0.0025</div>
+          </div>
+          <div class="p-3 rounded-xl bg-white/10 border border-white/10 backdrop-blur-sm">
+            <div class="text-[11px] text-purple-200">Settlement Mode</div>
+            <div class="text-base font-bold text-emerald-300 mt-0.5">100% Cash</div>
+            <div class="text-[10px] text-purple-300">NDS-OM 2hr VWAP</div>
+          </div>
+          <div class="p-3 rounded-xl bg-white/10 border border-white/10 backdrop-blur-sm">
+            <div class="text-[11px] text-purple-200">ELM Margin</div>
+            <div class="text-base font-bold text-white mt-0.5">0.50%</div>
+            <div class="text-[10px] text-purple-300">Fixed Prudential</div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Section 20.1: Contract Specifications & Tick Value Derivation -->
+      <section id="section-1" class="bg-white rounded-3xl p-6 sm:p-8 border border-amber-200 shadow-sm space-y-6">
+        <div class="flex items-center justify-between">
+          <div class="flex items-center gap-2 text-xs font-bold text-amber-700 uppercase tracking-wider">
+            <span class="w-2.5 h-2.5 rounded-full bg-amber-500 animate-pulse"></span> Section 20.1 &bull; Super High Exam Yield ⭐
+          </div>
+          <span class="text-xs px-2.5 py-1 rounded-full bg-amber-100 text-amber-800 font-bold">10-Year GoI Bond IRF</span>
+        </div>
+
+        <div>
+          <h2 class="font-display font-bold text-xl sm:text-2xl text-slate-900">10-Year GoI Bond Futures Contract Specifications</h2>
+          <p class="text-sm text-slate-600 mt-1 leading-relaxed">
+            In January 2014, SEBI and RBI introduced single-bond, cash-settled Interest Rate Futures on 10-year Government of India (GoI) benchmark securities on exchange platforms (NSE, BSE). The standardized contract features are heavily examined.
+          </p>
+        </div>
+
+        <!-- Master Specification Table -->
+        <div class="overflow-x-auto rounded-2xl border border-slate-200 shadow-sm">
+          <table class="min-w-full text-xs text-left">
+            <thead class="bg-slate-100 text-slate-700 font-bold uppercase tracking-wider">
+              <tr>
+                <th class="p-3.5 sm:w-1/3">Contract Parameter</th>
+                <th class="p-3.5 bg-purple-50 text-purple-900 sm:w-2/3">Regulatory Specification (SEBI & RBI Prescribed)</th>
+              </tr>
+            </thead>
+            <tbody class="divide-y divide-slate-200">
+              <tr class="hover:bg-slate-50/80 transition-colors">
+                <td class="p-3.5 font-semibold text-slate-800">Underlying Instrument</td>
+                <td class="p-3.5 text-slate-700">Specific on-the-run 10-Year Government of India dated security (e.g., 7.18% GS 2033 or current 10-Yr benchmark bond). Single-bond contract design.</td>
+              </tr>
+              <tr class="hover:bg-slate-50/80 transition-colors bg-purple-50/30">
+                <td class="p-3.5 font-bold text-purple-950">Contract Lot Size / Multiplier</td>
+                <td class="p-3.5 font-bold text-purple-900">
+                  <strong>2,000 underlying bonds</strong> with Face Value of ₹100 each.<br>
+                  <span class="text-xs text-purple-700 font-semibold">Total Face Value per Contract = 2,000 &times; ₹100 = ₹2,00,000 (₹2 Lakhs)</span>
+                </td>
+              </tr>
+              <tr class="hover:bg-slate-50/80 transition-colors">
+                <td class="p-3.5 font-semibold text-slate-800">Quotation Convention</td>
+                <td class="p-3.5 text-slate-700">
+                  Quoted as <strong>Clean Price per ₹100 face value</strong> in INR, with 4 decimal places (e.g., ₹99.8525). Excludes accrued interest.
+                </td>
+              </tr>
+              <tr class="hover:bg-slate-50/80 transition-colors bg-amber-50/30">
+                <td class="p-3.5 font-bold text-amber-950">Minimum Tick Size</td>
+                <td class="p-3.5 font-bold text-amber-900">
+                  <strong>₹0.0025</strong> (which equals 0.25 paise or one-fourth of a paisa).
+                </td>
+              </tr>
+              <tr class="hover:bg-slate-50/80 transition-colors bg-emerald-50/40">
+                <td class="p-3.5 font-extrabold text-emerald-950">Monetary Tick Value (per contract)</td>
+                <td class="p-3.5 font-extrabold text-emerald-900">
+                  <strong>₹5.00</strong> per contract for every minimum tick movement of ₹0.0025.
+                </td>
+              </tr>
+              <tr class="hover:bg-slate-50/80 transition-colors">
+                <td class="p-3.5 font-semibold text-slate-800">Trading Cycle / Tenors Available</td>
+                <td class="p-3.5 text-slate-700">
+                  <strong>3 serial monthly contracts</strong> (near-month, next-month, far-month) followed by <strong>4 quarterly contracts</strong> of the March, June, September, December cycle.
+                </td>
+              </tr>
+              <tr class="hover:bg-slate-50/80 transition-colors">
+                <td class="p-3.5 font-semibold text-slate-800">Expiry / Last Trading Day</td>
+                <td class="p-3.5 text-slate-700">
+                  <strong>Last Thursday of the contract month</strong>. If the last Thursday is an exchange trading holiday, the contract expires on the preceding business day.
+                </td>
+              </tr>
+              <tr class="hover:bg-slate-50/80 transition-colors">
+                <td class="p-3.5 font-semibold text-slate-800">Trading Hours</td>
+                <td class="p-3.5 text-slate-700">
+                  <strong>9:00 AM to 5:00 PM</strong> (Monday through Friday). Aligned directly with the trading hours of the interbank secondary G-Sec market (NDS-OM).
+                </td>
+              </tr>
+              <tr class="hover:bg-slate-50/80 transition-colors bg-blue-50/30">
+                <td class="p-3.5 font-bold text-blue-950">Settlement Mechanism</td>
+                <td class="p-3.5 text-blue-900 font-semibold">
+                  <strong>100% Cash Settled</strong> in Indian Rupees against the Final Settlement Price (FSP). No physical delivery of government bonds takes place.
+                </td>
+              </tr>
+              <tr class="hover:bg-slate-50/80 transition-colors">
+                <td class="p-3.5 font-semibold text-slate-800">Daily Price Operating Range</td>
+                <td class="p-3.5 text-slate-700">
+                  Dynamic price bands of &plusmn;3% of the previous day's closing settlement price, flexibly adjusted upon touching the limit during trading hours to prevent market disruption.
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <!-- Deep Mathematical Derivation Card: Tick Value = Rs 5.00 -->
+        <div class="p-5 rounded-2xl bg-gradient-to-br from-emerald-50 via-teal-50 to-emerald-100/60 border border-emerald-200 shadow-sm space-y-4">
+          <div class="flex items-center gap-2 font-bold text-emerald-900 text-sm sm:text-base">
+            <i data-lucide="check-circle-2" class="w-5 h-5 text-emerald-600"></i>
+            <span>Step-by-Step Derivation of Tick Value (₹5.00) &bull; Tested in Every Exam</span>
+          </div>
+          <p class="text-xs sm:text-sm text-emerald-950 leading-relaxed">
+            Understanding why 1 tick equals exactly ₹5.00 is essential for both numerical questions and trading profit/loss computations:
+          </p>
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-3 text-xs">
+            <div class="p-3 rounded-xl bg-white border border-emerald-200 space-y-1">
+              <span class="font-bold text-slate-500 uppercase text-[10px]">Step 1: Face Value & Units</span>
+              <p class="text-slate-800 font-medium">Face value of 1 bond = ₹100.<br>Contract lot size = <strong>2,000 bonds</strong>.<br>Total Contract Face Value = <strong>₹2,00,000</strong>.</p>
+            </div>
+            <div class="p-3 rounded-xl bg-white border border-emerald-200 space-y-1">
+              <span class="font-bold text-slate-500 uppercase text-[10px]">Step 2: Quotation & Tick Size</span>
+              <p class="text-slate-800 font-medium">Price is quoted per ₹100 face value.<br>Minimum tick size = <strong>₹0.0025</strong> (0.25 paise per ₹100 face value bond).</p>
+            </div>
+            <div class="p-3 rounded-xl bg-white border border-emerald-200 space-y-1">
+              <span class="font-bold text-slate-500 uppercase text-[10px]">Step 3: Multiplication Formula</span>
+              <p class="text-emerald-950 font-bold font-mono">
+                Tick Value = Lot Size &times; Tick Size<br>
+                = 2,000 &times; ₹0.0025<br>
+                = <span class="text-emerald-700 font-black text-sm">₹5.00 per contract</span>
+              </p>
+            </div>
+          </div>
+
+          <div class="p-3 bg-emerald-900 text-emerald-100 rounded-xl text-xs font-mono flex flex-col sm:flex-row sm:items-center justify-between gap-2">
+            <span><strong>Alternative Formula:</strong> Tick Value = (Contract Face Value / 100) &times; Tick Size</span>
+            <span class="text-amber-300 font-bold">(₹2,00,000 / 100) &times; 0.0025 = 2,000 &times; 0.0025 = ₹5.00</span>
+          </div>
+        </div>
+
+        <!-- Worked Numerical Callout: Tick Movement P&L -->
+        <div class="p-4 rounded-2xl bg-slate-50 border border-slate-200 text-xs space-y-2">
+          <span class="font-bold text-slate-900 text-sm flex items-center gap-1.5">
+            <i data-lucide="help-circle" class="w-4 h-4 text-purple-600"></i>
+            Numerical Application Example: Tick Movement to Profit/Loss
+          </span>
+          <p class="text-slate-700 leading-relaxed">
+            A portfolio manager buys <strong>25 contracts</strong> of 10-year GoI Bond Futures at <strong>₹99.4500</strong>. Later in the day, the market rallies and she closes the position at <strong>₹99.6000</strong>. Calculate the gross profit.
+          </p>
+          <div class="bg-white p-3 rounded-xl border border-slate-200 font-mono text-slate-800 space-y-1 text-[11.5px]">
+            <div>1. Price change per bond = ₹99.6000 - ₹99.4500 = <strong>₹0.1500</strong> (15 paise).</div>
+            <div>2. Number of ticks moved = ₹0.1500 / ₹0.0025 = <strong>60 ticks</strong>.</div>
+            <div>3. Profit per single contract = 60 ticks &times; ₹5.00 = <strong>₹300.00</strong>.</div>
+            <div>4. Total profit for 25 contracts = 25 &times; ₹300.00 = <strong>₹7,500.00</strong>.</div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Section 20.2: Underlying Instruments -->
+      <section id="section-2" class="bg-white rounded-3xl p-6 sm:p-8 border border-slate-200/90 shadow-sm space-y-5">
+        <div class="flex items-center justify-between">
+          <div class="flex items-center gap-2 text-xs font-bold text-slate-500 uppercase tracking-wider">
+            <span class="w-2.5 h-2.5 rounded-full bg-slate-400"></span> Section 20.2 &bull; Fast-Track Refresher & Comparison
+          </div>
+          <span class="text-xs px-2.5 py-1 rounded-full bg-slate-100 text-slate-600 font-semibold">Underlyings</span>
+        </div>
+
+        <div>
+          <h2 class="font-display font-bold text-xl sm:text-2xl text-slate-900">Underlying Instruments: 10-Yr G-Sec vs. 91-DTB</h2>
+          <p class="text-sm text-slate-600 mt-1 leading-relaxed">
+            The Reserve Bank of India permits exchange trading of interest rate futures across both short-term money market bills and long-term sovereign benchmark bonds.
+          </p>
+        </div>
+
+        <!-- Comparison Table -->
+        <div class="overflow-x-auto rounded-2xl border border-slate-200">
+          <table class="min-w-full text-xs text-left">
+            <thead class="bg-slate-100 text-slate-700 font-bold uppercase tracking-wider">
+              <tr>
+                <th class="p-3">Feature</th>
+                <th class="p-3 bg-purple-50 text-purple-900">10-Year Benchmark GoI Bond Futures</th>
+                <th class="p-3 bg-blue-50 text-blue-900">91-Day Treasury Bill Futures (91-DTB)</th>
+              </tr>
+            </thead>
+            <tbody class="divide-y divide-slate-200">
+              <tr class="hover:bg-slate-50">
+                <td class="p-3 font-semibold text-slate-800">Underlying Instrument</td>
+                <td class="p-3 text-slate-700">Specific on-the-run 10-Year Central Government coupon-bearing bond.</td>
+                <td class="p-3 text-slate-700">91-Day Government of India Treasury Bill (zero-coupon money market paper).</td>
+              </tr>
+              <tr class="hover:bg-slate-50">
+                <td class="p-3 font-semibold text-slate-800">Quotation Mechanism</td>
+                <td class="p-3 text-purple-900 font-semibold">Clean price per ₹100 face value (e.g., ₹99.8525).</td>
+                <td class="p-3 text-blue-900 font-bold">Quoted as <strong>100 minus Annualized Discount Yield</strong> (e.g., 100 - 6.75 = 93.25).</td>
+              </tr>
+              <tr class="hover:bg-slate-50">
+                <td class="p-3 font-semibold text-slate-800">Contract Lot Size</td>
+                <td class="p-3 text-slate-700">2,000 bonds (₹2,00,000 Face Value).</td>
+                <td class="p-3 text-slate-700">2,000 units (₹2,00,000 Face Value).</td>
+              </tr>
+              <tr class="hover:bg-slate-50">
+                <td class="p-3 font-semibold text-slate-800">Tick Size & Tick Value</td>
+                <td class="p-3 text-slate-700">₹0.0025 tick size &rarr; <strong>₹5.00 tick value</strong>.</td>
+                <td class="p-3 text-slate-700">₹0.0025 tick size &rarr; <strong>₹5.00 tick value</strong>.</td>
+              </tr>
+              <tr class="hover:bg-slate-50">
+                <td class="p-3 font-semibold text-slate-800">Final Settlement Benchmark</td>
+                <td class="p-3 text-purple-950 font-semibold">NDS-OM last 2 hours (3:00 PM - 5:00 PM) VWAP price.</td>
+                <td class="p-3 text-blue-950 font-semibold">Weighted average cut-off yield in the weekly RBI 91-DTB primary auction on expiry day.</td>
+              </tr>
+              <tr class="hover:bg-slate-50">
+                <td class="p-3 font-semibold text-slate-800">Settlement Type</td>
+                <td class="p-3 text-slate-700">100% Cash Settled in INR.</td>
+                <td class="p-3 text-slate-700">100% Cash Settled in INR.</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <!-- 91-DTB Quotation Deep-Dive Box -->
+        <div class="p-4 rounded-2xl bg-blue-50/70 border border-blue-200 text-xs space-y-2">
+          <span class="font-bold text-blue-950 text-sm flex items-center gap-1.5">
+            <i data-lucide="info" class="w-4 h-4 text-blue-600"></i>
+            How 91-DTB Quotation Works (100 - Yield)
+          </span>
+          <p class="text-slate-700 leading-relaxed">
+            In global and Indian money markets, short-term debt instruments are traded in terms of yield. To make futures trade like a standard asset (where buying low and selling high produces a profit), the contract price is quoted as:
+          </p>
+          <div class="p-2.5 bg-white rounded-xl border border-blue-200 font-mono text-center font-bold text-blue-900 text-sm">
+            Quoted Futures Price = 100 - Annualized Discount Yield (Y)
+          </div>
+          <p class="text-slate-600 text-[11.5px]">
+            &bull; If the 91-day T-bill annualized yield is <strong>6.85%</strong>, the quoted futures price is <strong>100 - 6.85 = 93.15</strong>.<br>
+            &bull; If yields drop to <strong>6.50%</strong> (bullish for bonds), the price rises to <strong>100 - 6.50 = 93.50</strong>. Long position profits!
+          </p>
+        </div>
+      </section>
+
+      <!-- Section 20.3: Cost of Carry Pricing Model -->
+      <section id="section-3" class="bg-white rounded-3xl p-6 sm:p-8 border border-amber-200 shadow-sm space-y-6">
+        <div class="flex items-center justify-between">
+          <div class="flex items-center gap-2 text-xs font-bold text-amber-700 uppercase tracking-wider">
+            <span class="w-2.5 h-2.5 rounded-full bg-amber-500 animate-pulse"></span> Section 20.3 &bull; Super High Exam Yield ⭐
+          </div>
+          <span class="text-xs px-2.5 py-1 rounded-full bg-amber-100 text-amber-800 font-bold">Theoretical Pricing</span>
+        </div>
+
+        <div>
+          <h2 class="font-display font-bold text-xl sm:text-2xl text-slate-900">Pricing Interest Rate Futures: Cost of Carry Framework</h2>
+          <p class="text-sm text-slate-600 mt-1 leading-relaxed">
+            Like all financial futures, IRF pricing relies on the <strong>Cost of Carry Model</strong>. However, because government bonds pay semi-annual coupons and trade on a clean price plus accrued interest basis, forward pricing requires distinct dirty and clean price adjustments.
+          </p>
+        </div>
+
+        <!-- Clean vs Dirty Price Distinction -->
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4 text-xs">
+          <div class="p-4 rounded-2xl bg-purple-50/60 border border-purple-200 space-y-2">
+            <span class="font-bold text-purple-950 text-sm flex items-center gap-1.5">
+              <i data-lucide="tag" class="w-4 h-4 text-purple-600"></i>
+              Spot Clean Price vs Spot Dirty Price
+            </span>
+            <p class="text-slate-700 leading-relaxed">
+              <strong>Clean Price:</strong> The agreed quoted market price of the bond excluding accrued coupon interest.<br>
+              <strong>Dirty (Invoice) Price:</strong> The actual total cash amount paid to acquire the bond on spot settlement date:
+            </p>
+            <div class="p-2 bg-white rounded-xl border border-purple-200 font-mono text-purple-900 font-bold text-center">
+              Spot Dirty Price = Spot Clean Price + Accrued Interest
+            </div>
+            <p class="text-slate-500 text-[11px]">
+              Accrued interest is calculated from the last coupon payment date to the spot settlement date (typically using 30/360 day count for Indian G-Secs).
+            </p>
+          </div>
+
+          <div class="p-4 rounded-2xl bg-indigo-50/60 border border-indigo-200 space-y-2">
+            <span class="font-bold text-indigo-950 text-sm flex items-center gap-1.5">
+              <i data-lucide="calendar" class="w-4 h-4 text-indigo-600"></i>
+              Forward Dirty vs Forward Clean Price
+            </span>
+            <p class="text-slate-700 leading-relaxed">
+              To determine the fair futures quotation, calculate the forward dirty price and subtract the coupon interest accrued up to the futures expiry date:
+            </p>
+            <div class="p-2 bg-white rounded-xl border border-indigo-200 font-mono text-indigo-900 font-bold text-center">
+              Futures Clean Price = Futures Dirty Price - Accrued Interest at Expiry
+            </div>
+            <p class="text-slate-500 text-[11px]">
+              Because exchange IRF contracts are quoted in clean price terms, the theoretical clean price is the benchmark traded on screen.
+            </p>
+          </div>
+        </div>
+
+        <!-- The Master Mathematical Formula Box -->
+        <div class="p-5 rounded-2xl bg-slate-900 text-white space-y-3 shadow-md">
+          <div class="flex items-center gap-2 text-xs font-bold text-amber-400 uppercase tracking-wider">
+            <i data-lucide="binary" class="w-4 h-4"></i> Cost of Carry Mathematical Model
+          </div>
+          <div class="p-4 rounded-xl bg-slate-800/90 border border-slate-700 font-mono text-xs sm:text-sm text-purple-200 space-y-2">
+            <div><strong>1. Theoretical Forward Dirty Price (F<sub>dirty</sub>):</strong></div>
+            <div class="text-amber-300 pl-3">
+              F<sub>dirty</sub> = S<sub>dirty</sub> &times; [1 + r &times; (T / 365)] - Future Value of Interim Coupon (if any)
+            </div>
+            <div class="text-slate-400 text-xs pl-3">
+              Where S<sub>dirty</sub> = Current spot dirty price, r = Money market repo financing rate, T = Days to futures contract expiration.
+            </div>
+            <div class="pt-2 border-t border-slate-700"><strong>2. Theoretical Forward Clean Price (F<sub>clean</sub>):</strong></div>
+            <div class="text-emerald-300 pl-3">
+              F<sub>clean</sub> = F<sub>dirty</sub> - Accrued Interest from previous coupon date to Futures Expiration Date
+            </div>
+          </div>
+        </div>
+
+        <!-- Worked Numerical Example 1: No coupon during contract life -->
+        <div class="p-5 rounded-2xl bg-amber-50/70 border border-amber-200 space-y-3 text-xs">
+          <span class="font-bold text-amber-950 text-sm flex items-center gap-1.5">
+            <i data-lucide="calculator" class="w-4 h-4 text-amber-700"></i>
+            Worked Exam Numerical 1: Zero Interim Coupon Payment
+          </span>
+          <div class="text-slate-800 leading-relaxed">
+            <strong>Problem:</strong> A 10-year GoI bond has a <strong>Spot Clean Price of ₹101.50</strong> and accrued interest to spot date of <strong>₹1.20</strong> (making Spot Dirty Price = ₹102.70). The repo borrowing rate is <strong>6.50% p.a.</strong> The futures contract expires in <strong>73 days (0.20 year)</strong>. No coupon payment occurs during the 73-day tenure. Accrued interest at futures expiry will be <strong>₹2.64</strong>. Calculate:
+            <ol class="list-decimal pl-4 mt-1 space-y-0.5">
+              <li>Financing cost of carry</li>
+              <li>Theoretical Forward Dirty Price</li>
+              <li>Theoretical Forward Clean Price (fair screen quotation)</li>
+            </ol>
+          </div>
+          <div class="bg-white p-4 rounded-xl border border-amber-200 font-mono text-slate-800 space-y-1.5 text-[11.5px]">
+            <div>1. Financing Cost = S<sub>dirty</sub> &times; r &times; (T / 365) = 102.70 &times; 0.065 &times; (73 / 365) = 102.70 &times; 0.065 &times; 0.20 = <strong>₹1.3351</strong>.</div>
+            <div>2. F<sub>dirty</sub> = S<sub>dirty</sub> + Financing Cost = 102.70 + 1.3351 = <strong>₹104.0351</strong>.</div>
+            <div>3. F<sub>clean</sub> = F<sub>dirty</sub> - Accrued Interest at Expiry = 104.0351 - 2.64 = <strong>₹101.3951</strong>.</div>
+            <div class="text-purple-700 font-bold pt-1">Result: The fair futures contract screen price is ₹101.3951 (or ₹101.3950 rounded to tick size).</div>
+          </div>
+        </div>
+
+        <!-- Worked Numerical Example 2: Interim Coupon Received -->
+        <div class="p-5 rounded-2xl bg-blue-50/70 border border-blue-200 space-y-3 text-xs">
+          <span class="font-bold text-blue-950 text-sm flex items-center gap-1.5">
+            <i data-lucide="coins" class="w-4 h-4 text-blue-700"></i>
+            Worked Exam Numerical 2: Bond with Interim Coupon Inflow
+          </span>
+          <p class="text-slate-700 leading-relaxed">
+            When a coupon is paid by the government before futures expiration, the bondholder receives cash income. This cash reduces the carrying cost of holding the bond, thereby <strong>lowering the theoretical forward price</strong>:
+          </p>
+          <div class="bg-white p-3 rounded-xl border border-blue-200 font-mono text-slate-800 space-y-1 text-[11.5px]">
+            <div>• Spot Dirty Price = ₹103.00 | Financing Cost to Expiry = ₹1.50 | Total Cost before coupon = ₹104.50.</div>
+            <div>• Semi-Annual Coupon of ₹3.60 received 30 days before expiry; reinvestment income earned = ₹0.02.</div>
+            <div>• Future Value of Coupon at Expiry = ₹3.60 + ₹0.02 = <strong>₹3.62</strong>.</div>
+            <div>• F<sub>dirty</sub> = ₹104.50 - ₹3.62 = <strong>₹100.88</strong>.</div>
+            <div>• If accrued interest at expiry is ₹0.60, then F<sub>clean</sub> = 100.88 - 0.60 = <strong>₹100.28</strong>.</div>
+          </div>
+        </div>
+
+        <!-- Arbitrage Dynamics Table -->
+        <div class="overflow-x-auto rounded-2xl border border-slate-200 text-xs">
+          <table class="min-w-full text-left">
+            <thead class="bg-slate-100 font-bold text-slate-700 uppercase">
+              <tr>
+                <th class="p-3">Scenario</th>
+                <th class="p-3">Market Condition</th>
+                <th class="p-3">Arbitrage Strategy</th>
+                <th class="p-3">Execution Mechanics</th>
+              </tr>
+            </thead>
+            <tbody class="divide-y divide-slate-200">
+              <tr class="hover:bg-slate-50">
+                <td class="p-3 font-bold text-emerald-800 bg-emerald-50/30">Cash &amp; Carry Arbitrage</td>
+                <td class="p-3 text-slate-700">Futures Market Price &gt; Theoretical Fair Price (Futures is Overpriced).</td>
+                <td class="p-3 font-bold text-purple-900">Buy Spot Bond + Sell (Short) Futures</td>
+                <td class="p-3 text-slate-600">Borrow funds at repo rate, purchase physical G-Sec in spot market, simultaneously short overpriced IRF. Deliver/settle at expiry to lock in riskless spread.</td>
+              </tr>
+              <tr class="hover:bg-slate-50">
+                <td class="p-3 font-bold text-rose-800 bg-rose-50/30">Reverse Cash &amp; Carry Arbitrage</td>
+                <td class="p-3 text-slate-700">Futures Market Price &lt; Theoretical Fair Price (Futures is Underpriced).</td>
+                <td class="p-3 font-bold text-purple-900">Sell (Short) Spot Bond + Buy (Long) Futures</td>
+                <td class="p-3 text-slate-600">Short sell G-Sec via RBI repo window, lend cash proceeds at reverse repo rate, buy cheap IRF. Re-absorb position at expiry to capture spread.</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <!-- Section 20.4: Cash Settlement & FSP Determination -->
+      <section id="section-4" class="bg-white rounded-3xl p-6 sm:p-8 border border-amber-200 shadow-sm space-y-6">
+        <div class="flex items-center justify-between">
+          <div class="flex items-center gap-2 text-xs font-bold text-amber-700 uppercase tracking-wider">
+            <span class="w-2.5 h-2.5 rounded-full bg-amber-500 animate-pulse"></span> Section 20.4 &bull; Super High Exam Yield ⭐
+          </div>
+          <span class="text-xs px-2.5 py-1 rounded-full bg-amber-100 text-amber-800 font-bold">Settlement Protocol</span>
+        </div>
+
+        <div>
+          <h2 class="font-display font-bold text-xl sm:text-2xl text-slate-900">Cash Settlement &amp; Final Settlement Price (FSP) Determination</h2>
+          <p class="text-sm text-slate-600 mt-1 leading-relaxed">
+            Earlier IRF contracts in 2003 and 2009 failed due to physical delivery basket disputes and Cheapest-to-Deliver (CTD) manipulation. The modern framework relies entirely on <strong>100% Cash Settlement</strong> linked directly to RBI's institutional bond dealing screen.
+          </p>
+        </div>
+
+        <!-- The FSP Determination Rule Card -->
+        <div class="p-5 rounded-2xl bg-gradient-to-br from-purple-50 via-indigo-50 to-purple-100 border border-purple-200 space-y-3">
+          <div class="flex items-center gap-2 font-bold text-purple-950 text-sm sm:text-base">
+            <i data-lucide="target" class="w-5 h-5 text-purple-700"></i>
+            <span>The Exact FSP Computation Rule (Tested Extensively)</span>
+          </div>
+          <p class="text-xs sm:text-sm text-purple-950 leading-relaxed">
+            On the expiration day (last Thursday of the month), all open interest positions are automatically closed out and cash settled against the <strong>Final Settlement Price (FSP)</strong>:
+          </p>
+          <div class="p-3.5 bg-white rounded-xl border border-purple-300 font-mono text-purple-900 text-xs sm:text-sm font-bold shadow-sm">
+            FSP = Volume Weighted Average Price (VWAP) of the underlying bond traded on RBI's NDS-OM platform during the LAST TWO HOURS of trading (between 3:00 PM and 5:00 PM).
+          </div>
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-3 text-xs text-slate-700">
+            <div class="p-3 bg-white/80 rounded-xl border border-purple-200">
+              <strong>NDS-OM Institutional Platform:</strong> Negotiated Dealing System - Order Matching is the anonymous electronic order book operated by Clearing Corporation of India (CCIL) for the RBI.
+            </div>
+            <div class="p-3 bg-white/80 rounded-xl border border-purple-200">
+              <strong>Fallback Procedure:</strong> If no trades or insufficient trading volume occurs on NDS-OM between 3:00 PM and 5:00 PM, the FSP is taken from the theoretical valuation matrix published by <strong>FIMMDA / FBIL</strong>.
+            </div>
+          </div>
+        </div>
+
+        <!-- Daily MTM vs Final Settlement Comparison -->
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4 text-xs">
+          <div class="p-4 rounded-2xl bg-slate-50 border border-slate-200 space-y-2">
+            <span class="font-bold text-slate-900 text-sm flex items-center gap-1.5">
+              <i data-lucide="refresh-cw" class="w-4 h-4 text-slate-600"></i>
+              1. Daily Mark-to-Market (MTM) Settlement
+            </span>
+            <ul class="list-disc pl-4 space-y-1.5 text-slate-600">
+              <li>Occurs every regular trading day after 5:00 PM.</li>
+              <li>Daily Settlement Price is based on the VWAP of the IRF contract during the last 30 minutes of exchange trading.</li>
+              <li>Profits and losses are debited/credited in cash to the trading account on a <strong>T+1 basis</strong> before market opens.</li>
+            </ul>
+          </div>
+
+          <div class="p-4 rounded-2xl bg-emerald-50/70 border border-emerald-200 space-y-2">
+            <span class="font-bold text-emerald-950 text-sm flex items-center gap-1.5">
+              <i data-lucide="check-check" class="w-4 h-4 text-emerald-700"></i>
+              2. Final Cash Settlement on Expiry Day
+            </span>
+            <ul class="list-disc pl-4 space-y-1.5 text-emerald-900">
+              <li>Occurs on the contract expiration date (last Thursday).</li>
+              <li>Position is settled against the <strong>FSP</strong> (NDS-OM 3:00 PM - 5:00 PM VWAP).</li>
+              <li>
+                Final Cash Flow = <code>(FSP - Previous Day's Settlement Price) &times; 2,000 &times; No. of Contracts</code>.
+              </li>
+              <li>All open obligations terminate with zero physical delivery hassle.</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <!-- Section 20.5: Margining Architecture & Risk Containment -->
+      <section id="section-5" class="bg-white rounded-3xl p-6 sm:p-8 border border-slate-200/90 shadow-sm space-y-5">
+        <div class="flex items-center justify-between">
+          <div class="flex items-center gap-2 text-xs font-bold text-slate-500 uppercase tracking-wider">
+            <span class="w-2.5 h-2.5 rounded-full bg-slate-400"></span> Section 20.5 &bull; Fast-Track Refresher & Regulatory Limits
+          </div>
+          <span class="text-xs px-2.5 py-1 rounded-full bg-slate-100 text-slate-600 font-semibold">Margins & Limits</span>
+        </div>
+
+        <div>
+          <h2 class="font-display font-bold text-xl sm:text-2xl text-slate-900">Margining Architecture &amp; Position Limits</h2>
+          <p class="text-sm text-slate-600 mt-1 leading-relaxed">
+            The clearing corporations (NSE Clearing Ltd &amp; Indian Clearing Corporation Ltd) employ multi-layered risk containment for IRF.
+          </p>
+        </div>
+
+        <!-- Margining Grid -->
+        <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 text-xs">
+          <div class="p-4 rounded-2xl bg-purple-50/60 border border-purple-200 space-y-2">
+            <span class="font-bold text-purple-950 text-sm">Initial Margin (SPAN)</span>
+            <p class="text-slate-600 leading-relaxed">
+              Calculated using the SPAN (Standard Portfolio Analysis of Risk) system. Evaluates the portfolio under <strong>16 simulated risk scenarios</strong>. Scaled to cover <strong>99% Value-at-Risk (VaR)</strong> over a 1-day holding period.
+            </p>
+            <div class="font-semibold text-purple-900 text-[11px] bg-white p-2 rounded-lg border border-purple-200">
+              Typical Range: 1.5% to 2.3% of contract value
+            </div>
+          </div>
+
+          <div class="p-4 rounded-2xl bg-amber-50/60 border border-amber-200 space-y-2">
+            <span class="font-bold text-amber-950 text-sm">Extreme Loss Margin (ELM)</span>
+            <p class="text-slate-600 leading-relaxed">
+              A fixed prudential margin collected upfront to cover tail-risk market events exceeding the 99% VaR confidence level.
+            </p>
+            <div class="font-bold text-amber-900 text-[11px] bg-white p-2 rounded-lg border border-amber-200">
+              Prescribed Rate: Fixed at 0.5% of Contract Value (Compared to 3.5% for Equities)
+            </div>
+          </div>
+
+          <div class="p-4 rounded-2xl bg-blue-50/60 border border-blue-200 space-y-2">
+            <span class="font-bold text-blue-950 text-sm">Calendar Spread Margin</span>
+            <p class="text-slate-600 leading-relaxed">
+              When a trader holds offsetting positions across two different expiry months (e.g. Long near-month and Short far-month), directional risk cancels out.
+            </p>
+            <div class="font-semibold text-blue-900 text-[11px] bg-white p-2 rounded-lg border border-blue-200">
+              Substantially Lower Margin: Typically fixed at ₹1,500 - ₹2,500 per spread
+            </div>
+          </div>
+        </div>
+
+        <!-- Position Limits Table -->
+        <div class="overflow-x-auto rounded-2xl border border-slate-200 text-xs">
+          <table class="min-w-full text-left">
+            <thead class="bg-slate-100 font-bold text-slate-700 uppercase">
+              <tr>
+                <th class="p-3">Entity Category</th>
+                <th class="p-3">Gross Open Position Limit (Exchange-Level)</th>
+              </tr>
+            </thead>
+            <tbody class="divide-y divide-slate-200 text-slate-700">
+              <tr class="hover:bg-slate-50">
+                <td class="p-3 font-semibold text-slate-900">Trading Member (Broker)</td>
+                <td class="p-3"><strong>15% of total open interest</strong> or <strong>₹1,000 Crores</strong>, whichever is higher.</td>
+              </tr>
+              <tr class="hover:bg-slate-50">
+                <td class="p-3 font-semibold text-slate-900">Mutual Fund / AMC</td>
+                <td class="p-3"><strong>10% of total open interest</strong> or <strong>₹500 Crores</strong> per mutual fund scheme.</td>
+              </tr>
+              <tr class="hover:bg-slate-50">
+                <td class="p-3 font-semibold text-slate-900">Client / Individual Investor</td>
+                <td class="p-3"><strong>3% of total open interest</strong> or <strong>₹200 Crores</strong>, whichever is higher.</td>
+              </tr>
+              <tr class="hover:bg-slate-50">
+                <td class="p-3 font-semibold text-slate-900">Foreign Portfolio Investors (FPI)</td>
+                <td class="p-3">Monitored separately under overall sovereign debt investment ceilings specified by RBI and SEBI.</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <!-- Section 20.6: Hedging Strategies & Duration Immunization -->
+      <section id="section-6" class="bg-white rounded-3xl p-6 sm:p-8 border border-amber-200 shadow-sm space-y-6">
+        <div class="flex items-center justify-between">
+          <div class="flex items-center gap-2 text-xs font-bold text-amber-700 uppercase tracking-wider">
+            <span class="w-2.5 h-2.5 rounded-full bg-amber-500 animate-pulse"></span> Section 20.6 &bull; Super High Exam Yield ⭐
+          </div>
+          <span class="text-xs px-2.5 py-1 rounded-full bg-amber-100 text-amber-800 font-bold">Portfolio Management</span>
+        </div>
+
+        <div>
+          <h2 class="font-display font-bold text-xl sm:text-2xl text-slate-900">Hedging &amp; Duration Immunization with IRF</h2>
+          <p class="text-sm text-slate-600 mt-1 leading-relaxed">
+            Mutual funds and Specialized Investment Funds (SIFs) frequently utilize 10-year GoI Bond Futures to protect debt portfolios against adverse yield movements without selling underlying bonds into an illiquid secondary cash market.
+          </p>
+        </div>
+
+        <!-- Long vs Short Hedge -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 text-xs">
+          <div class="p-4 rounded-2xl bg-rose-50/70 border border-rose-200 space-y-2">
+            <span class="font-bold text-rose-950 text-sm flex items-center gap-1.5">
+              <i data-lucide="trending-down" class="w-4 h-4 text-rose-600"></i>
+              Short Hedge (Bearish / Rate Hike Defense)
+            </span>
+            <p class="text-slate-700 leading-relaxed">
+              <strong>Objective:</strong> Protect an existing bond portfolio against rising interest rates (falling bond prices).<br>
+              <strong>Action:</strong> <strong>Sell (Short) IRF contracts</strong>. If market interest rates rise, bond portfolio value declines, but the short IRF position gains in value, offsetting the cash loss.
+            </p>
+          </div>
+
+          <div class="p-4 rounded-2xl bg-emerald-50/70 border border-emerald-200 space-y-2">
+            <span class="font-bold text-emerald-950 text-sm flex items-center gap-1.5">
+              <i data-lucide="trending-up" class="w-4 h-4 text-emerald-600"></i>
+              Long Hedge (Bullish / Rate Cut & Cash Inflow)
+            </span>
+            <p class="text-slate-700 leading-relaxed">
+              <strong>Objective:</strong> Lock in current yields for anticipated future cash inflows (e.g. maturing fixed deposits or scheme subscription inflows).<br>
+              <strong>Action:</strong> <strong>Buy (Long) IRF contracts</strong>. If market interest rates fall, bond prices rise. The gain on long IRF offsets the higher price of purchasing physical bonds later.
+            </p>
+          </div>
+        </div>
+
+        <!-- The Hedge Ratio Formula Card -->
+        <div class="p-5 rounded-2xl bg-gradient-to-br from-indigo-900 to-purple-950 text-white space-y-4 shadow-md">
+          <div class="flex items-center gap-2 text-xs font-bold text-amber-300 uppercase tracking-wider">
+            <i data-lucide="layers" class="w-4 h-4"></i> Duration-Based Hedge Ratio Formula
+          </div>
+          <p class="text-xs sm:text-sm text-purple-200 leading-relaxed">
+            Because bonds of different maturities and coupons have different sensitivities to interest rates, hedging requires matching <strong>Modified Duration (MD)</strong>:
+          </p>
+          <div class="p-4 rounded-xl bg-white/10 border border-white/20 font-mono text-xs sm:text-sm text-amber-300 font-bold text-center">
+            Number of Contracts (N) = - [ (V<sub>p</sub> &times; D<sub>p</sub>) / (V<sub>f</sub> &times; D<sub>f</sub>) ]
+          </div>
+          <div class="grid grid-cols-2 sm:grid-cols-4 gap-2 text-center text-xs text-purple-200">
+            <div class="p-2 rounded-lg bg-white/5"><strong>V<sub>p</sub>:</strong> Value of Cash Portfolio</div>
+            <div class="p-2 rounded-lg bg-white/5"><strong>D<sub>p</sub>:</strong> Modified Duration of Portfolio</div>
+            <div class="p-2 rounded-lg bg-white/5"><strong>V<sub>f</sub>:</strong> Value of 1 IRF Contract (Price &times; 2,000)</div>
+            <div class="p-2 rounded-lg bg-white/5"><strong>D<sub>f</sub>:</strong> Modified Duration of IRF Underlying Bond</div>
+          </div>
+        </div>
+
+        <!-- Comprehensive Step-by-Step Worked Hedging Problem -->
+        <div class="p-5 rounded-2xl bg-purple-50/70 border border-purple-200 space-y-3 text-xs">
+          <span class="font-bold text-purple-950 text-sm flex items-center gap-1.5">
+            <i data-lucide="shield-check" class="w-4 h-4 text-purple-700"></i>
+            Worked Exam Numerical 3: Immunizing a ₹50 Crore Mutual Fund Portfolio
+          </span>
+          <div class="text-slate-800 leading-relaxed">
+            <strong>Problem Statement:</strong> An Asset Management Company manages a G-Sec mutual fund portfolio with a current market value of <strong>₹50,00,00,000 (₹50 Crores)</strong> and a <strong>Modified Duration of 6.8 years</strong>. The fund manager expects the RBI to hike repo rates and wants to completely immunize the portfolio against rate hikes using 10-year GoI Bond Futures.<br>
+            The futures contract is trading at <strong>₹100.00</strong> (Lot size = 2,000 bonds; Contract Value = 2,000 &times; ₹100 = <strong>₹2,00,000</strong>). The underlying benchmark bond has a <strong>Modified Duration of 6.5 years</strong>.<br>
+            <strong>Questions:</strong>
+            <ol class="list-decimal pl-4 mt-1 space-y-0.5">
+              <li>How many IRF contracts must the fund manager short?</li>
+              <li>Verify the hedge if market yields immediately rise by 25 basis points (0.25%).</li>
+            </ol>
+          </div>
+          <div class="bg-white p-4 rounded-xl border border-purple-200 font-mono text-slate-800 space-y-2 text-[11.5px]">
+            <div><strong>Step 1: Calculate Total Portfolio Dollar Duration (Sensitivity):</strong><br>
+              Sensitivity<sub>Portfolio</sub> = V<sub>p</sub> &times; D<sub>p</sub> = ₹50,00,00,000 &times; 6.8 = <strong>₹3,40,00,00,000</strong>
+            </div>
+            <div><strong>Step 2: Calculate Single IRF Contract Sensitivity:</strong><br>
+              Sensitivity<sub>Futures</sub> = V<sub>f</sub> &times; D<sub>f</sub> = ₹2,00,000 &times; 6.5 = <strong>₹13,00,000</strong>
+            </div>
+            <div><strong>Step 3: Compute Number of Contracts (N):</strong><br>
+              N = ₹3,40,00,00,000 / ₹13,00,000 = <strong>261.54 contracts &rarr; Short 262 contracts</strong>
+            </div>
+            <div class="pt-2 border-t border-slate-200 text-purple-950 font-sans">
+              <strong>Step 4: Proof of Immunization against a 25 bps (+0.25%) Yield Surge:</strong>
+              <ul class="list-disc pl-4 space-y-1 font-mono text-[11px] mt-1 text-slate-700">
+                <li>Loss on Cash Portfolio = - V<sub>p</sub> &times; D<sub>p</sub> &times; &Delta;y = - 50 Cr &times; 6.8 &times; 0.0025 = <strong>- ₹85,00,000</strong>.</li>
+                <li>Gain on 262 Short IRF = + 262 &times; (2,00,000 &times; 6.5 &times; 0.0025) = 262 &times; ₹3,250 = <strong>+ ₹85,15,000</strong>.</li>
+                <li class="font-bold text-emerald-700 font-sans">Net P&amp;L = + ₹15,000 (Near-perfect immunization achieved!).</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Section 20.7: Interactive Quiz -->
+      <section id="interactive-quiz" class="bg-slate-900 text-white rounded-3xl p-6 sm:p-8 border border-slate-800 shadow-xl space-y-6">
+        <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 border-b border-slate-800 pb-5">
+          <div>
+            <div class="flex items-center gap-2 text-xs font-bold text-purple-400 uppercase tracking-wider mb-1">
+              <i data-lucide="check-circle" class="w-4 h-4"></i> Interactive Exam Assessment
+            </div>
+            <h3 class="font-display font-bold text-xl sm:text-2xl text-white">Chapter 20 Practice Quiz</h3>
+            <p class="text-xs text-slate-400 mt-1">12 Exam-Standard Questions covering lot sizes, tick value derivation (₹5.00), cost-of-carry pricing, FSP, and duration hedging.</p>
+          </div>
+          <div class="flex items-center gap-3">
+            <div class="text-right">
+              <span class="text-xs text-slate-400">Progress</span>
+              <div class="text-sm font-bold text-purple-400"><span id="answered-count">0</span> / 12</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Questions Container -->
+        <div id="quiz-container" class="space-y-6"></div>
+
+        <!-- Action Bar -->
+        <div class="pt-4 border-t border-slate-800 flex flex-col sm:flex-row items-center justify-between gap-4">
+          <button id="submit-quiz-btn" onclick="submitQuiz()" class="w-full sm:w-auto px-6 py-3 rounded-xl bg-purple-600 hover:bg-purple-500 font-bold text-sm shadow-lg shadow-purple-600/30 transition-all flex items-center justify-center gap-2 cursor-pointer">
+            <span>Submit Quiz &amp; View Detailed Solutions</span>
+            <i data-lucide="arrow-right" class="w-4 h-4"></i>
+          </button>
+          <button id="reset-quiz-btn" onclick="resetQuiz()" class="hidden w-full sm:w-auto px-6 py-3 rounded-xl bg-slate-800 hover:bg-slate-700 text-slate-300 font-bold text-sm transition-all flex items-center justify-center gap-2 cursor-pointer">
+            <i data-lucide="rotate-ccw" class="w-4 h-4"></i>
+            <span>Retake Quiz</span>
+          </button>
+        </div>
+
+        <!-- Quiz Results -->
+        <div id="quiz-results" class="hidden p-6 rounded-2xl bg-slate-800/80 border border-slate-700 space-y-4">
+          <div class="flex items-center justify-between">
+            <h4 class="font-display font-bold text-lg text-white">Quiz Score Summary</h4>
+            <span id="result-status-badge" class="px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider"></span>
+          </div>
+          <div class="flex items-baseline gap-3">
+            <span id="score-display" class="font-display font-extrabold text-4xl text-purple-400"></span>
+            <span id="percentage-display" class="text-sm text-slate-400 font-medium"></span>
+          </div>
+          <p id="result-summary-text" class="text-xs sm:text-sm text-slate-300"></p>
+        </div>
+      </section>
+
+      <!-- Navigation Footer -->
+      <footer class="pt-6 border-t border-slate-200 flex items-center justify-between">
+        <a href="module3-ch19.html" class="flex items-center gap-2 px-4 py-2.5 rounded-xl border border-slate-200 bg-white hover:bg-slate-50 text-slate-700 font-medium text-xs transition-colors">
+          <i data-lucide="arrow-left" class="w-4 h-4"></i>
+          <span>Prev: Chapter 19 (IR Derivatives)</span>
+        </a>
+        <a href="module3-ch21.html" class="flex items-center gap-2 px-4 py-2.5 rounded-xl bg-purple-600 hover:bg-purple-700 text-white font-semibold text-xs shadow-sm transition-colors">
+          <span>Next: Chapter 21 (Exchange Traded IRO)</span>
+          <i data-lucide="arrow-right" class="w-4 h-4"></i>
+        </a>
+      </footer>
+
+    </div>
+  </div>
+
+  <script>
+    const questionsData = [
+      {
+        id: 1,
+        question: "What is the contract lot size (number of underlying bonds and total face value) for 10-year Government of India Bond Futures traded on NSE and BSE?",
+        options: [
+          { key: "a", text: "500 bonds (₹50,000 Face Value)" },
+          { key: "b", text: "1,000 bonds (₹1,00,000 Face Value)" },
+          { key: "c", text: "2,000 bonds (₹2,00,000 Face Value)" },
+          { key: "d", text: "10,000 bonds (₹10,00,000 Face Value)" }
+        ],
+        correct: "c",
+        explanation: "The contract lot size for 10-year GoI Bond Futures in India is standardized at 2,000 underlying bonds. Because each bond has a face value of ₹100, the total contract face value equals 2,000 × ₹100 = ₹2,00,000 (₹2 Lakhs)."
+      },
+      {
+        id: 2,
+        question: "What is the minimum price fluctuation (tick size) prescribed for 10-year GoI Bond Futures?",
+        options: [
+          { key: "a", text: "₹0.05 (5 paise)" },
+          { key: "b", text: "₹0.01 (1 paisa)" },
+          { key: "c", text: "₹0.0025 (0.25 paise or one-fourth of a paisa)" },
+          { key: "d", text: "₹0.0010 (0.10 paise)" }
+        ],
+        correct: "c",
+        explanation: "The minimum tick size for 10-year GoI Bond Futures is ₹0.0025 (which represents 0.25 paise or one-fourth of a paisa per ₹100 face value)."
+      },
+      {
+        id: 3,
+        question: "What is the monetary Tick Value of one minimum price tick per contract in 10-year GoI Bond Futures?",
+        options: [
+          { key: "a", text: "₹2.50 per contract" },
+          { key: "b", text: "₹5.00 per contract" },
+          { key: "c", text: "₹10.00 per contract" },
+          { key: "d", text: "₹25.00 per contract" }
+        ],
+        correct: "b",
+        explanation: "Tick Value = Lot Size × Tick Size = 2,000 bonds × ₹0.0025 = ₹5.00 per contract. Alternatively: (₹2,00,000 Face Value / 100) × ₹0.0025 = ₹5.00."
+      },
+      {
+        id: 4,
+        question: "On which day do monthly Interest Rate Futures (IRF) contracts expire on Indian exchanges?",
+        options: [
+          { key: "a", text: "Last business day of the calendar quarter" },
+          { key: "b", text: "Last Thursday of the contract month (or preceding business day if holiday)" },
+          { key: "c", text: "First Friday of the subsequent month" },
+          { key: "d", text: "15th calendar day of the month" }
+        ],
+        correct: "b",
+        explanation: "Like equity derivatives in India, monthly IRF contracts expire on the last Thursday of the expiry month. If that Thursday is a trading holiday, the contract expires on the preceding working day."
+      },
+      {
+        id: 5,
+        question: "What are the official daily trading hours for Exchange Traded Interest Rate Futures on NSE and BSE?",
+        options: [
+          { key: "a", text: "9:15 AM to 3:30 PM (matching equity market hours)" },
+          { key: "b", text: "9:00 AM to 5:00 PM (matching interbank NDS-OM market hours)" },
+          { key: "c", text: "10:00 AM to 4:00 PM" },
+          { key: "d", text: "9:00 AM to 11:30 PM (matching commodity derivatives hours)" }
+        ],
+        correct: "b",
+        explanation: "Interest Rate Futures trade from 9:00 AM to 5:00 PM (Monday to Friday) on Indian exchanges to align synchronously with the operating hours of the interbank secondary government securities market on NDS-OM."
+      },
+      {
+        id: 6,
+        question: "How is the Final Settlement Price (FSP) for 10-year GoI Bond Futures derived on the expiration date?",
+        options: [
+          { key: "a", text: "The opening quote of the 10-year benchmark bond on NDS-OM on expiry morning" },
+          { key: "b", text: "Volume Weighted Average Price (VWAP) of the underlying bond traded on NDS-OM during the last two hours (3:00 PM to 5:00 PM)" },
+          { key: "c", text: "Closing price of the futures contract on the National Stock Exchange at 3:30 PM" },
+          { key: "d", text: "The repo rate declared in the latest RBI Monetary Policy Committee resolution" }
+        ],
+        correct: "b",
+        explanation: "The Final Settlement Price (FSP) is calculated as the Volume Weighted Average Price (VWAP) of the specific underlying bond traded on RBI's NDS-OM platform between 3:00 PM and 5:00 PM (last two hours). If no trades occur, FBIL/FIMMDA valuation is used."
+      },
+      {
+        id: 7,
+        question: "How is the price of 91-Day Treasury Bill Futures (91-DTB) quoted on the exchange trading screen?",
+        options: [
+          { key: "a", text: "Directly as the annualized percentage yield (e.g., 6.75%)" },
+          { key: "b", text: "As 100 minus the annualized discount yield (e.g., ₹93.25 for a 6.75% yield)" },
+          { key: "c", text: "Clean spot price plus accrued coupon interest" },
+          { key: "d", text: "Total invoice price per ₹10,000 face value" }
+        ],
+        correct: "b",
+        explanation: "91-DTB futures are quoted on a price basis equal to 100 minus the annualized discount yield (Quotation = 100 - Yield). If the annualized yield is 6.75%, the futures price is quoted at 100 - 6.75 = ₹93.25."
+      },
+      {
+        id: 8,
+        question: "A bond has a spot dirty price of ₹102.50. The risk-free repo borrowing rate is 6.0% p.a. The futures contract expires in 73 days (0.20 year). No coupon is paid before expiry. What is the theoretical forward dirty price?",
+        options: [
+          { key: "a", text: "₹102.50" },
+          { key: "b", text: "₹103.73" },
+          { key: "c", text: "₹108.65" },
+          { key: "d", text: "₹101.27" }
+        ],
+        correct: "b",
+        explanation: "Financing Cost = Spot Dirty × r × (T / 365) = 102.50 × 0.06 × (73 / 365) = 102.50 × 0.06 × 0.20 = ₹1.23. Therefore, Theoretical F_dirty = 102.50 + 1.23 = ₹103.73."
+      },
+      {
+        id: 9,
+        question: "What is the mandatory Extreme Loss Margin (ELM) percentage prescribed for Exchange Traded Interest Rate Futures?",
+        options: [
+          { key: "a", text: "0.5% of contract value" },
+          { key: "b", text: "3.5% of contract value" },
+          { key: "c", text: "5.0% of contract value" },
+          { key: "d", text: "1.0% of contract value" }
+        ],
+        correct: "a",
+        explanation: "For Interest Rate Futures, SEBI and RBI have mandated an Extreme Loss Margin (ELM) of 0.5% of the gross contract value (significantly lower than the 3.5% ELM applicable to equity derivatives, reflecting the lower volatility of sovereign debt)."
+      },
+      {
+        id: 10,
+        question: "A debt mutual fund holds a bond portfolio worth ₹10 Crores with a Modified Duration of 5.0 years. The 10-year IRF contract value is ₹2 Lakhs and the underlying bond has a Modified Duration of 5.0 years. How many IRF contracts must the manager short to fully hedge the portfolio against a rate hike?",
+        options: [
+          { key: "a", text: "100 contracts" },
+          { key: "b", text: "250 contracts" },
+          { key: "c", text: "500 contracts" },
+          { key: "d", text: "1,000 contracts" }
+        ],
+        correct: "c",
+        explanation: "N = (Portfolio Value × Portfolio MD) / (Futures Value × Futures MD) = (₹10,00,00,000 × 5.0) / (₹2,00,000 × 5.0) = ₹50,00,00,000 / ₹10,00,000 = 500 contracts. The manager must short 500 contracts."
+      },
+      {
+        id: 11,
+        question: "How are open 10-year GoI Bond Futures contracts settled upon expiration in India?",
+        options: [
+          { key: "a", text: "Mandatory physical delivery of the cheapest-to-deliver central government bond" },
+          { key: "b", text: "100% Cash Settled in Indian Rupees based on the Final Settlement Price" },
+          { key: "c", text: "Compulsory rollover into the subsequent month's contract" },
+          { key: "d", text: "Delivery of 91-Day Treasury Bills into the Clearing House SGL account" }
+        ],
+        correct: "b",
+        explanation: "In India, exchange-traded IRF contracts are 100% cash-settled in INR against the FSP on NDS-OM. No physical transfer of sovereign paper or SGL transfer takes place, which eliminates cheapest-to-deliver delivery squeezes."
+      },
+      {
+        id: 12,
+        question: "If the Reserve Bank of India unexpectedly hikes the repo rate by 50 basis points, what will be the direct impact on bond yields, bond prices, and an investor holding a Short IRF position?",
+        options: [
+          { key: "a", text: "Yields fall, bond prices rise, and the Short IRF position makes a profit" },
+          { key: "b", text: "Yields rise, bond prices fall, and the Short IRF position makes a profit" },
+          { key: "c", text: "Yields rise, bond prices fall, and the Short IRF position suffers a loss" },
+          { key: "d", text: "Yields fall, bond prices rise, and the Short IRF position suffers no impact" }
+        ],
+        correct: "b",
+        explanation: "Bond prices are inversely related to interest rates. When the RBI hikes rates, bond yields rise and bond prices (and futures prices) fall. A Short IRF position gains in value when futures prices drop, making it an effective hedge."
+      }
+    ];
+
+    let userAnswers = {};
+
+    function renderQuiz() {
+      const container = document.getElementById("quiz-container");
+      container.innerHTML = "";
+      questionsData.forEach((q, idx) => {
+        const qDiv = document.createElement("div");
+        qDiv.className = "p-5 rounded-2xl bg-white/5 border border-white/10 space-y-3";
+        
+        let optionsHtml = "";
+        q.options.forEach(opt => {
+          optionsHtml += `
+            <label id="label-${q.id}-${opt.key}" onclick="selectOption(${q.id}, '${opt.key}')" class="flex items-center gap-3 p-3 rounded-xl bg-white/5 hover:bg-white/10 border border-white/5 cursor-pointer text-xs sm:text-sm transition-all">
+              <input type="radio" name="q-${q.id}" value="${opt.key}" class="hidden" />
+              <div class="w-6 h-6 rounded-full border border-slate-500 flex items-center justify-center font-bold text-xs shrink-0">${opt.key.toUpperCase()}</div>
+              <span class="text-slate-300">${opt.text}</span>
+            </label>
+          `;
+        });
+
+        qDiv.innerHTML = `
+          <div class="flex items-center justify-between">
+            <span class="text-xs font-bold text-purple-400">Question ${idx + 1} of ${questionsData.length}</span>
+            <span id="badge-${q.id}" class="text-xs px-2 py-0.5 rounded-full bg-slate-800 text-slate-400">Unanswered</span>
+          </div>
+          <h4 class="font-display font-semibold text-sm sm:text-base text-white">${q.question}</h4>
+          <div class="space-y-2 mt-3">${optionsHtml}</div>
+          <div id="explanation-${q.id}" class="hidden p-4 rounded-xl text-xs sm:text-sm mt-3 space-y-1"></div>
+        `;
+        container.appendChild(qDiv);
+      });
+      lucide.createIcons();
+    }
+
+    function selectOption(qId, key) {
+      userAnswers[qId] = key;
+      document.getElementById("answered-count").innerText = Object.keys(userAnswers).length;
+      
+      const badge = document.getElementById(`badge-${qId}`);
+      if (badge) {
+        badge.innerText = "Answered";
+        badge.className = "text-xs px-2 py-0.5 rounded-full bg-purple-500/20 text-purple-300 font-medium";
+      }
+
+      const q = questionsData.find(item => item.id === qId);
+      q.options.forEach(opt => {
+        const lbl = document.getElementById(`label-${qId}-${opt.key}`);
+        if (opt.key === key) {
+          lbl.className = "flex items-center gap-3 p-3 rounded-xl bg-purple-600/30 border border-purple-400/50 cursor-pointer text-xs sm:text-sm transition-all";
+        } else {
+          lbl.className = "flex items-center gap-3 p-3 rounded-xl bg-white/5 hover:bg-white/10 border border-white/5 cursor-pointer text-xs sm:text-sm transition-all";
+        }
+      });
+    }
+
+    function submitQuiz() {
+      let score = 0;
+      questionsData.forEach(q => {
+        const selected = userAnswers[q.id];
+        const isCorrect = selected === q.correct;
+        if (isCorrect) score++;
+
+        const explanationDiv = document.getElementById(`explanation-${q.id}`);
+        explanationDiv.classList.remove("hidden");
+
+        if (isCorrect) {
+          explanationDiv.className = "p-4 rounded-xl text-xs sm:text-sm mt-3 bg-emerald-950/60 border border-emerald-600 text-emerald-200";
+          explanationDiv.innerHTML = `<div class="font-bold text-emerald-400 flex items-center gap-1.5"><i data-lucide="check" class="w-4 h-4"></i> Correct!</div><p class="mt-1">${q.explanation}</p>`;
+        } else {
+          explanationDiv.className = "p-4 rounded-xl text-xs sm:text-sm mt-3 bg-rose-950/60 border border-rose-600 text-rose-200";
+          explanationDiv.innerHTML = `<div class="font-bold text-rose-400 flex items-center gap-1.5"><i data-lucide="x" class="w-4 h-4"></i> Incorrect (Correct Answer: ${q.correct.toUpperCase()})</div><p class="mt-1">${q.explanation}</p>`;
+        }
+      });
+
+      const percentage = Math.round((score / questionsData.length) * 100);
+      const passed = percentage >= 60;
+      
+      const resultsDiv = document.getElementById("quiz-results");
+      resultsDiv.classList.remove("hidden");
+
+      const statusBadge = document.getElementById("result-status-badge");
+      statusBadge.innerText = passed ? "Status: Passed (60%+ Benchmark)" : "Status: Needs Revision (<60%)";
+      statusBadge.className = passed ? "px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider bg-emerald-500 text-emerald-950" : "px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider bg-amber-500 text-amber-950";
+
+      document.getElementById("score-display").innerText = `${score} / ${questionsData.length}`;
+      document.getElementById("percentage-display").innerText = `${percentage}% Score (Passing benchmark: 60%)`;
+
+      document.getElementById("result-summary-text").innerText = passed
+        ? `Outstanding! You scored ${percentage}%, mastering Chapter 20 contract specifications (Lot = 2,000, Tick = ₹5.00), Cost of Carry pricing, FSP determination, and duration hedging.`
+        : `You scored ${percentage}%. Re-check the must-memorize parameters: Lot size (2,000 bonds), Tick Value (₹5.00), NDS-OM 2hr VWAP window, and the Modified Duration hedge ratio formula.`;
+
+      document.getElementById("submit-quiz-btn").classList.add("hidden");
+      document.getElementById("reset-quiz-btn").classList.remove("hidden");
+
+      resultsDiv.scrollIntoView({ behavior: 'smooth' });
+      lucide.createIcons();
+    }
+
+    function resetQuiz() {
+      userAnswers = {};
+      document.getElementById("answered-count").innerText = "0";
+      document.getElementById("quiz-results").classList.add("hidden");
+      document.getElementById("submit-quiz-btn").classList.remove("hidden");
+      document.getElementById("reset-quiz-btn").classList.add("hidden");
+      renderQuiz();
+      document.getElementById("interactive-quiz").scrollIntoView({ behavior: 'smooth' });
+    }
+
+    renderQuiz();
+    lucide.createIcons();
+  </script>
+</body>
+</html>

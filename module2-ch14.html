@@ -1,0 +1,1159 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Chapter 14: Understanding the Index | NISM Series V-D Notes</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+  <script src="https://unpkg.com/lucide@latest"></script>
+
+  <!-- KaTeX for formula rendering -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.min.css">
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.min.js"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/contrib/auto-render.min.js" onload="renderMathInElement(document.body);"></script>
+
+  <!-- Global Module & Chapter Navigation Sidebar -->
+    <!-- Modern Documentation Design System & Zoom Engine -->
+  <link rel="stylesheet" href="modern-docs.css">
+  <script defer src="nav-sidebar.js"></script>
+
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+            display: ['"Space Grotesk"', 'sans-serif']
+          }
+        }
+      }
+    }
+  </script>
+</head>
+<body class="bg-slate-50 text-slate-900 min-h-screen flex flex-col selection:bg-blue-500 selection:text-white">
+
+  <!-- Header -->
+  <header class="sticky top-0 z-50 bg-white/90 backdrop-blur-md border-b border-slate-200">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
+      <div class="flex items-center gap-3">
+        <a href="module2.html" class="flex items-center gap-2 text-slate-500 hover:text-slate-900 transition-colors">
+          <div class="w-9 h-9 rounded-xl bg-slate-100 hover:bg-slate-200 flex items-center justify-center text-slate-700 transition-colors">
+            <i data-lucide="arrow-left" class="w-4 h-4"></i>
+          </div>
+        </a>
+        <div>
+          <div class="flex items-center gap-2">
+            <span class="text-xs font-bold uppercase tracking-wider text-emerald-600 bg-emerald-50 px-2 py-0.5 rounded">Module 2</span>
+            <span class="text-xs text-slate-400 font-medium">Chapter 14 of 22</span>
+          </div>
+          <h1 class="font-display font-bold text-base sm:text-lg text-slate-900 leading-tight">Understanding the Index</h1>
+        </div>
+      </div>
+
+      <div class="flex items-center gap-3">
+        <span class="hidden sm:inline-flex items-center gap-1 px-3 py-1 rounded-full text-xs font-bold bg-amber-50 text-amber-700 border border-amber-200">
+          <i data-lucide="award" class="w-3.5 h-3.5"></i>
+          Weightage: 5 Marks
+        </span>
+        <a href="#interactive-quiz" class="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-lg text-xs font-bold bg-emerald-600 hover:bg-emerald-700 text-white shadow-sm transition-all">
+          <i data-lucide="help-circle" class="w-3.5 h-3.5"></i>
+          <span>Chapter Quiz</span>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Content Grid -->
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 grid grid-cols-1 lg:grid-cols-12 gap-8 flex-grow">
+    
+    <!-- Sidebar Navigation -->
+    <aside class="hidden lg:block lg:col-span-3">
+      <div class="sticky top-24 space-y-4">
+        <!-- Chapter Switcher (3 Module Dropdowns) -->
+        <div id="sidebar-chapter-switcher"></div>
+
+        <div class="bg-white p-5 rounded-2xl border border-slate-200 shadow-sm">
+          <h2 class="text-xs font-bold text-slate-400 uppercase tracking-wider mb-3">Chapter Navigation</h2>
+          <nav class="space-y-1 text-xs">
+            <a href="#section-1" class="block px-2.5 py-1.5 rounded-lg text-slate-600 hover:bg-slate-100 hover:text-emerald-600">14.1 Concept & Economic Functions</a>
+            <a href="#section-2" class="block px-2.5 py-1.5 rounded-lg text-amber-700 font-semibold bg-amber-50/70 hover:bg-amber-100">14.2 Construction Methodologies ⭐</a>
+            <a href="#section-3" class="block px-2.5 py-1.5 rounded-lg text-amber-700 font-semibold bg-amber-50/70 hover:bg-amber-100">14.3 Free-Float M-Cap & IWF ⭐</a>
+            <a href="#section-4" class="block px-2.5 py-1.5 rounded-lg text-amber-700 font-semibold bg-amber-50/70 hover:bg-amber-100">14.4 Divisor Adjustments ⭐</a>
+            <a href="#section-5" class="block px-2.5 py-1.5 rounded-lg text-amber-700 font-semibold bg-amber-50/70 hover:bg-amber-100">14.5 Impact Cost & Order Book ⭐</a>
+            <a href="#section-6" class="block px-2.5 py-1.5 rounded-lg text-amber-700 font-semibold bg-amber-50/70 hover:bg-amber-100">14.6 SEBI Derivative Norms ⭐</a>
+            <a href="#section-7" class="block px-2.5 py-1.5 rounded-lg text-slate-600 hover:bg-slate-100 hover:text-emerald-600">14.7 TRI vs PRI Benchmarking</a>
+            <a href="#interactive-quiz" class="block px-2.5 py-1.5 rounded-lg text-emerald-700 font-bold bg-emerald-50 hover:bg-emerald-100 mt-2">Practice Quiz (12 MCQs)</a>
+          </nav>
+        </div>
+
+        <div class="p-4 rounded-2xl bg-gradient-to-br from-emerald-600 to-teal-700 text-white shadow-sm text-xs">
+          <div class="flex items-center gap-1.5 font-bold mb-1.5">
+            <i data-lucide="zap" class="w-4 h-4 text-amber-300"></i>
+            <span>Exam Focus Highlights</span>
+          </div>
+          <p class="text-emerald-100 leading-relaxed space-y-1">
+            <span>&bull; <strong>Free Float Cap:</strong> Excludes promoter, govt & locked equity.</span><br>
+            <span>&bull; <strong>Divisor:</strong> Adjusted for corporate events to preserve continuity.</span><br>
+            <span>&bull; <strong>Impact Cost:</strong> Slippage from Ideal Mid-Quote [(Bid+Ask)/2].</span><br>
+            <span>&bull; <strong>F&O Caps:</strong> Single stock &le; 33%; Top 3 stocks &le; 62%.</span><br>
+            <span>&bull; <strong>Liquidity:</strong> Traded on &ge; 80% days; Impact cost &le; 1.0% (₹50L).</span><br>
+            <span>&bull; <strong>TRI Mandate:</strong> All MFs must benchmark against TRI.</span>
+          </p>
+        </div>
+      </div>
+    </aside>
+
+    <!-- Main Notes -->
+    <div class="lg:col-span-9 space-y-8">
+
+      <!-- Section 14.1 -->
+      <section id="section-1" class="bg-white rounded-3xl p-6 sm:p-8 border border-slate-200/90 shadow-sm space-y-5">
+        <div class="flex items-center justify-between">
+          <div class="flex items-center gap-2 text-xs font-bold text-slate-500 uppercase tracking-wider">
+            <span class="w-2 h-2 rounded-full bg-slate-400"></span> Section 14.1 &bull; Fast-Track Refresher
+          </div>
+          <span class="text-xs px-2.5 py-1 rounded-full bg-slate-100 text-slate-600 font-semibold">Core Concepts</span>
+        </div>
+        <div>
+          <h2 class="font-display font-bold text-xl sm:text-2xl text-slate-900">Stock Market Indices: Concept, Economic Functions & Desirable Attributes</h2>
+          <p class="text-sm text-slate-600 mt-1">A statistical barometer capturing collective market movements, serving as the cornerstone for valuation, asset allocation, and derivatives.</p>
+        </div>
+
+        <p class="text-sm text-slate-700 leading-relaxed">
+          A <strong>stock market index</strong> is a statistical indicator that aggregates the price performance of a representative basket of underlying securities. It translates fluctuations in individual stock prices into a single composite number relative to a designated base period and base value (e.g., <em>Nifty 50</em> with base year November 1995 = 1,000; <em>BSE Sensex</em> with base year 1978–79 = 100).
+        </p>
+
+        <!-- Economic Functions Grid -->
+        <div class="space-y-3">
+          <h3 class="font-display font-bold text-sm text-slate-900 uppercase tracking-wider text-slate-500">Five Vital Economic Functions of an Index</h3>
+          <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3 text-xs">
+            <div class="p-4 rounded-2xl bg-slate-50 border border-slate-200 space-y-1.5">
+              <div class="flex items-center gap-2 font-bold text-slate-900">
+                <i data-lucide="activity" class="w-4 h-4 text-blue-600"></i>
+                <span>1. Macro Barometer</span>
+              </div>
+              <p class="text-slate-600 leading-relaxed">
+                Acts as a real-time sentiment thermometer for the national economy, reflecting industrial output, corporate profitability expectations, and capital flows.
+              </p>
+            </div>
+
+            <div class="p-4 rounded-2xl bg-slate-50 border border-slate-200 space-y-1.5">
+              <div class="flex items-center gap-2 font-bold text-slate-900">
+                <i data-lucide="target" class="w-4 h-4 text-emerald-600"></i>
+                <span>2. Fund Benchmark</span>
+              </div>
+              <p class="text-slate-600 leading-relaxed">
+                Provides a standardized reference hurdle for evaluating active fund managers (Mutual Funds, PMS, AIFs) to distinguish true alpha from market beta.
+              </p>
+            </div>
+
+            <div class="p-4 rounded-2xl bg-slate-50 border border-slate-200 space-y-1.5">
+              <div class="flex items-center gap-2 font-bold text-slate-900">
+                <i data-lucide="layers" class="w-4 h-4 text-amber-600"></i>
+                <span>3. F&O Underlying</span>
+              </div>
+              <p class="text-slate-600 leading-relaxed">
+                Serves as the underlying asset for cash-settled Index Futures and Options, enabling cost-effective systematic risk hedging without stock delivery.
+              </p>
+            </div>
+
+            <div class="p-4 rounded-2xl bg-slate-50 border border-slate-200 space-y-1.5">
+              <div class="flex items-center gap-2 font-bold text-slate-900">
+                <i data-lucide="pie-chart" class="w-4 h-4 text-purple-600"></i>
+                <span>4. Passive Investing</span>
+              </div>
+              <p class="text-slate-600 leading-relaxed">
+                Underpins Index Funds and Exchange-Traded Funds (ETFs) that physically replicate index constituents, offering low-cost market returns.
+              </p>
+            </div>
+
+            <div class="p-4 rounded-2xl bg-slate-50 border border-slate-200 space-y-1.5 sm:col-span-2 lg:col-span-2">
+              <div class="flex items-center gap-2 font-bold text-slate-900">
+                <i data-lucide="shield-check" class="w-4 h-4 text-rose-600"></i>
+                <span>5. Risk Modeling & Asset Allocation</span>
+              </div>
+              <p class="text-slate-600 leading-relaxed">
+                Represents the empirical "market portfolio" used in the Capital Asset Pricing Model (CAPM) to compute stock beta (&beta;), Value-at-Risk (VaR), and institutional strategic asset allocation.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Desirable Attributes -->
+        <div class="p-4 rounded-2xl bg-blue-50/60 border border-blue-200 space-y-2 text-xs">
+          <div class="font-bold text-blue-950 text-sm flex items-center gap-2">
+            <i data-lucide="check-square" class="w-4 h-4 text-blue-700"></i>
+            <span>Desirable Attributes of a Well-Constructed Index</span>
+          </div>
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-2.5 text-slate-700 mt-2">
+            <div class="flex items-start gap-2">
+              <span class="w-1.5 h-1.5 rounded-full bg-blue-600 mt-1.5 shrink-0"></span>
+              <span><strong>Broad Market Representation:</strong> Accurately mirrors the underlying industry sectors and macroeconomic composition.</span>
+            </div>
+            <div class="flex items-start gap-2">
+              <span class="w-1.5 h-1.5 rounded-full bg-blue-600 mt-1.5 shrink-0"></span>
+              <span><strong>High Investibility & Liquidity:</strong> Component stocks must have ample floating supply and low impact cost for seamless replication.</span>
+            </div>
+            <div class="flex items-start gap-2">
+              <span class="w-1.5 h-1.5 rounded-full bg-blue-600 mt-1.5 shrink-0"></span>
+              <span><strong>Rule-Based & Transparent:</strong> Inclusion, exclusion, and capping rules must be publicly documented, objective, and non-discretionary.</span>
+            </div>
+            <div class="flex items-start gap-2">
+              <span class="w-1.5 h-1.5 rounded-full bg-blue-600 mt-1.5 shrink-0"></span>
+              <span><strong>Low Portfolio Turnover:</strong> Periodic rebalancing should avoid excessive constituent churning, curtailing transaction costs for index trackers.</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Section 14.2 -->
+      <section id="section-2" class="bg-white rounded-3xl p-6 sm:p-8 border border-amber-200 shadow-sm space-y-5">
+        <div class="flex items-center justify-between">
+          <div class="flex items-center gap-2 text-xs font-bold text-amber-700 uppercase tracking-wider">
+            <span class="w-2 h-2 rounded-full bg-amber-500"></span> Section 14.2 &bull; Super High Exam Yield ⭐
+          </div>
+          <span class="text-xs px-2.5 py-1 rounded-full bg-amber-100 text-amber-800 font-bold">Weighting Methodologies</span>
+        </div>
+        <div>
+          <h2 class="font-display font-bold text-xl sm:text-2xl text-slate-900">Index Construction & Weighting Methodologies</h2>
+          <p class="text-sm text-slate-600 mt-1">Comparing Price-Weighted, Full Market-Cap, Free-Float Market-Cap, and Equal-Weighted frameworks.</p>
+        </div>
+
+        <p class="text-sm text-slate-700 leading-relaxed">
+          The weighting methodology dictates how much influence each constituent stock exerts on the index level. NISM repeatedly tests the mechanics, mathematical formulas, and inherent distortions of these four methodologies:
+        </p>
+
+        <!-- 4 Methodologies Cards -->
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4 text-xs">
+          <!-- Free-Float -->
+          <div class="p-5 rounded-2xl bg-emerald-50/70 border border-emerald-200 space-y-2.5">
+            <div class="flex items-center justify-between">
+              <span class="font-bold text-emerald-950 text-sm">1. Free-Float Market Cap (Global Standard)</span>
+              <span class="text-[10px] font-bold bg-emerald-200 text-emerald-900 px-2 py-0.5 rounded">Nifty 50, Sensex</span>
+            </div>
+            <p class="text-slate-700 leading-relaxed">
+              Weights constituents strictly by their <strong>publicly tradable market capitalization</strong> (Share Price &times; Shares Outstanding &times; IWF).
+            </p>
+            <div class="bg-white p-2.5 rounded-xl border border-emerald-200 font-mono text-emerald-900 text-[11px]">
+              Weight<sub>i</sub> = [Price<sub>i</sub> &times; Shares<sub>i</sub> &times; IWF<sub>i</sub>] / &sum; [Price<sub>j</sub> &times; Shares<sub>j</sub> &times; IWF<sub>j</sub>]
+            </div>
+            <p class="text-emerald-900 font-medium text-[11px]">
+              &bull; <em>Key Advantage:</em> Reflects true investment capacity; immune to distortions from non-tradable promoter or sovereign blocks.
+            </p>
+          </div>
+
+          <!-- Full Market Cap -->
+          <div class="p-5 rounded-2xl bg-slate-50 border border-slate-200 space-y-2.5">
+            <div class="flex items-center justify-between">
+              <span class="font-bold text-slate-900 text-sm">2. Full Market Cap Weighting</span>
+              <span class="text-[10px] font-bold bg-slate-200 text-slate-800 px-2 py-0.5 rounded">Early BSE 500</span>
+            </div>
+            <p class="text-slate-600 leading-relaxed">
+              Weights constituents by their <strong>total company market value</strong> (Share Price &times; Total Outstanding Shares), regardless of whether shares are tradable.
+            </p>
+            <div class="bg-white p-2.5 rounded-xl border border-slate-200 font-mono text-slate-800 text-[11px]">
+              Weight<sub>i</sub> = [Price<sub>i</sub> &times; Total Shares<sub>i</sub>] / &sum; [Price<sub>j</sub> &times; Total Shares<sub>j</sub>]
+            </div>
+            <p class="text-rose-700 font-medium text-[11px]">
+              &bull; <em>Critical Flaw:</em> Companies with huge valuations but negligible public float (e.g. 90% PSU or promoter owned) receive huge index weights that cannot be replicated in practice.
+            </p>
+          </div>
+
+          <!-- Price-Weighted -->
+          <div class="p-5 rounded-2xl bg-amber-50/70 border border-amber-200 space-y-2.5">
+            <div class="flex items-center justify-between">
+              <span class="font-bold text-amber-950 text-sm">3. Price-Weighted Index</span>
+              <span class="text-[10px] font-bold bg-amber-200 text-amber-900 px-2 py-0.5 rounded">Dow Jones, Nikkei 225</span>
+            </div>
+            <p class="text-slate-700 leading-relaxed">
+              Constituents are weighted solely by their <strong>absolute nominal share price</strong>. Total shares outstanding and company market cap are completely ignored.
+            </p>
+            <div class="bg-white p-2.5 rounded-xl border border-amber-200 font-mono text-amber-900 text-[11px]">
+              Weight<sub>i</sub> = Price<sub>i</sub> / &sum; Price<sub>j</sub>
+            </div>
+            <p class="text-amber-950 font-medium text-[11px]">
+              &bull; <em>Critical Exam Trap:</em> A stock trading at ₹10,000 exerts 10&times; more influence than a stock at ₹1,000, even if the ₹1,000 company is 50&times; larger in market capitalization! A 2-for-1 stock split arbitrarily halves the company's index weight overnight.
+            </p>
+          </div>
+
+          <!-- Equal-Weighted -->
+          <div class="p-5 rounded-2xl bg-blue-50/70 border border-blue-200 space-y-2.5">
+            <div class="flex items-center justify-between">
+              <span class="font-bold text-blue-950 text-sm">4. Equal-Weighted Index</span>
+              <span class="text-[10px] font-bold bg-blue-200 text-blue-900 px-2 py-0.5 rounded">Nifty 50 Equal Weight</span>
+            </div>
+            <p class="text-slate-700 leading-relaxed">
+              Every constituent stock is assigned the <strong>exact same initial weight</strong> (e.g., 2.0% for each of the 50 stocks in Nifty 50 Equal Weight).
+            </p>
+            <div class="bg-white p-2.5 rounded-xl border border-blue-200 font-mono text-blue-900 text-[11px]">
+              Weight<sub>i</sub> = 1 / N (where N = Number of constituents)
+            </div>
+            <p class="text-blue-950 font-medium text-[11px]">
+              &bull; <em>Key Dynamics:</em> Exhibits an inherent <em>contrarian/value tilt</em>. Periodic quarterly rebalancing forces selling recent winners (whose weight rose above 2%) and buying laggards (whose weight dropped below 2%). Higher portfolio turnover and tracking costs.
+            </p>
+          </div>
+        </div>
+
+        <!-- Master Comparison Table -->
+        <div class="space-y-2">
+          <h3 class="font-display font-bold text-xs uppercase tracking-wider text-slate-500">Methodology Comparison Matrix (High-Yield Exam Summary)</h3>
+          <div class="overflow-x-auto rounded-2xl border border-slate-200">
+            <table class="w-full text-left text-xs">
+              <thead class="bg-slate-100 text-slate-700 border-b border-slate-200 font-semibold">
+                <tr>
+                  <th class="p-3">Methodology</th>
+                  <th class="p-3">Weighting Driver</th>
+                  <th class="p-3">Divisor Adjustment for Splits?</th>
+                  <th class="p-3">Key Vulnerability / Bias</th>
+                  <th class="p-3">Real-World Benchmarks</th>
+                </tr>
+              </thead>
+              <tbody class="divide-y divide-slate-200 text-slate-600 bg-white">
+                <tr class="hover:bg-slate-50">
+                  <td class="p-3 font-bold text-emerald-900">Free-Float Market Cap</td>
+                  <td class="p-3 font-mono">Price &times; Shares &times; IWF</td>
+                  <td class="p-3 text-emerald-700 font-semibold">No (M-Cap unchanged)</td>
+                  <td class="p-3">Momentum bias (overvalued large caps gain disproportionate weight)</td>
+                  <td class="p-3 font-semibold">Nifty 50, BSE Sensex, S&P 500</td>
+                </tr>
+                <tr class="hover:bg-slate-50">
+                  <td class="p-3 font-bold text-slate-900">Full Market Cap</td>
+                  <td class="p-3 font-mono">Price &times; Total Shares</td>
+                  <td class="p-3 text-emerald-700 font-semibold">No (M-Cap unchanged)</td>
+                  <td class="p-3">Severe replication friction; over-weights tightly held illiquid stocks</td>
+                  <td class="p-3">Broad market historical indices</td>
+                </tr>
+                <tr class="hover:bg-slate-50">
+                  <td class="p-3 font-bold text-amber-900">Price-Weighted</td>
+                  <td class="p-3 font-mono">Nominal Share Price</td>
+                  <td class="p-3 text-rose-700 font-semibold">Yes (Price drops drastically)</td>
+                  <td class="p-3">Arbitrary price distortion; stock splits penalize constituent weight</td>
+                  <td class="p-3 font-semibold">Dow Jones (DJIA), Nikkei 225</td>
+                </tr>
+                <tr class="hover:bg-slate-50">
+                  <td class="p-3 font-bold text-blue-900">Equal-Weighted</td>
+                  <td class="p-3 font-mono">1 / N (Fixed %)</td>
+                  <td class="p-3 text-emerald-700 font-semibold">No</td>
+                  <td class="p-3">Higher rebalancing turnover, transaction friction, and small-cap bias</td>
+                  <td class="p-3 font-semibold">Nifty 50 Equal Weight, S&P 500 EWI</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </section>
+
+      <!-- Section 14.3 -->
+      <section id="section-3" class="bg-white rounded-3xl p-6 sm:p-8 border border-amber-200 shadow-sm space-y-5">
+        <div class="flex items-center justify-between">
+          <div class="flex items-center gap-2 text-xs font-bold text-amber-700 uppercase tracking-wider">
+            <span class="w-2 h-2 rounded-full bg-amber-500"></span> Section 14.3 &bull; Super High Exam Yield ⭐
+          </div>
+          <span class="text-xs px-2.5 py-1 rounded-full bg-amber-100 text-amber-800 font-bold">Free-Float & IWF</span>
+        </div>
+        <div>
+          <h2 class="font-display font-bold text-xl sm:text-2xl text-slate-900">Free-Float Market Capitalization & Investible Weight Factor (IWF)</h2>
+          <p class="text-sm text-slate-600 mt-1">Mathematical calculation of investible float, regulatory exclusions, and weight determination.</p>
+        </div>
+
+        <!-- Formulas Box -->
+        <div class="p-4 rounded-2xl bg-slate-50 border border-slate-200 space-y-2.5 text-xs">
+          <span class="font-bold text-slate-900 text-sm">Core Free-Float Formulations:</span>
+          <div class="bg-white p-3.5 rounded-xl border border-slate-200 font-mono text-slate-800 space-y-1.5 leading-relaxed">
+            <p><strong>Full Market Cap</strong> = Current Share Price &times; Total Shares Outstanding</p>
+            <p><strong>Free-Float Market Cap</strong> = Current Share Price &times; Total Shares Outstanding &times; Investible Weight Factor (IWF)</p>
+            <p><strong>Investible Weight Factor (IWF)</strong> = (Total Shares Outstanding - Non-Free Float Shares) / Total Shares Outstanding</p>
+            <p><strong>Free-Float Market Cap</strong> = Full Market Capitalization &times; IWF</p>
+          </div>
+          <p class="text-slate-600">
+            The <strong>Investible Weight Factor (IWF)</strong> is a decimal factor between 0.00 and 1.00 that represents the proportion of total shares readily available to the general investing public on the open market.
+          </p>
+        </div>
+
+        <!-- Inclusions vs Exclusions Table -->
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4 text-xs">
+          <div class="p-4 rounded-2xl bg-rose-50/70 border border-rose-200 space-y-2">
+            <div class="flex items-center gap-1.5 font-bold text-rose-950 text-sm">
+              <i data-lucide="x-circle" class="w-4 h-4 text-rose-600"></i>
+              <span>Excluded from Free-Float (Non-Free Float)</span>
+            </div>
+            <ul class="list-disc pl-4 space-y-1 text-slate-700 leading-relaxed">
+              <li><strong>Promoter & Promoter Group:</strong> All direct and indirect controlling promoter blocks.</li>
+              <li><strong>Government Holdings:</strong> Central, State, statutory bodies, and strategic public holdings.</li>
+              <li><strong>Strategic Cross-Holdings:</strong> Shares held by associate or group corporations.</li>
+              <li><strong>Employee Welfare / ESOP Trusts:</strong> Shares locked in employee trusts.</li>
+              <li><strong>Statutory & Pre-IPO Lock-ins:</strong> Anchor investor lock-ins, promoter minimum contribution lock-in.</li>
+              <li><strong>GDR/ADR Underlying Equity:</strong> Shares not fungible for secondary domestic trading.</li>
+              <li><strong>Pledged Shares:</strong> Promoter shares under litigation or custodial seizure.</li>
+            </ul>
+          </div>
+
+          <div class="p-4 rounded-2xl bg-emerald-50/70 border border-emerald-200 space-y-2">
+            <div class="flex items-center gap-1.5 font-bold text-emerald-950 text-sm">
+              <i data-lucide="check-circle" class="w-4 h-4 text-emerald-600"></i>
+              <span>Included in Free-Float (Tradable Universe)</span>
+            </div>
+            <ul class="list-disc pl-4 space-y-1 text-slate-700 leading-relaxed">
+              <li><strong>Retail Individual Investors:</strong> Open market public holdings.</li>
+              <li><strong>Domestic Mutual Funds:</strong> Open market mutual fund equity holdings.</li>
+              <li><strong>Insurance Companies & Pension Funds:</strong> Life/General insurers, NPS, EPFO.</li>
+              <li><strong>Foreign Portfolio Investors (FPIs/FIIs):</strong> Non-strategic institutional holdings.</li>
+              <li><strong>Non-Promoter Corporate Bodies & Trusts:</strong> General corporate entities without board representation.</li>
+              <li><strong>High Net Worth Individuals (HNIs):</strong> Non-promoter public investors.</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Worked Numerical Example -->
+        <div class="p-5 rounded-2xl bg-amber-50/60 border border-amber-200 space-y-3 text-xs">
+          <div class="flex items-center gap-2 font-bold text-amber-950 text-sm">
+            <i data-lucide="calculator" class="w-4 h-4 text-amber-700"></i>
+            <span>Step-by-Step Worked Numerical: Full M-Cap vs Free-Float Weighting Distortion</span>
+          </div>
+          <p class="text-slate-700">
+            Consider a 2-stock hypothetical index to illustrate why free-float prevents distortion:
+          </p>
+
+          <div class="overflow-x-auto rounded-xl border border-amber-200 bg-white">
+            <table class="w-full text-left text-xs">
+              <thead class="bg-amber-100 text-amber-950 font-semibold">
+                <tr>
+                  <th class="p-2.5">Parameter</th>
+                  <th class="p-2.5">Company A (Govt PSU)</th>
+                  <th class="p-2.5">Company B (Private Tech)</th>
+                  <th class="p-2.5">Total / Index</th>
+                </tr>
+              </thead>
+              <tbody class="divide-y divide-amber-100 text-slate-700">
+                <tr>
+                  <td class="p-2.5 font-semibold">Share Price</td>
+                  <td class="p-2.5 font-mono">₹100</td>
+                  <td class="p-2.5 font-mono">₹500</td>
+                  <td class="p-2.5">-</td>
+                </tr>
+                <tr>
+                  <td class="p-2.5 font-semibold">Total Outstanding Shares</td>
+                  <td class="p-2.5 font-mono">100 Crore shares</td>
+                  <td class="p-2.5 font-mono">20 Crore shares</td>
+                  <td class="p-2.5">-</td>
+                </tr>
+                <tr class="bg-slate-50">
+                  <td class="p-2.5 font-bold text-slate-900">Full Market Capitalization</td>
+                  <td class="p-2.5 font-mono font-bold">₹10,000 Crore</td>
+                  <td class="p-2.5 font-mono font-bold">₹10,000 Crore</td>
+                  <td class="p-2.5 font-mono font-bold text-blue-700">₹20,000 Crore</td>
+                </tr>
+                <tr>
+                  <td class="p-2.5 font-semibold">Govt / Promoter Holding</td>
+                  <td class="p-2.5 font-mono text-rose-600">85 Crore shares (85%)</td>
+                  <td class="p-2.5 font-mono text-rose-600">4 Crore shares (20%)</td>
+                  <td class="p-2.5">-</td>
+                </tr>
+                <tr>
+                  <td class="p-2.5 font-semibold">Public Float Shares</td>
+                  <td class="p-2.5 font-mono text-emerald-600">15 Crore shares (15%)</td>
+                  <td class="p-2.5 font-mono text-emerald-600">16 Crore shares (80%)</td>
+                  <td class="p-2.5">-</td>
+                </tr>
+                <tr class="bg-amber-50">
+                  <td class="p-2.5 font-bold text-amber-950">Investible Weight Factor (IWF)</td>
+                  <td class="p-2.5 font-mono font-bold text-amber-900">0.15</td>
+                  <td class="p-2.5 font-mono font-bold text-amber-900">0.80</td>
+                  <td class="p-2.5">-</td>
+                </tr>
+                <tr class="bg-emerald-50">
+                  <td class="p-2.5 font-bold text-emerald-950">Free-Float Market Cap</td>
+                  <td class="p-2.5 font-mono font-bold text-emerald-800">₹1,500 Crore</td>
+                  <td class="p-2.5 font-mono font-bold text-emerald-800">₹8,000 Crore</td>
+                  <td class="p-2.5 font-mono font-bold text-emerald-900">₹9,500 Crore</td>
+                </tr>
+                <tr class="bg-slate-100 font-bold">
+                  <td class="p-2.5">Weight under Full M-Cap</td>
+                  <td class="p-2.5 font-mono text-slate-800">50.0% (10,000 / 20,000)</td>
+                  <td class="p-2.5 font-mono text-slate-800">50.0% (10,000 / 20,000)</td>
+                  <td class="p-2.5 font-mono">100.0%</td>
+                </tr>
+                <tr class="bg-emerald-100/70 font-bold text-emerald-950">
+                  <td class="p-2.5">Weight under Free-Float</td>
+                  <td class="p-2.5 font-mono text-emerald-800">15.79% (1,500 / 9,500)</td>
+                  <td class="p-2.5 font-mono text-emerald-800">84.21% (8,000 / 9,500)</td>
+                  <td class="p-2.5 font-mono">100.0%</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <p class="text-amber-900 leading-relaxed font-medium">
+            <strong>Key Insight for Exam:</strong> Under Full M-Cap, Company A commands a 50% weight even though only ₹1,500 Cr of its shares can be bought. An index fund tracking Full M-Cap would face impossible liquidity shortages trying to purchase 50% in Company A. Free-float methodology correctly drops Company A's weight to 15.79%, matching real-world investibility!
+          </p>
+        </div>
+      </section>
+
+      <!-- Section 14.4 -->
+      <section id="section-4" class="bg-white rounded-3xl p-6 sm:p-8 border border-amber-200 shadow-sm space-y-5">
+        <div class="flex items-center justify-between">
+          <div class="flex items-center gap-2 text-xs font-bold text-amber-700 uppercase tracking-wider">
+            <span class="w-2 h-2 rounded-full bg-amber-500"></span> Section 14.4 &bull; Super High Exam Yield ⭐
+          </div>
+          <span class="text-xs px-2.5 py-1 rounded-full bg-amber-100 text-amber-800 font-bold">Divisor Mechanics</span>
+        </div>
+        <div>
+          <h2 class="font-display font-bold text-xl sm:text-2xl text-slate-900">Index Maintenance & Divisor Adjustments</h2>
+          <p class="text-sm text-slate-600 mt-1">Ensuring seamless mathematical continuity when corporate actions alter market capitalization.</p>
+        </div>
+
+        <p class="text-sm text-slate-700 leading-relaxed">
+          The index level is calculated by scaling aggregate free-float market capitalization by a scaling constant called the <strong>Index Divisor</strong>:
+        </p>
+
+        <!-- Divisor Equation Card -->
+        <div class="p-4 rounded-2xl bg-blue-50/60 border border-blue-200 text-xs space-y-2">
+          <div class="bg-white p-3 rounded-xl border border-blue-200 font-mono text-blue-950 text-center font-bold text-xs sm:text-sm">
+            Index Level = Aggregate Free-Float Market Capitalization / Index Divisor<br>
+            <span class="text-xs text-blue-700 font-normal mt-1 block">Index Divisor = Aggregate Free-Float Market Capitalization / Index Level</span>
+          </div>
+          <p class="text-slate-600 text-center">
+            The Divisor was originally established at index inception (Base Market Cap / Base Index Value) and remains fixed unless a capital event alters total market cap arbitrarily.
+          </p>
+        </div>
+
+        <div class="space-y-2">
+          <h3 class="font-display font-bold text-sm text-slate-900">Why Must the Divisor Be Adjusted?</h3>
+          <p class="text-xs text-slate-600 leading-relaxed">
+            The index exists solely to capture genuine price movements reflecting investor sentiment and economic reality. When a corporate action (e.g. rights issue or constituent replacement) changes aggregate market cap without any change in investor valuation, leaving the Divisor constant would cause an artificial, non-market jump or drop in the index. The <strong>Divisor is adjusted immediately so that the index level before and after the event remains identical</strong>:
+          </p>
+          <div class="p-2.5 bg-slate-100 rounded-xl font-mono text-center text-xs font-bold text-slate-800">
+            Index Level<sub>Old</sub> = Index Level<sub>New</sub> &implies; New Divisor = New Market Capitalization / Existing Index Level
+          </div>
+        </div>
+
+        <!-- Corporate Action Divisor Matrix -->
+        <div class="space-y-2">
+          <h3 class="font-display font-bold text-xs uppercase tracking-wider text-slate-500">Master Divisor Adjustment Decision Matrix</h3>
+          <div class="overflow-x-auto rounded-2xl border border-slate-200">
+            <table class="w-full text-left text-xs">
+              <thead class="bg-slate-100 text-slate-700 border-b border-slate-200 font-semibold">
+                <tr>
+                  <th class="p-3">Corporate Action</th>
+                  <th class="p-3">Impact on Aggregate M-Cap</th>
+                  <th class="p-3">Divisor Adjustment?</th>
+                  <th class="p-3">Pedagogical Reason</th>
+                </tr>
+              </thead>
+              <tbody class="divide-y divide-slate-200 text-slate-600 bg-white">
+                <tr class="hover:bg-slate-50">
+                  <td class="p-3 font-bold text-slate-900">Rights Issue</td>
+                  <td class="p-3 text-emerald-700 font-semibold">Increases (New capital injected)</td>
+                  <td class="p-3 font-bold text-emerald-700">YES &bull; Increases</td>
+                  <td class="p-3">New shares sold bring fresh cash into firm; market cap expands arbitrarily.</td>
+                </tr>
+                <tr class="hover:bg-slate-50">
+                  <td class="p-3 font-bold text-slate-900">Constituent Replacement</td>
+                  <td class="p-3 text-blue-700 font-semibold">Changes (Incoming &ne; Outgoing)</td>
+                  <td class="p-3 font-bold text-blue-700">YES &bull; Adjusted</td>
+                  <td class="p-3">Replacing Stock X with Stock Y of different free float changes total market cap.</td>
+                </tr>
+                <tr class="hover:bg-slate-50">
+                  <td class="p-3 font-bold text-slate-900">Stock Split (e.g. 2 for 1)</td>
+                  <td class="p-3 text-slate-500 font-semibold">ZERO change</td>
+                  <td class="p-3 font-bold text-rose-600">NO &bull; Unchanged</td>
+                  <td class="p-3">Share price halves, share count doubles. Price &times; Shares remains identical!</td>
+                </tr>
+                <tr class="hover:bg-slate-50">
+                  <td class="p-3 font-bold text-slate-900">Bonus Issue (Stock Dividend)</td>
+                  <td class="p-3 text-slate-500 font-semibold">ZERO change</td>
+                  <td class="p-3 font-bold text-rose-600">NO &bull; Unchanged</td>
+                  <td class="p-3">Price falls proportionally to bonus ratio; total company capitalization unchanged.</td>
+                </tr>
+                <tr class="hover:bg-slate-50">
+                  <td class="p-3 font-bold text-slate-900">Secondary Offering / QIP</td>
+                  <td class="p-3 text-emerald-700 font-semibold">Increases</td>
+                  <td class="p-3 font-bold text-emerald-700">YES &bull; Increases</td>
+                  <td class="p-3">Fresh shares issued to institutional buyers expand free float market cap.</td>
+                </tr>
+                <tr class="hover:bg-slate-50">
+                  <td class="p-3 font-bold text-slate-900">Share Buyback & Cancellation</td>
+                  <td class="p-3 text-rose-700 font-semibold">Decreases</td>
+                  <td class="p-3 font-bold text-rose-700">YES &bull; Decreases</td>
+                  <td class="p-3">Company extinguishes shares; total outstanding float contracts.</td>
+                </tr>
+                <tr class="hover:bg-slate-50">
+                  <td class="p-3 font-bold text-slate-900">Ordinary Cash Dividend</td>
+                  <td class="p-3 text-slate-500 font-semibold">Zero (in Price Return Index)</td>
+                  <td class="p-3 font-bold text-rose-600">NO &bull; Unchanged</td>
+                  <td class="p-3">Price Return Index (PRI) ignores cash dividends; TRI incorporates reinvestment.</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <!-- Worked Numerical Example for Divisor Adjustment -->
+        <div class="p-4 rounded-2xl bg-slate-50 border border-slate-200 space-y-3 text-xs">
+          <span class="font-bold text-slate-900 text-sm">Worked Numerical Example: Stock Replacement Divisor Recalibration</span>
+          <p class="text-slate-600">
+            Suppose an index stands at <strong>20,000.00</strong> with an aggregate Free-Float Market Cap of <strong>₹20,00,000 Crore</strong>.
+          </p>
+          <div class="bg-white p-3 rounded-xl border border-slate-200 font-mono space-y-1 text-slate-800">
+            <p>&bull; <strong>Initial Divisor</strong> = ₹20,00,000 Cr / 20,000 = <strong>100.00</strong></p>
+            <p>&bull; <strong>Index Rebalancing Event:</strong> Stock X (Free-Float M-Cap = ₹30,000 Cr) is removed, and Stock Y (Free-Float M-Cap = ₹80,000 Cr) is inducted.</p>
+            <p>&bull; <strong>New Aggregate Free-Float M-Cap</strong> = ₹20,00,000 - ₹30,000 + ₹80,000 = <strong>₹20,50,000 Crore</strong></p>
+            <p>&bull; <strong>New Divisor</strong> = New M-Cap / Existing Index Level = ₹20,50,000 / 20,000 = <strong>102.50</strong></p>
+            <p>&bull; <strong>Verification:</strong> New Index Level = ₹20,50,000 / 102.50 = <strong>20,000.00</strong> (Seamless continuity preserved!)</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Section 14.5 -->
+      <section id="section-5" class="bg-white rounded-3xl p-6 sm:p-8 border border-amber-200 shadow-sm space-y-5">
+        <div class="flex items-center justify-between">
+          <div class="flex items-center gap-2 text-xs font-bold text-amber-700 uppercase tracking-wider">
+            <span class="w-2 h-2 rounded-full bg-amber-500"></span> Section 14.5 &bull; Super High Exam Yield ⭐
+          </div>
+          <span class="text-xs px-2.5 py-1 rounded-full bg-amber-100 text-amber-800 font-bold">Liquidity Metric</span>
+        </div>
+        <div>
+          <h2 class="font-display font-bold text-xl sm:text-2xl text-slate-900">Impact Cost: Practical Measure of Market Liquidity</h2>
+          <p class="text-sm text-slate-600 mt-1">Quantifying institutional order execution slippage against the pre-trade mid-quote price.</p>
+        </div>
+
+        <p class="text-sm text-slate-700 leading-relaxed">
+          While the simple <strong>Bid-Ask Spread</strong> indicates the price gap for the single best bid and ask, it fails to measure liquidity for institutional orders (e.g. ₹50 Lakhs or 10,000 shares) that consume multiple price tiers down the order book. <strong>Impact Cost</strong> measures the actual percentage slippage incurred relative to the ideal pre-trade price (mid-point of best bid and best ask).
+        </p>
+
+        <!-- Impact Cost Formulas -->
+        <div class="p-4 rounded-2xl bg-blue-50/60 border border-blue-200 space-y-2 text-xs">
+          <span class="font-bold text-blue-950 text-sm">Standard Impact Cost Formulations:</span>
+          <div class="bg-white p-3 rounded-xl border border-blue-200 font-mono text-blue-900 space-y-1.5 leading-relaxed">
+            <p><strong>Ideal Price (Mid-Quote)</strong> = (Best Bid Price + Best Ask Price) / 2</p>
+            <p><strong>Actual Execution Price</strong> = Weighted Average Price across executed limit order tiers</p>
+            <p><strong>Buy Impact Cost (%)</strong> = [ (Actual Buy Price - Ideal Price) / Ideal Price ] &times; 100</p>
+            <p><strong>Sell Impact Cost (%)</strong> = [ (Ideal Price - Actual Sell Price) / Ideal Price ] &times; 100</p>
+          </div>
+          <p class="text-slate-600 mt-1">
+            <strong>Key Axiom:</strong> Lower impact cost represents deeper liquidity and tighter order books. Impact cost is always positive for executed market orders.
+          </p>
+        </div>
+
+        <!-- Comprehensive Numerical Order Book Example -->
+        <div class="p-5 rounded-2xl bg-slate-50 border border-slate-200 space-y-4 text-xs">
+          <span class="font-bold text-slate-900 text-sm">Full 5-Tier Order Book Snapshot (Stock XYZ):</span>
+          
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <!-- Bid Side -->
+            <div class="overflow-x-auto rounded-xl border border-emerald-200 bg-white">
+              <table class="w-full text-left text-xs">
+                <thead class="bg-emerald-50 text-emerald-950 font-semibold">
+                  <tr>
+                    <th class="p-2">Bid Qty</th>
+                    <th class="p-2">Bid Price</th>
+                    <th class="p-2">Cumul. Qty</th>
+                  </tr>
+                </thead>
+                <tbody class="divide-y divide-emerald-100 font-mono text-emerald-900">
+                  <tr><td class="p-2">1,000</td><td class="p-2 font-bold">₹199.00</td><td class="p-2">1,000 (Best Bid)</td></tr>
+                  <tr><td class="p-2">1,500</td><td class="p-2">₹198.00</td><td class="p-2">2,500</td></tr>
+                  <tr><td class="p-2">2,000</td><td class="p-2">₹197.00</td><td class="p-2">4,500</td></tr>
+                  <tr><td class="p-2">3,000</td><td class="p-2">₹195.00</td><td class="p-2">7,500</td></tr>
+                </tbody>
+              </table>
+            </div>
+
+            <!-- Ask Side -->
+            <div class="overflow-x-auto rounded-xl border border-rose-200 bg-white">
+              <table class="w-full text-left text-xs">
+                <thead class="bg-rose-50 text-rose-950 font-semibold">
+                  <tr>
+                    <th class="p-2">Ask Price</th>
+                    <th class="p-2">Ask Qty</th>
+                    <th class="p-2">Cumul. Qty</th>
+                  </tr>
+                </thead>
+                <tbody class="divide-y divide-rose-100 font-mono text-rose-900">
+                  <tr><td class="p-2 font-bold">₹201.00</td><td class="p-2">1,000</td><td class="p-2">1,000 (Best Ask)</td></tr>
+                  <tr><td class="p-2">₹202.00</td><td class="p-2">1,500</td><td class="p-2">2,500</td></tr>
+                  <tr><td class="p-2">₹203.00</td><td class="p-2">2,000</td><td class="p-2">4,500</td></tr>
+                  <tr><td class="p-2">₹205.00</td><td class="p-2">3,000</td><td class="p-2">7,500</td></tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+
+          <div class="p-3 rounded-xl bg-white border border-slate-200 font-mono text-slate-800 space-y-1.5 leading-relaxed">
+            <p><strong>Step 1: Calculate Ideal Pre-Trade Price:</strong></p>
+            <p class="text-blue-700 font-bold">&bull; Ideal Price = (Best Bid + Best Ask) / 2 = (₹199.00 + ₹201.00) / 2 = <strong>₹200.00</strong></p>
+
+            <div class="pt-2 border-t border-slate-100">
+              <p><strong>Case A: Buy Order of 2,000 Shares:</strong></p>
+              <p>&bull; Buys 1,000 shares @ ₹201.00 (from 1st Ask layer) = ₹2,01,000</p>
+              <p>&bull; Buys remaining 1,000 shares @ ₹202.00 (from 2nd Ask layer) = ₹2,02,000</p>
+              <p>&bull; Total Cost = ₹2,01,000 + ₹2,02,000 = ₹4,03,000</p>
+              <p>&bull; Actual Buy Price = ₹4,03,000 / 2,000 = <strong>₹201.50</strong></p>
+              <p class="text-emerald-700 font-bold">&bull; Buy Impact Cost = [ (201.50 - 200.00) / 200.00 ] &times; 100 = <strong>+0.75%</strong></p>
+            </div>
+
+            <div class="pt-2 border-t border-slate-100">
+              <p><strong>Case B: Sell Order of 2,000 Shares:</strong></p>
+              <p>&bull; Sells 1,000 shares @ ₹199.00 (to 1st Bid layer) = ₹1,99,000</p>
+              <p>&bull; Sells remaining 1,000 shares @ ₹198.00 (to 2nd Bid layer) = ₹1,98,000</p>
+              <p>&bull; Total Proceeds = ₹1,99,000 + ₹1,98,000 = ₹3,97,000</p>
+              <p>&bull; Actual Sell Price = ₹3,97,000 / 2,000 = <strong>₹198.50</strong></p>
+              <p class="text-rose-700 font-bold">&bull; Sell Impact Cost = [ (200.00 - 198.50) / 200.00 ] &times; 100 = <strong>+0.75%</strong></p>
+            </div>
+          </div>
+
+          <div class="p-3 bg-amber-50 rounded-xl border border-amber-200 text-amber-900 font-medium leading-relaxed">
+            <strong>Key Takeaways on Impact Cost:</strong>
+            <ul class="list-disc pl-4 mt-1 space-y-0.5">
+              <li>Impact cost increases as order size increases (a 10,000 share order cuts deeper into the book than a 2,000 share order).</li>
+              <li>Impact cost varies continuously throughout the trading day as quotes enter and cancel.</li>
+              <li>SEBI mandates impact cost evaluation over a 6-month trailing period for index eligibility.</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <!-- Section 14.6 -->
+      <section id="section-6" class="bg-white rounded-3xl p-6 sm:p-8 border border-amber-200 shadow-sm space-y-5">
+        <div class="flex items-center justify-between">
+          <div class="flex items-center gap-2 text-xs font-bold text-amber-700 uppercase tracking-wider">
+            <span class="w-2 h-2 rounded-full bg-amber-500"></span> Section 14.6 &bull; Super High Exam Yield ⭐
+          </div>
+          <span class="text-xs px-2.5 py-1 rounded-full bg-amber-100 text-amber-800 font-bold">Regulatory Framework</span>
+        </div>
+        <div>
+          <h2 class="font-display font-bold text-xl sm:text-2xl text-slate-900">SEBI Eligibility Norms for Derivatives on Equity Indices</h2>
+          <p class="text-sm text-slate-600 mt-1">Concentration caps, constituent liquidity criteria, and governance standards for index F&O trading.</p>
+        </div>
+
+        <p class="text-sm text-slate-700 leading-relaxed">
+          To prevent market cornering, excessive single-stock dominance, and price manipulation in derivative settlements, SEBI prescribes strict eligibility criteria for equity indices permitted for futures and options trading:
+        </p>
+
+        <!-- SEBI 3 Pillars Cards -->
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-4 text-xs">
+          <div class="p-4 rounded-2xl bg-slate-50 border border-slate-200 space-y-2">
+            <div class="flex items-center gap-2 font-bold text-slate-900 text-sm">
+              <i data-lucide="layers" class="w-4 h-4 text-blue-600"></i>
+              <span>1. Constituent Count</span>
+            </div>
+            <p class="text-slate-600">
+              The index must contain a minimum of <strong>10 constituent stocks</strong>. Sectoral or thematic indices with fewer than 10 stocks cannot launch derivatives.
+            </p>
+          </div>
+
+          <div class="p-4 rounded-2xl bg-amber-50/70 border border-amber-200 space-y-2">
+            <div class="flex items-center gap-2 font-bold text-amber-950 text-sm">
+              <i data-lucide="pie-chart" class="w-4 h-4 text-amber-600"></i>
+              <span>2. Diversification Caps</span>
+            </div>
+            <ul class="list-disc pl-4 space-y-1 text-slate-700">
+              <li><strong>Single Stock Cap:</strong> No individual stock weight can exceed <strong>33%</strong>.</li>
+              <li><strong>Top 3 Stocks Cap:</strong> Cumulative weight of top 3 stocks cannot exceed <strong>62%</strong>.</li>
+            </ul>
+          </div>
+
+          <div class="p-4 rounded-2xl bg-emerald-50/70 border border-emerald-200 space-y-2">
+            <div class="flex items-center gap-2 font-bold text-emerald-950 text-sm">
+              <i data-lucide="droplet" class="w-4 h-4 text-emerald-600"></i>
+              <span>3. Constituent Liquidity</span>
+            </div>
+            <ul class="list-disc pl-4 space-y-1 text-slate-700">
+              <li>Traded on at least <strong>80% of trading days</strong> over prior 6 months.</li>
+              <li>Average impact cost &le; <strong>1.0% for order size of ₹50 Lakhs</strong> over prior 6 months.</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Continuous Surveillance & Governance -->
+        <div class="p-4 rounded-2xl bg-slate-50 border border-slate-200 space-y-2 text-xs">
+          <span class="font-bold text-slate-900 text-sm">Index Governance & Surveillance Protocols</span>
+          <p class="text-slate-600 leading-relaxed">
+            &bull; <strong>Independent Administration:</strong> The index must be maintained by an independent professional index provider with public rules and established index committees.<br>
+            &bull; <strong>Rebalancing Frequency:</strong> Evaluated periodically (quarterly or semi-annually).<br>
+            &bull; <strong>Surveillance & Breach Cure Period:</strong> If constituent price moves cause a stock's weight to exceed 33% or top 3 stocks to exceed 62%, the index provider enforces an immediate re-capping adjustment at the subsequent scheduled rebalance to maintain derivative eligibility.
+          </p>
+        </div>
+      </section>
+
+      <!-- Section 14.7 -->
+      <section id="section-7" class="bg-white rounded-3xl p-6 sm:p-8 border border-slate-200/90 shadow-sm space-y-5">
+        <div class="flex items-center justify-between">
+          <div class="flex items-center gap-2 text-xs font-bold text-slate-500 uppercase tracking-wider">
+            <span class="w-2 h-2 rounded-full bg-slate-400"></span> Section 14.7 &bull; Regulatory Mandate
+          </div>
+          <span class="text-xs px-2.5 py-1 rounded-full bg-slate-100 text-slate-600 font-semibold">Benchmarking Standards</span>
+        </div>
+        <div>
+          <h2 class="font-display font-bold text-xl sm:text-2xl text-slate-900">Total Return Index (TRI) vs Price Return Index (PRI)</h2>
+          <p class="text-sm text-slate-600 mt-1">SEBI's mandatory benchmarking transition for Indian Mutual Funds.</p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4 text-xs">
+          <div class="p-4 rounded-2xl bg-slate-50 border border-slate-200 space-y-2">
+            <span class="font-bold text-slate-900 text-sm">Price Return Index (PRI)</span>
+            <p class="text-slate-600 leading-relaxed">
+              Measures <strong>only capital gains/losses</strong> arising from changes in constituent share prices. Cash dividends declared by constituents are totally omitted from the index calculation.
+            </p>
+            <p class="text-rose-700 font-medium">
+              &bull; Flaw: Understates true total equity return by 1.2% to 1.8% per annum (the average dividend yield of Indian equities).
+            </p>
+          </div>
+
+          <div class="p-4 rounded-2xl bg-emerald-50/70 border border-emerald-200 space-y-2">
+            <span class="font-bold text-emerald-950 text-sm">Total Return Index (TRI)</span>
+            <p class="text-slate-700 leading-relaxed">
+              Measures capital price appreciation <strong>PLUS reinvestment of gross cash dividends</strong> paid by constituent companies on their ex-dividend dates into the index basket.
+            </p>
+            <p class="text-emerald-800 font-medium">
+              &bull; Gold Standard: Accurately reflects the total wealth generated for a buy-and-hold index investor.
+            </p>
+          </div>
+        </div>
+
+        <div class="p-4 rounded-2xl bg-blue-50/60 border border-blue-200 text-xs text-slate-700 space-y-1.5">
+          <div class="font-bold text-blue-950 text-sm">SEBI Mandate (Effective February 1, 2018):</div>
+          <p>
+            SEBI mandated that <strong>all Indian Mutual Funds must benchmark their scheme performance against the Total Return Index (TRI)</strong> variant rather than the Price Return Index (PRI).
+          </p>
+          <p class="text-slate-600">
+            <em>Rationale:</em> Prior to 2018, mutual fund portfolios (which naturally collect and reinvest dividends) benchmarked against PRI, artificially overstating their generated "alpha" by ~1.5% annually. Benchmarking against TRI provides honest, apples-to-apples transparency to unitholders.
+          </p>
+        </div>
+      </section>
+
+      <!-- Section 14.8 Interactive Quiz -->
+      <section id="interactive-quiz" class="bg-slate-900 text-white rounded-3xl p-6 sm:p-8 border border-slate-800 shadow-xl space-y-6">
+        <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 border-b border-slate-800 pb-5">
+          <div>
+            <div class="flex items-center gap-2 text-xs font-bold text-emerald-400 uppercase tracking-wider mb-1">
+              <i data-lucide="check-circle" class="w-4 h-4"></i> Interactive Exam Assessment
+            </div>
+            <h3 class="font-display font-bold text-xl sm:text-2xl text-white">Chapter 14 Practice Quiz</h3>
+            <p class="text-xs text-slate-400 mt-1">12 Exam-standard MCQs covering index methodologies, IWF, Divisor adjustments, Impact Cost calculations, and SEBI derivative caps.</p>
+          </div>
+          <div class="flex items-center gap-3">
+            <div class="text-right">
+              <span class="text-xs text-slate-400">Progress</span>
+              <div class="text-sm font-bold text-emerald-400"><span id="answered-count">0</span> / 12</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Questions Container -->
+        <div id="quiz-container" class="space-y-6"></div>
+
+        <!-- Action Bar -->
+        <div class="pt-4 border-t border-slate-800 flex flex-col sm:flex-row items-center justify-between gap-4">
+          <button id="submit-quiz-btn" onclick="submitQuiz()" class="w-full sm:w-auto px-6 py-3 rounded-xl bg-emerald-600 hover:bg-emerald-500 font-bold text-sm shadow-lg shadow-emerald-600/30 transition-all flex items-center justify-center gap-2">
+            <span>Submit Quiz & View Results</span>
+            <i data-lucide="arrow-right" class="w-4 h-4"></i>
+          </button>
+          <button id="reset-quiz-btn" onclick="resetQuiz()" class="hidden w-full sm:w-auto px-6 py-3 rounded-xl bg-slate-800 hover:bg-slate-700 text-slate-300 font-bold text-sm transition-all flex items-center justify-center gap-2">
+            <i data-lucide="rotate-ccw" class="w-4 h-4"></i>
+            <span>Retake Quiz</span>
+          </button>
+        </div>
+
+        <!-- Quiz Results -->
+        <div id="quiz-results" class="hidden p-6 rounded-2xl bg-slate-800/80 border border-slate-700 space-y-4">
+          <div class="flex items-center justify-between">
+            <h4 class="font-display font-bold text-lg text-white">Quiz Score Summary</h4>
+            <span id="result-status-badge" class="px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider"></span>
+          </div>
+          <div class="flex items-baseline gap-3">
+            <span id="score-display" class="font-display font-extrabold text-4xl text-emerald-400"></span>
+            <span id="percentage-display" class="text-sm text-slate-400 font-medium"></span>
+          </div>
+          <p id="result-summary-text" class="text-xs sm:text-sm text-slate-300"></p>
+        </div>
+      </section>
+
+      <!-- Navigation Footer -->
+      <footer class="pt-6 border-t border-slate-200 flex items-center justify-between">
+        <a href="module2-ch13.html" class="flex items-center gap-2 px-4 py-2.5 rounded-xl border border-slate-200 bg-white hover:bg-slate-50 text-slate-700 font-medium text-xs transition-colors">
+          <i data-lucide="arrow-left" class="w-4 h-4"></i>
+          <span>Prev: Chapter 13 (Derivatives Basics)</span>
+        </a>
+        <a href="module2-ch15.html" class="flex items-center gap-2 px-4 py-2.5 rounded-xl bg-emerald-600 hover:bg-emerald-700 text-white font-semibold text-xs shadow-sm transition-colors">
+          <span>Next: Chapter 15 (Forwards & Futures)</span>
+          <i data-lucide="arrow-right" class="w-4 h-4"></i>
+        </a>
+      </footer>
+
+    </div>
+  </div>
+
+  <script>
+    const questionsData = [
+      {
+        id: 1,
+        question: "Which index construction methodology is employed by India's premier benchmark equity indices, Nifty 50 and BSE Sensex?",
+        options: [
+          { key: "a", text: "Price-Weighted Index Methodology" },
+          { key: "b", text: "Equal-Weighted Index Methodology" },
+          { key: "c", text: "Free-Float Market Capitalization Methodology" },
+          { key: "d", text: "Dividend Yield Weighted Methodology" }
+        ],
+        correct: "c",
+        explanation: "Both Nifty 50 and BSE Sensex are constructed using the Free-Float Market Capitalization methodology, weighting stocks according to readily tradable market value (Price × Outstanding Shares × IWF) while excluding non-tradable promoter, government, and locked shares."
+      },
+      {
+        id: 2,
+        question: "What does the Investible Weight Factor (IWF) signify in free-float index calculation?",
+        options: [
+          { key: "a", text: "The debt-to-equity ratio of constituent firms" },
+          { key: "b", text: "The proportion of total shares outstanding that are freely accessible for open-market public trading" },
+          { key: "c", text: "The foreign institutional ownership ceiling mandated by RBI" },
+          { key: "d", text: "The percentage of earnings distributed as cash dividends" }
+        ],
+        correct: "b",
+        explanation: "IWF is a decimal factor (0 to 1) representing the fraction of total shares outstanding that are not locked in by promoters, government bodies, strategic corporate cross-holdings, or employee welfare trusts, reflecting true investibility."
+      },
+      {
+        id: 3,
+        question: "Why is the Index Divisor recalibrated when corporate events such as rights issues or constituent stock replacements take place?",
+        options: [
+          { key: "a", text: "To maximize the trading volume on the derivative segment" },
+          { key: "b", text: "To ensure index continuity and prevent artificial price jumps/drops unrelated to market sentiment" },
+          { key: "c", text: "To increase the dividend yield of the index" },
+          { key: "d", text: "To automatically reset the base year of the index" }
+        ],
+        correct: "b",
+        explanation: "When a corporate action alters aggregate market cap without any shift in market valuation, the Divisor is adjusted so that the index level before and after the event remains identical, ensuring seamless mathematical continuity."
+      },
+      {
+        id: 4,
+        question: "In an electronic limit order book, the Best Bid is ₹200.00 and the Best Ask is ₹202.00. What is the pre-trade Ideal Price?",
+        options: [
+          { key: "a", text: "₹200.00" },
+          { key: "b", text: "₹201.00" },
+          { key: "c", text: "₹202.00" },
+          { key: "d", text: "₹201.50" }
+        ],
+        correct: "b",
+        explanation: "The Ideal Price is the arithmetic mean of the prevailing best bid and best ask quotes: Ideal Price = (Best Bid + Best Ask) / 2 = (₹200.00 + ₹202.00) / 2 = ₹201.00."
+      },
+      {
+        id: 5,
+        question: "If the Ideal Price of a stock is ₹200.00 and an investor executes a market buy order for 10,000 shares at an average execution price of ₹202.00, what is the Impact Cost?",
+        options: [
+          { key: "a", text: "0.50%" },
+          { key: "b", text: "1.00%" },
+          { key: "c", text: "2.00%" },
+          { key: "d", text: "1.50%" }
+        ],
+        correct: "b",
+        explanation: "Impact Cost (%) = [ (Actual Execution Price - Ideal Price) / Ideal Price ] × 100 = [ (₹202.00 - ₹200.00) / ₹200.00 ] × 100 = (2 / 200) × 100 = 1.00%."
+      },
+      {
+        id: 6,
+        question: "What does a consistently lower impact cost for an underlying equity stock signify?",
+        options: [
+          { key: "a", text: "The stock suffers from extreme price volatility" },
+          { key: "b", text: "The stock possesses superior market depth and high liquidity with minimal execution slippage" },
+          { key: "c", text: "The company pays zero cash dividends to public shareholders" },
+          { key: "d", text: "The stock has a very low free-float market capitalization" }
+        ],
+        correct: "b",
+        explanation: "A low impact cost indicates deep order books where large block transactions can be absorbed with minimal adverse price movement (slippage) relative to the mid-quote price."
+      },
+      {
+        id: 7,
+        question: "Under SEBI eligibility norms for indices in derivative trading, what is the maximum permissible weight for any single constituent stock?",
+        options: [
+          { key: "a", text: "20%" },
+          { key: "b", text: "25%" },
+          { key: "c", text: "33%" },
+          { key: "d", text: "50%" }
+        ],
+        correct: "c",
+        explanation: "Under SEBI guidelines, no single constituent stock in an index introduced for derivative trading can have an index weight exceeding 33% to prevent single-stock domination."
+      },
+      {
+        id: 8,
+        question: "Under SEBI guidelines for derivative indices, what is the ceiling on the cumulative weight of the top 3 constituent stocks?",
+        options: [
+          { key: "a", text: "50%" },
+          { key: "b", text: "60%" },
+          { key: "c", text: "62%" },
+          { key: "d", text: "75%" }
+        ],
+        correct: "c",
+        explanation: "SEBI caps the cumulative weight of the top 3 constituent stocks at a maximum of 62% in the index to guarantee healthy portfolio diversification."
+      },
+      {
+        id: 9,
+        question: "What is the minimum number of constituent stocks required for an equity index to be eligible for derivative trading under SEBI norms?",
+        options: [
+          { key: "a", text: "5 stocks" },
+          { key: "b", text: "10 stocks" },
+          { key: "c", text: "15 stocks" },
+          { key: "d", text: "30 stocks" }
+        ],
+        correct: "b",
+        explanation: "SEBI mandates that any index approved for exchange-traded derivatives must contain a minimum of 10 constituent stocks."
+      },
+      {
+        id: 10,
+        question: "Which of the following describes the inherent behavioral tilt of an Equal-Weighted Index (such as Nifty 50 Equal Weight)?",
+        options: [
+          { key: "a", text: "It naturally overweights mega-cap momentum stocks" },
+          { key: "b", text: "It possesses a contrarian / value tilt because periodic rebalancing forces selling recent winners and buying laggards" },
+          { key: "c", text: "It never requires rebalancing because all stocks stay at equal weight forever" },
+          { key: "d", text: "It is weighted based on nominal share prices" }
+        ],
+        correct: "b",
+        explanation: "In an equal-weighted index, stocks that rally see their weight rise above the equal target (e.g. 2%), while decliners drop below it. Rebalancing forces trimming winning stocks and buying underperforming stocks, imparting an inherent value/contrarian tilt with higher turnover."
+      },
+      {
+        id: 11,
+        question: "Constituent stocks of a non-benchmark index must trade on at least what percentage of trading days over the preceding 6 months to qualify for derivatives?",
+        options: [
+          { key: "a", text: "50% of trading days" },
+          { key: "b", text: "66% of trading days" },
+          { key: "c", text: "80% of trading days" },
+          { key: "d", text: "95% of trading days" }
+        ],
+        correct: "c",
+        explanation: "Constituent stocks of non-benchmark indices must trade on at least 80% of trading days during the prior 6-month evaluation period and maintain an impact cost ≤ 1.0% for ₹50 Lakhs order size."
+      },
+      {
+        id: 12,
+        question: "In a Price-Weighted Index like the Dow Jones Industrial Average, what single factor determines which stock has the largest influence on index movement?",
+        options: [
+          { key: "a", text: "Highest free-float market capitalization" },
+          { key: "b", text: "Highest absolute nominal share price per share" },
+          { key: "c", text: "Highest trading volume in shares" },
+          { key: "d", text: "Highest net quarterly profit" }
+        ],
+        correct: "b",
+        explanation: "In a price-weighted index, the stock with the highest nominal share price receives the highest weight. Company market cap and total shares are completely ignored, meaning a stock split arbitrarily diminishes a company's weight in the index."
+      }
+    ];
+
+    let userAnswers = {};
+
+    function renderQuiz() {
+      const container = document.getElementById("quiz-container");
+      container.innerHTML = "";
+      questionsData.forEach((q, idx) => {
+        const qDiv = document.createElement("div");
+        qDiv.className = "p-5 rounded-2xl bg-white/5 border border-white/10 space-y-3";
+        
+        let optionsHtml = "";
+        q.options.forEach(opt => {
+          optionsHtml += `
+            <label id="label-${q.id}-${opt.key}" onclick="selectOption(${q.id}, '${opt.key}')" class="flex items-center gap-3 p-3 rounded-xl bg-white/5 hover:bg-white/10 border border-white/5 cursor-pointer text-xs sm:text-sm transition-all">
+              <input type="radio" name="q-${q.id}" value="${opt.key}" class="w-4 h-4 text-emerald-500 bg-slate-800 border-slate-600 focus:ring-emerald-500" ${userAnswers[q.id] === opt.key ? 'checked' : ''} />
+              <div class="w-6 h-6 rounded-full border border-slate-500 flex items-center justify-center font-bold text-xs shrink-0">${opt.key.toUpperCase()}</div>
+              <span class="text-slate-300">${opt.text}</span>
+            </label>
+          `;
+        });
+
+        qDiv.innerHTML = `
+          <div class="flex items-center justify-between">
+            <span class="text-xs font-bold text-emerald-400">Question ${idx + 1} of ${questionsData.length}</span>
+            <span id="badge-${q.id}" class="text-xs px-2 py-0.5 rounded-full bg-slate-800 text-slate-400">Unanswered</span>
+          </div>
+          <h4 class="font-display font-semibold text-sm sm:text-base text-white">${q.question}</h4>
+          <div class="space-y-2 mt-3">${optionsHtml}</div>
+          <div id="explanation-${q.id}" class="hidden p-4 rounded-xl text-xs sm:text-sm mt-3 space-y-1"></div>
+        `;
+        container.appendChild(qDiv);
+      });
+      lucide.createIcons();
+    }
+
+    let isSubmitted = false;
+
+    function selectOption(qId, key) {
+      if (isSubmitted) return;
+      userAnswers[qId] = key;
+      document.getElementById("answered-count").innerText = Object.keys(userAnswers).length;
+      
+      const badge = document.getElementById(`badge-${qId}`);
+      if (badge) {
+        badge.innerText = "Answered";
+        badge.className = "text-xs px-2 py-0.5 rounded-full bg-emerald-500/20 text-emerald-300 font-medium";
+      }
+
+      const q = questionsData.find(item => item.id === qId);
+      q.options.forEach(opt => {
+        const lbl = document.getElementById(`label-${qId}-${opt.key}`);
+        const radio = lbl.querySelector('input[type="radio"]');
+        if (opt.key === key) {
+          lbl.className = "flex items-center gap-3 p-3 rounded-xl bg-emerald-600/30 border border-emerald-400/50 cursor-pointer text-xs sm:text-sm transition-all";
+          if (radio) radio.checked = true;
+        } else {
+          lbl.className = "flex items-center gap-3 p-3 rounded-xl bg-white/5 hover:bg-white/10 border border-white/5 cursor-pointer text-xs sm:text-sm transition-all";
+          if (radio) radio.checked = false;
+        }
+      });
+    }
+
+    function submitQuiz() {
+      isSubmitted = true;
+      let score = 0;
+      questionsData.forEach(q => {
+        const selected = userAnswers[q.id];
+        const isCorrect = selected === q.correct;
+        if (isCorrect) score++;
+
+        const explanationDiv = document.getElementById(`explanation-${q.id}`);
+        explanationDiv.classList.remove("hidden");
+
+        if (isCorrect) {
+          explanationDiv.className = "p-4 rounded-xl text-xs sm:text-sm mt-3 bg-emerald-950/60 border border-emerald-600 text-emerald-200";
+          explanationDiv.innerHTML = `<div class="font-bold text-emerald-400 flex items-center gap-1.5 mb-1"><i data-lucide="check" class="w-4 h-4"></i> Correct!</div><p>${q.explanation}</p>`;
+        } else {
+          const userChoiceText = selected ? `You chose: Option ${selected.toUpperCase()}` : `Not Answered`;
+          explanationDiv.className = "p-4 rounded-xl text-xs sm:text-sm mt-3 bg-rose-950/60 border border-rose-600 text-rose-200";
+          explanationDiv.innerHTML = `<div class="font-bold text-rose-400 flex items-center gap-1.5 mb-1"><i data-lucide="x" class="w-4 h-4"></i> Incorrect (${userChoiceText} &bull; Correct Answer: Option ${q.correct.toUpperCase()})</div><p>${q.explanation}</p>`;
+        }
+      });
+
+      const percentage = Math.round((score / questionsData.length) * 100);
+      const passed = percentage >= 60;
+      
+      const resultsDiv = document.getElementById("quiz-results");
+      resultsDiv.classList.remove("hidden");
+
+      const statusBadge = document.getElementById("result-status-badge");
+      statusBadge.innerText = passed ? "Status: Passed (60%+ Benchmark)" : "Status: Needs Revision";
+      statusBadge.className = passed ? "px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider bg-emerald-500 text-emerald-950" : "px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider bg-amber-500 text-amber-950";
+
+      document.getElementById("score-display").innerText = `${score} / ${questionsData.length}`;
+      document.getElementById("percentage-display").innerText = `${percentage}% Score (Passing criteria: 60%)`;
+
+      document.getElementById("result-summary-text").innerText = passed
+        ? `Superb! You scored ${percentage}%, demonstrating comprehensive mastery over index construction, free-float calculation, divisor adjustments, impact cost mechanics, and SEBI derivative norms.`
+        : `You scored ${percentage}%. Review the worked numerical examples for Impact Cost, Divisor Adjustment, and SEBI concentration limits (33% single stock, 62% top 3).`;
+
+      document.getElementById("submit-quiz-btn").classList.add("hidden");
+      document.getElementById("reset-quiz-btn").classList.remove("hidden");
+
+      resultsDiv.scrollIntoView({ behavior: 'smooth' });
+      lucide.createIcons();
+    }
+
+    function resetQuiz() {
+      isSubmitted = false;
+      userAnswers = {};
+      document.getElementById("answered-count").innerText = "0";
+      document.getElementById("quiz-results").classList.add("hidden");
+      document.getElementById("submit-quiz-btn").classList.remove("hidden");
+      document.getElementById("reset-quiz-btn").classList.add("hidden");
+      renderQuiz();
+      document.getElementById("interactive-quiz").scrollIntoView({ behavior: 'smooth' });
+    }
+
+    renderQuiz();
+    lucide.createIcons();
+  </script>
+</body>
+</html>

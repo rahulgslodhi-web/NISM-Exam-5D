@@ -1,0 +1,1332 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Chapter 17: Strategies using Equity Futures & Options | NISM Series V-D Notes</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+  <script src="https://unpkg.com/lucide@latest"></script>
+
+  <!-- KaTeX for formula rendering -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.min.css">
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.min.js"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/contrib/auto-render.min.js" onload="renderMathInElement(document.body);"></script>
+
+  <!-- Global Module & Chapter Navigation Sidebar -->
+    <!-- Modern Documentation Design System & Zoom Engine -->
+  <link rel="stylesheet" href="modern-docs.css">
+  <script defer src="nav-sidebar.js"></script>
+
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+            display: ['"Space Grotesk"', 'sans-serif']
+          }
+        }
+      }
+    }
+  </script>
+</head>
+<body class="bg-slate-50 text-slate-900 min-h-screen flex flex-col selection:bg-blue-500 selection:text-white">
+
+  <!-- Header -->
+  <header class="sticky top-0 z-50 bg-white/90 backdrop-blur-md border-b border-slate-200">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
+      <div class="flex items-center gap-3">
+        <a href="module2.html" class="flex items-center gap-2 text-slate-500 hover:text-slate-900 transition-colors">
+          <div class="w-9 h-9 rounded-xl bg-slate-100 hover:bg-slate-200 flex items-center justify-center text-slate-700 transition-colors">
+            <i data-lucide="arrow-left" class="w-4 h-4"></i>
+          </div>
+        </a>
+        <div>
+          <div class="flex items-center gap-2">
+            <span class="text-xs font-bold uppercase tracking-wider text-emerald-600 bg-emerald-50 px-2 py-0.5 rounded">Module 2</span>
+            <span class="text-xs text-slate-400 font-medium">Chapter 17 of 22</span>
+          </div>
+          <h1 class="font-display font-bold text-base sm:text-lg text-slate-900 leading-tight">Strategies using Equity Futures & Options</h1>
+        </div>
+      </div>
+
+      <div class="flex items-center gap-3">
+        <span class="hidden sm:inline-flex items-center gap-1 px-3 py-1 rounded-full text-xs font-bold bg-amber-50 text-amber-700 border border-amber-200">
+          <i data-lucide="award" class="w-3.5 h-3.5"></i>
+          Weightage: 9 Marks ⭐
+        </span>
+        <a href="#interactive-quiz" class="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-lg text-xs font-bold bg-emerald-600 hover:bg-emerald-700 text-white shadow-sm transition-all">
+          <i data-lucide="help-circle" class="w-3.5 h-3.5"></i>
+          <span>Chapter Quiz (12 MCQs)</span>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Content Grid -->
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 grid grid-cols-1 lg:grid-cols-12 gap-8 flex-grow">
+    
+    <!-- Sidebar Navigation -->
+    <aside class="hidden lg:block lg:col-span-3">
+      <div class="sticky top-24 space-y-4">
+        <!-- Chapter Switcher (3 Module Dropdowns) -->
+        <div id="sidebar-chapter-switcher"></div>
+
+        <div class="bg-white p-5 rounded-2xl border border-slate-200 shadow-sm">
+          <h2 class="text-xs font-bold text-slate-400 uppercase tracking-wider mb-3">Chapter Navigation</h2>
+          <nav class="space-y-1 text-xs">
+            <a href="#section-1" class="block px-2.5 py-1.5 rounded-lg text-amber-700 font-semibold bg-amber-50/70 hover:bg-amber-100">17.1 Portfolio Beta Hedging & Arbitrage ⭐</a>
+            <a href="#section-2" class="block px-2.5 py-1.5 rounded-lg text-slate-600 hover:bg-slate-100 hover:text-emerald-600">17.2 Covered Call & Protective Put</a>
+            <a href="#section-3" class="block px-2.5 py-1.5 rounded-lg text-amber-700 font-semibold bg-amber-50/70 hover:bg-amber-100">17.3 Vertical Spreads (Bull & Bear) ⭐</a>
+            <a href="#section-4" class="block px-2.5 py-1.5 rounded-lg text-amber-700 font-semibold bg-amber-50/70 hover:bg-amber-100">17.4 Straddles, Strangles & Collars ⭐</a>
+            <a href="#section-5" class="block px-2.5 py-1.5 rounded-lg text-slate-600 hover:bg-slate-100 hover:text-emerald-600">17.5 Butterfly Spread (Neutral Range)</a>
+            <a href="#section-6" class="block px-2.5 py-1.5 rounded-lg text-amber-700 font-semibold bg-amber-50/70 hover:bg-amber-100">17.6 PCR & Price-OI Sentiment Matrix ⭐</a>
+            <a href="#section-7" class="block px-2.5 py-1.5 rounded-lg text-slate-600 hover:bg-slate-100 hover:text-emerald-600">17.7 Master F&O Strategy Cheat Sheet</a>
+            <a href="#interactive-quiz" class="block px-2.5 py-1.5 rounded-lg text-emerald-700 font-bold bg-emerald-50 hover:bg-emerald-100 mt-2">Practice Quiz (12 MCQs)</a>
+          </nav>
+        </div>
+
+        <div class="p-4 rounded-2xl bg-gradient-to-br from-indigo-900 to-slate-900 text-white shadow-sm text-xs space-y-2.5">
+          <div class="flex items-center gap-1.5 font-bold text-amber-400">
+            <i data-lucide="zap" class="w-4 h-4"></i>
+            <span>Exam Formula Quick Sheet</span>
+          </div>
+          <p class="text-slate-300 leading-relaxed font-mono text-[11px]">
+            • <strong>Beta Hedging:</strong><br>
+            N = [(&beta;<sub>target</sub> - &beta;<sub>p</sub>) &times; V<sub>p</sub>] / (F &times; Lot)<br>
+            • <strong>Bull Call Breakeven:</strong><br>
+            X<sub>1</sub> + Net Debit<br>
+            • <strong>Bear Put Breakeven:</strong><br>
+            X<sub>2</sub> - Net Debit<br>
+            • <strong>Straddle Breakevens:</strong><br>
+            X &plusmn; (Call Prem + Put Prem)<br>
+            • <strong>Collar:</strong><br>
+            Long Stock + Long Put + Short Call<br>
+            • <strong>PCR &gt; 1.3:</strong> Bullish reversal (Oversold)<br>
+            • <strong>PCR &lt; 0.7:</strong> Bearish pullback (Overbought)
+          </p>
+        </div>
+      </div>
+    </aside>
+
+    <!-- Main Notes -->
+    <div class="lg:col-span-9 space-y-8">
+
+      <!-- Section 17.1 -->
+      <section id="section-1" class="bg-white rounded-3xl p-6 sm:p-8 border border-amber-200 shadow-sm space-y-6">
+        <div class="flex items-center justify-between">
+          <div class="flex items-center gap-2 text-xs font-bold text-amber-700 uppercase tracking-wider">
+            <span class="w-2 h-2 rounded-full bg-amber-500"></span> Section 17.1 &bull; Super High Exam Yield ⭐
+          </div>
+          <span class="text-xs px-2.5 py-1 rounded-full bg-amber-100 text-amber-800 font-bold">Hedging Math & Arbitrage</span>
+        </div>
+
+        <div>
+          <h2 class="font-display font-bold text-xl sm:text-2xl text-slate-900">Portfolio Beta Hedging with Index Futures</h2>
+          <p class="text-sm text-slate-600 mt-2 leading-relaxed">
+            Equity mutual fund managers hold diversified equity portfolios to eliminate <em>unsystematic (company-specific) risk</em>. However, the portfolio remains exposed to <strong>systematic (market) risk</strong>, quantified by its <strong>Beta (&beta;)</strong>. Mutual fund managers use <strong>Index Futures</strong> (e.g., Nifty 50 or BSE Sensex futures) to hedge against broad market downturns or systematically modify the portfolio's overall market sensitivity without liquidating underlying cash shares.
+          </p>
+        </div>
+
+        <!-- Beta Hedging Master Box -->
+        <div class="p-5 rounded-2xl bg-blue-50/70 border border-blue-200 space-y-3">
+          <div class="flex items-center justify-between">
+            <span class="font-bold text-blue-950 text-sm flex items-center gap-1.5">
+              <i data-lucide="calculator" class="w-4 h-4 text-blue-700"></i>
+              Master Beta Hedging Formula
+            </span>
+            <span class="text-[11px] font-bold text-blue-800 bg-blue-100 px-2 py-0.5 rounded">Core Exam Formula</span>
+          </div>
+
+          <div class="bg-white p-4 rounded-xl border border-blue-200 text-center">
+            <div class="font-mono text-sm sm:text-base font-bold text-blue-900">
+              N = <span class="inline-block align-middle text-left"><span class="border-b border-blue-900 block pb-0.5">(&beta;<sub>target</sub> - &beta;<sub>portfolio</sub>) &times; Portfolio Value (V<sub>p</sub>)</span><span class="block pt-0.5 text-center">Futures Price (F) &times; Lot Size (Contract Value)</span></span>
+            </div>
+          </div>
+
+          <div class="grid grid-cols-1 sm:grid-cols-3 gap-3 text-xs text-slate-700 pt-1">
+            <div class="p-2.5 rounded-lg bg-white/80 border border-blue-100">
+              <strong class="text-blue-950 block mb-0.5">Complete Hedge (&beta;* = 0):</strong>
+              Result is negative (&minus;). Manager must <strong>sell / short</strong> index futures to fully eliminate market exposure.
+            </div>
+            <div class="p-2.5 rounded-lg bg-white/80 border border-blue-100">
+              <strong class="text-blue-950 block mb-0.5">Reduce Beta (&beta;* &lt; &beta;<sub>p</sub>):</strong>
+              Result is negative (&minus;). Manager <strong>sells / shorts</strong> index futures to insulate against anticipated market drops.
+            </div>
+            <div class="p-2.5 rounded-lg bg-white/80 border border-blue-100">
+              <strong class="text-blue-950 block mb-0.5">Increase Beta (&beta;* &gt; &beta;<sub>p</sub>):</strong>
+              Result is positive (+). Manager <strong>buys / longs</strong> index futures to enhance upside participation without purchasing shares.
+            </div>
+          </div>
+        </div>
+
+        <!-- 3 Step-by-Step Worked Numerical Examples -->
+        <div class="space-y-4">
+          <h3 class="font-display font-bold text-base text-slate-900 flex items-center gap-2">
+            <i data-lucide="check-circle-2" class="w-4 h-4 text-emerald-600"></i>
+            Worked Numerical Scenarios (Tested Regularly in NISM V-D)
+          </h3>
+
+          <!-- Example 1: Complete Hedge -->
+          <div class="p-4 rounded-2xl bg-slate-50 border border-slate-200 text-xs space-y-2.5">
+            <div class="flex items-center justify-between">
+              <span class="font-bold text-slate-900 text-sm">Example 1: Complete Portfolio Hedge (&beta;<sub>target</sub> = 0)</span>
+              <span class="px-2 py-0.5 rounded bg-emerald-100 text-emerald-800 font-bold text-[10px]">Full Neutralization</span>
+            </div>
+            <p class="text-slate-700">
+              A mutual fund holds an equity portfolio worth <strong>₹50 Crores (₹50,00,00,000)</strong> with an estimated portfolio Beta (&beta;<sub>p</sub>) of <strong>1.20</strong>. Nifty 50 Futures is quoting at <strong>₹25,000</strong> with a market lot size of <strong>25 units</strong>. How many Nifty Futures contracts must the fund manager trade to completely eliminate systematic risk?
+            </p>
+            <div class="bg-white p-3.5 rounded-xl border border-slate-200 font-mono text-slate-800 space-y-1.5">
+              <div>&bull; Contract Value of Nifty Futures = 25,000 &times; 25 = <strong>₹6,25,000</strong></div>
+              <div>&bull; Target Beta (&beta;<sub>target</sub>) = <strong>0</strong></div>
+              <div>&bull; N = [(0 - 1.20) &times; 50,00,00,000] / 6,25,000 = -60,00,00,000 / 6,25,000 = <strong>-960 Contracts</strong></div>
+            </div>
+            <div class="p-2.5 rounded-lg bg-emerald-50 border border-emerald-200 text-emerald-900 font-medium">
+              <strong>Action:</strong> Short (Sell) exactly <strong>960 Nifty Futures contracts</strong>. If the broad market falls by 10%, the portfolio loses approx ₹6.00 Crores (10% &times; 1.20 &times; ₹50 Cr), which is offset by a ₹6.00 Crore profit on the short futures position.
+            </div>
+          </div>
+
+          <!-- Example 2: Partial Beta Reduction -->
+          <div class="p-4 rounded-2xl bg-slate-50 border border-slate-200 text-xs space-y-2.5">
+            <div class="flex items-center justify-between">
+              <span class="font-bold text-slate-900 text-sm">Example 2: Partial Beta Reduction (e.g., from 1.40 down to 0.80)</span>
+              <span class="px-2 py-0.5 rounded bg-amber-100 text-amber-800 font-bold text-[10px]">Defensive Adjustment</span>
+            </div>
+            <p class="text-slate-700">
+              A fund manager holding an aggressive equity portfolio of <strong>₹20 Crores</strong> with a high Beta of <strong>1.40</strong> expects temporary market volatility. The manager wishes to de-risk the portfolio by reducing effective Beta to <strong>0.80</strong>. Nifty Futures is trading at <strong>₹24,000</strong> with a lot size of <strong>25 units</strong>.
+            </p>
+            <div class="bg-white p-3.5 rounded-xl border border-slate-200 font-mono text-slate-800 space-y-1.5">
+              <div>&bull; Contract Value = 24,000 &times; 25 = <strong>₹6,00,000</strong></div>
+              <div>&bull; N = [(0.80 - 1.40) &times; 20,00,00,000] / 6,00,000 = [-0.60 &times; 20,00,00,000] / 6,00,000</div>
+              <div>&bull; N = -12,00,00,000 / 6,00,000 = <strong>-200 Contracts</strong></div>
+            </div>
+            <div class="p-2.5 rounded-lg bg-amber-50 border border-amber-200 text-amber-900 font-medium">
+              <strong>Action:</strong> Short (Sell) <strong>200 Nifty Futures contracts</strong> to lower effective sensitivity from 1.40 to 0.80.
+            </div>
+          </div>
+
+          <!-- Example 3: Enhancing Portfolio Exposure -->
+          <div class="p-4 rounded-2xl bg-slate-50 border border-slate-200 text-xs space-y-2.5">
+            <div class="flex items-center justify-between">
+              <span class="font-bold text-slate-900 text-sm">Example 3: Increasing Portfolio Beta (e.g., from 0.90 up to 1.30)</span>
+              <span class="px-2 py-0.5 rounded bg-blue-100 text-blue-800 font-bold text-[10px]">Aggressive Bullish Tilt</span>
+            </div>
+            <p class="text-slate-700">
+              A fund manager holds <strong>₹15 Crores</strong> of low-beta stocks (&beta; = 0.90). Expecting an aggressive post-election rally, the manager wants to scale portfolio beta up to <strong>1.30</strong>. Nifty Futures trades at <strong>₹25,000</strong> (Lot size = 25).
+            </p>
+            <div class="bg-white p-3.5 rounded-xl border border-slate-200 font-mono text-slate-800 space-y-1.5">
+              <div>&bull; Contract Value = 25,000 &times; 25 = <strong>₹6,25,000</strong></div>
+              <div>&bull; N = [(1.30 - 0.90) &times; 15,00,00,000] / 6,25,000 = [+0.40 &times; 15,00,00,000] / 6,25,000 = <strong>+96 Contracts</strong></div>
+            </div>
+            <div class="p-2.5 rounded-lg bg-blue-50 border border-blue-200 text-blue-900 font-medium">
+              <strong>Action:</strong> Long (Buy) <strong>96 Nifty Futures contracts</strong> to boost overall market participation.
+            </div>
+          </div>
+        </div>
+
+        <!-- Cash-Futures Arbitrage, Basis Risk & Roll-over -->
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4 text-xs pt-2">
+          <div class="p-4 rounded-2xl bg-slate-50 border border-slate-200 space-y-2">
+            <span class="font-bold text-slate-900 text-sm flex items-center gap-1.5">
+              <i data-lucide="scale" class="w-4 h-4 text-slate-700"></i>
+              Cash-Futures Arbitrage & Basis Risk
+            </span>
+            <p class="text-slate-700 leading-relaxed">
+              <strong>Basis</strong> is the difference between the Cash Spot Price and the Futures Price (<em>Basis = Spot - Futures</em>). At expiration, basis must converge to <strong>zero</strong>.
+            </p>
+            <ul class="list-disc pl-4 space-y-1 text-slate-600">
+              <li><strong>Cash-and-Carry Arbitrage:</strong> If Futures trades at a substantial premium over theoretical fair value (Cost of Carry), arbitrageurs <em>buy cash shares</em> and <em>sell overvalued futures</em>, locking in risk-free yield.</li>
+              <li><strong>Reverse Cash-and-Carry:</strong> If Futures trades at an unwarranted discount, traders <em>short cash shares</em> and <em>buy undervalued futures</em>.</li>
+              <li><strong>Basis Risk:</strong> Occurs when a hedge is closed out before expiry, as spot and futures price fluctuations do not move in absolute 100% lockstep.</li>
+            </ul>
+          </div>
+
+          <div class="p-4 rounded-2xl bg-slate-50 border border-slate-200 space-y-2">
+            <span class="font-bold text-slate-900 text-sm flex items-center gap-1.5">
+              <i data-lucide="refresh-cw" class="w-4 h-4 text-slate-700"></i>
+              Futures Roll-Over Dynamics
+            </span>
+            <p class="text-slate-700 leading-relaxed">
+              Because equity futures contracts have finite lives (expiring on the last Thursday of the month), institutional hedgers must <strong>roll over</strong> positions into the next month's contract.
+            </p>
+            <ul class="list-disc pl-4 space-y-1 text-slate-600">
+              <li><strong>Mechanics:</strong> Simultaneously squaring off current near-month contract and opening a matching position in the next-month contract.</li>
+              <li><strong>Roll Spread:</strong> The difference between next-month futures and near-month futures.</li>
+              <li><strong>High Roll-Over % with Positive Basis:</strong> Signals aggressive institutional bullishness being carried forward into the upcoming series.</li>
+              <li><strong>High Roll-Over % with Negative Basis (Discount):</strong> Signals aggressive short build-up being carried forward.</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <!-- Section 17.2 -->
+      <section id="section-2" class="bg-white rounded-3xl p-6 sm:p-8 border border-slate-200 shadow-sm space-y-6">
+        <div class="flex items-center justify-between">
+          <div class="flex items-center gap-2 text-xs font-bold text-slate-500 uppercase tracking-wider">
+            <span class="w-2 h-2 rounded-full bg-slate-400"></span> Section 17.2 &bull; Fast-Track Refresher & Detailed Math
+          </div>
+          <span class="text-xs px-2.5 py-1 rounded-full bg-slate-100 text-slate-600 font-semibold">Hedging Combinations</span>
+        </div>
+
+        <div>
+          <h2 class="font-display font-bold text-xl sm:text-2xl text-slate-900">Covered Call & Protective Put Strategies</h2>
+          <p class="text-sm text-slate-600 mt-1 leading-relaxed">
+            These classic hybrid strategies combine physical cash equity holdings with options to alter the risk-return profile.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-6 text-xs">
+          
+          <!-- Covered Call Column -->
+          <div class="p-5 rounded-2xl bg-amber-50/50 border border-amber-200 space-y-3 flex flex-col justify-between">
+            <div class="space-y-2.5">
+              <div class="flex items-center justify-between">
+                <span class="font-bold text-amber-950 text-sm">1. Covered Call (Long Stock + Short OTM Call)</span>
+                <span class="px-2 py-0.5 rounded bg-amber-100 text-amber-900 font-bold text-[10px]">Income Generation</span>
+              </div>
+              <p class="text-slate-700 leading-relaxed">
+                An investor holding stock writes (sells) an Out-of-the-Money Call option against their shares. Ideal for <strong>range-bound, stagnant, or mildly bullish</strong> market views to generate recurring cash flow.
+              </p>
+
+              <!-- SVG Payoff Diagram: Covered Call -->
+              <div class="p-3 bg-white rounded-xl border border-amber-200 flex flex-col items-center">
+                <span class="text-[11px] font-bold text-slate-700 mb-1">Covered Call Payoff Profile</span>
+                <svg viewBox="0 0 280 140" class="w-full max-w-[260px] h-32">
+                  <!-- Zero line -->
+                  <line x1="20" y1="90" x2="260" y2="90" stroke="#cbd5e1" stroke-width="1.5" stroke-dasharray="3 3" />
+                  <text x="25" y="85" fill="#94a3b8" font-size="9" font-family="monospace">Zero P&L</text>
+                  <!-- Strike marker -->
+                  <line x1="170" y1="20" x2="170" y2="120" stroke="#fde68a" stroke-width="1.5" stroke-dasharray="2 2" />
+                  <text x="175" y="115" fill="#d97706" font-size="9" font-family="sans-serif" font-weight="bold">Strike X</text>
+                  <!-- Payoff Line: rising from loss to cap -->
+                  <polyline points="30,130 90,90 170,40 250,40" fill="none" stroke="#d97706" stroke-width="2.5" />
+                  <circle cx="90" cy="90" r="3.5" fill="#d97706" />
+                  <text x="75" y="105" fill="#b45309" font-size="8.5" font-family="sans-serif">BE: S0 - C</text>
+                  <circle cx="170" cy="40" r="3.5" fill="#d97706" />
+                  <text x="175" y="35" fill="#b45309" font-size="8.5" font-family="sans-serif">Max Profit</text>
+                </svg>
+              </div>
+
+              <div class="bg-white p-3 rounded-xl border border-amber-200 space-y-1 font-mono text-[11px] text-amber-950">
+                <div>&bull; <strong>Max Profit:</strong> (X - S<sub>0</sub>) + Call Premium (C)</div>
+                <div>&bull; <strong>Max Loss:</strong> S<sub>0</sub> - C (Severe if stock plummets to ₹0)</div>
+                <div>&bull; <strong>Breakeven:</strong> S<sub>0</sub> - C</div>
+                <div>&bull; <strong>Synthetic Equivalent:</strong> Short Put position</div>
+              </div>
+
+              <!-- Payoff Table -->
+              <div class="overflow-x-auto rounded-xl border border-amber-200">
+                <table class="min-w-full text-[10px] text-left">
+                  <thead class="bg-amber-100 text-amber-900 font-bold uppercase">
+                    <tr>
+                      <th class="p-1.5">Stock at Expiry</th>
+                      <th class="p-1.5">Stock P&L</th>
+                      <th class="p-1.5">Short Call P&L</th>
+                      <th class="p-1.5">Net Combined</th>
+                    </tr>
+                  </thead>
+                  <tbody class="bg-white divide-y divide-amber-100 text-slate-700">
+                    <tr><td class="p-1.5 font-semibold">₹900</td><td>-₹100</td><td>+₹30</td><td class="text-rose-600 font-bold">-₹70</td></tr>
+                    <tr class="bg-amber-50/50"><td class="p-1.5 font-semibold">₹970 (BE)</td><td>-₹30</td><td>+₹30</td><td class="font-bold">₹0</td></tr>
+                    <tr><td class="p-1.5 font-semibold">₹1,000</td><td>₹0</td><td>+₹30</td><td class="text-emerald-700 font-bold">+₹30</td></tr>
+                    <tr class="bg-amber-50/50"><td class="p-1.5 font-semibold">₹1,050 (Strike)</td><td>+₹50</td><td>+₹30</td><td class="text-emerald-700 font-bold">+₹80 (Max)</td></tr>
+                    <tr><td class="p-1.5 font-semibold">₹1,150</td><td>+₹150</td><td>-₹70</td><td class="text-emerald-700 font-bold">+₹80 (Capped)</td></tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+
+            <div class="p-2.5 rounded-lg bg-amber-100/70 text-amber-950 text-[11px]">
+              ⚠️ <strong>Exam Trap:</strong> A covered call does <em>not</em> provide significant downside insurance! It only buffers drops by the small premium received. In return, the trader surrenders all upside above the strike price.
+            </div>
+          </div>
+
+          <!-- Protective Put Column -->
+          <div class="p-5 rounded-2xl bg-emerald-50/50 border border-emerald-200 space-y-3 flex flex-col justify-between">
+            <div class="space-y-2.5">
+              <div class="flex items-center justify-between">
+                <span class="font-bold text-emerald-950 text-sm">2. Protective Put (Long Stock + Long Put)</span>
+                <span class="px-2 py-0.5 rounded bg-emerald-100 text-emerald-900 font-bold text-[10px]">Capital Insurance</span>
+              </div>
+              <p class="text-slate-700 leading-relaxed">
+                An equity holder purchases a Put option on the stock as an insurance policy. It protects against market crashes while preserving <strong>100% of unlimited upside potential</strong>.
+              </p>
+
+              <!-- SVG Payoff Diagram: Protective Put -->
+              <div class="p-3 bg-white rounded-xl border border-emerald-200 flex flex-col items-center">
+                <span class="text-[11px] font-bold text-slate-700 mb-1">Protective Put Payoff Profile</span>
+                <svg viewBox="0 0 280 140" class="w-full max-w-[260px] h-32">
+                  <!-- Zero line -->
+                  <line x1="20" y1="80" x2="260" y2="80" stroke="#cbd5e1" stroke-width="1.5" stroke-dasharray="3 3" />
+                  <text x="25" y="75" fill="#94a3b8" font-size="9" font-family="monospace">Zero P&L</text>
+                  <!-- Strike marker -->
+                  <line x1="110" y1="20" x2="110" y2="120" stroke="#a7f3d0" stroke-width="1.5" stroke-dasharray="2 2" />
+                  <text x="115" y="115" fill="#059669" font-size="9" font-family="sans-serif" font-weight="bold">Strike X</text>
+                  <!-- Payoff Line: flat floor then rising -->
+                  <polyline points="30,105 110,105 180,80 250,30" fill="none" stroke="#059669" stroke-width="2.5" />
+                  <circle cx="110" cy="105" r="3.5" fill="#059669" />
+                  <text x="50" y="118" fill="#065f46" font-size="8.5" font-family="sans-serif">Floor (Max Loss)</text>
+                  <circle cx="180" cy="80" r="3.5" fill="#059669" />
+                  <text x="175" y="95" fill="#065f46" font-size="8.5" font-family="sans-serif">BE: S0 + P</text>
+                </svg>
+              </div>
+
+              <div class="bg-white p-3 rounded-xl border border-emerald-200 space-y-1 font-mono text-[11px] text-emerald-950">
+                <div>&bull; <strong>Max Profit:</strong> Unlimited as stock price surges</div>
+                <div>&bull; <strong>Max Loss:</strong> (S<sub>0</sub> - X) + Put Premium (P) (Guaranteed Floor)</div>
+                <div>&bull; <strong>Breakeven:</strong> S<sub>0</sub> + P</div>
+                <div>&bull; <strong>Synthetic Equivalent:</strong> Long Call position</div>
+              </div>
+
+              <!-- Payoff Table -->
+              <div class="overflow-x-auto rounded-xl border border-emerald-200">
+                <table class="min-w-full text-[10px] text-left">
+                  <thead class="bg-emerald-100 text-emerald-900 font-bold uppercase">
+                    <tr>
+                      <th class="p-1.5">Stock at Expiry</th>
+                      <th class="p-1.5">Stock P&L</th>
+                      <th class="p-1.5">Long Put P&L</th>
+                      <th class="p-1.5">Net Combined</th>
+                    </tr>
+                  </thead>
+                  <tbody class="bg-white divide-y divide-emerald-100 text-slate-700">
+                    <tr><td class="p-1.5 font-semibold">₹800</td><td>-₹200</td><td>+₹125</td><td class="text-rose-600 font-bold">-₹75 (Floor)</td></tr>
+                    <tr class="bg-emerald-50/50"><td class="p-1.5 font-semibold">₹950 (Strike)</td><td>-₹50</td><td>-₹25</td><td class="text-rose-600 font-bold">-₹75 (Floor)</td></tr>
+                    <tr><td class="p-1.5 font-semibold">₹1,000</td><td>₹0</td><td>-₹25</td><td class="text-rose-600 font-bold">-₹25</td></tr>
+                    <tr class="bg-emerald-50/50"><td class="p-1.5 font-semibold">₹1,025 (BE)</td><td>+₹25</td><td>-₹25</td><td class="font-bold">₹0</td></tr>
+                    <tr><td class="p-1.5 font-semibold">₹1,150</td><td>+₹150</td><td>-₹25</td><td class="text-emerald-700 font-bold">+₹125 (Unlimited)</td></tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+
+            <div class="p-2.5 rounded-lg bg-emerald-100/70 text-emerald-950 text-[11px]">
+              💡 <strong>Exam Formula Rule:</strong> Cost of protection is the put premium \(P\). If stock crashes to zero, the put option allows the holder to sell at Strike \(X\), capping the loss strictly at \((S_0 - X) + P\).
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Section 17.3 -->
+      <section id="section-3" class="bg-white rounded-3xl p-6 sm:p-8 border border-amber-200 shadow-sm space-y-6">
+        <div class="flex items-center justify-between">
+          <div class="flex items-center gap-2 text-xs font-bold text-amber-700 uppercase tracking-wider">
+            <span class="w-2 h-2 rounded-full bg-amber-500"></span> Section 17.3 &bull; Super High Exam Yield ⭐
+          </div>
+          <span class="text-xs px-2.5 py-1 rounded-full bg-amber-100 text-amber-800 font-bold">Directional Vertical Spreads</span>
+        </div>
+
+        <div>
+          <h2 class="font-display font-bold text-xl sm:text-2xl text-slate-900">Vertical Spreads: Bull Call & Bear Put Spreads</h2>
+          <p class="text-sm text-slate-600 mt-1 leading-relaxed">
+            A <strong>vertical spread</strong> involves taking a simultaneous long and short position in options of the <strong>same class</strong> (both Calls or both Puts) and <strong>same expiry date</strong>, but at <strong>different strike prices</strong>.
+          </p>
+        </div>
+
+        <!-- Bull Call & Bear Put Deep Dive -->
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-6 text-xs">
+          
+          <!-- Bull Call Spread Card -->
+          <div class="p-5 rounded-2xl bg-blue-50/60 border border-blue-200 space-y-3 flex flex-col justify-between">
+            <div class="space-y-2.5">
+              <div class="flex items-center justify-between">
+                <span class="font-bold text-blue-950 text-sm">Bull Call Spread (Net Debit Spread)</span>
+                <span class="px-2 py-0.5 rounded bg-blue-100 text-blue-900 font-bold text-[10px]">Moderately Bullish</span>
+              </div>
+              <p class="text-slate-700 leading-relaxed">
+                Constructed by <strong>Buying a Lower Strike Call (X<sub>1</sub>)</strong> at premium C<sub>1</sub> and <strong>Selling a Higher Strike Call (X<sub>2</sub>)</strong> at premium C<sub>2</sub>.
+              </p>
+
+              <!-- SVG Payoff: Bull Call Spread -->
+              <div class="p-3 bg-white rounded-xl border border-blue-200 flex flex-col items-center">
+                <span class="text-[11px] font-bold text-slate-700 mb-1">Bull Call Spread Payoff</span>
+                <svg viewBox="0 0 280 140" class="w-full max-w-[260px] h-32">
+                  <line x1="20" y1="80" x2="260" y2="80" stroke="#cbd5e1" stroke-width="1.5" stroke-dasharray="3 3" />
+                  <text x="25" y="75" fill="#94a3b8" font-size="9" font-family="monospace">Zero P&L</text>
+                  <line x1="80" y1="20" x2="80" y2="120" stroke="#bfdbfe" stroke-width="1.5" stroke-dasharray="2 2" />
+                  <text x="83" y="115" fill="#2563eb" font-size="9">X1</text>
+                  <line x1="180" y1="20" x2="180" y2="120" stroke="#bfdbfe" stroke-width="1.5" stroke-dasharray="2 2" />
+                  <text x="183" y="115" fill="#2563eb" font-size="9">X2</text>
+                  <!-- Payoff profile: step up -->
+                  <polyline points="30,110 80,110 180,45 250,45" fill="none" stroke="#2563eb" stroke-width="2.5" />
+                  <circle cx="130" cy="80" r="3.5" fill="#2563eb" />
+                  <text x="135" y="75" fill="#1d4ed8" font-size="8.5">BE: X1 + Debit</text>
+                </svg>
+              </div>
+
+              <div class="bg-white p-3 rounded-xl border border-blue-200 space-y-1 font-mono text-[11px] text-blue-950">
+                <div>&bull; <strong>Net Cost (Debit):</strong> C<sub>1</sub> - C<sub>2</sub></div>
+                <div>&bull; <strong>Max Profit:</strong> (X<sub>2</sub> - X<sub>1</sub>) - Net Debit</div>
+                <div>&bull; <strong>Max Loss:</strong> Net Debit Paid</div>
+                <div>&bull; <strong>Breakeven Point:</strong> X<sub>1</sub> + Net Debit</div>
+              </div>
+
+              <!-- Numerical Box -->
+              <div class="p-2.5 rounded-lg bg-white border border-blue-100 text-slate-800 space-y-1">
+                <span class="font-bold text-blue-900 block">Worked Example:</span>
+                <div>Buy 1,000 Call @ ₹45; Sell 1,050 Call @ ₹18.</div>
+                <div>Net Debit = 45 - 18 = <strong>₹27.00</strong>.</div>
+                <div>Max Profit = (1050 - 1000) - 27 = <strong>₹23.00</strong>.</div>
+                <div>Breakeven = 1000 + 27 = <strong>₹1,027.00</strong>.</div>
+              </div>
+            </div>
+
+            <p class="text-[11px] text-slate-500 italic">Selling the higher strike call finances part of the lower strike call's cost, lowering both breakeven and risk.</p>
+          </div>
+
+          <!-- Bear Put Spread Card -->
+          <div class="p-5 rounded-2xl bg-rose-50/60 border border-rose-200 space-y-3 flex flex-col justify-between">
+            <div class="space-y-2.5">
+              <div class="flex items-center justify-between">
+                <span class="font-bold text-rose-950 text-sm">Bear Put Spread (Net Debit Spread)</span>
+                <span class="px-2 py-0.5 rounded bg-rose-100 text-rose-900 font-bold text-[10px]">Moderately Bearish</span>
+              </div>
+              <p class="text-slate-700 leading-relaxed">
+                Constructed by <strong>Buying a Higher Strike Put (X<sub>2</sub>)</strong> at premium P<sub>2</sub> and <strong>Selling a Lower Strike Put (X<sub>1</sub>)</strong> at premium P<sub>1</sub>.
+              </p>
+
+              <!-- SVG Payoff: Bear Put Spread -->
+              <div class="p-3 bg-white rounded-xl border border-rose-200 flex flex-col items-center">
+                <span class="text-[11px] font-bold text-slate-700 mb-1">Bear Put Spread Payoff</span>
+                <svg viewBox="0 0 280 140" class="w-full max-w-[260px] h-32">
+                  <line x1="20" y1="80" x2="260" y2="80" stroke="#cbd5e1" stroke-width="1.5" stroke-dasharray="3 3" />
+                  <text x="25" y="75" fill="#94a3b8" font-size="9" font-family="monospace">Zero P&L</text>
+                  <line x1="80" y1="20" x2="80" y2="120" stroke="#fecdd3" stroke-width="1.5" stroke-dasharray="2 2" />
+                  <text x="83" y="115" fill="#e11d48" font-size="9">X1</text>
+                  <line x1="180" y1="20" x2="180" y2="120" stroke="#fecdd3" stroke-width="1.5" stroke-dasharray="2 2" />
+                  <text x="183" y="115" fill="#e11d48" font-size="9">X2</text>
+                  <!-- Payoff profile: step down from left -->
+                  <polyline points="30,45 80,45 180,110 250,110" fill="none" stroke="#e11d48" stroke-width="2.5" />
+                  <circle cx="130" cy="80" r="3.5" fill="#e11d48" />
+                  <text x="135" y="75" fill="#be123c" font-size="8.5">BE: X2 - Debit</text>
+                </svg>
+              </div>
+
+              <div class="bg-white p-3 rounded-xl border border-rose-200 space-y-1 font-mono text-[11px] text-rose-950">
+                <div>&bull; <strong>Net Cost (Debit):</strong> P<sub>2</sub> - P<sub>1</sub></div>
+                <div>&bull; <strong>Max Profit:</strong> (X<sub>2</sub> - X<sub>1</sub>) - Net Debit</div>
+                <div>&bull; <strong>Max Loss:</strong> Net Debit Paid</div>
+                <div>&bull; <strong>Breakeven Point:</strong> X<sub>2</sub> - Net Debit</div>
+              </div>
+
+              <!-- Numerical Box -->
+              <div class="p-2.5 rounded-lg bg-white border border-rose-100 text-slate-800 space-y-1">
+                <span class="font-bold text-rose-900 block">Worked Example:</span>
+                <div>Buy 1,000 Put @ ₹40; Sell 950 Put @ ₹15.</div>
+                <div>Net Debit = 40 - 15 = <strong>₹25.00</strong>.</div>
+                <div>Max Profit = (1000 - 950) - 25 = <strong>₹25.00</strong>.</div>
+                <div>Breakeven = 1000 - 25 = <strong>₹975.00</strong>.</div>
+              </div>
+            </div>
+
+            <p class="text-[11px] text-slate-500 italic">Buying the ATM put gives bearish exposure while selling the OTM put offsets time decay and premium cost.</p>
+          </div>
+        </div>
+
+        <!-- Vertical Spreads Master Comparison Table -->
+        <div class="overflow-x-auto rounded-2xl border border-slate-200">
+          <table class="min-w-full text-xs text-left">
+            <thead class="bg-slate-100 text-slate-700 font-bold uppercase tracking-wider">
+              <tr>
+                <th class="p-3">Spread Strategy</th>
+                <th class="p-3">Outlook</th>
+                <th class="p-3">Options Legs Used</th>
+                <th class="p-3">Cashflow</th>
+                <th class="p-3">Max Profit</th>
+                <th class="p-3">Max Loss</th>
+                <th class="p-3">Breakeven</th>
+              </tr>
+            </thead>
+            <tbody class="divide-y divide-slate-200">
+              <tr class="hover:bg-slate-50">
+                <td class="p-3 font-bold text-blue-900">Bull Call Spread</td>
+                <td class="p-3 font-medium text-emerald-700">Moderately Bullish</td>
+                <td class="p-3 text-slate-700">Buy Call X<sub>1</sub> + Sell Call X<sub>2</sub> (X<sub>1</sub> &lt; X<sub>2</sub>)</td>
+                <td class="p-3 text-rose-700 font-semibold">Net Debit</td>
+                <td class="p-3 text-emerald-700 font-semibold">(X<sub>2</sub> - X<sub>1</sub>) - Debit</td>
+                <td class="p-3 text-rose-700 font-semibold">Net Debit</td>
+                <td class="p-3 font-mono font-bold text-slate-800">X<sub>1</sub> + Debit</td>
+              </tr>
+              <tr class="hover:bg-slate-50">
+                <td class="p-3 font-bold text-rose-900">Bear Put Spread</td>
+                <td class="p-3 font-medium text-rose-700">Moderately Bearish</td>
+                <td class="p-3 text-slate-700">Buy Put X<sub>2</sub> + Sell Put X<sub>1</sub> (X<sub>2</sub> &gt; X<sub>1</sub>)</td>
+                <td class="p-3 text-rose-700 font-semibold">Net Debit</td>
+                <td class="p-3 text-emerald-700 font-semibold">(X<sub>2</sub> - X<sub>1</sub>) - Debit</td>
+                <td class="p-3 text-rose-700 font-semibold">Net Debit</td>
+                <td class="p-3 font-mono font-bold text-slate-800">X<sub>2</sub> - Debit</td>
+              </tr>
+              <tr class="hover:bg-slate-50">
+                <td class="p-3 font-bold text-emerald-900">Bull Put Spread</td>
+                <td class="p-3 font-medium text-emerald-700">Mildly Bullish / Neutral</td>
+                <td class="p-3 text-slate-700">Sell Put X<sub>2</sub> + Buy Put X<sub>1</sub> (X<sub>2</sub> &gt; X<sub>1</sub>)</td>
+                <td class="p-3 text-emerald-700 font-semibold">Net Credit</td>
+                <td class="p-3 text-emerald-700 font-semibold">Net Credit Received</td>
+                <td class="p-3 text-rose-700 font-semibold">(X<sub>2</sub> - X<sub>1</sub>) - Credit</td>
+                <td class="p-3 font-mono font-bold text-slate-800">X<sub>2</sub> - Credit</td>
+              </tr>
+              <tr class="hover:bg-slate-50">
+                <td class="p-3 font-bold text-indigo-900">Bear Call Spread</td>
+                <td class="p-3 font-medium text-rose-700">Mildly Bearish / Neutral</td>
+                <td class="p-3 text-slate-700">Sell Call X<sub>1</sub> + Buy Call X<sub>2</sub> (X<sub>1</sub> &lt; X<sub>2</sub>)</td>
+                <td class="p-3 text-emerald-700 font-semibold">Net Credit</td>
+                <td class="p-3 text-emerald-700 font-semibold">Net Credit Received</td>
+                <td class="p-3 text-rose-700 font-semibold">(X<sub>2</sub> - X<sub>1</sub>) - Credit</td>
+                <td class="p-3 font-mono font-bold text-slate-800">X<sub>1</sub> + Credit</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <!-- Section 17.4 -->
+      <section id="section-4" class="bg-white rounded-3xl p-6 sm:p-8 border border-amber-200 shadow-sm space-y-6">
+        <div class="flex items-center justify-between">
+          <div class="flex items-center gap-2 text-xs font-bold text-amber-700 uppercase tracking-wider">
+            <span class="w-2 h-2 rounded-full bg-amber-500"></span> Section 17.4 &bull; Super High Exam Yield ⭐
+          </div>
+          <span class="text-xs px-2.5 py-1 rounded-full bg-amber-100 text-amber-800 font-bold">Volatility Plays</span>
+        </div>
+
+        <div>
+          <h2 class="font-display font-bold text-xl sm:text-2xl text-slate-900">Straddles, Strangles & The Zero-Cost Collar</h2>
+          <p class="text-sm text-slate-600 mt-1 leading-relaxed">
+            When a trader expects severe price turbulence or market calm without having a clear directional bias, combination strategies across both Calls and Puts are employed.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-4 text-xs">
+          
+          <!-- Long Straddle Card -->
+          <div class="p-5 rounded-2xl bg-slate-50 border border-slate-200 space-y-3 flex flex-col justify-between">
+            <div class="space-y-2.5">
+              <div class="flex items-center justify-between">
+                <span class="font-bold text-slate-900 text-sm">1. Long Straddle</span>
+                <span class="px-2 py-0.5 rounded bg-blue-100 text-blue-800 font-bold text-[10px]">High Volatility</span>
+              </div>
+              <p class="text-slate-600 leading-relaxed">
+                Simultaneously <strong>Buy ATM Call (X)</strong> + <strong>Buy ATM Put (X)</strong> with the same strike and expiration date.
+              </p>
+
+              <!-- SVG Payoff: Long Straddle -->
+              <div class="p-2.5 bg-white rounded-xl border border-slate-200 flex flex-col items-center">
+                <svg viewBox="0 0 240 120" class="w-full h-24">
+                  <line x1="10" y1="70" x2="230" y2="70" stroke="#cbd5e1" stroke-width="1.5" stroke-dasharray="3 3" />
+                  <text x="15" y="65" fill="#94a3b8" font-size="8">Zero P&L</text>
+                  <!-- V-shape -->
+                  <polyline points="20,20 70,70 120,105 170,70 220,20" fill="none" stroke="#2563eb" stroke-width="2.5" />
+                  <circle cx="120" cy="105" r="3" fill="#2563eb" />
+                  <text x="100" y="118" fill="#1e3a8a" font-size="8" font-weight="bold">Strike X</text>
+                  <circle cx="70" cy="70" r="3" fill="#2563eb" />
+                  <text x="40" y="82" fill="#1d4ed8" font-size="7.5">X - (C+P)</text>
+                  <circle cx="170" cy="70" r="3" fill="#2563eb" />
+                  <text x="175" y="82" fill="#1d4ed8" font-size="7.5">X + (C+P)</text>
+                </svg>
+              </div>
+
+              <div class="space-y-1 text-slate-700">
+                <div>&bull; <strong>Outlook:</strong> Expects extreme breakout in <em>either direction</em> (e.g. Union Budget, earnings, court verdict).</div>
+                <div>&bull; <strong>Max Profit:</strong> Unlimited on either side.</div>
+                <div>&bull; <strong>Max Loss:</strong> Total Premium Paid (C + P).</div>
+                <div>&bull; <strong>Breakevens:</strong> X &plusmn; (Call Premium + Put Premium).</div>
+              </div>
+            </div>
+            <div class="p-2 rounded bg-slate-200/60 text-slate-700 text-[10.5px]">
+              <strong>Short Straddle:</strong> Selling ATM Call + ATM Put. Profits if price stays locked exactly at Strike X. Catastrophic unlimited risk if market breaks out!
+            </div>
+          </div>
+
+          <!-- Long Strangle Card -->
+          <div class="p-5 rounded-2xl bg-slate-50 border border-slate-200 space-y-3 flex flex-col justify-between">
+            <div class="space-y-2.5">
+              <div class="flex items-center justify-between">
+                <span class="font-bold text-slate-900 text-sm">2. Long Strangle</span>
+                <span class="px-2 py-0.5 rounded bg-purple-100 text-purple-800 font-bold text-[10px]">Cheaper Volatility</span>
+              </div>
+              <p class="text-slate-600 leading-relaxed">
+                Simultaneously <strong>Buy OTM Put (X<sub>1</sub>)</strong> + <strong>Buy OTM Call (X<sub>2</sub>)</strong> where X<sub>1</sub> &lt; X<sub>2</sub>.
+              </p>
+
+              <!-- SVG Payoff: Long Strangle -->
+              <div class="p-2.5 bg-white rounded-xl border border-slate-200 flex flex-col items-center">
+                <svg viewBox="0 0 240 120" class="w-full h-24">
+                  <line x1="10" y1="70" x2="230" y2="70" stroke="#cbd5e1" stroke-width="1.5" stroke-dasharray="3 3" />
+                  <text x="15" y="65" fill="#94a3b8" font-size="8">Zero P&L</text>
+                  <!-- Flat bottom V shape -->
+                  <polyline points="20,20 65,70 95,100 145,100 175,70 220,20" fill="none" stroke="#7c3aed" stroke-width="2.5" />
+                  <text x="90" y="115" fill="#581c87" font-size="8">X1</text>
+                  <text x="145" y="115" fill="#581c87" font-size="8">X2</text>
+                </svg>
+              </div>
+
+              <div class="space-y-1 text-slate-700">
+                <div>&bull; <strong>Outlook:</strong> Expects massive price explosion; cheaper initial capital outlay than a Straddle.</div>
+                <div>&bull; <strong>Max Profit:</strong> Unlimited on either side.</div>
+                <div>&bull; <strong>Max Loss:</strong> Total Premium Paid (C<sub>2</sub> + P<sub>1</sub>).</div>
+                <div>&bull; <strong>Breakevens:</strong> Upper = X<sub>2</sub> + Total Premium; Lower = X<sub>1</sub> - Total Premium.</div>
+              </div>
+            </div>
+            <div class="p-2 rounded bg-purple-50 text-purple-900 text-[10.5px]">
+              Requires a <em>wider price displacement</em> than a straddle before turning profitable because options are both Out-of-the-Money.
+            </div>
+          </div>
+
+          <!-- Zero-Cost Collar Card -->
+          <div class="p-5 rounded-2xl bg-amber-50/70 border border-amber-200 space-y-3 flex flex-col justify-between">
+            <div class="space-y-2.5">
+              <div class="flex items-center justify-between">
+                <span class="font-bold text-amber-950 text-sm">3. Zero-Cost Collar</span>
+                <span class="px-2 py-0.5 rounded bg-amber-100 text-amber-900 font-bold text-[10px]">Free Downside Floor</span>
+              </div>
+              <p class="text-slate-700 leading-relaxed">
+                <strong>Long Underlying Stock</strong> + <strong>Buy OTM Put (X<sub>1</sub>)</strong> + <strong>Sell OTM Call (X<sub>2</sub>)</strong>.
+              </p>
+
+              <!-- SVG Payoff: Collar -->
+              <div class="p-2.5 bg-white rounded-xl border border-amber-200 flex flex-col items-center">
+                <svg viewBox="0 0 240 120" class="w-full h-24">
+                  <line x1="10" y1="70" x2="230" y2="70" stroke="#cbd5e1" stroke-width="1.5" stroke-dasharray="3 3" />
+                  <!-- S-shape stepped line -->
+                  <polyline points="20,100 75,100 165,40 220,40" fill="none" stroke="#d97706" stroke-width="2.5" />
+                  <circle cx="75" cy="100" r="3" fill="#d97706" />
+                  <text x="45" y="112" fill="#b45309" font-size="7.5">Floor (X1)</text>
+                  <circle cx="165" cy="40" r="3" fill="#d97706" />
+                  <text x="165" y="32" fill="#b45309" font-size="7.5">Cap (X2)</text>
+                </svg>
+              </div>
+
+              <div class="space-y-1 text-slate-800">
+                <div>&bull; <strong>Zero-Cost Construction:</strong> The premium received from writing the OTM Call exactly funds the purchase of the OTM Put (\(C \approx P\)).</div>
+                <div>&bull; <strong>Downside Floor:</strong> Locked at Put Strike X<sub>1</sub>.</div>
+                <div>&bull; <strong>Upside Cap:</strong> Capped at Call Strike X<sub>2</sub>.</div>
+              </div>
+            </div>
+            <div class="p-2 rounded bg-amber-100 text-amber-950 text-[10.5px]">
+              Institutional fund managers love Collars because they provide guaranteed downside capital preservation without requiring net cash budget.
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Section 17.5 -->
+      <section id="section-5" class="bg-white rounded-3xl p-6 sm:p-8 border border-slate-200 shadow-sm space-y-6">
+        <div class="flex items-center justify-between">
+          <div class="flex items-center gap-2 text-xs font-bold text-slate-500 uppercase tracking-wider">
+            <span class="w-2 h-2 rounded-full bg-slate-400"></span> Section 17.5 &bull; Quick Refresher & Mechanics
+          </div>
+          <span class="text-xs px-2.5 py-1 rounded-full bg-slate-100 text-slate-600 font-semibold">4-Leg Range Play</span>
+        </div>
+
+        <div>
+          <h2 class="font-display font-bold text-xl sm:text-2xl text-slate-900">Butterfly Spread (Neutral Range Strategy)</h2>
+          <p class="text-sm text-slate-600 mt-1 leading-relaxed">
+            A Butterfly Spread is an advanced, strictly defined-risk strategy designed to capitalize on low volatility and pinpoint consolidation within an expected range.
+          </p>
+        </div>
+
+        <div class="p-5 rounded-2xl bg-slate-50 border border-slate-200 space-y-4 text-xs">
+          <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2">
+            <span class="font-bold text-slate-900 text-sm">Long Call Butterfly Spread Construction</span>
+            <span class="px-2.5 py-0.5 rounded-full bg-blue-100 text-blue-800 font-bold text-[11px]">4 Options &bull; 3 Strikes</span>
+          </div>
+
+          <p class="text-slate-700">
+            A Butterfly uses <strong>4 contracts across 3 equidistant strike prices</strong> (\(X_1 < X_2 < X_3\) such that \(X_2 - X_1 = X_3 - X_2\)):
+          </p>
+
+          <div class="bg-white p-3 rounded-xl border border-slate-200 text-center font-mono text-xs sm:text-sm font-bold text-slate-800 space-y-1">
+            <div class="text-emerald-700">Buy 1 ITM Call (X<sub>1</sub>) + Sell 2 ATM Calls (X<sub>2</sub>) + Buy 1 OTM Call (X<sub>3</sub>)</div>
+            <div class="text-slate-500 text-[11px] font-normal">(Can also be constructed identically using Puts)</div>
+          </div>
+
+          <!-- SVG Payoff: Butterfly Spread -->
+          <div class="p-3 bg-white rounded-xl border border-slate-200 flex flex-col items-center">
+            <span class="text-[11px] font-bold text-slate-700 mb-1">Butterfly Spread "Tent" Payoff Profile</span>
+            <svg viewBox="0 0 300 130" class="w-full max-w-[280px] h-28">
+              <line x1="20" y1="85" x2="280" y2="85" stroke="#cbd5e1" stroke-width="1.5" stroke-dasharray="3 3" />
+              <text x="25" y="80" fill="#94a3b8" font-size="8">Zero P&L</text>
+              <!-- Tent shape -->
+              <polyline points="30,110 80,110 150,30 220,110 270,110" fill="none" stroke="#059669" stroke-width="2.5" />
+              <circle cx="150" cy="30" r="3.5" fill="#059669" />
+              <text x="135" y="20" fill="#065f46" font-size="9" font-weight="bold">Max Profit @ X2</text>
+              <circle cx="80" cy="110" r="3" fill="#059669" />
+              <text x="75" y="122" fill="#334155" font-size="8">X1</text>
+              <circle cx="220" cy="110" r="3" fill="#059669" />
+              <text x="215" y="122" fill="#334155" font-size="8">X3</text>
+            </svg>
+          </div>
+
+          <!-- Formula & Payoff Breakdown Grid -->
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 text-slate-700">
+            <div class="p-3 rounded-xl bg-white border border-slate-200 space-y-1">
+              <strong class="text-slate-900 block mb-0.5">Key Formulas:</strong>
+              <div>&bull; <strong>Net Cost:</strong> C(X<sub>1</sub>) - 2C(X<sub>2</sub>) + C(X<sub>3</sub>) (Net Debit)</div>
+              <div>&bull; <strong>Max Profit:</strong> (X<sub>2</sub> - X<sub>1</sub>) - Net Debit (Occurs exactly at S<sub>T</sub> = X<sub>2</sub>)</div>
+              <div>&bull; <strong>Max Loss:</strong> Net Debit Paid (Occurs if S<sub>T</sub> &le; X<sub>1</sub> or S<sub>T</sub> &ge; X<sub>3</sub>)</div>
+              <div>&bull; <strong>Lower Breakeven:</strong> X<sub>1</sub> + Net Debit</div>
+              <div>&bull; <strong>Upper Breakeven:</strong> X<sub>3</sub> - Net Debit</div>
+            </div>
+
+            <div class="p-3 rounded-xl bg-white border border-slate-200 space-y-1">
+              <strong class="text-slate-900 block mb-0.5">Worked Numerical Example:</strong>
+              <div class="text-[11px] text-slate-600">Underlying = ₹1,000. Strikes: 950, 1000, 1050.</div>
+              <div class="font-mono text-[11px]">
+                Buy 950 Call @ ₹65<br>
+                Sell 2 &times; 1000 Calls @ ₹30 (Rec: ₹60)<br>
+                Buy 1050 Call @ ₹12<br>
+                <strong>Net Debit</strong> = 65 - 60 + 12 = <strong>₹17.00</strong><br>
+                <strong>Max Profit</strong> = (1000 - 950) - 17 = <strong>₹33.00</strong><br>
+                <strong>Breakevens:</strong> 967 and 1,033
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Section 17.6 -->
+      <section id="section-6" class="bg-white rounded-3xl p-6 sm:p-8 border border-amber-200 shadow-sm space-y-6">
+        <div class="flex items-center justify-between">
+          <div class="flex items-center gap-2 text-xs font-bold text-amber-700 uppercase tracking-wider">
+            <span class="w-2 h-2 rounded-full bg-amber-500"></span> Section 17.6 &bull; Super High Exam Yield ⭐
+          </div>
+          <span class="text-xs px-2.5 py-1 rounded-full bg-amber-100 text-amber-800 font-bold">Market Sentiment & OI</span>
+        </div>
+
+        <div>
+          <h2 class="font-display font-bold text-xl sm:text-2xl text-slate-900">Put-Call Ratio (PCR) & Price-OI Interpretation Matrix</h2>
+          <p class="text-sm text-slate-600 mt-1 leading-relaxed">
+            Market technicians and derivatives analysts monitor Open Interest (OI), Volume, and the Put-Call Ratio (PCR) to decode institutional positioning and anticipate market turning points.
+          </p>
+        </div>
+
+        <!-- Master Price-OI Matrix Table -->
+        <div class="space-y-3">
+          <div class="flex items-center justify-between">
+            <h3 class="font-display font-bold text-base text-slate-900 flex items-center gap-1.5">
+              <i data-lucide="bar-chart-2" class="w-4 h-4 text-indigo-600"></i>
+              The 4 Price & Open Interest (OI) Scenarios
+            </h3>
+            <span class="text-[11px] text-slate-500 font-medium">Frequently Tested in Exam</span>
+          </div>
+
+          <div class="overflow-x-auto rounded-2xl border border-slate-200">
+            <table class="min-w-full text-xs text-left">
+              <thead class="bg-slate-100 text-slate-700 font-bold uppercase tracking-wider">
+                <tr>
+                  <th class="p-3">Futures Price</th>
+                  <th class="p-3">Open Interest (OI)</th>
+                  <th class="p-3">Market Classification</th>
+                  <th class="p-3">Cost of Carry / Basis</th>
+                  <th class="p-3">Market Participant Action</th>
+                  <th class="p-3">Overall Outlook</th>
+                </tr>
+              </thead>
+              <tbody class="divide-y divide-slate-200">
+                <tr class="hover:bg-slate-50">
+                  <td class="p-3 font-bold text-emerald-700 flex items-center gap-1">
+                    <i data-lucide="arrow-up-right" class="w-3.5 h-3.5"></i> Rising
+                  </td>
+                  <td class="p-3 font-bold text-emerald-700">Increasing (&uarr;)</td>
+                  <td class="p-3 font-bold text-blue-900 bg-blue-50/40">Long Build-Up</td>
+                  <td class="p-3 text-slate-700 font-mono">Positive & Expanding</td>
+                  <td class="p-3 text-slate-700">Aggressive buyers creating fresh long positions; willing to pay premium.</td>
+                  <td class="p-3 font-bold text-emerald-700">Strongly Bullish Continuation</td>
+                </tr>
+                <tr class="hover:bg-slate-50">
+                  <td class="p-3 font-bold text-rose-700 flex items-center gap-1">
+                    <i data-lucide="arrow-down-right" class="w-3.5 h-3.5"></i> Falling
+                  </td>
+                  <td class="p-3 font-bold text-emerald-700">Increasing (&uarr;)</td>
+                  <td class="p-3 font-bold text-rose-900 bg-rose-50/40">Short Build-Up</td>
+                  <td class="p-3 text-slate-700 font-mono">Turning Negative (Discount)</td>
+                  <td class="p-3 text-slate-700">Aggressive sellers creating fresh short positions; dumping futures below cash.</td>
+                  <td class="p-3 font-bold text-rose-700">Strongly Bearish Continuation</td>
+                </tr>
+                <tr class="hover:bg-slate-50">
+                  <td class="p-3 font-bold text-rose-700 flex items-center gap-1">
+                    <i data-lucide="arrow-down-right" class="w-3.5 h-3.5"></i> Falling
+                  </td>
+                  <td class="p-3 font-bold text-rose-700">Decreasing (&darr;)</td>
+                  <td class="p-3 font-bold text-amber-900 bg-amber-50/40">Long Unwinding</td>
+                  <td class="p-3 text-slate-700 font-mono">Contracting</td>
+                  <td class="p-3 text-slate-700">Exhausted buyers squaring off existing longs, triggering stop-loss cascades.</td>
+                  <td class="p-3 font-bold text-amber-700">Mildly Bearish / Corrective</td>
+                </tr>
+                <tr class="hover:bg-slate-50">
+                  <td class="p-3 font-bold text-emerald-700 flex items-center gap-1">
+                    <i data-lucide="arrow-up-right" class="w-3.5 h-3.5"></i> Rising
+                  </td>
+                  <td class="p-3 font-bold text-rose-700">Decreasing (&darr;)</td>
+                  <td class="p-3 font-bold text-indigo-900 bg-indigo-50/40">Short Covering</td>
+                  <td class="p-3 text-slate-700 font-mono">Recovering</td>
+                  <td class="p-3 text-slate-700">Trapped short sellers rushing to buy back contracts to avoid blowout losses.</td>
+                  <td class="p-3 font-bold text-indigo-700">Bullish, but Fragile / Squeeze</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <!-- Put-Call Ratio (PCR) Contrarian Analysis -->
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4 text-xs">
+          <div class="p-5 rounded-2xl bg-amber-50/70 border border-amber-200 space-y-2.5">
+            <div class="flex items-center justify-between">
+              <span class="font-bold text-amber-950 text-sm">Put-Call Ratio (PCR) Mechanics</span>
+              <span class="px-2 py-0.5 rounded bg-amber-100 text-amber-900 font-bold text-[10px]">Contrarian Tool</span>
+            </div>
+            <p class="text-slate-700 leading-relaxed">
+              In the Indian markets, retail traders predominantly <em>buy</em> calls/puts, while well-capitalized institutional players (DIIs, FPIs, prop desks) <em>write (sell)</em> options. Therefore, <strong>high put writing indicates strong floor support</strong>, while <strong>high call writing indicates heavy ceiling resistance</strong>.
+            </p>
+            <div class="p-2.5 bg-white rounded-xl border border-amber-200 font-mono text-amber-900 font-bold text-center">
+              PCR (OI) = Total Put Open Interest / Total Call Open Interest
+            </div>
+          </div>
+
+          <div class="p-5 rounded-2xl bg-slate-50 border border-slate-200 space-y-2 text-slate-700">
+            <span class="font-bold text-slate-900 text-sm block mb-1">Standard PCR Benchmark Thresholds:</span>
+            <ul class="space-y-1.5">
+              <li class="p-2 rounded-lg bg-emerald-50 border border-emerald-200">
+                <strong class="text-emerald-900 font-bold">PCR &gt; 1.30 to 1.50 (Oversold):</strong> Extreme put writing. The market has become excessively one-sided and bearish. Contrarians view this as an imminent <strong>bullish bounce / bottom reversal</strong>.
+              </li>
+              <li class="p-2 rounded-lg bg-rose-50 border border-rose-200">
+                <strong class="text-rose-900 font-bold">PCR &lt; 0.60 to 0.70 (Overbought):</strong> Extreme call writing and complacency. Contrarians view this as an imminent <strong>bearish pullback / top reversal</strong>.
+              </li>
+              <li class="p-2 rounded-lg bg-slate-100 border border-slate-200 text-slate-600">
+                <strong>PCR between 0.90 and 1.10:</strong> Neutral baseline balance between buyers and sellers.
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <!-- Section 17.7 Master Strategy Cheat Sheet -->
+      <section id="section-7" class="bg-white rounded-3xl p-6 sm:p-8 border border-slate-200 shadow-sm space-y-4">
+        <div class="flex items-center justify-between">
+          <div class="flex items-center gap-2 text-xs font-bold text-indigo-700 uppercase tracking-wider">
+            <span class="w-2 h-2 rounded-full bg-indigo-500"></span> Section 17.7 &bull; Exam Summary Matrix
+          </div>
+          <span class="text-xs px-2.5 py-1 rounded-full bg-indigo-50 text-indigo-700 font-bold">Quick Review Table</span>
+        </div>
+
+        <h2 class="font-display font-bold text-xl sm:text-2xl text-slate-900">Master F&O Strategies Comparison Table</h2>
+
+        <div class="overflow-x-auto rounded-2xl border border-slate-200">
+          <table class="min-w-full text-xs text-left">
+            <thead class="bg-slate-100 text-slate-700 font-bold uppercase tracking-wider">
+              <tr>
+                <th class="p-3">Strategy Name</th>
+                <th class="p-3">Market Outlook</th>
+                <th class="p-3">Position Structure</th>
+                <th class="p-3">Max Profit</th>
+                <th class="p-3">Max Loss</th>
+                <th class="p-3">Breakeven(s)</th>
+              </tr>
+            </thead>
+            <tbody class="divide-y divide-slate-200 text-slate-700">
+              <tr class="hover:bg-slate-50">
+                <td class="p-3 font-bold text-amber-900">Covered Call</td>
+                <td class="p-3">Mildly Bullish / Neutral</td>
+                <td class="p-3 font-mono text-[11px]">Long Stock + Short OTM Call</td>
+                <td class="p-3 text-emerald-700 font-semibold">(X - S<sub>0</sub>) + Call Prem</td>
+                <td class="p-3 text-rose-700 font-semibold">S<sub>0</sub> - Call Prem</td>
+                <td class="p-3 font-mono">S<sub>0</sub> - Call Prem</td>
+              </tr>
+              <tr class="hover:bg-slate-50">
+                <td class="p-3 font-bold text-emerald-900">Protective Put</td>
+                <td class="p-3">Bullish with Crash Cover</td>
+                <td class="p-3 font-mono text-[11px]">Long Stock + Long OTM Put</td>
+                <td class="p-3 text-emerald-700 font-semibold">Unlimited</td>
+                <td class="p-3 text-rose-700 font-semibold">(S<sub>0</sub> - X) + Put Prem</td>
+                <td class="p-3 font-mono">S<sub>0</sub> + Put Prem</td>
+              </tr>
+              <tr class="hover:bg-slate-50">
+                <td class="p-3 font-bold text-blue-900">Bull Call Spread</td>
+                <td class="p-3">Moderately Bullish</td>
+                <td class="p-3 font-mono text-[11px]">Buy Call X<sub>1</sub> + Sell Call X<sub>2</sub></td>
+                <td class="p-3 text-emerald-700 font-semibold">(X<sub>2</sub> - X<sub>1</sub>) - Debit</td>
+                <td class="p-3 text-rose-700 font-semibold">Net Debit Paid</td>
+                <td class="p-3 font-mono">X<sub>1</sub> + Net Debit</td>
+              </tr>
+              <tr class="hover:bg-slate-50">
+                <td class="p-3 font-bold text-rose-900">Bear Put Spread</td>
+                <td class="p-3">Moderately Bearish</td>
+                <td class="p-3 font-mono text-[11px]">Buy Put X<sub>2</sub> + Sell Put X<sub>1</sub></td>
+                <td class="p-3 text-emerald-700 font-semibold">(X<sub>2</sub> - X<sub>1</sub>) - Debit</td>
+                <td class="p-3 text-rose-700 font-semibold">Net Debit Paid</td>
+                <td class="p-3 font-mono">X<sub>2</sub> - Net Debit</td>
+              </tr>
+              <tr class="hover:bg-slate-50">
+                <td class="p-3 font-bold text-purple-900">Long Straddle</td>
+                <td class="p-3">High Volatility (Any Direction)</td>
+                <td class="p-3 font-mono text-[11px]">Buy ATM Call (X) + Buy ATM Put (X)</td>
+                <td class="p-3 text-emerald-700 font-semibold">Unlimited</td>
+                <td class="p-3 text-rose-700 font-semibold">Total Premium Paid</td>
+                <td class="p-3 font-mono">X &plusmn; Total Premium</td>
+              </tr>
+              <tr class="hover:bg-slate-50">
+                <td class="p-3 font-bold text-purple-900">Long Strangle</td>
+                <td class="p-3">Very High Volatility (Cheaper)</td>
+                <td class="p-3 font-mono text-[11px]">Buy OTM Put (X<sub>1</sub>) + Buy OTM Call (X<sub>2</sub>)</td>
+                <td class="p-3 text-emerald-700 font-semibold">Unlimited</td>
+                <td class="p-3 text-rose-700 font-semibold">Total Premium Paid</td>
+                <td class="p-3 font-mono">X<sub>1</sub> - Prem & X<sub>2</sub> + Prem</td>
+              </tr>
+              <tr class="hover:bg-slate-50">
+                <td class="p-3 font-bold text-amber-900">Zero-Cost Collar</td>
+                <td class="p-3">Protective with Capped Upside</td>
+                <td class="p-3 font-mono text-[11px]">Long Stock + Buy Put (X<sub>1</sub>) + Sell Call (X<sub>2</sub>)</td>
+                <td class="p-3 text-emerald-700 font-semibold">X<sub>2</sub> - S<sub>0</sub></td>
+                <td class="p-3 text-rose-700 font-semibold">S<sub>0</sub> - X<sub>1</sub></td>
+                <td class="p-3 font-mono">S<sub>0</sub> (if Net Debit = 0)</td>
+              </tr>
+              <tr class="hover:bg-slate-50">
+                <td class="p-3 font-bold text-teal-900">Long Butterfly</td>
+                <td class="p-3">Completely Range-Bound</td>
+                <td class="p-3 font-mono text-[11px]">Buy 1 X<sub>1</sub> + Sell 2 X<sub>2</sub> + Buy 1 X<sub>3</sub></td>
+                <td class="p-3 text-emerald-700 font-semibold">(X<sub>2</sub> - X<sub>1</sub>) - Debit</td>
+                <td class="p-3 text-rose-700 font-semibold">Net Debit Paid</td>
+                <td class="p-3 font-mono">X<sub>1</sub> + Debit & X<sub>3</sub> - Debit</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <!-- Section 17.8 Interactive Quiz -->
+      <section id="interactive-quiz" class="bg-slate-900 text-white rounded-3xl p-6 sm:p-8 border border-slate-800 shadow-xl space-y-6">
+        <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 border-b border-slate-800 pb-5">
+          <div>
+            <div class="flex items-center gap-2 text-xs font-bold text-emerald-400 uppercase tracking-wider mb-1">
+              <i data-lucide="check-circle" class="w-4 h-4"></i> Interactive Exam Assessment
+            </div>
+            <h3 class="font-display font-bold text-xl sm:text-2xl text-white">Chapter 17 Practice Quiz</h3>
+            <p class="text-xs text-slate-400 mt-1">12 Comprehensive questions covering Beta hedging formulas, spreads, straddles, collars, PCR, and Open Interest build-ups.</p>
+          </div>
+          <div class="flex items-center gap-3">
+            <div class="text-right">
+              <span class="text-xs text-slate-400">Progress</span>
+              <div class="text-sm font-bold text-emerald-400"><span id="answered-count">0</span> / 12</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Questions Container -->
+        <div id="quiz-container" class="space-y-6"></div>
+
+        <!-- Action Bar -->
+        <div class="pt-4 border-t border-slate-800 flex flex-col sm:flex-row items-center justify-between gap-4">
+          <button id="submit-quiz-btn" onclick="submitQuiz()" class="w-full sm:w-auto px-6 py-3 rounded-xl bg-emerald-600 hover:bg-emerald-500 font-bold text-sm shadow-lg shadow-emerald-600/30 transition-all flex items-center justify-center gap-2">
+            <span>Submit Quiz & View Results</span>
+            <i data-lucide="arrow-right" class="w-4 h-4"></i>
+          </button>
+          <button id="reset-quiz-btn" onclick="resetQuiz()" class="hidden w-full sm:w-auto px-6 py-3 rounded-xl bg-slate-800 hover:bg-slate-700 text-slate-300 font-bold text-sm transition-all flex items-center justify-center gap-2">
+            <i data-lucide="rotate-ccw" class="w-4 h-4"></i>
+            <span>Retake Quiz</span>
+          </button>
+        </div>
+
+        <!-- Quiz Results -->
+        <div id="quiz-results" class="hidden p-6 rounded-2xl bg-slate-800/80 border border-slate-700 space-y-4">
+          <div class="flex items-center justify-between">
+            <h4 class="font-display font-bold text-lg text-white">Quiz Score Summary</h4>
+            <span id="result-status-badge" class="px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider"></span>
+          </div>
+          <div class="flex items-baseline gap-3">
+            <span id="score-display" class="font-display font-extrabold text-4xl text-emerald-400"></span>
+            <span id="percentage-display" class="text-sm text-slate-400 font-medium"></span>
+          </div>
+          <p id="result-summary-text" class="text-xs sm:text-sm text-slate-300"></p>
+        </div>
+      </section>
+
+      <!-- Navigation Footer -->
+      <footer class="pt-6 border-t border-slate-200 flex items-center justify-between">
+        <a href="module2-ch16.html" class="flex items-center gap-2 px-4 py-2.5 rounded-xl border border-slate-200 bg-white hover:bg-slate-50 text-slate-700 font-medium text-xs transition-colors">
+          <i data-lucide="arrow-left" class="w-4 h-4"></i>
+          <span>Prev: Chapter 16 (Options)</span>
+        </a>
+        <a href="module3.html" class="flex items-center gap-2 px-4 py-2.5 rounded-xl bg-purple-600 hover:bg-purple-700 text-white font-semibold text-xs shadow-sm transition-colors">
+          <span>Proceed to Module 3 Hub</span>
+          <i data-lucide="arrow-right" class="w-4 h-4"></i>
+        </a>
+      </footer>
+
+    </div>
+  </div>
+
+  <script>
+    const questionsData = [
+      {
+        id: 1,
+        question: "A mutual fund portfolio has a market value of ₹10 Crores and a Beta of 1.50. Nifty 50 Futures trades at ₹20,000 with a contract lot size of 50 units. How many Nifty Futures contracts must the manager sell to achieve a complete hedge (Target Beta = 0)?",
+        options: [
+          { key: "a", text: "100 contracts" },
+          { key: "b", text: "150 contracts" },
+          { key: "c", text: "75 contracts" },
+          { key: "d", text: "200 contracts" }
+        ],
+        correct: "b",
+        explanation: "<strong>Correct Answer: B (150 contracts)</strong><br>&bull; Contract Value = Futures Price &times; Lot Size = 20,000 &times; 50 = ₹10,00,000 (₹10 Lakhs).<br>&bull; N = [(&beta;<sub>target</sub> - &beta;<sub>p</sub>) &times; V<sub>p</sub>] / Contract Value = [(0 - 1.50) &times; 10,00,00,000] / 10,00,000 = -15,00,00,000 / 10,00,000 = -150 contracts.<br>&bull; Distractor Analysis: Option A (100) assumes Beta = 1.0; Option C (75) incorrectly divides by 2; Option D (200) assumes Beta = 2.0."
+      },
+      {
+        id: 2,
+        question: "Which specific position combination constitutes a 'Covered Call' strategy, and what is its primary market objective?",
+        options: [
+          { key: "a", text: "Long Stock + Long Put; aimed at crash protection" },
+          { key: "b", text: "Long Stock + Short OTM Call; aimed at recurring income generation in a flat market" },
+          { key: "c", text: "Long Call + Short Put; aimed at synthetic long leverage" },
+          { key: "d", text: "Short Stock + Long Call; aimed at short squeeze insurance" }
+        ],
+        correct: "b",
+        explanation: "<strong>Correct Answer: B (Long Stock + Short OTM Call)</strong><br>&bull; In a covered call, the investor already owns the physical shares and sells an Out-of-the-Money call option to collect premium in a range-bound or mildly bullish environment.<br>&bull; Distractor Analysis: Option A is a Protective Put; Option C is a Synthetic Long Future; Option D is a Protective Call against a short position."
+      },
+      {
+        id: 3,
+        question: "An equity investor holding shares of Reliance Industries buys an OTM Put option on Reliance. What is the payoff profile and synthetic equivalent of this 'Protective Put'?",
+        options: [
+          { key: "a", text: "Limited upside with capped downside; synthetic covered call" },
+          { key: "b", text: "Unlimited upside with strictly capped downside (floor); synthetic long call" },
+          { key: "c", text: "Unlimited downside with capped upside; synthetic short put" },
+          { key: "d", text: "Zero profit band with unlimited loss on both sides; synthetic short straddle" }
+        ],
+        correct: "b",
+        explanation: "<strong>Correct Answer: B (Unlimited upside with strictly capped downside; synthetic long call)</strong><br>&bull; By Put-Call Parity (S + P = C + X/(1+r)^T), holding stock plus put has the exact same asymmetric payoff profile as a Long Call option: limited downside (loss capped at S0 - X + Premium) and unlimited upside potential.<br>&bull; Distractors: Option A incorrectly caps upside; Option C describes a catastrophic short stock position; Option D describes an unhedged short straddle."
+      },
+      {
+        id: 4,
+        question: "How is a Bull Call Spread constructed, and what is its net cashflow characteristic?",
+        options: [
+          { key: "a", text: "Buy Higher Strike Call + Sell Lower Strike Call; Net Credit" },
+          { key: "b", text: "Buy Lower Strike Call (X1) + Sell Higher Strike Call (X2); Net Debit" },
+          { key: "c", text: "Buy Lower Strike Put + Sell Higher Strike Put; Net Debit" },
+          { key: "d", text: "Sell ATM Call + Buy OTM Put; Net Credit" }
+        ],
+        correct: "b",
+        explanation: "<strong>Correct Answer: B (Buy Lower Strike Call X1 + Sell Higher Strike Call X2; Net Debit)</strong><br>&bull; Lower strike calls (X1) have higher intrinsic/time value than higher strike calls (X2). Therefore, buying X1 and selling X2 results in a net cash outflow (Net Debit).<br>&bull; Distractor Analysis: Option A describes a Bear Call Spread (Credit); Option C is an inverted put spread; Option D is an unleveraged collar variant."
+      },
+      {
+        id: 5,
+        question: "A trader executes a Bull Call Spread by purchasing a 1,000 Call at ₹45 and selling a 1,050 Call at ₹18. What are the Maximum Profit and Breakeven stock price at expiration?",
+        options: [
+          { key: "a", text: "Max Profit: ₹27.00; Breakeven: ₹1,045.00" },
+          { key: "b", text: "Max Profit: ₹23.00; Breakeven: ₹1,027.00" },
+          { key: "c", text: "Max Profit: ₹50.00; Breakeven: ₹1,000.00" },
+          { key: "d", text: "Max Profit: ₹18.00; Breakeven: ₹1,018.00" }
+        ],
+        correct: "b",
+        explanation: "<strong>Correct Answer: B (Max Profit: ₹23.00; Breakeven: ₹1,027.00)</strong><br>&bull; Net Debit Paid = 45 - 18 = ₹27.00.<br>&bull; Strike Difference = 1,050 - 1,000 = ₹50.00.<br>&bull; Max Profit = Strike Difference - Net Debit = 50 - 27 = ₹23.00.<br>&bull; Breakeven = Lower Strike (X1) + Net Debit = 1,000 + 27 = ₹1,027.00.<br>&bull; Distractor Analysis: Option A confuses Net Debit with Max Profit; Option C ignores the ₹27 debit paid; Option D only looks at the short call premium."
+      },
+      {
+        id: 6,
+        question: "An options trader simultaneously purchases a 24,000 Strike Nifty Call at ₹220 and a 24,000 Strike Nifty Put at ₹180 with the identical expiration date. What strategy is this, and when does it achieve maximum profitability?",
+        options: [
+          { key: "a", text: "Long Strangle; when Nifty settles exactly at 24,000" },
+          { key: "b", text: "Long Straddle; when Nifty makes a massive directional move either upwards or downwards" },
+          { key: "c", text: "Bull Spread; when Nifty rises above 24,400" },
+          { key: "d", text: "Butterfly Spread; when volatility drops to zero" }
+        ],
+        correct: "b",
+        explanation: "<strong>Correct Answer: B (Long Straddle; when Nifty makes a massive directional move either upwards or downwards)</strong><br>&bull; Buying both a Call and Put at the SAME strike price (24,000) and expiry is a Long Straddle. It profits from explosive volatility in either direction.<br>&bull; Distractor Analysis: Option A is incorrect because a Strangle uses two different strikes; Option C is incorrect because a Bull spread uses options of the same class; Option D is a 4-leg neutral strategy."
+      },
+      {
+        id: 7,
+        question: "In the above Long Straddle (Strike = 24,000, Total Premium Paid = ₹400), what are the two exact expiration Breakeven points?",
+        options: [
+          { key: "a", text: "23,600 and 24,400" },
+          { key: "b", text: "23,800 and 24,200" },
+          { key: "c", text: "23,500 and 24,500" },
+          { key: "d", text: "24,000 and 24,400" }
+        ],
+        correct: "a",
+        explanation: "<strong>Correct Answer: A (23,600 and 24,400)</strong><br>&bull; Upper Breakeven = Strike + Total Premium = 24,000 + 400 = 24,400.<br>&bull; Lower Breakeven = Strike - Total Premium = 24,000 - 400 = 23,600.<br>&bull; The strategy incurs a loss if Nifty expires anywhere inside the range 23,600 to 24,400, suffering a maximum loss of ₹400 exactly at 24,000."
+      },
+      {
+        id: 8,
+        question: "How does a Long Strangle primarily differ from a Long Straddle in cost and breakeven requirements?",
+        options: [
+          { key: "a", text: "Strangle uses different expiration months and has zero time decay" },
+          { key: "b", text: "Strangle uses different strike prices (OTM Call + OTM Put), reducing upfront premium cost but requiring a larger underlying move to profit" },
+          { key: "c", text: "Strangle involves selling options and has unlimited risk on both sides" },
+          { key: "d", text: "Strangle is an arbitrage strategy executed exclusively on futures contracts" }
+        ],
+        correct: "b",
+        explanation: "<strong>Correct Answer: B (Uses different strike prices OTM Call + OTM Put, reducing upfront premium cost but requiring a larger underlying move)</strong><br>&bull; Because both the Call (X2) and Put (X1) are Out-of-the-Money, their combined premium is significantly lower than that of an ATM Straddle. However, the stock must move much farther to surpass either OTM strike plus total premium paid.<br>&bull; Distractor Analysis: Options A, C, and D are false definitions."
+      },
+      {
+        id: 9,
+        question: "What position combination establishes a 'Zero-Cost Collar' for an institutional equity portfolio manager?",
+        options: [
+          { key: "a", text: "Long Stock + Buy OTM Put + Sell OTM Call (with Call Premium received &approx; Put Premium paid)" },
+          { key: "b", text: "Long Stock + Sell OTM Put + Buy OTM Call" },
+          { key: "c", text: "Short Stock + Buy ATM Put + Sell ATM Call" },
+          { key: "d", text: "Long Futures + Short Futures of next month" }
+        ],
+        correct: "a",
+        explanation: "<strong>Correct Answer: A (Long Stock + Buy OTM Put + Sell OTM Call with Call Premium &approx; Put Premium)</strong><br>&bull; The manager owns the stock, buys a protective put to lock in a price floor, and funds the purchase by selling an OTM call. If premiums match, net out-of-pocket cost is zero.<br>&bull; Distractor Analysis: Option B creates unlimited downside risk; Option C is an inverted synthetic position; Option D is a calendar futures spread."
+      },
+      {
+        id: 10,
+        question: "If an equity futures contract experiences a falling price alongside a significant INCREASE in Open Interest (OI), what market condition is signaled?",
+        options: [
+          { key: "a", text: "Long Build-Up (Bullish continuation)" },
+          { key: "b", text: "Short Build-Up (Bearish continuation)" },
+          { key: "c", text: "Short Covering (Bullish squeeze)" },
+          { key: "d", text: "Long Unwinding (Temporary correction)" }
+        ],
+        correct: "b",
+        explanation: "<strong>Correct Answer: B (Short Build-Up - Bearish continuation)</strong><br>&bull; Falling price combined with rising Open Interest indicates that aggressive short sellers are creating fresh contracts, driving prices lower with expanding commitment.<br>&bull; Distractor Analysis: Long Build-Up has Price &uarr; and OI &uarr;; Short Covering has Price &uarr; and OI &darr;; Long Unwinding has Price &darr; and OI &darr;."
+      },
+      {
+        id: 11,
+        question: "When futures price is rising rapidly while Open Interest (OI) is visibly DECREASING, what market dynamic is taking place?",
+        options: [
+          { key: "a", text: "Long Build-Up" },
+          { key: "b", text: "Short Covering rally" },
+          { key: "c", text: "Short Build-Up" },
+          { key: "d", text: "Bear Put Spread execution" }
+        ],
+        correct: "b",
+        explanation: "<strong>Correct Answer: B (Short Covering rally)</strong><br>&bull; A rising price accompanied by falling Open Interest indicates that previous short sellers are rushing to buy back contracts to square off losing positions. Such rallies are typically sharp but lack fresh buying conviction."
+      },
+      {
+        id: 12,
+        question: "An equity index has an unusually high Open Interest Put-Call Ratio (PCR > 1.45). How does a contrarian derivatives analyst interpret this signal?",
+        options: [
+          { key: "a", text: "Extreme panic guarantees an immediate further market collapse" },
+          { key: "b", text: "The market is heavily oversold with strong institutional put support, signaling an imminent bullish reversal" },
+          { key: "c", text: "Index options will be de-listed by SEBI" },
+          { key: "d", text: "Cash interest rates are set to be reduced by the Reserve Bank of India" }
+        ],
+        correct: "b",
+        explanation: "<strong>Correct Answer: B (The market is heavily oversold with strong institutional put support, signaling an imminent bullish reversal)</strong><br>&bull; High PCR (> 1.3-1.5) reflects heavy put writing by institutional writers. Since smart money writes puts when they expect support levels to hold, contrarian analysts treat excessively high PCR as an oversold bottom indicator.<br>&bull; Distractor Analysis: Option A is the common retail misconception; Options C and D are completely irrelevant."
+      }
+    ];
+
+    let userAnswers = {};
+
+    function renderQuiz() {
+      const container = document.getElementById("quiz-container");
+      container.innerHTML = "";
+      questionsData.forEach((q, idx) => {
+        const qDiv = document.createElement("div");
+        qDiv.className = "p-5 rounded-2xl bg-white/5 border border-white/10 space-y-3";
+        
+        let optionsHtml = "";
+        q.options.forEach(opt => {
+          optionsHtml += `
+            <label id="label-${q.id}-${opt.key}" onclick="selectOption(${q.id}, '${opt.key}')" class="flex items-center gap-3 p-3 rounded-xl bg-white/5 hover:bg-white/10 border border-white/5 cursor-pointer text-xs sm:text-sm transition-all">
+              <input type="radio" name="q-${q.id}" value="${opt.key}" class="hidden" />
+              <div class="w-6 h-6 rounded-full border border-slate-500 flex items-center justify-center font-bold text-xs shrink-0 text-slate-300">${opt.key.toUpperCase()}</div>
+              <span class="text-slate-300 leading-relaxed">${opt.text}</span>
+            </label>
+          `;
+        });
+
+        qDiv.innerHTML = `
+          <div class="flex items-center justify-between">
+            <span class="text-xs font-bold text-emerald-400 uppercase tracking-wider">Question ${idx + 1} of ${questionsData.length}</span>
+            <span id="badge-${q.id}" class="text-xs px-2.5 py-0.5 rounded-full bg-slate-800 text-slate-400 font-medium">Unanswered</span>
+          </div>
+          <h4 class="font-display font-semibold text-sm sm:text-base text-white leading-snug">${q.question}</h4>
+          <div class="space-y-2 mt-3">${optionsHtml}</div>
+          <div id="explanation-${q.id}" class="hidden p-4 rounded-xl text-xs sm:text-sm mt-3 space-y-1"></div>
+        `;
+        container.appendChild(qDiv);
+      });
+      lucide.createIcons();
+    }
+
+    function selectOption(qId, key) {
+      userAnswers[qId] = key;
+      document.getElementById("answered-count").innerText = Object.keys(userAnswers).length;
+      
+      const badge = document.getElementById(`badge-${qId}`);
+      if (badge) {
+        badge.innerText = "Selected";
+        badge.className = "text-xs px-2.5 py-0.5 rounded-full bg-emerald-500/20 text-emerald-300 font-medium";
+      }
+
+      const q = questionsData.find(item => item.id === qId);
+      q.options.forEach(opt => {
+        const lbl = document.getElementById(`label-${qId}-${opt.key}`);
+        if (opt.key === key) {
+          lbl.className = "flex items-center gap-3 p-3 rounded-xl bg-emerald-600/30 border border-emerald-400/60 cursor-pointer text-xs sm:text-sm transition-all text-white font-medium";
+        } else {
+          lbl.className = "flex items-center gap-3 p-3 rounded-xl bg-white/5 hover:bg-white/10 border border-white/5 cursor-pointer text-xs sm:text-sm transition-all";
+        }
+      });
+    }
+
+    function submitQuiz() {
+      let score = 0;
+      questionsData.forEach(q => {
+        const selected = userAnswers[q.id];
+        const isCorrect = selected === q.correct;
+        if (isCorrect) score++;
+
+        const explanationDiv = document.getElementById(`explanation-${q.id}`);
+        explanationDiv.classList.remove("hidden");
+
+        if (isCorrect) {
+          explanationDiv.className = "p-4 rounded-xl text-xs sm:text-sm mt-3 bg-emerald-950/70 border border-emerald-500 text-emerald-200 space-y-1";
+          explanationDiv.innerHTML = `
+            <div class="font-bold text-emerald-400 flex items-center gap-1.5 text-sm">
+              <i data-lucide="check-circle" class="w-4 h-4"></i> Correct!
+            </div>
+            <p class="leading-relaxed">${q.explanation}</p>
+          `;
+        } else {
+          explanationDiv.className = "p-4 rounded-xl text-xs sm:text-sm mt-3 bg-rose-950/70 border border-rose-500 text-rose-200 space-y-1";
+          explanationDiv.innerHTML = `
+            <div class="font-bold text-rose-400 flex items-center gap-1.5 text-sm">
+              <i data-lucide="alert-circle" class="w-4 h-4"></i> Incorrect (Your Choice: ${selected ? selected.toUpperCase() : 'None'}, Correct: ${q.correct.toUpperCase()})
+            </div>
+            <p class="leading-relaxed">${q.explanation}</p>
+          `;
+        }
+      });
+
+      const percentage = Math.round((score / questionsData.length) * 100);
+      const passed = percentage >= 60;
+      
+      const resultsDiv = document.getElementById("quiz-results");
+      resultsDiv.classList.remove("hidden");
+
+      const statusBadge = document.getElementById("result-status-badge");
+      statusBadge.innerText = passed ? "Status: Passed (60%+ Benchmark)" : "Status: Needs Revision";
+      statusBadge.className = passed 
+        ? "px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider bg-emerald-500 text-emerald-950" 
+        : "px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider bg-amber-500 text-amber-950";
+
+      document.getElementById("score-display").innerText = `${score} / ${questionsData.length}`;
+      document.getElementById("percentage-display").innerText = `${percentage}% Score (Exam Passing Benchmark: 60%)`;
+
+      document.getElementById("result-summary-text").innerText = passed
+        ? `Outstanding proficiency! You scored ${percentage}%, mastering all core strategies in Chapter 17 (9 Marks). You are fully prepared for this high-yield chapter.`
+        : `You scored ${percentage}%. Review Beta hedging formula derivation, vertical spread breakevens, Straddle payoff limits, and the Open Interest matrix before retaking.`;
+
+      document.getElementById("submit-quiz-btn").classList.add("hidden");
+      document.getElementById("reset-quiz-btn").classList.remove("hidden");
+
+      resultsDiv.scrollIntoView({ behavior: 'smooth' });
+      lucide.createIcons();
+    }
+
+    function resetQuiz() {
+      userAnswers = {};
+      document.getElementById("answered-count").innerText = "0";
+      document.getElementById("quiz-results").classList.add("hidden");
+      document.getElementById("submit-quiz-btn").classList.remove("hidden");
+      document.getElementById("reset-quiz-btn").classList.add("hidden");
+      renderQuiz();
+      document.getElementById("interactive-quiz").scrollIntoView({ behavior: 'smooth' });
+    }
+
+    renderQuiz();
+    lucide.createIcons();
+  </script>
+</body>
+</html>

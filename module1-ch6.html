@@ -1,0 +1,1059 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Chapter 6: Fund Distribution & Channel Management | NISM Series V-D Notes</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+  <script src="https://unpkg.com/lucide@latest"></script>
+
+  <!-- KaTeX for formula rendering -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.min.css">
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.min.js"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/contrib/auto-render.min.js" onload="renderMathInElement(document.body);"></script>
+
+  <!-- Global Module & Chapter Navigation Sidebar -->
+    <!-- Modern Documentation Design System & Zoom Engine -->
+  <link rel="stylesheet" href="modern-docs.css">
+  <script defer src="nav-sidebar.js"></script>
+
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+            display: ['"Space Grotesk"', 'sans-serif']
+          }
+        }
+      }
+    }
+  </script>
+</head>
+<body class="bg-slate-50 text-slate-900 min-h-screen flex flex-col selection:bg-blue-500 selection:text-white">
+
+  <!-- Header -->
+  <header class="sticky top-0 z-50 bg-white/90 backdrop-blur-md border-b border-slate-200">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
+      <div class="flex items-center gap-3">
+        <a href="module1.html" class="flex items-center gap-2 text-slate-500 hover:text-slate-900 transition-colors" title="Back to Module 1">
+          <div class="w-9 h-9 rounded-xl bg-slate-100 hover:bg-slate-200 flex items-center justify-center text-slate-700 transition-colors">
+            <i data-lucide="arrow-left" class="w-4 h-4"></i>
+          </div>
+        </a>
+        <div>
+          <div class="flex items-center gap-2">
+            <span class="text-xs font-bold uppercase tracking-wider text-blue-600 bg-blue-50 px-2 py-0.5 rounded">Module 1</span>
+            <span class="text-xs text-slate-400 font-medium">Chapter 6 of 12</span>
+          </div>
+          <h1 class="font-display font-bold text-base sm:text-lg text-slate-900 leading-tight">Fund Distribution & Channel Management</h1>
+        </div>
+      </div>
+
+      <div class="flex items-center gap-3">
+        <span class="hidden sm:inline-flex items-center gap-1 px-3 py-1 rounded-full text-xs font-bold bg-amber-50 text-amber-700 border border-amber-200">
+          <i data-lucide="award" class="w-3.5 h-3.5"></i>
+          Weightage: 4 Marks
+        </span>
+        <a href="#interactive-quiz" class="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-lg text-xs font-bold bg-blue-600 hover:bg-blue-700 text-white shadow-sm transition-all">
+          <i data-lucide="help-circle" class="w-3.5 h-3.5"></i>
+          <span>Chapter Quiz</span>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Content Grid -->
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 grid grid-cols-1 lg:grid-cols-12 gap-8 flex-grow">
+    
+    <!-- Sidebar Navigation -->
+    <aside class="hidden lg:block lg:col-span-3">
+      <div class="sticky top-24 space-y-4">
+        <!-- Chapter Switcher (3 Module Dropdowns) -->
+        <div id="sidebar-chapter-switcher"></div>
+
+        <div class="bg-white p-5 rounded-2xl border border-slate-200 shadow-sm">
+          <h2 class="text-xs font-bold text-slate-400 uppercase tracking-wider mb-3">Chapter Navigation</h2>
+          <nav class="space-y-1 text-xs">
+            <a href="#section-1" class="block px-2.5 py-1.5 rounded-lg text-slate-600 hover:bg-slate-100 hover:text-blue-600 font-medium">6.1 Distribution Channels & Platforms</a>
+            <a href="#section-2" class="block px-2.5 py-1.5 rounded-lg text-amber-700 font-semibold bg-amber-50/70 hover:bg-amber-100">6.2 Prerequisites: NISM, KYD, ARN & EUIN ⭐</a>
+            <a href="#section-3" class="block px-2.5 py-1.5 rounded-lg text-amber-700 font-semibold bg-amber-50/70 hover:bg-amber-100">6.3 100% Full Trail Model & B-30 Rules ⭐</a>
+            <a href="#section-4" class="block px-2.5 py-1.5 rounded-lg text-slate-600 hover:bg-slate-100 hover:text-blue-600 font-medium">6.4 AMC Due Diligence Thresholds</a>
+            <a href="#section-5" class="block px-2.5 py-1.5 rounded-lg text-amber-700 font-semibold bg-amber-50/70 hover:bg-amber-100">6.5 MFDs vs. RIAs & Code of Conduct ⭐</a>
+            <a href="#section-6" class="block px-2.5 py-1.5 rounded-lg text-amber-700 font-semibold bg-amber-50/70 hover:bg-amber-100">6.6 Nomination & Distributor Change ⭐</a>
+            <a href="#interactive-quiz" class="block px-2.5 py-1.5 rounded-lg text-blue-700 font-bold bg-blue-50 hover:bg-blue-100 mt-2">Practice Quiz (12 MCQs)</a>
+          </nav>
+        </div>
+
+        <div class="p-4 rounded-2xl bg-gradient-to-br from-blue-600 to-indigo-700 text-white shadow-sm text-xs space-y-2">
+          <div class="flex items-center gap-1.5 font-bold">
+            <i data-lucide="zap" class="w-4 h-4 text-amber-300"></i>
+            <span>Exam Focus Highlights</span>
+          </div>
+          <ul class="text-blue-100 leading-relaxed space-y-1.5 list-disc list-inside">
+            <li><strong>100% Full Trail Model:</strong> Upfront commission is completely banned by SEBI.</li>
+            <li><strong>Nominee of deceased MFD:</strong> Does <strong>NOT</strong> need an ARN to receive ongoing trail commission.</li>
+            <li><strong>Change of Distributor:</strong> <strong>NO NOC</strong> required; <strong>12-month cooling-off</strong> period on commissions.</li>
+            <li><strong>ARN Minimum Age:</strong> <strong>18 years</strong>; all applications online-only via AMFI.</li>
+            <li><strong>Due Diligence Triggers:</strong> &gt;20 locations, &gt;₹100 Cr non-inst AUM, &gt;₹1 Cr gross comm, &gt;₹50L single AMC, or &gt;2x turnover.</li>
+          </ul>
+        </div>
+      </div>
+    </aside>
+
+    <!-- Main Notes -->
+    <div class="lg:col-span-9 space-y-8">
+
+      <!-- Section 6.1: Distribution Channels & Platforms -->
+      <section id="section-1" class="bg-white rounded-3xl p-6 sm:p-8 border border-slate-200/90 shadow-sm space-y-6">
+        <div class="flex items-center justify-between">
+          <div class="flex items-center gap-2 text-xs font-bold text-slate-500 uppercase tracking-wider">
+            <span class="w-2 h-2 rounded-full bg-slate-400"></span> Section 6.1 &bull; Fast-Track Refresher
+          </div>
+          <span class="px-2.5 py-1 rounded-full text-xs font-semibold bg-slate-100 text-slate-700">Channels & Infrastructure</span>
+        </div>
+
+        <h2 class="font-display text-xl sm:text-2xl font-bold text-slate-900">Mutual Fund Distribution Channels & Industry Platforms</h2>
+        
+        <p class="text-xs sm:text-sm text-slate-600 leading-relaxed">
+          Mutual fund distribution serves as the crucial financial bridge between Asset Management Companies (AMCs) and diverse retail, high-net-worth, and institutional investors. Distributors are market intermediaries who facilitate investor onboarding, scheme selection, compliance execution, and ongoing portfolio servicing.
+        </p>
+
+        <!-- Channels Grid -->
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4 text-xs sm:text-sm">
+          <div class="p-4 bg-slate-50 rounded-2xl border border-slate-200 space-y-2">
+            <div class="flex items-center gap-2 font-bold text-slate-900">
+              <i data-lucide="user-check" class="w-4 h-4 text-blue-600"></i>
+              <span>1. Individual MFDs (Independent Financial Advisors - IFAs)</span>
+            </div>
+            <p class="text-slate-600 leading-relaxed">
+              Sole proprietors and self-employed professionals. They represent the bedrock of retail mutual fund penetration in Tier-2, Tier-3, and B-30 cities, providing doorstep personalized financial guidance and relationship-driven distribution.
+            </p>
+          </div>
+
+          <div class="p-4 bg-slate-50 rounded-2xl border border-slate-200 space-y-2">
+            <div class="flex items-center gap-2 font-bold text-slate-900">
+              <i data-lucide="landmark" class="w-4 h-4 text-emerald-600"></i>
+              <span>2. Commercial Banks & Small Finance Banks</span>
+            </div>
+            <p class="text-slate-600 leading-relaxed">
+              Institutional distributors leveraging extensive brick-and-mortar branch networks and captive depositor bases. They cross-sell third-party mutual fund schemes to retail and corporate clients through dedicated relationship managers holding EUINs.
+            </p>
+          </div>
+
+          <div class="p-4 bg-slate-50 rounded-2xl border border-slate-200 space-y-2">
+            <div class="flex items-center gap-2 font-bold text-slate-900">
+              <i data-lucide="network" class="w-4 h-4 text-indigo-600"></i>
+              <span>3. National Distributors (NDs) & NBFCs</span>
+            </div>
+            <p class="text-slate-600 leading-relaxed">
+              Large corporate distribution entities (e.g., NJ India, Prudent Corporate) operating organized pan-India branch networks and sub-broker franchisee models. NBFCs distribute mutual funds alongside wealth products, loans, and bonds.
+            </p>
+          </div>
+
+          <div class="p-4 bg-slate-50 rounded-2xl border border-slate-200 space-y-2">
+            <div class="flex items-center gap-2 font-bold text-slate-900">
+              <i data-lucide="line-chart" class="w-4 h-4 text-amber-600"></i>
+              <span>4. Stock Brokers & Exchange Platforms</span>
+            </div>
+            <p class="text-slate-600 leading-relaxed">
+              Registered stock brokers utilize exchange-operated transaction engines—<strong>BSE StAR MF</strong>, <strong>NSE NMF II</strong>, and MCX-SX—allowing investors to transact seamlessly in demat or physical (Statement of Account - SoA) form with automated settlement.
+            </p>
+          </div>
+        </div>
+
+        <!-- EOP Framework Box -->
+        <div class="p-5 rounded-2xl bg-gradient-to-r from-blue-50 to-indigo-50 border border-blue-200 space-y-3">
+          <div class="flex items-center gap-2 text-xs font-bold text-blue-900 uppercase tracking-wider">
+            <i data-lucide="layers" class="w-4 h-4 text-blue-600"></i>
+            <span>SEBI Regulatory Framework: Execution Only Platforms (EOPs)</span>
+          </div>
+          <p class="text-xs sm:text-sm text-slate-700 leading-relaxed">
+            In 2023, SEBI instituted a dedicated regulatory framework for digital aggregators operating as Execution Only Platforms (EOPs) to ensure transparency and prevent conflict of interest in digital Direct and Regular plan distribution:
+          </p>
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 text-xs">
+            <div class="p-3.5 bg-white rounded-xl border border-blue-200 shadow-sm space-y-1">
+              <strong class="text-blue-950 block font-bold">Category 1 EOP (Agent of AMCs)</strong>
+              <p class="text-slate-600">
+                • Registered with <strong>AMFI</strong>.<br>
+                • Acts as an agent of the Asset Management Companies.<br>
+                • Revenue source: Receives flat transaction fees directly from AMCs.<br>
+                • Cannot charge transaction fees to investors.
+              </p>
+            </div>
+            <div class="p-3.5 bg-white rounded-xl border border-blue-200 shadow-sm space-y-1">
+              <strong class="text-indigo-950 block font-bold">Category 2 EOP (Agent of Investors)</strong>
+              <p class="text-slate-600">
+                • Registered with <strong>SEBI as a Stock Broker</strong>.<br>
+                • Acts as an agent of the client/investor.<br>
+                • Revenue source: Can charge nominal transaction fees directly to investors.<br>
+                • Prohibited from receiving any fees or commissions from AMCs.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Centralized Utility Platforms -->
+        <div class="p-5 rounded-2xl bg-slate-50 border border-slate-200 space-y-3">
+          <div class="flex items-center gap-2 text-xs font-bold text-slate-800 uppercase tracking-wider">
+            <i data-lucide="cpu" class="w-4 h-4 text-slate-700"></i>
+            <span>Centralized Industry Infrastructure: MFU & MFCentral</span>
+          </div>
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 text-xs sm:text-sm">
+            <div class="p-4 bg-white rounded-xl border border-slate-200 space-y-1.5 shadow-sm">
+              <strong class="text-slate-900 block font-bold text-sm">MF Utilities (MFU)</strong>
+              <p class="text-slate-600 leading-relaxed">
+                • Industry utility platform promoted by AMCs under the aegis of AMFI.<br>
+                • Allots a unique <strong>Common Account Number (CAN)</strong> to investors.<br>
+                • Facilitates single-window KYC, single-form, and single-mandate/payment execution across schemes of multiple participating fund houses.
+              </p>
+            </div>
+            <div class="p-4 bg-white rounded-xl border border-slate-200 space-y-1.5 shadow-sm">
+              <strong class="text-slate-900 block font-bold text-sm">MFCentral</strong>
+              <p class="text-slate-600 leading-relaxed">
+                • Joint digital initiative created by RTAs (<strong>CAMS & KFintech</strong>) under SEBI's mandate.<br>
+                • Offers a unified consolidated portfolio view across all AMCs linked to an investor's PAN and mobile number.<br>
+                • Executes digital non-commercial service requests (NCSR)—such as change of bank mandate, address, email, nomination, and transmission—as well as commercial buy/sell transactions.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Section 6.2: Prerequisites to Become an MFD -->
+      <section id="section-2" class="bg-white rounded-3xl p-6 sm:p-8 border border-amber-200 shadow-sm space-y-6">
+        <div class="flex items-center justify-between">
+          <div class="flex items-center gap-2 text-xs font-bold text-amber-700 uppercase tracking-wider">
+            <span class="w-2 h-2 rounded-full bg-amber-500"></span> Section 6.2 &bull; Super High Exam Yield
+          </div>
+          <span class="px-2.5 py-1 rounded-full text-xs font-extrabold bg-amber-100 text-amber-800 border border-amber-300">
+            ⭐ Distributor Licensing Core
+          </span>
+        </div>
+
+        <h2 class="font-display text-xl sm:text-2xl font-bold text-slate-900">Mandatory Prerequisites to Distribute Mutual Funds</h2>
+        
+        <p class="text-xs sm:text-sm text-slate-600 leading-relaxed">
+          Under SEBI (Mutual Funds) Regulations, no person or entity is permitted to market, solicit, distribute, or execute transactions in mutual fund schemes without meeting four statutory regulatory prerequisites:
+        </p>
+
+        <!-- 4 Pillars Grid -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 text-xs sm:text-sm">
+          
+          <!-- Pillar 1: NISM -->
+          <div class="p-4 sm:p-5 bg-amber-50/40 rounded-2xl border border-amber-200 space-y-2">
+            <div class="flex items-center justify-between">
+              <span class="text-xs font-bold uppercase tracking-wider text-amber-800">Pillar 1</span>
+              <span class="px-2 py-0.5 rounded text-[10px] font-bold bg-amber-200 text-amber-900">Certification</span>
+            </div>
+            <strong class="text-slate-900 block font-bold text-base">1. NISM Certification</strong>
+            <p class="text-slate-700 leading-relaxed">
+              Distributors must pass the <strong>NISM-Series-V-A: Mutual Fund Distributors</strong> exam (or <strong>NISM-Series-V-D: Mutual Fund - Specialized Investment Fund Distributors</strong> for specialized funds like SIFs).
+            </p>
+            <div class="p-2.5 bg-white/90 rounded-xl border border-amber-200 text-xs text-amber-950">
+              <strong>⭐ Grandfathering / CPE Exemption:</strong> Individuals who have reached the age of <strong>50 years</strong> OR have completed at least <strong>10 years of experience</strong> in mutual fund distribution as on <em>May 31, 2010</em> are exempt from the exam and can qualify via Continuing Professional Education (CPE) training.
+            </div>
+          </div>
+
+          <!-- Pillar 2: KYD -->
+          <div class="p-4 sm:p-5 bg-slate-50 rounded-2xl border border-slate-200 space-y-2">
+            <div class="flex items-center justify-between">
+              <span class="text-xs font-bold uppercase tracking-wider text-slate-600">Pillar 2</span>
+              <span class="px-2 py-0.5 rounded text-[10px] font-bold bg-slate-200 text-slate-800">Biometric Identity</span>
+            </div>
+            <strong class="text-slate-900 block font-bold text-base">2. Know Your Distributor (KYD)</strong>
+            <p class="text-slate-700 leading-relaxed">
+              To eliminate dummy agencies and benami entities, AMFI mandates thorough KYD verification prior to issuing or renewing an ARN.
+            </p>
+            <div class="p-2.5 bg-white rounded-xl border border-slate-200 text-xs text-slate-700 space-y-1">
+              <p>• Verification of PAN card, proof of identity, address proof, and bank credentials.</p>
+              <p>• <strong>Biometric Verification:</strong> In-person impression of the <strong>index finger of the right hand</strong> recorded at CAMS/KFintech Point of Service (PoS) centers.</p>
+            </div>
+          </div>
+
+          <!-- Pillar 3: ARN -->
+          <div class="p-4 sm:p-5 bg-slate-50 rounded-2xl border border-slate-200 space-y-2">
+            <div class="flex items-center justify-between">
+              <span class="text-xs font-bold uppercase tracking-wider text-slate-600">Pillar 3</span>
+              <span class="px-2 py-0.5 rounded text-[10px] font-bold bg-slate-200 text-slate-800">AMFI Registration</span>
+            </div>
+            <strong class="text-slate-900 block font-bold text-base">3. AMFI Registration Number (ARN)</strong>
+            <p class="text-slate-700 leading-relaxed">
+              The primary license issued by AMFI authorizing the distributor to solicit mutual fund investments and empanel with AMCs.
+            </p>
+            <div class="p-2.5 bg-white rounded-xl border border-slate-200 text-xs text-slate-700 space-y-1">
+              <p>• <strong>Minimum Age:</strong> Applicant must be at least <strong>18 years of age</strong>.</p>
+              <p>• <strong>Validity:</strong> Valid for <strong>3 years</strong> from the date of issuance.</p>
+              <p>• <strong>100% Online Mandate:</strong> Effective <strong>October 1, 2024</strong>, all fresh registrations and renewals of ARN/EUIN are processed <em>exclusively online</em> via the AMFI portal.</p>
+            </div>
+          </div>
+
+          <!-- Pillar 4: EUIN -->
+          <div class="p-4 sm:p-5 bg-amber-50/40 rounded-2xl border border-amber-200 space-y-2">
+            <div class="flex items-center justify-between">
+              <span class="text-xs font-bold uppercase tracking-wider text-amber-800">Pillar 4</span>
+              <span class="px-2 py-0.5 rounded text-[10px] font-bold bg-amber-200 text-amber-900">Accountability</span>
+            </div>
+            <strong class="text-slate-900 block font-bold text-base">4. Employee Unique ID (EUIN)</strong>
+            <p class="text-slate-700 leading-relaxed">
+              Mandatory for all relationship managers, sales executives, and advisory employees of banks, corporate distributors, and NDs.
+            </p>
+            <div class="p-2.5 bg-white/90 rounded-xl border border-amber-200 text-xs text-amber-950 space-y-1">
+              <p>• <strong>Mandatory Form Quoting:</strong> EUIN must be cited on every application slip to establish individual accountability in case of mis-selling.</p>
+              <p>• <strong>Blank EUIN Declaration:</strong> If an investor executes without any employee advice, they must sign a mandatory declaration confirming the transaction was "execution-only".</p>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Visual Flow Diagram -->
+        <div class="p-4 rounded-2xl bg-slate-900 text-white text-xs space-y-2">
+          <div class="text-blue-400 font-bold uppercase tracking-wider text-[11px] flex items-center gap-1.5">
+            <i data-lucide="git-commit" class="w-3.5 h-3.5"></i> Step-by-Step Licensing Flow
+          </div>
+          <div class="grid grid-cols-1 sm:grid-cols-4 gap-2 text-center pt-2">
+            <div class="p-2.5 rounded-xl bg-slate-800 border border-slate-700">
+              <span class="block font-bold text-white mb-0.5">Step 1</span>
+              <span class="text-slate-300 text-[11px]">Pass NISM Exam (or CPE if eligible)</span>
+            </div>
+            <div class="p-2.5 rounded-xl bg-slate-800 border border-slate-700">
+              <span class="block font-bold text-white mb-0.5">Step 2</span>
+              <span class="text-slate-300 text-[11px]">Complete KYD & Biometric at PoS</span>
+            </div>
+            <div class="p-2.5 rounded-xl bg-slate-800 border border-slate-700">
+              <span class="block font-bold text-white mb-0.5">Step 3</span>
+              <span class="text-slate-300 text-[11px]">Apply Online for ARN (Age &ge; 18)</span>
+            </div>
+            <div class="p-2.5 rounded-xl bg-slate-800 border border-slate-700">
+              <span class="block font-bold text-white mb-0.5">Step 4</span>
+              <span class="text-slate-300 text-[11px]">Empanel with AMCs & Start Distribution</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Section 6.3: Trail Commission Model & B-30 -->
+      <section id="section-3" class="bg-white rounded-3xl p-6 sm:p-8 border border-amber-200 shadow-sm space-y-6">
+        <div class="flex items-center justify-between">
+          <div class="flex items-center gap-2 text-xs font-bold text-amber-700 uppercase tracking-wider">
+            <span class="w-2 h-2 rounded-full bg-amber-500"></span> Section 6.3 &bull; Super High Exam Yield
+          </div>
+          <span class="px-2.5 py-1 rounded-full text-xs font-extrabold bg-amber-100 text-amber-800 border border-amber-300">
+            ⭐ Remuneration Mechanics
+          </span>
+        </div>
+
+        <h2 class="font-display text-xl sm:text-2xl font-bold text-slate-900">100% Full Trail Commission Model & B-30 Incentive Framework</h2>
+
+        <!-- Trail Commission Architecture -->
+        <div class="p-5 rounded-2xl bg-slate-50 border border-slate-200 space-y-4">
+          <div class="flex items-center justify-between">
+            <strong class="text-slate-900 font-bold text-sm sm:text-base flex items-center gap-2">
+              <i data-lucide="shield-alert" class="w-4 h-4 text-rose-600"></i>
+              Total Ban on Upfront Commissions (SEBI Mandate w.e.f. Oct 2018)
+            </strong>
+            <span class="px-2 py-0.5 rounded text-[10px] font-bold bg-rose-100 text-rose-800">Zero Upfront</span>
+          </div>
+          <p class="text-xs sm:text-sm text-slate-600 leading-relaxed">
+            SEBI completely prohibited upfront commissions and the upfronting of trail commissions across all mutual fund schemes. All distribution commissions must be paid <strong>strictly on a trail basis</strong> out of the scheme's statutory <strong>Total Expense Ratio (TER)</strong>. AMCs and sponsors are legally barred from paying any extra commission, soft dollars, gifts, or incentives from their corporate balance sheets.
+          </p>
+
+          <!-- Formula & Calculation Box -->
+          <div class="p-4 bg-white rounded-2xl border border-indigo-200 space-y-3 shadow-sm">
+            <span class="text-xs font-bold text-indigo-700 uppercase tracking-wider block">Daily Trail Commission Computation Formula</span>
+            <div class="bg-indigo-50/70 p-3.5 rounded-xl border border-indigo-100 font-mono text-xs sm:text-sm text-indigo-950 font-bold text-center">
+              Daily Trail Commission = [ Daily Closing Net Assets (AUM) &times; Trail Rate p.a. ] / 365
+            </div>
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 text-xs text-slate-600 pt-1">
+              <div class="flex items-start gap-2">
+                <i data-lucide="trending-up" class="w-4 h-4 text-emerald-600 shrink-0 mt-0.5"></i>
+                <span><strong>Indexed to NAV:</strong> As the fund's NAV rises with market growth, the distributor's trail commission increases proportionately. If NAV falls, commission drops.</span>
+              </div>
+              <div class="flex items-start gap-2">
+                <i data-lucide="ban" class="w-4 h-4 text-rose-600 shrink-0 mt-0.5"></i>
+                <span><strong>No Commission on Self-Business:</strong> Distributors earn zero commission on investments made in their own name, sole proprietorship, or where they are first holders.</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Step-by-Step Numerical Example -->
+          <div class="p-4 rounded-xl bg-blue-50/60 border border-blue-200 space-y-2 text-xs sm:text-sm">
+            <span class="text-xs font-bold uppercase tracking-wider text-blue-800">Step-by-Step Numerical Illustration</span>
+            <p class="text-slate-700 leading-relaxed">
+              Suppose an investor purchases units worth <strong>₹10,00,000</strong> through an MFD in an Equity Scheme with an agreed annual trail rate of <strong>0.73% p.a.</strong>
+            </p>
+            <div class="bg-white p-3 rounded-lg border border-blue-200 text-xs font-mono text-slate-800 space-y-1">
+              <p>Day 1 Trail = (₹10,00,000 &times; 0.0073) / 365 = <strong>₹20.00 per day</strong></p>
+              <p>After 3 years, if good market performance and compounding lift the client's AUM to <strong>₹16,00,000</strong>:</p>
+              <p>New Daily Trail = (₹16,00,000 &times; 0.0073) / 365 = <strong>₹32.00 per day</strong> (+60% trail growth without needing fresh capital!)</p>
+            </div>
+            <p class="text-xs text-slate-500 italic">
+              This dynamic aligns distributor interests directly with client wealth creation rather than transaction volume churning.
+            </p>
+          </div>
+        </div>
+
+        <!-- B-30 Additional Incentive Framework -->
+        <div class="p-5 rounded-2xl bg-gradient-to-br from-indigo-900 to-slate-900 text-white space-y-4 shadow-lg">
+          <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2 border-b border-indigo-800/80 pb-3">
+            <div class="flex items-center gap-2">
+              <i data-lucide="compass" class="w-5 h-5 text-amber-400"></i>
+              <h3 class="font-display font-bold text-base text-white">B-30 (Beyond Top 30 Cities) & Women Investor Incentives</h3>
+            </div>
+            <span class="px-2.5 py-0.5 rounded-full text-xs font-semibold bg-amber-400/20 text-amber-300 border border-amber-400/30">
+              AMFI Operational Framework
+            </span>
+          </div>
+
+          <div class="space-y-3 text-xs sm:text-sm text-slate-300 leading-relaxed">
+            <p>
+              <strong class="text-amber-300">Regulatory Background:</strong> In March 2023, SEBI suspended the earlier framework allowing AMCs to charge up to 30 bps additional TER for B-30 inflows due to widespread churning and application-splitting abuses.
+            </p>
+            <p>
+              <strong class="text-white">Current Structure (Funded from 2 bps Investor Education Fund):</strong> To continue incentivizing geographic dispersion and women investor inclusion, AMFI instituted a targeted incentive structure:
+            </p>
+            
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 text-xs">
+              <div class="p-3.5 rounded-xl bg-white/10 border border-white/15 space-y-1.5">
+                <strong class="text-amber-300 block font-bold text-sm">Lump Sum Investments</strong>
+                <p class="text-slate-200">• <strong>1%</strong> of the first application amount, subject to a maximum cap of <strong>₹2,000</strong>.</p>
+                <p class="text-slate-300">• <strong>Clawback Mandate:</strong> The investment must remain invested for a minimum holding period of <strong>1 year (365 days)</strong>; early redemption triggers a 100% clawback.</p>
+              </div>
+
+              <div class="p-3.5 rounded-xl bg-white/10 border border-white/15 space-y-1.5">
+                <strong class="text-amber-300 block font-bold text-sm">SIP Investments</strong>
+                <p class="text-slate-200">• <strong>1%</strong> of the total first-year committed investment amount, subject to a maximum cap of <strong>₹2,000</strong>.</p>
+                <p class="text-slate-300">• Only applicable to <strong>first-time individual retail PANs</strong> from B-30 locations or new women investors. Dual incentives for the same PAN are strictly prohibited.</p>
+              </div>
+            </div>
+
+            <!-- Abolition of Transaction Charges Note -->
+            <div class="p-3 rounded-xl bg-white/5 border border-white/10 flex items-start gap-2 text-xs text-slate-300">
+              <i data-lucide="info" class="w-4 h-4 text-blue-400 shrink-0 mt-0.5"></i>
+              <span><strong>Abolition of Transaction Charges:</strong> In August 2025, SEBI completely discontinued the earlier practice of deducting transaction charges (₹100 for existing / ₹150 for new investors) from subscription amounts, ensuring 100% of investor capital enters the scheme units.</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- GST Architecture Table -->
+        <div class="p-4 rounded-2xl bg-slate-50 border border-slate-200 space-y-2 text-xs sm:text-sm">
+          <strong class="text-slate-900 block font-bold">GST Architecture on Mutual Fund Distribution (18% Rate)</strong>
+          <div class="overflow-x-auto">
+            <table class="w-full text-left text-xs border border-slate-200 rounded-xl overflow-hidden">
+              <thead class="bg-slate-200/70 text-slate-800 font-bold">
+                <tr>
+                  <th class="p-2.5">Distributor Annual Turnover</th>
+                  <th class="p-2.5">GST Registration Status</th>
+                  <th class="p-2.5">Tax Collection Mechanism</th>
+                </tr>
+              </thead>
+              <tbody class="divide-y divide-slate-200 bg-white text-slate-700">
+                <tr>
+                  <td class="p-2.5 font-semibold text-slate-900">&le; ₹20 Lakhs p.a. (or &le; ₹10 Lakhs in Special Category States)</td>
+                  <td class="p-2.5">Exempt / Unregistered</td>
+                  <td class="p-2.5"><strong>Reverse Charge Mechanism (RCM):</strong> The AMC directly discharges the 18% GST liability to the Government on behalf of the distributor.</td>
+                </tr>
+                <tr>
+                  <td class="p-2.5 font-semibold text-slate-900">&gt; ₹20 Lakhs p.a. (or &gt; ₹10 Lakhs in Special Category States)</td>
+                  <td class="p-2.5">Mandatorily Registered</td>
+                  <td class="p-2.5"><strong>Forward Charge:</strong> MFD issues a valid GST tax invoice with 18% GST added; AMC pays commission + GST, and MFD remits GST to the Government.</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </section>
+
+      <!-- Section 6.4: AMC Due Diligence -->
+      <section id="section-4" class="bg-white rounded-3xl p-6 sm:p-8 border border-slate-200/90 shadow-sm space-y-6">
+        <div class="flex items-center justify-between">
+          <div class="flex items-center gap-2 text-xs font-bold text-slate-500 uppercase tracking-wider">
+            <span class="w-2 h-2 rounded-full bg-slate-400"></span> Section 6.4 &bull; Regulatory Thresholds
+          </div>
+          <span class="px-2.5 py-1 rounded-full text-xs font-semibold bg-slate-100 text-slate-700">Governance & Risk</span>
+        </div>
+
+        <h2 class="font-display text-xl sm:text-2xl font-bold text-slate-900">AMC Due Diligence Thresholds for Large Distributors</h2>
+
+        <p class="text-xs sm:text-sm text-slate-600 leading-relaxed">
+          To protect investor interests and mitigate systemic risks, SEBI mandates that AMCs must implement an enhanced annual due diligence process for distributors who cross any <strong>ONE</strong> of the following five statutory thresholds:
+        </p>
+
+        <!-- 5 Thresholds Cards -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3 text-xs sm:text-sm">
+          <div class="p-4 bg-slate-50 rounded-2xl border border-slate-200 space-y-1.5">
+            <div class="w-7 h-7 rounded-lg bg-blue-100 text-blue-700 font-bold flex items-center justify-center text-xs">1</div>
+            <strong class="text-slate-900 block font-bold">Geographical Spread</strong>
+            <p class="text-slate-600">Operating presence in more than <strong>20 locations / cities</strong> across India.</p>
+          </div>
+
+          <div class="p-4 bg-slate-50 rounded-2xl border border-slate-200 space-y-1.5">
+            <div class="w-7 h-7 rounded-lg bg-blue-100 text-blue-700 font-bold flex items-center justify-center text-xs">2</div>
+            <strong class="text-slate-900 block font-bold">Non-Institutional AUM</strong>
+            <p class="text-slate-600">Mobilized non-institutional (retail + HNI) AUM exceeding <strong>₹100 Crore</strong>.</p>
+          </div>
+
+          <div class="p-4 bg-slate-50 rounded-2xl border border-slate-200 space-y-1.5">
+            <div class="w-7 h-7 rounded-lg bg-blue-100 text-blue-700 font-bold flex items-center justify-center text-xs">3</div>
+            <strong class="text-slate-900 block font-bold">Gross Industry Commission</strong>
+            <p class="text-slate-600">Gross commission received across all mutual funds exceeding <strong>₹1 Crore p.a.</strong></p>
+          </div>
+
+          <div class="p-4 bg-slate-50 rounded-2xl border border-slate-200 space-y-1.5">
+            <div class="w-7 h-7 rounded-lg bg-blue-100 text-blue-700 font-bold flex items-center justify-center text-xs">4</div>
+            <strong class="text-slate-900 block font-bold">Single-AMC Commission</strong>
+            <p class="text-slate-600">Gross commission received from a single AMC exceeding <strong>₹50 Lakhs p.a.</strong></p>
+          </div>
+
+          <div class="p-4 bg-slate-50 rounded-2xl border border-slate-200 space-y-1.5 sm:col-span-2 lg:col-span-2">
+            <div class="w-7 h-7 rounded-lg bg-amber-100 text-amber-700 font-bold flex items-center justify-center text-xs">5 ⭐</div>
+            <strong class="text-slate-900 block font-bold">Abnormal Churn / Portfolio Turnover</strong>
+            <p class="text-slate-600">Portfolio turnover ratio of client assets that is more than <strong>two times (2x) the industry average</strong> (indicative of churning for commissions).</p>
+          </div>
+        </div>
+
+        <div class="p-4 bg-slate-50 rounded-2xl border border-slate-200 space-y-2 text-xs sm:text-sm">
+          <strong class="text-slate-900 block font-bold">Key Scope of AMC Distributor Due Diligence Review:</strong>
+          <ul class="list-disc list-inside text-slate-600 space-y-1">
+            <li>Review of business model, corporate governance, organizational chart, and financial solvency.</li>
+            <li>Verification of EUIN allotment and ongoing NISM/KYD compliance of sales force.</li>
+            <li>Assessment of customer grievance redressal mechanism, complaints ratio, and resolution timelines.</li>
+            <li>Adherence to AML (Anti-Money Laundering), PMLA, and FATCA/CRS verification standards.</li>
+            <li>Examination of product concentration, excessive scheme switching, and retail churning patterns.</li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- Section 6.5: MFD vs RIA & Code of Conduct -->
+      <section id="section-5" class="bg-white rounded-3xl p-6 sm:p-8 border border-amber-200 shadow-sm space-y-6">
+        <div class="flex items-center justify-between">
+          <div class="flex items-center gap-2 text-xs font-bold text-amber-700 uppercase tracking-wider">
+            <span class="w-2 h-2 rounded-full bg-amber-500"></span> Section 6.5 &bull; Super High Exam Yield
+          </div>
+          <span class="px-2.5 py-1 rounded-full text-xs font-extrabold bg-amber-100 text-amber-800 border border-amber-300">
+            ⭐ Regulatory Segregation
+          </span>
+        </div>
+
+        <h2 class="font-display text-xl sm:text-2xl font-bold text-slate-900">Regulatory Segregation: MFDs vs. Registered Investment Advisers (RIAs)</h2>
+
+        <p class="text-xs sm:text-sm text-slate-600 leading-relaxed">
+          Under SEBI (Investment Advisers) Regulations, 2013 and subsequent amendments, SEBI established a watertight boundary between investment advisory and product distribution to eliminate conflicts of interest:
+        </p>
+
+        <!-- Comparison Table -->
+        <div class="overflow-x-auto rounded-2xl border border-slate-200 text-xs">
+          <table class="min-w-full text-left">
+            <thead class="bg-slate-100 text-slate-700 font-bold border-b border-slate-200">
+              <tr>
+                <th class="p-3">Parameter</th>
+                <th class="p-3 bg-blue-50/50 text-blue-900">Mutual Fund Distributor (MFD)</th>
+                <th class="p-3 bg-emerald-50/50 text-emerald-900">Registered Investment Adviser (RIA)</th>
+              </tr>
+            </thead>
+            <tbody class="divide-y divide-slate-100 text-slate-700">
+              <tr class="hover:bg-slate-50">
+                <td class="p-3 font-bold text-slate-900">Registration Body</td>
+                <td class="p-3 bg-blue-50/20">AMFI (allotted an ARN)</td>
+                <td class="p-3 bg-emerald-50/20">SEBI (allotted an INA registration)</td>
+              </tr>
+              <tr class="hover:bg-slate-50">
+                <td class="p-3 font-bold text-slate-900">Primary Role</td>
+                <td class="p-3 bg-blue-50/20">Distribution & incidental execution of mutual funds</td>
+                <td class="p-3 bg-emerald-50/20">Comprehensive fiduciary financial planning & advice</td>
+              </tr>
+              <tr class="hover:bg-slate-50">
+                <td class="p-3 font-bold text-slate-900">Revenue Source</td>
+                <td class="p-3 bg-blue-50/20">Trail commission paid exclusively by AMCs from TER</td>
+                <td class="p-3 bg-emerald-50/20">Direct fee charged to the client (fixed or % of AUA)</td>
+              </tr>
+              <tr class="hover:bg-slate-50">
+                <td class="p-3 font-bold text-slate-900">Permitted Scheme Plans</td>
+                <td class="p-3 bg-blue-50/20"><strong>Regular Plans Only</strong> (where commission is embedded)</td>
+                <td class="p-3 bg-emerald-50/20"><strong>Direct Plans Only</strong> (zero distribution commission)</td>
+              </tr>
+              <tr class="hover:bg-slate-50">
+                <td class="p-3 font-bold text-slate-900">Client Advisory Fee</td>
+                <td class="p-3 bg-blue-50/20"><strong>Zero.</strong> Cannot charge any fee directly to investors</td>
+                <td class="p-3 bg-emerald-50/20">Permitted up to SEBI caps (max ₹1.25L flat or 2.5% AUA)</td>
+              </tr>
+              <tr class="hover:bg-slate-50">
+                <td class="p-3 font-bold text-slate-900">Nomenclature & Title ⭐</td>
+                <td class="p-3 bg-blue-50/20">Must use <strong>"AMFI-registered Mutual Fund Distributor"</strong>. Prohibited from using "Adviser", "Wealth Manager", or "Planner"</td>
+                <td class="p-3 bg-emerald-50/20">Can officially use <strong>"Investment Adviser"</strong></td>
+              </tr>
+              <tr class="hover:bg-slate-50">
+                <td class="p-3 font-bold text-slate-900">Individual Segregation</td>
+                <td class="p-3 bg-blue-50/20" colspan="2">
+                  An individual cannot hold dual licenses. An individual can <strong>ONLY</strong> be either an MFD or an RIA. Corporate entities must maintain strict arm's-length departmental and client-family level segregation.
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <!-- Mandatory Tagline & Nomenclature Rule -->
+        <div class="p-4 rounded-2xl bg-amber-50 border border-amber-200 text-xs sm:text-sm text-amber-950 space-y-2">
+          <div class="flex items-center gap-2 font-bold text-amber-900">
+            <i data-lucide="alert-triangle" class="w-4 h-4 text-amber-600"></i>
+            <span>Mandatory Tagline & Font Size Rule (SEBI & AMFI Mandate)</span>
+          </div>
+          <p class="leading-relaxed">
+            Mutual Fund Distributors must prominently display the exact tagline: <strong>"AMFI-registered Mutual Fund Distributor"</strong> in a clear, legible font of <strong>at least font size 12</strong> across all visiting cards, letterheads, signboards, websites, social media handles, email signatures, and promotional materials.
+          </p>
+        </div>
+
+        <!-- AMFI Code of Conduct -->
+        <div class="p-5 rounded-2xl bg-slate-50 border border-slate-200 space-y-3 text-xs sm:text-sm">
+          <strong class="text-slate-900 block font-bold text-sm sm:text-base">AMFI Code of Conduct for Distributors</strong>
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 text-xs text-slate-600">
+            <div class="p-3 bg-white rounded-xl border border-slate-200 space-y-1">
+              <span class="font-bold text-slate-900 block">• Principle of Suitability</span>
+              Recommend schemes strictly aligned with client risk tolerance, horizon, and financial goals. Avoid high-risk steering for commission.
+            </div>
+            <div class="p-3 bg-white rounded-xl border border-slate-200 space-y-1">
+              <span class="font-bold text-slate-900 block">• Prohibition of Rebating</span>
+              Passing back or rebating commission to investors in cash, gifts, or kind is strictly banned and causes ARN cancellation.
+            </div>
+            <div class="p-3 bg-white rounded-xl border border-slate-200 space-y-1">
+              <span class="font-bold text-slate-900 block">• Mandatory Commission Disclosure</span>
+              Disclose all commissions received and receivable across competitive scheme options to investors prior to transaction.
+            </div>
+            <div class="p-3 bg-white rounded-xl border border-slate-200 space-y-1">
+              <span class="font-bold text-slate-900 block">• Prompt Remittance & Truthful Ads</span>
+              Never hold investor funds or checks in distributor's own name; ensure marketing complies with SEBI advertising guidelines.
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Section 6.6: Nomination & Change of Distributor -->
+      <section id="section-6" class="bg-white rounded-3xl p-6 sm:p-8 border border-amber-200 shadow-sm space-y-6">
+        <div class="flex items-center justify-between">
+          <div class="flex items-center gap-2 text-xs font-bold text-amber-700 uppercase tracking-wider">
+            <span class="w-2 h-2 rounded-full bg-amber-500"></span> Section 6.6 &bull; Super High Exam Yield
+          </div>
+          <span class="px-2.5 py-1 rounded-full text-xs font-extrabold bg-amber-100 text-amber-800 border border-amber-300">
+            ⭐ Frequently Tested Exam Rules
+          </span>
+        </div>
+
+        <h2 class="font-display text-xl sm:text-2xl font-bold text-slate-900">Nomination Rights & Distributor Change Regulations</h2>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 text-xs sm:text-sm">
+          
+          <!-- Box 1: Nominee Commission -->
+          <div class="p-5 bg-slate-50 rounded-2xl border border-slate-200 space-y-3">
+            <div class="flex items-center gap-2 font-bold text-slate-900 text-sm">
+              <i data-lucide="users" class="w-4 h-4 text-indigo-600"></i>
+              <span>Commission Payment to MFD Nominee</span>
+            </div>
+            <p class="text-slate-600 leading-relaxed">
+              Upon the demise of an individual mutual fund distributor, the ongoing trail commission on the assets mobilized during the deceased distributor's lifetime is transferred and paid to the registered nominee or legal heir:
+            </p>
+            <div class="p-3 rounded-xl bg-amber-50/70 border border-amber-200 text-xs text-amber-950 space-y-1">
+              <strong class="block font-bold">⭐ Crucial Exam Rule:</strong>
+              <p>A nominee or legal heir <strong>DOES NOT require an ARN</strong> or NISM certification to claim and receive ongoing trail commission on assets mobilized by the deceased MFD prior to death.</p>
+            </div>
+            <p class="text-xs text-slate-500">
+              *Note: If the nominee wishes to actively manage the folios, solicit fresh investments, or have the AUM transferred to their own code, they must pass NISM, complete KYD, and obtain an ARN.
+            </p>
+          </div>
+
+          <!-- Box 2: Change of Distributor & Cooling Off -->
+          <div class="p-5 bg-slate-50 rounded-2xl border border-slate-200 space-y-3">
+            <div class="flex items-center gap-2 font-bold text-slate-900 text-sm">
+              <i data-lucide="refresh-cw" class="w-4 h-4 text-blue-600"></i>
+              <span>Change of Distributor & 12-Month Cooling-Off</span>
+            </div>
+            <p class="text-slate-600 leading-relaxed">
+              Investors have the unconstrained freedom to change their distributor or migrate to Direct plans at any point in time:
+            </p>
+            <div class="p-3 rounded-xl bg-blue-50 border border-blue-200 text-xs text-blue-950 space-y-1">
+              <strong class="block font-bold">1. No NOC Required:</strong>
+              <p>AMCs are legally prohibited from demanding a <strong>No Objection Certificate (NOC)</strong> from the existing distributor. The investor's written request must be processed directly.</p>
+            </div>
+            <div class="p-3 rounded-xl bg-rose-50 border border-rose-200 text-xs text-rose-950 space-y-1">
+              <strong class="block font-bold">2. 12-Month Cooling-Off Period:</strong>
+              <p>To eliminate unethical client poaching, <strong>no trail commission</strong> is paid to either the old or new distributor for <strong>12 months</strong> following the transfer. The new distributor earns trail only from month 13 onwards.</p>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Summary Matrix Table -->
+        <div class="p-4 rounded-2xl bg-slate-50 border border-slate-200 space-y-2 text-xs sm:text-sm">
+          <strong class="text-slate-900 block font-bold">Summary Matrix: Distributor Transfer Scenarios</strong>
+          <div class="overflow-x-auto">
+            <table class="w-full text-left text-xs border border-slate-200 rounded-xl overflow-hidden">
+              <thead class="bg-slate-200/70 text-slate-800 font-bold">
+                <tr>
+                  <th class="p-2.5">Transfer Scenario</th>
+                  <th class="p-2.5">NOC Requirement</th>
+                  <th class="p-2.5">Commission Cooling-Off</th>
+                  <th class="p-2.5">Transferee ARN Required?</th>
+                </tr>
+              </thead>
+              <tbody class="divide-y divide-slate-200 bg-white text-slate-700">
+                <tr>
+                  <td class="p-2.5 font-semibold text-slate-900">Investor-Initiated Distributor Change</td>
+                  <td class="p-2.5 text-emerald-700 font-bold">NO NOC</td>
+                  <td class="p-2.5 text-rose-700 font-bold">12 Months (Zero Commission)</td>
+                  <td class="p-2.5">Yes (Valid ARN of new MFD)</td>
+                </tr>
+                <tr>
+                  <td class="p-2.5 font-semibold text-slate-900">Switch to Direct Plan</td>
+                  <td class="p-2.5 text-emerald-700 font-bold">NO NOC</td>
+                  <td class="p-2.5">Not Applicable (Direct has no trail)</td>
+                  <td class="p-2.5">No ARN (Direct to AMC)</td>
+                </tr>
+                <tr>
+                  <td class="p-2.5 font-semibold text-slate-900">Demise of MFD (Nominee Claim)</td>
+                  <td class="p-2.5 text-slate-600">Death Certificate only</td>
+                  <td class="p-2.5 text-emerald-700 font-bold">Zero Cooling-Off (Paid uninterrupted)</td>
+                  <td class="p-2.5 text-amber-800 font-bold">NO ARN Required for Nominee</td>
+                </tr>
+                <tr>
+                  <td class="p-2.5 font-semibold text-slate-900">Voluntary Amalgamation of MFDs</td>
+                  <td class="p-2.5 text-slate-600">Bona fide merger agreement</td>
+                  <td class="p-2.5 text-emerald-700 font-bold">Zero Cooling-Off (AMFI Protocol)</td>
+                  <td class="p-2.5">Yes (Acquiring MFD ARN)</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </section>
+
+      <!-- Interactive Quiz Section -->
+      <section id="interactive-quiz" class="bg-gradient-to-br from-blue-900 to-slate-900 rounded-3xl p-6 sm:p-10 text-white shadow-xl space-y-8">
+        <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 border-b border-blue-800/80 pb-6">
+          <div>
+            <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-blue-500/20 text-blue-300 text-xs font-semibold mb-2">
+              <i data-lucide="check-circle" class="w-3.5 h-3.5 text-blue-400"></i>
+              Chapter 6 Exam Practice Assessment
+            </div>
+            <h2 class="font-display text-2xl sm:text-3xl font-bold text-white">High-Yield Practice Examination</h2>
+            <p class="text-xs sm:text-sm text-slate-300 mt-1">12 scenario-based multiple-choice questions with comprehensive rationales and instant scoring.</p>
+          </div>
+          <div class="flex items-center gap-2 px-4 py-2 rounded-xl bg-white/10 backdrop-blur-md border border-white/10 text-xs font-semibold">
+            <span id="answered-count">0</span> / 12 Answered
+          </div>
+        </div>
+
+        <form id="quiz-form" class="space-y-6">
+          <div id="questions-container" class="space-y-6"></div>
+
+          <div class="pt-6 border-t border-blue-800/80 flex flex-col sm:flex-row items-center justify-between gap-4">
+            <button type="button" id="submit-quiz-btn" onclick="submitQuiz()" class="w-full sm:w-auto px-8 py-3.5 rounded-xl bg-blue-500 hover:bg-blue-400 text-white font-bold text-sm shadow-lg shadow-blue-500/30 transition-all flex items-center justify-center gap-2">
+              <i data-lucide="send" class="w-4 h-4"></i>
+              <span>Submit Assessment & View Solutions</span>
+            </button>
+            <button type="button" id="reset-quiz-btn" onclick="resetQuiz()" class="hidden w-full sm:w-auto px-6 py-3.5 rounded-xl bg-white/10 hover:bg-white/20 text-slate-200 font-semibold text-sm transition-all flex items-center justify-center gap-2">
+              <i data-lucide="rotate-ccw" class="w-4 h-4"></i>
+              <span>Retake Quiz</span>
+            </button>
+          </div>
+        </form>
+
+        <!-- Quiz Result & Scorecard -->
+        <div id="quiz-results" class="hidden rounded-2xl bg-white/10 p-6 sm:p-8 border border-white/15 backdrop-blur-lg space-y-6">
+          <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+            <div>
+              <span id="result-status-badge" class="px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider"></span>
+              <h3 class="font-display text-2xl font-bold mt-2 text-white">Your Assessment Scorecard</h3>
+            </div>
+            <div class="text-right">
+              <span id="score-display" class="font-display text-4xl font-extrabold text-blue-300">0 / 12</span>
+              <span id="percentage-display" class="block text-xs text-slate-300 mt-0.5">0%</span>
+            </div>
+          </div>
+          <p id="result-summary-text" class="text-sm text-slate-200 leading-relaxed"></p>
+        </div>
+      </section>
+
+      <!-- Bottom Navigation -->
+      <div class="flex items-center justify-between p-6 rounded-2xl bg-white border border-slate-200">
+        <a href="module1-ch5.html" class="inline-flex items-center gap-2 text-sm font-semibold text-slate-600 hover:text-slate-900 transition-colors">
+          <i data-lucide="arrow-left" class="w-4 h-4"></i>
+          <span>Previous: Chapter 5 (Offer Documents)</span>
+        </a>
+        <a href="module1-ch7.html" class="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl bg-blue-600 hover:bg-blue-700 text-white font-semibold text-sm shadow-sm transition-all">
+          <span>Next: Chapter 7 (NAV & TER)</span>
+          <i data-lucide="arrow-right" class="w-4 h-4"></i>
+        </a>
+      </div>
+
+    </div>
+  </div>
+
+  <footer class="bg-slate-900 text-slate-400 py-6 border-t border-slate-800 text-center text-xs">
+    NISM Series V-D Certification Notes &bull; Module 1: Chapter 6 (Fund Distribution & Channel Management)
+  </footer>
+
+  <script>
+    const questionsData = [
+      {
+        id: 1,
+        question: "Under SEBI regulations, which of the following entities are legally permitted to distribute mutual fund schemes in India?",
+        options: [
+          { text: "Only registered individual distributors (IFAs)", key: "a" },
+          { text: "Only commercial banks and public financial institutions", key: "b" },
+          { text: "Individuals as well as non-individuals such as banks, NBFCs, stock brokers, and distribution corporate firms", key: "c" },
+          { text: "Only stock exchanges and depositories directly", key: "d" }
+        ],
+        correct: "c",
+        explanation: "Correct Answer: C. Both individuals and non-individual corporate entities (commercial banks, NBFCs, national distributors, stock brokers, and fintech platforms) can distribute mutual funds after obtaining an ARN from AMFI."
+      },
+      {
+        id: 2,
+        question: "Which examination conducted by the National Institute of Securities Markets (NISM) is mandatory for individuals aspiring to distribute mutual funds (or specialized investment funds)?",
+        options: [
+          { text: "NISM Series I: Currency Derivatives", key: "a" },
+          { text: "NISM-Series-V-A (or Series-V-D for SIFs)", key: "b" },
+          { text: "NISM Series VIII: Equity Derivatives", key: "c" },
+          { text: "NISM Series X-A: Investment Adviser Level 1", key: "d" }
+        ],
+        correct: "b",
+        explanation: "Correct Answer: B. Under SEBI regulations, passing NISM-Series-V-A (Mutual Fund Distributors) or NISM-Series-V-D (Specialized Investment Fund Distributors) is compulsory to apply for an ARN, unless eligible for grandfathering CPE."
+      },
+      {
+        id: 3,
+        question: "Under the grandfathering exemption rule, which individuals are exempt from passing the NISM V-A examination and can qualify through Continuing Professional Education (CPE)?",
+        options: [
+          { text: "Any graduate with a commerce degree", key: "a" },
+          { text: "Individuals who have reached age 50 OR have at least 10 years of distribution experience as of May 31, 2010", key: "b" },
+          { text: "Any distributor operating in B-30 cities", key: "c" },
+          { text: "Employees of scheduled commercial banks with 2 years of tenure", key: "d" }
+        ],
+        correct: "b",
+        explanation: "Correct Answer: B. SEBI grandfathering provisions specify that individuals who were 50 years of age or older OR who completed at least 10 years of mutual fund distribution experience as of May 31, 2010 can obtain and renew their ARN via CPE."
+      },
+      {
+        id: 4,
+        question: "What is the minimum age required to obtain an AMFI Registration Number (ARN), and what is the valid application submission mode effective October 1, 2024?",
+        options: [
+          { text: "21 years; Physical submission at AMFI Mumbai office", key: "a" },
+          { text: "18 years; Online only via the AMFI official portal", key: "b" },
+          { text: "25 years; Online or offline through CAMS PoS", key: "c" },
+          { text: "18 years; Paper-based physical application with notarized affidavit", key: "d" }
+        ],
+        correct: "b",
+        explanation: "Correct Answer: B. The minimum age for obtaining an ARN is 18 years. Effective October 1, 2024, AMFI mandated that all new registrations and renewals of ARN and EUIN must be submitted 100% online through the AMFI portal."
+      },
+      {
+        id: 5,
+        question: "Why is an Employee Unique Identification Number (EUIN) mandatory on mutual fund application forms involving non-individual distributors?",
+        options: [
+          { text: "To calculate income tax withholding for the corporate distributor", key: "a" },
+          { text: "To identify the individual sales executive/relationship manager and establish personal accountability for any mis-selling", key: "b" },
+          { text: "To exempt the investor from paying scheme TER", key: "c" },
+          { text: "To eliminate the need for investor KYC verification", key: "d" }
+        ],
+        correct: "b",
+        explanation: "Correct Answer: B. The EUIN identifies the specific employee who interacted with and advised the investor, fixing personal responsibility for advice and curbing improper product steering across bank branches and corporate distributors."
+      },
+      {
+        id: 6,
+        question: "What is the legal status of commission payment to the registered nominee or legal heir of a deceased individual mutual fund distributor?",
+        options: [
+          { text: "The nominee must pass NISM and obtain an ARN within 30 days, or commissions permanently lapse", key: "a" },
+          { text: "The nominee does NOT need an ARN to receive ongoing trail commission on assets mobilized during the deceased MFD's lifetime", key: "b" },
+          { text: "Commissions are instantly confiscated and transferred to the Investor Education and Protection Fund (IEPF)", key: "c" },
+          { text: "Trail commission stops immediately on the date of death and cannot be paid to anyone", key: "d" }
+        ],
+        correct: "b",
+        explanation: "Correct Answer: B. A nominee or legal heir does NOT need to hold an ARN or NISM certification to claim and receive ongoing trail commission on folios mobilized prior to the distributor's demise until the AUM runs down."
+      },
+      {
+        id: 7,
+        question: "When an investor submits a written request to an AMC to change their distributor code or switch to a Direct plan, what is the regulatory requirement regarding a No Objection Certificate (NOC)?",
+        options: [
+          { text: "An NOC must be compulsorily obtained from the existing distributor before any transfer is processed", key: "a" },
+          { text: "AMCs must comply with the investor's written request without insisting on an NOC from the existing distributor", key: "b" },
+          { text: "An NOC is required only if the portfolio AUM exceeds ₹50 Lakhs", key: "c" },
+          { text: "An NOC signed by both AMFI and the old distributor is mandatory", key: "d" }
+        ],
+        correct: "b",
+        explanation: "Correct Answer: B. SEBI regulations clearly specify that AMCs must honor investor requests for changing distributors or moving to Direct plans immediately without demanding an NOC from the existing distributor."
+      },
+      {
+        id: 8,
+        question: "To eliminate unethical client poaching and portfolio churning, what is the cooling-off rule on trail commission when an investor initiates a change of distributor?",
+        options: [
+          { text: "Full commission is transferred immediately to the new distributor from day 1", key: "a" },
+          { text: "No trail commission is paid to either the old or the new distributor for a 12-month cooling-off period", key: "b" },
+          { text: "The old distributor continues receiving trail commission perpetually for 5 years", key: "c" },
+          { text: "The new distributor receives a double trail incentive in the first year", key: "d" }
+        ],
+        correct: "b",
+        explanation: "Correct Answer: B. When an investor initiates a change of distributor, the old distributor's commission ceases immediately, and the new distributor receives zero trail commission for a 12-month cooling-off period to discourage unethical poaching."
+      },
+      {
+        id: 9,
+        question: "Can an AMFI-registered mutual fund distributor earn distribution commission on investments made in their own name (self-business)?",
+        options: [
+          { text: "Yes, at the highest institutional commission tier", key: "a" },
+          { text: "No, under SEBI regulations, no commission is payable to a distributor on investments made in their own name", key: "b" },
+          { text: "Yes, up to a maximum limit of ₹10,000 per financial year", key: "c" },
+          { text: "Only in liquid and overnight debt funds", key: "d" }
+        ],
+        correct: "b",
+        explanation: "Correct Answer: B. SEBI regulations explicitly prohibit AMCs from paying any commission to distributors for investments made in their own name, sole proprietorship, or as primary joint holders (self-business)."
+      },
+      {
+        id: 10,
+        question: "Which of the following triggers mandatory enhanced annual due diligence of a distributor by an AMC?",
+        options: [
+          { text: "Having an office in more than 2 cities", key: "a" },
+          { text: "Distributing schemes of more than 3 fund houses", key: "b" },
+          { text: "Gross commission received exceeding ₹1 Crore p.a. across all MFs, or > ₹50 Lakhs from a single MF", key: "c" },
+          { text: "Onboarding more than 50 retail investors in a quarter", key: "d" }
+        ],
+        correct: "c",
+        explanation: "Correct Answer: C. Additional due diligence is triggered if a distributor meets any 1 of 5 criteria: > 20 locations, non-institutional AUM > ₹100 Cr, total commission across MFs > ₹1 Cr, commission from a single AMC > ₹50 Lakhs, or turnover ratio > 2x industry average."
+      },
+      {
+        id: 11,
+        question: "What mandatory tagline must mutual fund distributors display across visiting cards, websites, and promotional materials under SEBI regulations?",
+        options: [
+          { text: "'SEBI Registered Wealth Advisor' in any font size", key: "a" },
+          { text: "'AMFI-registered Mutual Fund Distributor' in a legible font of at least font size 12", key: "b" },
+          { text: "'Certified Financial Planner and Portfolio Consultant'", key: "c" },
+          { text: "'Independent Asset Manager' in bold uppercase", key: "d" }
+        ],
+        correct: "b",
+        explanation: "Correct Answer: B. MFDs are legally barred from using titles like 'Adviser' or 'Wealth Manager'. They must prominently display 'AMFI-registered Mutual Fund Distributor' in a minimum font size of 12."
+      },
+      {
+        id: 12,
+        question: "Under the AMFI framework funded from the 2 bps investor education allocation, what is the maximum additional incentive for onboarding an eligible new individual B-30 investor on a lump sum investment?",
+        options: [
+          { text: "₹500 flat fee", key: "a" },
+          { text: "1% of the first application amount, subject to a maximum of ₹2,000 (provided invested for at least 1 year)", key: "b" },
+          { text: "30 bps recurring annual TER hike indefinitely", key: "c" },
+          { text: "5% upfront commission paid on trade date", key: "d" }
+        ],
+        correct: "b",
+        explanation: "Correct Answer: B. For eligible new individual retail investors from B-30 cities, the incentive is 1% of the first application capped at ₹2,000, subject to a 1-year minimum holding period (with clawback if redeemed earlier)."
+      }
+    ];
+
+    let userAnswers = {};
+
+    function renderQuiz() {
+      const container = document.getElementById("questions-container");
+      container.innerHTML = "";
+
+      questionsData.forEach((q, index) => {
+        const qDiv = document.createElement("div");
+        qDiv.className = "p-5 rounded-2xl bg-white/5 border border-white/10 space-y-4";
+        qDiv.id = `q-box-${q.id}`;
+
+        let optionsHtml = "";
+        q.options.forEach(opt => {
+          optionsHtml += `
+            <label class="flex items-center gap-3 p-3 rounded-xl bg-white/5 hover:bg-white/10 border border-white/5 cursor-pointer text-xs sm:text-sm transition-all" onclick="selectOption(${q.id}, '${opt.key}')" id="label-${q.id}-${opt.key}">
+              <input type="radio" name="question-${q.id}" value="${opt.key}" class="w-4 h-4 text-blue-500 focus:ring-0">
+              <span class="font-bold text-blue-300 w-5 uppercase">${opt.key}.</span>
+              <span class="text-slate-200">${opt.text}</span>
+            </label>
+          `;
+        });
+
+        qDiv.innerHTML = `
+          <div class="flex items-start justify-between gap-2">
+            <span class="text-xs font-bold text-blue-400 uppercase tracking-wider">Question ${index + 1} of ${questionsData.length}</span>
+            <span id="badge-${q.id}" class="text-xs px-2 py-0.5 rounded-full bg-white/5 text-slate-400 font-medium">Unanswered</span>
+          </div>
+          <h4 class="font-display font-semibold text-sm sm:text-base text-white">${q.question}</h4>
+          <div class="space-y-2 mt-3">${optionsHtml}</div>
+          <div id="explanation-${q.id}" class="hidden p-4 rounded-xl text-xs sm:text-sm mt-3 space-y-1"></div>
+        `;
+        container.appendChild(qDiv);
+      });
+      lucide.createIcons();
+    }
+
+    function selectOption(qId, key) {
+      userAnswers[qId] = key;
+      document.getElementById("answered-count").innerText = Object.keys(userAnswers).length;
+      
+      const badge = document.getElementById(`badge-${qId}`);
+      if (badge) {
+        badge.innerText = "Answered";
+        badge.className = "text-xs px-2 py-0.5 rounded-full bg-blue-500/20 text-blue-300 font-medium";
+      }
+
+      const q = questionsData.find(item => item.id === qId);
+      q.options.forEach(opt => {
+        const lbl = document.getElementById(`label-${qId}-${opt.key}`);
+        if (opt.key === key) {
+          lbl.className = "flex items-center gap-3 p-3 rounded-xl bg-blue-600/30 border border-blue-400/50 cursor-pointer text-xs sm:text-sm transition-all";
+        } else {
+          lbl.className = "flex items-center gap-3 p-3 rounded-xl bg-white/5 hover:bg-white/10 border border-white/5 cursor-pointer text-xs sm:text-sm transition-all";
+        }
+      });
+    }
+
+    function submitQuiz() {
+      let score = 0;
+      questionsData.forEach(q => {
+        const selected = userAnswers[q.id];
+        const isCorrect = selected === q.correct;
+        if (isCorrect) score++;
+
+        const explanationDiv = document.getElementById(`explanation-${q.id}`);
+        explanationDiv.classList.remove("hidden");
+
+        if (isCorrect) {
+          explanationDiv.className = "p-4 rounded-xl text-xs sm:text-sm mt-3 bg-emerald-950/60 border border-emerald-600 text-emerald-200";
+          explanationDiv.innerHTML = `<div class="font-bold text-emerald-400 flex items-center gap-1.5"><i data-lucide="check" class="w-4 h-4"></i> Correct!</div><p class="mt-1">${q.explanation}</p>`;
+        } else {
+          explanationDiv.className = "p-4 rounded-xl text-xs sm:text-sm mt-3 bg-rose-950/60 border border-rose-600 text-rose-200";
+          explanationDiv.innerHTML = `<div class="font-bold text-rose-400 flex items-center gap-1.5"><i data-lucide="x" class="w-4 h-4"></i> Incorrect (Your answer: ${selected ? selected.toUpperCase() : 'None'} | Correct: ${q.correct.toUpperCase()})</div><p class="mt-1">${q.explanation}</p>`;
+        }
+      });
+
+      const percentage = Math.round((score / questionsData.length) * 100);
+      const passed = percentage >= 60;
+      
+      const resultsDiv = document.getElementById("quiz-results");
+      resultsDiv.classList.remove("hidden");
+
+      const statusBadge = document.getElementById("result-status-badge");
+      statusBadge.innerText = passed ? "Status: Passed (60%+ Benchmark Achieved)" : "Status: Needs Revision (< 60% Benchmark)";
+      statusBadge.className = passed ? "px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider bg-emerald-500 text-emerald-950" : "px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider bg-amber-500 text-amber-950";
+
+      document.getElementById("score-display").innerText = `${score} / ${questionsData.length}`;
+      document.getElementById("percentage-display").innerText = `${percentage}% Score (Passing criteria: 60%)`;
+
+      document.getElementById("result-summary-text").innerText = passed
+        ? `Outstanding performance! You scored ${percentage}%, demonstrating thorough mastery of NISM Series V-D Chapter 6 concepts (Fund Distribution & Channel Management). Review any missed questions above.`
+        : `You scored ${percentage}%. Please review the highlighted sections on the 100% trail model, 12-month cooling-off period, nominee rights without ARN, and AMC due diligence thresholds before reattempting.`;
+
+      document.getElementById("submit-quiz-btn").classList.add("hidden");
+      document.getElementById("reset-quiz-btn").classList.remove("hidden");
+
+      resultsDiv.scrollIntoView({ behavior: 'smooth' });
+      lucide.createIcons();
+    }
+
+    function resetQuiz() {
+      userAnswers = {};
+      document.getElementById("answered-count").innerText = "0";
+      document.getElementById("quiz-results").classList.add("hidden");
+      document.getElementById("submit-quiz-btn").classList.remove("hidden");
+      document.getElementById("reset-quiz-btn").classList.add("hidden");
+      renderQuiz();
+      document.getElementById("interactive-quiz").scrollIntoView({ behavior: 'smooth' });
+    }
+
+    renderQuiz();
+    lucide.createIcons();
+  </script>
+</body>
+</html>

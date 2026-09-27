@@ -1,0 +1,958 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Chapter 19: Interest Rate Derivatives | NISM Series V-D Notes</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+  <script src="https://unpkg.com/lucide@latest"></script>
+
+  <!-- KaTeX for formula rendering -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.min.css">
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.min.js"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/contrib/auto-render.min.js" onload="renderMathInElement(document.body);"></script>
+
+  <!-- Global Module & Chapter Navigation Sidebar -->
+    <!-- Modern Documentation Design System & Zoom Engine -->
+  <link rel="stylesheet" href="modern-docs.css">
+  <script defer src="nav-sidebar.js"></script>
+
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+            display: ['"Space Grotesk"', 'sans-serif']
+          }
+        }
+      }
+    }
+  </script>
+</head>
+<body class="bg-slate-50 text-slate-900 min-h-screen flex flex-col selection:bg-purple-600 selection:text-white">
+
+  <!-- Header -->
+  <header class="sticky top-0 z-50 bg-white/90 backdrop-blur-md border-b border-slate-200">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
+      <div class="flex items-center gap-3">
+        <a href="module3.html" class="flex items-center gap-2 text-slate-500 hover:text-slate-900 transition-colors">
+          <div class="w-9 h-9 rounded-xl bg-slate-100 hover:bg-slate-200 flex items-center justify-center text-slate-700 transition-colors">
+            <i data-lucide="arrow-left" class="w-4 h-4"></i>
+          </div>
+        </a>
+        <div>
+          <div class="flex items-center gap-2">
+            <span class="text-xs font-bold uppercase tracking-wider text-purple-600 bg-purple-50 px-2 py-0.5 rounded">Module 3</span>
+            <span class="text-xs text-slate-400 font-medium">Chapter 19 of 22</span>
+          </div>
+          <h1 class="font-display font-bold text-base sm:text-lg text-slate-900 leading-tight">Interest Rate Derivatives</h1>
+        </div>
+      </div>
+
+      <div class="flex items-center gap-3">
+        <span class="hidden sm:inline-flex items-center gap-1 px-3 py-1 rounded-full text-xs font-bold bg-amber-50 text-amber-700 border border-amber-200">
+          <i data-lucide="award" class="w-3.5 h-3.5"></i>
+          Weightage: 2 Marks
+        </span>
+        <a href="#interactive-quiz" class="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-lg text-xs font-bold bg-purple-600 hover:bg-purple-700 text-white shadow-sm transition-all">
+          <i data-lucide="help-circle" class="w-3.5 h-3.5"></i>
+          <span>Chapter Quiz</span>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Content Grid -->
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 grid grid-cols-1 lg:grid-cols-12 gap-8 flex-grow">
+    
+    <!-- Sidebar Navigation -->
+    <aside class="hidden lg:block lg:col-span-3">
+      <div class="sticky top-24 space-y-4">
+        <!-- Chapter Switcher (3 Module Dropdowns) -->
+        <div id="sidebar-chapter-switcher"></div>
+
+        <div class="bg-white p-5 rounded-2xl border border-slate-200 shadow-sm">
+          <h2 class="text-xs font-bold text-slate-400 uppercase tracking-wider mb-3">Chapter Navigation</h2>
+          <nav class="space-y-1 text-xs">
+            <a href="#section-1" class="block px-2.5 py-1.5 rounded-lg text-slate-600 hover:bg-slate-100 hover:text-purple-600">19.1 Economic Functions & ALM ⚡</a>
+            <a href="#section-2" class="block px-2.5 py-1.5 rounded-lg text-amber-700 font-semibold bg-amber-50/70 hover:bg-amber-100">19.2 Forward Rate Agreements (FRAs) ⭐</a>
+            <a href="#section-3" class="block px-2.5 py-1.5 rounded-lg text-amber-700 font-semibold bg-amber-50/70 hover:bg-amber-100">19.3 Interest Rate Swaps & OIS ⭐</a>
+            <a href="#section-4" class="block px-2.5 py-1.5 rounded-lg text-amber-700 font-semibold bg-amber-50/70 hover:bg-amber-100">19.4 Caps, Floors, Collars & Swaptions ⭐</a>
+            <a href="#section-5" class="block px-2.5 py-1.5 rounded-lg text-slate-600 hover:bg-slate-100 hover:text-purple-600">19.5 OTC vs. Exchange-Traded (ETIRD)</a>
+            <a href="#interactive-quiz" class="block px-2.5 py-1.5 rounded-lg text-purple-700 font-bold bg-purple-50 hover:bg-purple-100 mt-2">Practice Quiz (12 MCQs)</a>
+          </nav>
+        </div>
+
+        <!-- Quick Summary Cheat Sheet -->
+        <div class="p-4 rounded-2xl bg-gradient-to-br from-purple-700 via-indigo-700 to-slate-900 text-white shadow-sm text-xs space-y-2">
+          <div class="flex items-center gap-1.5 font-bold text-amber-300">
+            <i data-lucide="zap" class="w-4 h-4"></i>
+            <span>High-Yield Exam Rules</span>
+          </div>
+          <p class="text-purple-100 leading-relaxed space-y-1 text-[11px]">
+            &bull; <strong>3&times;6 FRA:</strong> 3-month loan starting 3 months from today.<br>
+            &bull; <strong>FRA Settlement:</strong> Discounted PV paid upfront at loan inception.<br>
+            &bull; <strong>Payer Swap:</strong> Pays fixed, receives floating &rarr; Profits if rates rise.<br>
+            &bull; <strong>Receiver Swap:</strong> Pays floating, receives fixed &rarr; Profits if rates fall.<br>
+            &bull; <strong>No Principal Exchange:</strong> Only net interest exchanged.<br>
+            &bull; <strong>FBIL MIBOR:</strong> Benchmark floating rate for domestic OIS.<br>
+            &bull; <strong>Cap:</strong> Series of call options (borrower ceiling).<br>
+            &bull; <strong>Floor:</strong> Series of put options (lender floor).<br>
+            &bull; <strong>Collar:</strong> Long Cap + Short Floor (zero net premium).
+          </p>
+        </div>
+      </div>
+    </aside>
+
+    <!-- Main Notes -->
+    <div class="lg:col-span-9 space-y-8">
+
+      <!-- Section 19.1 -->
+      <section id="section-1" class="bg-white rounded-3xl p-6 sm:p-8 border border-slate-200/90 shadow-sm space-y-5">
+        <div class="flex items-center justify-between">
+          <div class="flex items-center gap-2 text-xs font-bold text-slate-500 uppercase tracking-wider">
+            <span class="w-2 h-2 rounded-full bg-slate-400"></span> Section 19.1 &bull; Fast-Track Refresher ⚡
+          </div>
+          <span class="text-xs px-2.5 py-1 rounded-full bg-slate-100 text-slate-600 font-semibold">Foundations & ALM</span>
+        </div>
+        
+        <div>
+          <h2 class="font-display font-bold text-xl sm:text-2xl text-slate-900">Concept & Economic Functions of Interest Rate Derivatives (IRD)</h2>
+          <p class="text-sm text-slate-600 mt-2 leading-relaxed">
+            An <strong>Interest Rate Derivative (IRD)</strong> is a financial instrument whose payoff depends on the level of interest rates, benchmark yield curves, or the prices of debt securities (such as Government Securities or Treasury Bills). Unlike equity derivatives where the underlying asset is a physical stock or index, the underlying of an IRD is a pure interest rate benchmark or borrowing yield.
+          </p>
+        </div>
+
+        <!-- 2 Pillar Cards: ALM vs Mutual Fund Duration -->
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4 text-xs">
+          <!-- Pillar 1: ALM in Banking -->
+          <div class="p-5 rounded-2xl bg-purple-50/70 border border-purple-200 space-y-3">
+            <div class="flex items-center gap-2">
+              <div class="w-7 h-7 rounded-lg bg-purple-600 text-white flex items-center justify-center font-bold">
+                <i data-lucide="landmark" class="w-4 h-4"></i>
+              </div>
+              <span class="font-bold text-purple-950 text-sm">1. Asset-Liability Management (ALM) in Banks</span>
+            </div>
+            <p class="text-slate-700 leading-relaxed">
+              Commercial banks face an inherent structural maturity mismatch:
+            </p>
+            <ul class="list-disc pl-4 space-y-1.5 text-slate-700">
+              <li><strong>Assets (Lending):</strong> Long-term fixed-rate loans (home loans, project finance, 10–20 years).</li>
+              <li><strong>Liabilities (Funding):</strong> Short-term floating deposits (savings accounts, CASA, 1–3 year fixed deposits).</li>
+              <li><strong>The Risk (Gap Risk):</strong> If interest rates rise, deposit funding costs surge immediately while asset coupon income remains fixed, compressing the bank's <strong>Net Interest Margin (NIM)</strong>.</li>
+              <li><strong>Derivatives Solution:</strong> The bank enters a <strong>Payer Interest Rate Swap (Pays Fixed, Receives Floating)</strong>. The floating cash inflows offset rising deposit costs, neutralizing duration mismatch without modifying customer loan contracts.</li>
+            </ul>
+          </div>
+
+          <!-- Pillar 2: Duration Management in Mutual Funds -->
+          <div class="p-5 rounded-2xl bg-blue-50/70 border border-blue-200 space-y-3">
+            <div class="flex items-center gap-2">
+              <div class="w-7 h-7 rounded-lg bg-blue-600 text-white flex items-center justify-center font-bold">
+                <i data-lucide="trending-up" class="w-4 h-4"></i>
+              </div>
+              <span class="font-bold text-blue-950 text-sm">2. Portfolio Duration Management in Mutual Funds</span>
+            </div>
+            <p class="text-slate-700 leading-relaxed">
+              Debt mutual fund managers dynamically alter portfolio duration to manage interest rate cycles:
+            </p>
+            <ul class="list-disc pl-4 space-y-1.5 text-slate-700">
+              <li><strong>Anticipating Rate Hikes:</strong> A fund manager expecting RBI rate increases wants to cut portfolio duration (e.g., from 6.0 years to 2.5 years) to prevent capital depreciation.</li>
+              <li><strong>Friction of Physical Selling:</strong> Liquidating physical corporate bonds incurs wide bid-ask spreads, illiquidity discounts, and capital gains tax liabilities.</li>
+              <li><strong>Derivatives Advantage:</strong> Entering a payer swap or shorting Interest Rate Futures (IRF) synthetically shortens duration within minutes at minimal transaction cost.</li>
+              <li><strong>Liability Immunization:</strong> Pension funds and insurers lock in exact reinvestment yields to match defined future annuity outflows.</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Pro Tip Callout -->
+        <div class="p-4 rounded-2xl bg-amber-50/80 border border-amber-200 flex items-start gap-3 text-xs">
+          <i data-lucide="lightbulb" class="w-4 h-4 text-amber-600 shrink-0 mt-0.5"></i>
+          <div>
+            <span class="font-bold text-amber-900">Exam Watchpoint:</span>
+            <span class="text-amber-800 ml-1">
+              NISM frequently asks why banks use derivatives instead of adjusting loans directly. The answer is: <em>derivatives permit off-balance sheet synthetic restructuring of interest rate sensitivity without disrupting customer loan agreements or taking on physical bond liquidation costs.</em>
+            </span>
+          </div>
+        </div>
+      </section>
+
+      <!-- Section 19.2 -->
+      <section id="section-2" class="bg-white rounded-3xl p-6 sm:p-8 border border-amber-200 shadow-sm space-y-6">
+        <div class="flex items-center justify-between">
+          <div class="flex items-center gap-2 text-xs font-bold text-amber-700 uppercase tracking-wider">
+            <span class="w-2 h-2 rounded-full bg-amber-500"></span> Section 19.2 &bull; Super High Exam Yield ⭐
+          </div>
+          <span class="text-xs px-2.5 py-1 rounded-full bg-amber-100 text-amber-800 font-bold">Forward Contracts</span>
+        </div>
+
+        <div>
+          <h2 class="font-display font-bold text-xl sm:text-2xl text-slate-900">Forward Rate Agreements (FRAs) & Settlement Discounting</h2>
+          <p class="text-sm text-slate-600 mt-2 leading-relaxed">
+            A <strong>Forward Rate Agreement (FRA)</strong> is an Over-the-Counter (OTC) forward contract in which two counterparties agree to lock in an interest rate to be paid or received on a notional principal amount over a future borrowing/lending period.
+          </p>
+        </div>
+
+        <!-- FRA Notation Explainer Card -->
+        <div class="p-5 rounded-2xl bg-slate-50 border border-slate-200 space-y-4 text-xs">
+          <div class="flex items-center justify-between border-b border-slate-200 pb-3">
+            <span class="font-bold text-slate-900 text-sm">Deconstructing FRA Notation: "A &times; B" (e.g., 3 &times; 6 FRA)</span>
+            <span class="px-2 py-0.5 rounded bg-blue-100 text-blue-800 font-mono font-bold text-[11px]">Formula: Tenure = B - A</span>
+          </div>
+
+          <div class="grid grid-cols-1 sm:grid-cols-3 gap-3 text-center">
+            <div class="p-3 bg-white rounded-xl border border-slate-200">
+              <span class="text-slate-400 block text-[10px] uppercase font-bold">Start Month (A)</span>
+              <span class="font-display font-bold text-base text-blue-600">3 Months</span>
+              <span class="text-slate-500 block text-[11px] mt-0.5">Loan begins 3 months from today</span>
+            </div>
+            <div class="p-3 bg-white rounded-xl border border-slate-200">
+              <span class="text-slate-400 block text-[10px] uppercase font-bold">End Month (B)</span>
+              <span class="font-display font-bold text-base text-purple-600">6 Months</span>
+              <span class="text-slate-500 block text-[11px] mt-0.5">Loan matures 6 months from today</span>
+            </div>
+            <div class="p-3 bg-white rounded-xl border border-emerald-300 bg-emerald-50/50">
+              <span class="text-emerald-700 block text-[10px] uppercase font-bold">Borrowing Period (B - A)</span>
+              <span class="font-display font-bold text-base text-emerald-700">3 Months</span>
+              <span class="text-emerald-600 block text-[11px] mt-0.5">Duration on which rate is fixed</span>
+            </div>
+          </div>
+
+          <!-- Examples Table -->
+          <div class="overflow-x-auto">
+            <table class="min-w-full text-left text-xs">
+              <thead class="bg-slate-100 text-slate-700 font-semibold">
+                <tr>
+                  <th class="p-2.5">FRA Notation</th>
+                  <th class="p-2.5">Loan Starts (A)</th>
+                  <th class="p-2.5">Loan Ends (B)</th>
+                  <th class="p-2.5 text-purple-700">Actual Borrowing Duration (B - A)</th>
+                  <th class="p-2.5">Underlying Application</th>
+                </tr>
+              </thead>
+              <tbody class="divide-y divide-slate-200">
+                <tr class="hover:bg-slate-50">
+                  <td class="p-2.5 font-bold font-mono text-purple-900">1 &times; 4 FRA</td>
+                  <td class="p-2.5">In 1 Month</td>
+                  <td class="p-2.5">In 4 Months</td>
+                  <td class="p-2.5 font-bold text-purple-700">3 Months</td>
+                  <td class="p-2.5 text-slate-600">Hedge 3-month borrowing starting next month</td>
+                </tr>
+                <tr class="hover:bg-slate-50">
+                  <td class="p-2.5 font-bold font-mono text-purple-900">3 &times; 6 FRA</td>
+                  <td class="p-2.5">In 3 Months</td>
+                  <td class="p-2.5">In 6 Months</td>
+                  <td class="p-2.5 font-bold text-purple-700">3 Months</td>
+                  <td class="p-2.5 text-slate-600">Standard quarterly corporate working capital hedge</td>
+                </tr>
+                <tr class="hover:bg-slate-50">
+                  <td class="p-2.5 font-bold font-mono text-purple-900">6 &times; 12 FRA</td>
+                  <td class="p-2.5">In 6 Months</td>
+                  <td class="p-2.5">In 12 Months</td>
+                  <td class="p-2.5 font-bold text-purple-700">6 Months</td>
+                  <td class="p-2.5 text-slate-600">Hedge semi-annual financing required after half-year</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <!-- Long vs Short FRA Table -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 text-xs">
+          <div class="p-4 rounded-2xl bg-blue-50/70 border border-blue-200 space-y-2">
+            <div class="flex items-center justify-between">
+              <span class="font-bold text-blue-950 text-sm">Buyer of FRA (Long Position)</span>
+              <span class="px-2 py-0.5 rounded bg-blue-200 text-blue-900 text-[10px] font-bold">Borrower</span>
+            </div>
+            <ul class="list-disc pl-4 space-y-1 text-slate-700">
+              <li><strong>Obligation:</strong> Agrees to PAY the fixed FRA rate and RECEIVE the floating reference rate (e.g., MIBOR).</li>
+              <li><strong>Objective:</strong> Hedging against <strong>RISING interest rates</strong>.</li>
+              <li><strong>Payoff:</strong> If Reference Rate &gt; FRA Rate &rarr; Buyer receives cash settlement payout.</li>
+            </ul>
+          </div>
+
+          <div class="p-4 rounded-2xl bg-purple-50/70 border border-purple-200 space-y-2">
+            <div class="flex items-center justify-between">
+              <span class="font-bold text-purple-950 text-sm">Seller of FRA (Short Position)</span>
+              <span class="px-2 py-0.5 rounded bg-purple-200 text-purple-900 text-[10px] font-bold">Lender / Investor</span>
+            </div>
+            <ul class="list-disc pl-4 space-y-1 text-slate-700">
+              <li><strong>Obligation:</strong> Agrees to RECEIVE the fixed FRA rate and PAY the floating reference rate.</li>
+              <li><strong>Objective:</strong> Hedging against <strong>FALLING interest rates</strong>.</li>
+              <li><strong>Payoff:</strong> If FRA Rate &gt; Reference Rate &rarr; Seller receives cash settlement payout.</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Cash Settlement Discounting Mechanism & Formula -->
+        <div class="p-5 rounded-2xl bg-amber-50/50 border border-amber-200 space-y-3 text-xs">
+          <div class="flex items-center gap-2">
+            <i data-lucide="help-circle" class="w-4 h-4 text-amber-700 shrink-0"></i>
+            <span class="font-bold text-amber-950 text-sm">Why is the Cash Settlement Discounted? (High Exam Yield ⭐)</span>
+          </div>
+          <p class="text-slate-700 leading-relaxed">
+            In standard commercial lending, interest is paid at the <em>end of the loan period</em> (in arrears, at Month B). However, in an FRA, cash settlement occurs <em>at the beginning of the borrowing period</em> (at Month A). Because the payee receives the money $(B - A)$ months ahead of when interest would normally be paid, the gross interest differential must be <strong>discounted back to present value</strong> using the prevailing market reference rate!
+          </p>
+
+          <div class="p-3.5 bg-white rounded-xl border border-amber-300 font-mono text-slate-900 text-center space-y-1 shadow-sm">
+            <div class="text-[11px] text-slate-500 font-sans font-bold uppercase">FRA Cash Settlement Formula</div>
+            <div class="text-xs sm:text-sm font-bold text-purple-900">
+              Settlement Amount = 
+              <span class="inline-block align-middle text-left ml-1">
+                <span>Notional Principal &times; (Reference Rate - FRA Rate) &times; (Days / Basis)</span>
+                <span class="block border-t border-slate-700 text-center">1 + [Reference Rate &times; (Days / Basis)]</span>
+              </span>
+            </div>
+          </div>
+
+          <!-- Step-by-Step Numerical Example -->
+          <div class="p-4 rounded-xl bg-white border border-slate-200 space-y-2 mt-3">
+            <span class="font-bold text-slate-900 text-xs">Step-by-Step Worked Numerical Example:</span>
+            <p class="text-slate-600 leading-relaxed">
+              <strong>Scenario:</strong> ABC Ltd buys a <strong>3&times;6 FRA</strong> on a Notional Principal of <strong>₹50 Crore</strong> at an agreed FRA rate of <strong>6.50% p.a.</strong> At the end of month 3, the 3-month MIBOR reference rate fixes at <strong>7.50% p.a.</strong> The borrowing period is 90 days (using a 360-day year convention). Calculate the settlement cash flow.
+            </p>
+            <div class="p-3 bg-slate-50 rounded-lg border border-slate-200 font-mono text-[11px] text-slate-800 space-y-1">
+              <div>1. Gross Interest Differential = ₹50,00,00,000 &times; (0.0750 - 0.0650) &times; (90 / 360) = ₹50 Cr &times; 0.01 &times; 0.25 = <strong>₹12,50,000</strong></div>
+              <div>2. Discounting Denominator = 1 + [0.0750 &times; (90 / 360)] = 1 + 0.01875 = <strong>1.01875</strong></div>
+              <div>3. Discounted Settlement Payout = ₹12,50,000 / 1.01875 = <strong>₹12,26,994</strong></div>
+              <div class="text-emerald-700 font-bold font-sans mt-1">&rarr; Result: The FRA seller pays ABC Ltd (the buyer) <strong>₹12,26,994</strong> at month 3.</div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Section 19.3 -->
+      <section id="section-3" class="bg-white rounded-3xl p-6 sm:p-8 border border-amber-200 shadow-sm space-y-6">
+        <div class="flex items-center justify-between">
+          <div class="flex items-center gap-2 text-xs font-bold text-amber-700 uppercase tracking-wider">
+            <span class="w-2 h-2 rounded-full bg-amber-500"></span> Section 19.3 &bull; Super High Exam Yield ⭐
+          </div>
+          <span class="text-xs px-2.5 py-1 rounded-full bg-amber-100 text-amber-800 font-bold">Swap Structures</span>
+        </div>
+
+        <div>
+          <h2 class="font-display font-bold text-xl sm:text-2xl text-slate-900">Interest Rate Swaps (IRS) & Overnight Indexed Swaps (OIS)</h2>
+          <p class="text-sm text-slate-600 mt-2 leading-relaxed">
+            An <strong>Interest Rate Swap (IRS)</strong> is an OTC derivative agreement between two counterparties to exchange streams of interest payments on an agreed notional principal over a specified term (tenor from 1 to 10+ years).
+          </p>
+        </div>
+
+        <!-- Cardinal Rule of IRS -->
+        <div class="p-4 rounded-2xl bg-purple-50 border border-purple-200 flex items-start gap-3 text-xs">
+          <i data-lucide="alert-circle" class="w-4 h-4 text-purple-700 shrink-0 mt-0.5"></i>
+          <div>
+            <span class="font-bold text-purple-950">The Cardinal Rule of Plain Vanilla IRS:</span>
+            <span class="text-purple-900 ml-1">
+              There is <strong>NEVER any exchange of the notional principal</strong> at inception, during the life of the swap, or at maturity. The principal exists solely as a reference base to calculate interest obligations. On every payment reset date, <strong>only the net interest differential</strong> is exchanged between the counterparties.
+            </span>
+          </div>
+        </div>
+
+        <!-- Payer Swap vs Receiver Swap Comparison Table -->
+        <div class="overflow-x-auto rounded-2xl border border-slate-200 text-xs">
+          <table class="min-w-full text-left">
+            <thead class="bg-slate-100 text-slate-700 font-bold uppercase tracking-wider">
+              <tr>
+                <th class="p-3">Feature</th>
+                <th class="p-3 bg-blue-50 text-blue-900">Fixed Rate Payer (Payer Swap / Buyer)</th>
+                <th class="p-3 bg-purple-50 text-purple-900">Floating Rate Payer (Receiver Swap / Seller)</th>
+              </tr>
+            </thead>
+            <tbody class="divide-y divide-slate-200">
+              <tr class="hover:bg-slate-50">
+                <td class="p-3 font-semibold">Leg Paid</td>
+                <td class="p-3 font-bold text-blue-900 bg-blue-50/20">Pays Fixed Coupon Rate</td>
+                <td class="p-3 font-bold text-purple-900 bg-purple-50/20">Pays Floating Benchmark Rate (e.g., MIBOR)</td>
+              </tr>
+              <tr class="hover:bg-slate-50">
+                <td class="p-3 font-semibold">Leg Received</td>
+                <td class="p-3 font-bold text-blue-900 bg-blue-50/20">Receives Floating Benchmark Rate</td>
+                <td class="p-3 font-bold text-purple-900 bg-purple-50/20">Receives Fixed Coupon Rate</td>
+              </tr>
+              <tr class="hover:bg-slate-50">
+                <td class="p-3 font-semibold">Market Rate Outlook</td>
+                <td class="p-3 text-emerald-800 font-semibold">Bearish on bond prices &rarr; <strong>Expects interest rates to RISE</strong></td>
+                <td class="p-3 text-emerald-800 font-semibold">Bullish on bond prices &rarr; <strong>Expects interest rates to FALL</strong></td>
+              </tr>
+              <tr class="hover:bg-slate-50">
+                <td class="p-3 font-semibold">Typical Hedging Application</td>
+                <td class="p-3 text-slate-700">Corporate borrower with floating bank debt converting it to predictable fixed interest</td>
+                <td class="p-3 text-slate-700">Pension fund or NBFC with fixed assets converting to floating income to match floating liabilities</td>
+              </tr>
+              <tr class="hover:bg-slate-50">
+                <td class="p-3 font-semibold">Net Settlement Payoff</td>
+                <td class="p-3 font-mono text-slate-800">Notional &times; (Floating Rate - Fixed Rate) &times; (d/b)</td>
+                <td class="p-3 font-mono text-slate-800">Notional &times; (Fixed Rate - Floating Rate) &times; (d/b)</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <!-- Step-by-Step IRS Net Settlement Example -->
+        <div class="p-4 rounded-2xl bg-slate-50 border border-slate-200 space-y-2 text-xs">
+          <span class="font-bold text-slate-900 text-sm">Worked Example: IRS Net Settlement Calculation</span>
+          <p class="text-slate-600">
+            <strong>Contract:</strong> 3-year plain vanilla IRS, Notional = <strong>₹100 Crore</strong>, Fixed Swap Rate = <strong>6.80% p.a.</strong>, Semi-annual reset (182 days / 365-day basis). At the first coupon reset date, the semi-annual floating benchmark rate fixes at <strong>7.40% p.a.</strong>
+          </p>
+          <div class="p-3 bg-white rounded-xl border border-slate-200 font-mono text-[11px] text-slate-800 space-y-1">
+            <div>Fixed Leg Obligation = ₹100 Cr &times; 6.80% &times; (182 / 365) = 100,00,00,000 &times; 0.068 &times; 0.49863 = <strong>₹3,39,06,849</strong></div>
+            <div>Floating Leg Obligation = ₹100 Cr &times; 7.40% &times; (182 / 365) = 100,00,00,000 &times; 0.074 &times; 0.49863 = <strong>₹3,68,98,630</strong></div>
+            <div class="text-emerald-700 font-bold font-sans pt-1">
+              &rarr; Net Exchange: Floating payer pays the Fixed payer the net difference = ₹3,68,98,630 - ₹3,39,06,849 = <strong>₹29,91,781</strong>.
+            </div>
+          </div>
+        </div>
+
+        <!-- Indian Benchmark Architecture: FBIL & MIBOR OIS -->
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4 text-xs">
+          <div class="p-4 rounded-2xl bg-purple-50/60 border border-purple-200 space-y-2">
+            <span class="font-bold text-purple-950 text-sm">Overnight MIBOR & FBIL Benchmark</span>
+            <ul class="list-disc pl-4 space-y-1 text-slate-700 leading-relaxed">
+              <li><strong>Administrator:</strong> <strong>Financial Benchmarks India Pvt Ltd (FBIL)</strong> is the designated independent benchmark administrator under RBI oversight.</li>
+              <li><strong>Calculation:</strong> Calculated daily using volume-weighted average of trades executed in the interbank call money market on the NDS-CALL platform.</li>
+              <li><strong>Usage:</strong> Serves as the national risk-free money market floating benchmark for swaps and FRAs.</li>
+            </ul>
+          </div>
+
+          <div class="p-4 rounded-2xl bg-blue-50/60 border border-blue-200 space-y-2">
+            <span class="font-bold text-blue-950 text-sm">Overnight Indexed Swaps (OIS) in India</span>
+            <ul class="list-disc pl-4 space-y-1 text-slate-700 leading-relaxed">
+              <li><strong>Dominant Contract:</strong> OIS is the single most liquid domestic interest rate derivative instrument in India.</li>
+              <li><strong>Floating Leg Compounding:</strong> The floating leg is benchmarked to the <strong>daily compounded Overnight MIBOR</strong> over the payment period (geometric compounding, not simple average).</li>
+              <li><strong>Key Tenors:</strong> 1-year and 5-year OIS are the sovereign barometers for future RBI monetary policy expectations.</li>
+              <li><strong>Clearing:</strong> Bilateral OTC trades are guaranteed and centrally cleared through <strong>CCIL</strong>.</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <!-- Section 19.4 -->
+      <section id="section-4" class="bg-white rounded-3xl p-6 sm:p-8 border border-amber-200 shadow-sm space-y-6">
+        <div class="flex items-center justify-between">
+          <div class="flex items-center gap-2 text-xs font-bold text-amber-700 uppercase tracking-wider">
+            <span class="w-2 h-2 rounded-full bg-amber-500"></span> Section 19.4 &bull; Super High Exam Yield ⭐
+          </div>
+          <span class="text-xs px-2.5 py-1 rounded-full bg-amber-100 text-amber-800 font-bold">OTC Options</span>
+        </div>
+
+        <div>
+          <h2 class="font-display font-bold text-xl sm:text-2xl text-slate-900">Interest Rate Caps, Floors, Collars & Swaptions</h2>
+          <p class="text-sm text-slate-600 mt-2 leading-relaxed">
+            In addition to linear instruments (FRAs, Swaps), the OTC debt market utilizes nonlinear option-based contracts to manage asymmetric interest rate risk.
+          </p>
+        </div>
+
+        <!-- 3 Cards: Caps, Floors, Collars -->
+        <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 text-xs">
+          <!-- Cap -->
+          <div class="p-5 rounded-2xl bg-blue-50/70 border border-blue-200 space-y-2">
+            <div class="flex items-center justify-between">
+              <span class="font-bold text-blue-950 text-sm">Interest Rate Cap</span>
+              <span class="px-2 py-0.5 rounded bg-blue-200 text-blue-800 font-bold text-[10px]">Call Options</span>
+            </div>
+            <p class="text-slate-700 leading-relaxed">
+              A sequence of European <strong>call options</strong> on interest rates (each individual option is called a <strong>caplet</strong>).
+            </p>
+            <div class="space-y-1 pt-1 text-slate-600">
+              <p>&bull; <strong>Buyer:</strong> Floating-rate borrower pays an upfront premium.</p>
+              <p>&bull; <strong>Payoff:</strong> If Market Rate &gt; Cap Strike Rate &rarr; Seller pays: <em>Notional &times; (Rate - Strike) &times; (d/b)</em>.</p>
+              <p>&bull; <strong>Protection:</strong> Caps maximum borrowing cost while allowing full benefit if market rates plunge.</p>
+            </div>
+          </div>
+
+          <!-- Floor -->
+          <div class="p-5 rounded-2xl bg-purple-50/70 border border-purple-200 space-y-2">
+            <div class="flex items-center justify-between">
+              <span class="font-bold text-purple-950 text-sm">Interest Rate Floor</span>
+              <span class="px-2 py-0.5 rounded bg-purple-200 text-purple-800 font-bold text-[10px]">Put Options</span>
+            </div>
+            <p class="text-slate-700 leading-relaxed">
+              A sequence of European <strong>put options</strong> on interest rates (each individual option is called a <strong>floorlet</strong>).
+            </p>
+            <div class="space-y-1 pt-1 text-slate-600">
+              <p>&bull; <strong>Buyer:</strong> Floating-rate lender/investor pays an upfront premium.</p>
+              <p>&bull; <strong>Payoff:</strong> If Market Rate &lt; Floor Strike Rate &rarr; Seller pays: <em>Notional &times; (Strike - Rate) &times; (d/b)</em>.</p>
+              <p>&bull; <strong>Protection:</strong> Guarantees a minimum return floor if yields crash, while retaining unlimited upside if rates rise.</p>
+            </div>
+          </div>
+
+          <!-- Collar -->
+          <div class="p-5 rounded-2xl bg-amber-50/70 border border-amber-200 space-y-2">
+            <div class="flex items-center justify-between">
+              <span class="font-bold text-amber-950 text-sm">Interest Rate Collar</span>
+              <span class="px-2 py-0.5 rounded bg-amber-200 text-amber-900 font-bold text-[10px]">Cap + Floor</span>
+            </div>
+            <p class="text-slate-700 leading-relaxed">
+              Simultaneously <strong>buying a Cap</strong> (e.g., at 8.00%) and <strong>selling a Floor</strong> (e.g., at 5.50%).
+            </p>
+            <div class="space-y-1 pt-1 text-slate-600">
+              <p>&bull; <strong>Zero-Cost Collar:</strong> Premium earned from selling the floor offsets the premium paid for the cap.</p>
+              <p>&bull; <strong>Corridor:</strong> Locks borrowing costs within a defined corridor [Floor, Cap].</p>
+              <p>&bull; <strong>Tradeoff:</strong> Caps maximum cost but gives up benefit if rates drop below floor.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Collar Regimes Summary Table -->
+        <div class="p-4 rounded-2xl bg-slate-50 border border-slate-200 space-y-2 text-xs">
+          <span class="font-bold text-slate-900 text-sm">Borrower Collar Payoff Across Market Regimes (Cap = 8%, Floor = 5.5%)</span>
+          <div class="overflow-x-auto">
+            <table class="min-w-full text-left">
+              <thead class="bg-white text-slate-700 font-bold">
+                <tr>
+                  <th class="p-2 border border-slate-200">Market Rate Scenario</th>
+                  <th class="p-2 border border-slate-200">Cap Status</th>
+                  <th class="p-2 border border-slate-200">Floor Status</th>
+                  <th class="p-2 border border-slate-200 text-purple-900">Effective Borrowing Rate Paid</th>
+                </tr>
+              </thead>
+              <tbody class="divide-y divide-slate-200">
+                <tr>
+                  <td class="p-2 border border-slate-200 font-semibold text-rose-700">Rates Surge to 9.50%</td>
+                  <td class="p-2 border border-slate-200 text-emerald-700 font-bold">In-the-Money (Receives 1.50%)</td>
+                  <td class="p-2 border border-slate-200 text-slate-400">Out-of-the-Money (Expires)</td>
+                  <td class="p-2 border border-slate-200 font-bold text-purple-900">8.00% (Protected by Cap)</td>
+                </tr>
+                <tr>
+                  <td class="p-2 border border-slate-200 font-semibold text-slate-700">Rates Stable at 6.75%</td>
+                  <td class="p-2 border border-slate-200 text-slate-400">Out-of-the-Money (Expires)</td>
+                  <td class="p-2 border border-slate-200 text-slate-400">Out-of-the-Money (Expires)</td>
+                  <td class="p-2 border border-slate-200 font-bold text-purple-900">6.75% (Market Rate)</td>
+                </tr>
+                <tr>
+                  <td class="p-2 border border-slate-200 font-semibold text-emerald-700">Rates Plunge to 4.00%</td>
+                  <td class="p-2 border border-slate-200 text-slate-400">Out-of-the-Money (Expires)</td>
+                  <td class="p-2 border border-slate-200 text-rose-700 font-bold">In-the-Money (Pays 1.50%)</td>
+                  <td class="p-2 border border-slate-200 font-bold text-purple-900">5.50% (Floor Threshold)</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <!-- Swaptions (Options on Swaps) -->
+        <div class="p-5 rounded-2xl bg-indigo-50/60 border border-indigo-200 space-y-3 text-xs">
+          <div class="flex items-center gap-2">
+            <i data-lucide="shuffle" class="w-4 h-4 text-indigo-700"></i>
+            <span class="font-bold text-indigo-950 text-sm">Swaptions (Options on Interest Rate Swaps)</span>
+          </div>
+          <p class="text-slate-700 leading-relaxed">
+            A <strong>Swaption</strong> is an option contract giving the buyer the right, but not the obligation, to enter into an Interest Rate Swap at a predetermined swap rate on or before a specified future date:
+          </p>
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 pt-1">
+            <div class="p-3 bg-white rounded-xl border border-indigo-200 space-y-1">
+              <span class="font-bold text-indigo-900">Payer Swaption (Call on Swap Rate)</span>
+              <p class="text-slate-600">The buyer has the right to <strong>PAY FIXED and RECEIVE FLOATING</strong>. Exercised if market swap rates rise above the swaption strike rate. Used by prospective borrowers to set a ceiling on future fixed swap financing.</p>
+            </div>
+            <div class="p-3 bg-white rounded-xl border border-indigo-200 space-y-1">
+              <span class="font-bold text-indigo-900">Receiver Swaption (Put on Swap Rate)</span>
+              <p class="text-slate-600">The buyer has the right to <strong>RECEIVE FIXED and PAY FLOATING</strong>. Exercised if market swap rates drop below the swaption strike rate. Used by debt investors or pension funds to lock in guaranteed high yields.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Section 19.5 -->
+      <section id="section-5" class="bg-white rounded-3xl p-6 sm:p-8 border border-slate-200/90 shadow-sm space-y-6">
+        <div class="flex items-center justify-between">
+          <div class="flex items-center gap-2 text-xs font-bold text-slate-500 uppercase tracking-wider">
+            <span class="w-2 h-2 rounded-full bg-slate-400"></span> Section 19.5 &bull; Market Comparison
+          </div>
+          <span class="text-xs px-2.5 py-1 rounded-full bg-slate-100 text-slate-600 font-semibold">Regulatory Framework</span>
+        </div>
+
+        <div>
+          <h2 class="font-display font-bold text-xl sm:text-2xl text-slate-900">Bond Forwards & OTC vs. Exchange-Traded IRD Master Comparison</h2>
+          <p class="text-sm text-slate-600 mt-2 leading-relaxed">
+            India's interest rate derivatives market operates under a dual framework: Over-the-Counter (OTC) contracts regulated by the <strong>Reserve Bank of India (RBI)</strong> and Exchange-Traded Derivatives (ETIRD) regulated by <strong>SEBI</strong>.
+          </p>
+        </div>
+
+        <!-- Bond Forwards Mini Explainer -->
+        <div class="p-4 rounded-2xl bg-slate-50 border border-slate-200 space-y-2 text-xs">
+          <div class="flex items-center gap-2 text-slate-900 font-bold text-sm">
+            <i data-lucide="file-text" class="w-4 h-4 text-purple-600"></i>
+            <span>Bond Forwards (RBI Directions)</span>
+          </div>
+          <p class="text-slate-600 leading-relaxed">
+            A <strong>Bond Forward</strong> is an OTC contract to purchase or sell a specific Central or State Government Security (dated G-Sec) at a specified price on a predetermined future date. Under RBI directions, entities can hedge interest rate risk associated with upcoming bond issuances, pipeline loans, or balance sheet portfolios.
+          </p>
+        </div>
+
+        <!-- Master Comparison Table -->
+        <div class="overflow-x-auto rounded-2xl border border-slate-200 text-xs">
+          <table class="min-w-full text-left">
+            <thead class="bg-slate-100 text-slate-700 font-bold uppercase tracking-wider">
+              <tr>
+                <th class="p-3">Comparison Parameter</th>
+                <th class="p-3 bg-purple-50 text-purple-900">Over-the-Counter (OTC) IRD (FRAs, Swaps, OIS)</th>
+                <th class="p-3 bg-blue-50 text-blue-900">Exchange-Traded IRD (IRF, IRO on NSE/BSE)</th>
+              </tr>
+            </thead>
+            <tbody class="divide-y divide-slate-200">
+              <tr class="hover:bg-slate-50">
+                <td class="p-3 font-semibold">Primary Regulator</td>
+                <td class="p-3 font-bold text-purple-900 bg-purple-50/20">Reserve Bank of India (RBI)</td>
+                <td class="p-3 font-bold text-blue-900 bg-blue-50/20">Securities and Exchange Board of India (SEBI)</td>
+              </tr>
+              <tr class="hover:bg-slate-50">
+                <td class="p-3 font-semibold">Contract Customization</td>
+                <td class="p-3 text-slate-800">Completely customized tenors, broken dates, and tailored notional sizes</td>
+                <td class="p-3 text-slate-800">Strictly standardized underlying bonds, lot size (₹2 Lakhs), and expiry dates</td>
+              </tr>
+              <tr class="hover:bg-slate-50">
+                <td class="p-3 font-semibold">Counterparty Credit Risk</td>
+                <td class="p-3 text-rose-700 font-semibold">Bilateral credit risk (mitigated by CCIL central clearing for OIS)</td>
+                <td class="p-3 text-emerald-700 font-bold">Zero counterparty risk (Guaranteed by Exchange Clearing Corporation)</td>
+              </tr>
+              <tr class="hover:bg-slate-50">
+                <td class="p-3 font-semibold">Trading Venue</td>
+                <td class="p-3 text-slate-800">Off-exchange bilateral negotiations, voice brokers, or NDS platforms</td>
+                <td class="p-3 text-slate-800">Anonymous electronic limit order book on NSE and BSE</td>
+              </tr>
+              <tr class="hover:bg-slate-50">
+                <td class="p-3 font-semibold">Margining & Settlement</td>
+                <td class="p-3 text-slate-800">ISDA Credit Support Annex (CSA) collateral; periodic net coupon settlement</td>
+                <td class="p-3 text-slate-800">Daily Mark-to-Market (MTM) cash margin settlement + upfront SPAN margins</td>
+              </tr>
+              <tr class="hover:bg-slate-50">
+                <td class="p-3 font-semibold">Participant Classification</td>
+                <td class="p-3 text-slate-800">Market Makers (Banks, Primary Dealers) and Users (Retail users restricted to hedging only)</td>
+                <td class="p-3 text-slate-800">Open to all market participants including retail investors, mutual funds, and FPIs</td>
+              </tr>
+              <tr class="hover:bg-slate-50">
+                <td class="p-3 font-semibold">Legal Documentation</td>
+                <td class="p-3 text-slate-800">Master Agreement published by International Swaps and Derivatives Association (ISDA)</td>
+                <td class="p-3 text-slate-800">Standard Exchange Client-Broker Agreement and Bye-laws</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <!-- Section 19.6 Interactive Quiz -->
+      <section id="interactive-quiz" class="bg-slate-900 text-white rounded-3xl p-6 sm:p-8 border border-slate-800 shadow-xl space-y-6">
+        <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 border-b border-slate-800 pb-5">
+          <div>
+            <div class="flex items-center gap-2 text-xs font-bold text-purple-400 uppercase tracking-wider mb-1">
+              <i data-lucide="check-circle" class="w-4 h-4"></i> Interactive Exam Assessment
+            </div>
+            <h3 class="font-display font-bold text-xl sm:text-2xl text-white">Chapter 19 Practice Quiz</h3>
+            <p class="text-xs text-slate-400 mt-1">12 Exam-standard MCQs on FRAs, Swaps, MIBOR OIS, Caps/Floors, and OTC vs ETD.</p>
+          </div>
+          <div class="flex items-center gap-3">
+            <div class="text-right">
+              <span class="text-xs text-slate-400">Progress</span>
+              <div class="text-sm font-bold text-purple-400"><span id="answered-count">0</span> / 12</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Questions Container -->
+        <div id="quiz-container" class="space-y-6"></div>
+
+        <!-- Action Bar -->
+        <div class="pt-4 border-t border-slate-800 flex flex-col sm:flex-row items-center justify-between gap-4">
+          <button id="submit-quiz-btn" onclick="submitQuiz()" class="w-full sm:w-auto px-6 py-3 rounded-xl bg-purple-600 hover:bg-purple-500 font-bold text-sm shadow-lg shadow-purple-600/30 transition-all flex items-center justify-center gap-2">
+            <span>Submit Quiz & View Results</span>
+            <i data-lucide="arrow-right" class="w-4 h-4"></i>
+          </button>
+          <button id="reset-quiz-btn" onclick="resetQuiz()" class="hidden w-full sm:w-auto px-6 py-3 rounded-xl bg-slate-800 hover:bg-slate-700 text-slate-300 font-bold text-sm transition-all flex items-center justify-center gap-2">
+            <i data-lucide="rotate-ccw" class="w-4 h-4"></i>
+            <span>Retake Quiz</span>
+          </button>
+        </div>
+
+        <!-- Quiz Results -->
+        <div id="quiz-results" class="hidden p-6 rounded-2xl bg-slate-800/80 border border-slate-700 space-y-4">
+          <div class="flex items-center justify-between">
+            <h4 class="font-display font-bold text-lg text-white">Quiz Score Summary</h4>
+            <span id="result-status-badge" class="px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider"></span>
+          </div>
+          <div class="flex items-baseline gap-3">
+            <span id="score-display" class="font-display font-extrabold text-4xl text-purple-400"></span>
+            <span id="percentage-display" class="text-sm text-slate-400 font-medium"></span>
+          </div>
+          <p id="result-summary-text" class="text-xs sm:text-sm text-slate-300"></p>
+        </div>
+      </section>
+
+      <!-- Navigation Footer -->
+      <footer class="pt-6 border-t border-slate-200 flex items-center justify-between">
+        <a href="module3-ch18.html" class="flex items-center gap-2 px-4 py-2.5 rounded-xl border border-slate-200 bg-white hover:bg-slate-50 text-slate-700 font-medium text-xs transition-colors">
+          <i data-lucide="arrow-left" class="w-4 h-4"></i>
+          <span>Prev: Chapter 18 (Fixed Income)</span>
+        </a>
+        <a href="module3-ch20.html" class="flex items-center gap-2 px-4 py-2.5 rounded-xl bg-purple-600 hover:bg-purple-700 text-white font-semibold text-xs shadow-sm transition-colors">
+          <span>Next: Chapter 20 (Exchange Traded IRF)</span>
+          <i data-lucide="arrow-right" class="w-4 h-4"></i>
+        </a>
+      </footer>
+
+    </div>
+  </div>
+
+  <script>
+    const questionsData = [
+      {
+        id: 1,
+        question: "In standard Forward Rate Agreement (FRA) notation, what borrowing period duration is specified by a '3 x 6' FRA?",
+        options: [
+          { key: "a", text: "A 6-month borrowing period beginning 3 months from today" },
+          { key: "b", text: "A 3-month borrowing period beginning 3 months from today" },
+          { key: "c", text: "A 3-month borrowing period beginning 6 months from today" },
+          { key: "d", text: "An 18-month borrowing period beginning immediately" }
+        ],
+        correct: "b",
+        explanation: "In an 'A x B' FRA, 'A' indicates the time to settlement/commencement of the loan (3 months), and 'B' indicates the time to loan maturity (6 months). The borrowing duration is B - A = 6 - 3 = 3 months."
+      },
+      {
+        id: 2,
+        question: "Why is the cash settlement payment of a Forward Rate Agreement (FRA) discounted back to present value using the market reference rate at inception of the loan?",
+        options: [
+          { key: "a", text: "To adjust for corporate tax deductions at the end of the year" },
+          { key: "b", text: "Because FRA interest payments are settled in advance at the start of the loan period rather than in arrears at maturity" },
+          { key: "c", text: "Because physical government bonds must be delivered to the clearing house" },
+          { key: "d", text: "To compensate the exchange broker for initial margin funding" }
+        ],
+        correct: "b",
+        explanation: "Normal loan interest is paid in arrears at maturity (Month B). However, FRA settlement takes place upfront at the start of the loan period (Month A). Since the payee receives cash early, the interest differential is discounted back by 1 / [1 + Ref Rate * (Days/Basis)]."
+      },
+      {
+        id: 3,
+        question: "In a plain vanilla Interest Rate Swap (IRS), which counterparty earns a net gain if benchmark market interest rates increase?",
+        options: [
+          { key: "a", text: "The fixed rate payer (floating rate receiver)" },
+          { key: "b", text: "The floating rate payer (fixed rate receiver)" },
+          { key: "c", text: "Both counterparties make equal gains" },
+          { key: "d", text: "Neither party, because swaps are immune to interest rate fluctuations" }
+        ],
+        correct: "a",
+        explanation: "The fixed-rate payer pays a locked-in lower fixed rate and receives the rising floating benchmark rate, realizing a positive net cash inflow as market rates rise."
+      },
+      {
+        id: 4,
+        question: "What happens to the notional principal amount in a plain vanilla rupee Interest Rate Swap (IRS)?",
+        options: [
+          { key: "a", text: "It is deposited with the Reserve Bank of India at inception" },
+          { key: "b", text: "It is physically transferred between counterparties at contract initiation and returned at maturity" },
+          { key: "c", text: "It is never exchanged; it serves purely as the reference calculation base for net periodic interest flows" },
+          { key: "d", text: "It is converted into sovereign green bonds at maturity" }
+        ],
+        correct: "c",
+        explanation: "The principal in an IRS is strictly 'notional'. No principal changes hands at inception, during the contract, or at maturity. Only net periodic interest differences are settled."
+      },
+      {
+        id: 5,
+        question: "Who is the authorized independent administrator responsible for computing and publishing the Overnight MIBOR benchmark in India?",
+        options: [
+          { key: "a", text: "Securities and Exchange Board of India (SEBI)" },
+          { key: "b", text: "Financial Benchmarks India Pvt Ltd (FBIL)" },
+          { key: "c", text: "Association of Mutual Funds in India (AMFI)" },
+          { key: "d", text: "State Bank of India (SBI)" }
+        ],
+        correct: "b",
+        explanation: "Financial Benchmarks India Pvt Ltd (FBIL) is the designated independent benchmark administrator for key domestic interest rate benchmarks including Overnight MIBOR and Modified MIFOR."
+      },
+      {
+        id: 6,
+        question: "A company with floating-rate debt wants to cap its maximum borrowing rate but has zero budget for upfront options premium. Which strategy is most suitable?",
+        options: [
+          { key: "a", text: "Buy an standalone Interest Rate Floor" },
+          { key: "b", text: "Enter an Interest Rate Collar by buying a Cap and selling a Floor" },
+          { key: "c", text: "Short sell 10-year GOI bond futures" },
+          { key: "d", text: "Buy an out-of-the-money put swaption" }
+        ],
+        correct: "b",
+        explanation: "A borrower collar combines buying a Cap (protection against rising rates) with selling a Floor. The premium earned from selling the floor offsets the cap premium, creating a cost-neutral 'Zero-Cost Collar'."
+      },
+      {
+        id: 7,
+        question: "What is an Interest Rate Cap technically composed of?",
+        options: [
+          { key: "a", text: "A sequence of put options on bond yields" },
+          { key: "b", text: "A portfolio of forward foreign exchange contracts" },
+          { key: "c", text: "A series of European call options on an interest rate benchmark (caplets)" },
+          { key: "d", text: "A combination of a long bond and a short repo" }
+        ],
+        correct: "c",
+        explanation: "An Interest Rate Cap is a sequence of European call options (caplets) on a floating benchmark. If the market rate on a reset date exceeds the strike rate, the seller pays the difference to the buyer."
+      },
+      {
+        id: 8,
+        question: "Which market participant is the natural buyer of an Interest Rate Floor?",
+        options: [
+          { key: "a", text: "A corporate borrower with floating-rate bank borrowings" },
+          { key: "b", text: "A floating-rate lender or debt investor seeking to guarantee a minimum yield against falling interest rates" },
+          { key: "c", text: "An equity fund manager hedging beta risk" },
+          { key: "d", text: "An exporter hedging foreign currency depreciation" }
+        ],
+        correct: "b",
+        explanation: "An Interest Rate Floor (a series of put options / floorlets) pays the buyer if rates fall below the strike rate, guaranteeing floating-rate lenders/investors a minimum floor return."
+      },
+      {
+        id: 9,
+        question: "Why do commercial banks heavily rely on Interest Rate Swaps for Asset-Liability Management (ALM)?",
+        options: [
+          { key: "a", text: "To avoid corporate income tax on loan interest" },
+          { key: "b", text: "To bridge maturity mismatches between long-term fixed assets (loans) and short-term floating liabilities (deposits)" },
+          { key: "c", text: "To bypass RBI Statutory Liquidity Ratio (SLR) requirements" },
+          { key: "d", text: "To eliminate employee wage inflation risk" }
+        ],
+        correct: "b",
+        explanation: "Banks fund long-term fixed loans with short-term deposits. Rising rates raise deposit costs while loan income stays fixed. Payer swaps provide floating cash flow to offset rising funding costs without restructuring customer loans."
+      },
+      {
+        id: 10,
+        question: "What is the primary credit risk distinction between Over-the-Counter (OTC) interest rate derivatives and Exchange-Traded IRDs?",
+        options: [
+          { key: "a", text: "OTC contracts have zero counterparty default risk due to sovereign guarantees" },
+          { key: "b", text: "Exchange-traded derivatives eliminate counterparty credit risk through Central Counterparty (CCP) clearing novation" },
+          { key: "c", text: "Exchange contracts carry higher counterparty risk than OTC swaps" },
+          { key: "d", text: "Neither contract involves any form of credit risk" }
+        ],
+        correct: "b",
+        explanation: "In exchange-traded derivatives, the exchange Clearing Corporation interposes itself as buyer to every seller and seller to every buyer (novation), backing trades with a settlement guarantee fund."
+      },
+      {
+        id: 11,
+        question: "In an Overnight Indexed Swap (OIS), how is the floating leg rate calculated over the payment period?",
+        options: [
+          { key: "a", text: "By simple arithmetic average of the 10-year G-Sec yield" },
+          { key: "b", text: "By geometric daily compounding of the Overnight MIBOR" },
+          { key: "c", text: "By using the highest closing repo rate of the month" },
+          { key: "d", text: "By fixing the rate to the latest 91-day T-Bill auction cut-off" }
+        ],
+        correct: "b",
+        explanation: "In an OIS contract, the floating payment leg is determined by daily geometric compounding of the Overnight MIBOR over the settlement tenor."
+      },
+      {
+        id: 12,
+        question: "What right is granted to the buyer of a 'Payer Swaption'?",
+        options: [
+          { key: "a", text: "The right to enter into an Interest Rate Swap as the fixed rate receiver" },
+          { key: "b", text: "The right to enter into an Interest Rate Swap as the fixed rate payer (floating receiver)" },
+          { key: "c", text: "The obligation to buy 10-year G-Sec bonds at a discount" },
+          { key: "d", text: "The right to cancel an existing loan without penalty" }
+        ],
+        correct: "b",
+        explanation: "A Payer Swaption gives the buyer the right (but not the obligation) to enter into an IRS as the fixed rate payer (and receive floating). It protects against rising interest rates."
+      }
+    ];
+
+    let userAnswers = {};
+
+    function renderQuiz() {
+      const container = document.getElementById("quiz-container");
+      container.innerHTML = "";
+      questionsData.forEach((q, idx) => {
+        const qDiv = document.createElement("div");
+        qDiv.className = "p-5 rounded-2xl bg-white/5 border border-white/10 space-y-3";
+        
+        let optionsHtml = "";
+        q.options.forEach(opt => {
+          optionsHtml += `
+            <label id="label-${q.id}-${opt.key}" onclick="selectOption(${q.id}, '${opt.key}')" class="flex items-center gap-3 p-3 rounded-xl bg-white/5 hover:bg-white/10 border border-white/5 cursor-pointer text-xs sm:text-sm transition-all">
+              <input type="radio" name="q-${q.id}" value="${opt.key}" class="hidden" />
+              <div class="w-6 h-6 rounded-full border border-slate-500 flex items-center justify-center font-bold text-xs shrink-0">${opt.key.toUpperCase()}</div>
+              <span class="text-slate-300">${opt.text}</span>
+            </label>
+          `;
+        });
+
+        qDiv.innerHTML = `
+          <div class="flex items-center justify-between">
+            <span class="text-xs font-bold text-purple-400">Question ${idx + 1} of ${questionsData.length}</span>
+            <span id="badge-${q.id}" class="text-xs px-2 py-0.5 rounded-full bg-slate-800 text-slate-400">Unanswered</span>
+          </div>
+          <h4 class="font-display font-semibold text-sm sm:text-base text-white">${q.question}</h4>
+          <div class="space-y-2 mt-3">${optionsHtml}</div>
+          <div id="explanation-${q.id}" class="hidden p-4 rounded-xl text-xs sm:text-sm mt-3 space-y-1"></div>
+        `;
+        container.appendChild(qDiv);
+      });
+      lucide.createIcons();
+    }
+
+    function selectOption(qId, key) {
+      userAnswers[qId] = key;
+      document.getElementById("answered-count").innerText = Object.keys(userAnswers).length;
+      
+      const badge = document.getElementById(`badge-${qId}`);
+      if (badge) {
+        badge.innerText = "Answered";
+        badge.className = "text-xs px-2 py-0.5 rounded-full bg-purple-500/20 text-purple-300 font-medium";
+      }
+
+      const q = questionsData.find(item => item.id === qId);
+      q.options.forEach(opt => {
+        const lbl = document.getElementById(`label-${qId}-${opt.key}`);
+        if (opt.key === key) {
+          lbl.className = "flex items-center gap-3 p-3 rounded-xl bg-purple-600/30 border border-purple-400/50 cursor-pointer text-xs sm:text-sm transition-all";
+        } else {
+          lbl.className = "flex items-center gap-3 p-3 rounded-xl bg-white/5 hover:bg-white/10 border border-white/5 cursor-pointer text-xs sm:text-sm transition-all";
+        }
+      });
+    }
+
+    function submitQuiz() {
+      let score = 0;
+      questionsData.forEach(q => {
+        const selected = userAnswers[q.id];
+        const isCorrect = selected === q.correct;
+        if (isCorrect) score++;
+
+        const explanationDiv = document.getElementById(`explanation-${q.id}`);
+        explanationDiv.classList.remove("hidden");
+
+        if (isCorrect) {
+          explanationDiv.className = "p-4 rounded-xl text-xs sm:text-sm mt-3 bg-emerald-950/60 border border-emerald-600 text-emerald-200";
+          explanationDiv.innerHTML = `<div class="font-bold text-emerald-400 flex items-center gap-1.5"><i data-lucide="check" class="w-4 h-4"></i> Correct!</div><p class="mt-1">${q.explanation}</p>`;
+        } else {
+          explanationDiv.className = "p-4 rounded-xl text-xs sm:text-sm mt-3 bg-rose-950/60 border border-rose-600 text-rose-200";
+          explanationDiv.innerHTML = `<div class="font-bold text-rose-400 flex items-center gap-1.5"><i data-lucide="x" class="w-4 h-4"></i> Incorrect (Correct Answer: Option ${q.correct.toUpperCase()})</div><p class="mt-1">${q.explanation}</p>`;
+        }
+      });
+
+      const percentage = Math.round((score / questionsData.length) * 100);
+      const passed = percentage >= 60;
+      
+      const resultsDiv = document.getElementById("quiz-results");
+      resultsDiv.classList.remove("hidden");
+
+      const statusBadge = document.getElementById("result-status-badge");
+      statusBadge.innerText = passed ? "Status: Passed (60%+ Benchmark)" : "Status: Needs Revision (<60%)";
+      statusBadge.className = passed ? "px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider bg-emerald-500 text-emerald-950" : "px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider bg-amber-500 text-amber-950";
+
+      document.getElementById("score-display").innerText = `${score} / ${questionsData.length}`;
+      document.getElementById("percentage-display").innerText = `${percentage}% Score (Passing benchmark: 60%)`;
+
+      document.getElementById("result-summary-text").innerText = passed
+        ? `Congratulations! You scored ${percentage}%, mastering Interest Rate Derivatives, FRAs, Swaps, MIBOR OIS, and Caps/Floors for NISM Series V-D.`
+        : `You scored ${percentage}%. Review FRA notation discounting, fixed vs floating swap positions, and Overnight MIBOR compounding mechanics before re-attempting.`;
+
+      document.getElementById("submit-quiz-btn").classList.add("hidden");
+      document.getElementById("reset-quiz-btn").classList.remove("hidden");
+
+      resultsDiv.scrollIntoView({ behavior: 'smooth' });
+      lucide.createIcons();
+    }
+
+    function resetQuiz() {
+      userAnswers = {};
+      document.getElementById("answered-count").innerText = "0";
+      document.getElementById("quiz-results").classList.add("hidden");
+      document.getElementById("submit-quiz-btn").classList.remove("hidden");
+      document.getElementById("reset-quiz-btn").classList.add("hidden");
+      renderQuiz();
+      document.getElementById("interactive-quiz").scrollIntoView({ behavior: 'smooth' });
+    }
+
+    renderQuiz();
+    lucide.createIcons();
+  </script>
+</body>
+</html>

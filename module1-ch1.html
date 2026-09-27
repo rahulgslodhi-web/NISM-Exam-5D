@@ -1,0 +1,867 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Chapter 1: Investment Landscape | NISM Series V-D Notes</title>
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Google Fonts & Lucide Icons -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+  <script src="https://unpkg.com/lucide@latest"></script>
+
+  <!-- KaTeX for formula rendering -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.min.css">
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.min.js"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/contrib/auto-render.min.js" onload="renderMathInElement(document.body);"></script>
+
+  <!-- Global Module & Chapter Navigation Sidebar -->
+    <!-- Modern Documentation Design System & Zoom Engine -->
+  <link rel="stylesheet" href="modern-docs.css">
+  <script defer src="nav-sidebar.js"></script>
+
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+            display: ['"Space Grotesk"', 'sans-serif']
+          },
+          colors: {
+            brand: {
+              50: '#eef2ff',
+              100: '#e0e7ff',
+              500: '#6366f1',
+              600: '#4f46e5',
+              700: '#4338ca',
+            }
+          }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    body { font-family: 'Plus Jakarta Sans', sans-serif; }
+    .exam-highlight {
+      background: linear-gradient(135deg, rgba(254, 243, 199, 0.7), rgba(253, 230, 138, 0.4));
+      border: 1px solid rgba(245, 158, 11, 0.35);
+      border-radius: 14px;
+    }
+    .key-concept {
+      background: linear-gradient(135deg, rgba(238, 242, 255, 0.8), rgba(224, 231, 255, 0.4));
+      border: 1px solid rgba(79, 70, 229, 0.3);
+      border-radius: 14px;
+    }
+  </style>
+</head>
+<body class="bg-slate-50 text-slate-900 min-h-screen flex flex-col selection:bg-indigo-500 selection:text-white">
+
+  <!-- Header -->
+  <header class="sticky top-0 z-50 bg-white/90 backdrop-blur-md border-b border-slate-200">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
+      <div class="flex items-center gap-3">
+        <a href="module1.html" class="flex items-center gap-2 text-slate-500 hover:text-slate-900 transition-colors">
+          <div class="w-9 h-9 rounded-xl bg-slate-100 hover:bg-slate-200 flex items-center justify-center text-slate-700 transition-colors">
+            <i data-lucide="arrow-left" class="w-4 h-4"></i>
+          </div>
+        </a>
+        <div>
+          <div class="flex items-center gap-2">
+            <span class="text-xs font-bold uppercase tracking-wider text-blue-600 bg-blue-50 px-2 py-0.5 rounded">Module 1</span>
+            <span class="text-xs text-slate-400 font-medium">Chapter 1 of 12</span>
+          </div>
+          <h1 class="font-display font-bold text-base sm:text-lg text-slate-900 leading-tight">Investment Landscape</h1>
+        </div>
+      </div>
+
+      <!-- Chapter Navigation & Weightage -->
+      <div class="flex items-center gap-3">
+        <span class="hidden sm:inline-flex items-center gap-1 px-3 py-1 rounded-full text-xs font-bold bg-amber-50 text-amber-700 border border-amber-200">
+          <i data-lucide="award" class="w-3.5 h-3.5"></i>
+          Weightage: 5 Marks
+        </span>
+        <a href="#interactive-quiz" class="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-lg text-xs font-bold bg-blue-600 hover:bg-blue-700 text-white shadow-sm transition-all">
+          <i data-lucide="help-circle" class="w-3.5 h-3.5"></i>
+          <span>Chapter Quiz</span>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Grid Layout -->
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 grid grid-cols-1 lg:grid-cols-12 gap-8 flex-grow">
+    
+    <!-- Table of Contents Sidebar (Desktop) -->
+    <aside class="hidden lg:block lg:col-span-3">
+      <div class="sticky top-24 space-y-4">
+        <!-- Chapter Switcher (3 Module Dropdowns) -->
+        <div id="sidebar-chapter-switcher"></div>
+
+        <!-- In-Page Section Jump (Collapsible) -->
+        <details class="group rounded-2xl bg-white border border-slate-200 shadow-sm overflow-hidden text-xs">
+          <summary class="flex items-center justify-between p-3.5 cursor-pointer select-none bg-slate-50/70 hover:bg-slate-100 transition-colors font-bold text-slate-700">
+            <span class="flex items-center gap-2">
+              <i data-lucide="bookmark" class="w-3.5 h-3.5 text-blue-600"></i>
+              <span>On This Page (Sections)</span>
+            </span>
+            <i data-lucide="chevron-down" class="w-3.5 h-3.5 text-slate-400 transition-transform duration-200 group-open:rotate-180"></i>
+          </summary>
+          <nav class="p-3 pt-1 space-y-1 text-xs max-h-56 overflow-y-auto border-t border-slate-100">
+            <a href="#section-1" class="block px-2.5 py-1.5 rounded-lg text-slate-600 hover:bg-slate-100 hover:text-blue-600 transition-colors">1.1 Financial Goals & "Start with Why"</a>
+            <a href="#section-2" class="block px-2.5 py-1.5 rounded-lg text-slate-600 hover:bg-slate-100 hover:text-blue-600 transition-colors">1.2 Savings vs. Investments</a>
+            <a href="#section-3" class="block px-2.5 py-1.5 rounded-lg text-slate-600 hover:bg-slate-100 hover:text-blue-600 transition-colors">1.3 Asset Classes (Table 1.1)</a>
+            <a href="#section-4" class="block px-2.5 py-1.5 rounded-lg text-slate-600 hover:bg-slate-100 hover:text-blue-600 transition-colors">1.4 Investment Risks & Real Returns</a>
+            <a href="#section-5" class="block px-2.5 py-1.5 rounded-lg text-slate-600 hover:bg-slate-100 hover:text-blue-600 transition-colors">1.5 Risk Management Strategies</a>
+            <a href="#section-6" class="block px-2.5 py-1.5 rounded-lg text-amber-700 font-semibold bg-amber-50/70 hover:bg-amber-100 transition-colors">1.6 Behavioural Biases (High Exam Yield ⭐)</a>
+            <a href="#section-7" class="block px-2.5 py-1.5 rounded-lg text-slate-600 hover:bg-slate-100 hover:text-blue-600 transition-colors">1.7 Risk Profiling (Need, Ability, Willingness)</a>
+            <a href="#section-8" class="block px-2.5 py-1.5 rounded-lg text-slate-600 hover:bg-slate-100 hover:text-blue-600 transition-colors">1.8 SAA, TAA & 30-Day Rebalancing</a>
+            <a href="#section-9" class="block px-2.5 py-1.5 rounded-lg text-slate-600 hover:bg-slate-100 hover:text-blue-600 transition-colors">1.9 DIY vs. Professional Help</a>
+            <a href="#interactive-quiz" class="block px-2.5 py-1.5 rounded-lg text-blue-700 font-bold bg-blue-50 hover:bg-blue-100 transition-colors mt-2">Practice Quiz (12 Questions)</a>
+          </nav>
+        </details>
+
+        <!-- Quick Tip Card -->
+        <div class="p-4 rounded-2xl bg-gradient-to-br from-blue-600 to-indigo-700 text-white shadow-sm text-xs">
+          <div class="flex items-center gap-1.5 font-bold mb-1.5">
+            <i data-lucide="zap" class="w-4 h-4"></i>
+            <span>Exam Focus Insight</span>
+          </div>
+          <p class="text-indigo-100 leading-relaxed">
+            In Chapter 1, questions frequently test <strong>Loss Aversion (Kahneman & Tversky)</strong>, <strong>Real Rate of Return</strong> calculation, and <strong>SEBI's 30-day mandated rebalancing period</strong>.
+          </p>
+        </div>
+      </div>
+    </aside>
+
+    <!-- Main Study Notes Area -->
+    <div class="lg:col-span-9 space-y-10">
+
+      <!-- Topic 1.1 -->
+      <section id="section-1" class="bg-white rounded-3xl p-6 sm:p-8 border border-slate-200/90 shadow-sm space-y-4">
+        <div class="flex items-center justify-between">
+          <div class="flex items-center gap-2 text-xs font-bold text-slate-500 uppercase tracking-wider">
+            <span class="w-2 h-2 rounded-full bg-slate-400"></span> Section 1.1 &bull; Quick Refresher
+          </div>
+          <span class="px-2 py-0.5 rounded text-[11px] font-semibold bg-slate-100 text-slate-600">Basic Concept</span>
+        </div>
+        <h2 class="font-display text-xl sm:text-2xl font-bold text-slate-900">Investors and their Financial Goals</h2>
+        
+        <div class="grid grid-cols-1 sm:grid-cols-3 gap-3 text-xs sm:text-sm">
+          <div class="p-3.5 bg-slate-50 rounded-xl border border-slate-200">
+            <span class="font-bold text-slate-900 block mb-1">1. "Start with Why"</span>
+            Advisory begins with understanding the investor's purpose (Why invest?), not product pushing.
+          </div>
+          <div class="p-3.5 bg-slate-50 rounded-xl border border-slate-200">
+            <span class="font-bold text-slate-900 block mb-1">2. Objective vs. Goal</span>
+            <strong>Objective:</strong> Wish to buy a home.<br>
+            <strong>Goal:</strong> Objective + <span class="text-indigo-600 font-semibold">Target Amount</span> + <span class="text-indigo-600 font-semibold">Timeline</span>.
+          </div>
+          <div class="p-3.5 bg-slate-50 rounded-xl border border-slate-200">
+            <span class="font-bold text-slate-900 block mb-1">3. The Pool Approach Flaw</span>
+            Putting all funds into one unsegregated pool hides the time horizon for each goal, leading to wrong asset choices.
+          </div>
+        </div>
+
+        <div class="p-4 bg-slate-50 rounded-2xl border border-slate-200 text-xs sm:text-sm text-slate-700 space-y-2">
+          <p class="font-bold text-slate-900 flex items-center gap-1.5">
+            <i data-lucide="calendar" class="w-4 h-4 text-indigo-600"></i> Stephen Covey’s Quadrant II Focus & Goal Inflation:
+          </p>
+          <p>
+            • <strong>Quadrant II (Important, Not Urgent):</strong> Long-term goals like Retirement & Children's College. If delayed, they become urgent crises.<br>
+            • <strong>Goal Inflation:</strong> Future cost of goals expands over time: <span class="font-mono bg-white px-2 py-0.5 rounded border border-slate-300 font-semibold text-indigo-700">A = P &times; (1 + r)<sup>n</sup></span> (where <em>P</em> = current cost, <em>r</em> = inflation rate, <em>n</em> = years).
+          </p>
+        </div>
+      </section>
+
+      <!-- Topic 1.2 -->
+      <section id="section-2" class="bg-white rounded-3xl p-6 sm:p-8 border border-slate-200/90 shadow-sm space-y-4">
+        <div class="flex items-center justify-between">
+          <div class="flex items-center gap-2 text-xs font-bold text-slate-500 uppercase tracking-wider">
+            <span class="w-2 h-2 rounded-full bg-slate-400"></span> Section 1.2 &bull; Quick Refresher
+          </div>
+          <span class="px-2 py-0.5 rounded text-[11px] font-semibold bg-slate-100 text-slate-600">Basic Concept</span>
+        </div>
+        <h2 class="font-display text-xl sm:text-2xl font-bold text-slate-900">Savings vs. Investments</h2>
+        
+        <p class="text-xs sm:text-sm text-slate-600 leading-relaxed">
+          <strong>Saving</strong> focuses on capital safety and deferring consumption (root: <em>safe</em>). <strong>Investing</strong> puts saved capital to work for profit under a risk-return trade-off. Remember: <em>Saving always precedes investing</em>.
+        </p>
+
+        <div class="grid grid-cols-2 sm:grid-cols-6 gap-2 text-center text-xs">
+          <div class="p-2.5 bg-slate-50 rounded-xl border border-slate-200">
+            <strong class="text-slate-800 block text-xs">Safety</strong>
+            Capital surety
+          </div>
+          <div class="p-2.5 bg-slate-50 rounded-xl border border-slate-200">
+            <strong class="text-slate-800 block text-xs">Liquidity</strong>
+            Ease of cash exit
+          </div>
+          <div class="p-2.5 bg-slate-50 rounded-xl border border-slate-200">
+            <strong class="text-slate-800 block text-xs">Returns</strong>
+            Income + Growth
+          </div>
+          <div class="p-2.5 bg-slate-50 rounded-xl border border-slate-200">
+            <strong class="text-slate-800 block text-xs">Convenience</strong>
+            Operations & NAV
+          </div>
+          <div class="p-2.5 bg-slate-50 rounded-xl border border-slate-200">
+            <strong class="text-slate-800 block text-xs">Ticket Size</strong>
+            Min amount required
+          </div>
+          <div class="p-2.5 bg-slate-50 rounded-xl border border-slate-200">
+            <strong class="text-slate-800 block text-xs">Taxation</strong>
+            Post-tax yield
+          </div>
+        </div>
+      </section>
+
+      <!-- Topic 1.3 -->
+      <section id="section-3" class="bg-white rounded-3xl p-6 sm:p-8 border border-slate-200/90 shadow-sm space-y-4">
+        <div class="flex items-center justify-between">
+          <div class="flex items-center gap-2 text-xs font-bold text-slate-500 uppercase tracking-wider">
+            <span class="w-2 h-2 rounded-full bg-slate-400"></span> Section 1.3 &bull; Fast-Track
+          </div>
+          <span class="px-2 py-0.5 rounded text-[11px] font-semibold bg-indigo-50 text-indigo-700 border border-indigo-200">Core Table 1.1</span>
+        </div>
+        <h2 class="font-display text-xl sm:text-2xl font-bold text-slate-900">Different Asset Classes</h2>
+
+        <!-- Asset comparison table -->
+        <div class="overflow-x-auto rounded-2xl border border-slate-200 text-xs">
+          <table class="min-w-full text-left">
+            <thead class="bg-slate-100 text-slate-700 font-bold border-b border-slate-200">
+              <tr>
+                <th class="p-3">Asset Category</th>
+                <th class="p-3">Cash Flow Type</th>
+                <th class="p-3">Key Exam Distinction</th>
+              </tr>
+            </thead>
+            <tbody class="divide-y divide-slate-100 text-slate-600">
+              <tr class="hover:bg-slate-50">
+                <td class="p-3 font-bold text-slate-900">Real Estate</td>
+                <td class="p-3">Rent + Appreciation</td>
+                <td class="p-3">Illiquid, indivisible, high transaction costs. Self-occupied home is an expense, not an investment.</td>
+              </tr>
+              <tr class="hover:bg-slate-50 bg-amber-50/40">
+                <td class="p-3 font-bold text-amber-900">Commodities (Gold/Silver)</td>
+                <td class="p-3 text-amber-800"><strong>No regular income</strong></td>
+                <td class="p-3 text-amber-900"><strong>Only capital appreciation.</strong> Safe haven asset; trades globally in sync with foreign exchange.</td>
+              </tr>
+              <tr class="hover:bg-slate-50">
+                <td class="p-3 font-bold text-slate-900">Fixed Income (Debt)</td>
+                <td class="p-3">Periodic interest (coupon)</td>
+                <td class="p-3">Lending asset. G-Secs carry no credit risk. Prices move inversely to interest rates.</td>
+              </tr>
+              <tr class="hover:bg-slate-50">
+                <td class="p-3 font-bold text-slate-900">Equity</td>
+                <td class="p-3">Dividends + Capital growth</td>
+                <td class="p-3">Ownership risk capital. Historically beats inflation over long investment horizons (Sensex ~15.4% CAGR since 1979).</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <!-- Ownership vs Lending Distinction -->
+        <div class="p-3.5 rounded-xl bg-blue-50/70 border border-blue-200 text-xs text-blue-950 flex items-center gap-3">
+          <i data-lucide="info" class="w-5 h-5 text-blue-600 shrink-0"></i>
+          <div>
+            <strong>Quick Rule:</strong> <em>Ownership assets</em> (Equity, Real Estate, Gold) have uncertain, variable returns. <em>Lending assets</em> (Bonds, FDs) have contractually agreed returns.
+          </div>
+        </div>
+      </section>
+
+      <!-- Topic 1.4 -->
+      <section id="section-4" class="bg-white rounded-3xl p-6 sm:p-8 border border-slate-200/90 shadow-sm space-y-4">
+        <div class="flex items-center gap-2 text-xs font-bold text-blue-600 uppercase tracking-wider">
+          <span class="w-2 h-2 rounded-full bg-blue-600"></span> Section 1.4
+        </div>
+        <h2 class="font-display text-2xl font-bold text-slate-900">Investment Risks & Return Concepts</h2>
+
+        <!-- Risk Types Cards -->
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4 text-xs sm:text-sm">
+          
+          <div class="p-4 rounded-2xl bg-slate-50 border border-slate-200">
+            <h4 class="font-bold text-slate-900 flex items-center gap-2 mb-1.5">
+              <i data-lucide="flame" class="w-4 h-4 text-rose-500"></i> 1. Inflation Risk (Purchasing Power)
+            </h4>
+            <p class="text-slate-600 leading-relaxed">
+              Inflation erodes purchasing power over time. If inflation is 8% p.a., what costs ₹10,000 today will cost ₹21,589 in 10 years and ₹1,00,627 in 30 years.
+            </p>
+            <div class="mt-2.5 p-2.5 bg-white rounded-lg border border-slate-200 font-mono text-xs text-indigo-700">
+              Real Rate of Return = Nominal Rate &minus; Inflation Rate
+            </div>
+          </div>
+
+          <div class="p-4 rounded-2xl bg-slate-50 border border-slate-200">
+            <h4 class="font-bold text-slate-900 flex items-center gap-2 mb-1.5">
+              <i data-lucide="droplet" class="w-4 h-4 text-sky-500"></i> 2. Liquidity Risk
+            </h4>
+            <p class="text-slate-600 leading-relaxed">
+              Risk of inability to liquidate an asset quickly at fair market value. Pre-mature withdrawal penalties lower returns; locked-in instruments (like PPF) have restricted liquidity.
+            </p>
+          </div>
+
+          <div class="p-4 rounded-2xl bg-slate-50 border border-slate-200">
+            <h4 class="font-bold text-slate-900 flex items-center gap-2 mb-1.5">
+              <i data-lucide="shield-alert" class="w-4 h-4 text-amber-500"></i> 3. Credit Risk (Default Risk)
+            </h4>
+            <p class="text-slate-600 leading-relaxed">
+              Possibility of default or delay in payment of interest or repayment of principal by the borrower. Governed by the borrower’s <em>ability</em> and <em>intention</em>. Government securities (G-Secs) carry the highest safety with virtually zero credit risk.
+            </p>
+          </div>
+
+          <div class="p-4 rounded-2xl bg-slate-50 border border-slate-200">
+            <h4 class="font-bold text-slate-900 flex items-center gap-2 mb-1.5">
+              <i data-lucide="activity" class="w-4 h-4 text-purple-500"></i> 4. Market Risk & Systematic vs Unsystematic Risk
+            </h4>
+            <p class="text-slate-600 leading-relaxed">
+              • <strong>Unsystematic (Firm-Specific / Diversifiable):</strong> Labour strike, CEO exit. Can be eliminated by diversification.<br>
+              • <strong>Systematic (Market-wide / Non-diversifiable):</strong> Wars, GDP growth, interest rate revisions. Cannot be eliminated through diversification.
+            </p>
+          </div>
+
+        </div>
+
+        <!-- Interest Rate Risk Formula & Rule -->
+        <div class="p-4 rounded-2xl bg-indigo-50 border border-indigo-200 text-xs sm:text-sm text-indigo-950">
+          <p class="font-bold flex items-center gap-1.5 mb-1 text-indigo-900">
+            <i data-lucide="arrow-up-down" class="w-4 h-4 text-indigo-600"></i> 5. Interest Rate Risk in Bonds (Inverse Relationship ⭐):
+          </p>
+          <p>
+            When interest rates rise in the economy, prices of existing fixed-rate bonds <strong>decrease</strong> (because newer bonds offer higher rates). When interest rates fall, bond prices <strong>increase</strong>. Bonds with <strong>longer maturities</strong> experience higher price volatility.
+          </p>
+        </div>
+      </section>
+
+      <!-- Topic 1.5 -->
+      <section id="section-5" class="bg-white rounded-3xl p-6 sm:p-8 border border-slate-200/90 shadow-sm space-y-4">
+        <div class="flex items-center justify-between">
+          <div class="flex items-center gap-2 text-xs font-bold text-slate-500 uppercase tracking-wider">
+            <span class="w-2 h-2 rounded-full bg-slate-400"></span> Section 1.5 &bull; Quick Refresher
+          </div>
+          <span class="px-2 py-0.5 rounded text-[11px] font-semibold bg-slate-100 text-slate-600">3 Core Strategies</span>
+        </div>
+        <h2 class="font-display text-xl sm:text-2xl font-bold text-slate-900">Risk Management Strategies</h2>
+        <div class="grid grid-cols-1 sm:grid-cols-3 gap-3 text-xs sm:text-sm">
+          <div class="p-3.5 bg-slate-50 rounded-xl border border-slate-200">
+            <strong class="text-slate-900 block mb-1">1. Avoid</strong>
+            Avoid instruments you do not understand (gives up opportunity but eliminates specific risk).
+          </div>
+          <div class="p-3.5 bg-slate-50 rounded-xl border border-slate-200">
+            <strong class="text-slate-900 block mb-1">2. Take Position</strong>
+            Dynamic bets in anticipation of events (e.g., buying long bonds before rate cuts; high skill required).
+          </div>
+          <div class="p-3.5 bg-slate-50 rounded-xl border border-slate-200">
+            <strong class="text-slate-900 block mb-1">3. Diversify</strong>
+            Spreads risk across asset classes and securities. <em>Eliminates unsystematic risk</em>.
+          </div>
+        </div>
+      </section>
+
+      <!-- Topic 1.6 - High Yield Behavioral Biases -->
+      <section id="section-6" class="bg-white rounded-3xl p-6 sm:p-8 border border-amber-200 shadow-sm space-y-6">
+        <div class="flex items-center justify-between">
+          <div class="flex items-center gap-2 text-xs font-bold text-amber-700 uppercase tracking-wider">
+            <span class="w-2 h-2 rounded-full bg-amber-500"></span> Section 1.6 &bull; Super High Exam Yield
+          </div>
+          <span class="px-2.5 py-0.5 rounded-full text-xs font-extrabold bg-amber-100 text-amber-800 border border-amber-300">
+            ⭐ Frequently Tested
+          </span>
+        </div>
+
+        <div>
+          <h2 class="font-display text-2xl font-bold text-slate-900">Behavioural Biases in Investment Decision Making</h2>
+          <p class="mt-2 text-sm text-slate-600">
+            Investors are frequently guided by emotions (fear, greed, hope) rather than pure logic. Recognizing these psychological biases is critical for distributors and advisors:
+          </p>
+        </div>
+
+        <!-- Biases Grid -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 text-xs sm:text-sm">
+
+          <div class="p-4 bg-slate-50 rounded-2xl border border-slate-200 space-y-1">
+            <strong class="text-indigo-900 block font-bold text-sm">1. Availability Heuristic</strong>
+            <p class="text-slate-600">
+              Relying predominantly on immediate examples or recent experiences that come to mind quickly when evaluating options, skipping thorough analysis.
+            </p>
+          </div>
+
+          <div class="p-4 bg-slate-50 rounded-2xl border border-slate-200 space-y-1">
+            <strong class="text-indigo-900 block font-bold text-sm">2. Confirmation Bias</strong>
+            <p class="text-slate-600">
+              Seeking only data and opinions that confirm pre-existing beliefs while ignoring contrary evidence or critical risk warnings.
+            </p>
+          </div>
+
+          <div class="p-4 bg-slate-50 rounded-2xl border border-slate-200 space-y-1">
+            <strong class="text-indigo-900 block font-bold text-sm">3. Familiarity Bias</strong>
+            <p class="text-slate-600">
+              Preferring the familiar over the novel (<em>"A known devil is better than an unknown angel"</em>), leading to over-concentrating in home countries or known companies.
+            </p>
+          </div>
+
+          <div class="p-4 bg-slate-50 rounded-2xl border border-slate-200 space-y-1">
+            <strong class="text-indigo-900 block font-bold text-sm">4. Herd Mentality</strong>
+            <p class="text-slate-600">
+              Following the crowd into trending investments out of fear of missing out (FOMO), even when valuations are unjustifiably elevated.
+            </p>
+          </div>
+
+          <div class="p-4 bg-amber-50/80 rounded-2xl border border-amber-200 space-y-1 sm:col-span-2">
+            <strong class="text-amber-950 block font-bold text-sm">5. Loss Aversion (Daniel Kahneman & Amos Tversky) ⭐</strong>
+            <p class="text-amber-900">
+              The psychological pain of losing an amount (e.g., ₹5,000) is felt much more intensely than the pleasure of gaining the equivalent amount (₹5,000). This causes investors to avoid profitable opportunities due to disproportionate fear of loss.
+            </p>
+          </div>
+
+          <div class="p-4 bg-slate-50 rounded-2xl border border-slate-200 space-y-1">
+            <strong class="text-indigo-900 block font-bold text-sm">6. Overconfidence Bias</strong>
+            <p class="text-slate-600">
+              Overestimating one’s own analytical skills or forecasting ability, leading to inadequate risk management and reckless portfolio exposure.
+            </p>
+          </div>
+
+          <div class="p-4 bg-slate-50 rounded-2xl border border-slate-200 space-y-1">
+            <strong class="text-indigo-900 block font-bold text-sm">7. Recency Bias</strong>
+            <p class="text-slate-600">
+              Extrapolating recent market events into the far future — assuming a bull market will never end, or that a market crash will continue forever.
+            </p>
+          </div>
+
+          <div class="p-4 bg-slate-50 rounded-2xl border border-slate-200 space-y-1 sm:col-span-2">
+            <strong class="text-indigo-900 block font-bold text-sm">8. Investor Interest Bias (Sector Bias)</strong>
+            <p class="text-slate-600">
+              Building portfolios skewed entirely toward the investor’s own industry (e.g., an IT engineer only holding Tech stocks), creating massive concentration risk.
+            </p>
+          </div>
+
+        </div>
+      </section>
+
+      <!-- Topic 1.7 & 1.8 -->
+      <section id="section-8" class="bg-white rounded-3xl p-6 sm:p-8 border border-slate-200/90 shadow-sm space-y-5">
+        <div class="flex items-center gap-2 text-xs font-bold text-blue-600 uppercase tracking-wider">
+          <span class="w-2 h-2 rounded-full bg-blue-600"></span> Sections 1.7 & 1.8
+        </div>
+        <h2 class="font-display text-2xl font-bold text-slate-900">Risk Profiling & Asset Allocation Strategies</h2>
+
+        <!-- Risk Profiling 3 Pillars -->
+        <h3 class="font-display font-bold text-slate-800 text-lg">The 3 Pillars of Risk Profiling</h3>
+        <div class="grid grid-cols-1 sm:grid-cols-3 gap-3 text-xs sm:text-sm">
+          <div class="p-4 bg-blue-50 rounded-2xl border border-blue-100">
+            <strong class="text-blue-900 block font-bold mb-1">1. Need to take risk</strong>
+            Dictated by return target required to achieve the financial goals.
+          </div>
+          <div class="p-4 bg-indigo-50 rounded-2xl border border-indigo-100">
+            <strong class="text-indigo-900 block font-bold mb-1">2. Ability to take risk</strong>
+            Determined by financial surplus, wealth, income stability, and <strong>investment time horizon</strong>.
+          </div>
+          <div class="p-4 bg-purple-50 rounded-2xl border border-purple-100">
+            <strong class="text-purple-900 block font-bold mb-1">3. Willingness to take risk</strong>
+            Psychological & emotional capacity to withstand market fluctuations.
+          </div>
+        </div>
+
+        <!-- SAA vs TAA -->
+        <h3 class="font-display font-bold text-slate-800 text-lg pt-4">Strategic (SAA) vs. Tactical Asset Allocation (TAA)</h3>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4 text-xs sm:text-sm">
+          <div class="p-4 bg-slate-50 rounded-2xl border border-slate-200 space-y-2">
+            <span class="px-2.5 py-0.5 rounded-full text-xs font-bold bg-blue-100 text-blue-800">Strategic (SAA)</span>
+            <p class="text-slate-600 leading-relaxed">
+              Target long-term mix (e.g., 60% Equity / 40% Debt) aligned with the investor’s goals, horizon, and risk profile. Fixed baseline meant to be maintained across market cycles.
+            </p>
+          </div>
+          <div class="p-4 bg-slate-50 rounded-2xl border border-slate-200 space-y-2">
+            <span class="px-2.5 py-0.5 rounded-full text-xs font-bold bg-purple-100 text-purple-800">Tactical (TAA) / Dynamic</span>
+            <p class="text-slate-600 leading-relaxed">
+              Active deviations from the target mix to exploit temporary short-term market mispricings and improve risk-adjusted returns. Suitable for seasoned investors.
+            </p>
+          </div>
+        </div>
+
+        <!-- Rebalancing & SEBI Mandate -->
+        <div class="p-4 rounded-2xl bg-amber-50/80 border border-amber-200 text-xs sm:text-sm text-amber-950 space-y-2">
+          <p class="font-bold text-amber-900 flex items-center gap-1.5">
+            <i data-lucide="refresh-cw" class="w-4 h-4 text-amber-600"></i> Rebalancing Principle & SEBI Mandate ⭐:
+          </p>
+          <p>
+            • <strong>Why Rebalance:</strong> As equity grows faster than debt, portfolio drifts (e.g. 50:50 becomes 60:40). Selling appreciated equity to buy debt automatically enforces the discipline of <em>"Buy Low, Sell High"</em> without market forecasting.<br>
+            • <strong>SEBI Mandated Rebalancing Timeline:</strong> In case of passive breaches in asset allocation specified in SID, AMCs must rebalance the portfolio within <strong>30 business days</strong> (for all schemes other than Index Funds & ETFs). <em>Note: Mandated rebalancing period is NOT applicable to Overnight Funds.</em>
+          </p>
+        </div>
+      </section>
+
+      <!-- Topic 1.9 -->
+      <section id="section-9" class="bg-white rounded-3xl p-6 sm:p-8 border border-slate-200/90 shadow-sm space-y-4">
+        <div class="flex items-center justify-between">
+          <div class="flex items-center gap-2 text-xs font-bold text-slate-500 uppercase tracking-wider">
+            <span class="w-2 h-2 rounded-full bg-slate-400"></span> Section 1.9 &bull; Quick Refresher
+          </div>
+          <span class="px-2 py-0.5 rounded text-[11px] font-semibold bg-slate-100 text-slate-600">Basic Concept</span>
+        </div>
+        <h2 class="font-display text-xl sm:text-2xl font-bold text-slate-900">Do-It-Yourself (DIY) vs. Taking Professional Help</h2>
+        
+        <p class="text-sm text-slate-700 leading-relaxed">
+          Evaluating whether an investor should manage money independently or utilize professional mutual funds / registered advisors boils down to three key questions:
+        </p>
+
+        <div class="grid grid-cols-1 sm:grid-cols-3 gap-3 text-xs sm:text-sm">
+          <div class="p-3.5 bg-slate-50 rounded-xl border border-slate-200">
+            <strong class="text-slate-900 block mb-1">1. Can one do the job?</strong>
+            Requires analytical competence, financial markets knowledge, accounting diligence, and dedicated time.
+          </div>
+          <div class="p-3.5 bg-slate-50 rounded-xl border border-slate-200">
+            <strong class="text-slate-900 block mb-1">2. Does one want to do it?</strong>
+            Many investors lack interest in tracking balance sheets or rebalancing sheets, preferring to focus on career/family.
+          </div>
+          <div class="p-3.5 bg-slate-50 rounded-xl border border-slate-200">
+            <strong class="text-slate-900 block mb-1">3. Can one afford it?</strong>
+            Comparing fund expenses against the hidden opportunity cost of one's time and expensive behavioural mistakes.
+          </div>
+        </div>
+      </section>
+
+      <!-- Interactive Quiz Section -->
+      <section id="interactive-quiz" class="bg-gradient-to-br from-indigo-900 to-slate-900 rounded-3xl p-6 sm:p-10 text-white shadow-xl space-y-8">
+        <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 border-b border-indigo-800/80 pb-6">
+          <div>
+            <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-indigo-500/20 text-indigo-300 text-xs font-semibold mb-2">
+              <i data-lucide="check-circle" class="w-3.5 h-3.5 text-indigo-400"></i>
+              Chapter 1 Exam Practice
+            </div>
+            <h2 class="font-display text-2xl sm:text-3xl font-bold text-white">Interactive Assessment Test</h2>
+            <p class="text-xs sm:text-sm text-slate-300 mt-1">12 high-yield MCQs covering textbook questions & key exam concepts with full explanations.</p>
+          </div>
+          <div id="quiz-badge" class="flex items-center gap-2 px-4 py-2 rounded-xl bg-white/10 backdrop-blur-md border border-white/10 text-xs font-semibold">
+            <span id="answered-count">0</span> / 12 Answered
+          </div>
+        </div>
+
+        <!-- Quiz Container Form -->
+        <form id="quiz-form" class="space-y-6">
+          <div id="questions-container" class="space-y-6">
+            <!-- Questions rendered via JS -->
+          </div>
+
+          <!-- Submit / Action Button Bar -->
+          <div class="pt-6 border-t border-indigo-800/80 flex flex-col sm:flex-row items-center justify-between gap-4">
+            <button type="button" id="submit-quiz-btn" onclick="submitQuiz()" class="w-full sm:w-auto px-8 py-3.5 rounded-xl bg-indigo-500 hover:bg-indigo-400 text-white font-bold text-sm shadow-lg shadow-indigo-500/30 transition-all flex items-center justify-center gap-2">
+              <i data-lucide="send" class="w-4 h-4"></i>
+              <span>Submit Assessment & View Solutions</span>
+            </button>
+            <button type="button" id="reset-quiz-btn" onclick="resetQuiz()" class="hidden w-full sm:w-auto px-6 py-3.5 rounded-xl bg-white/10 hover:bg-white/20 text-slate-200 font-semibold text-sm transition-all flex items-center justify-center gap-2">
+              <i data-lucide="rotate-ccw" class="w-4 h-4"></i>
+              <span>Retake Quiz</span>
+            </button>
+          </div>
+        </form>
+
+        <!-- Quiz Result & Scorecard Modal/Card (Hidden until submit) -->
+        <div id="quiz-results" class="hidden rounded-2xl bg-white/10 p-6 sm:p-8 border border-white/15 backdrop-blur-lg space-y-6">
+          <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+            <div>
+              <span id="result-status-badge" class="px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider"></span>
+              <h3 class="font-display text-2xl font-bold mt-2 text-white">Your Quiz Scorecard</h3>
+            </div>
+            <div class="text-right">
+              <span id="score-display" class="font-display text-4xl font-extrabold text-indigo-300">0 / 12</span>
+              <span id="percentage-display" class="block text-xs text-slate-300 mt-0.5">0%</span>
+            </div>
+          </div>
+          <p id="result-summary-text" class="text-sm text-slate-200 leading-relaxed"></p>
+        </div>
+
+      </section>
+
+      <!-- Bottom Navigation -->
+      <div class="flex items-center justify-between p-6 rounded-2xl bg-white border border-slate-200">
+        <a href="module1.html" class="inline-flex items-center gap-2 text-sm font-semibold text-slate-600 hover:text-slate-900">
+          <i data-lucide="grid" class="w-4 h-4"></i>
+          <span>Module 1 Overview</span>
+        </a>
+        <a href="module1-ch2.html" class="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl bg-blue-600 hover:bg-blue-700 text-white font-semibold text-sm shadow-sm transition-all">
+          <span>Next: Chapter 2 (Concept & Role of MF)</span>
+          <i data-lucide="arrow-right" class="w-4 h-4"></i>
+        </a>
+      </div>
+
+    </div>
+  </div>
+
+  <footer class="bg-slate-900 text-slate-400 py-6 border-t border-slate-800 text-center text-xs">
+    NISM Series V-D Certification Notes &bull; Module 1: Chapter 1 (Investment Landscape)
+  </footer>
+
+  <!-- Quiz Script -->
+  <script>
+    const questionsData = [
+      {
+        id: 1,
+        question: "Which among the following investment avenues does NOT offer income on a regular basis?",
+        options: [
+          { text: "Real estate", key: "a" },
+          { text: "Physical Gold", key: "b" },
+          { text: "Stocks", key: "c" },
+          { text: "Debentures", key: "d" }
+        ],
+        correct: "b",
+        explanation: "Physical gold and silver do not generate any current/periodic income (unlike real estate rental yield, stock dividends, or bond interest). Returns in gold arise solely through capital appreciation upon selling."
+      },
+      {
+        id: 2,
+        question: "The purchasing power of currency changes primarily on account of which of the following?",
+        options: [
+          { text: "Asset allocation", key: "a" },
+          { text: "Compound interest", key: "b" },
+          { text: "Inflation", key: "c" },
+          { text: "Diversification", key: "d" }
+        ],
+        correct: "c",
+        explanation: "Inflation is the general rise in prices of goods and services consumed over time, which directly erodes the purchasing power of money."
+      },
+      {
+        id: 3,
+        question: "What is the Real Rate of Return?",
+        options: [
+          { text: "Return that the investor gets after payment of all expenses", key: "a" },
+          { text: "Return that the investor gets after taxes", key: "b" },
+          { text: "Return that the investor gets after adjusting the risks", key: "c" },
+          { text: "Return that the investor gets after adjusting inflation", key: "d" }
+        ],
+        correct: "d",
+        explanation: "The nominal rate of return minus the inflation rate gives the Real Rate of Return. If nominal return is 7% and inflation is 8%, the real rate is negative (-1%)."
+      },
+      {
+        id: 4,
+        question: "When the interest rate in the economy increases, what happens to the price of existing fixed-rate bonds?",
+        options: [
+          { text: "Increases", key: "a" },
+          { text: "Fluctuates randomly", key: "b" },
+          { text: "Decreases", key: "c" },
+          { text: "Remains constant", key: "d" }
+        ],
+        correct: "c",
+        explanation: "Bond prices and interest rates have an inverse relationship. When prevailing interest rates rise, existing bonds with lower fixed coupon rates become less attractive, and their prices drop to match prevailing yields."
+      },
+      {
+        id: 5,
+        question: "Which psychological bias describes people's tendency to prefer avoiding losses over acquiring equivalent gains (e.g. losing ₹5,000 hurts more than gaining ₹5,000)?",
+        options: [
+          { text: "Confirmation Bias", key: "a" },
+          { text: "Loss Aversion", key: "b" },
+          { text: "Availability Heuristic", key: "c" },
+          { text: "Recency Bias", key: "d" }
+        ],
+        correct: "b",
+        explanation: "Loss Aversion, identified by Nobel laureate Daniel Kahneman and Amos Tversky, explains why the emotional pain of a loss is roughly twice as intense as the joy of an equivalent gain."
+      },
+      {
+        id: 6,
+        question: "An investor who only purchases shares of companies in the industry they work in (e.g. an IT engineer investing only in tech stocks) is exhibiting which bias?",
+        options: [
+          { text: "Investor Interest Bias / Concentration Risk", key: "a" },
+          { text: "Anchoring Bias", key: "b" },
+          { text: "Mental Accounting", key: "c" },
+          { text: "Overconfidence in Derivatives", key: "d" }
+        ],
+        correct: "a",
+        explanation: "Investor interest bias occurs when portfolio choices are driven by personal interest or occupational familiarity rather than suitability, leading to dangerous concentration of risk."
+      },
+      {
+        id: 7,
+        question: "Risk profiling of an investor evaluates which three fundamental parameters?",
+        options: [
+          { text: "Age, Gender, and Salary", key: "a" },
+          { text: "Need, Ability, and Willingness to take risk", key: "b" },
+          { text: "Credit rating, Duration, and Net worth", key: "c" },
+          { text: "PAN, Aadhaar, and CKYC status", key: "d" }
+        ],
+        correct: "b",
+        explanation: "The risk profiling triad consists of: Need to take risk (return required for goals), Ability to take risk (financial strength & time horizon), and Willingness to take risk (psychological tolerance)."
+      },
+      {
+        id: 8,
+        question: "What is the primary difference between Strategic Asset Allocation (SAA) and Tactical Asset Allocation (TAA)?",
+        options: [
+          { text: "SAA is for short term while TAA is for retirement", key: "a" },
+          { text: "SAA maintains target allocation for long-term goals, while TAA dynamically shifts allocation to capture short-term opportunities", key: "b" },
+          { text: "SAA is only for equity funds while TAA is only for debt funds", key: "c" },
+          { text: "SAA is mandated by RBI and TAA is mandated by SEBI", key: "d" }
+        ],
+        correct: "b",
+        explanation: "Strategic Asset Allocation (SAA) is target allocation aligned to long-term goals and risk profile. Tactical Asset Allocation (TAA) dynamically adjusts asset weights to capture short-term market mispricings."
+      },
+      {
+        id: 9,
+        question: "In the event of deviation from mandated asset allocation in SID due to passive breaches, what is the SEBI-mandated rebalancing period for mutual fund schemes (except Index Funds/ETFs)?",
+        options: [
+          { text: "7 working days", key: "a" },
+          { text: "15 business days", key: "b" },
+          { text: "30 business days", key: "c" },
+          { text: "90 calendar days", key: "d" }
+        ],
+        correct: "c",
+        explanation: "As per SEBI regulations, the mandated portfolio rebalancing period for passive breaches is 30 business days for all schemes other than Index Funds and ETFs (and is not applicable to Overnight Funds)."
+      },
+      {
+        id: 10,
+        question: "Which type of investment risk CANNOT be eliminated or reduced through diversification across different companies?",
+        options: [
+          { text: "Unsystematic Risk (Firm-specific risk)", key: "a" },
+          { text: "Systematic Risk (Market risk)", key: "b" },
+          { text: "Credit Risk of a single bond", key: "c" },
+          { text: "Liquidity risk of an unlisted stock", key: "d" }
+        ],
+        correct: "b",
+        explanation: "Systematic risk (market-wide risk from inflation, interest rates, macro shocks) cannot be eliminated through diversification. Unsystematic (firm-specific) risk can be diversified away."
+      },
+      {
+        id: 11,
+        question: "Under Stephen Covey's matrix, where do essential long-term goals like Retirement Planning and Child Higher Education ideally belong?",
+        options: [
+          { text: "Quadrant I (Urgent and Important)", key: "a" },
+          { text: "Quadrant II (Not Urgent but Important)", key: "b" },
+          { text: "Quadrant III (Urgent but Not Important)", key: "c" },
+          { text: "Quadrant IV (Not Urgent and Not Important)", key: "d" }
+        ],
+        correct: "b",
+        explanation: "Long-term goals belong to Quadrant II (Not Urgent but Important). When people neglect planning for Quadrant II early, these goals eventually turn into stressful Quadrant I emergencies."
+      },
+      {
+        id: 12,
+        question: "Why is portfolio rebalancing beneficial for an investor over long market cycles?",
+        options: [
+          { text: "It guarantees zero volatility in equity funds", key: "a" },
+          { text: "It eliminates all tax liabilities permanently", key: "b" },
+          { text: "It automatically enforces the discipline of buying low and selling high", key: "c" },
+          { text: "It converts all debt instruments into equity instruments", key: "d" }
+        ],
+        correct: "c",
+        explanation: "Rebalancing restores the original target asset allocation by trimming portions of the asset class that rose significantly (selling high) and deploying proceeds into the lagged asset class (buying low)."
+      }
+    ];
+
+    let userAnswers = {};
+
+    function renderQuiz() {
+      const container = document.getElementById("questions-container");
+      container.innerHTML = "";
+
+      questionsData.forEach((q, index) => {
+        const qDiv = document.createElement("div");
+        qDiv.className = "p-5 rounded-2xl bg-white/5 border border-white/10 space-y-4 transition-all";
+        qDiv.id = `q-box-${q.id}`;
+
+        let optionsHtml = "";
+        q.options.forEach(opt => {
+          optionsHtml += `
+            <label class="flex items-center gap-3 p-3 rounded-xl bg-white/5 hover:bg-white/10 border border-white/5 cursor-pointer text-xs sm:text-sm transition-all" onclick="selectOption(${q.id}, '${opt.key}')" id="label-${q.id}-${opt.key}">
+              <input type="radio" name="question-${q.id}" value="${opt.key}" class="w-4 h-4 text-indigo-500 focus:ring-0 focus:ring-offset-0 bg-transparent border-slate-500">
+              <span class="font-bold text-indigo-300 w-5 uppercase">${opt.key}.</span>
+              <span class="text-slate-200">${opt.text}</span>
+            </label>
+          `;
+        });
+
+        qDiv.innerHTML = `
+          <div class="flex items-start justify-between gap-2">
+            <span class="text-xs font-bold text-indigo-400 uppercase tracking-wider">Question ${index + 1} of ${questionsData.length}</span>
+            <span id="badge-${q.id}" class="text-xs px-2 py-0.5 rounded-full bg-white/5 text-slate-400 font-medium">Unanswered</span>
+          </div>
+          <h4 class="font-display font-semibold text-sm sm:text-base text-white">${q.question}</h4>
+          <div class="space-y-2 mt-3">
+            ${optionsHtml}
+          </div>
+          <div id="explanation-${q.id}" class="hidden p-4 rounded-xl text-xs sm:text-sm mt-3 space-y-1"></div>
+        `;
+        container.appendChild(qDiv);
+      });
+      lucide.createIcons();
+    }
+
+    function selectOption(qId, key) {
+      userAnswers[qId] = key;
+      const count = Object.keys(userAnswers).length;
+      document.getElementById("answered-count").innerText = count;
+      
+      const badge = document.getElementById(`badge-${qId}`);
+      if (badge) {
+        badge.innerText = "Answered";
+        badge.className = "text-xs px-2 py-0.5 rounded-full bg-indigo-500/20 text-indigo-300 font-medium";
+      }
+
+      // Highlight selected label
+      const q = questionsData.find(item => item.id === qId);
+      q.options.forEach(opt => {
+        const lbl = document.getElementById(`label-${qId}-${opt.key}`);
+        if (opt.key === key) {
+          lbl.className = "flex items-center gap-3 p-3 rounded-xl bg-indigo-600/30 border border-indigo-400/50 cursor-pointer text-xs sm:text-sm transition-all";
+        } else {
+          lbl.className = "flex items-center gap-3 p-3 rounded-xl bg-white/5 hover:bg-white/10 border border-white/5 cursor-pointer text-xs sm:text-sm transition-all";
+        }
+      });
+    }
+
+    function submitQuiz() {
+      let score = 0;
+      questionsData.forEach(q => {
+        const selected = userAnswers[q.id];
+        const isCorrect = selected === q.correct;
+        if (isCorrect) score++;
+
+        const explanationDiv = document.getElementById(`explanation-${q.id}`);
+        explanationDiv.classList.remove("hidden");
+
+        if (isCorrect) {
+          explanationDiv.className = "p-4 rounded-xl text-xs sm:text-sm mt-3 bg-emerald-950/60 border border-emerald-600 text-emerald-200 space-y-1";
+          explanationDiv.innerHTML = `<div class="font-bold text-emerald-400 flex items-center gap-1.5"><i data-lucide="check" class="w-4 h-4"></i> Correct!</div><p>${q.explanation}</p>`;
+        } else {
+          explanationDiv.className = "p-4 rounded-xl text-xs sm:text-sm mt-3 bg-rose-950/60 border border-rose-600 text-rose-200 space-y-1";
+          explanationDiv.innerHTML = `<div class="font-bold text-rose-400 flex items-center gap-1.5"><i data-lucide="x" class="w-4 h-4"></i> Incorrect (Correct Answer: ${q.correct.toUpperCase()})</div><p>${q.explanation}</p>`;
+        }
+      });
+
+      // Show results scorecard
+      const percentage = Math.round((score / questionsData.length) * 100);
+      const passed = percentage >= 60;
+      
+      const resultsDiv = document.getElementById("quiz-results");
+      resultsDiv.classList.remove("hidden");
+
+      const statusBadge = document.getElementById("result-status-badge");
+      statusBadge.innerText = passed ? "Status: Passed (60%+ Benchmark)" : "Status: Needs Revision";
+      statusBadge.className = passed ? "px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider bg-emerald-500 text-emerald-950" : "px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider bg-amber-500 text-amber-950";
+
+      document.getElementById("score-display").innerText = `${score} / ${questionsData.length}`;
+      document.getElementById("percentage-display").innerText = `${percentage}% Score (Passing criteria: 60%)`;
+
+      document.getElementById("result-summary-text").innerText = passed
+        ? `Great job! You scored ${percentage}%, successfully clearing the NISM passing criteria of 60%. Review the explanations above to cement your understanding.`
+        : `You scored ${percentage}%. Revisit the notes on Behavioural Biases, Real Returns, and Rebalancing before re-attempting.`;
+
+      document.getElementById("submit-quiz-btn").classList.add("hidden");
+      document.getElementById("reset-quiz-btn").classList.remove("hidden");
+
+      resultsDiv.scrollIntoView({ behavior: 'smooth' });
+      lucide.createIcons();
+    }
+
+    function resetQuiz() {
+      userAnswers = {};
+      document.getElementById("answered-count").innerText = "0";
+      document.getElementById("quiz-results").classList.add("hidden");
+      document.getElementById("submit-quiz-btn").classList.remove("hidden");
+      document.getElementById("reset-quiz-btn").classList.add("hidden");
+      renderQuiz();
+      document.getElementById("interactive-quiz").scrollIntoView({ behavior: 'smooth' });
+    }
+
+    // Initialize Quiz
+    renderQuiz();
+    lucide.createIcons();
+  </script>
+</body>
+</html>

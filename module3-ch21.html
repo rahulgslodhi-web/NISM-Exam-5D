@@ -1,0 +1,1133 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Chapter 21: Exchange Traded Interest Rate Options (ETIRO) | NISM Series V-D Notes</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+  <script src="https://unpkg.com/lucide@latest"></script>
+
+  <!-- KaTeX for formula rendering -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.min.css">
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.min.js"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/contrib/auto-render.min.js" onload="renderMathInElement(document.body);"></script>
+
+  <!-- Global Module & Chapter Navigation Sidebar -->
+    <!-- Modern Documentation Design System & Zoom Engine -->
+  <link rel="stylesheet" href="modern-docs.css">
+  <script defer src="nav-sidebar.js"></script>
+
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+            display: ['"Space Grotesk"', 'sans-serif']
+          }
+        }
+      }
+    }
+  </script>
+</head>
+<body class="bg-slate-50 text-slate-900 min-h-screen flex flex-col selection:bg-purple-500 selection:text-white">
+
+  <!-- Header -->
+  <header class="sticky top-0 z-50 bg-white/90 backdrop-blur-md border-b border-slate-200">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
+      <div class="flex items-center gap-3">
+        <a href="module3.html" class="flex items-center gap-2 text-slate-500 hover:text-slate-900 transition-colors">
+          <div class="w-9 h-9 rounded-xl bg-slate-100 hover:bg-slate-200 flex items-center justify-center text-slate-700 transition-colors">
+            <i data-lucide="arrow-left" class="w-4 h-4"></i>
+          </div>
+        </a>
+        <div>
+          <div class="flex items-center gap-2">
+            <span class="text-xs font-bold uppercase tracking-wider text-purple-600 bg-purple-50 px-2 py-0.5 rounded">Module 3</span>
+            <span class="text-xs text-slate-400 font-medium">Chapter 21 of 22</span>
+          </div>
+          <h1 class="font-display font-bold text-base sm:text-lg text-slate-900 leading-tight">Exchange Traded Interest Rate Options (ETIRO)</h1>
+        </div>
+      </div>
+
+      <div class="flex items-center gap-3">
+        <span class="hidden sm:inline-flex items-center gap-1 px-3 py-1 rounded-full text-xs font-bold bg-amber-50 text-amber-700 border border-amber-200">
+          <i data-lucide="award" class="w-3.5 h-3.5"></i>
+          Weightage: 6 Marks
+        </span>
+        <a href="#interactive-quiz" class="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-lg text-xs font-bold bg-purple-600 hover:bg-purple-700 text-white shadow-sm transition-all">
+          <i data-lucide="help-circle" class="w-3.5 h-3.5"></i>
+          <span>Chapter Quiz</span>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Content Grid -->
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 grid grid-cols-1 lg:grid-cols-12 gap-8 flex-grow">
+    
+    <!-- Sidebar Navigation -->
+    <aside class="hidden lg:block lg:col-span-3">
+      <div class="sticky top-24 space-y-4">
+        <!-- Chapter Switcher (3 Module Dropdowns) -->
+        <div id="sidebar-chapter-switcher"></div>
+
+        <div class="bg-white p-5 rounded-2xl border border-slate-200 shadow-sm">
+          <h2 class="text-xs font-bold text-slate-400 uppercase tracking-wider mb-3">Chapter Navigation</h2>
+          <nav class="space-y-1 text-xs">
+            <a href="#section-1" class="block px-2.5 py-1.5 rounded-lg text-amber-700 font-semibold bg-amber-50/70 hover:bg-amber-100">21.1 Contract Specifications & Lot Size ⭐</a>
+            <a href="#section-2" class="block px-2.5 py-1.5 rounded-lg text-slate-600 hover:bg-slate-100 hover:text-purple-600">21.2 Fischer Black (1976) Model</a>
+            <a href="#section-3" class="block px-2.5 py-1.5 rounded-lg text-amber-700 font-semibold bg-amber-50/70 hover:bg-amber-100">21.3 Price Delta vs. Yield Delta (&Delta;y) ⭐</a>
+            <a href="#section-4" class="block px-2.5 py-1.5 rounded-lg text-slate-600 hover:bg-slate-100 hover:text-purple-600">21.4 Moneyness: Price vs. Yield</a>
+            <a href="#section-5" class="block px-2.5 py-1.5 rounded-lg text-amber-700 font-semibold bg-amber-50/70 hover:bg-amber-100">21.5 Asymmetric Hedging: IRO vs. IRF ⭐</a>
+            <a href="#section-6" class="block px-2.5 py-1.5 rounded-lg text-amber-700 font-semibold bg-amber-50/70 hover:bg-amber-100">21.6 Institutional Strategies & SEBI Rules ⭐</a>
+            <a href="#interactive-quiz" class="block px-2.5 py-1.5 rounded-lg text-purple-700 font-bold bg-purple-50 hover:bg-purple-100 mt-2">Practice Quiz (12 MCQs)</a>
+          </nav>
+        </div>
+
+        <div class="p-4 rounded-2xl bg-gradient-to-br from-purple-700 to-indigo-800 text-white shadow-sm text-xs">
+          <div class="flex items-center gap-1.5 font-bold mb-1.5">
+            <i data-lucide="zap" class="w-4 h-4 text-amber-300"></i>
+            <span>Exam Focus Highlights</span>
+          </div>
+          <p class="text-purple-100 leading-relaxed space-y-1">
+            • <strong>Lot Size:</strong> 2,000 bonds (₹2 Lakhs Face Value).<br>
+            • <strong>Tick Size:</strong> ₹0.0025 (Tick value = ₹5.00).<br>
+            • <strong>Exercise:</strong> European Style; 100% Cash Settled.<br>
+            • <strong>Yield Delta (&Delta;y):</strong> Call has <strong>NEGATIVE</strong> yield delta; Put has <strong>POSITIVE</strong> yield delta.<br>
+            • <strong>Pricing Model:</strong> Fischer Black (1976).<br>
+            • <strong>Hedging:</strong> Asymmetric downside floor with upside participation.
+          </p>
+        </div>
+      </div>
+    </aside>
+
+    <!-- Main Notes -->
+    <div class="lg:col-span-9 space-y-8">
+
+      <!-- Section 21.1 -->
+      <section id="section-1" class="bg-white rounded-3xl p-6 sm:p-8 border border-amber-200 shadow-sm space-y-5">
+        <div class="flex items-center justify-between">
+          <div class="flex items-center gap-2 text-xs font-bold text-amber-700 uppercase tracking-wider">
+            <span class="w-2 h-2 rounded-full bg-amber-500"></span> Section 21.1 &bull; Super High Exam Yield ⭐
+          </div>
+          <span class="text-xs px-2.5 py-1 rounded-full bg-amber-100 text-amber-800 font-bold">Contract Specifications</span>
+        </div>
+        
+        <h2 class="font-display font-bold text-xl sm:text-2xl text-slate-900">Exchange Traded Interest Rate Options (ETIRO) Specifications</h2>
+        
+        <div class="p-4 rounded-2xl bg-slate-50 border border-slate-200 text-xs text-slate-700 space-y-2">
+          <div class="flex items-center gap-2 font-bold text-slate-900 text-sm">
+            <i data-lucide="info" class="w-4 h-4 text-purple-600"></i>
+            <span>Regulatory & Market Background</span>
+          </div>
+          <p class="leading-relaxed">
+            Reserve Bank of India (RBI) and Securities and Exchange Board of India (SEBI) introduced <strong>Exchange Traded Interest Rate Options (ETIRO)</strong> on recognized stock exchanges (NSE and BSE) to provide institutional debt market participants and mutual funds with an efficient, transparent, and non-linear risk hedging mechanism.
+          </p>
+        </div>
+
+        <!-- Master Specifications Table -->
+        <div class="overflow-x-auto rounded-2xl border border-slate-200 text-xs">
+          <table class="min-w-full text-left">
+            <thead class="bg-slate-100 text-slate-700 font-bold uppercase tracking-wider">
+              <tr>
+                <th class="p-3.5">Contract Parameter</th>
+                <th class="p-3.5 bg-purple-50 text-purple-950">ETIRO Regulatory Specification (NSE / BSE)</th>
+                <th class="p-3.5">Exam Relevance & Notes</th>
+              </tr>
+            </thead>
+            <tbody class="divide-y divide-slate-200 text-slate-700">
+              <tr class="hover:bg-slate-50">
+                <td class="p-3 font-semibold text-slate-900">Underlying Asset</td>
+                <td class="p-3 text-slate-900 font-medium bg-purple-50/20">10-Year Government of India Benchmark Dated Security or 10-Year GoI IRF</td>
+                <td class="p-3 text-slate-500">Matches the most liquid sovereign benchmark yield curve.</td>
+              </tr>
+              <tr class="hover:bg-slate-50">
+                <td class="p-3 font-semibold text-slate-900">Contract Lot Size</td>
+                <td class="p-3 font-bold text-purple-900 bg-purple-50/40">2,000 underlying bonds (₹2,00,000 Face Value)</td>
+                <td class="p-3 text-slate-500">Each bond has a nominal face value of ₹100 (2,000 &times; ₹100 = ₹2,00,000).</td>
+              </tr>
+              <tr class="hover:bg-slate-50">
+                <td class="p-3 font-semibold text-slate-900">Option Types</td>
+                <td class="p-3 font-medium text-slate-900">Call Option (CE) and Put Option (PE)</td>
+                <td class="p-3 text-slate-500">Call grants right to buy underlying bond; Put grants right to sell.</td>
+              </tr>
+              <tr class="hover:bg-slate-50">
+                <td class="p-3 font-semibold text-slate-900">Exercise Style</td>
+                <td class="p-3 font-bold text-slate-900 bg-amber-50/50 text-amber-900">European Style (Exercised only on expiration day)</td>
+                <td class="p-3 text-slate-500">No early exercise permitted; eliminates early assignment risk for option sellers.</td>
+              </tr>
+              <tr class="hover:bg-slate-50">
+                <td class="p-3 font-semibold text-slate-900">Quotation Basis</td>
+                <td class="p-3 text-slate-900 font-medium">Clean Price per ₹100 Face Value</td>
+                <td class="p-3 text-slate-500">Quoted exclusive of accrued interest (e.g., premium quoted as ₹0.8525).</td>
+              </tr>
+              <tr class="hover:bg-slate-50">
+                <td class="p-3 font-semibold text-slate-900">Minimum Tick Size</td>
+                <td class="p-3 font-bold text-emerald-800 bg-emerald-50/30">₹0.0025 (0.25 paise or 1/4th of a paisa)</td>
+                <td class="p-3 text-slate-500">Identical to the tick size of 10-Year GoI IRF contracts.</td>
+              </tr>
+              <tr class="hover:bg-slate-50">
+                <td class="p-3 font-semibold text-slate-900">Minimum Tick Value</td>
+                <td class="p-3 font-bold text-blue-900 bg-blue-50/30">2,000 &times; ₹0.0025 = ₹5.00 per contract</td>
+                <td class="p-3 text-slate-500">Every 1 tick movement creates a ₹5 profit/loss per lot.</td>
+              </tr>
+              <tr class="hover:bg-slate-50">
+                <td class="p-3 font-semibold text-slate-900">Strike Price Interval</td>
+                <td class="p-3 text-slate-900 font-medium">₹0.25 (25 paise) or ₹0.50 intervals</td>
+                <td class="p-3 text-slate-500">Exchange introduces a minimum of 5 In-the-Money, 1 At-the-Money, and 5 Out-of-the-Money strikes.</td>
+              </tr>
+              <tr class="hover:bg-slate-50">
+                <td class="p-3 font-semibold text-slate-900">Contract Tenor & Cycle</td>
+                <td class="p-3 text-slate-900 font-medium">3 Serial Monthly Contracts</td>
+                <td class="p-3 text-slate-500">Near-month, next-month, and far-month trading cycles.</td>
+              </tr>
+              <tr class="hover:bg-slate-50">
+                <td class="p-3 font-semibold text-slate-900">Expiration Day</td>
+                <td class="p-3 font-bold text-slate-900">Last Thursday of the contract month</td>
+                <td class="p-3 text-slate-500">If the last Thursday is a trading holiday, expires on the preceding business day.</td>
+              </tr>
+              <tr class="hover:bg-slate-50">
+                <td class="p-3 font-semibold text-slate-900">Trading Hours</td>
+                <td class="p-3 text-slate-900 font-medium">9:00 AM to 5:00 PM (Monday to Friday)</td>
+                <td class="p-3 text-slate-500">Alings with the wholesale debt market (NDS-OM) trading hours.</td>
+              </tr>
+              <tr class="hover:bg-slate-50">
+                <td class="p-3 font-semibold text-slate-900">Settlement Mechanism</td>
+                <td class="p-3 font-bold text-purple-950 bg-purple-100/50">100% Cash Settled in Indian Rupees (INR)</td>
+                <td class="p-3 text-slate-500">Zero physical delivery of GoI dated securities. Cash settled on T+1 day.</td>
+              </tr>
+              <tr class="hover:bg-slate-50">
+                <td class="p-3 font-semibold text-slate-900">Final Settlement Price (FSP)</td>
+                <td class="p-3 text-slate-900 font-medium bg-slate-50">Volume Weighted Average Price (VWAP) on NDS-OM</td>
+                <td class="p-3 text-slate-500">Computed from wholesale NDS-OM trades between 3:00 PM and 5:00 PM on expiry, or FBIL valuation.</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <!-- Margining and Risk Rules Card -->
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4 text-xs">
+          <div class="p-4 rounded-2xl bg-blue-50/60 border border-blue-200 space-y-2">
+            <span class="font-bold text-blue-950 text-sm">Margining Architecture</span>
+            <ul class="list-disc pl-4 space-y-1 text-slate-700">
+              <li><strong>Option Buyers:</strong> Pay 100% of the option premium upfront at trade inception. No mark-to-market (MTM) margin or daily margin calls.</li>
+              <li><strong>Option Writers (Sellers):</strong> Subject to portfolio-based SPAN (Standard Portfolio Analysis of Risk) Initial Margin, Exposure Margin, and Extreme Loss Margin.</li>
+              <li>Mark-to-Market losses for writers are debited on a daily basis.</li>
+            </ul>
+          </div>
+
+          <div class="p-4 rounded-2xl bg-indigo-50/60 border border-indigo-200 space-y-2">
+            <span class="font-bold text-indigo-950 text-sm">Regulatory Position Limits</span>
+            <ul class="list-disc pl-4 space-y-1 text-slate-700">
+              <li><strong>Trading Member:</strong> 15% of total open interest or ₹1,000 Crores face value, whichever is higher.</li>
+              <li><strong>Client Level:</strong> 3% of total open interest or ₹200 Crores face value, whichever is higher.</li>
+              <li><strong>Mutual Funds:</strong> Scheme-level limits apply; gross derivative exposure must not exceed 100% of net assets of the scheme.</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <!-- Section 21.2 -->
+      <section id="section-2" class="bg-white rounded-3xl p-6 sm:p-8 border border-slate-200/90 shadow-sm space-y-5">
+        <div class="flex items-center justify-between">
+          <div class="flex items-center gap-2 text-xs font-bold text-slate-500 uppercase tracking-wider">
+            <span class="w-2 h-2 rounded-full bg-slate-400"></span> Section 21.2 &bull; Fast-Track Refresher
+          </div>
+          <span class="text-xs px-2.5 py-1 rounded-full bg-slate-100 text-slate-600 font-semibold">Pricing Framework</span>
+        </div>
+
+        <h2 class="font-display font-bold text-xl sm:text-2xl text-slate-900">The Fischer Black (1976) Pricing Model</h2>
+        
+        <p class="text-sm text-slate-600 leading-relaxed">
+          Standard equity options use the Black-Scholes-Merton (1973) model, which values options on spot equity shares. However, options on fixed-income futures, forward bonds, and interest rate derivatives are valued using the <strong>Fischer Black (1976) model</strong> (often called the Black-76 model).
+        </p>
+
+        <!-- Why Black-76 Callout -->
+        <div class="p-4 rounded-2xl bg-amber-50/60 border border-amber-200 text-xs space-y-2">
+          <div class="font-bold text-amber-950 text-sm flex items-center gap-1.5">
+            <i data-lucide="lightbulb" class="w-4 h-4 text-amber-600"></i>
+            <span>Why Black-76 instead of Black-Scholes-Merton? (Exam Conceptual Test)</span>
+          </div>
+          <p class="text-slate-700 leading-relaxed">
+            In equity options, the holder invests upfront in the spot asset, incurring financing costs while receiving continuous dividend yield. In debt options on futures or forward-starting bonds, the underlying is the <strong>Forward/Futures price (\(F\))</strong>. The forward price already reflects the cost of carry (repo financing cost minus accrued coupon). Thus, no continuous carry adjustment is needed, and the forward price is modeled as a lognormal martingale discounted at the risk-free rate.
+          </p>
+        </div>
+
+        <!-- Formula Container -->
+        <div class="p-5 rounded-2xl bg-purple-50/50 border border-purple-200 text-xs space-y-3">
+          <span class="font-bold text-purple-950 text-sm">Fischer Black (1976) Pricing Equations:</span>
+          
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-3">
+            <div class="bg-white p-3.5 rounded-xl border border-purple-200 font-mono text-purple-950 space-y-1">
+              <div class="font-bold text-xs uppercase text-purple-800 mb-1 font-sans">Call Option Premium (C):</div>
+              <div class="text-xs sm:text-sm font-semibold">C = e<sup>-rT</sup> &times; [F &times; N(d<sub>1</sub>) - X &times; N(d<sub>2</sub>)]</div>
+            </div>
+            <div class="bg-white p-3.5 rounded-xl border border-purple-200 font-mono text-purple-950 space-y-1">
+              <div class="font-bold text-xs uppercase text-purple-800 mb-1 font-sans">Put Option Premium (P):</div>
+              <div class="text-xs sm:text-sm font-semibold">P = e<sup>-rT</sup> &times; [X &times; N(-d<sub>2</sub>) - F &times; N(-d<sub>1</sub>)]</div>
+            </div>
+          </div>
+
+          <div class="bg-white p-3.5 rounded-xl border border-purple-200 font-mono text-slate-800 space-y-1 text-[11px] sm:text-xs">
+            <div>d<sub>1</sub> = [ ln(F / X) + (&sigma;<sup>2</sup> / 2) &times; T ] / [ &sigma; &times; &radic;T ]</div>
+            <div>d<sub>2</sub> = d<sub>1</sub> - [ &sigma; &times; &radic;T ]</div>
+          </div>
+
+          <div class="text-[11px] text-slate-600 leading-relaxed grid grid-cols-2 sm:grid-cols-4 gap-2 pt-1">
+            <div>• <strong>F:</strong> Forward/Futures bond price</div>
+            <div>• <strong>X:</strong> Strike clean price</div>
+            <div>• <strong>T:</strong> Time to expiry (in years)</div>
+            <div>• <strong>r:</strong> Risk-free interest rate</div>
+            <div>• <strong>&sigma;:</strong> Volatility of bond price/yield</div>
+            <div>• <strong>N(&bull;):</strong> Cumulative normal distribution</div>
+            <div class="col-span-2">• <strong>Put-Call Parity:</strong> C - P = e<sup>-rT</sup> &times; (F - X)</div>
+          </div>
+        </div>
+
+        <!-- Sensitivity Drivers Table -->
+        <div class="overflow-x-auto rounded-2xl border border-slate-200 text-xs">
+          <table class="min-w-full text-left">
+            <thead class="bg-slate-100 text-slate-700 font-bold uppercase tracking-wider">
+              <tr>
+                <th class="p-3">Variable</th>
+                <th class="p-3">Change in Variable</th>
+                <th class="p-3 text-emerald-700">Impact on Call (C)</th>
+                <th class="p-3 text-rose-700">Impact on Put (P)</th>
+                <th class="p-3">Economic Explanation</th>
+              </tr>
+            </thead>
+            <tbody class="divide-y divide-slate-200 text-slate-700">
+              <tr class="hover:bg-slate-50">
+                <td class="p-3 font-semibold text-slate-900">Forward Bond Price (F)</td>
+                <td class="p-3 font-mono">F &uarr; (Yield &darr;)</td>
+                <td class="p-3 font-bold text-emerald-600">&uarr; Increases</td>
+                <td class="p-3 font-bold text-rose-600">&darr; Decreases</td>
+                <td class="p-3 text-slate-500">Higher underlying price widens call payoff, diminishes put payoff.</td>
+              </tr>
+              <tr class="hover:bg-slate-50">
+                <td class="p-3 font-semibold text-slate-900">Strike Price (X)</td>
+                <td class="p-3 font-mono">X &uarr;</td>
+                <td class="p-3 font-bold text-rose-600">&darr; Decreases</td>
+                <td class="p-3 font-bold text-emerald-600">&uarr; Increases</td>
+                <td class="p-3 text-slate-500">Higher strike means buyer pays more to exercise call or receives more for put.</td>
+              </tr>
+              <tr class="hover:bg-slate-50">
+                <td class="p-3 font-semibold text-slate-900">Volatility (&sigma;)</td>
+                <td class="p-3 font-mono">&sigma; &uarr;</td>
+                <td class="p-3 font-bold text-emerald-600">&uarr; Increases</td>
+                <td class="p-3 font-bold text-emerald-600">&uarr; Increases</td>
+                <td class="p-3 text-slate-500">Option holders benefit from upside tail risk while downside is capped at premium.</td>
+              </tr>
+              <tr class="hover:bg-slate-50">
+                <td class="p-3 font-semibold text-slate-900">Time to Expiry (T)</td>
+                <td class="p-3 font-mono">T &uarr;</td>
+                <td class="p-3 font-bold text-emerald-600">&uarr; Increases</td>
+                <td class="p-3 font-bold text-emerald-600">&uarr; Increases</td>
+                <td class="p-3 text-slate-500">More time creates greater probability for the option to finish deep in-the-money.</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <!-- Section 21.3 -->
+      <section id="section-3" class="bg-white rounded-3xl p-6 sm:p-8 border border-amber-200 shadow-sm space-y-5">
+        <div class="flex items-center justify-between">
+          <div class="flex items-center gap-2 text-xs font-bold text-amber-700 uppercase tracking-wider">
+            <span class="w-2 h-2 rounded-full bg-amber-500"></span> Section 21.3 &bull; Super High Exam Yield ⭐
+          </div>
+          <span class="text-xs px-2.5 py-1 rounded-full bg-amber-100 text-amber-800 font-bold">Greeks Nuance</span>
+        </div>
+
+        <h2 class="font-display font-bold text-xl sm:text-2xl text-slate-900">Option Greeks: Price Delta (&Delta;<sub>P</sub>) vs. Yield Delta (&Delta;<sub>y</sub>)</h2>
+        
+        <p class="text-sm text-slate-600 leading-relaxed">
+          One of the most heavily tested, high-frequency traps in the NISM Series V-D exam is the critical distinction between <strong>Price Delta</strong> and <strong>Yield Delta</strong>. Candidates routinely lose marks by assuming all Call deltas are positive and all Put deltas are negative!
+        </p>
+
+        <!-- The Big Trap Alert Banner -->
+        <div class="p-4 rounded-2xl bg-rose-50 border border-rose-200 text-xs space-y-2">
+          <div class="font-bold text-rose-950 text-sm flex items-center gap-2">
+            <i data-lucide="alert-triangle" class="w-4 h-4 text-rose-600"></i>
+            <span>CRITICAL EXAM TRAP: The Signs of Yield Delta (&Delta;<sub>y</sub>)</span>
+          </div>
+          <p class="text-slate-800 leading-relaxed">
+            In fixed-income derivatives, underlying bond prices move <strong>inversely</strong> to interest rates and yields. Therefore:
+          </p>
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 pt-1">
+            <div class="p-3 bg-white rounded-xl border border-rose-200">
+              <span class="font-bold text-rose-900">Call Option Yield Delta is NEGATIVE!</span>
+              <p class="text-slate-600 mt-1">When interest rate yields rise &rarr; Bond price falls &rarr; Call option value drops! (&part;C / &part;y &lt; 0).</p>
+            </div>
+            <div class="p-3 bg-white rounded-xl border border-emerald-200">
+              <span class="font-bold text-emerald-900">Put Option Yield Delta is POSITIVE!</span>
+              <p class="text-slate-600 mt-1">When interest rate yields rise &rarr; Bond price falls &rarr; Put option value increases! (&part;P / &part;y &gt; 0).</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Detailed Mathematical Breakdown -->
+        <div class="p-5 rounded-2xl bg-slate-50 border border-slate-200 text-xs space-y-3">
+          <span class="font-bold text-slate-900 text-sm">Mathematical Link via the Chain Rule:</span>
+          <p class="text-slate-700 leading-relaxed">
+            Yield Delta (&Delta;<sub>y</sub>) measures the sensitivity of the option premium (\(V\)) to a unit change in the underlying bond's Yield to Maturity (\(y\)):
+          </p>
+          <div class="bg-white p-3.5 rounded-xl border border-slate-200 font-mono text-purple-950 space-y-1.5">
+            <div>&Delta;<sub>y</sub> = &part;V / &part;y = ( &part;V / &part;P ) &times; ( &part;P / &part;y ) = &Delta;<sub>P</sub> &times; ( &part;P / &part;y )</div>
+            <div class="text-slate-600 text-[11px] font-sans">
+              From bond mathematics, Modified Duration (\(MD\)) dictates that: &part;P / &part;y &approx; - (P &times; MD) &lt; 0 (strictly negative).
+            </div>
+            <div class="text-blue-900 font-bold">
+              Call Yield Delta: &Delta;<sub>y, Call</sub> = (+ &Delta;<sub>P</sub>) &times; (- P &times; MD) = NEGATIVE (&minus;)
+            </div>
+            <div class="text-emerald-900 font-bold">
+              Put Yield Delta: &Delta;<sub>y, Put</sub> = (- |&Delta;<sub>P</sub>|) &times; (- P &times; MD) = POSITIVE (+)
+            </div>
+          </div>
+        </div>
+
+        <!-- Comparative Greeks Table -->
+        <div class="overflow-x-auto rounded-2xl border border-slate-200 text-xs">
+          <table class="min-w-full text-left">
+            <thead class="bg-slate-100 text-slate-700 font-bold uppercase tracking-wider">
+              <tr>
+                <th class="p-3">Greek Metric</th>
+                <th class="p-3">Definition & Partial Derivative</th>
+                <th class="p-3 bg-purple-50 text-purple-950">Call Option Sign</th>
+                <th class="p-3 bg-amber-50 text-amber-950">Put Option Sign</th>
+                <th class="p-3">Exam Focus Note</th>
+              </tr>
+            </thead>
+            <tbody class="divide-y divide-slate-200 text-slate-700">
+              <tr class="hover:bg-slate-50">
+                <td class="p-3 font-semibold text-slate-900">Price Delta (&Delta;<sub>P</sub>)</td>
+                <td class="p-3 font-mono">&part;V / &part;P<sub>bond</sub></td>
+                <td class="p-3 font-bold text-emerald-700 bg-purple-50/20">Positive (+0.0 to +1.0)</td>
+                <td class="p-3 font-bold text-rose-700 bg-amber-50/20">Negative (-1.0 to 0.0)</td>
+                <td class="p-3 text-slate-500">ATM Call &Delta;<sub>P</sub> &approx; +0.50; ATM Put &Delta;<sub>P</sub> &approx; -0.50.</td>
+              </tr>
+              <tr class="hover:bg-slate-50 bg-amber-50/30">
+                <td class="p-3 font-bold text-amber-950">Yield Delta (&Delta;<sub>y</sub>) ⭐</td>
+                <td class="p-3 font-mono font-bold">&part;V / &part;y</td>
+                <td class="p-3 font-extrabold text-rose-700 bg-rose-50">NEGATIVE (&minus;)</td>
+                <td class="p-3 font-extrabold text-emerald-700 bg-emerald-50">POSITIVE (+)</td>
+                <td class="p-3 font-semibold text-amber-900">Highest frequency exam question! Inverse relationship in play.</td>
+              </tr>
+              <tr class="hover:bg-slate-50">
+                <td class="p-3 font-semibold text-slate-900">Gamma (&Gamma;)</td>
+                <td class="p-3 font-mono">&part;<sup>2</sup>V / &part;P<sup>2</sup></td>
+                <td class="p-3 font-bold text-emerald-700 bg-purple-50/20">Positive (&gt; 0)</td>
+                <td class="p-3 font-bold text-emerald-700 bg-amber-50/20">Positive (&gt; 0)</td>
+                <td class="p-3 text-slate-500">Measures curvature/convexity of option price; highest for ATM options near expiry.</td>
+              </tr>
+              <tr class="hover:bg-slate-50">
+                <td class="p-3 font-semibold text-slate-900">Vega (&nu;)</td>
+                <td class="p-3 font-mono">&part;V / &part;&sigma;</td>
+                <td class="p-3 font-bold text-emerald-700 bg-purple-50/20">Positive (&gt; 0)</td>
+                <td class="p-3 font-bold text-emerald-700 bg-amber-50/20">Positive (&gt; 0)</td>
+                <td class="p-3 text-slate-500">Both Call and Put buyers gain when interest rate volatility rises (RBI policy uncertainty).</td>
+              </tr>
+              <tr class="hover:bg-slate-50">
+                <td class="p-3 font-semibold text-slate-900">Theta (&Theta;)</td>
+                <td class="p-3 font-mono">&part;V / &part;t</td>
+                <td class="p-3 font-bold text-rose-700 bg-purple-50/20">Negative (&minus;)</td>
+                <td class="p-3 font-bold text-rose-700 bg-amber-50/20">Negative (&minus;)</td>
+                <td class="p-3 text-slate-500">Time decay erodes option buyer value; decay accelerates exponentially in final 30 days.</td>
+              </tr>
+              <tr class="hover:bg-slate-50">
+                <td class="p-3 font-semibold text-slate-900">Rho (&rho;)</td>
+                <td class="p-3 font-mono">&part;V / &part;r</td>
+                <td class="p-3 text-slate-700 bg-purple-50/20">Negative / Modest</td>
+                <td class="p-3 text-slate-700 bg-amber-50/20">Negative / Modest</td>
+                <td class="p-3 text-slate-500">Discounts the future cash payoff via e<sup>-rT</sup> in the Black-76 model.</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <!-- Duration & DV01 Linkage -->
+        <div class="p-4 rounded-2xl bg-indigo-50/60 border border-indigo-200 text-xs space-y-2">
+          <span class="font-bold text-indigo-950 text-sm">Portfolio DV01 and Duration Management via ETIRO</span>
+          <p class="text-slate-700 leading-relaxed">
+            Fund managers dynamically adjust portfolio duration without executing physical cash market trades using Option DV01:
+          </p>
+          <div class="bg-white p-3 rounded-xl border border-indigo-200 font-mono text-indigo-950">
+            Option DV01 = Underlying Bond DV01 &times; |&Delta;<sub>P</sub>|<br>
+            Portfolio DV01<sub>New</sub> = Portfolio DV01<sub>Original</sub> + [ Number of Contracts &times; 2,000 &times; Option DV01 ]
+          </div>
+          <p class="text-slate-600 text-[11px]">
+            Buying Put options reduces the net portfolio duration and DV01, shielding the fund against monetary tightening.
+          </p>
+        </div>
+      </section>
+
+      <!-- Section 21.4 -->
+      <section id="section-4" class="bg-white rounded-3xl p-6 sm:p-8 border border-slate-200/90 shadow-sm space-y-5">
+        <div class="flex items-center justify-between">
+          <div class="flex items-center gap-2 text-xs font-bold text-slate-500 uppercase tracking-wider">
+            <span class="w-2 h-2 rounded-full bg-slate-400"></span> Section 21.4 &bull; Fast-Track Refresher
+          </div>
+          <span class="text-xs px-2.5 py-1 rounded-full bg-slate-100 text-slate-600 font-semibold">Moneyness</span>
+        </div>
+
+        <h2 class="font-display font-bold text-xl sm:text-2xl text-slate-900">Moneyness of Interest Rate Options: Price vs. Yield Perspectives</h2>
+        
+        <p class="text-sm text-slate-600 leading-relaxed">
+          ETIRO can be analyzed either through the clean bond price or through the underlying yield to maturity. Understanding both perspectives is mandatory for the exam:
+        </p>
+
+        <!-- Moneyness Grid -->
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4 text-xs">
+          
+          <!-- Call Option Moneyness -->
+          <div class="p-5 rounded-2xl bg-blue-50/50 border border-blue-200 space-y-3">
+            <div class="flex items-center justify-between">
+              <span class="font-bold text-blue-950 text-sm">Call Option Moneyness</span>
+              <span class="px-2 py-0.5 rounded bg-blue-100 text-blue-800 font-bold text-[10px]">CE</span>
+            </div>
+            <div class="space-y-2">
+              <div class="p-2.5 bg-white rounded-xl border border-blue-200 space-y-1">
+                <span class="font-bold text-emerald-800">In-the-Money (ITM) Call:</span>
+                <p class="text-slate-600">• Bond Price &gt; Strike Price (\(P > X\))</p>
+                <p class="text-slate-600">• <strong>Market Yield &lt; Strike Yield</strong> (\(y < y_X\))</p>
+              </div>
+              <div class="p-2.5 bg-white rounded-xl border border-blue-200 space-y-1">
+                <span class="font-bold text-slate-800">At-the-Money (ATM) Call:</span>
+                <p class="text-slate-600">• Bond Price = Strike Price (\(P = X\))</p>
+                <p class="text-slate-600">• Market Yield = Strike Yield (\(y = y_X\))</p>
+              </div>
+              <div class="p-2.5 bg-white rounded-xl border border-blue-200 space-y-1">
+                <span class="font-bold text-rose-800">Out-of-the-Money (OTM) Call:</span>
+                <p class="text-slate-600">• Bond Price &lt; Strike Price (\(P < X\))</p>
+                <p class="text-slate-600">• <strong>Market Yield &gt; Strike Yield</strong> (\(y > y_X\))</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Put Option Moneyness -->
+          <div class="p-5 rounded-2xl bg-amber-50/50 border border-amber-200 space-y-3">
+            <div class="flex items-center justify-between">
+              <span class="font-bold text-amber-950 text-sm">Put Option Moneyness</span>
+              <span class="px-2 py-0.5 rounded bg-amber-100 text-amber-800 font-bold text-[10px]">PE</span>
+            </div>
+            <div class="space-y-2">
+              <div class="p-2.5 bg-white rounded-xl border border-amber-200 space-y-1">
+                <span class="font-bold text-emerald-800">In-the-Money (ITM) Put:</span>
+                <p class="text-slate-600">• Bond Price &lt; Strike Price (\(P < X\))</p>
+                <p class="text-slate-600">• <strong>Market Yield &gt; Strike Yield</strong> (\(y > y_X\))</p>
+              </div>
+              <div class="p-2.5 bg-white rounded-xl border border-amber-200 space-y-1">
+                <span class="font-bold text-slate-800">At-the-Money (ATM) Put:</span>
+                <p class="text-slate-600">• Bond Price = Strike Price (\(P = X\))</p>
+                <p class="text-slate-600">• Market Yield = Strike Yield (\(y = y_X\))</p>
+              </div>
+              <div class="p-2.5 bg-white rounded-xl border border-amber-200 space-y-1">
+                <span class="font-bold text-rose-800">Out-of-the-Money (OTM) Put:</span>
+                <p class="text-slate-600">• Bond Price &gt; Strike Price (\(P > X\))</p>
+                <p class="text-slate-600">• <strong>Market Yield &lt; Strike Yield</strong> (\(y < y_X\))</p>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Premium Decomposition & Step-by-Step Example -->
+        <div class="p-5 rounded-2xl bg-slate-50 border border-slate-200 text-xs space-y-3">
+          <span class="font-bold text-slate-900 text-sm">Intrinsic Value vs. Time Value (Numerical Example)</span>
+          <p class="text-slate-700 leading-relaxed">
+            The market premium of an interest rate option consists of two distinct components:
+          </p>
+          <div class="bg-white p-3 rounded-xl border border-slate-200 font-mono text-slate-800 space-y-1">
+            <div>Total Option Premium = Intrinsic Value + Time Value (Extrinsic Value)</div>
+            <div>Call Intrinsic Value = Max(0, Current Bond Clean Price - Strike Price)</div>
+            <div>Put Intrinsic Value = Max(0, Strike Price - Current Bond Clean Price)</div>
+          </div>
+
+          <div class="p-3.5 bg-purple-50/60 rounded-xl border border-purple-200 space-y-2">
+            <span class="font-bold text-purple-950">Step-by-Step Practical Problem:</span>
+            <p class="text-slate-700">
+              The 10-year benchmark GoI security is trading at a clean price of <strong>₹101.50</strong>. 
+              A 30-day European <strong>Call option with Strike ₹100.00</strong> is quoted at <strong>₹2.10</strong>. 
+              A 30-day European <strong>Put option with Strike ₹102.50</strong> is quoted at <strong>₹1.80</strong>. 
+              Calculate the Intrinsic Value, Time Value, and Total Cash Outlay per lot (2,000 bonds).
+            </p>
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 pt-1">
+              <div class="bg-white p-3 rounded-lg border border-purple-200 space-y-1 font-mono text-[11px]">
+                <strong class="text-purple-900 font-sans">Call Option (Strike ₹100.00):</strong>
+                <div>Intrinsic Value = 101.50 - 100.00 = <strong>₹1.50</strong></div>
+                <div>Time Value = 2.10 - 1.50 = <strong>₹0.60</strong></div>
+                <div>Outlay per Lot = 2,000 &times; ₹2.10 = <strong>₹4,200</strong></div>
+              </div>
+              <div class="bg-white p-3 rounded-lg border border-purple-200 space-y-1 font-mono text-[11px]">
+                <strong class="text-purple-900 font-sans">Put Option (Strike ₹102.50):</strong>
+                <div>Intrinsic Value = 102.50 - 101.50 = <strong>₹1.00</strong></div>
+                <div>Time Value = 1.80 - 1.00 = <strong>₹0.80</strong></div>
+                <div>Outlay per Lot = 2,000 &times; ₹1.80 = <strong>₹3,600</strong></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Section 21.5 -->
+      <section id="section-5" class="bg-white rounded-3xl p-6 sm:p-8 border border-amber-200 shadow-sm space-y-5">
+        <div class="flex items-center justify-between">
+          <div class="flex items-center gap-2 text-xs font-bold text-amber-700 uppercase tracking-wider">
+            <span class="w-2 h-2 rounded-full bg-amber-500"></span> Section 21.5 &bull; Super High Exam Yield ⭐
+          </div>
+          <span class="text-xs px-2.5 py-1 rounded-full bg-amber-100 text-amber-800 font-bold">Asymmetric Hedging</span>
+        </div>
+
+        <h2 class="font-display font-bold text-xl sm:text-2xl text-slate-900">Hedging with IRO Put vs. Short IRF: The Asymmetry Advantage</h2>
+        
+        <p class="text-sm text-slate-600 leading-relaxed">
+          Debt portfolio managers face a fundamental strategic choice when hedging against interest rate hikes: whether to sell linear <strong>Interest Rate Futures (IRF)</strong> or buy non-linear <strong>Interest Rate Options (IRO Put)</strong>.
+        </p>
+
+        <!-- 3 Scenario Analysis -->
+        <div class="p-5 rounded-2xl bg-slate-50 border border-slate-200 text-xs space-y-4">
+          <div class="flex items-center justify-between">
+            <span class="font-bold text-slate-900 text-sm">3-Scenario Comparative Case Study</span>
+            <span class="text-[11px] text-purple-700 font-semibold bg-purple-50 px-2 py-0.5 rounded border border-purple-200">Portfolio: ₹10 Crore 10-Year G-Sec @ ₹100.00</span>
+          </div>
+          <p class="text-slate-700 leading-relaxed">
+            Assume the current clean price of the bond portfolio is ₹100.00. The fund manager can either:
+            <br>1. <strong>Hedge with IRF:</strong> Sell IRF at ₹100.00 (Zero upfront cash expense; linear symmetric hedge).
+            <br>2. <strong>Hedge with IRO Put:</strong> Buy ATM Put Options at Strike ₹100.00 at an upfront premium of ₹1.50 per bond (₹15 Lakhs total premium for ₹10 Cr portfolio).
+          </p>
+
+          <div class="overflow-x-auto rounded-xl border border-slate-200">
+            <table class="min-w-full text-left bg-white">
+              <thead class="bg-slate-100 text-slate-700 font-bold uppercase tracking-wider">
+                <tr>
+                  <th class="p-3">Yield Scenario</th>
+                  <th class="p-3">Bond Price</th>
+                  <th class="p-3">Strategy 1: Unhedged</th>
+                  <th class="p-3 bg-purple-50 text-purple-950">Strategy 2: Short IRF Hedge</th>
+                  <th class="p-3 bg-emerald-50 text-emerald-950">Strategy 3: Protective Put (IRO) Hedge</th>
+                </tr>
+              </thead>
+              <tbody class="divide-y divide-slate-200 text-slate-700">
+                <tr class="hover:bg-slate-50">
+                  <td class="p-3 font-semibold text-rose-700">Yields Surge +100 bps (Severe Tightening)</td>
+                  <td class="p-3 font-mono">₹93.00 (-₹7.00)</td>
+                  <td class="p-3 font-bold text-rose-700">-₹70 Lakhs Loss</td>
+                  <td class="p-3 font-bold text-slate-900 bg-purple-50/20">
+                    Bond Loss: -₹70L<br>Futures Gain: +₹70L<br><strong class="text-emerald-700">Net: ₹0.00 (Protected)</strong>
+                  </td>
+                  <td class="p-3 font-bold text-slate-900 bg-emerald-50/20">
+                    Bond Loss: -₹70L<br>Put Gain: +₹70L<br>Premium Paid: -₹15L<br><strong class="text-amber-700">Net: -₹15 Lakhs (Capped Floor)</strong>
+                  </td>
+                </tr>
+                <tr class="hover:bg-slate-50">
+                  <td class="p-3 font-semibold text-slate-700">Yields Flat 0 bps (Range-Bound Market)</td>
+                  <td class="p-3 font-mono">₹100.00 (₹0.00)</td>
+                  <td class="p-3 font-bold text-slate-700">₹0.00 (Neutral)</td>
+                  <td class="p-3 font-bold text-slate-900 bg-purple-50/20">
+                    Bond P&amp;L: ₹0.00<br>Futures P&amp;L: ₹0.00<br><strong class="text-slate-700">Net: ₹0.00</strong>
+                  </td>
+                  <td class="p-3 font-bold text-slate-900 bg-emerald-50/20">
+                    Bond P&amp;L: ₹0.00<br>Put Expires Worthless: ₹0<br>Premium Paid: -₹15L<br><strong class="text-rose-700">Net: -₹15 Lakhs (Cost of insurance)</strong>
+                  </td>
+                </tr>
+                <tr class="hover:bg-slate-50">
+                  <td class="p-3 font-semibold text-emerald-700">Yields Plummet -100 bps (Aggressive Rate Cuts)</td>
+                  <td class="p-3 font-mono">₹107.00 (+₹7.00)</td>
+                  <td class="p-3 font-bold text-emerald-700">+₹70 Lakhs Gain</td>
+                  <td class="p-3 font-bold text-slate-900 bg-purple-50/20">
+                    Bond Gain: +₹70L<br>Futures Loss: -₹70L<br><strong class="text-rose-700">Net: ₹0.00 (Zero Participation!)</strong>
+                  </td>
+                  <td class="p-3 font-bold text-slate-900 bg-emerald-50/20">
+                    Bond Gain: +₹70L<br>Put Expires Worthless: ₹0<br>Premium Paid: -₹15L<br><strong class="text-emerald-700">Net: +₹55 Lakhs (Full Upside Retained!)</strong>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <!-- Comprehensive Master Comparison Table -->
+        <div class="overflow-x-auto rounded-2xl border border-slate-200 text-xs">
+          <table class="min-w-full text-left">
+            <thead class="bg-slate-100 text-slate-700 font-bold uppercase tracking-wider">
+              <tr>
+                <th class="p-3.5">Comparative Feature</th>
+                <th class="p-3.5 bg-purple-50 text-purple-950">Hedging with Short IRF</th>
+                <th class="p-3.5 bg-emerald-50 text-emerald-950">Hedging with IRO Put Options</th>
+              </tr>
+            </thead>
+            <tbody class="divide-y divide-slate-200 text-slate-700">
+              <tr class="hover:bg-slate-50">
+                <td class="p-3 font-semibold text-slate-900">Payoff Structure</td>
+                <td class="p-3 text-slate-800 font-medium">Linear &amp; Symmetric</td>
+                <td class="p-3 font-bold text-emerald-800 bg-emerald-50/20">Non-linear &amp; Asymmetric</td>
+              </tr>
+              <tr class="hover:bg-slate-50">
+                <td class="p-3 font-semibold text-slate-900">Downside Risk Protection</td>
+                <td class="p-3 text-slate-800">Complete hedge against rising yields</td>
+                <td class="p-3 font-medium text-slate-800">Places a guaranteed floor at Strike Price minus Premium</td>
+              </tr>
+              <tr class="hover:bg-slate-50">
+                <td class="p-3 font-semibold text-slate-900">Upside Profit Participation</td>
+                <td class="p-3 font-bold text-rose-700 bg-purple-50/20">Zero. Futures loss wipes out bond capital gains.</td>
+                <td class="p-3 font-bold text-emerald-700 bg-emerald-50/20">Full participation in bond bull rallies (minus premium paid).</td>
+              </tr>
+              <tr class="hover:bg-slate-50">
+                <td class="p-3 font-semibold text-slate-900">Upfront Cash Outflow</td>
+                <td class="p-3 text-slate-800">Zero upfront cost (only margin deposits required)</td>
+                <td class="p-3 font-bold text-rose-700">Non-refundable upfront premium paid to option seller</td>
+              </tr>
+              <tr class="hover:bg-slate-50">
+                <td class="p-3 font-semibold text-slate-900">Daily MTM Margin Calls</td>
+                <td class="p-3 font-bold text-rose-700">Yes. Subject to daily Mark-to-Market margin variations.</td>
+                <td class="p-3 font-bold text-emerald-700">None for option buyer. Maximum loss is strictly capped.</td>
+              </tr>
+              <tr class="hover:bg-slate-50">
+                <td class="p-3 font-semibold text-slate-900">Best Deployed When</td>
+                <td class="p-3 text-slate-800">High conviction of imminent yield surge; lock-in required</td>
+                <td class="p-3 text-slate-800">Uncertainty about rate direction; desire to insure without sacrificing upside</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <!-- Section 21.6 -->
+      <section id="section-6" class="bg-white rounded-3xl p-6 sm:p-8 border border-amber-200 shadow-sm space-y-5">
+        <div class="flex items-center justify-between">
+          <div class="flex items-center gap-2 text-xs font-bold text-amber-700 uppercase tracking-wider">
+            <span class="w-2 h-2 rounded-full bg-amber-500"></span> Section 21.6 &bull; Super High Exam Yield ⭐
+          </div>
+          <span class="text-xs px-2.5 py-1 rounded-full bg-amber-100 text-amber-800 font-bold">Institutional Strategies & SEBI</span>
+        </div>
+
+        <h2 class="font-display font-bold text-xl sm:text-2xl text-slate-900">Institutional Option Strategies & SEBI Regulatory Mandates</h2>
+
+        <p class="text-sm text-slate-600 leading-relaxed">
+          Mutual funds, Specialized Investment Funds (SIFs), pension funds, and insurance companies deploy structured option strategies within rigorous regulatory constraints prescribed by SEBI and RBI:
+        </p>
+
+        <!-- Strategies Grid -->
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-4 text-xs">
+          
+          <!-- Covered Call -->
+          <div class="p-4 rounded-2xl bg-slate-50 border border-slate-200 space-y-2">
+            <div class="flex items-center justify-between">
+              <span class="font-bold text-slate-900 text-sm">Covered Call Writing</span>
+              <span class="px-2 py-0.5 rounded bg-emerald-100 text-emerald-800 font-bold text-[10px]">Income</span>
+            </div>
+            <p class="text-slate-600 leading-relaxed">
+              <strong>Structure:</strong> Long Physical G-Sec Portfolio + Sell Out-of-the-Money Call Options.
+            </p>
+            <p class="text-slate-600 leading-relaxed">
+              <strong>Objective:</strong> Deployed in a neutral or range-bound interest rate environment to harvest option premium and generate incremental yield on dormant holdings.
+            </p>
+            <div class="p-2 bg-amber-50 rounded-lg border border-amber-200 text-amber-900 text-[11px]">
+              <strong>Trade-off:</strong> Upside is capped at the strike price. If yields fall sharply and bond prices surge, the fund does not participate beyond the strike.
+            </div>
+          </div>
+
+          <!-- Protective Put -->
+          <div class="p-4 rounded-2xl bg-slate-50 border border-slate-200 space-y-2">
+            <div class="flex items-center justify-between">
+              <span class="font-bold text-slate-900 text-sm">Protective Put</span>
+              <span class="px-2 py-0.5 rounded bg-blue-100 text-blue-800 font-bold text-[10px]">Insurance</span>
+            </div>
+            <p class="text-slate-600 leading-relaxed">
+              <strong>Structure:</strong> Long Physical G-Sec Portfolio + Buy Out-of-the-Money / ATM Put Options.
+            </p>
+            <p class="text-slate-600 leading-relaxed">
+              <strong>Objective:</strong> Guards against catastrophic yield shocks (e.g. unexpected repo rate hikes, credit rating downgrades, sovereign debt supply spikes).
+            </p>
+            <div class="p-2 bg-blue-50 rounded-lg border border-blue-200 text-blue-900 text-[11px]">
+              <strong>Trade-off:</strong> Incurs non-refundable premium drag. Acts like an insurance premium policy.
+            </div>
+          </div>
+
+          <!-- Collar Strategy -->
+          <div class="p-4 rounded-2xl bg-slate-50 border border-slate-200 space-y-2">
+            <div class="flex items-center justify-between">
+              <span class="font-bold text-slate-900 text-sm">Zero-Cost Collar</span>
+              <span class="px-2 py-0.5 rounded bg-purple-100 text-purple-800 font-bold text-[10px]">Costless Band</span>
+            </div>
+            <p class="text-slate-600 leading-relaxed">
+              <strong>Structure:</strong> Long Portfolio + Buy OTM Put (Floor) + Sell OTM Call (Cap).
+            </p>
+            <p class="text-slate-600 leading-relaxed">
+              <strong>Objective:</strong> The premium earned from selling the Call exactly offsets the premium paid to purchase the Put, establishing a zero-cost protective corridor [X<sub>Put</sub>, X<sub>Call</sub>].
+            </p>
+            <div class="p-2 bg-purple-50 rounded-lg border border-purple-200 text-purple-900 text-[11px]">
+              <strong>Trade-off:</strong> Caps upside at the Call strike in exchange for a free downside floor at the Put strike.
+            </div>
+          </div>
+
+        </div>
+
+        <!-- SEBI Regulatory Framework Box -->
+        <div class="p-5 rounded-2xl bg-purple-50/60 border border-purple-200 text-xs space-y-3">
+          <div class="flex items-center gap-2 font-bold text-purple-950 text-sm">
+            <i data-lucide="shield-check" class="w-4 h-4 text-purple-700"></i>
+            <span>SEBI Regulations on Mutual Fund Participation in ETIRO</span>
+          </div>
+          
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 text-slate-700">
+            <div class="p-3 bg-white rounded-xl border border-purple-200 space-y-1">
+              <strong class="text-purple-900">Hedging Intent Restriction:</strong>
+              <p>Mutual funds are permitted to participate in exchange-traded derivatives primarily for hedging and portfolio duration rebalancing. Speculative naked option writing is strictly prohibited.</p>
+            </div>
+            <div class="p-3 bg-white rounded-xl border border-purple-200 space-y-1">
+              <strong class="text-purple-900">Covered Call Writing Permission:</strong>
+              <p>Mutual funds can write call options only if they hold the equivalent quantity of the underlying government security in the physical portfolio (fully covered).</p>
+            </div>
+            <div class="p-3 bg-white rounded-xl border border-purple-200 space-y-1">
+              <strong class="text-purple-900">100% Gross Exposure Cap:</strong>
+              <p>The cumulative gross exposure across physical debt securities, money market instruments, IRF, and option premiums/exposures cannot exceed 100% of the scheme's net assets (NAV).</p>
+            </div>
+            <div class="p-3 bg-white rounded-xl border border-purple-200 space-y-1">
+              <strong class="text-purple-900">Duration Category Compliance:</strong>
+              <p>Derivative positions must not breach the Macaulay Duration boundaries prescribed under SEBI mutual fund scheme categorization guidelines (e.g. Short Duration, Medium Duration).</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Section 21.7 Interactive Quiz -->
+      <section id="interactive-quiz" class="bg-slate-900 text-white rounded-3xl p-6 sm:p-8 border border-slate-800 shadow-xl space-y-6">
+        <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 border-b border-slate-800 pb-5">
+          <div>
+            <div class="flex items-center gap-2 text-xs font-bold text-purple-400 uppercase tracking-wider mb-1">
+              <i data-lucide="check-circle" class="w-4 h-4"></i> Interactive Exam Assessment
+            </div>
+            <h3 class="font-display font-bold text-xl sm:text-2xl text-white">Chapter 21 Practice Quiz</h3>
+            <p class="text-xs text-slate-400 mt-1">12 Exam-grade questions covering ETIRO specifications, Black-1976 pricing, Yield Delta, and asymmetric hedging.</p>
+          </div>
+          <div class="flex items-center gap-3">
+            <div class="text-right">
+              <span class="text-xs text-slate-400">Progress</span>
+              <div class="text-sm font-bold text-purple-400"><span id="answered-count">0</span> / 12</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Questions Container -->
+        <div id="quiz-container" class="space-y-6"></div>
+
+        <!-- Action Bar -->
+        <div class="pt-4 border-t border-slate-800 flex flex-col sm:flex-row items-center justify-between gap-4">
+          <button id="submit-quiz-btn" onclick="submitQuiz()" class="w-full sm:w-auto px-6 py-3 rounded-xl bg-purple-600 hover:bg-purple-500 font-bold text-sm shadow-lg shadow-purple-600/30 transition-all flex items-center justify-center gap-2">
+            <span>Submit Quiz & View Detailed Solutions</span>
+            <i data-lucide="arrow-right" class="w-4 h-4"></i>
+          </button>
+          <button id="reset-quiz-btn" onclick="resetQuiz()" class="hidden w-full sm:w-auto px-6 py-3 rounded-xl bg-slate-800 hover:bg-slate-700 text-slate-300 font-bold text-sm transition-all flex items-center justify-center gap-2">
+            <i data-lucide="rotate-ccw" class="w-4 h-4"></i>
+            <span>Retake Quiz</span>
+          </button>
+        </div>
+
+        <!-- Quiz Results -->
+        <div id="quiz-results" class="hidden p-6 rounded-2xl bg-slate-800/80 border border-slate-700 space-y-4">
+          <div class="flex items-center justify-between">
+            <h4 class="font-display font-bold text-lg text-white">Assessment Score Summary</h4>
+            <span id="result-status-badge" class="px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider"></span>
+          </div>
+          <div class="flex items-baseline gap-3">
+            <span id="score-display" class="font-display font-extrabold text-4xl text-purple-400"></span>
+            <span id="percentage-display" class="text-sm text-slate-400 font-medium"></span>
+          </div>
+          <p id="result-summary-text" class="text-xs sm:text-sm text-slate-300 leading-relaxed"></p>
+        </div>
+      </section>
+
+      <!-- Navigation Footer -->
+      <footer class="pt-6 border-t border-slate-200 flex items-center justify-between">
+        <a href="module3-ch20.html" class="flex items-center gap-2 px-4 py-2.5 rounded-xl border border-slate-200 bg-white hover:bg-slate-50 text-slate-700 font-medium text-xs transition-colors">
+          <i data-lucide="arrow-left" class="w-4 h-4"></i>
+          <span>Prev: Chapter 20 (IR Futures)</span>
+        </a>
+        <a href="module3-ch22.html" class="flex items-center gap-2 px-4 py-2.5 rounded-xl bg-purple-600 hover:bg-purple-700 text-white font-semibold text-xs shadow-sm transition-colors">
+          <span>Next: Chapter 22 (Strategies using ETIRD)</span>
+          <i data-lucide="arrow-right" class="w-4 h-4"></i>
+        </a>
+      </footer>
+
+    </div>
+  </div>
+
+  <script>
+    const questionsData = [
+      {
+        id: 1,
+        question: "What is the contract lot size and underlying nominal face value for Exchange-Traded Interest Rate Options (ETIRO) on 10-year Government of India securities in India?",
+        options: [
+          { key: "a", text: "1,000 bonds with total face value of ₹1,00,000" },
+          { key: "b", text: "2,000 bonds with total face value of ₹2,00,000" },
+          { key: "c", text: "5,000 bonds with total face value of ₹5,00,000" },
+          { key: "d", text: "10,000 bonds with total face value of ₹10,00,000" }
+        ],
+        correct: "b",
+        explanation: "Correct answer is B. Exactly matching the 10-Year GoI Interest Rate Futures (IRF) contract, the lot size for ETIRO is 2,000 bonds. Given a nominal face value of ₹100 per bond, the total contract face value is ₹2,00,000."
+      },
+      {
+        id: 2,
+        question: "What is the minimum tick size and corresponding tick value for an ETIRO contract on Indian stock exchanges?",
+        options: [
+          { key: "a", text: "Tick size ₹0.05, tick value ₹100.00" },
+          { key: "b", text: "Tick size ₹0.01, tick value ₹20.00" },
+          { key: "c", text: "Tick size ₹0.0025 (0.25 paise), tick value ₹5.00" },
+          { key: "d", text: "Tick size ₹0.0001, tick value ₹0.20" }
+        ],
+        correct: "c",
+        explanation: "Correct answer is C. The minimum tick size is ₹0.0025 (one-fourth of a paisa). The tick value is calculated as Lot Size &times; Tick Size = 2,000 &times; ₹0.0025 = ₹5.00 per contract."
+      },
+      {
+        id: 3,
+        question: "What is the exercise style for Exchange-Traded Interest Rate Options (ETIRO) traded on NSE and BSE?",
+        options: [
+          { key: "a", text: "American style (can be exercised on any business day prior to expiration)" },
+          { key: "b", text: "European style (can be exercised only on the expiration date)" },
+          { key: "c", text: "Bermudan style (exercised on specified calendar dates each month)" },
+          { key: "d", text: "Asian style (payoff based on arithmetic average bond price)" }
+        ],
+        correct: "b",
+        explanation: "Correct answer is B. ETIRO contracts follow European exercise convention. Option holders cannot exercise contracts early; exercise occurs strictly on the expiration date (last Thursday of the month), protecting writers from unexpected assignment."
+      },
+      {
+        id: 4,
+        question: "Why is the Fischer Black (1976) model used to price Interest Rate Options instead of the standard Black-Scholes-Merton (1973) model?",
+        options: [
+          { key: "a", text: "Because debt options are physically delivered rather than cash settled" },
+          { key: "b", text: "Because the underlying is a forward/futures price where financing cost and coupon carry are already incorporated" },
+          { key: "c", text: "Because Black-Scholes assumes negative interest rates, which is invalid in India" },
+          { key: "d", text: "Because bond price volatility is strictly zero at maturity" }
+        ],
+        correct: "b",
+        explanation: "Correct answer is B. Black-Scholes (1973) is designed for spot underlying assets requiring carry adjustments. In fixed-income options on futures or forward-starting bonds, the forward price F already embeds the net cost of carry (repo financing rate minus accrued coupon). Thus, the Fischer Black (1976) model is the mathematically rigorous industry standard."
+      },
+      {
+        id: 5,
+        question: "What is the sign of the Yield Delta (&Delta;y) for an Interest Rate Call Option, and why?",
+        options: [
+          { key: "a", text: "Positive, because Call options always have positive deltas regardless of the underlying" },
+          { key: "b", text: "Negative, because as market yields rise, bond prices fall, causing the Call option value to drop" },
+          { key: "c", text: "Zero, because Call option prices are completely immune to interest rate fluctuations" },
+          { key: "d", text: "Always +1.0 for At-the-Money options" }
+        ],
+        correct: "b",
+        explanation: "Correct answer is B. By the chain rule: &Delta;y = (&part;C / &part;P) &times; (&part;P / &part;y). While Price Delta (&part;C / &part;P) is positive, bond price sensitivity to yield (&part;P / &part;y) is strictly negative due to inverse price-yield dynamics. Therefore, Call Yield Delta is NEGATIVE. When interest rates rise, bond prices drop and Call option premiums decline."
+      },
+      {
+        id: 6,
+        question: "What is the sign of the Yield Delta (&Delta;y) for an Interest Rate Put Option?",
+        options: [
+          { key: "a", text: "Positive, because as market yields rise, bond prices fall, increasing the value of the Put option" },
+          { key: "b", text: "Negative, because Put deltas are always negative across all asset classes" },
+          { key: "c", text: "Zero, because Put options only react to equity index moves" },
+          { key: "d", text: "Always -1.0 for In-the-Money options" }
+        ],
+        correct: "a",
+        explanation: "Correct answer is A. For a Put option, Price Delta (&part;P / &part;P_bond) is negative. When yield increases, bond price falls (&part;P_bond / &part;y < 0). Multiplying the two negative terms produces a POSITIVE Yield Delta. As yields rise, bond prices plummet, driving Put option intrinsic values and premiums up."
+      },
+      {
+        id: 7,
+        question: "When is an Interest Rate Call Option on a 10-year G-Sec In-the-Money (ITM) from a yield perspective?",
+        options: [
+          { key: "a", text: "When the prevailing market yield is higher than the strike yield (Market Yield > Strike Yield)" },
+          { key: "b", text: "When the prevailing market yield is lower than the strike yield (Market Yield < Strike Yield)" },
+          { key: "c", text: "When the market yield equals the coupon rate of the benchmark security" },
+          { key: "d", text: "When the repo rate is higher than the reverse repo rate" }
+        ],
+        correct: "b",
+        explanation: "Correct answer is B. A Call option is ITM when the underlying bond clean price is higher than the strike price (Price > Strike). Because bond price is inversely related to yield, a higher bond price corresponds to a LOWER yield. Therefore, a Call option is ITM when Market Yield < Strike Yield."
+      },
+      {
+        id: 8,
+        question: "A bond portfolio manager holding ₹50 Crores in 10-year G-Secs wants to protect against rising interest rates while preserving the ability to profit if the RBI unexpectedly cuts rates. Which strategy achieves this?",
+        options: [
+          { key: "a", text: "Short Interest Rate Futures (IRF)" },
+          { key: "b", text: "Buy Interest Rate Put Options (Protective Put)" },
+          { key: "c", text: "Sell Interest Rate Call Options (Covered Call)" },
+          { key: "d", text: "Enter into an overnight reverse repo agreement" }
+        ],
+        correct: "b",
+        explanation: "Correct answer is B. Buying Put options provides non-linear asymmetric protection: if interest rates surge, the Put payoff offsets bond portfolio capital losses; if interest rates decline, the Put expires worthless, preserving 100% of the portfolio capital gains (net of premium paid). Short IRF would lock the portfolio symmetrically and eliminate all upside."
+      },
+      {
+        id: 9,
+        question: "How is the Final Settlement Price (FSP) determined on the contract expiration date for ETIRO?",
+        options: [
+          { key: "a", text: "The closing price of the Nifty 50 Index on expiry day" },
+          { key: "b", text: "Volume Weighted Average Price (VWAP) of the underlying bond traded on NDS-OM in the last 2 hours (3:00 PM - 5:00 PM), or FBIL theoretical price" },
+          { key: "c", text: "The morning opening auction price on CCIL" },
+          { key: "d", text: "The weighted average yield of the weekly 91-Day Treasury Bill auction" }
+        ],
+        correct: "b",
+        explanation: "Correct answer is B. In accordance with RBI and SEBI guidelines, the Final Settlement Price (FSP) on expiry Thursday is determined as the Volume Weighted Average Price (VWAP) of the underlying bond executed on the NDS-OM wholesale platform between 3:00 PM and 5:00 PM. If no trades occur, FBIL valuation is used."
+      },
+      {
+        id: 10,
+        question: "Under what market expectation would an institutional fixed-income fund manager execute a Covered Call strategy on bond holdings?",
+        options: [
+          { key: "a", text: "Expecting a sudden, massive collapse in yields and explosive bond rally" },
+          { key: "b", text: "Expecting range-bound, sideways bond yields, aiming to monetize holdings through premium collection" },
+          { key: "c", text: "Expecting an emergency 200 bps repo rate hike" },
+          { key: "d", text: "Expecting sovereign credit rating downgrade to default" }
+        ],
+        correct: "b",
+        explanation: "Correct answer is B. Covered Call writing (holding physical bonds + selling OTM call options) is ideal for range-bound, stable yield environments. The manager earns incremental premium income to boost portfolio yield, knowing upside is capped if yields unexpectedly fall."
+      },
+      {
+        id: 11,
+        question: "How is a Zero-Cost Collar constructed for a fixed-income bond portfolio?",
+        options: [
+          { key: "a", text: "Buy Out-of-the-Money Put and finance it entirely by Selling an Out-of-the-Money Call" },
+          { key: "b", text: "Buy At-the-Money Call and Sell At-the-Money Put" },
+          { key: "c", text: "Sell Out-of-the-Money Put and Buy Out-of-the-Money Call" },
+          { key: "d", text: "Simultaneously borrow and lend in the CBLO / TREPS market" }
+        ],
+        correct: "a",
+        explanation: "Correct answer is A. A zero-cost collar consists of holding the physical bond portfolio, purchasing an Out-of-the-Money Put (downside floor), and selling an Out-of-the-Money Call (upside cap) where the premium received from writing the Call exactly finances the premium paid for the Put, resulting in zero net cash outlay."
+      },
+      {
+        id: 12,
+        question: "According to SEBI regulations, what is the maximum permissible gross exposure limit for Mutual Fund schemes participating in derivatives (including IRF and ETIRO)?",
+        options: [
+          { key: "a", text: "50% of the scheme NAV" },
+          { key: "b", text: "100% of the scheme NAV (aggregate across physical debt, cash, and derivative exposures)" },
+          { key: "c", text: "200% of the scheme NAV (leveraged exposure permitted)" },
+          { key: "d", text: "10% of total scheme assets" }
+        ],
+        correct: "b",
+        explanation: "Correct answer is B. Under SEBI mutual fund guidelines, the cumulative gross exposure across physical debt securities, money market instruments, repo transactions, and derivative positions (including IRF and options) shall not exceed 100% of the net asset value (NAV) of the scheme."
+      }
+    ];
+
+    let userAnswers = {};
+
+    function renderQuiz() {
+      const container = document.getElementById("quiz-container");
+      container.innerHTML = "";
+      questionsData.forEach((q, idx) => {
+        const qDiv = document.createElement("div");
+        qDiv.className = "p-5 rounded-2xl bg-white/5 border border-white/10 space-y-3";
+        
+        let optionsHtml = "";
+        q.options.forEach(opt => {
+          optionsHtml += `
+            <label id="label-${q.id}-${opt.key}" onclick="selectOption(${q.id}, '${opt.key}')" class="flex items-center gap-3 p-3 rounded-xl bg-white/5 hover:bg-white/10 border border-white/5 cursor-pointer text-xs sm:text-sm transition-all">
+              <input type="radio" name="q-${q.id}" value="${opt.key}" class="hidden" />
+              <div id="dot-${q.id}-${opt.key}" class="w-6 h-6 rounded-full border border-slate-500 flex items-center justify-center font-bold text-xs shrink-0">${opt.key.toUpperCase()}</div>
+              <span class="text-slate-300 leading-snug">${opt.text}</span>
+            </label>
+          `;
+        });
+
+        qDiv.innerHTML = `
+          <div class="flex items-center justify-between">
+            <span class="text-xs font-bold text-purple-400">Question ${idx + 1} of ${questionsData.length}</span>
+            <span id="badge-${q.id}" class="text-xs px-2.5 py-0.5 rounded-full bg-slate-800 text-slate-400 font-medium">Unanswered</span>
+          </div>
+          <h4 class="font-display font-semibold text-sm sm:text-base text-white leading-snug">${q.question}</h4>
+          <div class="space-y-2 mt-3">${optionsHtml}</div>
+          <div id="explanation-${q.id}" class="hidden p-4 rounded-xl text-xs sm:text-sm mt-3 space-y-1.5 leading-relaxed"></div>
+        `;
+        container.appendChild(qDiv);
+      });
+      lucide.createIcons();
+    }
+
+    function selectOption(qId, key) {
+      userAnswers[qId] = key;
+      document.getElementById("answered-count").innerText = Object.keys(userAnswers).length;
+      
+      const badge = document.getElementById(`badge-${qId}`);
+      if (badge) {
+        badge.innerText = "Answered";
+        badge.className = "text-xs px-2.5 py-0.5 rounded-full bg-purple-500/20 text-purple-300 font-semibold";
+      }
+
+      const q = questionsData.find(item => item.id === qId);
+      q.options.forEach(opt => {
+        const lbl = document.getElementById(`label-${qId}-${opt.key}`);
+        const dot = document.getElementById(`dot-${qId}-${opt.key}`);
+        if (opt.key === key) {
+          lbl.className = "flex items-center gap-3 p-3 rounded-xl bg-purple-600/30 border border-purple-400/60 cursor-pointer text-xs sm:text-sm transition-all text-white font-medium";
+          dot.className = "w-6 h-6 rounded-full bg-purple-500 border border-purple-300 text-white flex items-center justify-center font-bold text-xs shrink-0 shadow-sm";
+        } else {
+          lbl.className = "flex items-center gap-3 p-3 rounded-xl bg-white/5 hover:bg-white/10 border border-white/5 cursor-pointer text-xs sm:text-sm transition-all";
+          dot.className = "w-6 h-6 rounded-full border border-slate-500 flex items-center justify-center font-bold text-xs shrink-0 text-slate-300";
+        }
+      });
+    }
+
+    function submitQuiz() {
+      let score = 0;
+      questionsData.forEach(q => {
+        const selected = userAnswers[q.id];
+        const isCorrect = selected === q.correct;
+        if (isCorrect) score++;
+
+        const explanationDiv = document.getElementById(`explanation-${q.id}`);
+        explanationDiv.classList.remove("hidden");
+
+        if (isCorrect) {
+          explanationDiv.className = "p-4 rounded-xl text-xs sm:text-sm mt-3 bg-emerald-950/70 border border-emerald-500 text-emerald-100";
+          explanationDiv.innerHTML = `
+            <div class="font-bold text-emerald-400 flex items-center gap-1.5 text-sm">
+              <i data-lucide="check" class="w-4 h-4"></i> Correct!
+            </div>
+            <p class="mt-1">${q.explanation}</p>
+          `;
+        } else {
+          explanationDiv.className = "p-4 rounded-xl text-xs sm:text-sm mt-3 bg-rose-950/70 border border-rose-500 text-rose-100";
+          explanationDiv.innerHTML = `
+            <div class="font-bold text-rose-400 flex items-center gap-1.5 text-sm">
+              <i data-lucide="x" class="w-4 h-4"></i> Incorrect (Correct Answer: Option ${q.correct.toUpperCase()})
+            </div>
+            <p class="mt-1">${q.explanation}</p>
+          `;
+        }
+      });
+
+      const percentage = Math.round((score / questionsData.length) * 100);
+      const passed = percentage >= 60;
+      
+      const resultsDiv = document.getElementById("quiz-results");
+      resultsDiv.classList.remove("hidden");
+
+      const statusBadge = document.getElementById("result-status-badge");
+      statusBadge.innerText = passed ? "Status: Passed (60%+ Benchmark)" : "Status: Needs Revision (<60%)";
+      statusBadge.className = passed ? "px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider bg-emerald-500 text-emerald-950" : "px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider bg-amber-500 text-amber-950";
+
+      document.getElementById("score-display").innerText = `${score} / ${questionsData.length}`;
+      document.getElementById("percentage-display").innerText = `${percentage}% Score (Passing Criteria: 60%)`;
+
+      document.getElementById("result-summary-text").innerText = passed
+        ? `Outstanding performance! You scored ${percentage}%, demonstrating thorough mastery of ETIRO contract specifications (2,000 lot size, ₹0.0025 tick), Fischer Black (1976) pricing, Yield Delta nuances (Call < 0, Put > 0), and institutional hedging strategies.`
+        : `You scored ${percentage}%. Please review Section 21.3 on Yield Delta signs (Call delta with respect to yield is negative!), Section 21.1 contract specifications, and the asymmetric hedging payoff differences between IRO Put and Short IRF.`;
+
+      document.getElementById("submit-quiz-btn").classList.add("hidden");
+      document.getElementById("reset-quiz-btn").classList.remove("hidden");
+
+      resultsDiv.scrollIntoView({ behavior: 'smooth' });
+      lucide.createIcons();
+    }
+
+    function resetQuiz() {
+      userAnswers = {};
+      document.getElementById("answered-count").innerText = "0";
+      document.getElementById("quiz-results").classList.add("hidden");
+      document.getElementById("submit-quiz-btn").classList.remove("hidden");
+      document.getElementById("reset-quiz-btn").classList.add("hidden");
+      renderQuiz();
+      document.getElementById("interactive-quiz").scrollIntoView({ behavior: 'smooth' });
+    }
+
+    renderQuiz();
+    lucide.createIcons();
+  </script>
+</body>
+</html>

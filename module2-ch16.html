@@ -1,0 +1,1108 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Chapter 16: Introduction to Options | NISM Series V-D Notes</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+  <script src="https://unpkg.com/lucide@latest"></script>
+
+  <!-- KaTeX for formula rendering -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.min.css">
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.min.js"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/contrib/auto-render.min.js" onload="renderMathInElement(document.body);"></script>
+
+  <!-- Global Module & Chapter Navigation Sidebar -->
+    <!-- Modern Documentation Design System & Zoom Engine -->
+  <link rel="stylesheet" href="modern-docs.css">
+  <script defer src="nav-sidebar.js"></script>
+
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+            display: ['"Space Grotesk"', 'sans-serif']
+          }
+        }
+      }
+    }
+  </script>
+</head>
+<body class="bg-slate-50 text-slate-900 min-h-screen flex flex-col selection:bg-blue-500 selection:text-white">
+
+  <!-- Header -->
+  <header class="sticky top-0 z-50 bg-white/90 backdrop-blur-md border-b border-slate-200">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
+      <div class="flex items-center gap-3">
+        <a href="module2.html" class="flex items-center gap-2 text-slate-500 hover:text-slate-900 transition-colors">
+          <div class="w-9 h-9 rounded-xl bg-slate-100 hover:bg-slate-200 flex items-center justify-center text-slate-700 transition-colors">
+            <i data-lucide="arrow-left" class="w-4 h-4"></i>
+          </div>
+        </a>
+        <div>
+          <div class="flex items-center gap-2">
+            <span class="text-xs font-bold uppercase tracking-wider text-emerald-600 bg-emerald-50 px-2 py-0.5 rounded">Module 2</span>
+            <span class="text-xs text-slate-400 font-medium">Chapter 16 of 22</span>
+          </div>
+          <h1 class="font-display font-bold text-base sm:text-lg text-slate-900 leading-tight">Introduction to Options</h1>
+        </div>
+      </div>
+
+      <div class="flex items-center gap-3">
+        <span class="hidden sm:inline-flex items-center gap-1 px-3 py-1 rounded-full text-xs font-bold bg-amber-50 text-amber-700 border border-amber-200">
+          <i data-lucide="award" class="w-3.5 h-3.5"></i>
+          Weightage: 13 Marks ⭐
+        </span>
+        <a href="#interactive-quiz" class="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-lg text-xs font-bold bg-emerald-600 hover:bg-emerald-700 text-white shadow-sm transition-all">
+          <i data-lucide="help-circle" class="w-3.5 h-3.5"></i>
+          <span>Chapter Quiz</span>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Content Grid -->
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 grid grid-cols-1 lg:grid-cols-12 gap-8 flex-grow">
+    
+    <!-- Sidebar Navigation -->
+    <aside class="hidden lg:block lg:col-span-3">
+      <div class="sticky top-24 space-y-4">
+        <!-- Chapter Switcher (3 Module Dropdowns) -->
+        <div id="sidebar-chapter-switcher"></div>
+
+        <div class="bg-white p-5 rounded-2xl border border-slate-200 shadow-sm">
+          <h2 class="text-xs font-bold text-slate-400 uppercase tracking-wider mb-3">Chapter Navigation</h2>
+          <nav class="space-y-1 text-xs">
+            <a href="#section-1" class="block px-2.5 py-1.5 rounded-lg text-slate-600 hover:bg-slate-100 hover:text-emerald-600">16.1 Fundamentals & 4 Payoff Profiles</a>
+            <a href="#section-2" class="block px-2.5 py-1.5 rounded-lg text-amber-700 font-semibold bg-amber-50/70 hover:bg-amber-100">16.2 Moneyness Matrix (ITM, ATM, OTM) ⭐</a>
+            <a href="#section-3" class="block px-2.5 py-1.5 rounded-lg text-amber-700 font-semibold bg-amber-50/70 hover:bg-amber-100">16.3 Intrinsic Value vs. Time Value ⭐</a>
+            <a href="#section-4" class="block px-2.5 py-1.5 rounded-lg text-slate-600 hover:bg-slate-100 hover:text-emerald-600">16.4 Determinants, BSM & Volatility (IV)</a>
+            <a href="#section-5" class="block px-2.5 py-1.5 rounded-lg text-amber-700 font-semibold bg-amber-50/70 hover:bg-amber-100">16.5 The 5 Option Greeks Deep Dive ⭐</a>
+            <a href="#section-6" class="block px-2.5 py-1.5 rounded-lg text-amber-700 font-semibold bg-amber-50/70 hover:bg-amber-100">16.6 Put-Call Parity & Synthetics ⭐</a>
+            <a href="#interactive-quiz" class="block px-2.5 py-1.5 rounded-lg text-emerald-700 font-bold bg-emerald-50 hover:bg-emerald-100 mt-2">Practice Quiz (12 MCQs)</a>
+          </nav>
+        </div>
+
+        <!-- Greeks Cheat Sheet Card -->
+        <div class="p-4 rounded-2xl bg-gradient-to-br from-emerald-700 to-teal-800 text-white shadow-sm text-xs space-y-2">
+          <div class="flex items-center gap-1.5 font-bold">
+            <i data-lucide="zap" class="w-4 h-4 text-amber-300"></i>
+            <span>Option Greeks Cheat Sheet</span>
+          </div>
+          <div class="space-y-1.5 text-indigo-100 leading-relaxed text-[11px]">
+            <p>• <strong>Delta (&Delta;):</strong> Call: 0 to +1 | Put: -1 to 0. ATM &approx; &plusmn;0.50.</p>
+            <p>• <strong>Gamma (&Gamma;):</strong> &part;&Delta;/&part;S. Max for ATM near expiry.</p>
+            <p>• <strong>Theta (&Theta;):</strong> Time decay. Always negative for buyers.</p>
+            <p>• <strong>Vega (&nu;):</strong> Price shift for 1% IV move. Max for long ATM.</p>
+            <p>• <strong>Rho (&rho;):</strong> Sensitivity to interest rate (r).</p>
+            <div class="pt-1 border-t border-indigo-500/50 font-mono text-amber-200">
+              C + X&middot;e<sup>-rT</sup> = P + S
+            </div>
+          </div>
+        </div>
+
+        <!-- Indian Regulatory Card -->
+        <div class="p-4 rounded-2xl bg-slate-100 border border-slate-200 text-xs space-y-1.5">
+          <div class="flex items-center gap-1.5 font-bold text-slate-800">
+            <i data-lucide="shield-check" class="w-4 h-4 text-emerald-600"></i>
+            <span>Indian Market Conventions</span>
+          </div>
+          <p class="text-slate-600 text-[11px] leading-relaxed">
+            • All NSE/BSE options are <strong>European Style</strong> (CE / PE).<br>
+            • Index Options: <strong>Cash Settled</strong>.<br>
+            • Single Stock Options: <strong>Compulsory Physical Delivery</strong> for ITM contracts at expiry.
+          </p>
+        </div>
+      </div>
+    </aside>
+
+    <!-- Main Notes -->
+    <div class="lg:col-span-9 space-y-8">
+
+      <!-- Section 16.1 -->
+      <section id="section-1" class="bg-white rounded-3xl p-6 sm:p-8 border border-slate-200/90 shadow-sm space-y-6">
+        <div class="flex items-center justify-between">
+          <div class="flex items-center gap-2 text-xs font-bold text-slate-500 uppercase tracking-wider">
+            <span class="w-2 h-2 rounded-full bg-slate-400"></span> Section 16.1 &bull; Fast-Track Refresher
+          </div>
+          <span class="text-xs px-2.5 py-1 rounded-full bg-slate-100 text-slate-700 font-semibold">Options Basics</span>
+        </div>
+        <div>
+          <h2 class="font-display font-bold text-xl sm:text-2xl text-slate-900">Option Contracts Fundamentals & Payoffs</h2>
+          <p class="text-sm text-slate-600 mt-1">Understanding asymmetry: Rights vs. Obligations, European exercise style, and the four fundamental payoff profiles.</p>
+        </div>
+
+        <!-- Asymmetry Explanation -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 text-xs">
+          <div class="p-4 rounded-2xl bg-blue-50/70 border border-blue-200 space-y-2">
+            <div class="flex items-center gap-2 font-bold text-blue-950 text-sm">
+              <i data-lucide="arrow-up-right" class="w-4 h-4 text-blue-600"></i>
+              <span>Call Option (Right to Buy)</span>
+            </div>
+            <p class="text-slate-700 leading-relaxed">
+              Grants the buyer the <strong>right, but not the obligation</strong>, to purchase the underlying asset at the predetermined <strong>Strike Price (X)</strong> on or before expiry.
+            </p>
+            <div class="p-2.5 bg-white/80 rounded-xl border border-blue-200 text-[11px] text-slate-600">
+              <strong>Buyer's Bias:</strong> Bullish. Max Loss = Premium Paid. Max Profit = Unlimited.
+            </div>
+          </div>
+
+          <div class="p-4 rounded-2xl bg-purple-50/70 border border-purple-200 space-y-2">
+            <div class="flex items-center gap-2 font-bold text-purple-950 text-sm">
+              <i data-lucide="arrow-down-right" class="w-4 h-4 text-purple-600"></i>
+              <span>Put Option (Right to Sell)</span>
+            </div>
+            <p class="text-slate-700 leading-relaxed">
+              Grants the buyer the <strong>right, but not the obligation</strong>, to sell the underlying asset at the predetermined <strong>Strike Price (X)</strong> on or before expiry.
+            </p>
+            <div class="p-2.5 bg-white/80 rounded-xl border border-purple-200 text-[11px] text-slate-600">
+              <strong>Buyer's Bias:</strong> Bearish. Max Loss = Premium Paid. Max Profit = Strike Price - Premium.
+            </div>
+          </div>
+        </div>
+
+        <!-- Indian Settlement & Regulatory Framework Callout -->
+        <div class="p-4 rounded-2xl bg-emerald-50/60 border border-emerald-200 text-xs space-y-2">
+          <div class="flex items-center gap-2 font-bold text-emerald-950 text-sm">
+            <i data-lucide="landmark" class="w-4 h-4 text-emerald-600"></i>
+            <span>Indian Exchange Regulatory Specifications (SEBI / NSE / BSE)</span>
+          </div>
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-3 text-slate-700 pt-1">
+            <div class="bg-white p-3 rounded-xl border border-emerald-200">
+              <span class="font-bold text-emerald-900 block mb-1">European Exercise Only</span>
+              All exchange-traded equity & index options in India are <strong>European Style</strong> (designated as <code>CE</code> for Call European and <code>PE</code> for Put European). Exercisable only on expiration date.
+            </div>
+            <div class="bg-white p-3 rounded-xl border border-emerald-200">
+              <span class="font-bold text-emerald-900 block mb-1">Index Options Settlement</span>
+              Nifty 50, Nifty Bank, and other index options settle strictly in <strong>Cash</strong> against the closing index price on expiry day.
+            </div>
+            <div class="bg-white p-3 rounded-xl border border-emerald-200">
+              <span class="font-bold text-emerald-900 block mb-1">Stock Options Settlement</span>
+              All in-the-money (ITM) single-stock option contracts open at expiry are subject to <strong>Compulsory Physical Delivery</strong> of actual underlying equity shares.
+            </div>
+          </div>
+        </div>
+
+        <!-- The 4 Payoff Profiles Table -->
+        <div class="space-y-3">
+          <h3 class="font-display font-bold text-sm text-slate-900">The 4 Foundational Payoff Profiles</h3>
+          <div class="overflow-x-auto rounded-2xl border border-slate-200">
+            <table class="min-w-full text-xs text-left">
+              <thead class="bg-slate-100 text-slate-700 font-bold uppercase tracking-wider">
+                <tr>
+                  <th class="p-3">Position</th>
+                  <th class="p-3">Market View</th>
+                  <th class="p-3">Max Profit</th>
+                  <th class="p-3">Max Loss</th>
+                  <th class="p-3">Breakeven Point</th>
+                  <th class="p-3">Payoff Formula</th>
+                </tr>
+              </thead>
+              <tbody class="divide-y divide-slate-200">
+                <tr class="hover:bg-slate-50">
+                  <td class="p-3 font-bold text-blue-900">Long Call (Buyer)</td>
+                  <td class="p-3 font-medium text-emerald-700">Bullish (&uarr;)</td>
+                  <td class="p-3 text-emerald-700 font-bold">Unlimited</td>
+                  <td class="p-3 text-rose-700">Premium Paid</td>
+                  <td class="p-3 font-mono font-semibold">Strike + Premium (X + C)</td>
+                  <td class="p-3 font-mono text-slate-600">max(0, S<sub>T</sub> - X) - C</td>
+                </tr>
+                <tr class="hover:bg-slate-50">
+                  <td class="p-3 font-bold text-slate-800">Short Call (Writer)</td>
+                  <td class="p-3 font-medium text-rose-700">Bearish / Neutral (&darr;)</td>
+                  <td class="p-3 text-emerald-700 font-semibold">Premium Received</td>
+                  <td class="p-3 text-rose-700 font-bold">Unlimited</td>
+                  <td class="p-3 font-mono font-semibold">Strike + Premium (X + C)</td>
+                  <td class="p-3 font-mono text-slate-600">C - max(0, S<sub>T</sub> - X)</td>
+                </tr>
+                <tr class="hover:bg-slate-50">
+                  <td class="p-3 font-bold text-purple-900">Long Put (Buyer)</td>
+                  <td class="p-3 font-medium text-rose-700">Bearish (&darr;)</td>
+                  <td class="p-3 text-emerald-700 font-bold">Strike - Premium (X - P)</td>
+                  <td class="p-3 text-rose-700">Premium Paid</td>
+                  <td class="p-3 font-mono font-semibold">Strike - Premium (X - P)</td>
+                  <td class="p-3 font-mono text-slate-600">max(0, X - S<sub>T</sub>) - P</td>
+                </tr>
+                <tr class="hover:bg-slate-50">
+                  <td class="p-3 font-bold text-slate-800">Short Put (Writer)</td>
+                  <td class="p-3 font-medium text-emerald-700">Bullish / Neutral (&uarr;)</td>
+                  <td class="p-3 text-emerald-700 font-semibold">Premium Received</td>
+                  <td class="p-3 text-rose-700 font-bold">Strike - Premium (X - P)</td>
+                  <td class="p-3 font-mono font-semibold">Strike - Premium (X - P)</td>
+                  <td class="p-3 font-mono text-slate-600">P - max(0, X - S<sub>T</sub>)</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </section>
+
+      <!-- Section 16.2 -->
+      <section id="section-2" class="bg-white rounded-3xl p-6 sm:p-8 border border-amber-200 shadow-sm space-y-6">
+        <div class="flex items-center justify-between">
+          <div class="flex items-center gap-2 text-xs font-bold text-amber-700 uppercase tracking-wider">
+            <span class="w-2 h-2 rounded-full bg-amber-500"></span> Section 16.2 &bull; Super High Exam Yield ⭐
+          </div>
+          <span class="text-xs px-2.5 py-1 rounded-full bg-amber-100 text-amber-800 font-bold">Core Classification</span>
+        </div>
+        <div>
+          <h2 class="font-display font-bold text-xl sm:text-2xl text-slate-900">The Moneyness Matrix: ITM, ATM, and OTM</h2>
+          <p class="text-sm text-slate-600 mt-1">Moneyness reflects the economic payoff if the option were exercised immediately at prevailing spot market prices.</p>
+        </div>
+
+        <!-- Master Moneyness Table -->
+        <div class="overflow-x-auto rounded-2xl border border-slate-200">
+          <table class="min-w-full text-xs text-left">
+            <thead class="bg-slate-100 text-slate-700 font-bold uppercase tracking-wider">
+              <tr>
+                <th class="p-3">Moneyness State</th>
+                <th class="p-3 bg-blue-50 text-blue-900">Call Option (Right to Buy)</th>
+                <th class="p-3 bg-purple-50 text-purple-900">Put Option (Right to Sell)</th>
+                <th class="p-3">Intrinsic Value</th>
+                <th class="p-3">Delta (&Delta;) Profile</th>
+              </tr>
+            </thead>
+            <tbody class="divide-y divide-slate-200">
+              <tr class="hover:bg-slate-50">
+                <td class="p-3 font-bold text-emerald-800">
+                  <div class="flex items-center gap-1.5">
+                    <span class="w-2 h-2 rounded-full bg-emerald-500"></span>
+                    <span>In-the-Money (ITM)</span>
+                  </div>
+                </td>
+                <td class="p-3 font-semibold text-blue-900 bg-blue-50/20">Spot &gt; Strike (S &gt; X)</td>
+                <td class="p-3 font-semibold text-purple-900 bg-purple-50/20">Spot &lt; Strike (S &lt; X)</td>
+                <td class="p-3 font-bold text-emerald-700">Positive (&gt; 0)</td>
+                <td class="p-3 text-slate-700 font-mono">Call: +0.50 to +1.0<br>Put: -0.50 to -1.0</td>
+              </tr>
+              <tr class="hover:bg-slate-50">
+                <td class="p-3 font-bold text-amber-800">
+                  <div class="flex items-center gap-1.5">
+                    <span class="w-2 h-2 rounded-full bg-amber-500"></span>
+                    <span>At-the-Money (ATM)</span>
+                  </div>
+                </td>
+                <td class="p-3 font-semibold text-blue-900 bg-blue-50/20">Spot = Strike (S = X)</td>
+                <td class="p-3 font-semibold text-purple-900 bg-purple-50/20">Spot = Strike (S = X)</td>
+                <td class="p-3 font-bold text-slate-600">Zero (0)</td>
+                <td class="p-3 text-slate-700 font-mono">Call: &approx; +0.50<br>Put: &approx; -0.50</td>
+              </tr>
+              <tr class="hover:bg-slate-50">
+                <td class="p-3 font-bold text-rose-800">
+                  <div class="flex items-center gap-1.5">
+                    <span class="w-2 h-2 rounded-full bg-rose-500"></span>
+                    <span>Out-of-the-Money (OTM)</span>
+                  </div>
+                </td>
+                <td class="p-3 font-semibold text-blue-900 bg-blue-50/20">Spot &lt; Strike (S &lt; X)</td>
+                <td class="p-3 font-semibold text-purple-900 bg-purple-50/20">Spot &gt; Strike (S &gt; X)</td>
+                <td class="p-3 font-bold text-slate-600">Zero (0)</td>
+                <td class="p-3 text-slate-700 font-mono">Call: 0.0 to +0.50<br>Put: 0.0 to -0.50</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <!-- Strike Chain Illustration -->
+        <div class="p-5 rounded-2xl bg-slate-50 border border-slate-200 text-xs space-y-3">
+          <div class="flex items-center justify-between">
+            <span class="font-bold text-slate-900 text-sm">Real-World Strike Chain Example: NIFTY 50 Spot = ₹24,000</span>
+            <span class="text-[11px] bg-slate-200 text-slate-700 px-2 py-0.5 rounded font-mono">Reference Expiry</span>
+          </div>
+          <div class="grid grid-cols-1 md:grid-cols-5 gap-2.5 text-center">
+            <div class="p-3 rounded-xl bg-blue-50 border border-blue-200">
+              <span class="text-[11px] font-bold text-blue-900 block">23,500 Strike</span>
+              <span class="text-xs text-emerald-700 font-bold block mt-1">Deep ITM Call</span>
+              <span class="text-[11px] text-rose-700 font-semibold block">Deep OTM Put</span>
+            </div>
+            <div class="p-3 rounded-xl bg-blue-50/70 border border-blue-100">
+              <span class="text-[11px] font-bold text-blue-900 block">23,800 Strike</span>
+              <span class="text-xs text-emerald-600 font-bold block mt-1">ITM Call</span>
+              <span class="text-[11px] text-rose-600 font-semibold block">OTM Put</span>
+            </div>
+            <div class="p-3 rounded-xl bg-amber-50 border-2 border-amber-400 shadow-sm">
+              <span class="text-[11px] font-extrabold text-amber-900 block">24,000 Strike</span>
+              <span class="text-xs text-amber-700 font-extrabold block mt-1">ATM Call</span>
+              <span class="text-xs text-amber-700 font-extrabold block">ATM Put</span>
+            </div>
+            <div class="p-3 rounded-xl bg-purple-50/70 border border-purple-100">
+              <span class="text-[11px] font-bold text-purple-900 block">24,200 Strike</span>
+              <span class="text-[11px] text-rose-600 font-semibold block mt-1">OTM Call</span>
+              <span class="text-xs text-emerald-600 font-bold block">ITM Put</span>
+            </div>
+            <div class="p-3 rounded-xl bg-purple-50 border border-purple-200">
+              <span class="text-[11px] font-bold text-purple-900 block">24,500 Strike</span>
+              <span class="text-[11px] text-rose-700 font-semibold block mt-1">Deep OTM Call</span>
+              <span class="text-xs text-emerald-700 font-bold block">Deep ITM Put</span>
+            </div>
+          </div>
+          <p class="text-slate-600 text-[11px] italic">
+            *Notice the inverted symmetry: A strike that is ITM for a Call is automatically OTM for a Put, and vice versa.
+          </p>
+        </div>
+      </section>
+
+      <!-- Section 16.3 -->
+      <section id="section-3" class="bg-white rounded-3xl p-6 sm:p-8 border border-amber-200 shadow-sm space-y-6">
+        <div class="flex items-center justify-between">
+          <div class="flex items-center gap-2 text-xs font-bold text-amber-700 uppercase tracking-wider">
+            <span class="w-2 h-2 rounded-full bg-amber-500"></span> Section 16.3 &bull; Super High Exam Yield ⭐
+          </div>
+          <span class="text-xs px-2.5 py-1 rounded-full bg-amber-100 text-amber-800 font-bold">Mathematical Formulation</span>
+        </div>
+        <div>
+          <h2 class="font-display font-bold text-xl sm:text-2xl text-slate-900">Intrinsic Value vs. Time Value (Extrinsic Value)</h2>
+          <p class="text-sm text-slate-600 mt-1">Decomposing the market price of an option into its intrinsic worth and time decay component.</p>
+        </div>
+
+        <!-- Master Formula Box -->
+        <div class="p-5 rounded-2xl bg-blue-50/70 border border-blue-200 space-y-3 text-xs">
+          <span class="font-bold text-blue-950 text-sm">Fundamental Pricing Identity</span>
+          <div class="bg-white p-3.5 rounded-xl border border-blue-200 font-mono text-blue-900 font-bold text-center text-sm shadow-sm">
+            Total Option Premium = Intrinsic Value + Time Value (Extrinsic Value)
+          </div>
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-4 text-slate-700 pt-2">
+            <div class="bg-white/80 p-3 rounded-xl border border-blue-100 space-y-1">
+              <span class="font-bold text-blue-900 block">Call Intrinsic Value Formula:</span>
+              <div class="font-mono font-bold text-slate-900">IV<sub>Call</sub> = max(0, Spot - Strike) = max(0, S - X)</div>
+              <p class="text-[11px] text-slate-500">If S &le; X, Intrinsic Value is strictly <strong>₹0.00</strong>. It can NEVER be negative!</p>
+            </div>
+            <div class="bg-white/80 p-3 rounded-xl border border-blue-100 space-y-1">
+              <span class="font-bold text-purple-900 block">Put Intrinsic Value Formula:</span>
+              <div class="font-mono font-bold text-slate-900">IV<sub>Put</sub> = max(0, Strike - Spot) = max(0, X - S)</div>
+              <p class="text-[11px] text-slate-500">If S &ge; X, Intrinsic Value is strictly <strong>₹0.00</strong>. It can NEVER be negative!</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Worked Numerical Problems -->
+        <div class="space-y-4 text-xs">
+          <h3 class="font-display font-bold text-sm text-slate-900">Worked Numerical Problems (Exam Question Formats)</h3>
+          
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <!-- Example 1: Call Option -->
+            <div class="p-4 rounded-2xl bg-slate-50 border border-slate-200 space-y-2.5">
+              <span class="font-bold text-blue-900 text-xs uppercase tracking-wider block">Example 1: Call Option Valuation</span>
+              <p class="text-slate-700">
+                Reliance Industries spot is trading at <strong>₹2,950</strong>. The 2,900 Call option is quoted at a premium of <strong>₹85</strong>.
+              </p>
+              <div class="bg-white p-3 rounded-xl border border-slate-200 font-mono text-slate-800 space-y-1 text-[11px]">
+                <div>&bull; Intrinsic Value = max(0, S - X)</div>
+                <div class="pl-3">= max(0, 2,950 - 2,900) = <strong>₹50.00</strong></div>
+                <div>&bull; Time Value = Premium - Intrinsic Value</div>
+                <div class="pl-3">= 85 - 50 = <strong>₹35.00</strong></div>
+              </div>
+              <p class="text-[11px] text-emerald-700 font-medium">&check; Option is ITM with ₹50 tangible value and ₹35 extrinsic value.</p>
+            </div>
+
+            <!-- Example 2: Put Option -->
+            <div class="p-4 rounded-2xl bg-slate-50 border border-slate-200 space-y-2.5">
+              <span class="font-bold text-purple-900 text-xs uppercase tracking-wider block">Example 2: Put Option Valuation</span>
+              <p class="text-slate-700">
+                TCS spot is trading at <strong>₹3,800</strong>. The 3,900 Put option is quoted at a premium of <strong>₹140</strong>.
+              </p>
+              <div class="bg-white p-3 rounded-xl border border-slate-200 font-mono text-slate-800 space-y-1 text-[11px]">
+                <div>&bull; Intrinsic Value = max(0, X - S)</div>
+                <div class="pl-3">= max(0, 3,900 - 3,800) = <strong>₹100.00</strong></div>
+                <div>&bull; Time Value = Premium - Intrinsic Value</div>
+                <div class="pl-3">= 140 - 100 = <strong>₹40.00</strong></div>
+              </div>
+              <p class="text-[11px] text-emerald-700 font-medium">&check; Option is ITM with ₹100 tangible value and ₹40 extrinsic value.</p>
+            </div>
+          </div>
+
+          <!-- OTM Non-negativity Example -->
+          <div class="p-4 rounded-2xl bg-amber-50/60 border border-amber-200 space-y-2">
+            <div class="flex items-center gap-1.5 font-bold text-amber-900">
+              <i data-lucide="alert-triangle" class="w-4 h-4 text-amber-600"></i>
+              <span>Exam Trap Alert: Out-of-the-Money Options</span>
+            </div>
+            <p class="text-slate-700">
+              If Infosys spot is at <strong>₹1,750</strong>, a 1,800 Call trading at <strong>₹18</strong> has an Intrinsic Value of <strong>₹0.00</strong> (not -₹50). Its Time Value is the entire premium of <strong>₹18.00</strong>. <em>The premium of any OTM or ATM option consists 100% of Time Value!</em>
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Section 16.4 -->
+      <section id="section-4" class="bg-white rounded-3xl p-6 sm:p-8 border border-slate-200 shadow-sm space-y-6">
+        <div class="flex items-center justify-between">
+          <div class="flex items-center gap-2 text-xs font-bold text-slate-500 uppercase tracking-wider">
+            <span class="w-2 h-2 rounded-full bg-slate-400"></span> Section 16.4 &bull; Pricing Theory
+          </div>
+          <span class="text-xs px-2.5 py-1 rounded-full bg-slate-100 text-slate-700 font-semibold">BSM & Volatility</span>
+        </div>
+        <div>
+          <h2 class="font-display font-bold text-xl sm:text-2xl text-slate-900">Determinants of Option Prices, BSM Model & Volatility</h2>
+          <p class="text-sm text-slate-600 mt-1">The Black-Scholes-Merton (BSM) analytical model, directional sensitivity, and volatility dynamics.</p>
+        </div>
+
+        <!-- 6 Factors Table -->
+        <div class="space-y-3">
+          <h3 class="font-display font-bold text-sm text-slate-900">Directional Impact of Key Input Variables</h3>
+          <div class="overflow-x-auto rounded-2xl border border-slate-200 text-xs">
+            <table class="min-w-full text-left">
+              <thead class="bg-slate-100 text-slate-700 font-bold uppercase tracking-wider">
+                <tr>
+                  <th class="p-3">Input Variable</th>
+                  <th class="p-3">Change in Variable</th>
+                  <th class="p-3 text-blue-900 bg-blue-50">Impact on Call Price</th>
+                  <th class="p-3 text-purple-900 bg-purple-50">Impact on Put Price</th>
+                  <th class="p-3">Financial Rationale</th>
+                </tr>
+              </thead>
+              <tbody class="divide-y divide-slate-200">
+                <tr class="hover:bg-slate-50">
+                  <td class="p-3 font-bold text-slate-900">Underlying Spot Price (S)</td>
+                  <td class="p-3 font-semibold text-emerald-700">Increases (&uarr;)</td>
+                  <td class="p-3 font-bold text-emerald-700 bg-blue-50/20">Increases (&uarr;)</td>
+                  <td class="p-3 font-bold text-rose-700 bg-purple-50/20">Decreases (&darr;)</td>
+                  <td class="p-3 text-slate-600">Calls gain intrinsic value; Puts lose intrinsic value.</td>
+                </tr>
+                <tr class="hover:bg-slate-50">
+                  <td class="p-3 font-bold text-slate-900">Strike Price (X)</td>
+                  <td class="p-3 font-semibold text-emerald-700">Increases (&uarr;)</td>
+                  <td class="p-3 font-bold text-rose-700 bg-blue-50/20">Decreases (&darr;)</td>
+                  <td class="p-3 font-bold text-emerald-700 bg-purple-50/20">Increases (&uarr;)</td>
+                  <td class="p-3 text-slate-600">Higher strike reduces call payoff, enhances put payoff.</td>
+                </tr>
+                <tr class="hover:bg-slate-50">
+                  <td class="p-3 font-bold text-slate-900">Time to Expiration (T)</td>
+                  <td class="p-3 font-semibold text-emerald-700">Increases (&uarr;)</td>
+                  <td class="p-3 font-bold text-emerald-700 bg-blue-50/20">Increases (&uarr;)</td>
+                  <td class="p-3 font-bold text-emerald-700 bg-purple-50/20">Increases (&uarr;)</td>
+                  <td class="p-3 text-slate-600">More time provides greater opportunity for favorable spot movements.</td>
+                </tr>
+                <tr class="hover:bg-slate-50">
+                  <td class="p-3 font-bold text-slate-900">Implied Volatility (&sigma;)</td>
+                  <td class="p-3 font-semibold text-emerald-700">Increases (&uarr;)</td>
+                  <td class="p-3 font-bold text-emerald-700 bg-blue-50/20">Increases (&uarr;)</td>
+                  <td class="p-3 font-bold text-emerald-700 bg-purple-50/20">Increases (&uarr;)</td>
+                  <td class="p-3 text-slate-600">Higher volatility widens expected price distribution. Benefits both!</td>
+                </tr>
+                <tr class="hover:bg-slate-50">
+                  <td class="p-3 font-bold text-slate-900">Risk-Free Rate (r)</td>
+                  <td class="p-3 font-semibold text-emerald-700">Increases (&uarr;)</td>
+                  <td class="p-3 font-bold text-emerald-700 bg-blue-50/20">Increases (&uarr;)</td>
+                  <td class="p-3 font-bold text-rose-700 bg-purple-50/20">Decreases (&darr;)</td>
+                  <td class="p-3 text-slate-600">Cost of carry: Call delays capital outlay; Put delays receipt of proceeds.</td>
+                </tr>
+                <tr class="hover:bg-slate-50">
+                  <td class="p-3 font-bold text-slate-900">Dividend Yield (q)</td>
+                  <td class="p-3 font-semibold text-emerald-700">Increases (&uarr;)</td>
+                  <td class="p-3 font-bold text-rose-700 bg-blue-50/20">Decreases (&darr;)</td>
+                  <td class="p-3 font-bold text-emerald-700 bg-purple-50/20">Increases (&uarr;)</td>
+                  <td class="p-3 text-slate-600">Stock price drops ex-dividend on payout date.</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <!-- IV, India VIX, Skew & Smile -->
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4 text-xs">
+          <div class="p-4 rounded-2xl bg-slate-50 border border-slate-200 space-y-2">
+            <span class="font-bold text-slate-900 text-sm">Historical vs. Implied Volatility (IV)</span>
+            <ul class="space-y-1.5 text-slate-700">
+              <li>• <strong>Historical Volatility:</strong> Backward-looking standard deviation of past stock price returns over a fixed window (e.g. 30 days).</li>
+              <li>• <strong>Implied Volatility (IV):</strong> Forward-looking volatility expectation priced into current option premiums, extracted using BSM.</li>
+              <li>• <strong>India VIX:</strong> The volatility index calculated by NSE from the order book of NIFTY options, indicating expected annualized market volatility over the next 30 calendar days.</li>
+            </ul>
+          </div>
+
+          <div class="p-4 rounded-2xl bg-slate-50 border border-slate-200 space-y-2">
+            <span class="font-bold text-slate-900 text-sm">Volatility Skew (Smirk) vs. Volatility Smile</span>
+            <ul class="space-y-1.5 text-slate-700">
+              <li>• <strong>Volatility Smile:</strong> Symmetric U-shape where deep OTM Calls and Puts have higher IV than ATM options (frequently observed in currency options).</li>
+              <li>• <strong>Volatility Skew (Smirk):</strong> Asymmetric curve common in equity indices (NIFTY) where <strong>lower strike OTM Puts have much higher IV</strong> than higher strike OTM Calls.</li>
+              <li>• <strong>Why Equity Skew Exists:</strong> Institutional "crashophobia" driving sustained demand for downside protective puts (tail risk hedging).</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <!-- Section 16.5 -->
+      <section id="section-5" class="bg-white rounded-3xl p-6 sm:p-8 border border-amber-200 shadow-sm space-y-6">
+        <div class="flex items-center justify-between">
+          <div class="flex items-center gap-2 text-xs font-bold text-amber-700 uppercase tracking-wider">
+            <span class="w-2 h-2 rounded-full bg-amber-500"></span> Section 16.5 &bull; Super High Exam Yield ⭐
+          </div>
+          <span class="text-xs px-2.5 py-1 rounded-full bg-amber-100 text-amber-800 font-bold">Sensitivity Analysis</span>
+        </div>
+        <div>
+          <h2 class="font-display font-bold text-xl sm:text-2xl text-slate-900">The 5 Option Greeks: Master Reference & Deep Dive</h2>
+          <p class="text-sm text-slate-600 mt-1">Mathematical sensitivity measures quantifying risk exposure to changes in price, time, volatility, and interest rates.</p>
+        </div>
+
+        <!-- Master Greeks Table -->
+        <div class="overflow-x-auto rounded-2xl border border-slate-200 text-xs">
+          <table class="min-w-full text-left">
+            <thead class="bg-slate-100 text-slate-700 font-bold uppercase tracking-wider">
+              <tr>
+                <th class="p-3">Greek & Symbol</th>
+                <th class="p-3">Partial Derivative</th>
+                <th class="p-3">Typical Range (Long)</th>
+                <th class="p-3">ATM Value</th>
+                <th class="p-3">Peak Sensitivity Zone</th>
+                <th class="p-3">Sign for Buyer / Writer</th>
+              </tr>
+            </thead>
+            <tbody class="divide-y divide-slate-200">
+              <tr class="hover:bg-slate-50">
+                <td class="p-3 font-bold text-blue-900">Delta (&Delta;)</td>
+                <td class="p-3 font-mono text-slate-700">&part;V / &part;S</td>
+                <td class="p-3 text-slate-800">Call: 0 to +1<br>Put: -1 to 0</td>
+                <td class="p-3 font-mono font-bold text-blue-700">Call: &approx; +0.50<br>Put: &approx; -0.50</td>
+                <td class="p-3 text-slate-600">Deep ITM &rarr; &plusmn;1.0<br>Deep OTM &rarr; 0.0</td>
+                <td class="p-3 font-mono font-semibold">Buyer: +C / -P<br>Seller: -C / +P</td>
+              </tr>
+              <tr class="hover:bg-slate-50">
+                <td class="p-3 font-bold text-purple-900">Gamma (&Gamma;)</td>
+                <td class="p-3 font-mono text-slate-700">&part;&Delta; / &part;S = &part;<sup>2</sup>V / &part;S<sup>2</sup></td>
+                <td class="p-3 text-slate-800">Always <strong>Positive</strong> for buyers</td>
+                <td class="p-3 font-mono font-bold text-purple-700">Maximum value</td>
+                <td class="p-3 text-slate-600">At-the-Money (ATM) options nearing expiry</td>
+                <td class="p-3 font-mono font-semibold text-emerald-700">Buyer: Positive (+)<br>Seller: Negative (-)</td>
+              </tr>
+              <tr class="hover:bg-slate-50">
+                <td class="p-3 font-bold text-rose-900">Theta (&Theta;)</td>
+                <td class="p-3 font-mono text-slate-700">&part;V / &part;t</td>
+                <td class="p-3 text-slate-800">Always <strong>Negative</strong> for buyers</td>
+                <td class="p-3 font-mono font-bold text-rose-700">High decay rate</td>
+                <td class="p-3 text-slate-600">ATM options in final 30 calendar days</td>
+                <td class="p-3 font-mono font-semibold text-rose-700">Buyer: Negative (-)<br>Seller: Positive (+)</td>
+              </tr>
+              <tr class="hover:bg-slate-50">
+                <td class="p-3 font-bold text-emerald-900">Vega (&nu;)</td>
+                <td class="p-3 font-mono text-slate-700">&part;V / &part;&sigma;</td>
+                <td class="p-3 text-slate-800">Always <strong>Positive</strong> for buyers</td>
+                <td class="p-3 font-mono font-bold text-emerald-700">Maximum value</td>
+                <td class="p-3 text-slate-600">ATM options with long time to expiry</td>
+                <td class="p-3 font-mono font-semibold text-emerald-700">Buyer: Positive (+)<br>Seller: Negative (-)</td>
+              </tr>
+              <tr class="hover:bg-slate-50">
+                <td class="p-3 font-bold text-slate-900">Rho (&rho;)</td>
+                <td class="p-3 font-mono text-slate-700">&part;V / &part;r</td>
+                <td class="p-3 text-slate-800">Call: Positive (+)<br>Put: Negative (-)</td>
+                <td class="p-3 font-mono font-bold text-slate-700">Moderate</td>
+                <td class="p-3 text-slate-600">Long-tenor options (LEAPS)</td>
+                <td class="p-3 font-mono font-semibold">Call Buyer: (+)<br>Put Buyer: (-)</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <!-- Detailed Individual Greek Cards -->
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4 text-xs">
+          
+          <!-- Delta Card -->
+          <div class="p-4 rounded-2xl bg-blue-50/60 border border-blue-200 space-y-2">
+            <div class="flex items-center justify-between">
+              <span class="font-bold text-blue-950 text-sm">Delta (&Delta;): Direction & Probability</span>
+              <span class="px-2 py-0.5 rounded bg-blue-200 text-blue-900 font-mono font-bold text-[11px]">Hedge Ratio</span>
+            </div>
+            <ul class="space-y-1.5 text-slate-700 leading-relaxed">
+              <li>• <strong>Rate of Change:</strong> Change in option premium for every ₹1 change in underlying spot price.</li>
+              <li>• <strong>Hedge Ratio:</strong> To hedge 1 long call with &Delta; = 0.60 on a 50-share lot, an investor shorts \(0.60 \times 50 = 30\) shares of the underlying stock (Delta-neutral portfolio).</li>
+              <li>• <strong>Probability Proxy:</strong> An option's absolute delta roughly approximates the probability of the option expiring In-the-Money (ITM). An ATM call (&Delta; &approx; 0.50) has &approx; 50% probability of expiring ITM.</li>
+            </ul>
+          </div>
+
+          <!-- Gamma Card -->
+          <div class="p-4 rounded-2xl bg-purple-50/60 border border-purple-200 space-y-2">
+            <div class="flex items-center justify-between">
+              <span class="font-bold text-purple-950 text-sm">Gamma (&Gamma;): Acceleration & Curvature</span>
+              <span class="px-2 py-0.5 rounded bg-purple-200 text-purple-900 font-mono font-bold text-[11px]">&Delta; Sensitivity</span>
+            </div>
+            <ul class="space-y-1.5 text-slate-700 leading-relaxed">
+              <li>• <strong>Rate of Change:</strong> Change in Delta for every ₹1 change in the underlying spot price.</li>
+              <li>• <strong>Gamma Explosion:</strong> For ATM options nearing expiration, Gamma spikes dramatically. A tiny spot price fluctuation can rapidly flip Delta from 0.10 to 0.90.</li>
+              <li>• <strong>Risk for Writers:</strong> Short option sellers face huge negative Gamma near expiry, requiring frequent portfolio re-hedging.</li>
+            </ul>
+          </div>
+
+          <!-- Theta Card -->
+          <div class="p-4 rounded-2xl bg-rose-50/60 border border-rose-200 space-y-2">
+            <div class="flex items-center justify-between">
+              <span class="font-bold text-rose-950 text-sm">Theta (&Theta;): The Enemy of Option Buyers</span>
+              <span class="px-2 py-0.5 rounded bg-rose-200 text-rose-900 font-mono font-bold text-[11px]">Time Decay</span>
+            </div>
+            <ul class="space-y-1.5 text-slate-700 leading-relaxed">
+              <li>• <strong>Daily Decay:</strong> Loss in option premium resulting purely from the passage of one calendar day (holding price and volatility constant).</li>
+              <li>• <strong>Non-linear Acceleration:</strong> Time decay is relatively slow when months remain until expiry, but accelerates exponentially in the final 30 calendar days.</li>
+              <li>• <strong>Calendar Day Effect:</strong> Theta erodes over weekends and market holidays too; buyers lose value each passing non-trading day.</li>
+            </ul>
+          </div>
+
+          <!-- Vega Card -->
+          <div class="p-4 rounded-2xl bg-emerald-50/60 border border-emerald-200 space-y-2">
+            <div class="flex items-center justify-between">
+              <span class="font-bold text-emerald-950 text-sm">Vega (&nu;): Sensitivity to Volatility Shifts</span>
+              <span class="px-2 py-0.5 rounded bg-emerald-200 text-emerald-900 font-mono font-bold text-[11px]">1% IV Shift</span>
+            </div>
+            <ul class="space-y-1.5 text-slate-700 leading-relaxed">
+              <li>• <strong>Volatility Impact:</strong> Change in option premium for every 1 percentage point (1.0%) change in Implied Volatility (IV).</li>
+              <li>• <strong>Long Maturity Bias:</strong> Vega is significantly higher for longer-dated options because volatility has more time to expand terminal payoffs.</li>
+              <li>• <strong>Volatility Crush:</strong> Right after high-profile corporate earnings or Union Budget announcements, IV plunges sharply, causing option buyers to suffer losses even if direction was right.</li>
+            </ul>
+          </div>
+
+        </div>
+      </section>
+
+      <!-- Section 16.6 -->
+      <section id="section-6" class="bg-white rounded-3xl p-6 sm:p-8 border border-amber-200 shadow-sm space-y-6">
+        <div class="flex items-center justify-between">
+          <div class="flex items-center gap-2 text-xs font-bold text-amber-700 uppercase tracking-wider">
+            <span class="w-2 h-2 rounded-full bg-amber-500"></span> Section 16.6 &bull; Super High Exam Yield ⭐
+          </div>
+          <span class="text-xs px-2.5 py-1 rounded-full bg-amber-100 text-amber-800 font-bold">Arbitrage & Synthetics</span>
+        </div>
+        <div>
+          <h2 class="font-display font-bold text-xl sm:text-2xl text-slate-900">Put-Call Parity Theorem & Synthetic Strategies</h2>
+          <p class="text-sm text-slate-600 mt-1">The fundamental equilibrium relationship connecting Calls, Puts, the underlying Stock, and risk-free Bonds.</p>
+        </div>
+
+        <!-- Parity Equation Box -->
+        <div class="p-5 rounded-2xl bg-blue-50/70 border border-blue-200 space-y-3 text-xs">
+          <span class="font-bold text-blue-950 text-sm">The Put-Call Parity Equation</span>
+          <p class="text-slate-700">
+            For European options on a non-dividend paying stock with identical strike price (\(X\)) and expiration date (\(T\)):
+          </p>
+          <div class="bg-white p-3.5 rounded-xl border border-blue-200 font-mono text-blue-900 font-bold text-center text-sm shadow-sm">
+            C + X &times; e<sup>-rT</sup> = P + S
+          </div>
+          <p class="text-slate-600 text-center text-[11px]">
+            In discrete form: <strong>C + X / (1 + r&middot;T) = P + S</strong> &nbsp;|&nbsp; With dividends (PV = D): <strong>C + X&middot;e<sup>-rT</sup> = P + S - D</strong>
+          </p>
+          <div class="bg-white/90 p-3 rounded-xl border border-blue-100 text-[11px] text-slate-700 space-y-1">
+            <strong>Theoretical Proof (Portfolio A vs Portfolio B):</strong>
+            <p>• <strong>Portfolio A (Fiduciary Call):</strong> Buy 1 Call (\(C\)) + Invest \(X\cdot e^{-rT}\) in Zero-Coupon Bond. At expiry, if \(S_T > X\), payoff = \((S_T - X) + X = S_T\). If \(S_T \le X\), payoff = \(0 + X = X\). Terminal value = \(\max(S_T, X)\).</p>
+            <p>• <strong>Portfolio B (Protective Put):</strong> Buy 1 Put (\(P\)) + Buy 1 Share of Stock (\(S\)). At expiry, if \(S_T > X\), payoff = \(0 + S_T = S_T\). If \(S_T \le X\), payoff = \((X - S_T) + S_T = X\). Terminal value = \(\max(S_T, X)\).</p>
+            <p class="text-emerald-700 font-medium">Since both portfolios produce IDENTICAL terminal payoffs under all possible market conditions, they must have identical initial prices!</p>
+          </div>
+        </div>
+
+        <!-- Synthetics Table -->
+        <div class="space-y-3">
+          <h3 class="font-display font-bold text-sm text-slate-900">Synthetic Positions Generated via Put-Call Parity</h3>
+          <p class="text-xs text-slate-600">Rearranging the parity equation \(S = C - P + X\cdot e^{-rT}\) enables the creation of synthetic equivalents:</p>
+          
+          <div class="overflow-x-auto rounded-2xl border border-slate-200 text-xs">
+            <table class="min-w-full text-left">
+              <thead class="bg-slate-100 text-slate-700 font-bold uppercase tracking-wider">
+                <tr>
+                  <th class="p-3">Target Synthetic Position</th>
+                  <th class="p-3 font-mono">Component 1</th>
+                  <th class="p-3 font-mono">Component 2</th>
+                  <th class="p-3">Economic Payoff Profile</th>
+                  <th class="p-3">Exam Application</th>
+                </tr>
+              </thead>
+              <tbody class="divide-y divide-slate-200">
+                <tr class="hover:bg-slate-50">
+                  <td class="p-3 font-bold text-blue-900">Synthetic Long Stock</td>
+                  <td class="p-3 font-mono text-emerald-700 font-bold">Long Call (+C)</td>
+                  <td class="p-3 font-mono text-rose-700 font-bold">Short Put (-P)</td>
+                  <td class="p-3 text-slate-700">Identical to holding 1 share of cash stock.</td>
+                  <td class="p-3 text-slate-600">Creating long equity exposure without paying 100% cash up front.</td>
+                </tr>
+                <tr class="hover:bg-slate-50">
+                  <td class="p-3 font-bold text-rose-900">Synthetic Short Stock</td>
+                  <td class="p-3 font-mono text-rose-700 font-bold">Short Call (-C)</td>
+                  <td class="p-3 font-mono text-emerald-700 font-bold">Long Put (+P)</td>
+                  <td class="p-3 text-slate-700">Identical to shorting 1 share of cash stock.</td>
+                  <td class="p-3 text-slate-600">Shorting without securities borrowing or delivery friction.</td>
+                </tr>
+                <tr class="hover:bg-slate-50">
+                  <td class="p-3 font-bold text-emerald-900">Synthetic Long Call</td>
+                  <td class="p-3 font-mono text-emerald-700 font-bold">Long Stock (+S)</td>
+                  <td class="p-3 font-mono text-emerald-700 font-bold">Long Put (+P)</td>
+                  <td class="p-3 text-slate-700">Unlimited upside with protected downside (Protective Put).</td>
+                  <td class="p-3 text-slate-600">Replicating call payoff when call strikes lack liquidity.</td>
+                </tr>
+                <tr class="hover:bg-slate-50">
+                  <td class="p-3 font-bold text-purple-900">Synthetic Long Put</td>
+                  <td class="p-3 font-mono text-emerald-700 font-bold">Long Call (+C)</td>
+                  <td class="p-3 font-mono text-rose-700 font-bold">Short Stock (-S)</td>
+                  <td class="p-3 text-slate-700">Downside profit with limited upside risk.</td>
+                  <td class="p-3 text-slate-600">Replicating put protection when borrowing shares.</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <!-- Parity Arbitrage Box -->
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4 text-xs">
+          <div class="p-4 rounded-2xl bg-slate-50 border border-slate-200 space-y-2">
+            <span class="font-bold text-slate-900 text-sm">Conversion Arbitrage (Call Overpriced)</span>
+            <p class="text-slate-700">
+              When \(C + X\cdot e^{-rT} > P + S\):
+            </p>
+            <div class="p-2.5 bg-white rounded-xl border border-slate-200 font-mono text-slate-800 text-[11px] space-y-1">
+              <div>&bull; Sell Call (-C)</div>
+              <div>&bull; Buy Put (+P)</div>
+              <div>&bull; Buy Spot Stock (+S)</div>
+              <div>&bull; Borrow PV(X) at risk-free rate</div>
+            </div>
+            <p class="text-[11px] text-emerald-700 font-medium">Locks in a zero-risk arbitrage profit regardless of expiry price.</p>
+          </div>
+
+          <div class="p-4 rounded-2xl bg-slate-50 border border-slate-200 space-y-2">
+            <span class="font-bold text-slate-900 text-sm">Reverse Conversion Arbitrage (Put Overpriced)</span>
+            <p class="text-slate-700">
+              When \(P + S > C + X\cdot e^{-rT}\):
+            </p>
+            <div class="p-2.5 bg-white rounded-xl border border-slate-200 font-mono text-slate-800 text-[11px] space-y-1">
+              <div>&bull; Buy Call (+C)</div>
+              <div>&bull; Sell Put (-P)</div>
+              <div>&bull; Short Spot Stock (-S)</div>
+              <div>&bull; Lend proceeds at risk-free rate</div>
+            </div>
+            <p class="text-[11px] text-emerald-700 font-medium">Locks in a zero-risk arbitrage profit by buying underpriced synthetics.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Section 16.7 Interactive Quiz -->
+      <section id="interactive-quiz" class="bg-slate-900 text-white rounded-3xl p-6 sm:p-8 border border-slate-800 shadow-xl space-y-6">
+        <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 border-b border-slate-800 pb-5">
+          <div>
+            <div class="flex items-center gap-2 text-xs font-bold text-emerald-400 uppercase tracking-wider mb-1">
+              <i data-lucide="check-circle" class="w-4 h-4"></i> Interactive Exam Assessment
+            </div>
+            <h3 class="font-display font-bold text-xl sm:text-2xl text-white">Chapter 16 Practice Quiz</h3>
+            <p class="text-xs text-slate-400 mt-1">12 Exam-grade questions testing Moneyness, Intrinsic/Time Value, Greeks, and Put-Call Parity.</p>
+          </div>
+          <div class="flex items-center gap-3">
+            <div class="text-right">
+              <span class="text-xs text-slate-400">Answered</span>
+              <div class="text-sm font-bold text-emerald-400"><span id="answered-count">0</span> / 12</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Questions Container -->
+        <div id="quiz-container" class="space-y-6"></div>
+
+        <!-- Action Bar -->
+        <div class="pt-4 border-t border-slate-800 flex flex-col sm:flex-row items-center justify-between gap-4">
+          <button id="submit-quiz-btn" onclick="submitQuiz()" class="w-full sm:w-auto px-6 py-3 rounded-xl bg-emerald-600 hover:bg-emerald-500 font-bold text-sm shadow-lg shadow-emerald-600/30 transition-all flex items-center justify-center gap-2 cursor-pointer">
+            <span>Submit Quiz & View Results</span>
+            <i data-lucide="arrow-right" class="w-4 h-4"></i>
+          </button>
+          <button id="reset-quiz-btn" onclick="resetQuiz()" class="hidden w-full sm:w-auto px-6 py-3 rounded-xl bg-slate-800 hover:bg-slate-700 text-slate-300 font-bold text-sm transition-all flex items-center justify-center gap-2 cursor-pointer">
+            <i data-lucide="rotate-ccw" class="w-4 h-4"></i>
+            <span>Retake Quiz</span>
+          </button>
+        </div>
+
+        <!-- Quiz Results -->
+        <div id="quiz-results" class="hidden p-6 rounded-2xl bg-slate-800/80 border border-slate-700 space-y-4">
+          <div class="flex items-center justify-between">
+            <h4 class="font-display font-bold text-lg text-white">Quiz Score Summary</h4>
+            <span id="result-status-badge" class="px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider"></span>
+          </div>
+          <div class="flex items-baseline gap-3">
+            <span id="score-display" class="font-display font-extrabold text-4xl text-emerald-400"></span>
+            <span id="percentage-display" class="text-sm text-slate-400 font-medium"></span>
+          </div>
+          <p id="result-summary-text" class="text-xs sm:text-sm text-slate-300"></p>
+        </div>
+      </section>
+
+      <!-- Navigation Footer -->
+      <footer class="pt-6 border-t border-slate-200 flex items-center justify-between">
+        <a href="module2-ch15.html" class="flex items-center gap-2 px-4 py-2.5 rounded-xl border border-slate-200 bg-white hover:bg-slate-50 text-slate-700 font-medium text-xs transition-colors">
+          <i data-lucide="arrow-left" class="w-4 h-4"></i>
+          <span>Prev: Chapter 15 (Forwards & Futures)</span>
+        </a>
+        <a href="module2-ch17.html" class="flex items-center gap-2 px-4 py-2.5 rounded-xl bg-emerald-600 hover:bg-emerald-700 text-white font-semibold text-xs shadow-sm transition-colors">
+          <span>Next: Chapter 17 (F&O Strategies)</span>
+          <i data-lucide="arrow-right" class="w-4 h-4"></i>
+        </a>
+      </footer>
+
+    </div>
+  </div>
+
+  <script>
+    const questionsData = [
+      {
+        id: 1,
+        question: "When is a European Call option categorized as In-the-Money (ITM)?",
+        options: [
+          { key: "a", text: "When Spot Price is equal to Strike Price (S = X)" },
+          { key: "b", text: "When Spot Price is strictly greater than Strike Price (S > X)" },
+          { key: "c", text: "When Spot Price is strictly less than Strike Price (S < X)" },
+          { key: "d", text: "When Time Value exceeds Intrinsic Value" }
+        ],
+        correct: "b",
+        explanation: "A Call option grants the right to buy. It is In-the-Money (ITM) when the current underlying spot price exceeds the strike price (S > X), generating a positive intrinsic value of (S - X). When S = X, it is ATM; when S < X, it is OTM."
+      },
+      {
+        id: 2,
+        question: "A stock trades at ₹850 in the spot market. A 900 Strike Put option is trading at a market premium of ₹70. What are its Intrinsic Value and Time Value?",
+        options: [
+          { key: "a", text: "Intrinsic Value = ₹70; Time Value = ₹0" },
+          { key: "b", text: "Intrinsic Value = ₹50; Time Value = ₹20" },
+          { key: "c", text: "Intrinsic Value = ₹0; Time Value = ₹70" },
+          { key: "d", text: "Intrinsic Value = ₹20; Time Value = ₹50" }
+        ],
+        correct: "b",
+        explanation: "For a Put option, Intrinsic Value = Max(0, Strike - Spot) = Max(0, 900 - 850) = ₹50. Time Value = Premium - Intrinsic Value = 70 - 50 = ₹20."
+      },
+      {
+        id: 3,
+        question: "What is the typical Delta (Δ) of an At-the-Money (ATM) European Call option?",
+        options: [
+          { key: "a", text: "Exactly 0.0" },
+          { key: "b", text: "Approximately +0.50" },
+          { key: "c", text: "Exactly +1.0" },
+          { key: "d", text: "Approximately -0.50" }
+        ],
+        correct: "b",
+        explanation: "An At-the-Money (ATM) call option has a Delta of approximately +0.50 (while an ATM put has a Delta of approx -0.50). This implies a ₹1 rise in the spot price increases the call option's premium by roughly ₹0.50."
+      },
+      {
+        id: 4,
+        question: "Which Option Greek measures the rate of change of Delta with respect to changes in the underlying spot price (∂Δ / ∂S)?",
+        options: [
+          { key: "a", text: "Gamma (Γ)" },
+          { key: "b", text: "Theta (Θ)" },
+          { key: "c", text: "Vega (ν)" },
+          { key: "d", text: "Rho (ρ)" }
+        ],
+        correct: "a",
+        explanation: "Gamma (Γ) is the second derivative of the option price with respect to spot price (∂²V / ∂S²), representing the curvature and the rate of change of Delta. It reaches its maximum for ATM options nearing expiration."
+      },
+      {
+        id: 5,
+        question: "Why is Theta (Θ) consistently negative for buyers of both Call and Put options?",
+        options: [
+          { key: "a", text: "Market interest rates are steadily rising" },
+          { key: "b", text: "Option premium erodes with the passage of time as expiration draws closer (time decay)" },
+          { key: "c", text: "Exchange turnover taxes increase closer to expiry" },
+          { key: "d", text: "Implied volatility drops to zero on non-trading days" }
+        ],
+        correct: "b",
+        explanation: "Theta measures the rate of time decay (∂V / ∂t). As each calendar day elapses, the remaining life of the option diminishes, reducing the probability of favorable price swings and eroding extrinsic time value."
+      },
+      {
+        id: 6,
+        question: "Which Greek measures the sensitivity of an option's premium to a 1 percentage point (1%) change in Implied Volatility (IV)?",
+        options: [
+          { key: "a", text: "Delta (Δ)" },
+          { key: "b", text: "Gamma (Γ)" },
+          { key: "c", text: "Vega (ν)" },
+          { key: "d", text: "Rho (ρ)" }
+        ],
+        correct: "c",
+        explanation: "Vega (ν) measures the change in an option's theoretical value for every 1% shift in the underlying asset's Implied Volatility. It is highest for At-the-Money options with long durations to maturity."
+      },
+      {
+        id: 7,
+        question: "Under Put-Call Parity, which combination of options synthetically replicates a 'Long Stock' position?",
+        options: [
+          { key: "a", text: "Long Call + Long Put" },
+          { key: "b", text: "Long Call + Short Put (at identical strike and expiry)" },
+          { key: "c", text: "Short Call + Short Put" },
+          { key: "d", text: "Long Put + Zero-Coupon Bond" }
+        ],
+        correct: "b",
+        explanation: "Rearranging Put-Call Parity (C - P = S - X·e^(-rT)) demonstrates that Long Call + Short Put produces a linear payoff identical to holding the underlying cash stock."
+      },
+      {
+        id: 8,
+        question: "What is the maximum potential loss for an investor who purchases an Out-of-the-Money (OTM) Put option?",
+        options: [
+          { key: "a", text: "Unlimited" },
+          { key: "b", text: "Limited to 100% of the premium paid" },
+          { key: "c", text: "Equal to the Strike Price" },
+          { key: "d", text: "Equal to the SPAN margin requirement" }
+        ],
+        correct: "b",
+        explanation: "An option buyer acquires the right but no obligation. If the market does not move below the strike price, the buyer simply allows the option to expire unexercised, capping the loss strictly to the premium paid."
+      },
+      {
+        id: 9,
+        question: "If Spot Price = ₹500, Strike Price = ₹500, Risk-free interest rate = 0%, and Call premium = ₹35, what is the fair Put premium under Put-Call Parity?",
+        options: [
+          { key: "a", text: "₹0" },
+          { key: "b", text: "₹35" },
+          { key: "c", text: "₹70" },
+          { key: "d", text: "₹500" }
+        ],
+        correct: "b",
+        explanation: "Put-Call Parity states: C + X·e^(-rT) = P + S. With r = 0, e^0 = 1, so C + X = P + S. Substituting values: 35 + 500 = P + 500 => P = ₹35."
+      },
+      {
+        id: 10,
+        question: "What exercise and settlement conventions govern equity stock options and index options listed on Indian exchanges (NSE/BSE)?",
+        options: [
+          { key: "a", text: "American style with compulsory physical delivery for all contracts" },
+          { key: "b", text: "European style for all contracts; Cash settlement for Index options and Physical Delivery for ITM Stock options" },
+          { key: "c", text: "Bermudan style with voluntary cash settlement" },
+          { key: "d", text: "American style for stock options and European style for index options" }
+        ],
+        correct: "b",
+        explanation: "All exchange-traded stock and index options in India are strictly European style (exercisable only on expiry day). Index options settle in cash, whereas stock options expiring ITM require compulsory physical delivery of shares."
+      },
+      {
+        id: 11,
+        question: "Why does an equity index option chain typically exhibit a 'Volatility Skew' (Smirk) rather than a symmetrical 'Smile'?",
+        options: [
+          { key: "a", text: "SEBI fixes higher margins on Call options" },
+          { key: "b", text: "Institutional investors aggressively buy Out-of-the-Money Puts for downside crash protection, inflating their IV" },
+          { key: "c", text: "Theta decay only applies to Put options" },
+          { key: "d", text: "Interest rates are negative in emerging markets" }
+        ],
+        correct: "b",
+        explanation: "Equity index markets display a downward-sloping volatility skew (smirk) because market participants fear market crashes ('crashophobia') and pay elevated premiums for OTM Put options for portfolio hedging."
+      },
+      {
+        id: 12,
+        question: "If the Spot Price is ₹1,400 and Strike Price is ₹1,500 for a Call option trading at ₹15, what will happen to its Intrinsic Value if the Spot Price drops to ₹1,300?",
+        options: [
+          { key: "a", text: "It decreases to -₹200" },
+          { key: "b", text: "It remains strictly ₹0.00 because Intrinsic Value can never be negative" },
+          { key: "c", text: "It increases to +₹100" },
+          { key: "d", text: "It equals the initial premium of ₹15" }
+        ],
+        correct: "b",
+        explanation: "Intrinsic value is defined as Max(0, S - X) for calls. At S = ₹1,400, IV = Max(0, 1,400 - 1,500) = ₹0. If spot drops to ₹1,300, IV = Max(0, 1,300 - 1,500) = ₹0. Intrinsic value is strictly bounded at zero and never turns negative."
+      }
+    ];
+
+    let userAnswers = {};
+
+    function renderQuiz() {
+      const container = document.getElementById("quiz-container");
+      container.innerHTML = "";
+      questionsData.forEach((q, idx) => {
+        const qDiv = document.createElement("div");
+        qDiv.className = "p-5 rounded-2xl bg-white/5 border border-white/10 space-y-3";
+        
+        let optionsHtml = "";
+        q.options.forEach(opt => {
+          optionsHtml += `
+            <label id="label-${q.id}-${opt.key}" onclick="selectOption(${q.id}, '${opt.key}')" class="flex items-center gap-3 p-3 rounded-xl bg-white/5 hover:bg-white/10 border border-white/5 cursor-pointer text-xs sm:text-sm transition-all">
+              <input type="radio" name="q-${q.id}" value="${opt.key}" class="hidden" />
+              <div id="dot-${q.id}-${opt.key}" class="w-6 h-6 rounded-full border border-slate-500 flex items-center justify-center font-bold text-xs shrink-0">${opt.key.toUpperCase()}</div>
+              <span class="text-slate-300">${opt.text}</span>
+            </label>
+          `;
+        });
+
+        qDiv.innerHTML = `
+          <div class="flex items-center justify-between">
+            <span class="text-xs font-bold text-emerald-400">Question ${idx + 1} of ${questionsData.length}</span>
+            <span id="badge-${q.id}" class="text-xs px-2 py-0.5 rounded-full bg-slate-800 text-slate-400">Unanswered</span>
+          </div>
+          <h4 class="font-display font-semibold text-sm sm:text-base text-white">${q.question}</h4>
+          <div class="space-y-2 mt-3">${optionsHtml}</div>
+          <div id="explanation-${q.id}" class="hidden p-4 rounded-xl text-xs sm:text-sm mt-3 space-y-1"></div>
+        `;
+        container.appendChild(qDiv);
+      });
+      lucide.createIcons();
+    }
+
+    function selectOption(qId, key) {
+      userAnswers[qId] = key;
+      document.getElementById("answered-count").innerText = Object.keys(userAnswers).length;
+      
+      const badge = document.getElementById(`badge-${qId}`);
+      if (badge) {
+        badge.innerText = "Answered";
+        badge.className = "text-xs px-2 py-0.5 rounded-full bg-emerald-500/20 text-emerald-300 font-medium";
+      }
+
+      const q = questionsData.find(item => item.id === qId);
+      q.options.forEach(opt => {
+        const lbl = document.getElementById(`label-${qId}-${opt.key}`);
+        const dot = document.getElementById(`dot-${qId}-${opt.key}`);
+        if (opt.key === key) {
+          lbl.className = "flex items-center gap-3 p-3 rounded-xl bg-emerald-600/30 border border-emerald-400/50 cursor-pointer text-xs sm:text-sm transition-all";
+          dot.className = "w-6 h-6 rounded-full border border-emerald-400 bg-emerald-500 text-slate-950 flex items-center justify-center font-bold text-xs shrink-0";
+        } else {
+          lbl.className = "flex items-center gap-3 p-3 rounded-xl bg-white/5 hover:bg-white/10 border border-white/5 cursor-pointer text-xs sm:text-sm transition-all";
+          dot.className = "w-6 h-6 rounded-full border border-slate-500 flex items-center justify-center font-bold text-xs shrink-0";
+        }
+      });
+    }
+
+    function submitQuiz() {
+      let score = 0;
+      questionsData.forEach(q => {
+        const selected = userAnswers[q.id];
+        const isCorrect = selected === q.correct;
+        if (isCorrect) score++;
+
+        const explanationDiv = document.getElementById(`explanation-${q.id}`);
+        explanationDiv.classList.remove("hidden");
+
+        if (isCorrect) {
+          explanationDiv.className = "p-4 rounded-xl text-xs sm:text-sm mt-3 bg-emerald-950/60 border border-emerald-600 text-emerald-200";
+          explanationDiv.innerHTML = `
+            <div class="font-bold text-emerald-400 flex items-center gap-1.5 mb-1">
+              <i data-lucide="check" class="w-4 h-4"></i> Correct!
+            </div>
+            <p>${q.explanation}</p>
+          `;
+        } else {
+          explanationDiv.className = "p-4 rounded-xl text-xs sm:text-sm mt-3 bg-rose-950/60 border border-rose-600 text-rose-200";
+          explanationDiv.innerHTML = `
+            <div class="font-bold text-rose-400 flex items-center gap-1.5 mb-1">
+              <i data-lucide="x" class="w-4 h-4"></i> Incorrect (Correct Answer: ${q.correct.toUpperCase()})
+            </div>
+            <p>${q.explanation}</p>
+          `;
+        }
+      });
+
+      const percentage = Math.round((score / questionsData.length) * 100);
+      const passed = percentage >= 60;
+      
+      const resultsDiv = document.getElementById("quiz-results");
+      resultsDiv.classList.remove("hidden");
+
+      const statusBadge = document.getElementById("result-status-badge");
+      statusBadge.innerText = passed ? "Status: Passed (60%+ Benchmark)" : "Status: Needs Revision";
+      statusBadge.className = passed ? "px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider bg-emerald-500 text-emerald-950" : "px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider bg-amber-500 text-amber-950";
+
+      document.getElementById("score-display").innerText = `${score} / ${questionsData.length}`;
+      document.getElementById("percentage-display").innerText = `${percentage}% Score (Passing criteria: 60%)`;
+
+      document.getElementById("result-summary-text").innerText = passed
+        ? `Brilliant work! You scored ${percentage}%, mastering high-weightage Chapter 16 options fundamentals, moneyness, Option Greeks, and Put-Call Parity.`
+        : `You scored ${percentage}%. Review the moneyness matrix, intrinsic value formula max(0, S-X), Greeks sensitivity behaviors, and synthetic parity relationships.`;
+
+      document.getElementById("submit-quiz-btn").classList.add("hidden");
+      document.getElementById("reset-quiz-btn").classList.remove("hidden");
+
+      resultsDiv.scrollIntoView({ behavior: 'smooth' });
+      lucide.createIcons();
+    }
+
+    function resetQuiz() {
+      userAnswers = {};
+      document.getElementById("answered-count").innerText = "0";
+      document.getElementById("quiz-results").classList.add("hidden");
+      document.getElementById("submit-quiz-btn").classList.remove("hidden");
+      document.getElementById("reset-quiz-btn").classList.add("hidden");
+      renderQuiz();
+      document.getElementById("interactive-quiz").scrollIntoView({ behavior: 'smooth' });
+    }
+
+    renderQuiz();
+    lucide.createIcons();
+  </script>
+</body>
+</html>

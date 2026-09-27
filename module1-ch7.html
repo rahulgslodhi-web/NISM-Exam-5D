@@ -1,0 +1,1003 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Chapter 7: Net Asset Value, Total Expense Ratio & Unit Pricing | NISM Series V-D Notes</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+  <script src="https://unpkg.com/lucide@latest"></script>
+
+  <!-- KaTeX for formula rendering -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.min.css">
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.min.js"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/contrib/auto-render.min.js" onload="renderMathInElement(document.body);"></script>
+
+  <!-- Global Module & Chapter Navigation Sidebar -->
+    <!-- Modern Documentation Design System & Zoom Engine -->
+  <link rel="stylesheet" href="modern-docs.css">
+  <script defer src="nav-sidebar.js"></script>
+
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+            display: ['"Space Grotesk"', 'sans-serif']
+          }
+        }
+      }
+    }
+  </script>
+</head>
+<body class="bg-slate-50 text-slate-900 min-h-screen flex flex-col selection:bg-blue-500 selection:text-white">
+
+  <!-- Header -->
+  <header class="sticky top-0 z-50 bg-white/90 backdrop-blur-md border-b border-slate-200">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
+      <div class="flex items-center gap-3">
+        <a href="module1.html" class="flex items-center gap-2 text-slate-500 hover:text-slate-900 transition-colors">
+          <div class="w-9 h-9 rounded-xl bg-slate-100 hover:bg-slate-200 flex items-center justify-center text-slate-700 transition-colors">
+            <i data-lucide="arrow-left" class="w-4 h-4"></i>
+          </div>
+        </a>
+        <div>
+          <div class="flex items-center gap-2">
+            <span class="text-xs font-bold uppercase tracking-wider text-blue-600 bg-blue-50 px-2 py-0.5 rounded">Module 1</span>
+            <span class="text-xs text-slate-400 font-medium">Chapter 7 of 12</span>
+          </div>
+          <h1 class="font-display font-bold text-base sm:text-lg text-slate-900 leading-tight">NAV, Total Expense Ratio & Unit Pricing</h1>
+        </div>
+      </div>
+
+      <div class="flex items-center gap-3">
+        <span class="hidden sm:inline-flex items-center gap-1 px-3 py-1 rounded-full text-xs font-bold bg-amber-50 text-amber-700 border border-amber-200">
+          <i data-lucide="award" class="w-3.5 h-3.5"></i>
+          Weightage: 5 Marks
+        </span>
+        <a href="#interactive-quiz" class="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-lg text-xs font-bold bg-blue-600 hover:bg-blue-700 text-white shadow-sm transition-all">
+          <i data-lucide="help-circle" class="w-3.5 h-3.5"></i>
+          <span>Chapter Quiz</span>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Content Grid -->
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 grid grid-cols-1 lg:grid-cols-12 gap-8 flex-grow">
+    
+    <!-- Sidebar Navigation -->
+    <aside class="hidden lg:block lg:col-span-3">
+      <div class="sticky top-24 space-y-4">
+        <!-- Chapter Switcher (3 Module Dropdowns) -->
+        <div id="sidebar-chapter-switcher"></div>
+
+        <div class="bg-white p-5 rounded-2xl border border-slate-200 shadow-sm">
+          <h2 class="text-xs font-bold text-slate-400 uppercase tracking-wider mb-3">Chapter Navigation</h2>
+          <nav class="space-y-1 text-xs">
+            <a href="#section-1" class="block px-2.5 py-1.5 rounded-lg text-slate-600 hover:bg-slate-100 hover:text-blue-600">7.1 Computation of NAV & Formula</a>
+            <a href="#section-2" class="block px-2.5 py-1.5 rounded-lg text-amber-700 font-semibold bg-amber-50/70 hover:bg-amber-100">7.2 Seventh Schedule Valuation Principles ⭐</a>
+            <a href="#section-3" class="block px-2.5 py-1.5 rounded-lg text-amber-700 font-semibold bg-amber-50/70 hover:bg-amber-100">7.3 Total Expense Ratio (TER) Limits & Slabs ⭐</a>
+            <a href="#section-4" class="block px-2.5 py-1.5 rounded-lg text-amber-700 font-semibold bg-amber-50/70 hover:bg-amber-100">7.4 Additional Expenses & GST Rules ⭐</a>
+            <a href="#section-5" class="block px-2.5 py-1.5 rounded-lg text-slate-600 hover:bg-slate-100 hover:text-blue-600">7.5 Pricing, Stamp Duty & Exit Loads</a>
+            <a href="#section-6" class="block px-2.5 py-1.5 rounded-lg text-amber-700 font-semibold bg-amber-50/70 hover:bg-amber-100">7.6 AT-1 Bonds & Segregated Portfolios ⭐</a>
+            <a href="#interactive-quiz" class="block px-2.5 py-1.5 rounded-lg text-blue-700 font-bold bg-blue-50 hover:bg-blue-100 mt-2">Practice Quiz (12 MCQs)</a>
+          </nav>
+        </div>
+
+        <div class="p-4 rounded-2xl bg-gradient-to-br from-blue-600 to-indigo-700 text-white shadow-sm text-xs space-y-2">
+          <div class="flex items-center gap-1.5 font-bold mb-1">
+            <i data-lucide="zap" class="w-4 h-4 text-amber-300"></i>
+            <span>Exam Focus Highlights</span>
+          </div>
+          <ul class="text-blue-100 leading-relaxed space-y-1.5">
+            <li>• <strong>NAV Publication:</strong> 11:00 PM for standard schemes; 10:00 AM next day for FoFs/overseas.</li>
+            <li>• <strong>Decimal Rounding:</strong> Equity 2 decimals; Debt/Liquid 4 decimals (365 days declaration).</li>
+            <li>• <strong>TER Equity Cap:</strong> 2.25% on first ₹500 Cr; Index/ETFs max 1.00%.</li>
+            <li>• <strong>Brokerage Caps:</strong> 0.12% cash / 0.05% derivatives (excess paid by AMC).</li>
+            <li>• <strong>GST on Management Fees:</strong> Permitted over and above base TER.</li>
+            <li>• <strong>Exit Load:</strong> 100% credited back to scheme net of GST.</li>
+            <li>• <strong>AT-1 Basel III:</strong> 100-year deemed maturity convention.</li>
+            <li>• <strong>Segregated Portfolio:</strong> 0% TER (max 9 bps recovery expenses).</li>
+          </ul>
+        </div>
+      </div>
+    </aside>
+
+    <!-- Main Notes -->
+    <div class="lg:col-span-9 space-y-8">
+
+      <!-- Section 7.1 -->
+      <section id="section-1" class="bg-white rounded-3xl p-6 sm:p-8 border border-slate-200/90 shadow-sm space-y-5">
+        <div class="flex items-center justify-between">
+          <div class="flex items-center gap-2 text-xs font-bold text-slate-500 uppercase tracking-wider">
+            <span class="w-2 h-2 rounded-full bg-slate-400"></span> Section 7.1 &bull; ⚡ Fast-Track Refresher
+          </div>
+          <span class="text-xs px-2.5 py-1 rounded-full bg-slate-100 text-slate-700 font-semibold">Core Formula & Rules</span>
+        </div>
+
+        <h2 class="font-display font-bold text-xl sm:text-2xl text-slate-900">Computation of Net Asset Value (NAV) & Operational Mandates</h2>
+        
+        <p class="text-xs sm:text-sm text-slate-600 leading-relaxed">
+          The <strong>Net Asset Value (NAV)</strong> represents the real-time or end-of-day market worth of a single unit of a mutual fund scheme. It reflects the liquidation value of the portfolio after discharging all liabilities, operational expenses, and accrued charges.
+        </p>
+
+        <!-- Official Formula Card -->
+        <div class="p-5 rounded-2xl bg-blue-50/70 border border-blue-200 space-y-3">
+          <div class="flex items-center justify-between">
+            <span class="text-xs font-bold uppercase tracking-wider text-blue-800 flex items-center gap-1.5">
+              <i data-lucide="calculator" class="w-4 h-4 text-blue-600"></i> Standard NAV Formula (SEBI Format)
+            </span>
+            <span class="text-[11px] font-semibold text-blue-700 bg-blue-100 px-2 py-0.5 rounded">Per-Unit Metric</span>
+          </div>
+          <div class="bg-white p-4 rounded-xl border border-blue-200/80 font-mono text-xs sm:text-sm text-blue-950 shadow-inner overflow-x-auto leading-relaxed">
+            NAV = [Market Value of Investments + Receivables + Accrued Income + Other Assets] - [Current Liabilities + Accrued Expenses + Payables]
+            <hr class="my-1.5 border-blue-200">
+            &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp; Number of Units Outstanding as on Valuation Date
+          </div>
+          <p class="text-xs text-slate-600">
+            <strong>Key Nuance:</strong> Expenses and income are accrued <em>daily</em>. NAV is calculated after incorporating the day's accrued investment management fees, trustee fees, custodian charges, and other permissible operating expenses.
+          </p>
+        </div>
+
+        <!-- Numerical Example Card -->
+        <div class="p-5 rounded-2xl bg-slate-50 border border-slate-200 space-y-3 text-xs sm:text-sm">
+          <h3 class="font-bold text-slate-900 flex items-center gap-2">
+            <i data-lucide="file-spreadsheet" class="w-4 h-4 text-emerald-600"></i> Practical Numerical Walkthrough: Daily NAV Calculation
+          </h3>
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <div class="space-y-1.5 bg-white p-3.5 rounded-xl border border-slate-200">
+              <span class="font-bold text-slate-800 block text-xs uppercase tracking-wide">Gross Portfolio Assets</span>
+              <ul class="space-y-1 text-slate-600 text-xs">
+                <li class="flex justify-between"><span>• Market Value of Listed Equities:</span> <strong class="text-slate-800">₹850.00 Cr</strong></li>
+                <li class="flex justify-between"><span>• Market Value of Debt Securities:</span> <strong class="text-slate-800">₹320.00 Cr</strong></li>
+                <li class="flex justify-between"><span>• Accrued Dividends & Interest:</span> <strong class="text-slate-800">₹8.50 Cr</strong></li>
+                <li class="flex justify-between"><span>• Pending Trades Receivable:</span> <strong class="text-slate-800">₹12.50 Cr</strong></li>
+                <li class="flex justify-between"><span>• Cash & Bank Balances:</span> <strong class="text-slate-800">₹25.00 Cr</strong></li>
+                <li class="flex justify-between pt-1 border-t border-slate-200 font-bold text-slate-900"><span>Total Assets (A):</span> <span>₹1,216.00 Cr</span></li>
+              </ul>
+            </div>
+            <div class="space-y-1.5 bg-white p-3.5 rounded-xl border border-slate-200">
+              <span class="font-bold text-slate-800 block text-xs uppercase tracking-wide">Scheme Liabilities & Accruals</span>
+              <ul class="space-y-1 text-slate-600 text-xs">
+                <li class="flex justify-between"><span>• Accrued AMC & Operating Expenses:</span> <strong class="text-rose-700">₹2.40 Cr</strong></li>
+                <li class="flex justify-between"><span>• Pending Redemptions Payable:</span> <strong class="text-rose-700">₹6.60 Cr</strong></li>
+                <li class="flex justify-between"><span>• Securities Purchase Payables:</span> <strong class="text-rose-700">₹7.00 Cr</strong></li>
+                <li class="flex justify-between pt-1 border-t border-slate-200 font-bold text-rose-800"><span>Total Liabilities (B):</span> <span>₹16.00 Cr</span></li>
+                <li class="flex justify-between pt-1 text-emerald-800 font-bold"><span>Net Assets (A - B):</span> <span>₹1,200.00 Cr</span></li>
+                <li class="flex justify-between text-slate-700"><span>Outstanding Units:</span> <strong>40.00 Cr units</strong></li>
+              </ul>
+            </div>
+          </div>
+          <div class="p-3 bg-emerald-50 rounded-xl border border-emerald-200 text-emerald-950 font-mono text-center font-bold text-xs sm:text-sm">
+            NAV = ₹1,200.00 Crores / 40.00 Crore Units = ₹30.0000 per unit
+          </div>
+        </div>
+
+        <!-- Decimal Rounding & Frequency Grid -->
+        <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 text-xs">
+          <div class="p-4 rounded-xl bg-slate-50 border border-slate-200 space-y-1.5">
+            <div class="flex items-center gap-1.5 font-bold text-slate-900">
+              <i data-lucide="binary" class="w-4 h-4 text-blue-600"></i> Equity & Hybrid Rounding
+            </div>
+            <p class="text-slate-600">
+              Equity-oriented, hybrid, and index schemes must compute and publish NAV rounded off to at least <strong>2 decimal places</strong> (e.g., ₹45.82).
+            </p>
+          </div>
+
+          <div class="p-4 rounded-xl bg-slate-50 border border-slate-200 space-y-1.5">
+            <div class="flex items-center gap-1.5 font-bold text-slate-900">
+              <i data-lucide="hash" class="w-4 h-4 text-purple-600"></i> Debt & Liquid Rounding
+            </div>
+            <p class="text-slate-600">
+              Liquid, overnight, money market, and debt schemes must round off NAV to at least <strong>4 decimal places</strong> (e.g., ₹1,048.2754) due to high transaction sizes and small daily yield shifts.
+            </p>
+          </div>
+
+          <div class="p-4 rounded-xl bg-slate-50 border border-slate-200 space-y-1.5">
+            <div class="flex items-center gap-1.5 font-bold text-slate-900">
+              <i data-lucide="calendar" class="w-4 h-4 text-emerald-600"></i> 365 Days Declaration
+            </div>
+            <p class="text-slate-600">
+              Liquid and Overnight schemes declare NAV for <strong>all 365 days of the year</strong> (including Sundays, bank holidays, and national holidays) as income accrues over weekends.
+            </p>
+          </div>
+        </div>
+
+        <!-- Timelines & Exceptions -->
+        <div class="p-4 rounded-2xl bg-amber-50/60 border border-amber-200 text-xs space-y-2">
+          <h4 class="font-bold text-amber-900 flex items-center gap-2">
+            <i data-lucide="clock" class="w-4 h-4 text-amber-700"></i> Regulatory Timelines for Daily NAV Disclosure & Penalties
+          </h4>
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 text-slate-700">
+            <div class="p-3 bg-white rounded-xl border border-amber-200">
+              <strong class="text-amber-950 block mb-1">Standard Cut-off: 11:00 PM</strong>
+              All open-ended mutual fund schemes must calculate and publish their daily NAV on the AMFI website and the AMC portal by <strong>11:00 PM</strong> on every business day.
+            </div>
+            <div class="p-3 bg-white rounded-xl border border-amber-200">
+              <strong class="text-amber-950 block mb-1">FoFs & Overseas Funds: 10:00 AM Next Day</strong>
+              Fund of Funds (FoFs) and schemes investing in overseas securities are permitted an extended deadline up to <strong>10:00 AM on the next business day</strong> due to international exchange time zones.
+            </div>
+          </div>
+          <p class="text-amber-900/90 text-[11px] pt-1">
+            ⚠️ <em>Regulatory Consequence:</em> If an AMC repeatedly fails to upload NAV by the mandated deadline without valid technical justification, AMFI issues operational warnings, and SEBI may bar the AMC from launching new fund offers (NFOs) until full compliance is restored.
+          </p>
+        </div>
+      </section>
+
+      <!-- Section 7.2 -->
+      <section id="section-2" class="bg-white rounded-3xl p-6 sm:p-8 border border-amber-200 shadow-sm space-y-5">
+        <div class="flex items-center justify-between">
+          <div class="flex items-center gap-2 text-xs font-bold text-amber-700 uppercase tracking-wider">
+            <span class="w-2 h-2 rounded-full bg-amber-500"></span> Section 7.2 &bull; ⭐ Super High Exam Yield
+          </div>
+          <span class="text-xs px-2.5 py-1 rounded-full bg-amber-100 text-amber-800 font-bold">Seventh Schedule Mandate</span>
+        </div>
+
+        <h2 class="font-display font-bold text-xl sm:text-2xl text-slate-900">Seventh Schedule: 10 Overarching Valuation Principles & Debt Waterfall Hierarchy</h2>
+        
+        <p class="text-xs sm:text-sm text-slate-600 leading-relaxed">
+          Under the <strong>Seventh Schedule</strong> of SEBI (Mutual Funds) Regulations, 1996, the overarching objective is <strong>Fair Valuation</strong>: securities must be valued at their true realizable value in an arm's length transaction so that no investor class (existing, subscribing, or redeeming) is unfairly enriched or diluted at the expense of others.
+        </p>
+
+        <!-- 10 Overarching Valuation Principles Grid -->
+        <div class="space-y-3">
+          <h3 class="text-xs font-bold uppercase tracking-wider text-slate-500">The 10 Overarching Valuation Principles</h3>
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-3 text-xs">
+            <div class="p-3.5 rounded-xl bg-slate-50 border border-slate-200 space-y-1">
+              <span class="font-bold text-slate-900">1. Fair Valuation Principle:</span>
+              <p class="text-slate-600">Assets must be valued fairly so that incoming, continuing, and exiting investors are treated equitably without inter-generational wealth transfer.</p>
+            </div>
+            <div class="p-3.5 rounded-xl bg-slate-50 border border-slate-200 space-y-1">
+              <span class="font-bold text-slate-900">2. Realisable Value Basis:</span>
+              <p class="text-slate-600">Valuation must reflect the price that an asset would reasonably fetch in an orderly, arm's length commercial transaction between knowledgeable parties.</p>
+            </div>
+            <div class="p-3.5 rounded-xl bg-slate-50 border border-slate-200 space-y-1">
+              <span class="font-bold text-slate-900">3. Board-Approved Valuation Policy:</span>
+              <p class="text-slate-600">Every AMC must institute a detailed, written Valuation Policy approved by the Boards of both the AMC and the Board of Trustees.</p>
+            </div>
+            <div class="p-3.5 rounded-xl bg-slate-50 border border-slate-200 space-y-1">
+              <span class="font-bold text-slate-900">4. Independent Periodic Review & Audit:</span>
+              <p class="text-slate-600">The Valuation Policy and its operational execution must be reviewed at least annually by an independent statutory/internal auditor and the Trustees.</p>
+            </div>
+            <div class="p-3.5 rounded-xl bg-slate-50 border border-slate-200 space-y-1">
+              <span class="font-bold text-slate-900">5. Independent Valuation Agencies (CRISIL & ICRA):</span>
+              <p class="text-slate-600">Debt, money market, and illiquid instruments must be valued using matrix/pricing inputs provided by AMFI-appointed independent rating agencies (CRISIL & ICRA).</p>
+            </div>
+            <div class="p-3.5 rounded-xl bg-slate-50 border border-slate-200 space-y-1">
+              <span class="font-bold text-slate-900">6. AMC Valuation Committee:</span>
+              <p class="text-slate-600">A high-level AMC Valuation Committee (including CIO, CRO, Compliance Officer, and CFO) must actively oversee pricing, exceptions, and illiquid assets.</p>
+            </div>
+            <div class="p-3.5 rounded-xl bg-slate-50 border border-slate-200 space-y-1">
+              <span class="font-bold text-slate-900">7. Escalation & Documented Deviations:</span>
+              <p class="text-slate-600">Any deviation from agency-recommended valuations must be documented with comprehensive economic rationale and reported to the Trustees and SEBI.</p>
+            </div>
+            <div class="p-3.5 rounded-xl bg-slate-50 border border-slate-200 space-y-1">
+              <span class="font-bold text-slate-900">8. Temporal & Scheme Consistency:</span>
+              <p class="text-slate-600">Valuation methodologies cannot be changed opportunistically. Policies must be consistently applied across time and across all schemes managed by the AMC.</p>
+            </div>
+            <div class="p-3.5 rounded-xl bg-slate-50 border border-slate-200 space-y-1">
+              <span class="font-bold text-slate-900">9. Conflict of Interest Mitigation:</span>
+              <p class="text-slate-600">Rigorous operational firewalls (Chinese Walls) must isolate fund managers and dealmakers from the independent valuation and fund accounting teams.</p>
+            </div>
+            <div class="p-3.5 rounded-xl bg-slate-50 border border-slate-200 space-y-1">
+              <span class="font-bold text-slate-900">10. Public Transparency & Disclosures:</span>
+              <p class="text-slate-600">The full Valuation Policy, detailed methodologies, and any exceptional deviations must be published prominently on the AMC's website and in periodic reports.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Valuation of Asset Classes & Waterfall Hierarchy -->
+        <div class="p-5 rounded-2xl bg-amber-50/50 border border-amber-200 space-y-4 text-xs sm:text-sm">
+          <h3 class="font-bold text-amber-950 flex items-center gap-2">
+            <i data-lucide="layers" class="w-4 h-4 text-amber-700"></i> Asset-Specific Valuation Rules & Debt Waterfall Hierarchy
+          </h3>
+
+          <div class="space-y-3">
+            <div class="p-4 bg-white rounded-xl border border-amber-200/80 space-y-2">
+              <span class="font-bold text-blue-900 block text-xs uppercase tracking-wide">1. Traded & Non-Traded Equities</span>
+              <p class="text-slate-700">
+                • <strong>Traded Equities:</strong> Valued at the closing price on the <strong>Principal Stock Exchange</strong> (where the stock had the highest trading volume on that valuation day). If untraded on the principal exchange, the closing price on the other recognized stock exchange is used.<br>
+                • <strong>Non-Traded / Illiquid Equities:</strong> A share is deemed illiquid if monthly traded volume is &lt; 50,000 shares AND monthly trading value is &lt; ₹5 Lakhs. Valued on the basis of SEBI's formula combining Net Worth per share (Book Value) and Capitalized Earning Value with prescribed illiquidity discounts.
+              </p>
+            </div>
+
+            <div class="p-4 bg-white rounded-xl border border-amber-200/80 space-y-2">
+              <span class="font-bold text-emerald-900 block text-xs uppercase tracking-wide">2. Debt & Money Market Instruments (100% Mark-to-Market)</span>
+              <p class="text-slate-700">
+                • <strong>Phasing Out of Amortization:</strong> Historical amortization (< 30 days residual maturity) has been <strong>completely abolished</strong> by SEBI. 100% of debt and money market instruments across all maturities must be <strong>Marked-to-Market (MTM)</strong> daily.<br>
+                • <strong>Independent Agencies:</strong> Prices/matrices are provided daily by <strong>CRISIL and ICRA</strong>. The simple average of prices from both agencies is taken for valuation.
+              </p>
+            </div>
+
+            <!-- Waterfall Box -->
+            <div class="p-4 bg-slate-900 text-white rounded-xl space-y-2">
+              <span class="font-bold text-amber-400 block text-xs uppercase tracking-wide">The Three-Tier Debt Waterfall Valuation Mechanism</span>
+              <div class="grid grid-cols-1 sm:grid-cols-3 gap-3 text-xs pt-1">
+                <div class="p-2.5 bg-slate-800 rounded-lg border border-slate-700">
+                  <span class="font-bold text-blue-300 block mb-1">Tier 1: Traded VWAP</span>
+                  Volume Weighted Average Price of trades reported on F-TRAC / CBRICS / BSE / NSE meeting qualifying threshold (min ₹5 Cr for G-Sec/SDL; min ₹5 Cr & 2 trades for corporate bonds).
+                </div>
+                <div class="p-2.5 bg-slate-800 rounded-lg border border-slate-700">
+                  <span class="font-bold text-indigo-300 block mb-1">Tier 2: Comparable Trades</span>
+                  If un-traded, evaluate recent secondary market trades of securities issued by the same issuer, or peer issuers with identical credit rating, sector, and maturity band.
+                </div>
+                <div class="p-2.5 bg-slate-800 rounded-lg border border-slate-700">
+                  <span class="font-bold text-emerald-300 block mb-1">Tier 3: Agency Matrix</span>
+                  Valued using the daily yield matrix developed by CRISIL and ICRA based on benchmark G-Sec yield curves + issuer credit risk and liquidity spreads.
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Section 7.3 -->
+      <section id="section-3" class="bg-white rounded-3xl p-6 sm:p-8 border border-amber-200 shadow-sm space-y-5">
+        <div class="flex items-center justify-between">
+          <div class="flex items-center gap-2 text-xs font-bold text-amber-700 uppercase tracking-wider">
+            <span class="w-2 h-2 rounded-full bg-amber-500"></span> Section 7.3 &bull; ⭐ Super High Exam Yield
+          </div>
+          <span class="text-xs px-2.5 py-1 rounded-full bg-amber-100 text-amber-800 font-bold">Regulation 52 Limits</span>
+        </div>
+
+        <h2 class="font-display font-bold text-xl sm:text-2xl text-slate-900">Total Expense Ratio (TER) Limits & Slabs (SEBI Regulation 52)</h2>
+        
+        <p class="text-xs sm:text-sm text-slate-600 leading-relaxed">
+          The <strong>Total Expense Ratio (TER)</strong> represents the annual operating expenses of a mutual fund scheme expressed as a percentage of daily net assets (AUM). SEBI enforces tiered slabs: as the scheme's AUM expands, the permitted expense ratio declines to pass economies of scale directly to investors.
+        </p>
+
+        <!-- Complete Slabs Table -->
+        <div class="overflow-x-auto rounded-2xl border border-slate-200 shadow-sm">
+          <table class="min-w-full text-xs text-left">
+            <thead class="bg-slate-100 text-slate-700 font-bold uppercase tracking-wider">
+              <tr>
+                <th class="p-3.5 border-b border-slate-200">AUM Slabs (Daily Net Assets)</th>
+                <th class="p-3.5 border-b border-slate-200 text-blue-800 bg-blue-50/80">Equity-Oriented Schemes</th>
+                <th class="p-3.5 border-b border-slate-200 text-emerald-800 bg-emerald-50/80">Other Schemes (Debt / Income)</th>
+                <th class="p-3.5 border-b border-slate-200 text-purple-800 bg-purple-50/80">Close-Ended Schemes</th>
+              </tr>
+            </thead>
+            <tbody class="divide-y divide-slate-200">
+              <tr class="hover:bg-slate-50/80">
+                <td class="p-3.5 font-semibold text-slate-900">First ₹500 Crores</td>
+                <td class="p-3.5 font-bold text-blue-800 bg-blue-50/30">2.25%</td>
+                <td class="p-3.5 font-bold text-emerald-800 bg-emerald-50/30">2.00%</td>
+                <td class="p-3.5 font-semibold text-purple-800 bg-purple-50/20" rowspan="7">Equity: Max 1.25%<br>Debt: Max 1.00%</td>
+              </tr>
+              <tr class="hover:bg-slate-50/80">
+                <td class="p-3.5 font-semibold text-slate-900">Next ₹250 Crores</td>
+                <td class="p-3.5 font-bold text-blue-800 bg-blue-50/30">2.00%</td>
+                <td class="p-3.5 font-bold text-emerald-800 bg-emerald-50/30">1.75%</td>
+              </tr>
+              <tr class="hover:bg-slate-50/80">
+                <td class="p-3.5 font-semibold text-slate-900">Next ₹1,250 Crores</td>
+                <td class="p-3.5 font-bold text-blue-800 bg-blue-50/30">1.75%</td>
+                <td class="p-3.5 font-bold text-emerald-800 bg-emerald-50/30">1.50%</td>
+              </tr>
+              <tr class="hover:bg-slate-50/80">
+                <td class="p-3.5 font-semibold text-slate-900">Next ₹3,000 Crores</td>
+                <td class="p-3.5 font-bold text-blue-800 bg-blue-50/30">1.60%</td>
+                <td class="p-3.5 font-bold text-emerald-800 bg-emerald-50/30">1.35%</td>
+              </tr>
+              <tr class="hover:bg-slate-50/80">
+                <td class="p-3.5 font-semibold text-slate-900">Next ₹5,000 Crores</td>
+                <td class="p-3.5 font-bold text-blue-800 bg-blue-50/30">1.50%</td>
+                <td class="p-3.5 font-bold text-emerald-800 bg-emerald-50/30">1.25%</td>
+              </tr>
+              <tr class="hover:bg-slate-50/80">
+                <td class="p-3.5 font-semibold text-slate-900">Next ₹40,000 Crores</td>
+                <td class="p-3.5 text-slate-700 bg-blue-50/10" colspan="2">Reduction of <strong>0.05%</strong> for every increase of ₹5,000 Crores of daily net assets or part thereof</td>
+              </tr>
+              <tr class="bg-slate-50 font-bold">
+                <td class="p-3.5 text-slate-900">On the Balance AUM</td>
+                <td class="p-3.5 text-blue-900 bg-blue-100/60 font-extrabold">1.05%</td>
+                <td class="p-3.5 text-emerald-900 bg-emerald-100/60 font-extrabold">0.80%</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <!-- Special Category TER Cards -->
+        <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 text-xs">
+          <div class="p-4 rounded-xl bg-blue-50/60 border border-blue-200 space-y-1.5">
+            <span class="font-bold text-blue-900 block text-sm">Index Funds & ETFs</span>
+            <p class="text-slate-700">
+              The maximum permissible TER for Index Schemes and Exchange Traded Funds (ETFs) cannot exceed <strong>1.00% of daily net assets</strong>.
+            </p>
+          </div>
+
+          <div class="p-4 rounded-xl bg-purple-50/60 border border-purple-200 space-y-1.5">
+            <span class="font-bold text-purple-900 block text-sm">Fund of Funds (FoF)</span>
+            <p class="text-slate-700">
+              Total expenses (underlying schemes + FoF management fee) cannot exceed the maximum open-ended category cap. FoF management fee itself is capped at <strong>1.00%</strong>.
+            </p>
+          </div>
+
+          <div class="p-4 rounded-xl bg-emerald-50/60 border border-emerald-200 space-y-1.5">
+            <span class="font-bold text-emerald-900 block text-sm">Daily Accrual Formula</span>
+            <p class="text-slate-700 font-mono text-[11px]">
+              Daily Expense = Daily AUM &times; (Annual TER / 365)<br>
+              Deducted daily from gross asset value before computing NAV.
+            </p>
+          </div>
+        </div>
+
+        <!-- Direct vs Regular Plan Mechanism -->
+        <div class="p-4 rounded-2xl bg-slate-50 border border-slate-200 space-y-2 text-xs sm:text-sm">
+          <h4 class="font-bold text-slate-900 flex items-center gap-2">
+            <i data-lucide="split" class="w-4 h-4 text-indigo-600"></i> Direct Plan vs. Regular Plan: The Strict TER Differential Mandate
+          </h4>
+          <p class="text-slate-600 leading-relaxed">
+            Direct Plans and Regular Plans share the <strong>exact same underlying investment portfolio</strong>. However, SEBI strictly mandates that <strong>no distribution expenses or commissions</strong> can be charged to Direct Plans.
+          </p>
+          <div class="p-3 bg-white rounded-xl border border-slate-200 text-xs text-indigo-950 font-medium">
+            <strong>Mandatory Rule:</strong> TER of Direct Plan = TER of Regular Plan &minus; Distribution Expenses / Commission.<br>
+            <em>Example:</em> If Regular Plan TER is 1.95% and distributor commission is 0.75%, the Direct Plan TER must be exactly <strong>1.20%</strong>. Because less expense is debited daily, the Direct Plan NAV compounds higher over time.
+          </div>
+        </div>
+      </section>
+
+      <!-- Section 7.4 -->
+      <section id="section-4" class="bg-white rounded-3xl p-6 sm:p-8 border border-amber-200 shadow-sm space-y-5">
+        <div class="flex items-center justify-between">
+          <div class="flex items-center gap-2 text-xs font-bold text-amber-700 uppercase tracking-wider">
+            <span class="w-2 h-2 rounded-full bg-amber-500"></span> Section 7.4 &bull; ⭐ Super High Exam Yield
+          </div>
+          <span class="text-xs px-2.5 py-1 rounded-full bg-amber-100 text-amber-800 font-bold">Permissible Additions</span>
+        </div>
+
+        <h2 class="font-display font-bold text-xl sm:text-2xl text-slate-900">Permissible Additional Expenses over Base TER & GST Accounting</h2>
+        
+        <p class="text-xs sm:text-sm text-slate-600 leading-relaxed">
+          SEBI permits AMCs to debit specific additional expenses over and above the base TER under strict regulatory ceilings. Understanding the boundaries between scheme-chargeable costs and AMC-absorbed costs is a major exam focus.
+        </p>
+
+        <div class="space-y-4 text-xs sm:text-sm">
+          <!-- Brokerage Caps Card -->
+          <div class="p-5 rounded-2xl bg-slate-50 border border-slate-200 space-y-3">
+            <div class="flex items-center justify-between">
+              <h3 class="font-bold text-slate-900 flex items-center gap-2 text-sm">
+                <i data-lucide="percent" class="w-4 h-4 text-blue-600"></i> 1. Brokerage and Transaction Costs on Trades
+              </h3>
+              <span class="text-[11px] font-bold px-2 py-0.5 rounded bg-blue-100 text-blue-800">Capped by SEBI</span>
+            </div>
+            <p class="text-slate-600">
+              Brokerage and transaction costs incurred for executing secondary market transactions may be charged to the scheme over and above the base TER up to:
+            </p>
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+              <div class="p-3.5 bg-white rounded-xl border border-blue-200">
+                <strong class="text-blue-950 block text-xs">Cash Market Transactions:</strong>
+                <span class="text-base font-extrabold text-blue-700">0.12% (12 bps)</span>
+                <p class="text-slate-500 text-[11px] mt-0.5">Maximum chargeable to the scheme on cash trades.</p>
+              </div>
+              <div class="p-3.5 bg-white rounded-xl border border-blue-200">
+                <strong class="text-blue-950 block text-xs">Derivatives Transactions:</strong>
+                <span class="text-base font-extrabold text-blue-700">0.05% (5 bps)</span>
+                <p class="text-slate-500 text-[11px] mt-0.5">Maximum chargeable to the scheme on F&O trades.</p>
+              </div>
+            </div>
+            <div class="p-3 bg-rose-50 rounded-xl border border-rose-200 text-rose-900 font-semibold text-xs">
+              ⚠️ <strong>Critical Exam Rule:</strong> Any brokerage or transaction execution fees charged by brokers exceeding 0.12% (cash) or 0.05% (derivatives) <strong>CANNOT</strong> be debited to the scheme. The excess amount MUST be borne directly by the AMC out of its own profits!
+            </div>
+          </div>
+
+          <!-- Exit Load Additional 5 bps & B-30 -->
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+            <div class="p-4 rounded-2xl bg-slate-50 border border-slate-200 space-y-2">
+              <h4 class="font-bold text-slate-900 text-xs sm:text-sm flex items-center gap-1.5">
+                <i data-lucide="plus-circle" class="w-4 h-4 text-emerald-600"></i> 2. Additional 5 bps (Exit Load Schemes)
+              </h4>
+              <p class="text-slate-600 text-xs leading-relaxed">
+                Under <strong>Regulation 52(6A)(c)</strong>, schemes that levy an exit load are permitted to charge an additional expense of up to <strong>0.05% (5 bps)</strong> of daily net assets, since 100% of collected exit load is credited back to the scheme.
+              </p>
+            </div>
+
+            <div class="p-4 rounded-2xl bg-slate-50 border border-slate-200 space-y-2">
+              <h4 class="font-bold text-slate-900 text-xs sm:text-sm flex items-center gap-1.5">
+                <i data-lucide="map-pin" class="w-4 h-4 text-amber-600"></i> 3. Additional 30 bps (B-30 Retail Inflows)
+              </h4>
+              <p class="text-slate-600 text-xs leading-relaxed">
+                Under <strong>Regulation 52(6A)(b)</strong>, AMCs could charge up to <strong>30 bps (0.30%)</strong> if B-30 retail inflows are &ge; 30% of gross inflows or &ge; 15% of average AUM (YTD). Subject to 1-year clawback. <em>(Note: Currently kept in abeyance by SEBI pending revised distributor framework).</em>
+              </p>
+            </div>
+          </div>
+
+          <!-- GST Treatment & IEAF -->
+          <div class="p-5 rounded-2xl bg-slate-50 border border-slate-200 space-y-3">
+            <h3 class="font-bold text-slate-900 flex items-center gap-2 text-sm">
+              <i data-lucide="receipt" class="w-4 h-4 text-purple-600"></i> 4. Goods & Services Tax (GST) Accounting & Investor Education
+            </h3>
+            <div class="grid grid-cols-1 sm:grid-cols-3 gap-3 text-xs">
+              <div class="p-3.5 bg-emerald-50 rounded-xl border border-emerald-200 space-y-1">
+                <span class="font-bold text-emerald-900 block">GST on Management Fees</span>
+                <p class="text-emerald-800">
+                  Can be charged to the scheme <strong>in addition to the maximum limit of TER</strong> (over and above the base TER ceiling).
+                </p>
+              </div>
+
+              <div class="p-3.5 bg-rose-50 rounded-xl border border-rose-200 space-y-1">
+                <span class="font-bold text-rose-900 block">GST on Other Operating Expenses</span>
+                <p class="text-rose-800">
+                  GST on registrar, audit, custodian, and distributor fees must be accommodated <strong>strictly within the base TER limit</strong>.
+                </p>
+              </div>
+
+              <div class="p-3.5 bg-blue-50 rounded-xl border border-blue-200 space-y-1">
+                <span class="font-bold text-blue-900 block">Investor Education Allocation</span>
+                <p class="text-blue-800">
+                  AMCs must set aside at least <strong>2 bps (0.02% p.a.)</strong> within TER for investor awareness (1 bp retained by AMC; 1 bp remitted to AMFI).
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Section 7.5 -->
+      <section id="section-5" class="bg-white rounded-3xl p-6 sm:p-8 border border-slate-200/90 shadow-sm space-y-5">
+        <div class="flex items-center justify-between">
+          <div class="flex items-center gap-2 text-xs font-bold text-slate-500 uppercase tracking-wider">
+            <span class="w-2 h-2 rounded-full bg-slate-400"></span> Section 7.5 &bull; ⚡ Fast-Track Refresher
+          </div>
+          <span class="text-xs px-2.5 py-1 rounded-full bg-slate-100 text-slate-700 font-semibold">Pricing & Loads</span>
+        </div>
+
+        <h2 class="font-display font-bold text-xl sm:text-2xl text-slate-900">Unit Pricing, Stamp Duty & Exit Load Accounting</h2>
+        
+        <p class="text-xs sm:text-sm text-slate-600 leading-relaxed">
+          Mutual fund units are bought and sold based on transparent mathematical rules governed by SEBI. Entry loads are obsolete, stamp duty is deducted upfront, and exit loads protect continuing unitholders.
+        </p>
+
+        <!-- Pricing Grid -->
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4 text-xs sm:text-sm">
+          <div class="p-5 rounded-2xl bg-slate-50 border border-slate-200 space-y-3">
+            <span class="font-bold text-blue-900 text-sm block">1. Sale Price (Subscription / Purchase)</span>
+            <p class="text-slate-600 text-xs">
+              The price an investor pays to acquire one unit from the fund house. Since SEBI abolished entry loads in August 2009:
+            </p>
+            <div class="p-3 bg-white rounded-xl border border-blue-200 font-mono text-center font-bold text-blue-950 text-xs sm:text-sm">
+              Sale Price = Applicable NAV
+            </div>
+            <div class="p-3 bg-blue-50/70 rounded-xl border border-blue-200 text-slate-700 text-xs space-y-1">
+              <strong class="text-blue-900 block">Stamp Duty on Allotment (w.e.f. July 1, 2020):</strong>
+              <p>
+                A uniform stamp duty of <strong>0.005%</strong> (5 paise per ₹1,000 or ₹5 per ₹1 Lakh) is deducted upfront from the gross purchase amount before unit allotment.
+              </p>
+            </div>
+          </div>
+
+          <div class="p-5 rounded-2xl bg-slate-50 border border-slate-200 space-y-3">
+            <span class="font-bold text-amber-900 text-sm block">2. Repurchase Price (Redemption Price)</span>
+            <p class="text-slate-600 text-xs">
+              The price per unit an investor receives from the fund house upon redeeming or liquidating units:
+            </p>
+            <div class="p-3 bg-white rounded-xl border border-amber-200 font-mono text-center font-bold text-amber-950 text-xs sm:text-sm">
+              Repurchase Price = Applicable NAV &times; (1 &minus; Exit Load %)
+            </div>
+            <div class="p-3 bg-amber-50/70 rounded-xl border border-amber-200 text-slate-700 text-xs space-y-1">
+              <strong class="text-amber-900 block">SEBI Boundary Constraint:</strong>
+              <p>
+                The repurchase price <strong>shall not be lower than 95% of NAV</strong>. (The difference between sale price and repurchase price cannot exceed 5% of sale price).
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Practical Stamp Duty & Load Calculation -->
+        <div class="p-5 rounded-2xl bg-slate-50 border border-slate-200 space-y-3 text-xs sm:text-sm">
+          <h3 class="font-bold text-slate-900 flex items-center gap-2">
+            <i data-lucide="calculator" class="w-4 h-4 text-emerald-600"></i> Numerical Example: Purchase with Stamp Duty & Redemption with Exit Load
+          </h3>
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+            <div class="p-3.5 bg-white rounded-xl border border-slate-200 space-y-1.5">
+              <span class="font-bold text-blue-900 text-xs uppercase tracking-wide block">Purchase Scenario</span>
+              <ul class="space-y-1 text-slate-600 text-xs">
+                <li>• Gross Investment: <strong>₹1,00,000.00</strong></li>
+                <li>• Stamp Duty (0.005%): <strong class="text-rose-600">&minus; ₹5.00</strong></li>
+                <li>• Net Investable Amount: <strong>₹99,995.00</strong></li>
+                <li>• Applicable NAV: <strong>₹50.0000</strong></li>
+                <li class="pt-1 border-t border-slate-200 font-bold text-blue-900">Units Allotted = ₹99,995 / 50 = 1,999.900 units</li>
+              </ul>
+            </div>
+
+            <div class="p-3.5 bg-white rounded-xl border border-slate-200 space-y-1.5">
+              <span class="font-bold text-amber-900 text-xs uppercase tracking-wide block">Redemption Scenario</span>
+              <ul class="space-y-1 text-slate-600 text-xs">
+                <li>• Units Redeemed: <strong>1,000 units</strong></li>
+                <li>• Applicable NAV: <strong>₹60.0000</strong></li>
+                <li>• Exit Load Applicable: <strong>1.00%</strong></li>
+                <li>• Repurchase Price: ₹60 &times; (1 &minus; 0.01) = <strong>₹59.4000</strong></li>
+                <li class="pt-1 border-t border-slate-200 font-bold text-emerald-800">Gross Payout = 1,000 &times; ₹59.40 = ₹59,400.00</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="p-3.5 bg-emerald-50 rounded-xl border border-emerald-200 text-emerald-950 text-xs">
+            <strong>100% Exit Load Credit Mandate:</strong> In the redemption above, the total exit load collected is ₹600 (1,000 units &times; ₹0.60). <strong>100% of this exit load (net of GST) must be credited directly back to the scheme</strong> on the same business day to preserve the wealth of continuing unitholders.
+          </div>
+        </div>
+      </section>
+
+      <!-- Section 7.6 -->
+      <section id="section-6" class="bg-white rounded-3xl p-6 sm:p-8 border border-amber-200 shadow-sm space-y-5">
+        <div class="flex items-center justify-between">
+          <div class="flex items-center gap-2 text-xs font-bold text-amber-700 uppercase tracking-wider">
+            <span class="w-2 h-2 rounded-full bg-amber-500"></span> Section 7.6 &bull; ⭐ Super High Exam Yield
+          </div>
+          <span class="text-xs px-2.5 py-1 rounded-full bg-amber-100 text-amber-800 font-bold">Specialized Instruments</span>
+        </div>
+
+        <h2 class="font-display font-bold text-xl sm:text-2xl text-slate-900">AT-1 Basel III Perpetual Bonds & Segregated Portfolio Valuation Rules</h2>
+        
+        <p class="text-xs sm:text-sm text-slate-600 leading-relaxed">
+          Specialized fixed income valuation rules are heavily tested in NISM Series V-D. Basel III Additional Tier-1 (AT-1) bonds carry equity-like loss absorption risks, while Segregated Portfolios (side-pocketing) insulate performing assets from distressed defaults.
+        </p>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4 text-xs sm:text-sm">
+          <!-- AT-1 Perpetual Bonds -->
+          <div class="p-5 rounded-2xl bg-slate-50 border border-slate-200 space-y-3">
+            <div class="flex items-center justify-between">
+              <span class="font-bold text-slate-900 text-sm">Basel III AT-1 Perpetual Bonds</span>
+              <span class="text-[11px] font-bold px-2 py-0.5 rounded bg-blue-100 text-blue-800">100-Year Rule</span>
+            </div>
+            <p class="text-slate-600 leading-relaxed text-xs">
+              AT-1 bonds are perpetual debt instruments issued by banks to meet regulatory Tier-1 capital requirements. They carry loss-absorption clauses (coupon discretionary deferral, principal write-down, or conversion to equity upon Point of Non-Viability).
+            </p>
+            <div class="p-3 bg-white rounded-xl border border-slate-200 space-y-1.5 text-xs text-slate-700">
+              <strong class="text-slate-900 block">SEBI Valuation & Exposure Norms:</strong>
+              <ul class="list-disc pl-4 space-y-1">
+                <li><strong>100-Year Maturity Convention:</strong> Must be valued to yield assuming a deemed <strong>100-year maturity</strong> from the issuance date (phased transition ended March 31, 2023).</li>
+                <li><strong>Portfolio Cap:</strong> A mutual fund scheme cannot invest more than <strong>10% of debt AUM</strong> in perpetual debt instruments.</li>
+                <li><strong>Single Issuer Cap:</strong> Maximum <strong>5% of debt AUM</strong> in perpetual bonds of a single banking issuer.</li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Segregated Portfolio -->
+          <div class="p-5 rounded-2xl bg-slate-50 border border-slate-200 space-y-3">
+            <div class="flex items-center justify-between">
+              <span class="font-bold text-slate-900 text-sm">Segregated Portfolio (Side-Pocketing)</span>
+              <span class="text-[11px] font-bold px-2 py-0.5 rounded bg-amber-100 text-amber-800">0% TER Cap</span>
+            </div>
+            <p class="text-slate-600 leading-relaxed text-xs">
+              When a credit event occurs (downgrade to below investment grade &lt; BBB- or default), the distressed asset is carved out into a Segregated Portfolio to prevent panic redemptions from hurting ongoing investors.
+            </p>
+            <div class="p-3 bg-white rounded-xl border border-slate-200 space-y-1.5 text-xs text-slate-700">
+              <strong class="text-slate-900 block">Key Regulatory Requirements:</strong>
+              <ul class="list-disc pl-4 space-y-1">
+                <li><strong>1:1 Unit Allotment:</strong> All existing unitholders receive units in the segregated portfolio in exact proportion to their holding on the credit event date.</li>
+                <li><strong>Mandatory Exchange Listing:</strong> Segregated portfolio is closed to subscriptions/redemptions and must be listed on a recognized stock exchange within <strong>10 working days</strong> for liquidity.</li>
+                <li><strong>Zero Management Fee (0% TER):</strong> AMC cannot charge any management or operating TER. Only actual legal/recovery costs can be allocated up to a maximum cap of <strong>9 bps (0.09%)</strong> upon actual realization.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Section 7.7 Interactive Quiz -->
+      <section id="interactive-quiz" class="bg-slate-900 text-white rounded-3xl p-6 sm:p-8 border border-slate-800 shadow-xl space-y-6">
+        <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 border-b border-slate-800 pb-5">
+          <div>
+            <div class="flex items-center gap-2 text-xs font-bold text-blue-400 uppercase tracking-wider mb-1">
+              <i data-lucide="check-circle-2" class="w-4 h-4"></i> Interactive Exam Assessment
+            </div>
+            <h3 class="font-display font-bold text-xl sm:text-2xl text-white">Chapter 7 Practice Quiz</h3>
+            <p class="text-xs text-slate-400 mt-1">12 Exam-grade MCQs covering NAV formulas, Seventh Schedule, TER slabs, brokerage caps, and AT-1 bond valuation rules.</p>
+          </div>
+          <div class="flex items-center gap-3">
+            <div class="text-right">
+              <span class="text-xs text-slate-400">Progress</span>
+              <div class="text-sm font-bold text-blue-400"><span id="answered-count">0</span> / 12</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Questions Container -->
+        <div id="quiz-container" class="space-y-6"></div>
+
+        <!-- Action Bar -->
+        <div class="pt-4 border-t border-slate-800 flex flex-col sm:flex-row items-center justify-between gap-4">
+          <button id="submit-quiz-btn" onclick="submitQuiz()" class="w-full sm:w-auto px-6 py-3 rounded-xl bg-blue-600 hover:bg-blue-500 font-bold text-sm shadow-lg shadow-blue-600/30 transition-all flex items-center justify-center gap-2">
+            <span>Submit Quiz & View Results</span>
+            <i data-lucide="arrow-right" class="w-4 h-4"></i>
+          </button>
+          <button id="reset-quiz-btn" onclick="resetQuiz()" class="hidden w-full sm:w-auto px-6 py-3 rounded-xl bg-slate-800 hover:bg-slate-700 text-slate-300 font-bold text-sm transition-all flex items-center justify-center gap-2">
+            <i data-lucide="rotate-ccw" class="w-4 h-4"></i>
+            <span>Retake Quiz</span>
+          </button>
+        </div>
+
+        <!-- Quiz Results -->
+        <div id="quiz-results" class="hidden p-6 rounded-2xl bg-slate-800/80 border border-slate-700 space-y-4">
+          <div class="flex items-center justify-between">
+            <h4 class="font-display font-bold text-lg text-white">Quiz Score Summary</h4>
+            <span id="result-status-badge" class="px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider"></span>
+          </div>
+          <div class="flex items-baseline gap-3">
+            <span id="score-display" class="font-display font-extrabold text-4xl text-blue-400"></span>
+            <span id="percentage-display" class="text-sm text-slate-400 font-medium"></span>
+          </div>
+          <p id="result-summary-text" class="text-xs sm:text-sm text-slate-300"></p>
+        </div>
+      </section>
+
+      <!-- Navigation Footer -->
+      <footer class="pt-6 border-t border-slate-200 flex items-center justify-between">
+        <a href="module1-ch6.html" class="flex items-center gap-2 px-4 py-2.5 rounded-xl border border-slate-200 bg-white hover:bg-slate-50 text-slate-700 font-medium text-xs transition-colors">
+          <i data-lucide="arrow-left" class="w-4 h-4"></i>
+          <span>Prev: Chapter 6 (Fund Distribution)</span>
+        </a>
+        <a href="module1-ch8.html" class="flex items-center gap-2 px-4 py-2.5 rounded-xl bg-blue-600 hover:bg-blue-700 text-white font-semibold text-xs shadow-sm transition-colors">
+          <span>Next: Chapter 8 (Taxation)</span>
+          <i data-lucide="arrow-right" class="w-4 h-4"></i>
+        </a>
+      </footer>
+
+    </div>
+  </div>
+
+  <script>
+    const questionsData = [
+      {
+        id: 1,
+        question: "Under SEBI regulations, by what time must an open-ended mutual fund scheme publish its daily NAV on the AMFI portal on a normal business day?",
+        options: [
+          { key: "a", text: "9:00 PM" },
+          { key: "b", text: "10:00 PM" },
+          { key: "c", text: "11:00 PM" },
+          { key: "d", text: "8:00 AM next day" }
+        ],
+        correct: "c",
+        explanation: "All open-ended mutual fund schemes must calculate and publish their daily NAV by 11:00 PM on the AMFI portal and the AMC website. FoFs and schemes with significant foreign investments have an extension up to 10:00 AM the next business day."
+      },
+      {
+        id: 2,
+        question: "For open-ended Equity-Oriented schemes, what is the maximum permissible base Total Expense Ratio (TER) on the first ₹500 Crores of daily net assets under Regulation 52?",
+        options: [
+          { key: "a", text: "2.00%" },
+          { key: "b", text: "2.25%" },
+          { key: "c", text: "1.75%" },
+          { key: "d", text: "2.50%" }
+        ],
+        correct: "b",
+        explanation: "Under SEBI Regulation 52, the maximum base TER for equity-oriented schemes on the first ₹500 Crores of daily net assets is 2.25% (compared to 2.00% for other schemes like debt/income funds)."
+      },
+      {
+        id: 3,
+        question: "What is the maximum permissible base Total Expense Ratio (TER) for Index Funds and Exchange Traded Funds (ETFs)?",
+        options: [
+          { key: "a", text: "0.50%" },
+          { key: "b", text: "1.00%" },
+          { key: "c", text: "1.50%" },
+          { key: "d", text: "0.75%" }
+        ],
+        correct: "b",
+        explanation: "As per SEBI regulations, the TER for Index schemes and Exchange Traded Funds (ETFs) cannot exceed 1.00% of daily net assets."
+      },
+      {
+        id: 4,
+        question: "When an AMC incurs brokerage and transaction costs for execution of trades, what maximum percentage can be charged to the scheme for cash market transactions?",
+        options: [
+          { key: "a", text: "0.05%" },
+          { key: "b", text: "0.12%" },
+          { key: "c", text: "0.20%" },
+          { key: "d", text: "0.15%" }
+        ],
+        correct: "b",
+        explanation: "AMCs can charge brokerage and transaction costs up to 0.12% (12 bps) for cash market trades and 0.05% (5 bps) for derivatives transactions over and above base TER. Any excess brokerage incurred must be absorbed directly by the AMC."
+      },
+      {
+        id: 5,
+        question: "How is Goods and Services Tax (GST) on Investment Management and Advisory Fees treated in mutual fund expense accounting?",
+        options: [
+          { key: "a", text: "It must be absorbed within the base TER limit" },
+          { key: "b", text: "It can be charged to the scheme in addition to the maximum permissible TER limit" },
+          { key: "c", text: "It is fully waived by the Ministry of Finance for mutual funds" },
+          { key: "d", text: "It is deducted from distributor trail commissions" }
+        ],
+        correct: "b",
+        explanation: "SEBI permits GST on investment management and advisory fees to be charged to the scheme in addition to the maximum permissible TER limit (over and above base TER). However, GST on all other operational expenses must stay within the base TER."
+      },
+      {
+        id: 6,
+        question: "What proportion of the exit load collected from redeeming unitholders must be credited back to the scheme's account?",
+        options: [
+          { key: "a", text: "50% (balance goes to distributor)" },
+          { key: "b", text: "75% (balance retained by AMC)" },
+          { key: "c", text: "100% (net of applicable GST)" },
+          { key: "d", text: "None, exit load is retained as AMC operational revenue" }
+        ],
+        correct: "c",
+        explanation: "SEBI regulations mandate that 100% of exit load collected must be credited back to the scheme immediately (net of GST) to protect continuing investors from liquidity dilution."
+      },
+      {
+        id: 7,
+        question: "If a scheme has a NAV of ₹50.00 and an exit load of 1.5%, what will be the repurchase (redemption) price received by the unitholder?",
+        options: [
+          { key: "a", text: "₹50.75" },
+          { key: "b", text: "₹49.25" },
+          { key: "c", text: "₹48.50" },
+          { key: "d", text: "₹49.00" }
+        ],
+        correct: "b",
+        explanation: "Repurchase Price = NAV &times; (1 - Exit Load) = 50 &times; (1 - 0.015) = 50 &times; 0.985 = ₹49.25."
+      },
+      {
+        id: 8,
+        question: "Under SEBI rules, what is the valuation convention for Basel III Additional Tier 1 (AT-1) perpetual bonds in mutual fund debt portfolios?",
+        options: [
+          { key: "a", text: "Valued assuming a 5-year call date" },
+          { key: "b", text: "Valued at historical purchase cost without MTM" },
+          { key: "c", text: "Valued using a deemed 100-year maturity convention" },
+          { key: "d", text: "Valued at par face value ₹100" }
+        ],
+        correct: "c",
+        explanation: "Under SEBI valuation guidelines, perpetual debt instruments like AT-1 Basel III bonds are valued to yield using a deemed 100-year maturity convention from their issuance date."
+      },
+      {
+        id: 9,
+        question: "What is the maximum management fee (TER) that can be charged by an AMC on a Segregated Portfolio (side-pocket)?",
+        options: [
+          { key: "a", text: "1.00%" },
+          { key: "b", text: "0.50%" },
+          { key: "c", text: "0.00% (No TER can be charged; only recovery expenses up to 9 bps permitted on realization)" },
+          { key: "d", text: "Same as the parent scheme's base TER" }
+        ],
+        correct: "c",
+        explanation: "No management fee or TER can be charged on a segregated portfolio. Only actual legal/recovery costs up to 9 bps (0.09%) can be allocated upon actual recovery."
+      },
+      {
+        id: 10,
+        question: "To how many decimal places must the NAV of Liquid, Money Market, and Debt Funds be computed and rounded off?",
+        options: [
+          { key: "a", text: "Up to 2 decimal places" },
+          { key: "b", text: "Up to 3 decimal places" },
+          { key: "c", text: "Up to 4 decimal places" },
+          { key: "d", text: "Up to 6 decimal places" }
+        ],
+        correct: "c",
+        explanation: "Liquid, money market, and debt schemes must compute and declare their NAV rounded off to at least 4 decimal places, whereas equity-oriented funds round off to 2 decimal places."
+      },
+      {
+        id: 11,
+        question: "If an investor purchases units in a Direct Plan, why does the NAV of the Direct Plan diverge and become higher than the Regular Plan over time?",
+        options: [
+          { key: "a", text: "Direct plans hold different high-return stocks" },
+          { key: "b", text: "Direct plans have lower TER because no distributor commissions are deducted" },
+          { key: "c", text: "Direct plans receive preferential tax exemptions" },
+          { key: "d", text: "Direct plans pay higher dividends directly" }
+        ],
+        correct: "b",
+        explanation: "Both Direct and Regular plans share the exact same underlying asset portfolio. Because Direct plans do not pay distributor commissions, their daily expense ratio (TER) is lower, compounding into a higher NAV."
+      },
+      {
+        id: 12,
+        question: "Who provides the daily fair valuation matrix and pricing for debt and money market securities to mutual funds in India under SEBI Seventh Schedule?",
+        options: [
+          { key: "a", text: "AMFI Valuation Council" },
+          { key: "b", text: "Reserve Bank of India (RBI)" },
+          { key: "c", text: "SEBI-appointed independent valuation agencies (CRISIL and ICRA)" },
+          { key: "d", text: "Bombay Stock Exchange (BSE)" }
+        ],
+        correct: "c",
+        explanation: "SEBI Seventh Schedule mandates that debt and money market securities are valued using daily matrix and fair valuation prices supplied by two independent valuation agencies: CRISIL and ICRA. The simple average of the two is used."
+      }
+    ];
+
+    let userAnswers = {};
+
+    function renderQuiz() {
+      const container = document.getElementById("quiz-container");
+      container.innerHTML = "";
+      questionsData.forEach((q, idx) => {
+        const qDiv = document.createElement("div");
+        qDiv.className = "p-5 rounded-2xl bg-white/5 border border-white/10 space-y-3";
+        
+        let optionsHtml = "";
+        q.options.forEach(opt => {
+          optionsHtml += `
+            <label id="label-${q.id}-${opt.key}" onclick="selectOption(${q.id}, '${opt.key}')" class="flex items-center gap-3 p-3 rounded-xl bg-white/5 hover:bg-white/10 border border-white/5 cursor-pointer text-xs sm:text-sm transition-all">
+              <input type="radio" name="q-${q.id}" value="${opt.key}" class="hidden" />
+              <div class="w-6 h-6 rounded-full border border-slate-500 flex items-center justify-center font-bold text-xs shrink-0">${opt.key.toUpperCase()}</div>
+              <span class="text-slate-300">${opt.text}</span>
+            </label>
+          `;
+        });
+
+        qDiv.innerHTML = `
+          <div class="flex items-center justify-between">
+            <span class="text-xs font-bold text-blue-400">Question ${idx + 1} of ${questionsData.length}</span>
+            <span id="badge-${q.id}" class="text-xs px-2 py-0.5 rounded-full bg-slate-800 text-slate-400">Unanswered</span>
+          </div>
+          <h4 class="font-display font-semibold text-sm sm:text-base text-white">${q.question}</h4>
+          <div class="space-y-2 mt-3">${optionsHtml}</div>
+          <div id="explanation-${q.id}" class="hidden p-4 rounded-xl text-xs sm:text-sm mt-3 space-y-1"></div>
+        `;
+        container.appendChild(qDiv);
+      });
+      lucide.createIcons();
+    }
+
+    function selectOption(qId, key) {
+      userAnswers[qId] = key;
+      document.getElementById("answered-count").innerText = Object.keys(userAnswers).length;
+      
+      const badge = document.getElementById(`badge-${qId}`);
+      if (badge) {
+        badge.innerText = "Answered";
+        badge.className = "text-xs px-2 py-0.5 rounded-full bg-blue-500/20 text-blue-300 font-medium";
+      }
+
+      const q = questionsData.find(item => item.id === qId);
+      q.options.forEach(opt => {
+        const lbl = document.getElementById(`label-${qId}-${opt.key}`);
+        if (opt.key === key) {
+          lbl.className = "flex items-center gap-3 p-3 rounded-xl bg-blue-600/30 border border-blue-400/50 cursor-pointer text-xs sm:text-sm transition-all";
+        } else {
+          lbl.className = "flex items-center gap-3 p-3 rounded-xl bg-white/5 hover:bg-white/10 border border-white/5 cursor-pointer text-xs sm:text-sm transition-all";
+        }
+      });
+    }
+
+    function submitQuiz() {
+      let score = 0;
+      questionsData.forEach(q => {
+        const selected = userAnswers[q.id];
+        const isCorrect = selected === q.correct;
+        if (isCorrect) score++;
+
+        const explanationDiv = document.getElementById(`explanation-${q.id}`);
+        explanationDiv.classList.remove("hidden");
+
+        if (isCorrect) {
+          explanationDiv.className = "p-4 rounded-xl text-xs sm:text-sm mt-3 bg-emerald-950/60 border border-emerald-600 text-emerald-200";
+          explanationDiv.innerHTML = `<div class="font-bold text-emerald-400 flex items-center gap-1.5 mb-1"><i data-lucide="check" class="w-4 h-4"></i> Correct!</div><p class="leading-relaxed">${q.explanation}</p>`;
+        } else {
+          explanationDiv.className = "p-4 rounded-xl text-xs sm:text-sm mt-3 bg-rose-950/60 border border-rose-600 text-rose-200";
+          explanationDiv.innerHTML = `<div class="font-bold text-rose-400 flex items-center gap-1.5 mb-1"><i data-lucide="x" class="w-4 h-4"></i> Incorrect (Correct Answer: ${q.correct.toUpperCase()})</div><p class="leading-relaxed">${q.explanation}</p>`;
+        }
+      });
+
+      const percentage = Math.round((score / questionsData.length) * 100);
+      const passed = percentage >= 60;
+      
+      const resultsDiv = document.getElementById("quiz-results");
+      resultsDiv.classList.remove("hidden");
+
+      const statusBadge = document.getElementById("result-status-badge");
+      statusBadge.innerText = passed ? "Status: Passed (60%+ Benchmark)" : "Status: Needs Revision";
+      statusBadge.className = passed ? "px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider bg-emerald-500 text-emerald-950" : "px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider bg-amber-500 text-amber-950";
+
+      document.getElementById("score-display").innerText = `${score} / ${questionsData.length}`;
+      document.getElementById("percentage-display").innerText = `${percentage}% Score (Passing criteria: 60%)`;
+
+      document.getElementById("result-summary-text").innerText = passed
+        ? `Great job! You scored ${percentage}%, clearing the 60% NISM passing benchmark. Review the explanations above for complete exam mastery.`
+        : `You scored ${percentage}%. Revisit the sections on Regulation 52 TER slabs, brokerage caps, and AT-1 bond valuation rules.`;
+
+      document.getElementById("submit-quiz-btn").classList.add("hidden");
+      document.getElementById("reset-quiz-btn").classList.remove("hidden");
+
+      resultsDiv.scrollIntoView({ behavior: 'smooth' });
+      lucide.createIcons();
+    }
+
+    function resetQuiz() {
+      userAnswers = {};
+      document.getElementById("answered-count").innerText = "0";
+      document.getElementById("quiz-results").classList.add("hidden");
+      document.getElementById("submit-quiz-btn").classList.remove("hidden");
+      document.getElementById("reset-quiz-btn").classList.add("hidden");
+      renderQuiz();
+      document.getElementById("interactive-quiz").scrollIntoView({ behavior: 'smooth' });
+    }
+
+    renderQuiz();
+    lucide.createIcons();
+  </script>
+</body>
+</html>

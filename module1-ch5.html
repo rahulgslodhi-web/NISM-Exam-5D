@@ -1,0 +1,1144 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Chapter 5: Scheme Related Information | NISM Series V-D Notes</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+  <script src="https://unpkg.com/lucide@latest"></script>
+
+  <!-- KaTeX for formula rendering -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.min.css">
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.min.js"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/contrib/auto-render.min.js" onload="renderMathInElement(document.body);"></script>
+
+  <!-- Global Module & Chapter Navigation Sidebar -->
+    <!-- Modern Documentation Design System & Zoom Engine -->
+  <link rel="stylesheet" href="modern-docs.css">
+  <script defer src="nav-sidebar.js"></script>
+
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+            display: ['"Space Grotesk"', 'sans-serif']
+          }
+        }
+      }
+    }
+  </script>
+</head>
+<body class="bg-slate-50 text-slate-900 min-h-screen flex flex-col selection:bg-blue-500 selection:text-white">
+
+  <!-- Header -->
+  <header class="sticky top-0 z-50 bg-white/90 backdrop-blur-md border-b border-slate-200">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
+      <div class="flex items-center gap-3">
+        <a href="module1.html" class="flex items-center gap-2 text-slate-500 hover:text-slate-900 transition-colors">
+          <div class="w-9 h-9 rounded-xl bg-slate-100 hover:bg-slate-200 flex items-center justify-center text-slate-700 transition-colors">
+            <i data-lucide="arrow-left" class="w-4 h-4"></i>
+          </div>
+        </a>
+        <div>
+          <div class="flex items-center gap-2">
+            <span class="text-xs font-bold uppercase tracking-wider text-blue-600 bg-blue-50 px-2 py-0.5 rounded">Module 1</span>
+            <span class="text-xs text-slate-400 font-medium">Chapter 5 of 12</span>
+          </div>
+          <h1 class="font-display font-bold text-base sm:text-lg text-slate-900 leading-tight">Scheme Related Information</h1>
+        </div>
+      </div>
+
+      <div class="flex items-center gap-3">
+        <span class="hidden sm:inline-flex items-center gap-1 px-3 py-1 rounded-full text-xs font-bold bg-amber-50 text-amber-700 border border-amber-200">
+          <i data-lucide="award" class="w-3.5 h-3.5"></i>
+          Weightage: 7 Marks
+        </span>
+        <a href="#interactive-quiz" class="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-lg text-xs font-bold bg-blue-600 hover:bg-blue-700 text-white shadow-sm transition-all">
+          <i data-lucide="help-circle" class="w-3.5 h-3.5"></i>
+          <span>Chapter Quiz</span>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Content Grid -->
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 grid grid-cols-1 lg:grid-cols-12 gap-8 flex-grow">
+    
+    <!-- Sidebar Navigation -->
+    <aside class="hidden lg:block lg:col-span-3">
+      <div class="sticky top-24 space-y-4">
+        <!-- Chapter Switcher (3 Module Dropdowns) -->
+        <div id="sidebar-chapter-switcher"></div>
+
+        <div class="bg-white p-5 rounded-2xl border border-slate-200 shadow-sm">
+          <h2 class="text-xs font-bold text-slate-400 uppercase tracking-wider mb-3">Chapter Navigation</h2>
+          <nav class="space-y-1 text-xs">
+            <a href="#section-1" class="block px-2.5 py-1.5 rounded-lg text-slate-600 hover:bg-slate-100 hover:text-blue-600">5.1 Mandatory Documents & Caveat Emptor</a>
+            <a href="#section-2" class="block px-2.5 py-1.5 rounded-lg text-amber-700 font-semibold bg-amber-50/70 hover:bg-amber-100">5.2 Comparative Analysis (SID vs SAI vs KIM) ⭐</a>
+            <a href="#section-3" class="block px-2.5 py-1.5 rounded-lg text-slate-600 hover:bg-slate-100 hover:text-blue-600">5.3 Document Updation Timelines</a>
+            <a href="#section-4" class="block px-2.5 py-1.5 rounded-lg text-amber-700 font-semibold bg-amber-50/70 hover:bg-amber-100">5.4 Fundamental Attribute Changes & Exit Option ⭐</a>
+            <a href="#section-5" class="block px-2.5 py-1.5 rounded-lg text-amber-700 font-semibold bg-amber-50/70 hover:bg-amber-100">5.5 6-Level Risk-o-meter & Calculation ⭐</a>
+            <a href="#section-6" class="block px-2.5 py-1.5 rounded-lg text-amber-700 font-semibold bg-amber-50/70 hover:bg-amber-100">5.6 Potential Risk Class (PRC) Matrix ⭐</a>
+            <a href="#section-7" class="block px-2.5 py-1.5 rounded-lg text-slate-600 hover:bg-slate-100 hover:text-blue-600">5.7 SIF 5-Level Risk-Band Framework</a>
+            <a href="#section-8" class="block px-2.5 py-1.5 rounded-lg text-slate-600 hover:bg-slate-100 hover:text-blue-600">5.8 Periodic Disclosures vs Factsheet</a>
+            <a href="#interactive-quiz" class="block px-2.5 py-1.5 rounded-lg text-blue-700 font-bold bg-blue-50 hover:bg-blue-100 mt-2">Practice Quiz (12 MCQs)</a>
+          </nav>
+        </div>
+
+        <div class="p-4 rounded-2xl bg-gradient-to-br from-blue-600 to-indigo-700 text-white shadow-sm text-xs space-y-2">
+          <div class="flex items-center gap-1.5 font-bold">
+            <i data-lucide="zap" class="w-4 h-4 text-amber-300"></i>
+            <span>Exam Focus Highlights</span>
+          </div>
+          <p class="text-blue-100 leading-relaxed space-y-1">
+            • <strong>KIM:</strong> Must accompany every application form.<br>
+            • <strong>SAI:</strong> Updated annually within <strong>3 months</strong> (by June 30).<br>
+            • <strong>SID & KIM:</strong> Updated half-yearly within <strong>1 month</strong>.<br>
+            • <strong>Fundamental Change:</strong> Min <strong>30 calendar days</strong> exit window at NAV with <strong>zero exit load</strong>.<br>
+            • <strong>Risk-o-meter:</strong> 6 levels (evaluated monthly, by 10th).<br>
+            • <strong>PRC Matrix:</strong> 3x3 grid for debt schemes.<br>
+            • <strong>SIF Risk-Band:</strong> 5 levels.<br>
+            • <strong>Factsheet:</strong> Voluntary best practice (NOT statutory).
+          </p>
+        </div>
+      </div>
+    </aside>
+
+    <!-- Main Notes -->
+    <div class="lg:col-span-9 space-y-8">
+
+      <!-- Section 5.1: Mandatory Scheme Documents -->
+      <section id="section-1" class="bg-white rounded-3xl p-6 sm:p-8 border border-slate-200/90 shadow-sm space-y-4">
+        <div class="flex items-center justify-between">
+          <div class="flex items-center gap-2 text-xs font-bold text-slate-500 uppercase tracking-wider">
+            <span class="w-2 h-2 rounded-full bg-slate-400"></span> Section 5.1 &bull; Fast-Track Refresher
+          </div>
+          <span class="px-2 py-0.5 rounded text-[11px] font-semibold bg-slate-100 text-slate-600">Legal Architecture</span>
+        </div>
+        <h2 class="font-display text-xl sm:text-2xl font-bold text-slate-900">Mandatory Scheme Documents & Caveat Emptor</h2>
+        
+        <p class="text-xs sm:text-sm text-slate-600 leading-relaxed">
+          Mutual fund investments operate under the common law principle of <strong>Caveat Emptor</strong> ("Let the buyer beware"). Investors are legally presumed to have read, understood, and consented to the disclosures made in the scheme offer documents. In court or before ombudsmen, an investor cannot claim ignorance if a risk factor or fee was explicitly disclosed in these statutory documents.
+        </p>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3 text-xs">
+          <div class="p-4 bg-slate-50 rounded-2xl border border-slate-200 space-y-1.5">
+            <div class="flex items-center gap-1.5 font-bold text-slate-900">
+              <i data-lucide="file-text" class="w-4 h-4 text-blue-600"></i>
+              <span>1. SID</span>
+            </div>
+            <p class="text-slate-600 leading-relaxed">
+              <strong>Scheme Information Document:</strong> Scheme-specific charter detailing investment objective, asset allocation, investment strategies, risk factors, fees, and fund managers.
+            </p>
+          </div>
+
+          <div class="p-4 bg-slate-50 rounded-2xl border border-slate-200 space-y-1.5">
+            <div class="flex items-center gap-1.5 font-bold text-slate-900">
+              <i data-lucide="shield-check" class="w-4 h-4 text-indigo-600"></i>
+              <span>2. SAI</span>
+            </div>
+            <p class="text-slate-600 leading-relaxed">
+              <strong>Statement of Additional Info:</strong> Fund-level handbook with statutory disclosures common across all schemes: sponsors, trustees, AMC, custodians, legal disputes, and valuation policies.
+            </p>
+          </div>
+
+          <div class="p-4 bg-slate-50 rounded-2xl border border-slate-200 space-y-1.5">
+            <div class="flex items-center gap-1.5 font-bold text-slate-900">
+              <i data-lucide="clipboard-list" class="w-4 h-4 text-emerald-600"></i>
+              <span>3. KIM</span>
+            </div>
+            <p class="text-slate-600 leading-relaxed">
+              <strong>Key Information Memorandum:</strong> Abridged summary of SID + SAI. By law under SEBI regulations, <strong>every application form must be accompanied by a valid KIM</strong>.
+            </p>
+          </div>
+
+          <div class="p-4 bg-slate-50 rounded-2xl border border-slate-200 space-y-1.5">
+            <div class="flex items-center gap-1.5 font-bold text-slate-900">
+              <i data-lucide="bell-plus" class="w-4 h-4 text-amber-600"></i>
+              <span>4. Addendum</span>
+            </div>
+            <p class="text-slate-600 leading-relaxed">
+              <strong>Notice cum Addendum:</strong> Legal instrument used to formally notify unitholders of interim material changes between periodic statutory updation cycles of SID, SAI, and KIM.
+            </p>
+          </div>
+        </div>
+
+        <div class="p-3.5 bg-blue-50 rounded-xl border border-blue-200 text-xs text-blue-900 flex items-start gap-2">
+          <i data-lucide="info" class="w-4 h-4 text-blue-600 flex-shrink-0 mt-0.5"></i>
+          <div>
+            <strong>Legal Equation:</strong> <em>Complete Offer Document = SID + SAI + all applicable Addenda</em>. KIM serves as the concise point-of-sale summary for prospective investors.
+          </div>
+        </div>
+      </section>
+
+      <!-- Section 5.2: Comprehensive Comparative Table (SID vs. SAI vs. KIM) -->
+      <section id="section-2" class="bg-white rounded-3xl p-6 sm:p-8 border border-amber-200 shadow-sm space-y-5">
+        <div class="flex items-center justify-between">
+          <div class="flex items-center gap-2 text-xs font-bold text-amber-700 uppercase tracking-wider">
+            <span class="w-2 h-2 rounded-full bg-amber-500"></span> Section 5.2 &bull; Super High Exam Yield
+          </div>
+          <span class="px-2.5 py-0.5 rounded-full text-xs font-extrabold bg-amber-100 text-amber-800 border border-amber-300">
+            ⭐ Comparative Analysis
+          </span>
+        </div>
+        <h2 class="font-display text-xl sm:text-2xl font-bold text-slate-900">SID vs. SAI vs. KIM: Comprehensive Regulatory Matrix</h2>
+        <p class="text-xs sm:text-sm text-slate-600 leading-relaxed">
+          SEBI prescribes the strict standardized format for SID, SAI, and KIM. Mutual fund houses cannot delete mandatory headings or alter the presentation structure. Questions on the differences between these three documents appear in every exam session.
+        </p>
+
+        <div class="overflow-x-auto rounded-2xl border border-slate-200 text-xs">
+          <table class="min-w-full text-left divide-y divide-slate-200">
+            <thead class="bg-slate-100 text-slate-800 font-bold">
+              <tr>
+                <th class="p-3.5 w-1/4">Feature / Dimension</th>
+                <th class="p-3.5 w-1/4">Scheme Information Document (SID)</th>
+                <th class="p-3.5 w-1/4">Statement of Additional Info (SAI)</th>
+                <th class="p-3.5 w-1/4">Key Information Memorandum (KIM)</th>
+              </tr>
+            </thead>
+            <tbody class="divide-y divide-slate-100 text-slate-700">
+              <tr class="hover:bg-slate-50">
+                <td class="p-3 font-bold text-slate-900">Nature & Scope</td>
+                <td class="p-3"><strong>Scheme-specific</strong> legal charter containing individual investment terms and attributes.</td>
+                <td class="p-3"><strong>Mutual Fund / AMC-wide</strong> statutory disclosures applicable to all schemes under the fund house.</td>
+                <td class="p-3"><strong>Abridged operational summary</strong> of both SID and SAI designed for day-to-day investor use.</td>
+              </tr>
+              <tr class="hover:bg-slate-50 bg-amber-50/30">
+                <td class="p-3 font-bold text-amber-950">Mandatory Application Attachment ⭐</td>
+                <td class="p-3">No. Made available upon request or on website.</td>
+                <td class="p-3">No. Made available upon request or on website.</td>
+                <td class="p-3 font-bold text-amber-900">YES. Must be mandatorily attached to every application form circulated.</td>
+              </tr>
+              <tr class="hover:bg-slate-50">
+                <td class="p-3 font-bold text-slate-900">Core Mandatory Disclosures</td>
+                <td class="p-3">
+                  • Scheme type & category<br>
+                  • Investment objective & strategy<br>
+                  • Asset allocation ranges & limits<br>
+                  • Risk factors (standard & specific)<br>
+                  • Fund manager profile & experience<br>
+                  • Benchmark & fee structure (TER)<br>
+                  • Entry / Exit loads & liquidity terms<br>
+                  • PRC Matrix (for debt) & Risk-o-meter
+                </td>
+                <td class="p-3">
+                  • Constitution of the Mutual Fund<br>
+                  • Sponsor & Trustee profiles<br>
+                  • AMC board & shareholding pattern<br>
+                  • Custodian, RTA & Auditor details<br>
+                  • Pending legal cases & litigation<br>
+                  • Valuation policies (debt & equity)<br>
+                  • Tax provisions on capital gains & IDCW<br>
+                  • Investor rights & service standards
+                </td>
+                <td class="p-3">
+                  • Summary of objective & asset allocation<br>
+                  • Benchmark & risk profile<br>
+                  • Minimum subscription & SIP amounts<br>
+                  • Plans/Options (Direct/Reg, Growth/IDCW)<br>
+                  • Historical returns (1Y, 3Y, 5Y, Inception)<br>
+                  • Fund managers & current TER<br>
+                  • Investor Grievance Officer contacts
+                </td>
+              </tr>
+              <tr class="hover:bg-slate-50 bg-amber-50/30">
+                <td class="p-3 font-bold text-amber-950">Statutory Updation Frequency ⭐</td>
+                <td class="p-3"><strong>Twice every year</strong> (half-yearly) within 1 month from end of half-year.</td>
+                <td class="p-3 font-bold text-amber-900"><strong>Annually</strong> within 3 months of financial year end (by June 30). Material changes ongoing.</td>
+                <td class="p-3"><strong>At least once in half-year</strong> within 1 month from end of half-year.</td>
+              </tr>
+              <tr class="hover:bg-slate-50">
+                <td class="p-3 font-bold text-slate-900">Signatories & Certifications</td>
+                <td class="p-3">Approved by Trustees & AMC Directors. Due Diligence Certificate signed by MD / CEO / Compliance Officer.</td>
+                <td class="p-3">Signed by Trustees and Directors of the AMC.</td>
+                <td class="p-3">Signed on behalf of the AMC by MD, CEO, or Compliance Officer.</td>
+              </tr>
+              <tr class="hover:bg-slate-50">
+                <td class="p-3 font-bold text-slate-900">SEBI Filing Requirements</td>
+                <td class="p-3">Draft SID filed with SEBI at least <strong>21 working days</strong> prior to NFO launch along with filing fee.</td>
+                <td class="p-3">Filed with SEBI at fund inception and updated copy uploaded annually.</td>
+                <td class="p-3">Filed electronically with SEBI after periodic updation.</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 text-xs">
+          <div class="p-4 rounded-2xl bg-amber-50 border border-amber-200 text-amber-950 space-y-1">
+            <strong class="font-bold flex items-center gap-1.5 text-amber-900">
+              <i data-lucide="alert-triangle" class="w-4 h-4 text-amber-600"></i>
+              SEBI 21-Working-Day Filing Rule (Draft SID):
+            </strong>
+            <p>
+              When a new scheme is conceived, the AMC files a <strong>Draft SID</strong> with SEBI along with a non-refundable filing fee. SEBI reviews the draft and provides written comments/observations within <strong>21 working days</strong>. The AMC must incorporate all SEBI comments before filing the final SID and launching the New Fund Offer (NFO).
+            </p>
+          </div>
+          <div class="p-4 rounded-2xl bg-indigo-50 border border-indigo-200 text-indigo-950 space-y-1">
+            <strong class="font-bold flex items-center gap-1.5 text-indigo-900">
+              <i data-lucide="award" class="w-4 h-4 text-indigo-600"></i>
+              Due Diligence Certificate:
+            </strong>
+            <p>
+              Along with the Draft SID, the AMC must submit a formal <strong>Due Diligence Certificate</strong> signed by the Compliance Officer, CEO, MD, or Executive Director certifying that all SEBI regulations, disclosures, guidelines, and legal prerequisites have been verified and strictly complied with.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Section 5.3: Regulatory Updation Timelines -->
+      <section id="section-3" class="bg-white rounded-3xl p-6 sm:p-8 border border-slate-200/90 shadow-sm space-y-5">
+        <div class="flex items-center justify-between">
+          <div class="flex items-center gap-2 text-xs font-bold text-slate-500 uppercase tracking-wider">
+            <span class="w-2 h-2 rounded-full bg-slate-400"></span> Section 5.3 &bull; Fast-Track Refresher
+          </div>
+          <span class="px-2 py-0.5 rounded text-[11px] font-semibold bg-slate-100 text-slate-600">Timelines & Milestones</span>
+        </div>
+        <h2 class="font-display text-xl sm:text-2xl font-bold text-slate-900">Document Updation Timelines & Lifecycle</h2>
+
+        <p class="text-xs sm:text-sm text-slate-600 leading-relaxed">
+          Regulatory disclosures must remain fresh, accurate, and reflect current market and regulatory realities. SEBI has established strict calendar-based deadlines for updating each document:
+        </p>
+
+        <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 text-xs">
+          <!-- SID Timeline -->
+          <div class="p-5 rounded-2xl bg-slate-50 border border-slate-200 space-y-2">
+            <div class="flex items-center justify-between">
+              <span class="font-bold text-slate-900 text-sm">SID Updation</span>
+              <span class="px-2 py-0.5 rounded-full bg-blue-100 text-blue-800 font-bold text-[10px]">Twice a Year</span>
+            </div>
+            <p class="text-slate-600 leading-relaxed">
+              Updated within <strong>1 month</strong> from the end of each half-year:
+            </p>
+            <ul class="list-disc list-inside text-slate-600 space-y-1">
+              <li><strong>By April 30:</strong> Based on March 31 data</li>
+              <li><strong>By October 31:</strong> Based on Sept 30 data</li>
+            </ul>
+          </div>
+
+          <!-- SAI Timeline -->
+          <div class="p-5 rounded-2xl bg-amber-50/60 border border-amber-200 space-y-2">
+            <div class="flex items-center justify-between">
+              <span class="font-bold text-amber-950 text-sm">SAI Updation ⭐</span>
+              <span class="px-2 py-0.5 rounded-full bg-amber-200 text-amber-900 font-bold text-[10px]">Annual Cycle</span>
+            </div>
+            <p class="text-amber-950 leading-relaxed">
+              Updated regularly within <strong>3 months</strong> from the end of the financial year:
+            </p>
+            <ul class="list-disc list-inside text-amber-900 space-y-1">
+              <li><strong>By June 30:</strong> Comprehensive annual statutory update</li>
+              <li><strong>Ongoing basis:</strong> Immediate updates for material changes via addenda</li>
+            </ul>
+          </div>
+
+          <!-- KIM Timeline -->
+          <div class="p-5 rounded-2xl bg-slate-50 border border-slate-200 space-y-2">
+            <div class="flex items-center justify-between">
+              <span class="font-bold text-slate-900 text-sm">KIM Updation</span>
+              <span class="px-2 py-0.5 rounded-full bg-blue-100 text-blue-800 font-bold text-[10px]">Half-Yearly</span>
+            </div>
+            <p class="text-slate-600 leading-relaxed">
+              Updated <strong>at least once in half-year</strong> within <strong>1 month</strong> from end of the half-year:
+            </p>
+            <ul class="list-disc list-inside text-slate-600 space-y-1">
+              <li><strong>By April 30 & October 31</strong></li>
+              <li>Filed electronically with SEBI and uploaded on the AMC website</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="p-4 bg-purple-50 rounded-2xl border border-purple-200 text-xs text-purple-950 flex items-start gap-2.5">
+          <i data-lucide="bookmark" class="w-4 h-4 text-purple-600 flex-shrink-0 mt-0.5"></i>
+          <div>
+            <strong>Memory Anchor for the Exam:</strong> Remember the <strong>"3-1-1 Rule"</strong>:<br>
+            • <strong>SAI: 3 months</strong> after financial year end (June 30).<br>
+            • <strong>SID: 1 month</strong> after each half-year (April 30 and October 31).<br>
+            • <strong>KIM: 1 month</strong> after each half-year (April 30 and October 31).
+          </div>
+        </div>
+      </section>
+
+      <!-- Section 5.4: Fundamental Attribute Changes & 30-Day Exit Option -->
+      <section id="section-4" class="bg-white rounded-3xl p-6 sm:p-8 border border-amber-200 shadow-sm space-y-5">
+        <div class="flex items-center justify-between">
+          <div class="flex items-center gap-2 text-xs font-bold text-amber-700 uppercase tracking-wider">
+            <span class="w-2 h-2 rounded-full bg-amber-500"></span> Section 5.4 &bull; Super High Exam Yield
+          </div>
+          <span class="px-2.5 py-0.5 rounded-full text-xs font-extrabold bg-amber-100 text-amber-800 border border-amber-300">
+            ⭐ Reg 22(e) & Exit Load Rules
+          </span>
+        </div>
+        <h2 class="font-display text-xl sm:text-2xl font-bold text-slate-900">Fundamental Attribute Changes & 30-Day Exit Option</h2>
+
+        <p class="text-xs sm:text-sm text-slate-600 leading-relaxed">
+          Under <strong>Regulation 22(e)</strong> of the SEBI (Mutual Funds) Regulations, 1996, the fundamental attributes of a scheme represent its core investment contract. No change in the fundamental attributes can be executed without following strict statutory protocols and protecting unitholder rights.
+        </p>
+
+        <!-- What Constitutes a Fundamental Attribute? -->
+        <div class="p-4 rounded-2xl bg-slate-50 border border-slate-200 space-y-3 text-xs sm:text-sm">
+          <strong class="text-slate-900 font-bold block text-sm">What Constitutes a "Fundamental Attribute"?</strong>
+          <div class="grid grid-cols-1 sm:grid-cols-3 gap-3 text-xs">
+            <div class="p-3 bg-white rounded-xl border border-slate-200">
+              <strong class="text-slate-900 block mb-1">1. Type of Scheme</strong>
+              Open-ended, Close-ended, or Interval scheme; equity fund, debt fund, hybrid fund, or solution-oriented fund.
+            </div>
+            <div class="p-3 bg-white rounded-xl border border-slate-200">
+              <strong class="text-slate-900 block mb-1">2. Investment Objective</strong>
+              Capital appreciation, regular income; core asset allocation pattern (e.g., shifting equity allocation from 65-100% to 20-50%); core investment strategy.
+            </div>
+            <div class="p-3 bg-white rounded-xl border border-slate-200">
+              <strong class="text-slate-900 block mb-1">3. Terms of Issue</strong>
+              Liquidity provisions (listing, repurchase, redemption frequency); maximum aggregate recurring expenses (TER) charged to the scheme.
+            </div>
+          </div>
+        </div>
+
+        <!-- 5-Step Process for Fundamental Attribute Change -->
+        <div class="space-y-3">
+          <h3 class="font-bold text-slate-900 text-sm">Statutory 5-Step Procedure for Making Fundamental Changes</h3>
+          <div class="grid grid-cols-1 sm:grid-cols-5 gap-2 text-xs text-center">
+            <div class="p-3 rounded-xl bg-slate-100 border border-slate-200 font-medium text-slate-700">
+              <span class="w-5 h-5 rounded-full bg-slate-300 text-slate-800 inline-flex items-center justify-center font-bold text-[10px] mb-1">1</span><br>
+              Trustee & AMC Board Approval
+            </div>
+            <div class="p-3 rounded-xl bg-slate-100 border border-slate-200 font-medium text-slate-700">
+              <span class="w-5 h-5 rounded-full bg-slate-300 text-slate-800 inline-flex items-center justify-center font-bold text-[10px] mb-1">2</span><br>
+              Prior SEBI Clearance / No-Objection
+            </div>
+            <div class="p-3 rounded-xl bg-slate-100 border border-slate-200 font-medium text-slate-700">
+              <span class="w-5 h-5 rounded-full bg-slate-300 text-slate-800 inline-flex items-center justify-center font-bold text-[10px] mb-1">3</span><br>
+              Public Notice (1 English + 1 Vernacular)
+            </div>
+            <div class="p-3 rounded-xl bg-slate-100 border border-slate-200 font-medium text-slate-700">
+              <span class="w-5 h-5 rounded-full bg-slate-300 text-slate-800 inline-flex items-center justify-center font-bold text-[10px] mb-1">4</span><br>
+              Individual Written Notice to Unitholders
+            </div>
+            <div class="p-3 rounded-xl bg-amber-100 border border-amber-300 font-bold text-amber-900">
+              <span class="w-5 h-5 rounded-full bg-amber-500 text-white inline-flex items-center justify-center font-bold text-[10px] mb-1">5</span><br>
+              ⭐ 30 Calendar Days Exit Window
+            </div>
+          </div>
+        </div>
+
+        <!-- The 30-Day Exit Window Callout -->
+        <div class="p-5 rounded-2xl bg-rose-50 border border-rose-200 text-rose-950 space-y-2 text-xs sm:text-sm">
+          <div class="flex items-center gap-2 font-bold text-rose-900 text-sm">
+            <i data-lucide="door-open" class="w-5 h-5 text-rose-600"></i>
+            <span>The 30 Calendar Days Free Exit Window (Crucial Exam Rule)</span>
+          </div>
+          <p class="leading-relaxed">
+            Whenever a fundamental attribute change is proposed, existing unitholders who disagree with the revision must be given an exit option of <strong>at least 30 calendar days</strong> to redeem their units at the <strong>prevailing Net Asset Value (NAV) WITHOUT payment of any exit load</strong>.
+          </p>
+          <div class="p-3 bg-white/80 rounded-xl border border-rose-200 text-xs text-rose-900">
+            <strong>Exemption / Non-applicability:</strong> In case of scheme mergers, unitholders of the <em>surviving/transferee scheme</em> do not get an exit window if its own fundamental attributes remain unaltered. Unitholders of the merging/transferor scheme, however, always get the 30-day exit window.
+          </div>
+        </div>
+
+        <!-- Notice cum Addendum vs Fundamental Attribute Change Comparison -->
+        <div class="p-4 rounded-2xl bg-slate-50 border border-slate-200 space-y-2 text-xs">
+          <strong class="font-bold text-slate-900 block text-sm">Notice cum Addendum vs. Fundamental Attribute Change</strong>
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+            <div class="p-3 bg-white rounded-xl border border-slate-200">
+              <strong class="text-blue-900 block mb-1">Notice cum Addendum (Non-Fundamental)</strong>
+              Used for routine modifications: change in fund manager, change in key personnel, opening/closing of official points of acceptance (OPAs), minor fee adjustments within permissible caps, change in benchmark index within the approved category. <strong>No 30-day exit window required.</strong>
+            </div>
+            <div class="p-3 bg-white rounded-xl border border-slate-200">
+              <strong class="text-rose-900 block mb-1">Fundamental Attribute Change (Reg 22(e))</strong>
+              Modifies the core investment objective, asset allocation bands, fund category, or liquidity structure. <strong>Mandatory 30-calendar-day exit window at NAV with zero exit load. Prior SEBI approval required.</strong>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Section 5.5: 6-Level Risk-o-meter & Calculation Methodology -->
+      <section id="section-5" class="bg-white rounded-3xl p-6 sm:p-8 border border-amber-200 shadow-sm space-y-6">
+        <div class="flex items-center justify-between">
+          <div class="flex items-center gap-2 text-xs font-bold text-amber-700 uppercase tracking-wider">
+            <span class="w-2 h-2 rounded-full bg-amber-500"></span> Section 5.5 &bull; Super High Exam Yield
+          </div>
+          <span class="px-2.5 py-0.5 rounded-full text-xs font-extrabold bg-amber-100 text-amber-800 border border-amber-300">
+            ⭐ Risk Labeling Framework
+          </span>
+        </div>
+        <h2 class="font-display text-xl sm:text-2xl font-bold text-slate-900">The 6-Level Risk-o-meter & Portfolio Calculation Methodology</h2>
+
+        <p class="text-xs sm:text-sm text-slate-600 leading-relaxed">
+          Effective January 1, 2021, SEBI enhanced the Risk-o-meter from 5 levels to <strong>6 levels</strong> by introducing the "Very High" risk category. The Risk-o-meter provides a visual gauge of the scheme's overall portfolio risk.
+        </p>
+
+        <!-- 6 Visual Levels Grid -->
+        <div>
+          <h3 class="font-bold text-slate-800 text-xs uppercase tracking-wider mb-2">The 6 Risk-o-meter Levels & Color Codes ⭐</h3>
+          <div class="grid grid-cols-2 sm:grid-cols-6 gap-2 text-center text-xs font-bold">
+            <div class="p-3 rounded-xl bg-emerald-50 text-emerald-900 border border-emerald-300 shadow-sm">
+              <span class="text-sm">1. Low</span><br>
+              <span class="text-[10px] font-semibold text-emerald-700">Irish Green</span><br>
+              <span class="text-[9px] font-normal text-slate-500">Score &le; 1</span>
+            </div>
+            <div class="p-3 rounded-xl bg-lime-50 text-lime-900 border border-lime-300 shadow-sm">
+              <span class="text-sm">2. Low to Mod</span><br>
+              <span class="text-[10px] font-semibold text-lime-700">Chartreuse</span><br>
+              <span class="text-[9px] font-normal text-slate-500">&gt; 1 to &le; 2</span>
+            </div>
+            <div class="p-3 rounded-xl bg-amber-50 text-amber-900 border border-amber-300 shadow-sm">
+              <span class="text-sm">3. Moderate</span><br>
+              <span class="text-[10px] font-semibold text-amber-700">Neon Yellow</span><br>
+              <span class="text-[9px] font-normal text-slate-500">&gt; 2 to &le; 3</span>
+            </div>
+            <div class="p-3 rounded-xl bg-orange-50 text-orange-900 border border-orange-300 shadow-sm">
+              <span class="text-sm">4. Mod High</span><br>
+              <span class="text-[10px] font-semibold text-orange-700">Caramel</span><br>
+              <span class="text-[9px] font-normal text-slate-500">&gt; 3 to &le; 4</span>
+            </div>
+            <div class="p-3 rounded-xl bg-orange-100 text-orange-950 border border-orange-400 shadow-sm">
+              <span class="text-sm">5. High</span><br>
+              <span class="text-[10px] font-semibold text-orange-800">Dark Orange</span><br>
+              <span class="text-[9px] font-normal text-slate-500">&gt; 4 to &le; 5</span>
+            </div>
+            <div class="p-3 rounded-xl bg-rose-50 text-rose-950 border border-rose-300 shadow-sm">
+              <span class="text-sm">6. Very High</span><br>
+              <span class="text-[10px] font-semibold text-rose-700">Red</span><br>
+              <span class="text-[9px] font-normal text-slate-500">Score &gt; 5</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Calculation Methodology Breakdown -->
+        <div class="space-y-3 text-xs sm:text-sm">
+          <h3 class="font-bold text-slate-900 text-sm">How the Portfolio Risk Score is Calculated</h3>
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 text-xs">
+            
+            <!-- Debt Component -->
+            <div class="p-4 rounded-2xl bg-slate-50 border border-slate-200 space-y-2">
+              <div class="flex items-center gap-1.5 font-bold text-slate-900">
+                <i data-lucide="layers" class="w-4 h-4 text-blue-600"></i>
+                <span>Debt Portfolio Risk Calculation</span>
+              </div>
+              <p class="text-slate-600 leading-relaxed">
+                Debt securities risk score is calculated as the simple average of three risk parameters:
+              </p>
+              <ul class="list-disc list-inside text-slate-600 space-y-1">
+                <li><strong>Credit Risk Value (CRV):</strong> AAA = 1, AA+ = 2, down to Below BBB- / Unrated = 12.</li>
+                <li><strong>Interest Rate Risk (Duration):</strong> Macaulay duration &le; 0.5 yr = 1, up to &gt; 4 yrs = 6.</li>
+                <li><strong>Liquidity Risk:</strong> Scored based on listing, credit rating, issue size, and secondary market turnover.</li>
+              </ul>
+              <div class="p-2.5 bg-white rounded-xl border border-slate-200 font-mono text-[11px] text-blue-900">
+                Debt Score = (Credit Score + Duration Score + Liquidity Score) / 3
+              </div>
+            </div>
+
+            <!-- Equity Component -->
+            <div class="p-4 rounded-2xl bg-slate-50 border border-slate-200 space-y-2">
+              <div class="flex items-center gap-1.5 font-bold text-slate-900">
+                <i data-lucide="trending-up" class="w-4 h-4 text-emerald-600"></i>
+                <span>Equity Portfolio Risk Calculation</span>
+              </div>
+              <p class="text-slate-600 leading-relaxed">
+                Equity securities risk score is calculated as the simple average of three risk parameters:
+              </p>
+              <ul class="list-disc list-inside text-slate-600 space-y-1">
+                <li><strong>Market Capitalization:</strong> Large cap = 5, Mid cap = 7, Small cap = 9.</li>
+                <li><strong>Volatility:</strong> 2-year daily annualized volatility (&le;15% = 5, up to &gt;45% = 9).</li>
+                <li><strong>Impact Cost (Liquidity):</strong> Average impact cost (&le;1% = 5, 1-2% = 7, &gt;2% = 9).</li>
+              </ul>
+              <div class="p-2.5 bg-white rounded-xl border border-slate-200 font-mono text-[11px] text-emerald-900">
+                Equity Score = (Market Cap Score + Volatility Score + Impact Cost Score) / 3
+              </div>
+            </div>
+          </div>
+
+          <!-- Overall Scheme Score -->
+          <div class="p-4 rounded-2xl bg-blue-50 border border-blue-200 text-xs sm:text-sm text-blue-950 space-y-1.5">
+            <strong class="font-bold block text-blue-900">Final Scheme Risk Score & Cash Allocation:</strong>
+            <p class="leading-relaxed">
+              The overall scheme score is the <strong>weighted average</strong> of the risk scores of all individual assets (debt, equity, derivatives, cash). Cash and cash equivalents (TREPS, reverse repo, bank balances) are assigned the lowest risk score of <strong>1.0</strong>.
+            </p>
+          </div>
+        </div>
+
+        <!-- Evaluation Cadence & Mandatory Disclosures -->
+        <div class="p-4 rounded-2xl bg-slate-50 border border-slate-200 space-y-3 text-xs">
+          <strong class="font-bold text-slate-900 block text-sm">Regulatory Cadence & Disclosure Norms ⭐</strong>
+          <div class="grid grid-cols-1 sm:grid-cols-3 gap-3">
+            <div class="p-3 bg-white rounded-xl border border-slate-200">
+              <strong class="text-slate-900 block mb-1">Monthly Evaluation</strong>
+              Evaluated on a <strong>monthly basis</strong> based on the scheme's portfolio as of the last day of the month.
+            </div>
+            <div class="p-3 bg-white rounded-xl border border-slate-200">
+              <strong class="text-slate-900 block mb-1">10th of Following Month</strong>
+              Disclosed on AMC website and AMFI website within <strong>10 days</strong> from the close of each month.
+            </div>
+            <div class="p-3 bg-white rounded-xl border border-slate-200">
+              <strong class="text-slate-900 block mb-1">Unitholder Notification</strong>
+              Any change in Risk-o-meter must be notified to unitholders via <strong>Notice cum Addendum, SMS, and Email</strong>.
+            </div>
+          </div>
+          <div class="p-3 bg-amber-50 rounded-xl border border-amber-200 text-amber-950">
+            <strong>Mandatory Benchmark Risk-o-meter:</strong> Mutual funds must publish the <strong>Risk-o-meter of the Scheme alongside the Risk-o-meter of its Benchmark</strong> on all marketing materials, monthly factsheets, KIM, and portfolio disclosures so investors can compare scheme risk vs benchmark risk!
+          </div>
+        </div>
+      </section>
+
+      <!-- Section 5.6: Potential Risk Class (PRC) Matrix -->
+      <section id="section-6" class="bg-white rounded-3xl p-6 sm:p-8 border border-amber-200 shadow-sm space-y-5">
+        <div class="flex items-center justify-between">
+          <div class="flex items-center gap-2 text-xs font-bold text-amber-700 uppercase tracking-wider">
+            <span class="w-2 h-2 rounded-full bg-amber-500"></span> Section 5.6 &bull; Super High Exam Yield
+          </div>
+          <span class="px-2.5 py-0.5 rounded-full text-xs font-extrabold bg-amber-100 text-amber-800 border border-amber-300">
+            ⭐ 3x3 Debt Matrix
+          </span>
+        </div>
+        <h2 class="font-display text-xl sm:text-2xl font-bold text-slate-900">Potential Risk Class (PRC) Matrix for Debt Schemes</h2>
+
+        <p class="text-xs sm:text-sm text-slate-600 leading-relaxed">
+          Introduced by SEBI (effective December 1, 2021), the <strong>Potential Risk Class (PRC) Matrix</strong> defines the maximum risk boundaries within which a debt mutual fund scheme is permitted to operate. While the Risk-o-meter shows current portfolio risk, the PRC matrix shows the <em>maximum potential risk</em> the fund manager is legally allowed to take.
+        </p>
+
+        <!-- 3x3 Matrix Grid -->
+        <div class="overflow-x-auto rounded-2xl border border-slate-200 text-xs">
+          <table class="min-w-full text-center divide-y divide-slate-200">
+            <thead class="bg-slate-100 text-slate-800 font-bold">
+              <tr>
+                <th class="p-3.5 text-left border-r border-slate-200" rowspan="2">
+                  Maximum Interest Rate Risk<br>
+                  <span class="text-[10px] font-normal text-slate-500">(Macaulay Duration - MD)</span>
+                </th>
+                <th class="p-3.5 border-b border-slate-200" colspan="3">
+                  Maximum Credit Risk (Credit Risk Value - CRV)
+                </th>
+              </tr>
+              <tr>
+                <th class="p-2.5 bg-emerald-50 text-emerald-900 border-r border-slate-200">
+                  Class A<br><span class="text-[10px] font-normal">(CRV &ge; 12 &bull; Lowest Risk)</span>
+                </th>
+                <th class="p-2.5 bg-amber-50 text-amber-900 border-r border-slate-200">
+                  Class B<br><span class="text-[10px] font-normal">(CRV &ge; 10 &bull; Moderate Risk)</span>
+                </th>
+                <th class="p-2.5 bg-rose-50 text-rose-900">
+                  Class C<br><span class="text-[10px] font-normal">(CRV &lt; 10 &bull; Highest Risk)</span>
+                </th>
+              </tr>
+            </thead>
+            <tbody class="divide-y divide-slate-100 text-slate-700">
+              <tr>
+                <td class="p-3 text-left font-bold text-slate-900 bg-slate-50 border-r border-slate-200">
+                  Class I (MD &le; 1 Year)<br>
+                  <span class="text-[10px] font-normal text-slate-500">Lowest Interest Rate Risk</span>
+                </td>
+                <td class="p-3 bg-emerald-50/40 border-r border-slate-200 font-bold text-emerald-950">
+                  A-I<br><span class="text-[10px] font-normal text-slate-600">Overnight / Liquid Funds</span>
+                </td>
+                <td class="p-3 bg-amber-50/30 border-r border-slate-200 font-bold text-amber-950">
+                  B-I<br><span class="text-[10px] font-normal text-slate-600">Low Duration Corporate</span>
+                </td>
+                <td class="p-3 bg-rose-50/30 font-bold text-rose-950">
+                  C-I<br><span class="text-[10px] font-normal text-slate-600">Ultra-Short Credit Risk</span>
+                </td>
+              </tr>
+              <tr>
+                <td class="p-3 text-left font-bold text-slate-900 bg-slate-50 border-r border-slate-200">
+                  Class II (MD &le; 3 Years)<br>
+                  <span class="text-[10px] font-normal text-slate-500">Moderate Interest Rate Risk</span>
+                </td>
+                <td class="p-3 bg-emerald-50/40 border-r border-slate-200 font-bold text-emerald-950">
+                  A-II<br><span class="text-[10px] font-normal text-slate-600">Short Duration G-Sec Funds</span>
+                </td>
+                <td class="p-3 bg-amber-50/30 border-r border-slate-200 font-bold text-amber-950">
+                  B-II<br><span class="text-[10px] font-normal text-slate-600">Banking & PSU / Corp Debt</span>
+                </td>
+                <td class="p-3 bg-rose-50/30 font-bold text-rose-950">
+                  C-II<br><span class="text-[10px] font-normal text-slate-600">Medium Term Credit Risk</span>
+                </td>
+              </tr>
+              <tr>
+                <td class="p-3 text-left font-bold text-slate-900 bg-slate-50 border-r border-slate-200">
+                  Class III (Any MD / &gt; 3 Years)<br>
+                  <span class="text-[10px] font-normal text-slate-500">Highest Interest Rate Risk</span>
+                </td>
+                <td class="p-3 bg-emerald-50/40 border-r border-slate-200 font-bold text-emerald-950">
+                  A-III<br><span class="text-[10px] font-normal text-slate-600">Long Duration G-Sec / Constant Mat</span>
+                </td>
+                <td class="p-3 bg-amber-50/30 border-r border-slate-200 font-bold text-amber-950">
+                  B-III<br><span class="text-[10px] font-normal text-slate-600">Dynamic Bond / Gilt Funds</span>
+                </td>
+                <td class="p-3 bg-rose-50/30 font-bold text-rose-950">
+                  C-III<br><span class="text-[10px] font-normal text-slate-600">Long Tenure Credit Risk</span>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <!-- PRC Regulatory Rules -->
+        <div class="p-4 rounded-2xl bg-amber-50 border border-amber-200 text-xs sm:text-sm text-amber-950 space-y-2">
+          <strong class="font-bold block text-amber-900 flex items-center gap-1.5">
+            <i data-lucide="shield-alert" class="w-4 h-4 text-amber-600"></i>
+            Strict Rules Regarding PRC Matrix Compliance:
+          </strong>
+          <ul class="list-disc list-inside space-y-1 leading-relaxed text-xs">
+            <li><strong>Mandatory Disclosure:</strong> The PRC cell must be prominently displayed in the SID, KIM, Factsheet, and Common Application Form.</li>
+            <li><strong>Hard Boundary:</strong> The actual portfolio duration and credit risk score can never exceed the maximum ceiling defined by the cell.</li>
+            <li><strong>Breach Curing Period:</strong> If a portfolio inadvertently breaches its PRC cell, the AMC has a <strong>30-day curing period</strong> to restore compliance.</li>
+            <li><strong>Change in PRC Cell = Fundamental Attribute Change:</strong> If an AMC wishes to permanently alter its PRC cell, it is treated as a <strong>Fundamental Attribute Change under Regulation 22(e)</strong>, requiring prior SEBI approval, Trustee approval, and a <strong>30-calendar-day exit window at NAV with zero exit load</strong>!</li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- Section 5.7: SIF 5-Level Risk-Band Framework -->
+      <section id="section-7" class="bg-white rounded-3xl p-6 sm:p-8 border border-slate-200/90 shadow-sm space-y-5">
+        <div class="flex items-center justify-between">
+          <div class="flex items-center gap-2 text-xs font-bold text-slate-500 uppercase tracking-wider">
+            <span class="w-2 h-2 rounded-full bg-slate-400"></span> Section 5.7 &bull; Fast-Track Refresher
+          </div>
+          <span class="px-2 py-0.5 rounded text-[11px] font-semibold bg-slate-100 text-slate-600">Alternative Vehicles</span>
+        </div>
+        <h2 class="font-display text-xl sm:text-2xl font-bold text-slate-900">Specialized Investment Funds (SIF) 5-Level Risk-Band</h2>
+
+        <p class="text-xs sm:text-sm text-slate-600 leading-relaxed">
+          Specialized Investment Funds (SIFs) invest in non-traditional asset classes, utilize complex financial derivatives, maintain short positions, or employ leverage. Applying the retail 6-level Risk-o-meter to SIFs could confuse retail unitholders. Therefore, SEBI mandated a distinct <strong>5-Level Risk-Band</strong> for SIFs.
+        </p>
+
+        <div class="grid grid-cols-1 sm:grid-cols-5 gap-2 text-center text-xs font-bold">
+          <div class="p-3.5 rounded-xl bg-indigo-50 text-indigo-900 border border-indigo-200">
+            Level 1<br><span class="text-[10px] font-normal text-indigo-700">Lowest Risk</span>
+          </div>
+          <div class="p-3.5 rounded-xl bg-indigo-50 text-indigo-900 border border-indigo-200">
+            Level 2<br><span class="text-[10px] font-normal text-indigo-700">Low-Moderate</span>
+          </div>
+          <div class="p-3.5 rounded-xl bg-indigo-100 text-indigo-950 border border-indigo-300">
+            Level 3<br><span class="text-[10px] font-normal text-indigo-700">Moderate</span>
+          </div>
+          <div class="p-3.5 rounded-xl bg-indigo-100 text-indigo-950 border border-indigo-300">
+            Level 4<br><span class="text-[10px] font-normal text-indigo-700">Mod-High</span>
+          </div>
+          <div class="p-3.5 rounded-xl bg-indigo-200 text-indigo-950 border border-indigo-400">
+            Level 5<br><span class="text-[10px] font-normal text-indigo-800">Highest Risk</span>
+          </div>
+        </div>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 text-xs">
+          <div class="p-4 bg-slate-50 rounded-2xl border border-slate-200 space-y-1">
+            <strong class="text-slate-900 block font-bold">Assignment & Disclosure Timelines:</strong>
+            <p class="text-slate-600 leading-relaxed">
+              Assigned at the time of New Fund Offer (NFO). Evaluated on a <strong>monthly basis</strong> and published on the AMC website within <strong>10 days</strong> from the close of each month, as well as on March 31.
+            </p>
+          </div>
+          <div class="p-4 bg-slate-50 rounded-2xl border border-slate-200 space-y-1">
+            <strong class="text-slate-900 block font-bold">Portfolio Disclosures for SIFs:</strong>
+            <p class="text-slate-600 leading-relaxed">
+              Published on the AMC and AMFI websites for <strong>every alternate month</strong> (May, July, September, November, January, March) within <strong>10 days</strong> of the month-end.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Section 5.8: Periodic Disclosures vs Fund Factsheet -->
+      <section id="section-8" class="bg-white rounded-3xl p-6 sm:p-8 border border-slate-200/90 shadow-sm space-y-5">
+        <div class="flex items-center justify-between">
+          <div class="flex items-center gap-2 text-xs font-bold text-slate-500 uppercase tracking-wider">
+            <span class="w-2 h-2 rounded-full bg-slate-400"></span> Section 5.8 &bull; Fast-Track Refresher
+          </div>
+          <span class="px-2 py-0.5 rounded text-[11px] font-semibold bg-slate-100 text-slate-600">Statutory vs Voluntary</span>
+        </div>
+        <h2 class="font-display text-xl sm:text-2xl font-bold text-slate-900">Periodic Disclosures & The Fund Factsheet</h2>
+
+        <div class="overflow-x-auto rounded-2xl border border-slate-200 text-xs">
+          <table class="min-w-full text-left divide-y divide-slate-200">
+            <thead class="bg-slate-100 text-slate-800 font-bold">
+              <tr>
+                <th class="p-3 w-1/4">Disclosure Item</th>
+                <th class="p-3 w-1/4">Statutory Frequency</th>
+                <th class="p-3 w-1/2">Key Regulatory Requirements & Timelines</th>
+              </tr>
+            </thead>
+            <tbody class="divide-y divide-slate-100 text-slate-700">
+              <tr class="hover:bg-slate-50">
+                <td class="p-3 font-bold text-slate-900">Daily NAV</td>
+                <td class="p-3">Daily (by 11:00 PM)</td>
+                <td class="p-3">Mandatory on AMC and AMFI websites. Overseas FoFs by 9:00 AM next day. Liquid/Overnight declare on all 365 days.</td>
+              </tr>
+              <tr class="hover:bg-slate-50 bg-amber-50/30">
+                <td class="p-3 font-bold text-amber-950">Daily TER & BER Notice ⭐</td>
+                <td class="p-3">Daily TER / 3-day notice</td>
+                <td class="p-3">Scheme-wise TER published daily. Any change in Base Expense Ratio (BER) requires notice <strong>at least 3 working days prior</strong> via SMS/Email & website.</td>
+              </tr>
+              <tr class="hover:bg-slate-50">
+                <td class="p-3 font-bold text-slate-900">Fortnightly Debt Portfolio</td>
+                <td class="p-3">Fortnightly (within 5 days)</td>
+                <td class="p-3">Within <strong>5 days</strong> from the end of every fortnight along with portfolio yield (YTM).</td>
+              </tr>
+              <tr class="hover:bg-slate-50">
+                <td class="p-3 font-bold text-slate-900">Monthly Portfolio</td>
+                <td class="p-3">Monthly (within 10 days)</td>
+                <td class="p-3">Full portfolio disclosed on AMC and AMFI websites within <strong>10 days</strong> of month-end.</td>
+              </tr>
+              <tr class="hover:bg-slate-50">
+                <td class="p-3 font-bold text-slate-900">Half-Yearly Financials</td>
+                <td class="p-3">Half-yearly (within 1 month)</td>
+                <td class="p-3">Unaudited financial results hosted on AMC website within <strong>1 month</strong> from end of half-year.</td>
+              </tr>
+              <tr class="hover:bg-slate-50">
+                <td class="p-3 font-bold text-slate-900">Annual Report</td>
+                <td class="p-3">Annual (within 4 months)</td>
+                <td class="p-3">Audited report or abridged annual report published within <strong>4 months</strong> of financial year end (by July 31).</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <!-- Fund Factsheet Deep Dive -->
+        <div class="p-5 rounded-2xl bg-emerald-50 border border-emerald-200 text-emerald-950 space-y-3 text-xs sm:text-sm">
+          <div class="flex items-center gap-2 font-bold text-emerald-900 text-sm">
+            <i data-lucide="info" class="w-4 h-4 text-emerald-600"></i>
+            <span>The Fund Factsheet: Non-Statutory Voluntary Best Practice ⭐</span>
+          </div>
+          <p class="leading-relaxed text-xs sm:text-sm">
+            The monthly <strong>Fund Factsheet is NOT a statutory or mandatory document</strong> under SEBI regulations. It is published voluntarily by mutual funds as an industry best practice under AMFI guidelines, typically within 10 days of month-end.
+          </p>
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 text-xs pt-1">
+            <div class="p-3 bg-white/80 rounded-xl border border-emerald-200 space-y-1">
+              <strong class="text-emerald-900 block">Equity Scheme Metrics:</strong>
+              Portfolio P/E, Price to Book (P/B), Dividend Yield, Top 10 holdings, Sector weights, Standard Deviation, Beta, Sharpe Ratio.
+            </div>
+            <div class="p-3 bg-white/80 rounded-xl border border-emerald-200 space-y-1">
+              <strong class="text-emerald-900 block">Debt Scheme Metrics:</strong>
+              Yield to Maturity (YTM), Modified Duration, Macaulay Duration, Average Maturity, Credit Rating Profile, PRC Matrix cell.
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Interactive Quiz Section -->
+      <section id="interactive-quiz" class="bg-gradient-to-br from-blue-900 to-slate-900 rounded-3xl p-6 sm:p-10 text-white shadow-xl space-y-8">
+        <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 border-b border-blue-800/80 pb-6">
+          <div>
+            <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-blue-500/20 text-blue-300 text-xs font-semibold mb-2">
+              <i data-lucide="check-circle" class="w-3.5 h-3.5 text-blue-400"></i>
+              Chapter 5 Exam Practice
+            </div>
+            <h2 class="font-display text-2xl sm:text-3xl font-bold text-white">Interactive Assessment Test</h2>
+            <p class="text-xs sm:text-sm text-slate-300 mt-1">12 high-yield MCQs covering SID, SAI, KIM, Risk-o-meter, PRC matrix & disclosure timelines.</p>
+          </div>
+          <div class="flex items-center gap-2 px-4 py-2 rounded-xl bg-white/10 backdrop-blur-md border border-white/10 text-xs font-semibold">
+            <span id="answered-count">0</span> / 12 Answered
+          </div>
+        </div>
+
+        <form id="quiz-form" class="space-y-6">
+          <div id="questions-container" class="space-y-6"></div>
+
+          <div class="pt-6 border-t border-blue-800/80 flex flex-col sm:flex-row items-center justify-between gap-4">
+            <button type="button" id="submit-quiz-btn" onclick="submitQuiz()" class="w-full sm:w-auto px-8 py-3.5 rounded-xl bg-blue-500 hover:bg-blue-400 text-white font-bold text-sm shadow-lg shadow-blue-500/30 transition-all flex items-center justify-center gap-2">
+              <i data-lucide="send" class="w-4 h-4"></i>
+              <span>Submit Assessment & View Solutions</span>
+            </button>
+            <button type="button" id="reset-quiz-btn" onclick="resetQuiz()" class="hidden w-full sm:w-auto px-6 py-3.5 rounded-xl bg-white/10 hover:bg-white/20 text-slate-200 font-semibold text-sm transition-all flex items-center justify-center gap-2">
+              <i data-lucide="rotate-ccw" class="w-4 h-4"></i>
+              <span>Retake Quiz</span>
+            </button>
+          </div>
+        </form>
+
+        <!-- Quiz Result & Scorecard -->
+        <div id="quiz-results" class="hidden rounded-2xl bg-white/10 p-6 sm:p-8 border border-white/15 backdrop-blur-lg space-y-6">
+          <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+            <div>
+              <span id="result-status-badge" class="px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider"></span>
+              <h3 class="font-display text-2xl font-bold mt-2 text-white">Your Quiz Scorecard</h3>
+            </div>
+            <div class="text-right">
+              <span id="score-display" class="font-display text-4xl font-extrabold text-blue-300">0 / 12</span>
+              <span id="percentage-display" class="block text-xs text-slate-300 mt-0.5">0%</span>
+            </div>
+          </div>
+          <p id="result-summary-text" class="text-sm text-slate-200 leading-relaxed"></p>
+        </div>
+      </section>
+
+      <!-- Bottom Navigation -->
+      <div class="flex items-center justify-between p-6 rounded-2xl bg-white border border-slate-200">
+        <a href="module1-ch4.html" class="inline-flex items-center gap-2 text-sm font-semibold text-slate-600 hover:text-slate-900">
+          <i data-lucide="arrow-left" class="w-4 h-4"></i>
+          <span>Previous: Chapter 4 (Legal Framework)</span>
+        </a>
+        <a href="module1-ch6.html" class="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl bg-blue-600 hover:bg-blue-700 text-white font-semibold text-sm shadow-sm transition-all">
+          <span>Next: Chapter 6 (Fund Distribution)</span>
+          <i data-lucide="arrow-right" class="w-4 h-4"></i>
+        </a>
+      </div>
+
+    </div>
+  </div>
+
+  <footer class="bg-slate-900 text-slate-400 py-6 border-t border-slate-800 text-center text-xs">
+    NISM Series V-D Certification Notes &bull; Module 1: Chapter 5 (Scheme Related Information)
+  </footer>
+
+  <script>
+    const questionsData = [
+      {
+        id: 1,
+        question: "Under the legal principle of 'Caveat Emptor', what constitutes the complete statutory Offer Document for a mutual fund scheme?",
+        options: [
+          { text: "Fund Factsheet and Key Information Memorandum (KIM)", key: "a" },
+          { text: "Scheme Information Document (SID) and Statement of Additional Information (SAI) along with addenda", key: "b" },
+          { text: "Trust Deed and AMC Certificate of Incorporation", key: "c" },
+          { text: "Annual Report of the AMC and Auditor's balance sheet", key: "d" }
+        ],
+        correct: "b",
+        explanation: "The complete statutory offer document consists of the Scheme Information Document (SID) containing scheme-specific features, and the Statement of Additional Information (SAI) containing mutual fund-wide statutory details, along with any addenda issued thereafter."
+      },
+      {
+        id: 2,
+        question: "Which of the following statements is TRUE regarding the format of SID, SAI, and KIM?",
+        options: [
+          { text: "AMCs are free to draft and structure these documents in any commercial marketing format they prefer", key: "a" },
+          { text: "They are prepared in the standardized format strictly prescribed by the Securities and Exchange Board of India (SEBI)", key: "b" },
+          { text: "They are designed solely in accordance with guidelines issued by the Reserve Bank of India (RBI)", key: "c" },
+          { text: "Format is decided mutually between the Fund Manager and the Statutory Auditor", key: "d" }
+        ],
+        correct: "b",
+        explanation: "SEBI prescribes strict, standardized formats for the SID, SAI, and KIM. Fund houses cannot alter the mandatory headings, change the structural order, or delete mandatory disclosures."
+      },
+      {
+        id: 3,
+        question: "By law under SEBI regulations, which document MUST be mandatorily attached to every application form circulated in the market?",
+        options: [
+          { text: "Full Scheme Information Document (SID)", key: "a" },
+          { text: "Statement of Additional Information (SAI)", key: "b" },
+          { text: "Key Information Memorandum (KIM)", key: "c" },
+          { text: "Monthly Fund Factsheet", key: "d" }
+        ],
+        correct: "c",
+        explanation: "SEBI regulations make it mandatory that every application form circulated in the market must be accompanied by a valid Key Information Memorandum (KIM)."
+      },
+      {
+        id: 4,
+        question: "Regular annual update of the Statement of Additional Information (SAI) must be completed by:",
+        options: [
+          { text: "End of 1 month of every calendar year (by January 31)", key: "a" },
+          { text: "End of 3 months of every financial year (by June 30)", key: "b" },
+          { text: "End of 6 months of every financial year (by September 30)", key: "c" },
+          { text: "Every month on the 10th day", key: "d" }
+        ],
+        correct: "b",
+        explanation: "The SAI must be updated regularly by the end of 3 months of every financial year (i.e. by June 30). Material changes (e.g. change in trustees, sponsor, key personnel) must be updated on an ongoing basis via addenda."
+      },
+      {
+        id: 5,
+        question: "How frequently must the Scheme Information Document (SID) and Key Information Memorandum (KIM) be updated?",
+        options: [
+          { text: "Annually within 3 months of financial year close", key: "a" },
+          { text: "Twice a year (half-yearly), within 1 month from the end of the respective half-year", key: "b" },
+          { text: "Every quarter within 15 calendar days", key: "c" },
+          { text: "They never need updation once issued at the time of NFO", key: "d" }
+        ],
+        correct: "b",
+        explanation: "The SID must be updated twice every year (within 1 month from the end of each half-year, i.e., by April 30 and October 31). Similarly, KIM must be updated at least once every half-year within 1 month."
+      },
+      {
+        id: 6,
+        question: "How many levels of risk are depicted in the mutual fund Risk-o-meter, and what are the color codes for the lowest and highest risk levels?",
+        options: [
+          { text: "3 levels; Green (Lowest) and Red (Highest)", key: "a" },
+          { text: "5 levels; Yellow (Lowest) and Brown (Highest)", key: "b" },
+          { text: "6 levels; Irish Green (Lowest) and Red (Highest)", key: "c" },
+          { text: "8 levels; Blue (Lowest) and Violet (Highest)", key: "d" }
+        ],
+        correct: "c",
+        explanation: "The mutual fund Risk-o-meter has 6 levels: Low (Irish Green), Low to Moderate (Chartreuse), Moderate (Neon Yellow), Moderately High (Caramel), High (Dark Orange), and Very High (Red)."
+      },
+      {
+        id: 7,
+        question: "How frequently is the Risk-o-meter evaluated, and by what date must it be disclosed following the month-end?",
+        options: [
+          { text: "Daily by 11:00 PM", key: "a" },
+          { text: "Fortnightly within 5 days", key: "b" },
+          { text: "Monthly, within 10 days from the close of the month (by 10th)", key: "c" },
+          { text: "Quarterly within 30 days", key: "d" }
+        ],
+        correct: "c",
+        explanation: "The Risk-o-meter is evaluated on a monthly basis based on the month-end portfolio and disclosed on the AMC and AMFI websites within 10 days from the close of each month (by the 10th)."
+      },
+      {
+        id: 8,
+        question: "How many levels of risk are depicted in the pictorial Risk-Band framework for Specialized Investment Funds (SIF)?",
+        options: [
+          { text: "3 levels (Low, Medium, High)", key: "a" },
+          { text: "5 levels (Level 1 Lowest to Level 5 Highest)", key: "b" },
+          { text: "6 levels (identical to the retail Risk-o-meter)", key: "c" },
+          { text: "9 levels (matching the 3x3 matrix)", key: "d" }
+        ],
+        correct: "b",
+        explanation: "To avoid confusion with standard retail mutual funds, SIFs depict risk through a distinct 5-level Risk-Band (Level 1 Lowest to Level 5 Highest)."
+      },
+      {
+        id: 9,
+        question: "The Potential Risk Class (PRC) Matrix for debt mutual fund schemes is a 3x3 grid based on which two dimensions?",
+        options: [
+          { text: "Expense Ratio and Tracking Error", key: "a" },
+          { text: "Maximum Interest Rate Risk (Macaulay Duration) and Maximum Credit Risk (Credit Risk Value)", key: "b" },
+          { text: "Fund Size (AUM) and Average Trading Volume", key: "c" },
+          { text: "Equity Exposure and Derivatives Open Interest", key: "d" }
+        ],
+        correct: "b",
+        explanation: "The PRC matrix evaluates debt schemes on a 3x3 grid based on Maximum Interest Rate Risk (Class I: MD <=1 yr, Class II: MD <=3 yrs, Class III: Any MD) and Maximum Credit Risk (Class A: CRV >=12, Class B: CRV >=10, Class C: CRV <10)."
+      },
+      {
+        id: 10,
+        question: "When an AMC proposes a change in the fundamental attributes of a scheme under Regulation 22(e), what exit option must be granted to unitholders?",
+        options: [
+          { text: "At least 15 days exit window with standard exit load applicable", key: "a" },
+          { text: "At least 30 calendar days exit window at prevailing NAV with ZERO exit load", key: "b" },
+          { text: "60 working days exit window at book value", key: "c" },
+          { text: "No exit option is required if the Trustees have approved the change", key: "d" }
+        ],
+        correct: "b",
+        explanation: "Under Regulation 22(e), unitholders who do not agree with a fundamental attribute change must be given at least 30 calendar days to redeem their units at the prevailing NAV without payment of any exit load."
+      },
+      {
+        id: 11,
+        question: "Any change in the Base Expense Ratio (BER) charged to a mutual fund scheme requires prior communication to unitholders at least:",
+        options: [
+          { text: "1 calendar day prior", key: "a" },
+          { text: "3 working days prior via SMS/Email and website", key: "b" },
+          { text: "15 calendar days prior", key: "c" },
+          { text: "30 working days prior via newspaper advertisement", key: "d" }
+        ],
+        correct: "b",
+        explanation: "Notice of any change in the Base Expense Ratio (BER) must be given to unitholders via email/SMS and posted on the AMC website at least 3 working days prior to the effective date of the change."
+      },
+      {
+        id: 12,
+        question: "Which of the following statements is TRUE regarding the Fund Factsheet?",
+        options: [
+          { text: "It is a statutory document mandated by SEBI Regulations, 1996", key: "a" },
+          { text: "It is a non-statutory document published voluntarily by AMCs as an industry best practice under AMFI guidelines", key: "b" },
+          { text: "It must be filed with SEBI at least 21 days before release", key: "c" },
+          { text: "It must accompany every mutual fund application form instead of KIM", key: "d" }
+        ],
+        correct: "b",
+        explanation: "The monthly Fund Factsheet is NOT a statutory or mandatory document. It is published voluntarily by AMCs as an industry best practice under AMFI guidelines to inform investors about portfolio metrics and performance."
+      }
+    ];
+
+    let userAnswers = {};
+
+    function renderQuiz() {
+      const container = document.getElementById("questions-container");
+      container.innerHTML = "";
+
+      questionsData.forEach((q, index) => {
+        const qDiv = document.createElement("div");
+        qDiv.className = "p-5 rounded-2xl bg-white/5 border border-white/10 space-y-4";
+        qDiv.id = `q-box-${q.id}`;
+
+        let optionsHtml = "";
+        q.options.forEach(opt => {
+          optionsHtml += `
+            <label class="flex items-center gap-3 p-3 rounded-xl bg-white/5 hover:bg-white/10 border border-white/5 cursor-pointer text-xs sm:text-sm transition-all" onclick="selectOption(${q.id}, '${opt.key}')" id="label-${q.id}-${opt.key}">
+              <input type="radio" name="question-${q.id}" value="${opt.key}" class="w-4 h-4 text-blue-500 focus:ring-0">
+              <span class="font-bold text-blue-300 w-5 uppercase">${opt.key}.</span>
+              <span class="text-slate-200">${opt.text}</span>
+            </label>
+          `;
+        });
+
+        qDiv.innerHTML = `
+          <div class="flex items-start justify-between gap-2">
+            <span class="text-xs font-bold text-blue-400 uppercase tracking-wider">Question ${index + 1} of ${questionsData.length}</span>
+            <span id="badge-${q.id}" class="text-xs px-2 py-0.5 rounded-full bg-white/5 text-slate-400 font-medium">Unanswered</span>
+          </div>
+          <h4 class="font-display font-semibold text-sm sm:text-base text-white">${q.question}</h4>
+          <div class="space-y-2 mt-3">${optionsHtml}</div>
+          <div id="explanation-${q.id}" class="hidden p-4 rounded-xl text-xs sm:text-sm mt-3 space-y-1"></div>
+        `;
+        container.appendChild(qDiv);
+      });
+      lucide.createIcons();
+    }
+
+    function selectOption(qId, key) {
+      userAnswers[qId] = key;
+      document.getElementById("answered-count").innerText = Object.keys(userAnswers).length;
+      
+      const badge = document.getElementById(`badge-${qId}`);
+      if (badge) {
+        badge.innerText = "Answered";
+        badge.className = "text-xs px-2 py-0.5 rounded-full bg-blue-500/20 text-blue-300 font-medium";
+      }
+
+      const q = questionsData.find(item => item.id === qId);
+      q.options.forEach(opt => {
+        const lbl = document.getElementById(`label-${qId}-${opt.key}`);
+        if (opt.key === key) {
+          lbl.className = "flex items-center gap-3 p-3 rounded-xl bg-blue-600/30 border border-blue-400/50 cursor-pointer text-xs sm:text-sm transition-all";
+        } else {
+          lbl.className = "flex items-center gap-3 p-3 rounded-xl bg-white/5 hover:bg-white/10 border border-white/5 cursor-pointer text-xs sm:text-sm transition-all";
+        }
+      });
+    }
+
+    function submitQuiz() {
+      let score = 0;
+      questionsData.forEach(q => {
+        const selected = userAnswers[q.id];
+        const isCorrect = selected === q.correct;
+        if (isCorrect) score++;
+
+        const explanationDiv = document.getElementById(`explanation-${q.id}`);
+        explanationDiv.classList.remove("hidden");
+
+        if (isCorrect) {
+          explanationDiv.className = "p-4 rounded-xl text-xs sm:text-sm mt-3 bg-emerald-950/60 border border-emerald-600 text-emerald-200";
+          explanationDiv.innerHTML = `<div class="font-bold text-emerald-400 flex items-center gap-1.5"><i data-lucide="check" class="w-4 h-4"></i> Correct!</div><p>${q.explanation}</p>`;
+        } else {
+          explanationDiv.className = "p-4 rounded-xl text-xs sm:text-sm mt-3 bg-rose-950/60 border border-rose-600 text-rose-200";
+          explanationDiv.innerHTML = `<div class="font-bold text-rose-400 flex items-center gap-1.5"><i data-lucide="x" class="w-4 h-4"></i> Incorrect (Correct Answer: ${q.correct.toUpperCase()})</div><p>${q.explanation}</p>`;
+        }
+      });
+
+      const percentage = Math.round((score / questionsData.length) * 100);
+      const passed = percentage >= 60;
+      
+      const resultsDiv = document.getElementById("quiz-results");
+      resultsDiv.classList.remove("hidden");
+
+      const statusBadge = document.getElementById("result-status-badge");
+      statusBadge.innerText = passed ? "Status: Passed (60%+ Benchmark)" : "Status: Needs Revision";
+      statusBadge.className = passed ? "px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider bg-emerald-500 text-emerald-950" : "px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider bg-amber-500 text-amber-950";
+
+      document.getElementById("score-display").innerText = `${score} / ${questionsData.length}`;
+      document.getElementById("percentage-display").innerText = `${percentage}% Score (Passing criteria: 60%)`;
+
+      document.getElementById("result-summary-text").innerText = passed
+        ? `Outstanding performance! You scored ${percentage}%, successfully clearing the NISM Series V-D benchmark. You demonstrate strong command over scheme documents, Risk-o-meter, PRC matrix, and statutory disclosure mandates.`
+        : `You scored ${percentage}%. Please review the 30-day exit window under Regulation 22(e), the 3x3 PRC Matrix, and document updation timelines (SAI: 3 months vs SID/KIM: 1 month) before retaking the assessment.`;
+
+      document.getElementById("submit-quiz-btn").classList.add("hidden");
+      document.getElementById("reset-quiz-btn").classList.remove("hidden");
+
+      resultsDiv.scrollIntoView({ behavior: 'smooth' });
+      lucide.createIcons();
+    }
+
+    function resetQuiz() {
+      userAnswers = {};
+      document.getElementById("answered-count").innerText = "0";
+      document.getElementById("quiz-results").classList.add("hidden");
+      document.getElementById("submit-quiz-btn").classList.remove("hidden");
+      document.getElementById("reset-quiz-btn").classList.add("hidden");
+      renderQuiz();
+      document.getElementById("interactive-quiz").scrollIntoView({ behavior: 'smooth' });
+    }
+
+    renderQuiz();
+    lucide.createIcons();
+  </script>
+</body>
+</html>

@@ -1,0 +1,1189 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Chapter 15: Introduction to Forwards & Futures | NISM Series V-D Notes</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+  <script src="https://unpkg.com/lucide@latest"></script>
+
+  <!-- KaTeX for formula rendering -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.min.css">
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.min.js"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/contrib/auto-render.min.js" onload="renderMathInElement(document.body);"></script>
+
+  <!-- Global Module & Chapter Navigation Sidebar -->
+    <!-- Modern Documentation Design System & Zoom Engine -->
+  <link rel="stylesheet" href="modern-docs.css">
+  <script defer src="nav-sidebar.js"></script>
+
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+            display: ['"Space Grotesk"', 'sans-serif']
+          }
+        }
+      }
+    }
+  </script>
+</head>
+<body class="bg-slate-50 text-slate-900 min-h-screen flex flex-col selection:bg-blue-500 selection:text-white">
+
+  <!-- Header -->
+  <header class="sticky top-0 z-50 bg-white/90 backdrop-blur-md border-b border-slate-200">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
+      <div class="flex items-center gap-3">
+        <a href="module2.html" class="flex items-center gap-2 text-slate-500 hover:text-slate-900 transition-colors">
+          <div class="w-9 h-9 rounded-xl bg-slate-100 hover:bg-slate-200 flex items-center justify-center text-slate-700 transition-colors">
+            <i data-lucide="arrow-left" class="w-4 h-4"></i>
+          </div>
+        </a>
+        <div>
+          <div class="flex items-center gap-2">
+            <span class="text-xs font-bold uppercase tracking-wider text-emerald-600 bg-emerald-50 px-2 py-0.5 rounded">Module 2</span>
+            <span class="text-xs text-slate-400 font-medium">Chapter 15 of 22</span>
+          </div>
+          <h1 class="font-display font-bold text-base sm:text-lg text-slate-900 leading-tight">Introduction to Forwards & Futures</h1>
+        </div>
+      </div>
+
+      <div class="flex items-center gap-3">
+        <span class="hidden sm:inline-flex items-center gap-1 px-3 py-1 rounded-full text-xs font-bold bg-amber-50 text-amber-700 border border-amber-200">
+          <i data-lucide="award" class="w-3.5 h-3.5"></i>
+          Weightage: 15 Marks ⭐
+        </span>
+        <a href="#interactive-quiz" class="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-lg text-xs font-bold bg-emerald-600 hover:bg-emerald-700 text-white shadow-sm transition-all">
+          <i data-lucide="help-circle" class="w-3.5 h-3.5"></i>
+          <span>Chapter Quiz</span>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Content Grid -->
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 grid grid-cols-1 lg:grid-cols-12 gap-8 flex-grow">
+    
+    <!-- Sidebar Navigation -->
+    <aside class="hidden lg:block lg:col-span-3">
+      <div class="sticky top-24 space-y-4">
+        <!-- Chapter Switcher (3 Module Dropdowns) -->
+        <div id="sidebar-chapter-switcher"></div>
+
+        <div class="bg-white p-5 rounded-2xl border border-slate-200 shadow-sm">
+          <h2 class="text-xs font-bold text-slate-400 uppercase tracking-wider mb-3">Chapter Navigation</h2>
+          <nav class="space-y-1 text-xs">
+            <a href="#section-1" class="block px-2.5 py-1.5 rounded-lg text-slate-600 hover:bg-slate-100 hover:text-emerald-600">15.1 Forwards vs. Futures Contracts ⚡</a>
+            <a href="#section-2" class="block px-2.5 py-1.5 rounded-lg text-amber-700 font-semibold bg-amber-50/70 hover:bg-amber-100">15.2 Exchange Futures Specifications ⭐</a>
+            <a href="#section-3" class="block px-2.5 py-1.5 rounded-lg text-amber-700 font-semibold bg-amber-50/70 hover:bg-amber-100">15.3 Cost of Carry Pricing Model ⭐</a>
+            <a href="#section-4" class="block px-2.5 py-1.5 rounded-lg text-amber-700 font-semibold bg-amber-50/70 hover:bg-amber-100">15.4 Basis, Contango & Convergence ⭐</a>
+            <a href="#section-5" class="block px-2.5 py-1.5 rounded-lg text-amber-700 font-semibold bg-amber-50/70 hover:bg-amber-100">15.5 Margins: SPAN, ELM & Daily MTM ⭐</a>
+            <a href="#section-6" class="block px-2.5 py-1.5 rounded-lg text-amber-700 font-semibold bg-amber-50/70 hover:bg-amber-100">15.6 Open Interest vs. Volume & Trend Matrix ⭐</a>
+            <a href="#section-7" class="block px-2.5 py-1.5 rounded-lg text-amber-700 font-semibold bg-amber-50/70 hover:bg-amber-100">15.7 Cash-and-Carry Arbitrage Dynamics ⭐</a>
+            <a href="#interactive-quiz" class="block px-2.5 py-1.5 rounded-lg text-emerald-700 font-bold bg-emerald-50 hover:bg-emerald-100 mt-2">Practice Quiz (12 MCQs)</a>
+          </nav>
+        </div>
+
+        <div class="p-4 rounded-2xl bg-gradient-to-br from-emerald-600 to-teal-700 text-white shadow-sm text-xs">
+          <div class="flex items-center gap-1.5 font-bold mb-1.5">
+            <i data-lucide="zap" class="w-4 h-4 text-amber-300"></i>
+            <span>Exam Focus Highlights</span>
+          </div>
+          <p class="text-emerald-100 leading-relaxed space-y-1">
+            &bull; <strong>Fair Futures:</strong> Discrete: S(1+rT) - D; Continuous: S &times; e<sup>(r-q)T</sup>.<br>
+            &bull; <strong>Basis:</strong> Spot - Futures. Normal = Contango (Negative).<br>
+            &bull; <strong>Convergence:</strong> At expiry, Basis = 0.<br>
+            &bull; <strong>Total Margin:</strong> SPAN (VaR 99%) + ELM (3.5%). 100% upfront.<br>
+            &bull; <strong>Settlement:</strong> Stock F&O = Physical delivery; Index = Cash.<br>
+            &bull; <strong>Contract Value Band:</strong> ₹15L &ndash; ₹20L. Tick: ₹0.05.
+          </p>
+        </div>
+      </div>
+    </aside>
+
+    <!-- Main Notes -->
+    <div class="lg:col-span-9 space-y-8">
+
+      <!-- Section 15.1 -->
+      <section id="section-1" class="bg-white rounded-3xl p-6 sm:p-8 border border-slate-200/90 shadow-sm space-y-5">
+        <div class="flex items-center justify-between">
+          <div class="flex items-center gap-2 text-xs font-bold text-slate-500 uppercase tracking-wider">
+            <span class="w-2 h-2 rounded-full bg-slate-400"></span> Section 15.1 &bull; ⚡ Fast-Track Refresher
+          </div>
+          <span class="text-xs px-2.5 py-1 rounded-full bg-slate-100 text-slate-600 font-semibold">Foundations</span>
+        </div>
+        <div>
+          <h2 class="font-display font-bold text-xl sm:text-2xl text-slate-900">Derivatives Foundations: Forward Contracts vs. Futures Contracts</h2>
+          <p class="text-sm text-slate-600 mt-1">
+            Under Section 2(ac) of the Securities Contracts (Regulation) Act (SCRA), 1956, a <strong>derivative</strong> is a financial contract whose value is derived from the price, value, or index of an underlying asset (equities, indices, commodities, currencies, or interest rates).
+          </p>
+        </div>
+
+        <!-- Quick Refresher Cards -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 text-xs">
+          <div class="p-4 rounded-2xl bg-slate-50 border border-slate-200 space-y-2">
+            <span class="font-bold text-slate-900 text-sm">Forward Contract (Bespoke OTC)</span>
+            <p class="text-slate-600 leading-relaxed">
+              A private, customized bilateral agreement negotiated directly between two parties Over-The-Counter (OTC) to buy or sell a specific quantity of an underlying asset at a pre-agreed price on a specified future date.
+            </p>
+            <div class="text-[11px] text-rose-600 font-medium">⚠️ Critical Risk: Exposed to bilateral counterparty default risk.</div>
+          </div>
+
+          <div class="p-4 rounded-2xl bg-blue-50/60 border border-blue-200 space-y-2">
+            <span class="font-bold text-blue-950 text-sm">Futures Contract (Exchange-Traded)</span>
+            <p class="text-slate-700 leading-relaxed">
+              A standardized, legally binding exchange-traded contract to buy or sell a standard lot of an asset at a predetermined price on a fixed expiration date, guaranteed by a central Clearing Corporation.
+            </p>
+            <div class="text-[11px] text-emerald-700 font-medium">✅ Key Advantage: Zero counterparty credit risk via clearing corporation novation.</div>
+          </div>
+        </div>
+
+        <!-- Comprehensive Side-by-Side Comparison Table -->
+        <div class="space-y-2">
+          <span class="font-bold text-slate-900 text-xs sm:text-sm">Detailed Side-by-Side Comparison: Forwards vs. Futures</span>
+          <div class="overflow-x-auto border border-slate-200 rounded-2xl">
+            <table class="w-full text-left text-xs border-collapse">
+              <thead>
+                <tr class="bg-slate-100 text-slate-700 font-bold border-b border-slate-200">
+                  <th class="p-3 w-1/4">Parameter</th>
+                  <th class="p-3 w-3/8 text-slate-800">Forward Contract</th>
+                  <th class="p-3 w-3/8 text-blue-900 bg-blue-50/50">Futures Contract</th>
+                </tr>
+              </thead>
+              <tbody class="divide-y divide-slate-200 text-slate-700">
+                <tr class="hover:bg-slate-50">
+                  <td class="p-3 font-semibold text-slate-900">Trading Venue</td>
+                  <td class="p-3">Over-The-Counter (OTC); negotiated directly between two private parties or through dealers.</td>
+                  <td class="p-3 bg-blue-50/30 font-medium text-blue-950">Recognized Stock Exchanges (NSE / BSE) via electronic order-matching books.</td>
+                </tr>
+                <tr class="hover:bg-slate-50">
+                  <td class="p-3 font-semibold text-slate-900">Contract Terms</td>
+                  <td class="p-3"><strong>Customized:</strong> Size, quality, expiration date, and delivery location are tailored to counterparty needs.</td>
+                  <td class="p-3 bg-blue-50/30 font-medium text-blue-950"><strong>Standardized:</strong> Exchange fixes lot size, tick size, quality grade, and expiry dates.</td>
+                </tr>
+                <tr class="hover:bg-slate-50">
+                  <td class="p-3 font-semibold text-slate-900">Counterparty Default Risk</td>
+                  <td class="p-3 text-rose-700 font-medium"><strong>High:</strong> Each party bears credit risk of default if the other party fails to perform at maturity.</td>
+                  <td class="p-3 bg-blue-50/30 text-emerald-800 font-medium"><strong>Virtually Zero:</strong> Clearing Corporation (NCL / ICCL) acts as legal counterparty to both sides (novation).</td>
+                </tr>
+                <tr class="hover:bg-slate-50">
+                  <td class="p-3 font-semibold text-slate-900">Settlement & Margining</td>
+                  <td class="p-3">Single settlement at contract maturity. Typically no interim daily Mark-to-Market (MTM) margin unless contractually agreed.</td>
+                  <td class="p-3 bg-blue-50/30 font-medium text-blue-950">Mandatory upfront margins (SPAN + ELM) and <strong>daily cash Mark-to-Market (MTM) settlement</strong>.</td>
+                </tr>
+                <tr class="hover:bg-slate-50">
+                  <td class="p-3 font-semibold text-slate-900">Liquidity & Secondary Market</td>
+                  <td class="p-3"><strong>Illiquid:</strong> Very difficult to close or transfer prior to maturity without counterparty consent.</td>
+                  <td class="p-3 bg-blue-50/30 font-medium text-blue-950"><strong>Highly Liquid:</strong> Can be squared off or rolled over instantly anytime during exchange trading hours.</td>
+                </tr>
+                <tr class="hover:bg-slate-50">
+                  <td class="p-3 font-semibold text-slate-900">Price Transparency</td>
+                  <td class="p-3">Opaque; prices and transaction terms are private and not publicly reported.</td>
+                  <td class="p-3 bg-blue-50/30 font-medium text-blue-950">Completely transparent; real-time bids, asks, execution prices, and depths disseminated publicly.</td>
+                </tr>
+                <tr class="hover:bg-slate-50">
+                  <td class="p-3 font-semibold text-slate-900">Regulatory Oversight</td>
+                  <td class="p-3">Unregulated or lightly regulated by contract law / bilateral master agreements (ISDA).</td>
+                  <td class="p-3 bg-blue-50/30 font-medium text-blue-950">Strictly regulated by <strong>SEBI</strong>, exchange bylaws, and clearing corporation risk-management rules.</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </section>
+
+      <!-- Section 15.2 -->
+      <section id="section-2" class="bg-white rounded-3xl p-6 sm:p-8 border border-amber-200 shadow-sm space-y-5">
+        <div class="flex items-center justify-between">
+          <div class="flex items-center gap-2 text-xs font-bold text-amber-700 uppercase tracking-wider">
+            <span class="w-2 h-2 rounded-full bg-amber-500"></span> Section 15.2 &bull; Super High Exam Yield ⭐
+          </div>
+          <span class="text-xs px-2.5 py-1 rounded-full bg-amber-100 text-amber-800 font-bold">Specifications & Payoffs</span>
+        </div>
+        <div>
+          <h2 class="font-display font-bold text-xl sm:text-2xl text-slate-900">Exchange Futures Contract Specifications & Settlement Framework</h2>
+          <p class="text-sm text-slate-600 mt-1 leading-relaxed">
+            Equity derivatives in India trade on the National Stock Exchange (NSE) and Bombay Stock Exchange (BSE). SEBI prescribes strict standards for eligibility, contract lot sizes, expiry dates, and settlement mechanics.
+          </p>
+        </div>
+
+        <!-- Specifications Grid -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3 text-xs">
+          <div class="p-4 rounded-2xl bg-slate-50 border border-slate-200 space-y-1">
+            <span class="font-bold text-slate-900 block text-xs">1. Tick Size</span>
+            <p class="text-slate-700 font-mono text-sm font-bold text-emerald-700">₹0.05 (5 paise)</p>
+            <p class="text-slate-500 text-[11px]">The minimum price fluctuation by which bids and asks can change for all Indian equity and index futures.</p>
+          </div>
+
+          <div class="p-4 rounded-2xl bg-slate-50 border border-slate-200 space-y-1">
+            <span class="font-bold text-slate-900 block text-xs">2. Expiry Cycle</span>
+            <p class="text-slate-700 font-mono text-sm font-bold text-blue-700">Last Thursday</p>
+            <p class="text-slate-500 text-[11px]">3 concurrent monthly contracts (Near, Next, Far month). Expires on the <strong>last Thursday</strong> of the month (or previous trading day if holiday).</p>
+          </div>
+
+          <div class="p-4 rounded-2xl bg-slate-50 border border-slate-200 space-y-1">
+            <span class="font-bold text-slate-900 block text-xs">3. Contract Value Band</span>
+            <p class="text-slate-700 font-mono text-sm font-bold text-amber-700">₹15L &ndash; ₹20L</p>
+            <p class="text-slate-500 text-[11px]">SEBI-mandated value band. Lot sizes are periodically calibrated so that (Lot Size &times; Stock Price) stays within ₹15 Lakhs to ₹20 Lakhs.</p>
+          </div>
+
+          <div class="p-4 rounded-2xl bg-slate-50 border border-slate-200 space-y-1">
+            <span class="font-bold text-slate-900 block text-xs">4. Trading Hours</span>
+            <p class="text-slate-700 font-mono text-sm font-bold text-purple-700">9:15 AM &ndash; 3:30 PM</p>
+            <p class="text-slate-500 text-[11px]">Standard trading session Monday to Friday on NSE and BSE derivative segments.</p>
+          </div>
+        </div>
+
+        <!-- Physical Delivery vs Cash Settlement -->
+        <div class="p-5 rounded-2xl bg-gradient-to-r from-blue-50 to-indigo-50 border border-blue-200 space-y-3 text-xs">
+          <div class="flex items-center gap-2">
+            <i data-lucide="package-check" class="w-4 h-4 text-blue-700"></i>
+            <span class="font-bold text-blue-950 text-sm">Settlement Framework: Stock F&O vs. Index F&O</span>
+          </div>
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <div class="bg-white p-4 rounded-xl border border-blue-200 space-y-1.5">
+              <span class="font-bold text-blue-900 block">Single Stock Futures: Compulsory Physical Delivery</span>
+              <p class="text-slate-700 leading-relaxed">
+                As per SEBI mandates, <strong>all open positions in individual stock futures and in-the-money options at contract expiry must be settled via mandatory physical delivery of shares</strong> into Demat accounts.
+              </p>
+              <ul class="list-disc pl-4 text-[11px] text-slate-600 space-y-0.5">
+                <li><strong>Long Futures:</strong> Must pay full contract value in cash and take delivery of shares into Demat.</li>
+                <li><strong>Short Futures:</strong> Must deliver equivalent shares from Demat to receive cash.</li>
+                <li>Short delivery results in stock auction with punitive penalty charges.</li>
+              </ul>
+            </div>
+
+            <div class="bg-white p-4 rounded-xl border border-blue-200 space-y-1.5">
+              <span class="font-bold text-blue-900 block">Index Futures: Cash Settlement</span>
+              <p class="text-slate-700 leading-relaxed">
+                Contracts on equity indices (Nifty 50, Nifty Bank, BSE Sensex) are <strong>100% cash settled</strong>.
+              </p>
+              <ul class="list-disc pl-4 text-[11px] text-slate-600 space-y-0.5">
+                <li>Underlying index cannot be physically delivered as a single security.</li>
+                <li>Final settlement price is the official closing index value on expiry day.</li>
+                <li>Net profit or loss is credited or debited directly to the trading account in cash on T+1.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <!-- Payoff Profiles -->
+        <div class="space-y-3 text-xs">
+          <span class="font-bold text-slate-900 text-sm">Symmetrical Linear Payoff Profiles</span>
+          <p class="text-slate-600 leading-relaxed">
+            Futures contracts have <strong>linear and symmetrical</strong> payoffs. Unlike options (which offer asymmetric rights without obligations), futures create binding obligations on both buyer and seller. Futures are a <strong>zero-sum game</strong>: the buyer's gain is the seller's exact loss, and vice-versa.
+          </p>
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+            <div class="p-4 rounded-2xl bg-emerald-50/50 border border-emerald-200 space-y-2">
+              <span class="font-bold text-emerald-950">Long Futures (Buyer) Payoff</span>
+              <div class="bg-white p-2.5 rounded-xl border border-emerald-200 font-mono text-emerald-900 font-bold text-center">
+                Long Payoff = S<sub>T</sub> - F<sub>0</sub>
+              </div>
+              <ul class="list-disc pl-4 space-y-1 text-slate-700">
+                <li><strong>Market View:</strong> Bullish (expects price to rise).</li>
+                <li><strong>Profit:</strong> Unlimited as underlying spot price (S<sub>T</sub>) rises above entry futures price (F<sub>0</sub>).</li>
+                <li><strong>Loss:</strong> Substantial / unlimited as spot price falls toward zero.</li>
+              </ul>
+            </div>
+
+            <div class="p-4 rounded-2xl bg-rose-50/50 border border-rose-200 space-y-2">
+              <span class="font-bold text-rose-950">Short Futures (Seller) Payoff</span>
+              <div class="bg-white p-2.5 rounded-xl border border-rose-200 font-mono text-rose-900 font-bold text-center">
+                Short Payoff = F<sub>0</sub> - S<sub>T</sub>
+              </div>
+              <ul class="list-disc pl-4 space-y-1 text-slate-700">
+                <li><strong>Market View:</strong> Bearish (expects price to decline).</li>
+                <li><strong>Profit:</strong> Substantial as underlying price falls toward zero.</li>
+                <li><strong>Loss:</strong> Unlimited as spot price continues to surge upward.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Section 15.3 -->
+      <section id="section-3" class="bg-white rounded-3xl p-6 sm:p-8 border border-amber-200 shadow-sm space-y-5">
+        <div class="flex items-center justify-between">
+          <div class="flex items-center gap-2 text-xs font-bold text-amber-700 uppercase tracking-wider">
+            <span class="w-2 h-2 rounded-full bg-amber-500"></span> Section 15.3 &bull; Super High Exam Yield ⭐
+          </div>
+          <span class="text-xs px-2.5 py-1 rounded-full bg-amber-100 text-amber-800 font-bold">Cost of Carry Model</span>
+        </div>
+        <div>
+          <h2 class="font-display font-bold text-xl sm:text-2xl text-slate-900">Pricing Futures: The Cost of Carry Model & Numerical Workings</h2>
+          <p class="text-sm text-slate-600 mt-1 leading-relaxed">
+            The theoretical fair price of a futures contract is governed by the <strong>Cost of Carry</strong> model. An investor can either buy the underlying stock today and store/carry it until maturity, or buy a futures contract today for future delivery. Under no-arbitrage equilibrium, both paths must yield identical economic outcomes.
+          </p>
+        </div>
+
+        <!-- Formula Cards -->
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4 text-xs">
+          <!-- Discrete Compounding -->
+          <div class="p-4 rounded-2xl bg-blue-50/60 border border-blue-200 space-y-2">
+            <div class="flex items-center justify-between">
+              <span class="font-bold text-blue-950 text-sm">1. Discrete Compounding (Stocks with Dividends)</span>
+              <span class="px-2 py-0.5 rounded bg-blue-100 text-blue-800 text-[10px] font-bold">Tested in NISM</span>
+            </div>
+            <p class="text-slate-700">When risk-free interest is quoted simply per annum and a discrete rupee dividend (D) is paid during the contract life:</p>
+            <div class="bg-white p-3 rounded-xl border border-blue-200 font-mono text-blue-950 space-y-1 font-bold">
+              <div>F = S &times; [1 + r &times; (T / 365)] - D</div>
+              <div class="text-[11px] font-normal text-slate-600 font-sans">Or: Fair Futures = Spot Price + Financing Cost - Dividend Payout</div>
+            </div>
+            <p class="text-slate-600 text-[11px]">
+              If dividend has time value from distribution date to contract expiry:
+              <br><span class="font-mono font-semibold">F = (S - PV(D)) &times; [1 + r &times; (T / 365)]</span>
+            </p>
+          </div>
+
+          <!-- Continuous Compounding -->
+          <div class="p-4 rounded-2xl bg-purple-50/60 border border-purple-200 space-y-2">
+            <div class="flex items-center justify-between">
+              <span class="font-bold text-purple-950 text-sm">2. Continuous Compounding (Indices)</span>
+              <span class="px-2 py-0.5 rounded bg-purple-100 text-purple-800 text-[10px] font-bold">Black-Scholes Standard</span>
+            </div>
+            <p class="text-slate-700">For broad market equity indices where constituents pay dividends continuously across the year at dividend yield (q):</p>
+            <div class="bg-white p-3 rounded-xl border border-purple-200 font-mono text-purple-950 space-y-1 font-bold">
+              <div>F = S &times; e<sup>(r - q)T</sup></div>
+              <div class="text-[11px] font-normal text-slate-600 font-sans">Where: S = Spot Index, r = Annualized Risk-Free Rate, q = Annualized Dividend Yield, T = Time to expiry in years.</div>
+            </div>
+            <p class="text-slate-600 text-[11px]">
+              Net Cost of Carry = (r - q). When r &gt; q, futures trade at premium. When q &gt; r, futures trade at discount.
+            </p>
+          </div>
+        </div>
+
+        <!-- Step-by-Step Worked Numerical Examples -->
+        <div class="space-y-3 text-xs">
+          <span class="font-bold text-slate-900 text-sm">Step-by-Step Numerical Walkthroughs (Direct NISM Exam Problems)</span>
+          
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <!-- Numerical Example 1 -->
+            <div class="p-4 rounded-2xl bg-slate-50 border border-slate-200 space-y-2.5">
+              <div class="flex items-center gap-1.5 font-bold text-slate-900">
+                <i data-lucide="calculator" class="w-4 h-4 text-emerald-600"></i>
+                <span>Example 1: Single Stock with Discrete Dividend</span>
+              </div>
+              <div class="text-slate-700 space-y-1">
+                <p><strong>Problem Data:</strong></p>
+                <ul class="list-disc pl-4 space-y-0.5 text-slate-600">
+                  <li>Spot Price of Tata Motors (S) = <strong>₹1,000</strong></li>
+                  <li>Risk-Free Rate (r) = <strong>7% p.a. (0.07)</strong></li>
+                  <li>Time to Maturity (T) = <strong>73 days</strong> (73 / 365 = 0.20 years)</li>
+                  <li>Dividend Expected Before Expiry (D) = <strong>₹10.00 per share</strong></li>
+                </ul>
+              </div>
+              <div class="bg-white p-3 rounded-xl border border-slate-200 font-mono text-slate-800 space-y-1 text-[11px]">
+                <div class="text-slate-500 font-sans font-semibold">Step 1: Compute Financing Carrying Cost</div>
+                <div>Interest = S &times; r &times; (T / 365) = 1,000 &times; 0.07 &times; 0.20 = <strong>₹14.00</strong></div>
+                <div class="text-slate-500 font-sans font-semibold pt-1">Step 2: Apply Cost of Carry Formula</div>
+                <div>F = Spot + Interest - Dividend</div>
+                <div>F = ₹1,000 + ₹14.00 - ₹10.00 = <strong class="text-emerald-700 text-xs">₹1,004.00</strong></div>
+              </div>
+              <p class="text-[11px] text-slate-600">
+                <strong>Interpretation:</strong> The buyer of futures saves ₹14 of interest by not deploying capital upfront, but foregoes ₹10 in dividend received by cash stock holders. Fair price reflects net addition of ₹4.
+              </p>
+            </div>
+
+            <!-- Numerical Example 2 -->
+            <div class="p-4 rounded-2xl bg-slate-50 border border-slate-200 space-y-2.5">
+              <div class="flex items-center gap-1.5 font-bold text-slate-900">
+                <i data-lucide="calculator" class="w-4 h-4 text-blue-600"></i>
+                <span>Example 2: Continuous Compounding for Index Futures</span>
+              </div>
+              <div class="text-slate-700 space-y-1">
+                <p><strong>Problem Data:</strong></p>
+                <ul class="list-disc pl-4 space-y-0.5 text-slate-600">
+                  <li>Spot Index (S) = <strong>24,000</strong></li>
+                  <li>Risk-Free Interest Rate (r) = <strong>6.5% p.a. (0.065)</strong></li>
+                  <li>Index Continuous Dividend Yield (q) = <strong>1.2% p.a. (0.012)</strong></li>
+                  <li>Time to Expiration (T) = <strong>73 days</strong> (0.20 years)</li>
+                </ul>
+              </div>
+              <div class="bg-white p-3 rounded-xl border border-slate-200 font-mono text-slate-800 space-y-1 text-[11px]">
+                <div class="text-slate-500 font-sans font-semibold">Step 1: Calculate Net Carry Rate</div>
+                <div>(r - q) = 0.065 - 0.012 = <strong>0.053 (5.3% p.a.)</strong></div>
+                <div class="text-slate-500 font-sans font-semibold pt-1">Step 2: Calculate Power Term</div>
+                <div>(r - q) &times; T = 0.053 &times; 0.20 = <strong>0.0106</strong></div>
+                <div>e<sup>0.0106</sup> &approx; <strong>1.010656</strong></div>
+                <div class="text-slate-500 font-sans font-semibold pt-1">Step 3: Calculate Fair Index Futures Price</div>
+                <div>F = 24,000 &times; 1.010656 = <strong class="text-blue-700 text-xs">24,255.75</strong></div>
+              </div>
+              <p class="text-[11px] text-slate-600">
+                <strong>Exam Rule:</strong> If dividend yield exceeds interest rate (q &gt; r), the exponent becomes negative, causing index futures to quote at a discount below spot.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Factors Influencing Futures Price -->
+        <div class="p-4 rounded-2xl bg-slate-100 border border-slate-200 text-xs space-y-2">
+          <span class="font-bold text-slate-900 block text-sm">Sensitivities: Factors Impacting Fair Futures Price</span>
+          <div class="grid grid-cols-2 sm:grid-cols-4 gap-3 text-center">
+            <div class="bg-white p-2.5 rounded-xl border border-slate-200">
+              <span class="text-slate-500 block text-[11px]">Spot Price (S) &uarr;</span>
+              <span class="font-bold text-emerald-700">Futures Price &uarr;</span>
+            </div>
+            <div class="bg-white p-2.5 rounded-xl border border-slate-200">
+              <span class="text-slate-500 block text-[11px]">Interest Rate (r) &uarr;</span>
+              <span class="font-bold text-emerald-700">Futures Price &uarr;</span>
+            </div>
+            <div class="bg-white p-2.5 rounded-xl border border-slate-200">
+              <span class="text-slate-500 block text-[11px]">Dividend (D / q) &uarr;</span>
+              <span class="font-bold text-rose-700">Futures Price &darr;</span>
+            </div>
+            <div class="bg-white p-2.5 rounded-xl border border-slate-200">
+              <span class="text-slate-500 block text-[11px]">Time to Expiry (T) &uarr;</span>
+              <span class="font-bold text-blue-700">Futures Spread &uarr;</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Section 15.4 -->
+      <section id="section-4" class="bg-white rounded-3xl p-6 sm:p-8 border border-amber-200 shadow-sm space-y-5">
+        <div class="flex items-center justify-between">
+          <div class="flex items-center gap-2 text-xs font-bold text-amber-700 uppercase tracking-wider">
+            <span class="w-2 h-2 rounded-full bg-amber-500"></span> Section 15.4 &bull; Super High Exam Yield ⭐
+          </div>
+          <span class="text-xs px-2.5 py-1 rounded-full bg-amber-100 text-amber-800 font-bold">Basis Dynamics</span>
+        </div>
+        <div>
+          <h2 class="font-display font-bold text-xl sm:text-2xl text-slate-900">Basis, Contango, Backwardation & The Law of Convergence</h2>
+          <p class="text-sm text-slate-600 mt-1 leading-relaxed">
+            Understanding the spread between cash spot prices and derivative futures prices is fundamental to hedging, spread trading, and arbitrage in financial markets.
+          </p>
+        </div>
+
+        <!-- Basis Definition Banner -->
+        <div class="p-4 rounded-2xl bg-gradient-to-r from-blue-900 to-slate-900 text-white flex flex-col sm:flex-row items-center justify-between gap-4">
+          <div>
+            <span class="text-xs uppercase tracking-wider text-blue-300 font-bold">Universal NISM Examination Standard</span>
+            <div class="font-mono text-xl sm:text-2xl font-bold mt-1 text-emerald-400">
+              Basis = Spot Price &minus; Futures Price
+            </div>
+          </div>
+          <div class="text-xs text-slate-300 max-w-xs text-right hidden sm:block">
+            Note: While some international texts define Basis as Futures - Spot, NISM explicitly tests <strong>Basis = Spot - Futures</strong>.
+          </div>
+        </div>
+
+        <!-- Contango vs Backwardation Comparison -->
+        <div class="overflow-x-auto border border-slate-200 rounded-2xl text-xs">
+          <table class="w-full text-left border-collapse">
+            <thead>
+              <tr class="bg-slate-100 text-slate-700 font-bold border-b border-slate-200">
+                <th class="p-3 w-1/5">Market State</th>
+                <th class="p-3 w-1/5">Price Relationship</th>
+                <th class="p-3 w-1/5">Sign of Basis</th>
+                <th class="p-3 w-2/5">Economic Drivers & Exam Context</th>
+              </tr>
+            </thead>
+            <tbody class="divide-y divide-slate-200 text-slate-700">
+              <tr class="hover:bg-slate-50">
+                <td class="p-3 font-bold text-blue-900">
+                  <span class="flex items-center gap-1.5"><i data-lucide="trending-up" class="w-3.5 h-3.5 text-blue-600"></i> Contango (Normal Market)</span>
+                </td>
+                <td class="p-3 font-mono font-bold text-slate-900">Futures Price &gt; Spot Price</td>
+                <td class="p-3 font-mono font-bold text-rose-600">Negative (&minus;)</td>
+                <td class="p-3 text-slate-600">
+                  Standard condition in equity markets. Reflects positive financing cost of carry. The longer the maturity, the higher the futures price. Futures curve slopes upward.
+                </td>
+              </tr>
+              <tr class="hover:bg-slate-50">
+                <td class="p-3 font-bold text-amber-900">
+                  <span class="flex items-center gap-1.5"><i data-lucide="trending-down" class="w-3.5 h-3.5 text-amber-600"></i> Backwardation (Inverted Market)</span>
+                </td>
+                <td class="p-3 font-mono font-bold text-slate-900">Futures Price &lt; Spot Price</td>
+                <td class="p-3 font-mono font-bold text-emerald-600">Positive (+)</td>
+                <td class="p-3 text-slate-600">
+                  Occurs when heavy dividends are payable before expiry, or during extreme physical supply shortages (high convenience yield), or intense bearish market sentiment. Futures curve slopes downward.
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <!-- The Law of Convergence -->
+        <div class="p-5 rounded-2xl bg-emerald-50/60 border border-emerald-200 space-y-3 text-xs">
+          <div class="flex items-center gap-2">
+            <i data-lucide="crosshair" class="w-4 h-4 text-emerald-700"></i>
+            <span class="font-bold text-emerald-950 text-sm">The Law of Convergence at Expiration</span>
+          </div>
+          <p class="text-slate-700 leading-relaxed">
+            As time moves closer to the contract expiration date (T &rarr; 0), the carrying cost (financing interest and storage) progressively diminishes. As a result, the futures price converges toward the cash spot price.
+          </p>
+          <div class="bg-white p-3 rounded-xl border border-emerald-200 font-mono text-emerald-950 font-bold text-center sm:text-left flex flex-col sm:flex-row items-center justify-between">
+            <span>On Expiration Date: Futures Price = Spot Price</span>
+            <span class="text-emerald-700">Basis = Spot &minus; Futures = 0</span>
+          </div>
+          <p class="text-slate-600 text-[11px] leading-relaxed">
+            <strong>Why Convergence is Inevitable:</strong> If the futures price differed from the spot price at the instant of expiration, arbitrageurs would execute instantaneous, zero-risk transactions (buying the cheaper and selling the dearer) until parity is strictly restored.
+          </p>
+        </div>
+
+        <!-- Calendar Spread & Basis Risk -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 text-xs">
+          <div class="p-4 rounded-2xl bg-slate-50 border border-slate-200 space-y-1.5">
+            <span class="font-bold text-slate-900">Calendar Spread</span>
+            <p class="text-slate-600 leading-relaxed">
+              Simultaneously taking a long position in one expiry month and a short position in another expiry month of the same underlying (e.g., Long Oct Futures, Short Nov Futures). Exploits changes in the cost of carry rather than outright price direction.
+            </p>
+          </div>
+          <div class="p-4 rounded-2xl bg-slate-50 border border-slate-200 space-y-1.5">
+            <span class="font-bold text-slate-900">Basis Risk</span>
+            <p class="text-slate-600 leading-relaxed">
+              The uncertainty associated with the basis changing between the time a hedge is initiated and when it is closed out. While price risk is largely eliminated through futures hedging, the hedger remains exposed to basis risk.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Section 15.5 -->
+      <section id="section-5" class="bg-white rounded-3xl p-6 sm:p-8 border border-amber-200 shadow-sm space-y-5">
+        <div class="flex items-center justify-between">
+          <div class="flex items-center gap-2 text-xs font-bold text-amber-700 uppercase tracking-wider">
+            <span class="w-2 h-2 rounded-full bg-amber-500"></span> Section 15.5 &bull; Super High Exam Yield ⭐
+          </div>
+          <span class="text-xs px-2.5 py-1 rounded-full bg-amber-100 text-amber-800 font-bold">Margining Architecture</span>
+        </div>
+        <div>
+          <h2 class="font-display font-bold text-xl sm:text-2xl text-slate-900">Risk Management: SPAN Margin, ELM & Daily MTM Cash Settlement</h2>
+          <p class="text-sm text-slate-600 mt-1 leading-relaxed">
+            To eliminate systemic risk and guarantee financial integrity across the settlement ecosystem, Indian clearing corporations employ a comprehensive, multi-tiered margining framework.
+          </p>
+        </div>
+
+        <!-- 3 Core Margin Components -->
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-4 text-xs">
+          <div class="p-4 rounded-2xl bg-blue-50/60 border border-blue-200 space-y-2">
+            <div class="flex items-center justify-between">
+              <span class="font-bold text-blue-950 text-sm">1. SPAN Margin</span>
+              <span class="px-2 py-0.5 rounded bg-blue-100 text-blue-800 text-[10px] font-bold">99% VaR</span>
+            </div>
+            <p class="text-slate-700 leading-relaxed">
+              Standard Portfolio Analysis of Risk (SPAN) was developed by the Chicago Mercantile Exchange (CME) and adopted in India. It simulates <strong>16 different market risk scenarios</strong> of underlying price moves and volatility shifts to cover <strong>99% 1-day Value-at-Risk (VaR)</strong> across the entire portfolio.
+            </p>
+          </div>
+
+          <div class="p-4 rounded-2xl bg-purple-50/60 border border-purple-200 space-y-2">
+            <div class="flex items-center justify-between">
+              <span class="font-bold text-purple-950 text-sm">2. Extreme Loss Margin (ELM)</span>
+              <span class="px-2 py-0.5 rounded bg-purple-100 text-purple-800 text-[10px] font-bold">3.5% Buffer</span>
+            </div>
+            <p class="text-slate-700 leading-relaxed">
+              A prudential cushion mandated by SEBI (fixed at a minimum of <strong>3.5% of gross contract value</strong> for equity derivatives). It cushions against catastrophic tail-risk events and black swan market shocks exceeding normal 99% VaR.
+            </p>
+          </div>
+
+          <div class="p-4 rounded-2xl bg-emerald-50/60 border border-emerald-200 space-y-2">
+            <div class="flex items-center justify-between">
+              <span class="font-bold text-emerald-950 text-sm">3. Daily MTM Settlement</span>
+              <span class="px-2 py-0.5 rounded bg-emerald-100 text-emerald-800 text-[10px] font-bold">Cash T+1</span>
+            </div>
+            <p class="text-slate-700 leading-relaxed">
+              At the close of each trading day, all open futures positions are revalued to the official <strong>Daily Settlement Price</strong> (volume-weighted average price of the last 30 minutes). Daily cash profits are credited, and daily cash losses are debited on <strong>T+1 morning</strong>.
+            </p>
+          </div>
+        </div>
+
+        <!-- Regulatory Upfront Mandate Box -->
+        <div class="p-4 rounded-2xl bg-amber-50 border border-amber-200 text-xs text-amber-950 space-y-2">
+          <div class="flex items-center gap-1.5 font-bold text-sm text-amber-900">
+            <i data-lucide="alert-triangle" class="w-4 h-4 text-amber-600"></i>
+            <span>SEBI Upfront Margin Collection Mandate & Intraday Peak Snapshots</span>
+          </div>
+          <p class="leading-relaxed">
+            Trading members must collect <strong>100% of Total Initial Margin (SPAN + ELM) upfront</strong> from clients before placing any futures order. The clearing corporation records <strong>4 random intraday snapshots</strong> of client positions to verify peak margin adequacy. Any shortfall results in progressive financial penalties levied directly on the broker.
+          </p>
+          <div class="font-mono bg-white p-2 rounded-xl border border-amber-200 text-slate-800 font-bold">
+            Total Initial Margin Mandate = SPAN Margin (Portfolio VaR) + Extreme Loss Margin (ELM 3.5%)
+          </div>
+        </div>
+
+        <!-- 3-Day MTM Worked Tracking Table -->
+        <div class="space-y-2 text-xs">
+          <span class="font-bold text-slate-900 text-sm">Comprehensive 3-Day Daily MTM Settlement Numerical Tracking</span>
+          <p class="text-slate-600">
+            <strong>Scenario:</strong> Trader enters a <strong>Long Futures position</strong> of 1 lot (500 shares) of XYZ Ltd at an entry price of <strong>₹400</strong> on Monday morning.
+          </p>
+          <div class="overflow-x-auto border border-slate-200 rounded-2xl">
+            <table class="w-full text-left border-collapse">
+              <thead>
+                <tr class="bg-slate-100 text-slate-700 font-bold border-b border-slate-200">
+                  <th class="p-2.5">Trading Day</th>
+                  <th class="p-2.5">Reference Price</th>
+                  <th class="p-2.5">Closing Settlement Price</th>
+                  <th class="p-2.5">Per-Share Change</th>
+                  <th class="p-2.5">Daily MTM Cash Flow (500 shares)</th>
+                  <th class="p-2.5">Cumulative P&L</th>
+                </tr>
+              </thead>
+              <tbody class="divide-y divide-slate-200 text-slate-700">
+                <tr class="hover:bg-slate-50">
+                  <td class="p-2.5 font-semibold">Day 1 (Mon)</td>
+                  <td class="p-2.5">₹400 (Entry)</td>
+                  <td class="p-2.5 font-mono font-bold">₹392</td>
+                  <td class="p-2.5 font-mono text-rose-600 font-semibold">&minus;₹8.00</td>
+                  <td class="p-2.5 font-mono text-rose-700 font-bold bg-rose-50/50">&minus;₹4,000 (Cash Debited T+1)</td>
+                  <td class="p-2.5 font-mono text-rose-700 font-bold">&minus;₹4,000</td>
+                </tr>
+                <tr class="hover:bg-slate-50">
+                  <td class="p-2.5 font-semibold">Day 2 (Tue)</td>
+                  <td class="p-2.5">₹392 (Prev Day)</td>
+                  <td class="p-2.5 font-mono font-bold">₹405</td>
+                  <td class="p-2.5 font-mono text-emerald-600 font-semibold">+₹13.00</td>
+                  <td class="p-2.5 font-mono text-emerald-700 font-bold bg-emerald-50/50">+₹6,500 (Cash Credited T+1)</td>
+                  <td class="p-2.5 font-mono text-emerald-700 font-bold">+₹2,500</td>
+                </tr>
+                <tr class="hover:bg-slate-50">
+                  <td class="p-2.5 font-semibold">Day 3 (Wed)</td>
+                  <td class="p-2.5">₹405 (Prev Day)</td>
+                  <td class="p-2.5 font-mono font-bold">₹402</td>
+                  <td class="p-2.5 font-mono text-rose-600 font-semibold">&minus;₹3.00</td>
+                  <td class="p-2.5 font-mono text-rose-700 font-bold bg-rose-50/50">&minus;₹1,500 (Cash Debited T+1)</td>
+                  <td class="p-2.5 font-mono text-emerald-700 font-bold">+₹1,000</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <p class="text-[11px] text-slate-500">
+            Note: On Day 2, reference price is Day 1 settlement price (₹392), NOT initial purchase price (₹400). Cumulative P&L at end of Day 3 equals: (₹402 - ₹400) &times; 500 = +₹1,000.
+          </p>
+        </div>
+      </section>
+
+      <!-- Section 15.6 -->
+      <section id="section-6" class="bg-white rounded-3xl p-6 sm:p-8 border border-amber-200 shadow-sm space-y-5">
+        <div class="flex items-center justify-between">
+          <div class="flex items-center gap-2 text-xs font-bold text-amber-700 uppercase tracking-wider">
+            <span class="w-2 h-2 rounded-full bg-amber-500"></span> Section 15.6 &bull; Super High Exam Yield ⭐
+          </div>
+          <span class="text-xs px-2.5 py-1 rounded-full bg-amber-100 text-amber-800 font-bold">OI & Volume Analytics</span>
+        </div>
+        <div>
+          <h2 class="font-display font-bold text-xl sm:text-2xl text-slate-900">Open Interest (OI) vs. Trading Volume & Trend Interpretation Matrix</h2>
+          <p class="text-sm text-slate-600 mt-1 leading-relaxed">
+            Derivatives market participants track the interplay between price movements and open interest to discern whether real smart money is accumulating long positions, aggressively shorting, or merely covering existing commitments.
+          </p>
+        </div>
+
+        <!-- Volume vs OI Comparison -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 text-xs">
+          <div class="p-4 rounded-2xl bg-slate-50 border border-slate-200 space-y-1.5">
+            <span class="font-bold text-slate-900 text-sm">Trading Volume</span>
+            <p class="text-slate-600 leading-relaxed">
+              The aggregate count of contracts bought and sold during a single trading session. Volume reflects the intensity of market trading activity during the day and <strong>resets to zero at the start of every new session</strong>.
+            </p>
+          </div>
+          <div class="p-4 rounded-2xl bg-blue-50/60 border border-blue-200 space-y-1.5">
+            <span class="font-bold text-blue-950 text-sm">Open Interest (OI)</span>
+            <p class="text-slate-700 leading-relaxed">
+              The total number of outstanding active derivative contracts held by market participants that have <strong>not been squared off or physically settled</strong>. OI carries forward from day to day until expiration.
+            </p>
+          </div>
+        </div>
+
+        <!-- How OI Changes: The 4 Trade Scenarios -->
+        <div class="space-y-2 text-xs">
+          <span class="font-bold text-slate-900 text-sm">The 4 Transaction Scenarios: How Open Interest Expands or Contracts</span>
+          <div class="overflow-x-auto border border-slate-200 rounded-2xl">
+            <table class="w-full text-left border-collapse">
+              <thead>
+                <tr class="bg-slate-100 text-slate-700 font-bold border-b border-slate-200">
+                  <th class="p-2.5">Buyer Action</th>
+                  <th class="p-2.5">Seller Action</th>
+                  <th class="p-2.5">Impact on Open Interest</th>
+                  <th class="p-2.5">Rationale</th>
+                </tr>
+              </thead>
+              <tbody class="divide-y divide-slate-200 text-slate-700">
+                <tr class="hover:bg-slate-50">
+                  <td class="p-2.5 font-semibold text-emerald-800">Initiates New Long Position</td>
+                  <td class="p-2.5 font-semibold text-rose-800">Initiates New Short Position</td>
+                  <td class="p-2.5 font-bold text-emerald-700 bg-emerald-50/30">+1 Contract (Increases)</td>
+                  <td class="p-2.5 text-slate-600">A brand new contract is brought into existence between two new market entrants.</td>
+                </tr>
+                <tr class="hover:bg-slate-50">
+                  <td class="p-2.5 font-semibold text-slate-800">Squares off Existing Short (Buys)</td>
+                  <td class="p-2.5 font-semibold text-slate-800">Squares off Existing Long (Sells)</td>
+                  <td class="p-2.5 font-bold text-rose-700 bg-rose-50/30">&minus;1 Contract (Decreases)</td>
+                  <td class="p-2.5 text-slate-600">Both parties are closing out existing commitments, extinguishing the contract.</td>
+                </tr>
+                <tr class="hover:bg-slate-50">
+                  <td class="p-2.5 font-semibold text-emerald-800">Initiates New Long Position</td>
+                  <td class="p-2.5 font-semibold text-slate-800">Squares off Existing Long (Sells)</td>
+                  <td class="p-2.5 font-bold text-slate-600">No Change (Remains Unchanged)</td>
+                  <td class="p-2.5 text-slate-600">Contract is simply transferred from an old bull to a new bull.</td>
+                </tr>
+                <tr class="hover:bg-slate-50">
+                  <td class="p-2.5 font-semibold text-slate-800">Squares off Existing Short (Buys)</td>
+                  <td class="p-2.5 font-semibold text-rose-800">Initiates New Short Position</td>
+                  <td class="p-2.5 font-bold text-slate-600">No Change (Remains Unchanged)</td>
+                  <td class="p-2.5 text-slate-600">Contract is transferred from an old bear to a new bear.</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <!-- The 4-Quadrant Price vs OI Interpretation Matrix -->
+        <div class="space-y-2 text-xs">
+          <span class="font-bold text-slate-900 text-sm">The 4-Quadrant Price & Open Interest Interpretation Matrix (High Exam Yield ⭐)</span>
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+            <div class="p-4 rounded-2xl bg-emerald-50/60 border border-emerald-200 space-y-1.5">
+              <div class="flex items-center justify-between">
+                <span class="font-bold text-emerald-950 text-sm">Price &uarr; | OI &uarr; : Long Build-up</span>
+                <span class="px-2 py-0.5 rounded bg-emerald-200 text-emerald-900 font-bold text-[10px]">Strongly Bullish</span>
+              </div>
+              <p class="text-slate-700 leading-relaxed">
+                Prices are climbing accompanied by an expansion in open interest. Fresh capital is aggressively entering the market on the long side. Expect bullish upward momentum to sustain.
+              </p>
+            </div>
+
+            <div class="p-4 rounded-2xl bg-rose-50/60 border border-rose-200 space-y-1.5">
+              <div class="flex items-center justify-between">
+                <span class="font-bold text-rose-950 text-sm">Price &darr; | OI &uarr; : Short Build-up</span>
+                <span class="px-2 py-0.5 rounded bg-rose-200 text-rose-900 font-bold text-[10px]">Strongly Bearish</span>
+              </div>
+              <p class="text-slate-700 leading-relaxed">
+                Prices are declining accompanied by an expansion in open interest. Fresh money is aggressively creating short positions. High probability of further downside decline.
+              </p>
+            </div>
+
+            <div class="p-4 rounded-2xl bg-blue-50/60 border border-blue-200 space-y-1.5">
+              <div class="flex items-center justify-between">
+                <span class="font-bold text-blue-950 text-sm">Price &uarr; | OI &darr; : Short Covering</span>
+                <span class="px-2 py-0.5 rounded bg-blue-200 text-blue-900 font-bold text-[10px]">Weak Bullish / Rally</span>
+              </div>
+              <p class="text-slate-700 leading-relaxed">
+                Prices are rising while open interest is falling. Bears are rushing to buy back contracts to cut losses or protect profits. The rally is technical and may lose steam once short covering concludes.
+              </p>
+            </div>
+
+            <div class="p-4 rounded-2xl bg-amber-50/60 border border-amber-200 space-y-1.5">
+              <div class="flex items-center justify-between">
+                <span class="font-bold text-amber-950 text-sm">Price &darr; | OI &darr; : Long Unwinding</span>
+                <span class="px-2 py-0.5 rounded bg-amber-200 text-amber-900 font-bold text-[10px]">Weak Bearish / Pullback</span>
+              </div>
+              <p class="text-slate-700 leading-relaxed">
+                Prices are falling while open interest is contracting. Existing bulls are dumping positions to book profits or stop losses. Selling pressure usually abates once stale long positions are liquidated.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Section 15.7 -->
+      <section id="section-7" class="bg-white rounded-3xl p-6 sm:p-8 border border-amber-200 shadow-sm space-y-5">
+        <div class="flex items-center justify-between">
+          <div class="flex items-center gap-2 text-xs font-bold text-amber-700 uppercase tracking-wider">
+            <span class="w-2 h-2 rounded-full bg-amber-500"></span> Section 15.7 &bull; Super High Exam Yield ⭐
+          </div>
+          <span class="text-xs px-2.5 py-1 rounded-full bg-amber-100 text-amber-800 font-bold">Arbitrage Dynamics</span>
+        </div>
+        <div>
+          <h2 class="font-display font-bold text-xl sm:text-2xl text-slate-900">Arbitrage Mechanics: Cash-and-Carry vs. Reverse Cash-and-Carry</h2>
+          <p class="text-sm text-slate-600 mt-1 leading-relaxed">
+            Arbitrage is the simultaneous purchase and sale of an equivalent asset in different markets to exploit pricing discrepancies without bearing directional market risk. Arbitrage activity forces market futures prices to gravitate toward theoretical fair values.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4 text-xs">
+          <!-- Cash-and-Carry Arbitrage -->
+          <div class="p-5 rounded-2xl bg-blue-50/60 border border-blue-200 space-y-3">
+            <div class="flex items-center justify-between">
+              <span class="font-bold text-blue-950 text-sm">1. Cash-and-Carry Arbitrage</span>
+              <span class="px-2 py-0.5 rounded bg-blue-200 text-blue-900 font-bold text-[10px]">F<sub>actual</sub> &gt; F<sub>fair</sub></span>
+            </div>
+            <p class="text-slate-700 leading-relaxed">
+              Triggered when the market futures contract is trading at an unjustified premium above its theoretical fair price (<strong>Overpriced Futures</strong>).
+            </p>
+            <div class="p-2.5 bg-white rounded-xl border border-blue-200 font-mono text-blue-900 font-bold text-center">
+              Strategy: "Buy Cheap Spot Stock + Sell Expensive Futures"
+            </div>
+            <div class="space-y-1.5 text-slate-700">
+              <span class="font-bold text-slate-900 block">Execution Workflow:</span>
+              <ol class="list-decimal pl-4 space-y-1">
+                <li><strong>Borrow Cash:</strong> Borrow funds at risk-free rate (r) for contract duration (T).</li>
+                <li><strong>Buy Spot Asset:</strong> Buy shares in the cash market at current spot price (S<sub>0</sub>).</li>
+                <li><strong>Short Futures:</strong> Sell (short) futures contract at market price (F<sub>actual</sub>).</li>
+                <li><strong>Hold to Maturity:</strong> Carry the shares to expiration date, collecting any dividend (D).</li>
+                <li><strong>Deliver & Repay:</strong> Deliver shares against short futures to receive F<sub>actual</sub>; repay the bank loan with interest [S<sub>0</sub> &times; (1 + rT)].</li>
+              </ol>
+            </div>
+            <div class="p-2 bg-emerald-50 rounded-xl border border-emerald-200 text-emerald-900 font-mono font-bold text-center">
+              Net Arbitrage Profit = F<sub>actual</sub> &minus; F<sub>fair</sub> &gt; 0
+            </div>
+          </div>
+
+          <!-- Reverse Cash-and-Carry Arbitrage -->
+          <div class="p-5 rounded-2xl bg-purple-50/60 border border-purple-200 space-y-3">
+            <div class="flex items-center justify-between">
+              <span class="font-bold text-purple-950 text-sm">2. Reverse Cash-and-Carry Arbitrage</span>
+              <span class="px-2 py-0.5 rounded bg-purple-200 text-purple-900 font-bold text-[10px]">F<sub>actual</sub> &lt; F<sub>fair</sub></span>
+            </div>
+            <p class="text-slate-700 leading-relaxed">
+              Triggered when the market futures contract is trading at an unjustified discount below its theoretical fair price (<strong>Underpriced Futures</strong>).
+            </p>
+            <div class="p-2.5 bg-white rounded-xl border border-purple-200 font-mono text-purple-900 font-bold text-center">
+              Strategy: "Short Expensive Spot Stock + Buy Cheap Futures"
+            </div>
+            <div class="space-y-1.5 text-slate-700">
+              <span class="font-bold text-slate-900 block">Execution Workflow:</span>
+              <ol class="list-decimal pl-4 space-y-1">
+                <li><strong>Borrow Shares:</strong> Borrow shares via Securities Lending and Borrowing (SLB).</li>
+                <li><strong>Short Spot Stock:</strong> Sell shares in cash spot market at price (S<sub>0</sub>).</li>
+                <li><strong>Lend/Invest Proceeds:</strong> Deposit cash proceeds at risk-free lending rate (r).</li>
+                <li><strong>Long Futures:</strong> Buy (long) underpriced futures contract at (F<sub>actual</sub>).</li>
+                <li><strong>Collect & Return:</strong> At maturity, collect principal plus interest [S<sub>0</sub> &times; (1 + rT)], take delivery of shares via long futures at F<sub>actual</sub>, and return shares to lender.</li>
+              </ol>
+            </div>
+            <div class="p-2 bg-purple-50 rounded-xl border border-purple-200 text-purple-900 font-mono font-bold text-center">
+              Net Arbitrage Profit = F<sub>fair</sub> &minus; F<sub>actual</sub> &gt; 0
+            </div>
+          </div>
+        </div>
+
+        <!-- Real-World Market Frictions & No-Arbitrage Band -->
+        <div class="p-4 rounded-2xl bg-slate-50 border border-slate-200 text-xs space-y-2">
+          <span class="font-bold text-slate-900 block text-sm">Real-World Frictions & The "No-Arbitrage Band"</span>
+          <p class="text-slate-700 leading-relaxed">
+            In frictionless textbook theory, any price deviation triggers instantaneous arbitrage. In reality, arbitrageurs incur transaction costs: <strong>Securities Transaction Tax (STT)</strong>, exchange turnover fees, SEBI turnover charges, GST, stamp duty, bid-ask spread slippage, and SLB borrowing fees.
+          </p>
+          <div class="p-3 bg-white rounded-xl border border-slate-200 font-mono text-slate-900 text-center font-bold">
+            No-Arbitrage Band: [F<sub>fair</sub> &minus; Transaction Costs] &le; F<sub>market</sub> &le; [F<sub>fair</sub> + Transaction Costs]
+          </div>
+          <p class="text-[11px] text-slate-500">
+            As long as market futures trade within this band, arbitrage is unprofitable after accounting for round-trip friction costs.
+          </p>
+        </div>
+      </section>
+
+      <!-- Section 15.8: Interactive Quiz -->
+      <section id="interactive-quiz" class="bg-slate-900 text-white rounded-3xl p-6 sm:p-8 border border-slate-800 shadow-xl space-y-6">
+        <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 border-b border-slate-800 pb-5">
+          <div>
+            <div class="flex items-center gap-2 text-xs font-bold text-emerald-400 uppercase tracking-wider mb-1">
+              <i data-lucide="check-circle" class="w-4 h-4"></i> Interactive Exam Assessment
+            </div>
+            <h3 class="font-display font-bold text-xl sm:text-2xl text-white">Chapter 15 Practice Quiz (12 MCQs)</h3>
+            <p class="text-xs text-slate-400 mt-1">High-yield exam questions covering Cost of Carry, Contango/Backwardation, SPAN margins, OI matrix, and arbitrage.</p>
+          </div>
+          <div class="flex items-center gap-3">
+            <div class="text-right">
+              <span class="text-xs text-slate-400">Progress</span>
+              <div class="text-sm font-bold text-emerald-400"><span id="answered-count">0</span> / 12</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Questions Container -->
+        <div id="quiz-container" class="space-y-6"></div>
+
+        <!-- Action Bar -->
+        <div class="pt-4 border-t border-slate-800 flex flex-col sm:flex-row items-center justify-between gap-4">
+          <button id="submit-quiz-btn" onclick="submitQuiz()" class="w-full sm:w-auto px-6 py-3 rounded-xl bg-emerald-600 hover:bg-emerald-500 font-bold text-sm shadow-lg shadow-emerald-600/30 transition-all flex items-center justify-center gap-2">
+            <span>Submit Quiz & View Results</span>
+            <i data-lucide="arrow-right" class="w-4 h-4"></i>
+          </button>
+          <button id="reset-quiz-btn" onclick="resetQuiz()" class="hidden w-full sm:w-auto px-6 py-3 rounded-xl bg-slate-800 hover:bg-slate-700 text-slate-300 font-bold text-sm transition-all flex items-center justify-center gap-2">
+            <i data-lucide="rotate-ccw" class="w-4 h-4"></i>
+            <span>Retake Quiz</span>
+          </button>
+        </div>
+
+        <!-- Quiz Results -->
+        <div id="quiz-results" class="hidden p-6 rounded-2xl bg-slate-800/80 border border-slate-700 space-y-4">
+          <div class="flex items-center justify-between">
+            <h4 class="font-display font-bold text-lg text-white">Quiz Score Summary</h4>
+            <span id="result-status-badge" class="px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider"></span>
+          </div>
+          <div class="flex items-baseline gap-3">
+            <span id="score-display" class="font-display font-extrabold text-4xl text-emerald-400"></span>
+            <span id="percentage-display" class="text-sm text-slate-400 font-medium"></span>
+          </div>
+          <p id="result-summary-text" class="text-xs sm:text-sm text-slate-300"></p>
+        </div>
+      </section>
+
+      <!-- Navigation Footer -->
+      <footer class="pt-6 border-t border-slate-200 flex items-center justify-between">
+        <a href="module2-ch14.html" class="flex items-center gap-2 px-4 py-2.5 rounded-xl border border-slate-200 bg-white hover:bg-slate-50 text-slate-700 font-medium text-xs transition-colors">
+          <i data-lucide="arrow-left" class="w-4 h-4"></i>
+          <span>Prev: Chapter 14 (Index)</span>
+        </a>
+        <a href="module2-ch16.html" class="flex items-center gap-2 px-4 py-2.5 rounded-xl bg-emerald-600 hover:bg-emerald-700 text-white font-semibold text-xs shadow-sm transition-colors">
+          <span>Next: Chapter 16 (Introduction to Options)</span>
+          <i data-lucide="arrow-right" class="w-4 h-4"></i>
+        </a>
+      </footer>
+
+    </div>
+  </div>
+
+  <script>
+    const questionsData = [
+      {
+        id: 1,
+        question: "On which day do monthly equity derivatives contracts expire on the National Stock Exchange (NSE)?",
+        options: [
+          { key: "a", text: "Last Friday of the expiry month" },
+          { key: "b", text: "Last Thursday of the expiry month" },
+          { key: "c", text: "First Monday of the contract month" },
+          { key: "d", text: "15th of every calendar month" }
+        ],
+        correct: "b",
+        explanation: "Under standard NSE derivatives contract specifications, all monthly equity futures and options contracts expire on the last Thursday of the expiry month. If the last Thursday happens to be a trading holiday, the contract expires on the immediately preceding trading day."
+      },
+      {
+        id: 2,
+        question: "What is the minimum price fluctuation (tick size) mandated for equity and index futures contracts traded on Indian stock exchanges?",
+        options: [
+          { key: "a", text: "₹0.01 (1 paisa)" },
+          { key: "b", text: "₹0.05 (5 paise)" },
+          { key: "c", text: "₹0.10 (10 paise)" },
+          { key: "d", text: "₹0.25 (25 paise)" }
+        ],
+        correct: "b",
+        explanation: "The minimum tick size—the smallest allowable price increment by which bids and asks can change in the electronic order book—is fixed at ₹0.05 (5 paise) for equity and index derivatives on Indian exchanges (NSE and BSE)."
+      },
+      {
+        id: 3,
+        question: "What is the target derivative contract value band mandated by SEBI for determining the minimum lot size of equity derivatives?",
+        options: [
+          { key: "a", text: "₹2 Lakhs to ₹5 Lakhs" },
+          { key: "b", text: "₹5 Lakhs to ₹10 Lakhs" },
+          { key: "c", text: "₹15 Lakhs to ₹20 Lakhs" },
+          { key: "d", text: "₹50 Lakhs to ₹1 Crore" }
+        ],
+        correct: "c",
+        explanation: "SEBI regulations prescribe that the contract value of equity derivative contracts should broadly fall within the band of ₹15 Lakhs to ₹20 Lakhs. Stock exchanges periodically review underlying stock prices and calibrate the lot size so that (Lot Size × Stock Price) stays within this threshold to deter reckless retail over-leveraging."
+      },
+      {
+        id: 4,
+        question: "Under current SEBI regulations, how are open positions in Single Stock Futures settled upon contract expiration?",
+        options: [
+          { key: "a", text: "100% Cash settlement based on the final closing spot price" },
+          { key: "b", text: "Compulsory physical delivery of the underlying shares into Demat accounts" },
+          { key: "c", text: "Automatic rollover into the next month's contract" },
+          { key: "d", text: "Settlement via short-term sovereign treasury bills" }
+        ],
+        correct: "b",
+        explanation: "SEBI mandates compulsory physical settlement for all open single-stock derivative contracts (both stock futures and in-the-money stock options) upon expiration. Long futures holders must pay cash and accept delivery of shares, while short futures holders must deliver physical shares from their Demat accounts. Only index derivatives remain cash settled."
+      },
+      {
+        id: 5,
+        question: "The spot price of ABC Ltd is ₹1,000. The risk-free interest rate is 7% per annum. A dividend of ₹10 per share is expected to be paid before contract maturity in 73 days (0.2 year). Assuming a 365-day year and discrete compounding, what is the theoretical fair futures price?",
+        options: [
+          { key: "a", text: "₹1,014.00" },
+          { key: "b", text: "₹1,004.00" },
+          { key: "c", text: "₹990.00" },
+          { key: "d", text: "₹1,010.00" }
+        ],
+        correct: "b",
+        explanation: "Under the Cost of Carry model with discrete dividends: Fair Futures = Spot + Financing Cost - Dividend. Financing Cost = ₹1,000 × 7% × (73 / 365) = ₹1,000 × 0.07 × 0.20 = ₹14.00. Fair Futures Price = ₹1,000 + ₹14.00 - ₹10.00 = ₹1,004.00."
+      },
+      {
+        id: 6,
+        question: "Which mathematical formula correctly represents the theoretical fair futures price of an equity index under continuous compounding with dividend yield?",
+        options: [
+          { key: "a", text: "F = S × e^((r - q)T)" },
+          { key: "b", text: "F = S × e^((r + q)T)" },
+          { key: "c", text: "F = S × (1 + rT) + q" },
+          { key: "d", text: "F = S / e^((r - q)T)" }
+        ],
+        correct: "a",
+        explanation: "In continuous compounding, holding the underlying index yields a continuous dividend rate (q) while tying up capital at the risk-free rate (r). The net cost of carry is (r - q), resulting in the standard theoretical formula: F = S × e^((r - q)T)."
+      },
+      {
+        id: 7,
+        question: "How is 'Basis' formally defined in the Indian derivatives market, and what is its sign in a normal market (Contango)?",
+        options: [
+          { key: "a", text: "Basis = Futures Price - Spot Price; it is positive in Contango" },
+          { key: "b", text: "Basis = Spot Price - Futures Price; it is negative in Contango" },
+          { key: "c", text: "Basis = Strike Price - Premium; it is zero in Contango" },
+          { key: "d", text: "Basis = SPAN Margin / Contract Value; it is positive in Contango" }
+        ],
+        correct: "b",
+        explanation: "Under standard NISM workbook definitions, Basis = Spot Price - Futures Price. In a normal market (Contango), Futures trade at a premium over Spot due to positive carrying financing costs (Futures > Spot), which makes Basis strictly negative (Spot - Futures < 0)."
+      },
+      {
+        id: 8,
+        question: "What happens to the Basis of a futures contract on its expiration date due to the Law of Convergence?",
+        options: [
+          { key: "a", text: "Basis widens to its maximum positive value" },
+          { key: "b", text: "Basis converges to zero because the Futures Price equals the Spot Price" },
+          { key: "c", text: "Basis turns permanently negative" },
+          { key: "d", text: "Basis equals the Extreme Loss Margin (ELM)" }
+        ],
+        correct: "b",
+        explanation: "As the contract reaches expiration (T → 0), the time value and financing cost of carry diminish to zero. Arbitrage forces the futures price to converge exactly with the cash spot price at expiration (F_T = S_T), making the Basis (Spot - Futures) equal to zero."
+      },
+      {
+        id: 9,
+        question: "What two margin components constitute the Total Initial Margin that brokers are legally mandated by SEBI to collect 100% upfront from clients before executing futures orders?",
+        options: [
+          { key: "a", text: "SPAN Margin and Extreme Loss Margin (ELM)" },
+          { key: "b", text: "Mark-to-Market (MTM) Margin and Delivery Margin" },
+          { key: "c", text: "Exposure Margin and Special Margin" },
+          { key: "d", text: "Value-at-Risk Margin and Beta Margin" }
+        ],
+        correct: "a",
+        explanation: "SEBI mandates that 100% of Total Initial Margin, which is the sum of SPAN Margin (covering 99% 1-day Value-at-Risk across 16 scenarios) plus Extreme Loss Margin (ELM, typically 3.5% for tail risk), must be collected upfront prior to trade execution. Failure results in strict broker penalties."
+      },
+      {
+        id: 10,
+        question: "An investor buys 1 lot of Nifty Futures (Lot size: 50 units) at 24,200. At the end of Day 1, the daily settlement price closes at 24,120. What is the daily Mark-to-Market (MTM) cash settlement flow for this investor on T+1 morning?",
+        options: [
+          { key: "a", text: "₹4,000 credit into the trader's trading account" },
+          { key: "b", text: "₹4,000 cash debit from the trader's trading account" },
+          { key: "c", text: "₹80 cash debit from the trader's trading account" },
+          { key: "d", text: "No cash flow occurs until the contract expires" }
+        ],
+        correct: "b",
+        explanation: "Daily MTM P&L = (Daily Settlement Price - Purchase Price) × Lot Size = (24,120 - 24,200) × 50 = -80 × 50 = -₹4,000. Because the trader suffered a daily loss of ₹4,000, this exact cash amount is debited from their account and credited to winning short positions on T+1 morning."
+      },
+      {
+        id: 11,
+        question: "In technical and derivatives market analysis, if the spot price of an equity stock is declining consistently while its futures Open Interest (OI) is expanding substantially, what does this indicate?",
+        options: [
+          { key: "a", text: "Long Build-up (Aggressive buying)" },
+          { key: "b", text: "Short Build-up (Aggressive fresh short selling)" },
+          { key: "c", text: "Short Covering (Bears closing short positions)" },
+          { key: "d", text: "Long Unwinding (Bulls exiting existing long positions)" }
+        ],
+        correct: "b",
+        explanation: "When prices are falling (Bearish trend) and Open Interest is increasing (fresh contracts entering the market), it signifies a 'Short Build-up'. Bearish traders are aggressively initiating fresh short positions, anticipating further downside."
+      },
+      {
+        id: 12,
+        question: "The spot price of a stock is ₹800. Its theoretical fair 1-month futures price is ₹808. However, the futures contract is actively quoting in the market at ₹820. How can an arbitrageur execute a riskless Cash-and-Carry Arbitrage?",
+        options: [
+          { key: "a", text: "Short sell the stock in the spot market and buy (long) the futures contract" },
+          { key: "b", text: "Borrow funds at the risk-free rate, buy the stock in the spot market at ₹800, and sell (short) the futures contract at ₹820" },
+          { key: "c", text: "Buy both the spot stock and the futures contract simultaneously" },
+          { key: "d", text: "Purchase out-of-the-money Call options and sell Put options" }
+        ],
+        correct: "b",
+        explanation: "Because the actual futures price (₹820) exceeds theoretical fair value (₹808), futures are overpriced. The arbitrageur conducts Cash-and-Carry Arbitrage: borrow cash at rate r, buy the physical share in the cash market at ₹800, and simultaneously sell (short) the overpriced futures contract at ₹820, locking in a risk-free net arbitrage profit of ₹12 per share (₹820 - ₹808)."
+      }
+    ];
+
+    let userAnswers = {};
+
+    function renderQuiz() {
+      const container = document.getElementById("quiz-container");
+      container.innerHTML = "";
+      questionsData.forEach((q, idx) => {
+        const qDiv = document.createElement("div");
+        qDiv.className = "p-5 rounded-2xl bg-white/5 border border-white/10 space-y-3";
+        
+        let optionsHtml = "";
+        q.options.forEach(opt => {
+          optionsHtml += `
+            <label id="label-${q.id}-${opt.key}" onclick="selectOption(${q.id}, '${opt.key}')" class="flex items-center gap-3 p-3 rounded-xl bg-white/5 hover:bg-white/10 border border-white/5 cursor-pointer text-xs sm:text-sm transition-all">
+              <input type="radio" name="q-${q.id}" value="${opt.key}" class="hidden" />
+              <div class="w-6 h-6 rounded-full border border-slate-500 flex items-center justify-center font-bold text-xs shrink-0">${opt.key.toUpperCase()}</div>
+              <span class="text-slate-300">${opt.text}</span>
+            </label>
+          `;
+        });
+
+        qDiv.innerHTML = `
+          <div class="flex items-center justify-between">
+            <span class="text-xs font-bold text-emerald-400">Question ${idx + 1} of ${questionsData.length}</span>
+            <span id="badge-${q.id}" class="text-xs px-2 py-0.5 rounded-full bg-slate-800 text-slate-400">Unanswered</span>
+          </div>
+          <h4 class="font-display font-semibold text-sm sm:text-base text-white">${q.question}</h4>
+          <div class="space-y-2 mt-3">${optionsHtml}</div>
+          <div id="explanation-${q.id}" class="hidden p-4 rounded-xl text-xs sm:text-sm mt-3 space-y-1"></div>
+        `;
+        container.appendChild(qDiv);
+      });
+      lucide.createIcons();
+    }
+
+    function selectOption(qId, key) {
+      userAnswers[qId] = key;
+      document.getElementById("answered-count").innerText = Object.keys(userAnswers).length;
+      
+      const badge = document.getElementById(`badge-${qId}`);
+      if (badge) {
+        badge.innerText = "Answered";
+        badge.className = "text-xs px-2 py-0.5 rounded-full bg-emerald-500/20 text-emerald-300 font-medium";
+      }
+
+      const q = questionsData.find(item => item.id === qId);
+      q.options.forEach(opt => {
+        const lbl = document.getElementById(`label-${qId}-${opt.key}`);
+        if (opt.key === key) {
+          lbl.className = "flex items-center gap-3 p-3 rounded-xl bg-emerald-600/30 border border-emerald-400/50 cursor-pointer text-xs sm:text-sm transition-all";
+        } else {
+          lbl.className = "flex items-center gap-3 p-3 rounded-xl bg-white/5 hover:bg-white/10 border border-white/5 cursor-pointer text-xs sm:text-sm transition-all";
+        }
+      });
+    }
+
+    function submitQuiz() {
+      let score = 0;
+      questionsData.forEach(q => {
+        const selected = userAnswers[q.id];
+        const isCorrect = selected === q.correct;
+        if (isCorrect) score++;
+
+        const explanationDiv = document.getElementById(`explanation-${q.id}`);
+        explanationDiv.classList.remove("hidden");
+
+        if (isCorrect) {
+          explanationDiv.className = "p-4 rounded-xl text-xs sm:text-sm mt-3 bg-emerald-950/60 border border-emerald-600 text-emerald-200";
+          explanationDiv.innerHTML = `<div class="font-bold text-emerald-400 flex items-center gap-1.5"><i data-lucide="check" class="w-4 h-4"></i> Correct!</div><p class="mt-1">${q.explanation}</p>`;
+        } else {
+          explanationDiv.className = "p-4 rounded-xl text-xs sm:text-sm mt-3 bg-rose-950/60 border border-rose-600 text-rose-200";
+          explanationDiv.innerHTML = `<div class="font-bold text-rose-400 flex items-center gap-1.5"><i data-lucide="x" class="w-4 h-4"></i> Incorrect (Correct Answer: Option ${q.correct.toUpperCase()})</div><p class="mt-1">${q.explanation}</p>`;
+        }
+      });
+
+      const percentage = Math.round((score / questionsData.length) * 100);
+      const passed = percentage >= 60;
+      
+      const resultsDiv = document.getElementById("quiz-results");
+      resultsDiv.classList.remove("hidden");
+
+      const statusBadge = document.getElementById("result-status-badge");
+      statusBadge.innerText = passed ? "Status: Passed (60%+ Benchmark)" : "Status: Needs Revision";
+      statusBadge.className = passed ? "px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider bg-emerald-500 text-emerald-950" : "px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider bg-amber-500 text-amber-950";
+
+      document.getElementById("score-display").innerText = `${score} / ${questionsData.length}`;
+      document.getElementById("percentage-display").innerText = `${percentage}% Score (Passing criteria: 60%)`;
+
+      document.getElementById("result-summary-text").innerText = passed
+        ? `Outstanding! You scored ${percentage}%, demonstrating mastery over Chapter 15 forwards & futures pricing, basis dynamics, SPAN margins, and arbitrage mechanics.`
+        : `You scored ${percentage}%. Review the Cost of Carry equations, Basis in Contango vs Backwardation, SEBI upfront margin rules, and cash-and-carry execution steps.`;
+
+      document.getElementById("submit-quiz-btn").classList.add("hidden");
+      document.getElementById("reset-quiz-btn").classList.remove("hidden");
+
+      resultsDiv.scrollIntoView({ behavior: 'smooth' });
+      lucide.createIcons();
+    }
+
+    function resetQuiz() {
+      userAnswers = {};
+      document.getElementById("answered-count").innerText = "0";
+      document.getElementById("quiz-results").classList.add("hidden");
+      document.getElementById("submit-quiz-btn").classList.remove("hidden");
+      document.getElementById("reset-quiz-btn").classList.add("hidden");
+      renderQuiz();
+      document.getElementById("interactive-quiz").scrollIntoView({ behavior: 'smooth' });
+    }
+
+    renderQuiz();
+    lucide.createIcons();
+  </script>
+</body>
+</html>
