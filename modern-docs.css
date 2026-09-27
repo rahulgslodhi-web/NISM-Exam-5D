@@ -77,6 +77,29 @@ html.dark body {
   color: #f1f5f9 !important;
 }
 
+/* High-Weightage & Highlighted Chapter Cards: Light Mode Protection */
+html:not(.dark) a.group[class*="border-emerald-"],
+html:not(.dark) a.group[class*="border-teal-"],
+html:not(.dark) a.group[class*="border-amber-"],
+html:not(.dark) a.group[class*="border-purple-"] {
+  background-color: #ffffff !important;
+  background-image: none !important;
+}
+
+html:not(.dark) a.group[class*="border-emerald-"] h3,
+html:not(.dark) a.group[class*="border-teal-"] h3,
+html:not(.dark) a.group[class*="border-amber-"] h3,
+html:not(.dark) a.group[class*="border-purple-"] h3 {
+  color: #0f172a !important;
+}
+
+html:not(.dark) a.group[class*="border-emerald-"] p,
+html:not(.dark) a.group[class*="border-teal-"] p,
+html:not(.dark) a.group[class*="border-amber-"] p,
+html:not(.dark) a.group[class*="border-purple-"] p {
+  color: #475569 !important;
+}
+
 /* 3. Fluid Container Scaling (Seamless zoom from 75% to 175%) */
 .max-w-7xl {
   max-width: 92rem !important; /* 1472px fluid expansion */
