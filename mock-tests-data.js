@@ -1,7 +1,8 @@
 /**
  * NISM Series V-D Master Mock Tests Data Suite
- * Generated automatically from official 150-question examination banks
- * 5 Full-Length Exams • 750 Questions Total
+ * Generated automatically from official examination banks
+ * 5 Full-Length Exams (150Q) & 5 Mini Mock Exams (50Q)
+ * 1,000 Total Exam Questions Available
  */
 window.NISM_MOCK_TESTS = {
   "mock1": {
@@ -58,7 +59,7 @@ window.NISM_MOCK_TESTS = {
           }
         ],
         "correct": "C",
-        "explanation": "The Total Return Index (TRI) includes dividends and interest payments along with capital gains, making performance comparisons more accurate and transparent. PRI only considers capital gains, so it doesn’t capture the full return."
+        "explanation": "The Total Return Index (TRI) includes dividends and interest payments along with capital gains, making performance comparisons more accurate and transparent. PRI only considers capital gains, so it doesn\u2019t capture the full return."
       },
       {
         "id": 3,
@@ -274,7 +275,7 @@ window.NISM_MOCK_TESTS = {
           }
         ],
         "correct": "C",
-        "explanation": "The Portfolio Turnover Ratio is calculated by dividing the total transactions (purchase and sale) by the average size of the net assets. Here, the turnover ratio = Rs. 10,000 crore / Rs. 5,000 crore = 2. This means that the assets are held for an average of 6 months (12 months ÷ 2)."
+        "explanation": "The Portfolio Turnover Ratio is calculated by dividing the total transactions (purchase and sale) by the average size of the net assets. Here, the turnover ratio = Rs. 10,000 crore / Rs. 5,000 crore = 2. This means that the assets are held for an average of 6 months (12 months \u00f7 2)."
       },
       {
         "id": 13,
@@ -322,7 +323,7 @@ window.NISM_MOCK_TESTS = {
           }
         ],
         "correct": "B",
-        "explanation": "Changes to a mutual fund’s fundamental attributes must be communicated to all unitholders. They should also be given an option to exit the scheme at the prevailing NAV without paying an exit load."
+        "explanation": "Changes to a mutual fund\u2019s fundamental attributes must be communicated to all unitholders. They should also be given an option to exit the scheme at the prevailing NAV without paying an exit load."
       },
       {
         "id": 15,
@@ -606,7 +607,7 @@ window.NISM_MOCK_TESTS = {
           }
         ],
         "correct": "B",
-        "explanation": "Tracking error refers to the difference between the performance of an index fund and its benchmark index. It occurs due to factors like transaction costs, fund management fees, or differences in how the fund and the index are constructeD) It is the key reason why an index fund’s performance can be slightly better or worse than its benchmark."
+        "explanation": "Tracking error refers to the difference between the performance of an index fund and its benchmark index. It occurs due to factors like transaction costs, fund management fees, or differences in how the fund and the index are constructeD) It is the key reason why an index fund\u2019s performance can be slightly better or worse than its benchmark."
       },
       {
         "id": 27,
@@ -1314,7 +1315,7 @@ window.NISM_MOCK_TESTS = {
           }
         ],
         "correct": "C",
-        "explanation": "Both statements are false: Ignoring the investment objective: It is essential to consider the investment objective of the mutual fund schemes when making recommendations. The mutual fund's objective should align with the investor’s financial goals and risk tolerance. Past performance: Relying solely on past performance is not a reliable strategy for selecting mutual funds, as future performance may differ significantly. A more comprehensive approach includes understanding the scheme’s strategy, risk factors, and suitability for the investor's needs."
+        "explanation": "Both statements are false: Ignoring the investment objective: It is essential to consider the investment objective of the mutual fund schemes when making recommendations. The mutual fund's objective should align with the investor\u2019s financial goals and risk tolerance. Past performance: Relying solely on past performance is not a reliable strategy for selecting mutual funds, as future performance may differ significantly. A more comprehensive approach includes understanding the scheme\u2019s strategy, risk factors, and suitability for the investor's needs."
       },
       {
         "id": 59,
@@ -1342,7 +1343,7 @@ window.NISM_MOCK_TESTS = {
       },
       {
         "id": 60,
-        "question": "A mutual fund scheme’s NAV is said to be cum-dividend from the ________.",
+        "question": "A mutual fund scheme\u2019s NAV is said to be cum-dividend from the ________.",
         "options": [
           {
             "key": "A",
@@ -1362,7 +1363,7 @@ window.NISM_MOCK_TESTS = {
           }
         ],
         "correct": "A",
-        "explanation": "When a dividend is declared, the mutual fund’s NAV is referred to as \"cum-dividend\" until the dividend is actually paid out to the investors."
+        "explanation": "When a dividend is declared, the mutual fund\u2019s NAV is referred to as \"cum-dividend\" until the dividend is actually paid out to the investors."
       },
       {
         "id": 61,
@@ -1450,7 +1451,7 @@ window.NISM_MOCK_TESTS = {
           }
         ],
         "correct": "B",
-        "explanation": "Risk profiling is a crucial process to understand an investor’s risk tolerance and suitability for different investment options. While online tools can be useful, they often have limitations. A comprehensive approach, considering various factors beyond these tools, is essential for accurate risk profiling."
+        "explanation": "Risk profiling is a crucial process to understand an investor\u2019s risk tolerance and suitability for different investment options. While online tools can be useful, they often have limitations. A comprehensive approach, considering various factors beyond these tools, is essential for accurate risk profiling."
       },
       {
         "id": 65,
@@ -1626,7 +1627,7 @@ window.NISM_MOCK_TESTS = {
         "options": [
           {
             "key": "A",
-            "text": "a portfolio which is kept aside for a ‘rainy day’ or contingency fund"
+            "text": "a portfolio which is kept aside for a \u2018rainy day\u2019 or contingency fund"
           },
           {
             "key": "B",
@@ -2038,7 +2039,7 @@ window.NISM_MOCK_TESTS = {
       },
       {
         "id": 90,
-        "question": "Mr. Suryavanshi buys a bond at ₹130.50 and simultaneously purchases a put option on the same bond with a strike price of ₹130.50 for a premium of ₹0.20. What is his net payoff if the bond price at option expiry is ₹130?",
+        "question": "Mr. Suryavanshi buys a bond at \u20b9130.50 and simultaneously purchases a put option on the same bond with a strike price of \u20b9130.50 for a premium of \u20b90.20. What is his net payoff if the bond price at option expiry is \u20b9130?",
         "options": [
           {
             "key": "A",
@@ -2058,7 +2059,7 @@ window.NISM_MOCK_TESTS = {
           }
         ],
         "correct": "D",
-        "explanation": "- Loss on bond = ₹130 (market price) − ₹130.50 (purchase price) = −₹0.50 - Put payoff = ₹130.50 − ₹130 = ₹0.50 - Premium paid = ₹0.20 - Net payoff = (−₹0.50 + ₹0.50) − ₹0.20 = −₹0.20, but since the question asks for net payoff at expiry, the combined payoff after premiums net to zero. (Note: the detailed calculation shows the losses offset, resulting in a net zero.)"
+        "explanation": "- Loss on bond = \u20b9130 (market price) \u2212 \u20b9130.50 (purchase price) = \u2212\u20b90.50 - Put payoff = \u20b9130.50 \u2212 \u20b9130 = \u20b90.50 - Premium paid = \u20b90.20 - Net payoff = (\u2212\u20b90.50 + \u20b90.50) \u2212 \u20b90.20 = \u2212\u20b90.20, but since the question asks for net payoff at expiry, the combined payoff after premiums net to zero. (Note: the detailed calculation shows the losses offset, resulting in a net zero.)"
       },
       {
         "id": 91,
@@ -2082,7 +2083,7 @@ window.NISM_MOCK_TESTS = {
           }
         ],
         "correct": "D",
-        "explanation": "The order matching process follows price-time priority—best price first, then earliest time."
+        "explanation": "The order matching process follows price-time priority\u2014best price first, then earliest time."
       },
       {
         "id": 92,
@@ -2490,7 +2491,7 @@ window.NISM_MOCK_TESTS = {
       },
       {
         "id": 110,
-        "question": "______ is responsible for ensuring the valuation of the securities in a mutual fund scheme’s portfolio are true and fair.",
+        "question": "______ is responsible for ensuring the valuation of the securities in a mutual fund scheme\u2019s portfolio are true and fair.",
         "options": [
           {
             "key": "A",
@@ -3110,7 +3111,7 @@ window.NISM_MOCK_TESTS = {
           }
         ],
         "correct": "C",
-        "explanation": "Trail commission is calculated based on the current NAV. The total value of Ms. Shweta’s investment is Rs. 28 * 5000 = Rs. 1,40,000. The trail commission is calculated as: \\[ \\text{Trail Commission} = \\frac{1\\% \\times 1,40,000}{365} = Rs. 3.8356 \\]"
+        "explanation": "Trail commission is calculated based on the current NAV. The total value of Ms. Shweta\u2019s investment is Rs. 28 * 5000 = Rs. 1,40,000. The trail commission is calculated as: \\[ \\text{Trail Commission} = \\frac{1\\% \\times 1,40,000}{365} = Rs. 3.8356 \\]"
       },
       {
         "id": 137,
@@ -3448,7 +3449,8 @@ window.NISM_MOCK_TESTS = {
         "correct": "C",
         "explanation": "SEBI allows a transaction charge to be deducted for investments of Rs 10,000 or more. This charge is meant to compensate the distributor for the services provideD) It is not applicable for smaller investments or purchases made through stock exchanges."
       }
-    ]
+    ],
+    "type": "full"
   },
   "mock2": {
     "id": "mock2",
@@ -3484,7 +3486,7 @@ window.NISM_MOCK_TESTS = {
           }
         ],
         "correct": "A",
-        "explanation": "SID → updated annually. Fund factsheet → monthly. Portfolio disclosures → half-yearly (on AMC & AMFI websites, plus published in newspapers).So the one updated once in six months = portfolio disclosures."
+        "explanation": "SID \u2192 updated annually. Fund factsheet \u2192 monthly. Portfolio disclosures \u2192 half-yearly (on AMC & AMFI websites, plus published in newspapers).So the one updated once in six months = portfolio disclosures."
       },
       {
         "id": 2,
@@ -3868,7 +3870,7 @@ window.NISM_MOCK_TESTS = {
           }
         ],
         "correct": "A",
-        "explanation": "Mutual funds are required to disclose the Total Expense Ratio (TER) daily on their websites. The TER is published under a separate heading “Total Expense Ratio of Mutual Fund Schemes” to ensure transparency."
+        "explanation": "Mutual funds are required to disclose the Total Expense Ratio (TER) daily on their websites. The TER is published under a separate heading \u201cTotal Expense Ratio of Mutual Fund Schemes\u201d to ensure transparency."
       },
       {
         "id": 19,
@@ -3916,7 +3918,7 @@ window.NISM_MOCK_TESTS = {
           }
         ],
         "correct": "A",
-        "explanation": "A retirement fund generally has a lock-in period of 5 years or until retirement age, whichever comes first. Therefore, if the investor’s retirement age is earlier than 5 years, the lock-in can be lower."
+        "explanation": "A retirement fund generally has a lock-in period of 5 years or until retirement age, whichever comes first. Therefore, if the investor\u2019s retirement age is earlier than 5 years, the lock-in can be lower."
       },
       {
         "id": 21,
@@ -3984,7 +3986,7 @@ window.NISM_MOCK_TESTS = {
           }
         ],
         "correct": "A",
-        "explanation": "When investor redeems, it’s a repurchase by MF, but capital gains tax is still applicable → statement 1 is false. Long-term capital gains on debt funds after 3 years was true earlier. After Finance Act 2023, LTCG with indexation benefit is withdrawn for debt funds (investments after 1-Apr-2023). But in NISM VA exam, syllabus still treats >3 yrs debt as LTCG. So the exam answer remains: Only 1 is false."
+        "explanation": "When investor redeems, it\u2019s a repurchase by MF, but capital gains tax is still applicable \u2192 statement 1 is false. Long-term capital gains on debt funds after 3 years was true earlier. After Finance Act 2023, LTCG with indexation benefit is withdrawn for debt funds (investments after 1-Apr-2023). But in NISM VA exam, syllabus still treats >3 yrs debt as LTCG. So the exam answer remains: Only 1 is false."
       },
       {
         "id": 24,
@@ -4048,7 +4050,7 @@ window.NISM_MOCK_TESTS = {
           }
         ],
         "correct": "C",
-        "explanation": "Thematic funds are focused on a single theme (e.g., infrastructure, healthcare) and tend to have high concentration risk. If that theme underperforms, the fund’s returns can be significantly affected. In contrast, diversified equity funds spread investments across multiple sectors and themes, thus reducing concentration risk."
+        "explanation": "Thematic funds are focused on a single theme (e.g., infrastructure, healthcare) and tend to have high concentration risk. If that theme underperforms, the fund\u2019s returns can be significantly affected. In contrast, diversified equity funds spread investments across multiple sectors and themes, thus reducing concentration risk."
       },
       {
         "id": 27,
@@ -4120,11 +4122,11 @@ window.NISM_MOCK_TESTS = {
           }
         ],
         "correct": "C",
-        "explanation": "Loss = Rs. 58 − Rs. 56 = Rs. 2."
+        "explanation": "Loss = Rs. 58 \u2212 Rs. 56 = Rs. 2."
       },
       {
         "id": 30,
-        "question": "What is the purpose of ‘credit enhancement’ in case of a securitised transaction?",
+        "question": "What is the purpose of \u2018credit enhancement\u2019 in case of a securitised transaction?",
         "options": [
           {
             "key": "A",
@@ -4144,7 +4146,7 @@ window.NISM_MOCK_TESTS = {
       },
       {
         "id": 31,
-        "question": "Mr. Guru buys a bond at ₹54.50 and sells a call option (strike ₹55) for ₹0.10 premium. What is his net payoff if the bond price at expiration is ₹55.50?",
+        "question": "Mr. Guru buys a bond at \u20b954.50 and sells a call option (strike \u20b955) for \u20b90.10 premium. What is his net payoff if the bond price at expiration is \u20b955.50?",
         "options": [
           {
             "key": "A",
@@ -4164,7 +4166,7 @@ window.NISM_MOCK_TESTS = {
           }
         ],
         "correct": "B",
-        "explanation": "- Bond gain = ₹55.50 − ₹54.50 = ₹1.00 - Short call payoff = ₹55.50 − ₹55 = ₹0.50 (loss) - Premium received = ₹0.10 - Net = ₹1.00 − ₹0.50 + ₹0.10 = ₹0.60"
+        "explanation": "- Bond gain = \u20b955.50 \u2212 \u20b954.50 = \u20b91.00 - Short call payoff = \u20b955.50 \u2212 \u20b955 = \u20b90.50 (loss) - Premium received = \u20b90.10 - Net = \u20b91.00 \u2212 \u20b90.50 + \u20b90.10 = \u20b90.60"
       },
       {
         "id": 32,
@@ -4260,7 +4262,7 @@ window.NISM_MOCK_TESTS = {
           }
         ],
         "correct": "D",
-        "explanation": "The Sponsor is responsible for the creation of the mutual fund trust and contributes at least 40% of the AMC’s net worth. The sponsor plays a key role in setting up the mutual fund and bringing in capital to initiate the business."
+        "explanation": "The Sponsor is responsible for the creation of the mutual fund trust and contributes at least 40% of the AMC\u2019s net worth. The sponsor plays a key role in setting up the mutual fund and bringing in capital to initiate the business."
       },
       {
         "id": 36,
@@ -4476,7 +4478,7 @@ window.NISM_MOCK_TESTS = {
           }
         ],
         "correct": "B",
-        "explanation": "Price change = Rs 100 × 4 × 2% = Rs 8."
+        "explanation": "Price change = Rs 100 \u00d7 4 \u00d7 2% = Rs 8."
       },
       {
         "id": 45,
@@ -4564,7 +4566,7 @@ window.NISM_MOCK_TESTS = {
           }
         ],
         "correct": "A",
-        "explanation": "The Statement of Additional Information (SAI) must be updated regularly, and this update should be completed by the end of 3 months in every financial year. Any material changes must be updated promptly and made available on the mutual fund's website and AMFI’s website."
+        "explanation": "The Statement of Additional Information (SAI) must be updated regularly, and this update should be completed by the end of 3 months in every financial year. Any material changes must be updated promptly and made available on the mutual fund's website and AMFI\u2019s website."
       },
       {
         "id": 49,
@@ -4824,7 +4826,7 @@ window.NISM_MOCK_TESTS = {
           }
         ],
         "correct": "B",
-        "explanation": "An investor selects a mutual fund scheme based on the investment objective, which should align with the investor’s financial goals, whether that be for growth, income, or safety."
+        "explanation": "An investor selects a mutual fund scheme based on the investment objective, which should align with the investor\u2019s financial goals, whether that be for growth, income, or safety."
       },
       {
         "id": 60,
@@ -4896,7 +4898,7 @@ window.NISM_MOCK_TESTS = {
           }
         ],
         "correct": "B",
-        "explanation": "A mutual fund scheme must have at least 20 investors to ensure diversification. Additionally, no single investor should own more than 25% of the scheme’s corpus."
+        "explanation": "A mutual fund scheme must have at least 20 investors to ensure diversification. Additionally, no single investor should own more than 25% of the scheme\u2019s corpus."
       },
       {
         "id": 63,
@@ -5112,7 +5114,7 @@ window.NISM_MOCK_TESTS = {
           },
           {
             "key": "D",
-            "text": "Association of Mutual Funds in India’s - AMFI"
+            "text": "Association of Mutual Funds in India\u2019s - AMFI"
           }
         ],
         "correct": "C",
@@ -5120,7 +5122,7 @@ window.NISM_MOCK_TESTS = {
       },
       {
         "id": 73,
-        "question": "A Trading Member of a derivatives exchange does not have clearing rights — State True or False?",
+        "question": "A Trading Member of a derivatives exchange does not have clearing rights \u2014 State True or False?",
         "options": [
           {
             "key": "A",
@@ -5156,7 +5158,7 @@ window.NISM_MOCK_TESTS = {
           }
         ],
         "correct": "B",
-        "explanation": "The first step in building a mutual fund portfolio is to understand and set the financial goals of the investor. This ensures that the investment strategy aligns with the investor’s needs, such as saving for retirement, purchasing a home, or funding education. Only after defining the goals should the selection of funds begin."
+        "explanation": "The first step in building a mutual fund portfolio is to understand and set the financial goals of the investor. This ensures that the investment strategy aligns with the investor\u2019s needs, such as saving for retirement, purchasing a home, or funding education. Only after defining the goals should the selection of funds begin."
       },
       {
         "id": 75,
@@ -5184,7 +5186,7 @@ window.NISM_MOCK_TESTS = {
       },
       {
         "id": 76,
-        "question": "Mr. Sunny buys a call option (strike ₹40.25, premium ₹0.20) and sells a call option (strike ₹39.50, premium ₹0.60). What is his net profit or loss if the underlying price at expiry is ₹39.50?",
+        "question": "Mr. Sunny buys a call option (strike \u20b940.25, premium \u20b90.20) and sells a call option (strike \u20b939.50, premium \u20b90.60). What is his net profit or loss if the underlying price at expiry is \u20b939.50?",
         "options": [
           {
             "key": "A",
@@ -5204,7 +5206,7 @@ window.NISM_MOCK_TESTS = {
           }
         ],
         "correct": "C",
-        "explanation": "- Both options expire worthless as spot < strikes. - Net premium received = ₹0.60 − ₹0.20 = ₹0.40, which is profit."
+        "explanation": "- Both options expire worthless as spot < strikes. - Net premium received = \u20b90.60 \u2212 \u20b90.20 = \u20b90.40, which is profit."
       },
       {
         "id": 77,
@@ -5364,7 +5366,7 @@ window.NISM_MOCK_TESTS = {
           }
         ],
         "correct": "A",
-        "explanation": "As per SEBI’s Advertisement Code for Mutual Funds, mutual fund advertisements cannot feature celebrities. (AMFI can use celebrities for promotion, but individual mutual funds cannot.)"
+        "explanation": "As per SEBI\u2019s Advertisement Code for Mutual Funds, mutual fund advertisements cannot feature celebrities. (AMFI can use celebrities for promotion, but individual mutual funds cannot.)"
       },
       {
         "id": 84,
@@ -5440,7 +5442,7 @@ window.NISM_MOCK_TESTS = {
       },
       {
         "id": 87,
-        "question": "Which order has a better chance of execution — Stop Loss order or Stop Loss Limit order?",
+        "question": "Which order has a better chance of execution \u2014 Stop Loss order or Stop Loss Limit order?",
         "options": [
           {
             "key": "A",
@@ -5580,7 +5582,7 @@ window.NISM_MOCK_TESTS = {
           }
         ],
         "correct": "A",
-        "explanation": "A trail commission is a percentage of the net assets attributable to the units sold by the distributor. This commission is paid to the distributor as long as the investor’s money remains invested in the scheme."
+        "explanation": "A trail commission is a percentage of the net assets attributable to the units sold by the distributor. This commission is paid to the distributor as long as the investor\u2019s money remains invested in the scheme."
       },
       {
         "id": 93,
@@ -5844,7 +5846,7 @@ window.NISM_MOCK_TESTS = {
           }
         ],
         "correct": "A",
-        "explanation": "Risk profilers assess an investor’s risk appetite by asking a few questions, which generate a risk appetite score. This helps ensure that mutual fund schemes sold to investors align with their risk tolerance."
+        "explanation": "Risk profilers assess an investor\u2019s risk appetite by asking a few questions, which generate a risk appetite score. This helps ensure that mutual fund schemes sold to investors align with their risk tolerance."
       },
       {
         "id": 106,
@@ -6248,7 +6250,7 @@ window.NISM_MOCK_TESTS = {
           }
         ],
         "correct": "A",
-        "explanation": "Most mutual fund schemes offer two options – Income Distribution cum Capital Withdrawal and Growth. A third option, possible in some cases, is the Reinvestment of Income Distribution cum Capital Withdrawal Option. Pay-out of Income Distribution cum Capital. Withdrawal Option: The investor receives the dividend directly in their bank account. Re-investment of Income Distribution cum Capital Withdrawal Plan: The dividend is not paid to the investor but is reinvested in the same scheme, allotting additional units. Growth Option: No dividend is declared, and nothing is received in the bank account."
+        "explanation": "Most mutual fund schemes offer two options \u2013 Income Distribution cum Capital Withdrawal and Growth. A third option, possible in some cases, is the Reinvestment of Income Distribution cum Capital Withdrawal Option. Pay-out of Income Distribution cum Capital. Withdrawal Option: The investor receives the dividend directly in their bank account. Re-investment of Income Distribution cum Capital Withdrawal Plan: The dividend is not paid to the investor but is reinvested in the same scheme, allotting additional units. Growth Option: No dividend is declared, and nothing is received in the bank account."
       },
       {
         "id": 124,
@@ -6500,7 +6502,7 @@ window.NISM_MOCK_TESTS = {
       },
       {
         "id": 135,
-        "question": "______ is used to measure a fund’s risk relative to the market index.",
+        "question": "______ is used to measure a fund\u2019s risk relative to the market index.",
         "options": [
           {
             "key": "A",
@@ -6756,7 +6758,7 @@ window.NISM_MOCK_TESTS = {
       },
       {
         "id": 146,
-        "question": "A Trading Member on a derivatives exchange does not have clearing rights — State True or False?",
+        "question": "A Trading Member on a derivatives exchange does not have clearing rights \u2014 State True or False?",
         "options": [
           {
             "key": "A",
@@ -6866,7 +6868,8 @@ window.NISM_MOCK_TESTS = {
         "correct": "A",
         "explanation": "Preference shares are equity, not derivatives."
       }
-    ]
+    ],
+    "type": "full"
   },
   "mock3": {
     "id": "mock3",
@@ -7326,7 +7329,7 @@ window.NISM_MOCK_TESTS = {
         "options": [
           {
             "key": "A",
-            "text": "a portfolio which is kept aside for a ‘rainy day’ or contingency fund"
+            "text": "a portfolio which is kept aside for a \u2018rainy day\u2019 or contingency fund"
           },
           {
             "key": "B",
@@ -7358,7 +7361,7 @@ window.NISM_MOCK_TESTS = {
           }
         ],
         "correct": "B",
-        "explanation": "Risk profiling is a crucial process to understand an investor’s risk tolerance and suitability for different investment options. While online tools can be useful, they often have limitations. A comprehensive approach, considering various factors beyond these tools, is essential for accurate risk profiling."
+        "explanation": "Risk profiling is a crucial process to understand an investor\u2019s risk tolerance and suitability for different investment options. While online tools can be useful, they often have limitations. A comprehensive approach, considering various factors beyond these tools, is essential for accurate risk profiling."
       },
       {
         "id": 23,
@@ -7382,7 +7385,7 @@ window.NISM_MOCK_TESTS = {
           }
         ],
         "correct": "C",
-        "explanation": "With a tick value of ₹5, a 500-tick movement changes the contract value by ₹2,500."
+        "explanation": "With a tick value of \u20b95, a 500-tick movement changes the contract value by \u20b92,500."
       },
       {
         "id": 24,
@@ -7398,7 +7401,7 @@ window.NISM_MOCK_TESTS = {
           }
         ],
         "correct": "A",
-        "explanation": "The statement “When interest rates rise, the price of existing bonds tends to fall…” is absolutely true. Looks like your key accidentally marked it as B instead of A."
+        "explanation": "The statement \u201cWhen interest rates rise, the price of existing bonds tends to fall\u2026\u201d is absolutely true. Looks like your key accidentally marked it as B instead of A."
       },
       {
         "id": 25,
@@ -7466,7 +7469,7 @@ window.NISM_MOCK_TESTS = {
           }
         ],
         "correct": "B",
-        "explanation": "Tracking error refers to the difference between the performance of an index fund and its benchmark index. It occurs due to factors like transaction costs, fund management fees, or differences in how the fund and the index are constructeD) It is the key reason why an index fund’s performance can be slightly better or worse than its benchmark."
+        "explanation": "Tracking error refers to the difference between the performance of an index fund and its benchmark index. It occurs due to factors like transaction costs, fund management fees, or differences in how the fund and the index are constructeD) It is the key reason why an index fund\u2019s performance can be slightly better or worse than its benchmark."
       },
       {
         "id": 28,
@@ -7902,7 +7905,7 @@ window.NISM_MOCK_TESTS = {
       },
       {
         "id": 47,
-        "question": "Mrs. Ayushi takes two positions: buying a call option (strike ₹150, premium ₹0.30) and buying a put option (strike ₹150, premium ₹0.20). What is her net profit or loss if the underlying price at expiry is ₹149.50?",
+        "question": "Mrs. Ayushi takes two positions: buying a call option (strike \u20b9150, premium \u20b90.30) and buying a put option (strike \u20b9150, premium \u20b90.20). What is her net profit or loss if the underlying price at expiry is \u20b9149.50?",
         "options": [
           {
             "key": "A",
@@ -7970,7 +7973,7 @@ window.NISM_MOCK_TESTS = {
           }
         ],
         "correct": "D",
-        "explanation": "Initial Margin = 2,450 × 34 × 50 × 7% = Rs. 2,91,550."
+        "explanation": "Initial Margin = 2,450 \u00d7 34 \u00d7 50 \u00d7 7% = Rs. 2,91,550."
       },
       {
         "id": 50,
@@ -8138,7 +8141,7 @@ window.NISM_MOCK_TESTS = {
           }
         ],
         "correct": "D",
-        "explanation": "As per SEBI circular (Dec 2012): AMCs must conduct enhanced due diligence for distributors who: Have raised AUM over ₹100 crore. Have raised AUM over ₹25 crore from non-institutional investors. Receive commission of over ₹50 lakh per annum from a single MF, or Operate in more than 20 locations. So, the correct choice = All of the above."
+        "explanation": "As per SEBI circular (Dec 2012): AMCs must conduct enhanced due diligence for distributors who: Have raised AUM over \u20b9100 crore. Have raised AUM over \u20b925 crore from non-institutional investors. Receive commission of over \u20b950 lakh per annum from a single MF, or Operate in more than 20 locations. So, the correct choice = All of the above."
       },
       {
         "id": 57,
@@ -8410,7 +8413,7 @@ window.NISM_MOCK_TESTS = {
           }
         ],
         "correct": "C",
-        "explanation": "Trail commission is calculated based on the current NAV. The total value of Ms. Shweta’s investment is Rs. 28 * 5000 = Rs. 1,40,000. The trail commission is calculated as: \\[ \\text{Trail Commission} = \\frac{1\\% \\times 1,40,000}{365} = Rs. 3.8356 \\]"
+        "explanation": "Trail commission is calculated based on the current NAV. The total value of Ms. Shweta\u2019s investment is Rs. 28 * 5000 = Rs. 1,40,000. The trail commission is calculated as: \\[ \\text{Trail Commission} = \\frac{1\\% \\times 1,40,000}{365} = Rs. 3.8356 \\]"
       },
       {
         "id": 69,
@@ -8830,7 +8833,7 @@ window.NISM_MOCK_TESTS = {
       },
       {
         "id": 88,
-        "question": "______ is responsible for ensuring the valuation of the securities in a mutual fund scheme’s portfolio are true and fair.",
+        "question": "______ is responsible for ensuring the valuation of the securities in a mutual fund scheme\u2019s portfolio are true and fair.",
         "options": [
           {
             "key": "A",
@@ -9118,7 +9121,7 @@ window.NISM_MOCK_TESTS = {
           }
         ],
         "correct": "C",
-        "explanation": "The Portfolio Turnover Ratio is calculated by dividing the total transactions (purchase and sale) by the average size of the net assets. Here, the turnover ratio = Rs. 10,000 crore / Rs. 5,000 crore = 2. This means that the assets are held for an average of 6 months (12 months ÷ 2)."
+        "explanation": "The Portfolio Turnover Ratio is calculated by dividing the total transactions (purchase and sale) by the average size of the net assets. Here, the turnover ratio = Rs. 10,000 crore / Rs. 5,000 crore = 2. This means that the assets are held for an average of 6 months (12 months \u00f7 2)."
       },
       {
         "id": 101,
@@ -9382,7 +9385,7 @@ window.NISM_MOCK_TESTS = {
           }
         ],
         "correct": "C",
-        "explanation": "Both statements are false: Ignoring the investment objective: It is essential to consider the investment objective of the mutual fund schemes when making recommendations. The mutual fund's objective should align with the investor’s financial goals and risk tolerance. Past performance: Relying solely on past performance is not a reliable strategy for selecting mutual funds, as future performance may differ significantly. A more comprehensive approach includes understanding the scheme’s strategy, risk factors, and suitability for the investor's needs."
+        "explanation": "Both statements are false: Ignoring the investment objective: It is essential to consider the investment objective of the mutual fund schemes when making recommendations. The mutual fund's objective should align with the investor\u2019s financial goals and risk tolerance. Past performance: Relying solely on past performance is not a reliable strategy for selecting mutual funds, as future performance may differ significantly. A more comprehensive approach includes understanding the scheme\u2019s strategy, risk factors, and suitability for the investor's needs."
       },
       {
         "id": 113,
@@ -9662,7 +9665,7 @@ window.NISM_MOCK_TESTS = {
           }
         ],
         "correct": "C",
-        "explanation": "As per SEBI MF Regulations: MFs must publish unaudited financial results every half-year in at least one English and one regional daily newspaper widely circulated. They must also host it on their AMC website & AMFI website. But in the exam, the “most correct” answer is newspaper publication."
+        "explanation": "As per SEBI MF Regulations: MFs must publish unaudited financial results every half-year in at least one English and one regional daily newspaper widely circulated. They must also host it on their AMC website & AMFI website. But in the exam, the \u201cmost correct\u201d answer is newspaper publication."
       },
       {
         "id": 125,
@@ -9690,7 +9693,7 @@ window.NISM_MOCK_TESTS = {
       },
       {
         "id": 126,
-        "question": "A mutual fund scheme’s NAV is said to be cum-dividend from the ________.",
+        "question": "A mutual fund scheme\u2019s NAV is said to be cum-dividend from the ________.",
         "options": [
           {
             "key": "A",
@@ -9710,7 +9713,7 @@ window.NISM_MOCK_TESTS = {
           }
         ],
         "correct": "A",
-        "explanation": "When a dividend is declared, the mutual fund’s NAV is referred to as \"cum-dividend\" until the dividend is actually paid out to the investors."
+        "explanation": "When a dividend is declared, the mutual fund\u2019s NAV is referred to as \"cum-dividend\" until the dividend is actually paid out to the investors."
       },
       {
         "id": 127,
@@ -9794,7 +9797,7 @@ window.NISM_MOCK_TESTS = {
           }
         ],
         "correct": "C",
-        "explanation": "The Total Return Index (TRI) includes dividends and interest payments along with capital gains, making performance comparisons more accurate and transparent. PRI only considers capital gains, so it doesn’t capture the full return."
+        "explanation": "The Total Return Index (TRI) includes dividends and interest payments along with capital gains, making performance comparisons more accurate and transparent. PRI only considers capital gains, so it doesn\u2019t capture the full return."
       },
       {
         "id": 131,
@@ -9986,7 +9989,7 @@ window.NISM_MOCK_TESTS = {
           }
         ],
         "correct": "B",
-        "explanation": "Changes to a mutual fund’s fundamental attributes must be communicated to all unitholders. They should also be given an option to exit the scheme at the prevailing NAV without paying an exit load."
+        "explanation": "Changes to a mutual fund\u2019s fundamental attributes must be communicated to all unitholders. They should also be given an option to exit the scheme at the prevailing NAV without paying an exit load."
       },
       {
         "id": 139,
@@ -10264,7 +10267,8 @@ window.NISM_MOCK_TESTS = {
         "correct": "B",
         "explanation": "The Offer Document provides detailed information about the risk factors, investment objectives, and features of the scheme. However, it does not provide the specific stocks in which the fund will invest, as these are decided by the fund manager in real time."
       }
-    ]
+    ],
+    "type": "full"
   },
   "mock4": {
     "id": "mock4",
@@ -10564,7 +10568,7 @@ window.NISM_MOCK_TESTS = {
           }
         ],
         "correct": "B",
-        "explanation": "Real interest rate ≈ Nominal interest rate − Inflation rate."
+        "explanation": "Real interest rate \u2248 Nominal interest rate \u2212 Inflation rate."
       },
       {
         "id": 13,
@@ -10908,11 +10912,11 @@ window.NISM_MOCK_TESTS = {
           }
         ],
         "correct": "B",
-        "explanation": "The sponsor, who establishes the mutual fund, must contribute at least 40% of the AMC’s net worth."
+        "explanation": "The sponsor, who establishes the mutual fund, must contribute at least 40% of the AMC\u2019s net worth."
       },
       {
         "id": 28,
-        "question": "Identify the TRUE statements with respect to measuring returns for mutual fund schemes. (A) The returns published in a mutual fund advertisement should factor in the entry or exit load (B) Compounded Annual Growth Rate (CAGR) is the accepted standard of showing returns for investment with a holding period of more than one year (C) Simple returns can be calculated by the formula: (Sale price – Cost price / Cost price) x 100",
+        "question": "Identify the TRUE statements with respect to measuring returns for mutual fund schemes. (A) The returns published in a mutual fund advertisement should factor in the entry or exit load (B) Compounded Annual Growth Rate (CAGR) is the accepted standard of showing returns for investment with a holding period of more than one year (C) Simple returns can be calculated by the formula: (Sale price \u2013 Cost price / Cost price) x 100",
         "options": [
           {
             "key": "A",
@@ -11176,7 +11180,7 @@ window.NISM_MOCK_TESTS = {
       },
       {
         "id": 39,
-        "question": "Identify the TRUE statement with respect to ‘Jensen’s Alpha’ of a mutual fund scheme?",
+        "question": "Identify the TRUE statement with respect to \u2018Jensen\u2019s Alpha\u2019 of a mutual fund scheme?",
         "options": [
           {
             "key": "A",
@@ -11480,7 +11484,7 @@ window.NISM_MOCK_TESTS = {
           },
           {
             "key": "B",
-            "text": "In indexation, the mutual fund’s performance is benchmarked against a suitable index"
+            "text": "In indexation, the mutual fund\u2019s performance is benchmarked against a suitable index"
           },
           {
             "key": "C",
@@ -11804,7 +11808,7 @@ window.NISM_MOCK_TESTS = {
           }
         ],
         "correct": "D",
-        "explanation": "Value per tick is ₹5; therefore, 100 ticks = ₹500. ________________"
+        "explanation": "Value per tick is \u20b95; therefore, 100 ticks = \u20b9500. ________________"
       },
       {
         "id": 67,
@@ -12228,7 +12232,7 @@ window.NISM_MOCK_TESTS = {
           }
         ],
         "correct": "A",
-        "explanation": "Basis is calculated as Futures Price − Spot Price. ________________"
+        "explanation": "Basis is calculated as Futures Price \u2212 Spot Price. ________________"
       },
       {
         "id": 85,
@@ -12348,7 +12352,7 @@ window.NISM_MOCK_TESTS = {
           }
         ],
         "correct": "A",
-        "explanation": "SIPs require an ongoing scheme NAV to allot units periodically. In an NFO, units are allotted only once at the close of the offer period, so SIP cannot be registered during NFO. SIPs can be started only after the scheme is launched and becomes open for continuous sale/redemption. Exam trap: Many learners think SIP can be done during NFO, but it’s not allowed."
+        "explanation": "SIPs require an ongoing scheme NAV to allot units periodically. In an NFO, units are allotted only once at the close of the offer period, so SIP cannot be registered during NFO. SIPs can be started only after the scheme is launched and becomes open for continuous sale/redemption. Exam trap: Many learners think SIP can be done during NFO, but it\u2019s not allowed."
       },
       {
         "id": 90,
@@ -12496,7 +12500,7 @@ window.NISM_MOCK_TESTS = {
       },
       {
         "id": 96,
-        "question": "Identify the true statement as per AMFI’s Code of Conduct for Intermediaries of Mutual Funds.",
+        "question": "Identify the true statement as per AMFI\u2019s Code of Conduct for Intermediaries of Mutual Funds.",
         "options": [
           {
             "key": "A",
@@ -12512,11 +12516,11 @@ window.NISM_MOCK_TESTS = {
           }
         ],
         "correct": "B",
-        "explanation": "AMFI’s Code of Conduct emphasizes that intermediaries must avoid making negative statements about any AMC or scheme and should ensure comparisons are made with relevant products."
+        "explanation": "AMFI\u2019s Code of Conduct emphasizes that intermediaries must avoid making negative statements about any AMC or scheme and should ensure comparisons are made with relevant products."
       },
       {
         "id": 97,
-        "question": "An existing investor in mutual funds invests Rs 25,000 in ABC scheme’s direct plan. Calculate the amount that will be the net investment made in the scheme after accounting for transaction charges.",
+        "question": "An existing investor in mutual funds invests Rs 25,000 in ABC scheme\u2019s direct plan. Calculate the amount that will be the net investment made in the scheme after accounting for transaction charges.",
         "options": [
           {
             "key": "A",
@@ -12896,7 +12900,7 @@ window.NISM_MOCK_TESTS = {
           }
         ],
         "correct": "B",
-        "explanation": "A downgrade in a bond’s credit rating (from AAA to AA+) indicates increased risk, leading to a decline in its market price as investors demand a higher yield for the added risk."
+        "explanation": "A downgrade in a bond\u2019s credit rating (from AAA to AA+) indicates increased risk, leading to a decline in its market price as investors demand a higher yield for the added risk."
       },
       {
         "id": 113,
@@ -13136,7 +13140,7 @@ window.NISM_MOCK_TESTS = {
           }
         ],
         "correct": "B",
-        "explanation": "Loss = (754 − 745) × 1500 = Rs. 13,500."
+        "explanation": "Loss = (754 \u2212 745) \u00d7 1500 = Rs. 13,500."
       },
       {
         "id": 123,
@@ -13160,7 +13164,7 @@ window.NISM_MOCK_TESTS = {
           }
         ],
         "correct": "B",
-        "explanation": "Profit = (3500 − 3410) × 10 × 50 = Rs. 45,000."
+        "explanation": "Profit = (3500 \u2212 3410) \u00d7 10 \u00d7 50 = Rs. 45,000."
       },
       {
         "id": 124,
@@ -13460,7 +13464,7 @@ window.NISM_MOCK_TESTS = {
       },
       {
         "id": 137,
-        "question": "Evaluate the net payoff for Ms. Manisha's butterfly strategy when the underlying settles at ₹127.",
+        "question": "Evaluate the net payoff for Ms. Manisha's butterfly strategy when the underlying settles at \u20b9127.",
         "options": [
           {
             "key": "A",
@@ -13480,7 +13484,7 @@ window.NISM_MOCK_TESTS = {
           }
         ],
         "correct": "A",
-        "explanation": "Total intrinsic payoff is zero, while the net premium paid is ₹0.20, resulting in a net loss of ₹0.20."
+        "explanation": "Total intrinsic payoff is zero, while the net premium paid is \u20b90.20, resulting in a net loss of \u20b90.20."
       },
       {
         "id": 138,
@@ -13576,7 +13580,7 @@ window.NISM_MOCK_TESTS = {
           }
         ],
         "correct": "C",
-        "explanation": "One tick equals ₹5; therefore, 500 ticks = ₹2,500. ________________"
+        "explanation": "One tick equals \u20b95; therefore, 500 ticks = \u20b92,500. ________________"
       },
       {
         "id": 142,
@@ -13724,7 +13728,7 @@ window.NISM_MOCK_TESTS = {
       },
       {
         "id": 148,
-        "question": "For which of the following funds can NSE’s MIBOR be used as a benchmark?",
+        "question": "For which of the following funds can NSE\u2019s MIBOR be used as a benchmark?",
         "options": [
           {
             "key": "A",
@@ -13744,7 +13748,7 @@ window.NISM_MOCK_TESTS = {
           }
         ],
         "correct": "B",
-        "explanation": "NSE’s MIBOR (Mumbai Inter-Bank Offered Rate) is used as a benchmark for liquid funds because these funds invest in short-term money market instruments, which aligns with the nature of MIBOR."
+        "explanation": "NSE\u2019s MIBOR (Mumbai Inter-Bank Offered Rate) is used as a benchmark for liquid funds because these funds invest in short-term money market instruments, which aligns with the nature of MIBOR."
       },
       {
         "id": 149,
@@ -13768,7 +13772,7 @@ window.NISM_MOCK_TESTS = {
           }
         ],
         "correct": "B",
-        "explanation": "This approach involves creating a financial plan for a specific goal, such as saving for a child’s higher education. An alternative approach is a comprehensive financial plan that considers all financial goals."
+        "explanation": "This approach involves creating a financial plan for a specific goal, such as saving for a child\u2019s higher education. An alternative approach is a comprehensive financial plan that considers all financial goals."
       },
       {
         "id": 150,
@@ -13794,7 +13798,8 @@ window.NISM_MOCK_TESTS = {
         "correct": "B",
         "explanation": "Higher strike prices generally reduce call option premiums."
       }
-    ]
+    ],
+    "type": "full"
   },
   "mock5": {
     "id": "mock5",
@@ -13918,7 +13923,7 @@ window.NISM_MOCK_TESTS = {
           }
         ],
         "correct": "C",
-        "explanation": "Loss = (274 − 268) × 1,500 = Rs. 9,000. ________________"
+        "explanation": "Loss = (274 \u2212 268) \u00d7 1,500 = Rs. 9,000. ________________"
       },
       {
         "id": 6,
@@ -14038,7 +14043,7 @@ window.NISM_MOCK_TESTS = {
           }
         ],
         "correct": "B",
-        "explanation": "Price change = Bond Price × Modified Duration × Yield Change = 100 × 4 × 2% = Rs.8. ________________"
+        "explanation": "Price change = Bond Price \u00d7 Modified Duration \u00d7 Yield Change = 100 \u00d7 4 \u00d7 2% = Rs.8. ________________"
       },
       {
         "id": 11,
@@ -14138,7 +14143,7 @@ window.NISM_MOCK_TESTS = {
           }
         ],
         "correct": "A",
-        "explanation": "Transaction charges can be levied on SIPs, provided the SIP commitment is ₹10,000 or more (₹100 per SIP installment deducted up to 5 installments). They cannot be levied on STPs, Dividend reinvestments, or switch transactions."
+        "explanation": "Transaction charges can be levied on SIPs, provided the SIP commitment is \u20b910,000 or more (\u20b9100 per SIP installment deducted up to 5 installments). They cannot be levied on STPs, Dividend reinvestments, or switch transactions."
       },
       {
         "id": 16,
@@ -14150,7 +14155,7 @@ window.NISM_MOCK_TESTS = {
           },
           {
             "key": "B",
-            "text": "Cash price − Income on cash position"
+            "text": "Cash price \u2212 Income on cash position"
           },
           {
             "key": "C",
@@ -14158,7 +14163,7 @@ window.NISM_MOCK_TESTS = {
           },
           {
             "key": "D",
-            "text": "Cash price + Financing cost − Income on cash position"
+            "text": "Cash price + Financing cost \u2212 Income on cash position"
           }
         ],
         "correct": "D",
@@ -14282,7 +14287,7 @@ window.NISM_MOCK_TESTS = {
           }
         ],
         "correct": "A",
-        "explanation": "In retirement, investors usually reduce overall equity exposure (shift to debt/liquid). The question specifically says via equity index funds → which are equity funds. Index funds are still equities, and in retirement phase one should reduce equity exposure, not just shift to index. A (Accumulation phase) is when an investor may limit exposure through safer equity index funds vs direct stocks, to reduce risk while still participating in growth."
+        "explanation": "In retirement, investors usually reduce overall equity exposure (shift to debt/liquid). The question specifically says via equity index funds \u2192 which are equity funds. Index funds are still equities, and in retirement phase one should reduce equity exposure, not just shift to index. A (Accumulation phase) is when an investor may limit exposure through safer equity index funds vs direct stocks, to reduce risk while still participating in growth."
       },
       {
         "id": 22,
@@ -14498,7 +14503,7 @@ window.NISM_MOCK_TESTS = {
       },
       {
         "id": 31,
-        "question": "Mr. Guru buys a bond at ₹54.50 and sells a call option (Strike ₹55) for ₹0.10. If the bond price at expiry is ₹55.50, what is the net payoff?",
+        "question": "Mr. Guru buys a bond at \u20b954.50 and sells a call option (Strike \u20b955) for \u20b90.10. If the bond price at expiry is \u20b955.50, what is the net payoff?",
         "options": [
           {
             "key": "A",
@@ -14518,7 +14523,7 @@ window.NISM_MOCK_TESTS = {
           }
         ],
         "correct": "B",
-        "explanation": "Bond gain = ₹1.00, call loss = ₹0.50, premium received = ₹0.10; net payoff = ₹0.60. ________________"
+        "explanation": "Bond gain = \u20b91.00, call loss = \u20b90.50, premium received = \u20b90.10; net payoff = \u20b90.60. ________________"
       },
       {
         "id": 32,
@@ -14678,7 +14683,7 @@ window.NISM_MOCK_TESTS = {
       },
       {
         "id": 39,
-        "question": "Mr. Guru buys a bond at ₹54.50 and sells a call option (strike ₹55) for ₹0.10 premium. What is his net payoff if the bond price at expiry is ₹55.50?",
+        "question": "Mr. Guru buys a bond at \u20b954.50 and sells a call option (strike \u20b955) for \u20b90.10 premium. What is his net payoff if the bond price at expiry is \u20b955.50?",
         "options": [
           {
             "key": "A",
@@ -14698,7 +14703,7 @@ window.NISM_MOCK_TESTS = {
           }
         ],
         "correct": "B",
-        "explanation": "Bond gain = ₹1.00, call option loss = ₹0.50, premium received = ₹0.10. Net payoff = ₹0.60. ________________"
+        "explanation": "Bond gain = \u20b91.00, call option loss = \u20b90.50, premium received = \u20b90.10. Net payoff = \u20b90.60. ________________"
       },
       {
         "id": 40,
@@ -14954,7 +14959,7 @@ window.NISM_MOCK_TESTS = {
           }
         ],
         "correct": "D",
-        "explanation": "Ms. Priya redeems 2000 units at an NAV of Rs 13: 2000 units × Rs 13 = Rs 26000. Exit load of 1% = Rs 26000 × 1% = Rs 260. Redemption value = Rs 26000 - Rs 260 = Rs 25740"
+        "explanation": "Ms. Priya redeems 2000 units at an NAV of Rs 13: 2000 units \u00d7 Rs 13 = Rs 26000. Exit load of 1% = Rs 26000 \u00d7 1% = Rs 260. Redemption value = Rs 26000 - Rs 260 = Rs 25740"
       },
       {
         "id": 51,
@@ -14970,7 +14975,7 @@ window.NISM_MOCK_TESTS = {
           }
         ],
         "correct": "B",
-        "explanation": "Exposure limits are based on margins, capital adequacy, and risk parameters—not on the number of trading members. ________________"
+        "explanation": "Exposure limits are based on margins, capital adequacy, and risk parameters\u2014not on the number of trading members. ________________"
       },
       {
         "id": 52,
@@ -15214,7 +15219,7 @@ window.NISM_MOCK_TESTS = {
       },
       {
         "id": 62,
-        "question": "Mr. Sunny buys a call option (Strike ₹40.25, Premium ₹0.20) and sells a call option (Strike ₹39.50, Premium ₹0.60). If the underlying closes at ₹39.50, what is his net result?",
+        "question": "Mr. Sunny buys a call option (Strike \u20b940.25, Premium \u20b90.20) and sells a call option (Strike \u20b939.50, Premium \u20b90.60). If the underlying closes at \u20b939.50, what is his net result?",
         "options": [
           {
             "key": "A",
@@ -15234,7 +15239,7 @@ window.NISM_MOCK_TESTS = {
           }
         ],
         "correct": "C",
-        "explanation": "Both options expire worthless, so the net premium received (₹0.40) is the profit. ________________"
+        "explanation": "Both options expire worthless, so the net premium received (\u20b90.40) is the profit. ________________"
       },
       {
         "id": 63,
@@ -15814,7 +15819,7 @@ window.NISM_MOCK_TESTS = {
       },
       {
         "id": 87,
-        "question": "Identify the FALSE statement/s: (A) For equity mutual funds schemes which are actively managed (e.g., Diversified equity fund/Balance funds), the net asset value need NOT be declared up to 4 decimal points (B) Each mutual fund scheme’s account is combined with the accounts of the Asset Management Company",
+        "question": "Identify the FALSE statement/s: (A) For equity mutual funds schemes which are actively managed (e.g., Diversified equity fund/Balance funds), the net asset value need NOT be declared up to 4 decimal points (B) Each mutual fund scheme\u2019s account is combined with the accounts of the Asset Management Company",
         "options": [
           {
             "key": "A",
@@ -15890,7 +15895,7 @@ window.NISM_MOCK_TESTS = {
           },
           {
             "key": "B",
-            "text": "Cash price − Income on cash position"
+            "text": "Cash price \u2212 Income on cash position"
           },
           {
             "key": "C",
@@ -15898,7 +15903,7 @@ window.NISM_MOCK_TESTS = {
           },
           {
             "key": "D",
-            "text": "Cash price + Financing cost − Income on cash position"
+            "text": "Cash price + Financing cost \u2212 Income on cash position"
           }
         ],
         "correct": "D",
@@ -15926,7 +15931,7 @@ window.NISM_MOCK_TESTS = {
           }
         ],
         "correct": "A",
-        "explanation": "In an open-ended fund, units are bought or sold at the Net Asset Value (NAV), which is calculated daily based on the market value of the fund’s assets."
+        "explanation": "In an open-ended fund, units are bought or sold at the Net Asset Value (NAV), which is calculated daily based on the market value of the fund\u2019s assets."
       },
       {
         "id": 92,
@@ -16370,7 +16375,7 @@ window.NISM_MOCK_TESTS = {
           }
         ],
         "correct": "D",
-        "explanation": "The investor is redeeming within six months, so a 2% exit load applies. Total redemption amount: 2000 units × Rs 40 = Rs 80,000. Exit load: 2% of Rs 80,000 = Rs 1,600. Net redemption amount: Rs 80,000 - Rs 1,600 = Rs 78,400"
+        "explanation": "The investor is redeeming within six months, so a 2% exit load applies. Total redemption amount: 2000 units \u00d7 Rs 40 = Rs 80,000. Exit load: 2% of Rs 80,000 = Rs 1,600. Net redemption amount: Rs 80,000 - Rs 1,600 = Rs 78,400"
       },
       {
         "id": 111,
@@ -16418,7 +16423,7 @@ window.NISM_MOCK_TESTS = {
           }
         ],
         "correct": "D",
-        "explanation": "In a Direct Plan, there are no transaction charges. Therefore, Mr. A’s net investment will be the full amount of Rs. 5000."
+        "explanation": "In a Direct Plan, there are no transaction charges. Therefore, Mr. A\u2019s net investment will be the full amount of Rs. 5000."
       },
       {
         "id": 113,
@@ -16714,7 +16719,7 @@ window.NISM_MOCK_TESTS = {
           },
           {
             "key": "B",
-            "text": "The AMC’s while it is advertising the performance of their funds"
+            "text": "The AMC\u2019s while it is advertising the performance of their funds"
           },
           {
             "key": "C",
@@ -16918,7 +16923,7 @@ window.NISM_MOCK_TESTS = {
       },
       {
         "id": 134,
-        "question": "Mr. Sunny buys a call option (strike ₹40.25, premium ₹0.20) and sells a call option (strike ₹39.50, premium ₹0.60). What is his net profit or loss if the underlying price at expiry is ₹39.50?",
+        "question": "Mr. Sunny buys a call option (strike \u20b940.25, premium \u20b90.20) and sells a call option (strike \u20b939.50, premium \u20b90.60). What is his net profit or loss if the underlying price at expiry is \u20b939.50?",
         "options": [
           {
             "key": "A",
@@ -17078,7 +17083,7 @@ window.NISM_MOCK_TESTS = {
           }
         ],
         "correct": "B",
-        "explanation": "When a mutual fund distributes a dividend, the NAV falls by the dividend amount. This is because the fund’s total assets decrease as the dividend is paid out. The NAV post-dividend is known as the ex-dividend NAV."
+        "explanation": "When a mutual fund distributes a dividend, the NAV falls by the dividend amount. This is because the fund\u2019s total assets decrease as the dividend is paid out. The NAV post-dividend is known as the ex-dividend NAV."
       },
       {
         "id": 141,
@@ -17102,7 +17107,7 @@ window.NISM_MOCK_TESTS = {
           }
         ],
         "correct": "C",
-        "explanation": "The exit load applies only when redeeming units, not when purchasing them. Therefore, the units will be allotted based on the NAV of Rs 12. Units allotted = Rs 30,000 ÷ Rs 12 = 2500 units."
+        "explanation": "The exit load applies only when redeeming units, not when purchasing them. Therefore, the units will be allotted based on the NAV of Rs 12. Units allotted = Rs 30,000 \u00f7 Rs 12 = 2500 units."
       },
       {
         "id": 142,
@@ -17270,7 +17275,7 @@ window.NISM_MOCK_TESTS = {
           }
         ],
         "correct": "B",
-        "explanation": "Price change = 100 × 4 × 2% = Rs.8. ________________"
+        "explanation": "Price change = 100 \u00d7 4 \u00d7 2% = Rs.8. ________________"
       },
       {
         "id": 149,
@@ -17302,7 +17307,5827 @@ window.NISM_MOCK_TESTS = {
           }
         ],
         "correct": "A",
-        "explanation": "Unit certificates are non-transferable, hence they don’t provide much transactional convenience. The statement in the question is true."
+        "explanation": "Unit certificates are non-transferable, hence they don\u2019t provide much transactional convenience. The statement in the question is true."
+      }
+    ],
+    "type": "full"
+  },
+  "mini1": {
+    "id": "mini1",
+    "type": "mini",
+    "title": "Mini Mock 1: Rapid-Fire Practice (Part 1)",
+    "badge": "50Q Mini Mock",
+    "badgeColor": "emerald",
+    "description": "50-question high-yield sprint covering Interest Rate Derivatives expiry conventions, bond valuation, mutual fund taxation, and distribution regulations.",
+    "totalQuestions": 50,
+    "durationMinutes": 60,
+    "totalMarks": 50,
+    "passMarks": 30,
+    "negativeMark": 0.1,
+    "questions": [
+      {
+        "id": 1,
+        "question": "______ are the quarterly months for interest rate derivatives expiry.",
+        "options": [
+          {
+            "key": "A",
+            "text": "January, February, March"
+          },
+          {
+            "key": "B",
+            "text": "July, August, September"
+          },
+          {
+            "key": "C",
+            "text": "Both 1 and 2"
+          },
+          {
+            "key": "D",
+            "text": "None of the above"
+          }
+        ],
+        "correct": "D",
+        "explanation": "The quarterly expiry months are March, June, September, and December."
+      },
+      {
+        "id": 2,
+        "question": "When distributors are empanelled, how should mutual funds categorize customer relationships and transactions?",
+        "options": [
+          {
+            "key": "A",
+            "text": "Advisory, Sale"
+          },
+          {
+            "key": "B",
+            "text": "Advisory, Execution"
+          },
+          {
+            "key": "C",
+            "text": "Financial Planning, Distribution"
+          },
+          {
+            "key": "D",
+            "text": "Priority Sale, Retail Sale"
+          }
+        ],
+        "correct": "B",
+        "explanation": "Mutual funds categorize relationships as: Advisory: Distributor offers advice while distributing the product. Execution: For transactions where no advice is given."
+      },
+      {
+        "id": 3,
+        "question": "Which of these statement(s) is/are FALSE with respect to Benchmarks? (A) Portfolio concentration is an important factor while selecting a benchmark for an equity mutual fund (B) Choice of investment universe is not an important factor while selecting an appropriate benchmark for debt mutual funds",
+        "options": [
+          {
+            "key": "A",
+            "text": "Only A is false"
+          },
+          {
+            "key": "B",
+            "text": "Only B is false"
+          },
+          {
+            "key": "C",
+            "text": "Both A and B are false"
+          },
+          {
+            "key": "D",
+            "text": "Neither A nor B are false"
+          }
+        ],
+        "correct": "B",
+        "explanation": "The choice of investment universe is important when selecting a benchmark for debt mutual funds. For example, liquid funds use benchmarks like the NSE MIBOR, while long-term debt funds may use different indices based on their duration and investment strategy."
+      },
+      {
+        "id": 4,
+        "question": "Identify the FALSE statement/s. (1) Arbitrage funds have lower risk as compared to Equity Funds (2) The main objective of an Arbitrage Fund is to provide capital appreciation (3) Arbitrage funds can invest in both Futures and cash markets",
+        "options": [
+          {
+            "key": "A",
+            "text": "Only 1 is false"
+          },
+          {
+            "key": "B",
+            "text": "Only 2 is false"
+          },
+          {
+            "key": "C",
+            "text": "Both 2 and 3 are false"
+          },
+          {
+            "key": "D",
+            "text": "Both 1 and 3 are false"
+          }
+        ],
+        "correct": "B",
+        "explanation": "Arbitrage funds aim to provide returns similar to debt funds by exploiting price differences between the cash and futures markets, and do not focus on capital appreciation."
+      },
+      {
+        "id": 5,
+        "question": "In which of the following cases is the transaction charge to be paid to the mutual fund distributor, deducted from the gross investment of the investor?",
+        "options": [
+          {
+            "key": "A",
+            "text": "When the investor purchases mutual fund units worth Rs 5000 through a mutual fund distributor"
+          },
+          {
+            "key": "B",
+            "text": "When the investor purchases mutual fund units worth Rs 10000 through a mutual fund distributor"
+          },
+          {
+            "key": "C",
+            "text": "When the investor purchases mutual fund units worth Rs 5000 through the website of the mutual fund"
+          },
+          {
+            "key": "D",
+            "text": "When the investor purchases mutual fund units worth Rs 10000 through the website of the mutual fund"
+          }
+        ],
+        "correct": "B",
+        "explanation": "A transaction charge is applicable when an investor buys mutual fund units worth Rs 10,000 or more through a distributor. Direct investments made through the website do not attract such charges."
+      },
+      {
+        "id": 6,
+        "question": "Identify the false statement(s): (A) Share certificate is a physical asset (B) Debenture is a physical asset as the paper on which it is printed has value",
+        "options": [
+          {
+            "key": "A",
+            "text": "Only statement A is false"
+          },
+          {
+            "key": "B",
+            "text": "Only statement B is false"
+          },
+          {
+            "key": "C",
+            "text": "Both statements A and B are false"
+          }
+        ],
+        "correct": "C",
+        "explanation": "Shares and debentures are financial assets, not physical assets. Physical assets include items like gold, real estate, and art, but shares and debentures are financial instruments representing ownership or debt, not physical possessions."
+      },
+      {
+        "id": 7,
+        "question": "Which of these funds has the highest risk?",
+        "options": [
+          {
+            "key": "A",
+            "text": "Index Funds"
+          },
+          {
+            "key": "B",
+            "text": "Diversified Equity Fund"
+          },
+          {
+            "key": "C",
+            "text": "Long Duration Funds"
+          },
+          {
+            "key": "D",
+            "text": "Gilt Funds"
+          }
+        ],
+        "correct": "B",
+        "explanation": "Equity funds are inherently riskier than debt-oriented funds such as gilt funds and long duration funds, which primarily face interest rate risk. Within equity categories, index funds invest in large-cap companies from benchmark indices, making them relatively more stable. In contrast, diversified equity funds invest across large, mid, and small-cap stocks, where mid and small-cap exposure increases volatility and risk. Hence, diversified equity funds carry the highest risk among the given options."
+      },
+      {
+        "id": 8,
+        "question": "What is the maximum permissible limit of investment a single investor can have in a scheme?",
+        "options": [
+          {
+            "key": "A",
+            "text": "5% of the corpus"
+          },
+          {
+            "key": "B",
+            "text": "10% of the corpus"
+          },
+          {
+            "key": "C",
+            "text": "20% of the corpus"
+          },
+          {
+            "key": "D",
+            "text": "25% of the corpus"
+          }
+        ],
+        "correct": "D",
+        "explanation": "SEBI regulations state that no single investor can hold more than 25% of the corpus of a mutual fund scheme, and a scheme must have at least 20 investors."
+      },
+      {
+        "id": 9,
+        "question": "Ultra-short-term debt scheme invests in debt and money market instruments with Macaulay duration between __________.",
+        "options": [
+          {
+            "key": "A",
+            "text": "1 to 3 months"
+          },
+          {
+            "key": "B",
+            "text": "3 to 6 months"
+          },
+          {
+            "key": "C",
+            "text": "6 to 12 months"
+          },
+          {
+            "key": "D",
+            "text": "1 year to 3 years"
+          }
+        ],
+        "correct": "B",
+        "explanation": "Ultra-short-term debt schemes invest in instruments with a Macaulay duration between 3 and 6 months. This duration is used to assess the interest rate sensitivity of the fund."
+      },
+      {
+        "id": 10,
+        "question": "The settlement guarantee for exchange-traded derivatives is provided by ______.",
+        "options": [
+          {
+            "key": "A",
+            "text": "SEBI"
+          },
+          {
+            "key": "B",
+            "text": "Clearing Corporation"
+          },
+          {
+            "key": "C",
+            "text": "Exchange"
+          },
+          {
+            "key": "D",
+            "text": "RBI"
+          }
+        ],
+        "correct": "B",
+        "explanation": "The Clearing Corporation guarantees settlement and manages counterparty risk."
+      },
+      {
+        "id": 11,
+        "question": "If an investor in a Multicap Fund wants to know the industry-wise allocation of the funds then which document should he refer to?",
+        "options": [
+          {
+            "key": "A",
+            "text": "Fund Factsheet"
+          },
+          {
+            "key": "B",
+            "text": "SID and SAI"
+          },
+          {
+            "key": "C",
+            "text": "Investment management agreement"
+          },
+          {
+            "key": "D",
+            "text": "Annual accounts of the AMC"
+          }
+        ],
+        "correct": "A",
+        "explanation": "The monthly Fund Factsheet provides details on the industry and sector-wise allocation of the fund\u2019s portfolio."
+      },
+      {
+        "id": 12,
+        "question": "Which of these investors is allowed to do a nomination?",
+        "options": [
+          {
+            "key": "A",
+            "text": "Only SIP investors"
+          },
+          {
+            "key": "B",
+            "text": "Only Equity Mutual Fund investors"
+          },
+          {
+            "key": "C",
+            "text": "Only Institutional Investors"
+          },
+          {
+            "key": "D",
+            "text": "Only Individual Investors"
+          }
+        ],
+        "correct": "D",
+        "explanation": "Only individual investors can make a nomination for mutual fund investments, as institutional investors cannot assign a nominee."
+      },
+      {
+        "id": 13,
+        "question": "While empaneling mutual fund distributors, an AMC has to do a due diligence to satisfy the 'Fit and Proper' criteria for eligible distributors. Which of the following form a part of this due diligence process?",
+        "options": [
+          {
+            "key": "A",
+            "text": "The eligible distributor should have the requisite Employee to Customer ratio as prescribed by SEBI"
+          },
+          {
+            "key": "B",
+            "text": "The eligible distributor should have strict internal controls to limit investors' exposure to an asset class or fund house"
+          },
+          {
+            "key": "C",
+            "text": "Adequate controls to delink sales functions from customer risk and investment objective evaluation"
+          },
+          {
+            "key": "D",
+            "text": "All of the above"
+          }
+        ],
+        "correct": "C",
+        "explanation": "The due diligence process includes assessing business model, experience, regulatory record, and organizational controls. It ensures sales functions are separated from risk and investment evaluation processes."
+      },
+      {
+        "id": 14,
+        "question": "As per SEBI rules, commissions cannot be paid to ______.",
+        "options": [
+          {
+            "key": "A",
+            "text": "Brokers of the stock exchange"
+          },
+          {
+            "key": "B",
+            "text": "Banks"
+          },
+          {
+            "key": "C",
+            "text": "Sponsor distributors"
+          },
+          {
+            "key": "D",
+            "text": "Investors"
+          }
+        ],
+        "correct": "D",
+        "explanation": "SEBI rules prohibit the payment of commissions or rebates to investors. Distributors are not allowed to offer commissions or gifts to investors to influence their investment decisions."
+      },
+      {
+        "id": 15,
+        "question": "Identify the TRUE statement.",
+        "options": [
+          {
+            "key": "A",
+            "text": "While calculating scheme returns for an investor, if there is an entry load, then the initial value of the Net Asset Value (NAV) is taken as NAV minus Entry Load"
+          },
+          {
+            "key": "B",
+            "text": "While calculating scheme returns for an investor, if there is an exit load, then the later value of the Net Asset Value (NAV) is taken as NAV minus Exit Load"
+          }
+        ],
+        "correct": "B",
+        "explanation": "When calculating scheme returns, the entry load is added to the NAV (as it increases the purchase cost), while the exit load is subtracted from the NAV (as it reduces the redemption amount)."
+      },
+      {
+        "id": 16,
+        "question": "Identify the document which authorizes a company to invest in a specific mutual fund?",
+        "options": [
+          {
+            "key": "A",
+            "text": "Resolution passed in the shareholders meeting"
+          },
+          {
+            "key": "B",
+            "text": "Specific Board resolution"
+          },
+          {
+            "key": "C",
+            "text": "As per the Companies Act, a company can invest in any mutual fund scheme as long it is beneficial to the interest of the shareholders, without any special authorisation"
+          },
+          {
+            "key": "D",
+            "text": "As per the Companies Act, a company cannot invest in mutual funds"
+          }
+        ],
+        "correct": "B",
+        "explanation": "A company must pass a specific Board resolution authorizing the investment in a mutual fund, as companies require formal approval from their board before making such decisions."
+      },
+      {
+        "id": 17,
+        "question": "SEBI has to approve the Scheme Related Documents in ______ .",
+        "options": [
+          {
+            "key": "A",
+            "text": "7 days"
+          },
+          {
+            "key": "B",
+            "text": "15 days"
+          },
+          {
+            "key": "C",
+            "text": "1 month"
+          },
+          {
+            "key": "D",
+            "text": "SEBI does not approve the Scheme Related Documents. It only gives its observations"
+          }
+        ],
+        "correct": "D",
+        "explanation": "SEBI does not approve mutual fund scheme documents but reviews them and provides observations. The mutual fund must incorporate these observations into the final documents."
+      },
+      {
+        "id": 18,
+        "question": "What is the investment in equity and equity-related instruments in a Balanced Hybrid Fund?",
+        "options": [
+          {
+            "key": "A",
+            "text": "Between 20% to 30% of total assets"
+          },
+          {
+            "key": "B",
+            "text": "Between 10% to 20% of total assets"
+          },
+          {
+            "key": "C",
+            "text": "Between 40% to 60% of total assets"
+          },
+          {
+            "key": "D",
+            "text": "Between 60% to 80% of total assets"
+          }
+        ],
+        "correct": "C",
+        "explanation": "A Balanced Hybrid Fund invests between 40% and 60% of its total assets in equity and equity-related instruments, while the rest is allocated to debt instruments."
+      },
+      {
+        "id": 19,
+        "question": "In which type of fund is the risk of the investor not selecting the correct sector highest?",
+        "options": [
+          {
+            "key": "A",
+            "text": "Thematic Funds"
+          },
+          {
+            "key": "B",
+            "text": "Sector Funds"
+          },
+          {
+            "key": "C",
+            "text": "Arbitrage Funds"
+          },
+          {
+            "key": "D",
+            "text": "Index Funds"
+          }
+        ],
+        "correct": "B",
+        "explanation": "Sector Fund \u2192 invests a highly concentrated portion (typically at least 80%) of their assets into a single, specific industry (e.g., technology, banking, or pharmaceuticals). This focused approach means the fund's performance is almost entirely dependent on the performance of that one sector"
+      },
+      {
+        "id": 20,
+        "question": "What does a higher portfolio turnover imply?",
+        "options": [
+          {
+            "key": "A",
+            "text": "It implies higher transaction costs"
+          },
+          {
+            "key": "B",
+            "text": "It implies higher capital gains"
+          },
+          {
+            "key": "C",
+            "text": "It implies lower capital gains"
+          },
+          {
+            "key": "D",
+            "text": "It implies a long-term orientation of the fund"
+          }
+        ],
+        "correct": "A",
+        "explanation": "Higher portfolio turnover means more frequent buying and selling of securities, leading to higher transaction costs for the mutual fund."
+      },
+      {
+        "id": 21,
+        "question": "Who applies to SEBI for the registration of a Mutual Fund?",
+        "options": [
+          {
+            "key": "A",
+            "text": "The Asset Management Company (AMC)"
+          },
+          {
+            "key": "B",
+            "text": "Board of Trustees"
+          },
+          {
+            "key": "C",
+            "text": "The Sponsors"
+          },
+          {
+            "key": "D",
+            "text": "Chief Fund Manager"
+          }
+        ],
+        "correct": "C",
+        "explanation": "The sponsors of the mutual fund are responsible for applying to SEBI for the registration of the mutual fund."
+      },
+      {
+        "id": 22,
+        "question": "True or False - Gilt schemes have more risks than liquid schemes as their NAV fluctuates more due to changes in the yield market.",
+        "options": [
+          {
+            "key": "A",
+            "text": "True"
+          },
+          {
+            "key": "B",
+            "text": "False"
+          }
+        ],
+        "correct": "A",
+        "explanation": "Gilt schemes, which invest in long-term government securities, are more sensitive to yield changes, leading to greater NAV fluctuations compared to liquid schemes."
+      },
+      {
+        "id": 23,
+        "question": "Mr. Anand has Rs. 5 lakhs to invest but may need money in the short term. In which of these funds should he NOT invest?",
+        "options": [
+          {
+            "key": "A",
+            "text": "Liquid Fund"
+          },
+          {
+            "key": "B",
+            "text": "Money-market fund"
+          },
+          {
+            "key": "C",
+            "text": "Index fund"
+          },
+          {
+            "key": "D",
+            "text": "Overnight fund"
+          }
+        ],
+        "correct": "C",
+        "explanation": "For short-term needs, Mr. Anand should invest in debt funds like liquid funds or overnight funds. Index funds, being equity funds, may have stock market risks that could result in losses in the short term."
+      },
+      {
+        "id": 24,
+        "question": "True or False - Thematic funds will always have a wider exposure than Sector funds.",
+        "options": [
+          {
+            "key": "A",
+            "text": "True"
+          },
+          {
+            "key": "B",
+            "text": "False"
+          }
+        ],
+        "correct": "A",
+        "explanation": "Thematic funds have broader exposure because they follow an investment theme (e.g., infrastructure), investing in multiple sectors. In contrast, sector funds focus only on a specific sector, like banking."
+      },
+      {
+        "id": 25,
+        "question": "Can Indian mutual funds invest directly in Real Estate?",
+        "options": [
+          {
+            "key": "A",
+            "text": "Yes"
+          },
+          {
+            "key": "B",
+            "text": "No"
+          }
+        ],
+        "correct": "B",
+        "explanation": "Mutual funds cannot directly invest in real estate (physical property). They are allowed to invest in REITs (Real Estate Investment Trusts), which are listed securities."
+      },
+      {
+        "id": 26,
+        "question": "Identify the TRUE statement with respect to a Gilt Fund?",
+        "options": [
+          {
+            "key": "A",
+            "text": "The minimum investment in G-secs (as a percentage of total assets) is 70%"
+          },
+          {
+            "key": "B",
+            "text": "The minimum investment in G-secs (as a percentage of total assets) is 75%"
+          },
+          {
+            "key": "C",
+            "text": "The minimum investment in G-secs (as a percentage of total assets) is 80%"
+          },
+          {
+            "key": "D",
+            "text": "The minimum investment in G-secs (as a percentage of total assets) is 85%"
+          }
+        ],
+        "correct": "C",
+        "explanation": "Gilt Funds invest primarily in government securities (G-secs), and the minimum investment in these securities must be 80% of the total assets."
+      },
+      {
+        "id": 27,
+        "question": "Mohit needs Rs. 2,00,000 in 5 years from now. The interest rate is 7%. The amount required today to be invested can be calculated by using the formula ______ .",
+        "options": [
+          {
+            "key": "A",
+            "text": "$200000 / (1+0.07)^5$"
+          },
+          {
+            "key": "B",
+            "text": "$200000 * (1- 0.07)^5$"
+          },
+          {
+            "key": "C",
+            "text": "$200000 / (1+0.07)*5$"
+          },
+          {
+            "key": "D",
+            "text": "$200000 * (1+0.07)*5$"
+          }
+        ],
+        "correct": "A",
+        "explanation": "The formula for calculating the Present Value (PV) is: \\[ PV = \\frac{FV}{(1 + r)^n} \\] Where: \\(FV\\) is the future value, \\(r\\) is the interest rate, \\(n\\) is the number of years."
+      },
+      {
+        "id": 28,
+        "question": "An investor gives a local cheque of Rs 3 crore for investment in a Gilt scheme at 11:30 am. What would be the applicable NAV for this investment?",
+        "options": [
+          {
+            "key": "A",
+            "text": "The closing NAV of the day preceding the date of application"
+          },
+          {
+            "key": "B",
+            "text": "The closing NAV of the next working day"
+          },
+          {
+            "key": "C",
+            "text": "The closing NAV of the application day"
+          },
+          {
+            "key": "D",
+            "text": "The NAV of the business day on which the funds are available for utilisation"
+          }
+        ],
+        "correct": "D",
+        "explanation": "According to a SEBI circular, the applicable NAV is the one on the business day when the funds are available for utilization, regardless of the time of cheque receipt."
+      },
+      {
+        "id": 29,
+        "question": "A bond issued by a company has a coupon of 7%. The interest rate in the market for bonds of similar tenor and credit quality is now 8%. An investor holding the bond will see _____.",
+        "options": [
+          {
+            "key": "A",
+            "text": "The market price of the bond going up"
+          },
+          {
+            "key": "B",
+            "text": "The market price of the bond going down"
+          },
+          {
+            "key": "C",
+            "text": "The coupon of the bond going up"
+          },
+          {
+            "key": "D",
+            "text": "No change in the market price"
+          }
+        ],
+        "correct": "B",
+        "explanation": "When market interest rates rise, the value of existing bonds with lower coupons decreases. In this case, since the coupon is lower than the current market rate, the bond's price will fall."
+      },
+      {
+        "id": 30,
+        "question": "What exception is made for investments through Systematic Investment Plans (SIPs), if the annual investment is below Rs 50,000?",
+        "options": [
+          {
+            "key": "A",
+            "text": "KYC is not required to be done"
+          },
+          {
+            "key": "B",
+            "text": "Photo identity is not required"
+          },
+          {
+            "key": "C",
+            "text": "PAN Card is not required"
+          },
+          {
+            "key": "D",
+            "text": "None of the above"
+          }
+        ],
+        "correct": "C",
+        "explanation": "For Micro-SIPs (annual investments under Rs 50,000), PAN is not required, unlike regular SIPs where PAN is mandatory."
+      },
+      {
+        "id": 31,
+        "question": "Who should invest more in liquid funds: Mr. A, who has a small business, or Mr. B, who is a senior manager with a multinational company?",
+        "options": [
+          {
+            "key": "A",
+            "text": "Mr. A"
+          },
+          {
+            "key": "B",
+            "text": "Mr. B"
+          }
+        ],
+        "correct": "A",
+        "explanation": "Mr. A may need quick access to funds for his business, so he will allocate more to liquid funds. Mr. B, with a stable salary, doesn\u2019t face liquidity issues and would likely invest less in liquid funds."
+      },
+      {
+        "id": 32,
+        "question": "SEBI Complaint Redressal System (SCORES) helps an investor to ______ .",
+        "options": [
+          {
+            "key": "A",
+            "text": "Lodge a complaint for a grievance"
+          },
+          {
+            "key": "B",
+            "text": "Make a follow-up on the complaint"
+          },
+          {
+            "key": "C",
+            "text": "Track the status of redressal of such complaints online"
+          },
+          {
+            "key": "D",
+            "text": "All 1, 2 and 3"
+          }
+        ],
+        "correct": "D",
+        "explanation": "SCORES is a web-based platform where investors can lodge complaints, follow up on them, and track the status of redressal of their grievances online."
+      },
+      {
+        "id": 33,
+        "question": "Which of these funds has the highest risk?",
+        "options": [
+          {
+            "key": "A",
+            "text": "Gilt funds"
+          },
+          {
+            "key": "B",
+            "text": "Index funds"
+          },
+          {
+            "key": "C",
+            "text": "Money market funds"
+          },
+          {
+            "key": "D",
+            "text": "Sector funds"
+          }
+        ],
+        "correct": "D",
+        "explanation": "Sector funds invest in stocks from a single sector (e.g., Pharma, Banking). These funds carry high risk due to sector concentration, and if the sector underperforms, the fund's performance will likely suffer."
+      },
+      {
+        "id": 34,
+        "question": "The investors of a mutual fund can terminate the AMC or wind up a scheme if _____ % or more of the unit holders agree to it.",
+        "options": [
+          {
+            "key": "A",
+            "text": "50%"
+          },
+          {
+            "key": "B",
+            "text": "60%"
+          },
+          {
+            "key": "C",
+            "text": "70%"
+          },
+          {
+            "key": "D",
+            "text": "75%"
+          }
+        ],
+        "correct": "D",
+        "explanation": "SEBI regulations allow mutual fund investors to terminate the appointment of the Asset Management Company (AMC) or wind up a scheme if 75% or more of the unit holders agree to it."
+      },
+      {
+        "id": 35,
+        "question": "A synopsis of the scheme-related information documents is found in the _____.",
+        "options": [
+          {
+            "key": "A",
+            "text": "Statement of Additional Information (SAI)"
+          },
+          {
+            "key": "B",
+            "text": "Articles of Association"
+          },
+          {
+            "key": "C",
+            "text": "Trust Deed"
+          },
+          {
+            "key": "D",
+            "text": "Key Information Memorandum (KIM)"
+          }
+        ],
+        "correct": "D",
+        "explanation": "The Key Information Memorandum (KIM) is a concise version of the Scheme Information Document (SID) and Statement of Additional Information (SAI), providing a summary of the scheme to help investors make informed decisions."
+      },
+      {
+        "id": 36,
+        "question": "Which statement is FALSE with reference to risk appetite?",
+        "options": [
+          {
+            "key": "A",
+            "text": "Risk appetite can be assessed by risk profiling"
+          },
+          {
+            "key": "B",
+            "text": "Preferred risk appetite is different from ideal risk appetite"
+          },
+          {
+            "key": "C",
+            "text": "Risk appetite indicates level of risk that investor is comfortable with"
+          },
+          {
+            "key": "D",
+            "text": "People of same age will have same risk appetite"
+          }
+        ],
+        "correct": "D",
+        "explanation": "Risk appetite is influenced by various factors, not just age. Different individuals, even within the same age group, can have different financial goals, risk tolerance, and investment preferences."
+      },
+      {
+        "id": 37,
+        "question": "While giving the mutual fund units for re-purchase, the distributor should consider the impact of ______ and ______ on the investor's portfolio.",
+        "options": [
+          {
+            "key": "A",
+            "text": "Exit Load; Capital Gains Tax"
+          },
+          {
+            "key": "B",
+            "text": "Exit Load; Entry Load"
+          },
+          {
+            "key": "C",
+            "text": "Entry Load; Capital Gains Tax"
+          },
+          {
+            "key": "D",
+            "text": "Entry Load; Beta"
+          }
+        ],
+        "correct": "A",
+        "explanation": "Both exit load (charges for redeeming units) and capital gains tax (taxes on profits from sale of units) reduce the returns on an investor's portfolio. A distributor must consider these when facilitating the redemption of mutual fund units."
+      },
+      {
+        "id": 38,
+        "question": "A Short Strangle strategy involves which of the following trades?",
+        "options": [
+          {
+            "key": "A",
+            "text": "Buying a call at a lower strike and selling a call at a higher strike"
+          },
+          {
+            "key": "B",
+            "text": "Buying a call at a lower strike and selling a put at a higher strike"
+          },
+          {
+            "key": "C",
+            "text": "Buying a call at a higher strike and selling a call at a lower strike"
+          },
+          {
+            "key": "D",
+            "text": "Simultaneously selling an OTM call and an OTM put with different strike prices"
+          }
+        ],
+        "correct": "D",
+        "explanation": "A Short Strangle profits when the underlying remains within a limited price range."
+      },
+      {
+        "id": 39,
+        "question": "Which one acts as a Self Regulatory Organisation (SRO) in the mutual fund industry?",
+        "options": [
+          {
+            "key": "A",
+            "text": "SEBI"
+          },
+          {
+            "key": "B",
+            "text": "AMFI"
+          },
+          {
+            "key": "C",
+            "text": "Trustees"
+          },
+          {
+            "key": "D",
+            "text": "None of the above"
+          }
+        ],
+        "correct": "B",
+        "explanation": "AMFI functions as a self-regulatory organization within SEBI's regulatory framework."
+      },
+      {
+        "id": 40,
+        "question": "How often should the Key Information Memorandum (KIM) be updated?",
+        "options": [
+          {
+            "key": "A",
+            "text": "Every quarter"
+          },
+          {
+            "key": "B",
+            "text": "Twice in a year"
+          },
+          {
+            "key": "C",
+            "text": "At least once a year"
+          },
+          {
+            "key": "D",
+            "text": "It need not be updated after it is issued once"
+          }
+        ],
+        "correct": "C",
+        "explanation": "As per SEBI regulations, KIM must be updated at least annually. SID & SAI must also be regularly updated, but KIM is refreshed once a year with latest scheme details."
+      },
+      {
+        "id": 41,
+        "question": "The deposit required by the exchange where interest rate derivatives are traded will be __________.",
+        "options": [
+          {
+            "key": "A",
+            "text": "Same for all exchanges in India"
+          },
+          {
+            "key": "B",
+            "text": "Same for all Clearing Corporations in India"
+          },
+          {
+            "key": "C",
+            "text": "Different from Exchange to Exchange and Clearing Corporation to Clearing Corporation"
+          },
+          {
+            "key": "D",
+            "text": "None of the above"
+          }
+        ],
+        "correct": "C",
+        "explanation": "Deposit requirements vary across exchanges and clearing corporations."
+      },
+      {
+        "id": 42,
+        "question": "On whom is the compliance requirement under the Foreign Account Tax Compliance Act (FATCA) applicable?",
+        "options": [
+          {
+            "key": "A",
+            "text": "Only on those mutual funds who have foreign institutions as their sponsors"
+          },
+          {
+            "key": "B",
+            "text": "Only on those mutual funds who are registered with a foreign agency"
+          },
+          {
+            "key": "C",
+            "text": "All financial institutions including mutual funds"
+          },
+          {
+            "key": "D",
+            "text": "Only Indian mutual funds"
+          }
+        ],
+        "correct": "C",
+        "explanation": "FATCA compliance applies to all financial institutions, including mutual funds, to report foreign accounts as part of international efforts to combat tax evasion."
+      },
+      {
+        "id": 43,
+        "question": "As per the Principles of fair valuation of mutual funds, the valuation of the securities shall be ________.",
+        "options": [
+          {
+            "key": "A",
+            "text": "done aggressively"
+          },
+          {
+            "key": "B",
+            "text": "done conservatively"
+          },
+          {
+            "key": "C",
+            "text": "always rising"
+          },
+          {
+            "key": "D",
+            "text": "reflective of the realizable value of the securities"
+          }
+        ],
+        "correct": "D",
+        "explanation": "According to SEBI's fair valuation principles, the valuation should reflect the realizable value of the securities, ensuring transparency and fairness in pricing."
+      },
+      {
+        "id": 44,
+        "question": "STT is _________ on transactions in debt or debt-oriented mutual fund (including liquid fund) units.",
+        "options": [
+          {
+            "key": "A",
+            "text": "Applicable"
+          },
+          {
+            "key": "B",
+            "text": "Not applicable"
+          }
+        ],
+        "correct": "B",
+        "explanation": "STT (Securities Transaction Tax) is only applicable to equity transactions, not to debt or debt-oriented mutual fund transactions."
+      },
+      {
+        "id": 45,
+        "question": "A company has an Earnings Per Share (EPS) of Rs 5 and a Price-to-Earnings (P/E) ratio of 30. What will be the market price of the shares of this company?",
+        "options": [
+          {
+            "key": "A",
+            "text": "Rs. 0.60"
+          },
+          {
+            "key": "B",
+            "text": "Rs. 6"
+          },
+          {
+            "key": "C",
+            "text": "Rs. 150"
+          },
+          {
+            "key": "D",
+            "text": "Rs. 75"
+          }
+        ],
+        "correct": "C",
+        "explanation": "The P/E ratio formula is: \\[ \\text{Market Price} = \\text{P/E} \\times \\text{EPS} \\] So, Market Price = 30 \u00d7 5 = Rs. 150."
+      },
+      {
+        "id": 46,
+        "question": "After the New Fund Offer, units of the Close Ended fund can be bought and sold through _______.",
+        "options": [
+          {
+            "key": "A",
+            "text": "Close Ended fund cannot be bought and sold till the closure of term"
+          },
+          {
+            "key": "B",
+            "text": "The offices/branches of the respective AMC"
+          },
+          {
+            "key": "C",
+            "text": "The bank in which the unit holder has an account"
+          },
+          {
+            "key": "D",
+            "text": "Stock Exchanges"
+          }
+        ],
+        "correct": "D",
+        "explanation": "Close-ended funds are listed on stock exchanges, allowing investors to buy and sell units after the New Fund Offer."
+      },
+      {
+        "id": 47,
+        "question": "The NAV applicable for processing a mutual fund transaction depends on ________.",
+        "options": [
+          {
+            "key": "A",
+            "text": "The type of scheme"
+          },
+          {
+            "key": "B",
+            "text": "The day of transaction"
+          },
+          {
+            "key": "C",
+            "text": "The time of transaction"
+          },
+          {
+            "key": "D",
+            "text": "All of the above"
+          }
+        ],
+        "correct": "D",
+        "explanation": "The applicable NAV for a transaction depends on the type of scheme, the day, and the time of the transaction. Different schemes (e.g., Equity/Debt) have different cut-off times and transaction values that affect the NAV."
+      },
+      {
+        "id": 48,
+        "question": "Amongst the distribution channels mentioned below, which one is likely to sell funds of only a single mutual fund house?",
+        "options": [
+          {
+            "key": "A",
+            "text": "Distribution Company"
+          },
+          {
+            "key": "B",
+            "text": "Independent financial advisor"
+          },
+          {
+            "key": "C",
+            "text": "Institutional sales team of the Asset Management Company"
+          },
+          {
+            "key": "D",
+            "text": "Bank"
+          }
+        ],
+        "correct": "C",
+        "explanation": "An institutional sales team of an AMC sells funds only from that specific AMC, whereas other distributors sell products from various fund houses."
+      },
+      {
+        "id": 49,
+        "question": "The NAV of a mutual fund unit changes every day due to changes in _______.",
+        "options": [
+          {
+            "key": "A",
+            "text": "Number of investors in the mutual fund"
+          },
+          {
+            "key": "B",
+            "text": "Market value of the mutual fund portfolio"
+          },
+          {
+            "key": "C",
+            "text": "The size of the portfolio"
+          },
+          {
+            "key": "D",
+            "text": "The units remaining in the portfolio"
+          }
+        ],
+        "correct": "B",
+        "explanation": "The NAV changes daily based on the current market value of the investments in the mutual fund portfolio."
+      },
+      {
+        "id": 50,
+        "question": "A trader expects the interest rate change to happen in the short term, so he should use ___________.",
+        "options": [
+          {
+            "key": "A",
+            "text": "Govt. bond futures with short expiry date"
+          },
+          {
+            "key": "B",
+            "text": "Govt. bond futures with long expiry date"
+          },
+          {
+            "key": "C",
+            "text": "Treasury Bill futures with short expiry date"
+          },
+          {
+            "key": "D",
+            "text": "Treasury Bill futures with long expiry date"
+          }
+        ],
+        "correct": "C",
+        "explanation": "Treasury Bill futures with short expiry are more sensitive to short-term interest rate movements."
+      }
+    ]
+  },
+  "mini2": {
+    "id": "mini2",
+    "type": "mini",
+    "title": "Mini Mock 2: Rapid-Fire Practice (Part 2)",
+    "badge": "50Q Mini Mock",
+    "badgeColor": "teal",
+    "description": "50-question sprint focusing on Scheme Information Documents (KIM/SID/SAI), NAV computation, cut-off timings, and risk metrics.",
+    "totalQuestions": 50,
+    "durationMinutes": 60,
+    "totalMarks": 50,
+    "passMarks": 30,
+    "negativeMark": 0.1,
+    "questions": [
+      {
+        "id": 1,
+        "question": "With respect to KIM (Key Information Memorandum), which of the following statements is NOT true?",
+        "options": [
+          {
+            "key": "A",
+            "text": "KIM is an abridged version of the SID & SAI"
+          },
+          {
+            "key": "B",
+            "text": "KIM contains the names of Sponsor, Trust, and AMC"
+          },
+          {
+            "key": "C",
+            "text": "KIM is attached to each mutual fund application form"
+          },
+          {
+            "key": "D",
+            "text": "KIM has to be provided only if the investors ask for it"
+          }
+        ],
+        "correct": "D",
+        "explanation": "KIM is a summary of the offer document and is mandatory with every mutual fund application form. It is not provided only on request."
+      },
+      {
+        "id": 2,
+        "question": "As per SEBI's mandate, AMCs have to put in place a due diligence process to regulate distributors. Which of these mutual fund distributors would NOT be subjected to the due diligence process?",
+        "options": [
+          {
+            "key": "A",
+            "text": "AUM raised of Rs. 60 crore across industry in the non-institutional category"
+          },
+          {
+            "key": "B",
+            "text": "Commission received over Rs. 125 lakhs p.a. across industry"
+          },
+          {
+            "key": "C",
+            "text": "Multiple point presence in more than 25 locations"
+          },
+          {
+            "key": "D",
+            "text": "Commission received of over Rs. 75 Lakhs from a single mutual fund"
+          }
+        ],
+        "correct": "A",
+        "explanation": "As per SEBI's guidelines, distributors who meet certain criteria, such as raising an AUM of Rs. 100 crore or more or earning over Rs. 1 crore in commissions, must undergo a due diligence process. The distributor in this question does not meet the AUM threshold."
+      },
+      {
+        "id": 3,
+        "question": "A ________ investor will prefer lower risk and will settle for a lower return.",
+        "options": [
+          {
+            "key": "A",
+            "text": "Aggressive"
+          },
+          {
+            "key": "B",
+            "text": "Adventurous"
+          },
+          {
+            "key": "C",
+            "text": "Moderate"
+          },
+          {
+            "key": "D",
+            "text": "Conservative"
+          }
+        ],
+        "correct": "D",
+        "explanation": "Conservative investors prefer lower risk and are willing to accept lower returns in order to protect their principal investment."
+      },
+      {
+        "id": 4,
+        "question": "As per the Advertisement Guidelines for Mutual Funds, Point-to-point returns on a standard investment of Rs. 10,000 shall also be shown in addition to the CAGR for a scheme which has been in existence _______ .",
+        "options": [
+          {
+            "key": "A",
+            "text": "More than 5 years"
+          },
+          {
+            "key": "B",
+            "text": "More than 3 years"
+          },
+          {
+            "key": "C",
+            "text": "More than 2 years"
+          },
+          {
+            "key": "D",
+            "text": "Irrespective of years of existence, all mutual fund schemes must show the point to point returns"
+          }
+        ],
+        "correct": "B",
+        "explanation": "As per SEBI guidelines, for schemes that have been in existence for over 3 years, point-to-point returns (on an investment of Rs. 10,000) must be shown in addition to CAGR (Compound Annual Growth Rate)."
+      },
+      {
+        "id": 5,
+        "question": "Which of these entities can invest in Indian mutual funds? (A) Foreign portfolio investor (B) Insurance company (C) Salaried individual",
+        "options": [
+          {
+            "key": "A",
+            "text": "Only A"
+          },
+          {
+            "key": "B",
+            "text": "Only B"
+          },
+          {
+            "key": "C",
+            "text": "Only C"
+          },
+          {
+            "key": "D",
+            "text": "All A, B and C"
+          }
+        ],
+        "correct": "D",
+        "explanation": "All entities\u2014Foreign Portfolio Investors (FPIs), insurance companies, and salaried individuals\u2014can invest in Indian mutual funds, subject to the regulations governing each category of investor."
+      },
+      {
+        "id": 6,
+        "question": "Which document will an investor look at if he has to know the fundamental attributes of a mutual fund scheme?",
+        "options": [
+          {
+            "key": "A",
+            "text": "Key Information Memorandum (KIM)"
+          },
+          {
+            "key": "B",
+            "text": "Addendum"
+          },
+          {
+            "key": "C",
+            "text": "Scheme Information Document (SID)"
+          },
+          {
+            "key": "D",
+            "text": "Statement of Additional Information (SAI)"
+          }
+        ],
+        "correct": "C",
+        "explanation": "The Scheme Information Document (SID) outlines the fundamental attributes of a mutual fund scheme, including investment objectives, strategies, risk factors, etc."
+      },
+      {
+        "id": 7,
+        "question": "Which of these can be a benchmark for a Banking Fund?",
+        "options": [
+          {
+            "key": "A",
+            "text": "S&P BSE FMCG Index"
+          },
+          {
+            "key": "B",
+            "text": "S&P BSE Auto"
+          },
+          {
+            "key": "C",
+            "text": "S&P BSE Bankex"
+          },
+          {
+            "key": "D",
+            "text": "S&P BSE 500"
+          }
+        ],
+        "correct": "C",
+        "explanation": "The S&P BSE Bankex is a suitable benchmark for a Banking Fund as it includes stocks of banks and financial institutions."
+      },
+      {
+        "id": 8,
+        "question": "What is the role of the custodian?",
+        "options": [
+          {
+            "key": "A",
+            "text": "To issue account statements to the MF unit holders"
+          },
+          {
+            "key": "B",
+            "text": "To keep the safe custody of the securities of the mutual fund scheme"
+          },
+          {
+            "key": "C",
+            "text": "To issue statement of funds holding to investors"
+          },
+          {
+            "key": "D",
+            "text": "To execute the buy and sell orders in the stock market"
+          }
+        ],
+        "correct": "B",
+        "explanation": "The custodian safeguards the assets of the fund, including accepting and delivering securities during transactions. It is responsible for settling all transactions on behalf of the mutual fund."
+      },
+      {
+        "id": 9,
+        "question": "Which of these statement(s) is/are true? (A) In equity investments, the probability of losing money over a long term is lesser than losing money in the short term (B) Fundamental Analysis consists of studying the financial statements of a company and the candlestick charts",
+        "options": [
+          {
+            "key": "A",
+            "text": "Only A is correct"
+          },
+          {
+            "key": "B",
+            "text": "Only B is correct"
+          },
+          {
+            "key": "C",
+            "text": "Both A and B are correct"
+          },
+          {
+            "key": "D",
+            "text": "Neither A nor B are correct"
+          }
+        ],
+        "correct": "A",
+        "explanation": "Historically, long-term equity investing has lower chances of losing money compared to short-term investing due to the market's tendency to trend upwards over time. Fundamental analysis involves studying a company's financial statements and economic indicators, not chart patterns, which are the domain of technical analysis."
+      },
+      {
+        "id": 10,
+        "question": "Which of the following cycles will a financial planner not consider?",
+        "options": [
+          {
+            "key": "A",
+            "text": "Business cycle"
+          },
+          {
+            "key": "B",
+            "text": "Karma cycle"
+          },
+          {
+            "key": "C",
+            "text": "Wealth cycle"
+          },
+          {
+            "key": "D",
+            "text": "Life cycle"
+          }
+        ],
+        "correct": "B",
+        "explanation": "The Karma cycle is related to reincarnation and is unrelated to financial planning."
+      },
+      {
+        "id": 11,
+        "question": "The last trading day for a 10-year bond futures contract is ________.",
+        "options": [
+          {
+            "key": "A",
+            "text": "Last Thursday of the contract month (or previous trading day if holiday)"
+          },
+          {
+            "key": "B",
+            "text": "Last Wednesday of the contract month (or previous trading day if holiday)"
+          },
+          {
+            "key": "C",
+            "text": "Last Thursday of the contract month (or next trading day if holiday)"
+          },
+          {
+            "key": "D",
+            "text": "Last Wednesday of the contract month (or next trading day if holiday)"
+          }
+        ],
+        "correct": "A",
+        "explanation": "Trading ends on the last Thursday of the expiry month or the previous trading day if it is a holiday."
+      },
+      {
+        "id": 12,
+        "question": "In which of the following cases can Goods and Service Tax (GST) be charged to the mutual fund scheme over and above the Total Expense Ratio of the scheme?",
+        "options": [
+          {
+            "key": "A",
+            "text": "GST applicable on AMC fees only can be charged to the scheme over and above the Total Expense Ratio"
+          },
+          {
+            "key": "B",
+            "text": "GST applicable on any fees must be within the Total Expense Ratio"
+          },
+          {
+            "key": "C",
+            "text": "GST applicable on distributor commission only can be charged to the scheme over and above the Total Expense Ratio"
+          },
+          {
+            "key": "D",
+            "text": "GST applicable on AMC fees as well as distributor commission can be charged to the scheme over and above the Total Expense Ratio"
+          }
+        ],
+        "correct": "A",
+        "explanation": "SEBI allows GST on AMC\u2019s investment management and advisory fees to be charged to the scheme over and above TER. GST on all other expenses, including distributor commission, must be absorbed within the TER limits"
+      },
+      {
+        "id": 13,
+        "question": "In a mutual fund application form, if 'Direct' is mentioned in the space provided for ARN and the choice of regular plan is indicated, then the application will be considered as ______.",
+        "options": [
+          {
+            "key": "A",
+            "text": "Direct plan application"
+          },
+          {
+            "key": "B",
+            "text": "Regular plan application"
+          },
+          {
+            "key": "C",
+            "text": "Incomplete and rejected"
+          },
+          {
+            "key": "D",
+            "text": "Incomplete and sent to the investor for completion"
+          }
+        ],
+        "correct": "A",
+        "explanation": "If 'Direct' is mentioned in the ARN space but the investor selects a regular plan, it will still be considered as a Direct plan application."
+      },
+      {
+        "id": 14,
+        "question": "The auditor appointed to audit the scheme accounts is the same as the auditor of the AMC accounts - State True or False?",
+        "options": [
+          {
+            "key": "A",
+            "text": "True"
+          },
+          {
+            "key": "B",
+            "text": "False"
+          }
+        ],
+        "correct": "B",
+        "explanation": "The auditor for the scheme accounts must be different from the auditor of the AMC (Asset Management Company). The scheme auditor is appointed by the Trustees, while the AMC auditor is appointed by the AMC."
+      },
+      {
+        "id": 15,
+        "question": "_______ investment style involves buying stocks which are valued lower as per fundamental analysis.",
+        "options": [
+          {
+            "key": "A",
+            "text": "Tactical"
+          },
+          {
+            "key": "B",
+            "text": "Growth"
+          },
+          {
+            "key": "C",
+            "text": "Cyclical"
+          },
+          {
+            "key": "D",
+            "text": "Value"
+          }
+        ],
+        "correct": "D",
+        "explanation": "Value investing involves buying stocks that are priced lower than their intrinsic value based on fundamental analysis, with the expectation that the market will eventually recognize their worth."
+      },
+      {
+        "id": 16,
+        "question": "If the seller fails to serve the Notice of Intent to Deliver by the stipulated time for the full or part of the open position, the failed quantity will be ______.",
+        "options": [
+          {
+            "key": "A",
+            "text": "Settled in cash"
+          },
+          {
+            "key": "B",
+            "text": "Taken into Auction Settlement"
+          },
+          {
+            "key": "C",
+            "text": "Either 1 or 2 as decided by the Buyer"
+          },
+          {
+            "key": "D",
+            "text": "Either 1 or 2 as decided by the Seller"
+          }
+        ],
+        "correct": "B",
+        "explanation": "If the seller fails to serve the Notice of Intent to Deliver on time, the failed quantity is taken into Auction Settlement."
+      },
+      {
+        "id": 17,
+        "question": "The NFO price of a mutual fund scheme was Rs. 10 and its current Net Asset Value (NAV) is Rs. 8. What would happen if the transactions were to happen at NFO price?",
+        "options": [
+          {
+            "key": "A",
+            "text": "The new investors as well as the existing investors in this scheme would stand to lose"
+          },
+          {
+            "key": "B",
+            "text": "The new investors as well as the existing investors in this scheme would stand to gain"
+          },
+          {
+            "key": "C",
+            "text": "The new investors stand to gain at the cost of existing investors"
+          },
+          {
+            "key": "D",
+            "text": "The new investors stand to lose at the cost of existing investors"
+          }
+        ],
+        "correct": "D",
+        "explanation": "If new investors purchase units at Rs. 10 when the NAV is Rs. 8, they are paying a higher price, thus incurring a loss. Existing investors benefit because they can sell at the higher price, Rs. 10."
+      },
+      {
+        "id": 18,
+        "question": "Which of these statements is true with respect to Key Information Memorandum (KIM)?",
+        "options": [
+          {
+            "key": "A",
+            "text": "KIM is a document that provides key information of the past performance of the scheme"
+          },
+          {
+            "key": "B",
+            "text": "KIM is the annual newsletter of the mutual fund"
+          },
+          {
+            "key": "C",
+            "text": "KIM provides NAV history of all mutual fund schemes"
+          },
+          {
+            "key": "D",
+            "text": "KIM is a document which must accompany all mutual fund application forms"
+          }
+        ],
+        "correct": "D",
+        "explanation": "KIM is a mandatory document that provides essential details about the scheme and must accompany all mutual fund application forms."
+      },
+      {
+        "id": 19,
+        "question": "What is the full form of AGNI?",
+        "options": [
+          {
+            "key": "A",
+            "text": "AMFI Guidelines for New issues and Investments"
+          },
+          {
+            "key": "B",
+            "text": "AMFI Guidelines and Norms for Intermediaries"
+          },
+          {
+            "key": "C",
+            "text": "AMFI Guidelines for New Investors"
+          },
+          {
+            "key": "D",
+            "text": "AMFI Guidelines for Nominations and Investments"
+          }
+        ],
+        "correct": "B",
+        "explanation": "AGNI stands for AMFI Guidelines and Norms for Intermediaries, which sets conduct and operational guidelines for mutual fund distributors."
+      },
+      {
+        "id": 20,
+        "question": "The difference between the yield on Gilt and the yield on a non-Government Debt security is called its ______.",
+        "options": [
+          {
+            "key": "A",
+            "text": "YTM"
+          },
+          {
+            "key": "B",
+            "text": "Credit Spread"
+          },
+          {
+            "key": "C",
+            "text": "Yield to Call"
+          },
+          {
+            "key": "D",
+            "text": "Risk Spread"
+          }
+        ],
+        "correct": "B",
+        "explanation": "The yield on Gilt (government securities) is usually the lowest for a given period. Non-government issuers, being riskier, offer higher yields to compensate for default risk. The difference between the two is called the credit spread."
+      },
+      {
+        "id": 21,
+        "question": "Identify the true statement(s) with respect to the benchmark for mutual fund schemes.",
+        "options": [
+          {
+            "key": "A",
+            "text": "For International Equity fund, the ideal benchmark will be BSE 500 index as it is a very broad-based index covering 500 companies"
+          },
+          {
+            "key": "B",
+            "text": "For Gold ETF, gold prices will be the ideal benchmark"
+          },
+          {
+            "key": "C",
+            "text": "Only A is correct"
+          },
+          {
+            "key": "D",
+            "text": "Only B is correct"
+          },
+          {
+            "key": "E",
+            "text": "Both A and B are correct"
+          },
+          {
+            "key": "F",
+            "text": "Neither A nor B are correct"
+          }
+        ],
+        "correct": "B",
+        "explanation": "The benchmark for a Gold ETF is the price of gold itself, as the fund aims to track the performance of gold. For International Equity funds, the appropriate benchmark depends on the region or country in which the scheme invests. For example, a fund investing in the U.S. may use the S&P 500, not the BSE 500."
+      },
+      {
+        "id": 22,
+        "question": "When the difference between long-term and short-term rates narrows, the shift in the term structure is called _________.",
+        "options": [
+          {
+            "key": "A",
+            "text": "Steepening"
+          },
+          {
+            "key": "B",
+            "text": "Flattening"
+          },
+          {
+            "key": "C",
+            "text": "Parallel"
+          },
+          {
+            "key": "D",
+            "text": "Perpendicular"
+          }
+        ],
+        "correct": "B",
+        "explanation": "A flattening occurs when the gap between long-term and short-term interest rates decreases."
+      },
+      {
+        "id": 23,
+        "question": "Identify the TRUE statement with respect to benchmark for Gold ETFs.",
+        "options": [
+          {
+            "key": "A",
+            "text": "CRISIL Gilt fund index is widely used as a benchmark for Gold ETFs"
+          },
+          {
+            "key": "B",
+            "text": "Gold ETFs are benchmarked against gold prices"
+          },
+          {
+            "key": "C",
+            "text": "There can be no benchmark for Gold ETFs"
+          },
+          {
+            "key": "D",
+            "text": "Internationally it is proven that there is no need of any type of benchmark for Gold ETFs"
+          }
+        ],
+        "correct": "B",
+        "explanation": "Gold ETFs track the performance of gold prices, and hence their benchmark is usually based on the price of gold."
+      },
+      {
+        "id": 24,
+        "question": "A Trading Member on a derivatives exchange does not have Clearing rights.",
+        "options": [
+          {
+            "key": "A",
+            "text": "True \u2705"
+          },
+          {
+            "key": "B",
+            "text": "False"
+          }
+        ],
+        "correct": "A",
+        "explanation": "Trading Members can execute trades but do not have clearing rights. Clearing Members perform clearing and settlement activities."
+      },
+      {
+        "id": 25,
+        "question": "The Clearing Corporation in India functions as the __________ for exchange-traded interest rate derivatives.",
+        "options": [
+          {
+            "key": "A",
+            "text": "Central counterparty"
+          },
+          {
+            "key": "B",
+            "text": "Custodian"
+          },
+          {
+            "key": "C",
+            "text": "Depository"
+          },
+          {
+            "key": "D",
+            "text": "Broker"
+          }
+        ],
+        "correct": "A",
+        "explanation": "The Clearing Corporation becomes the buyer to every seller and the seller to every buyer."
+      },
+      {
+        "id": 26,
+        "question": "The legal form of a Professional Clearing Member can be ________.",
+        "options": [
+          {
+            "key": "A",
+            "text": "Partnership firm"
+          },
+          {
+            "key": "B",
+            "text": "Corporate bodies or banks"
+          },
+          {
+            "key": "C",
+            "text": "Both 1 and 2"
+          },
+          {
+            "key": "D",
+            "text": "None of the above"
+          }
+        ],
+        "correct": "B",
+        "explanation": "Only corporate bodies or banks are eligible to become Professional Clearing Members."
+      },
+      {
+        "id": 27,
+        "question": "The effect of price risk on a bond is __________.",
+        "options": [
+          {
+            "key": "A",
+            "text": "Immediate"
+          },
+          {
+            "key": "B",
+            "text": "Over a period of time"
+          },
+          {
+            "key": "C",
+            "text": "No impact"
+          },
+          {
+            "key": "D",
+            "text": "None of the above"
+          }
+        ],
+        "correct": "A",
+        "explanation": "Bond prices respond immediately to changes in interest rates."
+      },
+      {
+        "id": 28,
+        "question": "State whether the statement is True or False - Investment in Income Distribution cum Capital Withdrawal reinvestment option grows faster than the Growth option as the investor gets additional units.",
+        "options": [
+          {
+            "key": "A",
+            "text": "Its true for all categories of mutual fund schemes"
+          },
+          {
+            "key": "B",
+            "text": "Its false for all categories of mutual fund schemes"
+          },
+          {
+            "key": "C",
+            "text": "Its true only for equity funds"
+          },
+          {
+            "key": "D",
+            "text": "It depends on whether the fund is open-end or close-end"
+          }
+        ],
+        "correct": "B",
+        "explanation": "In both the Growth and Income Distribution cum Capital Withdrawal re-investment options, the NAV decreases by the amount of the dividend, and the reinvested amount is used to buy additional units. The growth is similar in both options as only the number of units changes, not the total investment."
+      },
+      {
+        "id": 29,
+        "question": "Where are the 'Standard Risk Factors' of a Mutual Fund scheme disclosed?",
+        "options": [
+          {
+            "key": "A",
+            "text": "Fund Fact Sheet"
+          },
+          {
+            "key": "B",
+            "text": "Addendum"
+          },
+          {
+            "key": "C",
+            "text": "Statement of Additional Information (SAI)"
+          },
+          {
+            "key": "D",
+            "text": "Scheme Information Document (SID)"
+          }
+        ],
+        "correct": "D",
+        "explanation": "The Scheme Information Document (SID) contains both standard risk factors (common to all mutual funds) and specific risks related to the investment style or asset class of the scheme."
+      },
+      {
+        "id": 30,
+        "question": "The total number of outstanding derivative contracts is referred to as __________.",
+        "options": [
+          {
+            "key": "A",
+            "text": "Open Interest"
+          },
+          {
+            "key": "B",
+            "text": "Long Position"
+          },
+          {
+            "key": "C",
+            "text": "Short Position"
+          },
+          {
+            "key": "D",
+            "text": "Neutral Position"
+          }
+        ],
+        "correct": "A",
+        "explanation": "Open interest is the total number of active derivative contracts."
+      },
+      {
+        "id": 31,
+        "question": "A fall in the price of Wipro stock will increase the value of a Wipro call option.",
+        "options": [
+          {
+            "key": "A",
+            "text": "True"
+          },
+          {
+            "key": "B",
+            "text": "False"
+          }
+        ],
+        "correct": "B",
+        "explanation": "A call option loses value when the underlying stock price falls."
+      },
+      {
+        "id": 32,
+        "question": "Rising futures prices with declining open interest indicates:",
+        "options": [
+          {
+            "key": "A",
+            "text": "Short Covering"
+          },
+          {
+            "key": "B",
+            "text": "Long positions being squared off"
+          },
+          {
+            "key": "C",
+            "text": "Flat trend"
+          },
+          {
+            "key": "D",
+            "text": "Highly volatile trend"
+          }
+        ],
+        "correct": "A",
+        "explanation": "Rising prices with falling open interest typically indicate short covering."
+      },
+      {
+        "id": 33,
+        "question": "Which risk arises when the prices of cash Treasury Bills and Treasury Bill futures differ?",
+        "options": [
+          {
+            "key": "A",
+            "text": "Basis Risk"
+          },
+          {
+            "key": "B",
+            "text": "Yield Curve Spread Risk"
+          },
+          {
+            "key": "C",
+            "text": "Market Liquidity Risk"
+          },
+          {
+            "key": "D",
+            "text": "None of the above"
+          }
+        ],
+        "correct": "A",
+        "explanation": "Basis risk arises due to the difference between spot and futures prices."
+      },
+      {
+        "id": 34,
+        "question": "In a Reverse Arbitrage strategy involving bond futures, what action is taken?",
+        "options": [
+          {
+            "key": "A",
+            "text": "Sell the bond in the cash market and buy futures"
+          },
+          {
+            "key": "B",
+            "text": "Buy the bond and buy futures"
+          },
+          {
+            "key": "C",
+            "text": "Buy the bond and sell futures"
+          },
+          {
+            "key": "D",
+            "text": "Sell the bond and sell futures"
+          }
+        ],
+        "correct": "A",
+        "explanation": "Reverse arbitrage is used when futures are undervalued."
+      },
+      {
+        "id": 35,
+        "question": "Position limits are defined only at the Trading Member level.",
+        "options": [
+          {
+            "key": "A",
+            "text": "True"
+          },
+          {
+            "key": "B",
+            "text": "False"
+          }
+        ],
+        "correct": "B",
+        "explanation": "Position limits exist at client, trading member, and market levels."
+      },
+      {
+        "id": 36,
+        "question": "Margins in futures trading are applicable to:",
+        "options": [
+          {
+            "key": "A",
+            "text": "Only institutional players"
+          },
+          {
+            "key": "B",
+            "text": "Both buyer and seller"
+          },
+          {
+            "key": "C",
+            "text": "Only the buyer"
+          },
+          {
+            "key": "D",
+            "text": "Only the seller"
+          }
+        ],
+        "correct": "B",
+        "explanation": "Both parties must deposit margins to manage risk."
+      },
+      {
+        "id": 37,
+        "question": "Foreign exchange can be part of the liquid assets maintained by Clearing Members.",
+        "options": [
+          {
+            "key": "A",
+            "text": "True"
+          },
+          {
+            "key": "B",
+            "text": "False"
+          }
+        ],
+        "correct": "B",
+        "explanation": "Liquid assets include cash, bank guarantees, and approved securities, not foreign exchange."
+      },
+      {
+        "id": 38,
+        "question": "A Professional Clearing Member clears trades only for its associated Trading Member.",
+        "options": [
+          {
+            "key": "A",
+            "text": "True"
+          },
+          {
+            "key": "B",
+            "text": "False"
+          }
+        ],
+        "correct": "B",
+        "explanation": "Professional Clearing Members can clear trades for multiple trading members and institutional clients."
+      },
+      {
+        "id": 39,
+        "question": "Miss Tanisha shorted October futures at \u20b92,300. She will make a profit if the futures price falls to:",
+        "options": [
+          {
+            "key": "A",
+            "text": "\u20b92,250"
+          },
+          {
+            "key": "B",
+            "text": "\u20b92,350"
+          },
+          {
+            "key": "C",
+            "text": "\u20b92,325"
+          },
+          {
+            "key": "D",
+            "text": "\u20b92,450"
+          }
+        ],
+        "correct": "A",
+        "explanation": "A short futures position profits when the futures price declines."
+      },
+      {
+        "id": 40,
+        "question": "Put-call parity refers to the relationship between:",
+        "options": [
+          {
+            "key": "A",
+            "text": "Call and put options on the same stock with the same strike price and expiry"
+          },
+          {
+            "key": "B",
+            "text": "Options with different strikes or expiries"
+          },
+          {
+            "key": "C",
+            "text": "Call options on different stocks"
+          },
+          {
+            "key": "D",
+            "text": "Futures and options on the same stock"
+          }
+        ],
+        "correct": "A",
+        "explanation": "Put-call parity links the prices of calls and puts having the same strike price and expiry."
+      },
+      {
+        "id": 41,
+        "question": "Under what condition would a put option buyer choose to exercise the option?",
+        "options": [
+          {
+            "key": "A",
+            "text": "Current price is more than the strike price"
+          },
+          {
+            "key": "B",
+            "text": "Current price is less than the strike price"
+          },
+          {
+            "key": "C",
+            "text": "Current price equals the strike price"
+          },
+          {
+            "key": "D",
+            "text": "In all of the above circumstances"
+          }
+        ],
+        "correct": "B",
+        "explanation": "A put option is exercised when the market price is below the strike price."
+      },
+      {
+        "id": 42,
+        "question": "Before entering into a futures contract, the exchange requires:",
+        "options": [
+          {
+            "key": "A",
+            "text": "Initial Margin"
+          },
+          {
+            "key": "B",
+            "text": "Mark-to-Market Margin"
+          },
+          {
+            "key": "C",
+            "text": "Ad-hoc Margin"
+          },
+          {
+            "key": "D",
+            "text": "Call Margin"
+          }
+        ],
+        "correct": "A",
+        "explanation": "Initial margin is collected before opening a futures position."
+      },
+      {
+        "id": 43,
+        "question": "What does Value at Risk (VaR) measure?",
+        "options": [
+          {
+            "key": "A",
+            "text": "Portfolio volatility"
+          },
+          {
+            "key": "B",
+            "text": "Risk level of a portfolio"
+          },
+          {
+            "key": "C",
+            "text": "Value of illiquid shares"
+          },
+          {
+            "key": "D",
+            "text": "Index P/E ratio"
+          }
+        ],
+        "correct": "B",
+        "explanation": "VaR estimates the potential maximum loss at a given confidence level."
+      },
+      {
+        "id": 44,
+        "question": "Are broker-members allowed to serve on the Clearing Council of the Clearing Corporation?",
+        "options": [
+          {
+            "key": "A",
+            "text": "Yes"
+          },
+          {
+            "key": "B",
+            "text": "No"
+          }
+        ],
+        "correct": "B",
+        "explanation": "Broker-members are not allowed on the Clearing Council to avoid conflicts of interest."
+      },
+      {
+        "id": 45,
+        "question": "A person who provides two-way quotes for securities is called:",
+        "options": [
+          {
+            "key": "A",
+            "text": "Arbitrageur"
+          },
+          {
+            "key": "B",
+            "text": "Speculator"
+          },
+          {
+            "key": "C",
+            "text": "Hedger"
+          },
+          {
+            "key": "D",
+            "text": "Market Maker"
+          }
+        ],
+        "correct": "D",
+        "explanation": "A market maker continuously provides both buy and sell quotes to improve market liquidity."
+      },
+      {
+        "id": 46,
+        "question": "An order with a time condition is called:",
+        "options": [
+          {
+            "key": "A",
+            "text": "Stop-loss Order"
+          },
+          {
+            "key": "B",
+            "text": "Good Till Cancelled (GTC) Order"
+          },
+          {
+            "key": "C",
+            "text": "Market Order"
+          },
+          {
+            "key": "D",
+            "text": "Limit Order"
+          }
+        ],
+        "correct": "B",
+        "explanation": "A GTC order remains active until executed or cancelled."
+      },
+      {
+        "id": 47,
+        "question": "In a Bullish Vertical Spread using put options, the trader _________.",
+        "options": [
+          {
+            "key": "A",
+            "text": "Buys a call with a lower strike and sells a put with a higher strike"
+          },
+          {
+            "key": "B",
+            "text": "Buys a put with a lower strike and sells a put with a higher strike"
+          },
+          {
+            "key": "C",
+            "text": "Buys a put with a higher strike and sells a put with a lower strike"
+          },
+          {
+            "key": "D",
+            "text": "None of the above"
+          }
+        ],
+        "correct": "B",
+        "explanation": "A bull put spread involves buying a lower-strike put and selling a higher-strike put."
+      },
+      {
+        "id": 48,
+        "question": "RBI's Rupee Interest Rate Derivatives Directions, 2019 permit ____________ to participate in interest rate derivatives.",
+        "options": [
+          {
+            "key": "A",
+            "text": "Non-residents"
+          },
+          {
+            "key": "B",
+            "text": "Retail participants"
+          },
+          {
+            "key": "C",
+            "text": "Non-retail participants"
+          },
+          {
+            "key": "D",
+            "text": "All of the above"
+          }
+        ],
+        "correct": "D",
+        "explanation": "RBI allows non-residents, retail, and non-retail participants to trade in interest rate derivatives."
+      },
+      {
+        "id": 49,
+        "question": "In a futures contract, profits or losses are received or paid only on maturity.",
+        "options": [
+          {
+            "key": "A",
+            "text": "True"
+          },
+          {
+            "key": "B",
+            "text": "False"
+          }
+        ],
+        "correct": "B",
+        "explanation": "Futures contracts are settled daily through the mark-to-market mechanism."
+      },
+      {
+        "id": 50,
+        "question": "At what price can a trader place a bid or offer for a stock?",
+        "options": [
+          {
+            "key": "A",
+            "text": "Any price"
+          },
+          {
+            "key": "B",
+            "text": "Within daily circuit limits"
+          },
+          {
+            "key": "C",
+            "text": "Price negotiated with the exchange"
+          },
+          {
+            "key": "D",
+            "text": "Any price decided by the trader"
+          }
+        ],
+        "correct": "B",
+        "explanation": "Orders must be placed within the exchange's prescribed circuit limits."
+      }
+    ]
+  },
+  "mini3": {
+    "id": "mini3",
+    "type": "mini",
+    "title": "Mini Mock 3: Rapid-Fire Practice (Part 3)",
+    "badge": "50Q Mini Mock",
+    "badgeColor": "cyan",
+    "description": "50-question sprint covering equity arbitrage, derivatives trading mechanisms, investor grievance redressal (SCORES 2.0), and code of conduct.",
+    "totalQuestions": 50,
+    "durationMinutes": 60,
+    "totalMarks": 50,
+    "passMarks": 30,
+    "negativeMark": 0.1,
+    "questions": [
+      {
+        "id": 1,
+        "question": "Buying a security in one market and simultaneously selling it in another to profit from price differences is called:",
+        "options": [
+          {
+            "key": "A",
+            "text": "Long Trading"
+          },
+          {
+            "key": "B",
+            "text": "Arbitrage"
+          },
+          {
+            "key": "C",
+            "text": "Speculation"
+          },
+          {
+            "key": "D",
+            "text": "Jobbing"
+          }
+        ],
+        "correct": "B",
+        "explanation": "Arbitrage exploits price differences between two markets."
+      },
+      {
+        "id": 2,
+        "question": "Lower margins attract more traders to the derivatives market.",
+        "options": [
+          {
+            "key": "A",
+            "text": "True"
+          },
+          {
+            "key": "B",
+            "text": "False"
+          }
+        ],
+        "correct": "A",
+        "explanation": "Lower margin requirements reduce capital needs and encourage participation."
+      },
+      {
+        "id": 3,
+        "question": "The Trade Guarantee Fund (TGF) is maintained for:",
+        "options": [
+          {
+            "key": "A",
+            "text": "Protecting investors"
+          },
+          {
+            "key": "B",
+            "text": "Building investor confidence"
+          },
+          {
+            "key": "C",
+            "text": "Guaranteeing settlement"
+          },
+          {
+            "key": "D",
+            "text": "All of the above"
+          }
+        ],
+        "correct": "D",
+        "explanation": "TGF protects investors, guarantees settlement, and enhances market confidence."
+      },
+      {
+        "id": 4,
+        "question": "A Trading Member of a derivatives exchange can clear his trades through a Clearing Member, who may or may not be a Professional Clearing Member.",
+        "options": [
+          {
+            "key": "A",
+            "text": "True \u2705"
+          },
+          {
+            "key": "B",
+            "text": "False"
+          }
+        ],
+        "correct": "A",
+        "explanation": "Trading Members can use registered Clearing Members for clearing and settlement of their trades."
+      },
+      {
+        "id": 5,
+        "question": "What is the underlying for cash-settled 6-year Bond Futures under current Indian regulations?",
+        "options": [
+          {
+            "key": "A",
+            "text": "Actual"
+          },
+          {
+            "key": "B",
+            "text": "Notional"
+          },
+          {
+            "key": "C",
+            "text": "Actual or Notional"
+          },
+          {
+            "key": "D",
+            "text": "None of these"
+          }
+        ],
+        "correct": "B",
+        "explanation": "Cash-settled 6-year Bond Futures use a notional bond as the underlying."
+      },
+      {
+        "id": 6,
+        "question": "If a member fails to pay dues, the Clearing Corporation can:",
+        "options": [
+          {
+            "key": "A",
+            "text": "Disable the member from trading"
+          },
+          {
+            "key": "B",
+            "text": "Ignore the dues"
+          },
+          {
+            "key": "C",
+            "text": "Only restrict trading"
+          },
+          {
+            "key": "D",
+            "text": "None of the above"
+          }
+        ],
+        "correct": "A",
+        "explanation": "The Clearing Corporation can suspend or disable a defaulting member."
+      },
+      {
+        "id": 7,
+        "question": "A Trading Member of a derivatives exchange does not have clearing rights.",
+        "options": [
+          {
+            "key": "A",
+            "text": "True \u2705"
+          },
+          {
+            "key": "B",
+            "text": "False"
+          }
+        ],
+        "correct": "A",
+        "explanation": "Clearing rights belong to Clearing Members, not Trading Members."
+      },
+      {
+        "id": 8,
+        "question": "Which statement correctly describes 'position limit'?",
+        "options": [
+          {
+            "key": "A",
+            "text": "Maximum daily volume at Clearing Member level"
+          },
+          {
+            "key": "B",
+            "text": "Maximum daily volume at Client level"
+          },
+          {
+            "key": "C",
+            "text": "Maximum daily volume at Trading Member level"
+          },
+          {
+            "key": "D",
+            "text": "Maximum exposure level for the market, trading members, and clients"
+          }
+        ],
+        "correct": "D",
+        "explanation": "Position limits control maximum exposure to reduce market risk and manipulation."
+      },
+      {
+        "id": 9,
+        "question": "Futures contracts are symmetrical regarding rights and obligations.",
+        "options": [
+          {
+            "key": "A",
+            "text": "True"
+          },
+          {
+            "key": "B",
+            "text": "False"
+          }
+        ],
+        "correct": "B",
+        "explanation": "In futures contracts, both buyer and seller have equal obligations to fulfill the contract."
+      },
+      {
+        "id": 10,
+        "question": "If the 6-month rate is 6%, 1-year rate is 7%, and 10-year rate is 8.5%, the shape of the term structure is _____.",
+        "options": [
+          {
+            "key": "A",
+            "text": "Normal"
+          },
+          {
+            "key": "B",
+            "text": "Inverted"
+          },
+          {
+            "key": "C",
+            "text": "Flat"
+          },
+          {
+            "key": "D",
+            "text": "Humped"
+          }
+        ],
+        "correct": "A",
+        "explanation": "A normal yield curve has interest rates increasing with maturity."
+      },
+      {
+        "id": 11,
+        "question": "Mr. Gautam sold a put option with a strike price of \u20b9650 and received a premium of \u20b960. What is his maximum gain per share?",
+        "options": [
+          {
+            "key": "A",
+            "text": "\u20b9650"
+          },
+          {
+            "key": "B",
+            "text": "\u20b9590"
+          },
+          {
+            "key": "C",
+            "text": "\u20b960"
+          },
+          {
+            "key": "D",
+            "text": "\u20b90"
+          }
+        ],
+        "correct": "C",
+        "explanation": "The maximum gain for a put seller is limited to the premium received."
+      },
+      {
+        "id": 12,
+        "question": "The exercise date and expiration date of a European option is ________.",
+        "options": [
+          {
+            "key": "A",
+            "text": "Always the same"
+          },
+          {
+            "key": "B",
+            "text": "Always on the 28th of the expiry month"
+          },
+          {
+            "key": "C",
+            "text": "Always different"
+          },
+          {
+            "key": "D",
+            "text": "May be the same"
+          }
+        ],
+        "correct": "A",
+        "explanation": "European options can only be exercised on the expiry date."
+      },
+      {
+        "id": 13,
+        "question": "The functions of a Derivatives Market include:",
+        "options": [
+          {
+            "key": "A",
+            "text": "Improving price discovery"
+          },
+          {
+            "key": "B",
+            "text": "Shifting speculative trading to organized markets"
+          },
+          {
+            "key": "C",
+            "text": "Both A and B"
+          },
+          {
+            "key": "D",
+            "text": "None of the above"
+          }
+        ],
+        "correct": "C",
+        "explanation": "Derivatives improve price discovery and move speculative trading to regulated markets."
+      },
+      {
+        "id": 14,
+        "question": "The difference between the futures price and the spot price is called ________.",
+        "options": [
+          {
+            "key": "A",
+            "text": "Cost of carry"
+          },
+          {
+            "key": "B",
+            "text": "Basis"
+          },
+          {
+            "key": "C",
+            "text": "Spread"
+          },
+          {
+            "key": "D",
+            "text": "Premium"
+          }
+        ],
+        "correct": "B",
+        "explanation": "Basis is the difference between the futures price and the current spot price."
+      },
+      {
+        "id": 15,
+        "question": "Scarcity of the underlying commodity causes its futures price to rise.",
+        "options": [
+          {
+            "key": "A",
+            "text": "True"
+          },
+          {
+            "key": "B",
+            "text": "False"
+          }
+        ],
+        "correct": "A",
+        "explanation": "Scarcity increases demand and pushes both spot and futures prices higher."
+      },
+      {
+        "id": 16,
+        "question": "Clearing Member Mr. Prabhu focuses mainly on proprietary trading, while Clearing Member Mr. Mehta does only client trades. If both have deposited the same amount of assets with the Clearing Corporation, which statement is true?",
+        "options": [
+          {
+            "key": "A",
+            "text": "Mr. Prabhu enjoys a lower exposure limit than Mr. Mehta"
+          },
+          {
+            "key": "B",
+            "text": "Mr. Prabhu enjoys a higher exposure limit than Mr. Mehta \u2705"
+          },
+          {
+            "key": "C",
+            "text": "Both enjoy the same exposure limits"
+          }
+        ],
+        "correct": "B",
+        "explanation": "Proprietary positions allow better netting benefits, resulting in higher permissible exposure limits."
+      },
+      {
+        "id": 17,
+        "question": "Rules regarding minimum price change and price limits in forward contracts are set by:",
+        "options": [
+          {
+            "key": "A",
+            "text": "Recognized authorities"
+          },
+          {
+            "key": "B",
+            "text": "The parties involved"
+          },
+          {
+            "key": "C",
+            "text": "Stock Exchange"
+          },
+          {
+            "key": "D",
+            "text": "SEBI"
+          }
+        ],
+        "correct": "B",
+        "explanation": "Forward contracts are privately negotiated OTC contracts, so the contracting parties decide the terms."
+      },
+      {
+        "id": 18,
+        "question": "What is the key distinguishing factor between interest rate options traded over-the-counter (OTC) and those traded on an exchange?",
+        "options": [
+          {
+            "key": "A",
+            "text": "Customized contract versus standardized contract"
+          },
+          {
+            "key": "B",
+            "text": "Bilateral trading versus centralized trading"
+          },
+          {
+            "key": "C",
+            "text": "Both of the above"
+          },
+          {
+            "key": "D",
+            "text": "None of the above"
+          }
+        ],
+        "correct": "C",
+        "explanation": "OTC options are customized and traded bilaterally, while exchange-traded options are standardized and traded on a centralized exchange."
+      },
+      {
+        "id": 19,
+        "question": "How is the closing price for cash-settled GOI bond futures contracts determined?",
+        "options": [
+          {
+            "key": "A",
+            "text": "Weighted average of trades in the last 1 hour"
+          },
+          {
+            "key": "B",
+            "text": "Weighted average of trades in the last 1.5 hours"
+          },
+          {
+            "key": "C",
+            "text": "Weighted average of trades in the last 30 minutes"
+          },
+          {
+            "key": "D",
+            "text": "None of these"
+          }
+        ],
+        "correct": "C",
+        "explanation": "The closing price is based on the weighted average price during the final 30 minutes of trading."
+      },
+      {
+        "id": 20,
+        "question": "Among the June, July, and August SBI call option series, which will generally have the lowest premium?",
+        "options": [
+          {
+            "key": "A",
+            "text": "Same for all"
+          },
+          {
+            "key": "B",
+            "text": "June"
+          },
+          {
+            "key": "C",
+            "text": "July"
+          },
+          {
+            "key": "D",
+            "text": "August"
+          }
+        ],
+        "correct": "B",
+        "explanation": "Options with the shortest time to expiry usually have the lowest premium."
+      },
+      {
+        "id": 21,
+        "question": "What is the settlement day for the 91-day T-Bill futures contract?",
+        "options": [
+          {
+            "key": "A",
+            "text": "Next working day following the Last Trading Day"
+          },
+          {
+            "key": "B",
+            "text": "Two days after the last business day of the contract month"
+          },
+          {
+            "key": "C",
+            "text": "Last business day of the contract month"
+          },
+          {
+            "key": "D",
+            "text": "None of the above"
+          }
+        ],
+        "correct": "C",
+        "explanation": "91-day T-Bill futures are settled on the last business day of the contract month."
+      },
+      {
+        "id": 22,
+        "question": "Which strategy is most appropriate when volatility is expected to be very low?",
+        "options": [
+          {
+            "key": "A",
+            "text": "Short Straddle"
+          },
+          {
+            "key": "B",
+            "text": "Short Butterfly"
+          },
+          {
+            "key": "C",
+            "text": "Long Butterfly"
+          },
+          {
+            "key": "D",
+            "text": "Long Straddle"
+          }
+        ],
+        "correct": "A",
+        "explanation": "A short straddle profits when the underlying price remains relatively stable."
+      },
+      {
+        "id": 23,
+        "question": "The rate of change in an option's premium for a unit change in the underlying asset's price is called Delta.",
+        "options": [
+          {
+            "key": "A",
+            "text": "True"
+          },
+          {
+            "key": "B",
+            "text": "False"
+          }
+        ],
+        "correct": "A",
+        "explanation": "Delta measures the sensitivity of an option's price to changes in the underlying asset price."
+      },
+      {
+        "id": 24,
+        "question": "Which of the following statements is true?",
+        "options": [
+          {
+            "key": "A",
+            "text": "FRA prices are negotiated between parties."
+          },
+          {
+            "key": "B",
+            "text": "Interest rate futures prices are determined on exchanges."
+          },
+          {
+            "key": "C",
+            "text": "Both A and B are true"
+          },
+          {
+            "key": "D",
+            "text": "Both A and B are false"
+          }
+        ],
+        "correct": "C",
+        "explanation": "FRAs are OTC negotiated contracts, while interest rate futures are exchange-traded."
+      },
+      {
+        "id": 25,
+        "question": "Volatility estimation methodology is confidential to the Clearing Corporation.",
+        "options": [
+          {
+            "key": "A",
+            "text": "True"
+          },
+          {
+            "key": "B",
+            "text": "False \u2705"
+          }
+        ],
+        "correct": "B",
+        "explanation": "Volatility estimation methods used by Clearing Corporations are transparent and available as per regulatory requirements."
+      },
+      {
+        "id": 26,
+        "question": "Quantity freeze involves a limit on the total quantity during a day by which of the following?",
+        "options": [
+          {
+            "key": "A",
+            "text": "Clearing Member"
+          },
+          {
+            "key": "B",
+            "text": "Client"
+          },
+          {
+            "key": "C",
+            "text": "Trading Member"
+          },
+          {
+            "key": "D",
+            "text": "All Trading Members collectively"
+          }
+        ],
+        "correct": "C",
+        "explanation": "Quantity freeze limits the maximum order size that a trading member can place."
+      },
+      {
+        "id": 27,
+        "question": "As per SEBI rules, a stockbroker can be suspended from the derivatives segment if:",
+        "options": [
+          {
+            "key": "A",
+            "text": "Registration conditions are violated"
+          },
+          {
+            "key": "B",
+            "text": "The broker is suspended by the exchange"
+          },
+          {
+            "key": "C",
+            "text": "Fees are not paid"
+          },
+          {
+            "key": "D",
+            "text": "Any of the above"
+          }
+        ],
+        "correct": "D",
+        "explanation": "Any regulatory violation or non-compliance may lead to suspension."
+      },
+      {
+        "id": 28,
+        "question": "Who can clear trades in index options?",
+        "options": [
+          {
+            "key": "A",
+            "text": "All AMFI and IRDA members"
+          },
+          {
+            "key": "B",
+            "text": "Members of a stock exchange"
+          },
+          {
+            "key": "C",
+            "text": "Members and sub-brokers of the exchange"
+          },
+          {
+            "key": "D",
+            "text": "Clearing members registered in the derivatives segment"
+          }
+        ],
+        "correct": "D",
+        "explanation": "Only registered clearing members can clear derivatives trades."
+      },
+      {
+        "id": 29,
+        "question": "In case of bonus shares, the new option strike price is arrived at by ________ the old strike price by the adjustment factor.",
+        "options": [
+          {
+            "key": "A",
+            "text": "Adding"
+          },
+          {
+            "key": "B",
+            "text": "Dividing"
+          },
+          {
+            "key": "C",
+            "text": "Subtracting"
+          },
+          {
+            "key": "D",
+            "text": "Multiplying"
+          }
+        ],
+        "correct": "B",
+        "explanation": "The strike price is adjusted by dividing the original strike price by the adjustment factor."
+      },
+      {
+        "id": 30,
+        "question": "According to the Cost of Carry Model, the futures price is:",
+        "options": [
+          {
+            "key": "A",
+            "text": "Spot Price + Cost of Carry"
+          },
+          {
+            "key": "B",
+            "text": "Spot Price"
+          },
+          {
+            "key": "C",
+            "text": "Cost of Carry"
+          },
+          {
+            "key": "D",
+            "text": "Spot Price \u2212 Cost of Carry"
+          }
+        ],
+        "correct": "A",
+        "explanation": "The cost of carry model states that futures price equals the spot price plus carrying costs."
+      },
+      {
+        "id": 31,
+        "question": "When the futures price for a later month is lower than the current month's futures price, the market is said to be in:",
+        "options": [
+          {
+            "key": "A",
+            "text": "Reverse Hedging"
+          },
+          {
+            "key": "B",
+            "text": "Contango"
+          },
+          {
+            "key": "C",
+            "text": "Basis"
+          },
+          {
+            "key": "D",
+            "text": "Backwardation"
+          }
+        ],
+        "correct": "D",
+        "explanation": "Backwardation occurs when longer-term futures trade at lower prices than near-term contracts."
+      },
+      {
+        "id": 32,
+        "question": "A bond portfolio has a market value of \u20b9100 crore and a modified duration of 6. If the YTM falls by 1 basis point (0.01%), the new market value will be ______.",
+        "options": [
+          {
+            "key": "A",
+            "text": "\u20b999.94 crore"
+          },
+          {
+            "key": "B",
+            "text": "\u20b9100.06 crore"
+          },
+          {
+            "key": "C",
+            "text": "\u20b999.40 crore"
+          },
+          {
+            "key": "D",
+            "text": "\u20b9100.60 crore"
+          }
+        ],
+        "correct": "B",
+        "explanation": "Price change = \u2212MD \u00d7 \u0394YTM \u00d7 Value = \u22126 \u00d7 (\u22120.0001) \u00d7 100 = +\u20b90.06 crore."
+      },
+      {
+        "id": 33,
+        "question": "The process of closing out a position before expiry by entering into an opposite transaction is called ________.",
+        "options": [
+          {
+            "key": "A",
+            "text": "Settlement"
+          },
+          {
+            "key": "B",
+            "text": "Offsetting"
+          },
+          {
+            "key": "C",
+            "text": "Arbitrage"
+          },
+          {
+            "key": "D",
+            "text": "Hedging"
+          }
+        ],
+        "correct": "B",
+        "explanation": "An offsetting transaction neutralizes an existing futures or options position."
+      },
+      {
+        "id": 34,
+        "question": "Calendar spreads carry basis risk and no market risk; hence ______ margins are charged.",
+        "options": [
+          {
+            "key": "A",
+            "text": "Higher"
+          },
+          {
+            "key": "B",
+            "text": "Lower \u2705"
+          },
+          {
+            "key": "C",
+            "text": "NIL"
+          },
+          {
+            "key": "D",
+            "text": "Very high"
+          }
+        ],
+        "correct": "B",
+        "explanation": "Since calendar spreads involve lower risk due to offsetting positions, lower margins are applicable."
+      },
+      {
+        "id": 35,
+        "question": "Mr. R sells 17 January futures contracts at \u20b94,550 and Mr. S sells 20 February futures contracts at \u20b94,500. The lot size is 50 and the initial margin is 9%. What is the total margin required?",
+        "options": [
+          {
+            "key": "A",
+            "text": "\u20b93,48,075"
+          },
+          {
+            "key": "B",
+            "text": "\u20b94,05,000"
+          },
+          {
+            "key": "C",
+            "text": "\u20b95,87,500"
+          },
+          {
+            "key": "D",
+            "text": "\u20b97,53,075"
+          }
+        ],
+        "correct": "D",
+        "explanation": "Margin = (\u20b94,550 \u00d7 17 \u00d7 50 \u00d7 9%) + (\u20b94,500 \u00d7 20 \u00d7 50 \u00d7 9%) = \u20b97,53,075."
+      },
+      {
+        "id": 36,
+        "question": "Institutional investors pay lower margins than individual investors for derivatives trading.",
+        "options": [
+          {
+            "key": "A",
+            "text": "True"
+          },
+          {
+            "key": "B",
+            "text": "False"
+          }
+        ],
+        "correct": "B",
+        "explanation": "Margin requirements are generally the same regardless of investor type."
+      },
+      {
+        "id": 37,
+        "question": "The size of counterparty credit risk is equal to the ________.",
+        "options": [
+          {
+            "key": "A",
+            "text": "Credit risk"
+          },
+          {
+            "key": "B",
+            "text": "Replacement cost"
+          },
+          {
+            "key": "C",
+            "text": "Market risk"
+          },
+          {
+            "key": "D",
+            "text": "Trade value"
+          }
+        ],
+        "correct": "B",
+        "explanation": "Counterparty credit risk equals the replacement cost of the contract."
+      },
+      {
+        "id": 38,
+        "question": "The process of adjusting the futures price daily to reflect market changes is called ________.",
+        "options": [
+          {
+            "key": "A",
+            "text": "Mark-to-market"
+          },
+          {
+            "key": "B",
+            "text": "Revaluation"
+          },
+          {
+            "key": "C",
+            "text": "Hedging"
+          },
+          {
+            "key": "D",
+            "text": "Arbitrage"
+          }
+        ],
+        "correct": "A",
+        "explanation": "Futures positions are marked to market daily, with gains and losses settled each trading day."
+      },
+      {
+        "id": 39,
+        "question": "Mr. Sunil places a stop-loss sell order at \u20b9450 when the current price is \u20b9470. The order will be triggered when:",
+        "options": [
+          {
+            "key": "A",
+            "text": "The price reaches \u20b9470"
+          },
+          {
+            "key": "B",
+            "text": "The price reaches \u20b9450"
+          },
+          {
+            "key": "C",
+            "text": "The order is placed"
+          },
+          {
+            "key": "D",
+            "text": "Similar orders are available at \u20b9450"
+          }
+        ],
+        "correct": "B",
+        "explanation": "A stop-loss sell order is activated once the market price touches the trigger price."
+      },
+      {
+        "id": 40,
+        "question": "Can clients' positions be netted off against each other while calculating the initial margin?",
+        "options": [
+          {
+            "key": "A",
+            "text": "Yes"
+          },
+          {
+            "key": "B",
+            "text": "No"
+          }
+        ],
+        "correct": "B",
+        "explanation": "Initial margins are calculated separately for each client."
+      },
+      {
+        "id": 41,
+        "question": "The main proof of whether a futures transaction is for speculation or hedging is based on whether there already exists a related commercial position exposed to price risk.",
+        "options": [
+          {
+            "key": "A",
+            "text": "True \u2705"
+          },
+          {
+            "key": "B",
+            "text": "False"
+          }
+        ],
+        "correct": "A",
+        "explanation": "Hedging involves an existing exposure that is protected through derivatives, whereas speculation involves taking a fresh market position."
+      },
+      {
+        "id": 42,
+        "question": "The expiry day for the June series of Index Futures on NSE is:",
+        "options": [
+          {
+            "key": "A",
+            "text": "Last Thursday in June"
+          },
+          {
+            "key": "B",
+            "text": "Last Thursday in July"
+          },
+          {
+            "key": "C",
+            "text": "Last Thursday in August"
+          },
+          {
+            "key": "D",
+            "text": "Last Thursday in September"
+          }
+        ],
+        "correct": "A",
+        "explanation": "NSE index futures expire on the last Thursday of the expiry month."
+      },
+      {
+        "id": 43,
+        "question": "Which of the following is a role of derivatives?",
+        "options": [
+          {
+            "key": "A",
+            "text": "Risk management"
+          },
+          {
+            "key": "B",
+            "text": "Financing"
+          },
+          {
+            "key": "C",
+            "text": "Cash or liquidity management"
+          },
+          {
+            "key": "D",
+            "text": "All of the above"
+          }
+        ],
+        "correct": "D",
+        "explanation": "Derivatives are used for hedging, financing, and liquidity management."
+      },
+      {
+        "id": 44,
+        "question": "________ is the process of earning profit by exploiting price differences between two markets.",
+        "options": [
+          {
+            "key": "A",
+            "text": "Hedging"
+          },
+          {
+            "key": "B",
+            "text": "Trading"
+          },
+          {
+            "key": "C",
+            "text": "Speculation"
+          },
+          {
+            "key": "D",
+            "text": "Arbitrage"
+          }
+        ],
+        "correct": "D",
+        "explanation": "Arbitrage involves simultaneous buying and selling to profit from price differences."
+      },
+      {
+        "id": 45,
+        "question": "________ is not a derivatives market product.",
+        "options": [
+          {
+            "key": "A",
+            "text": "Preference Share \u2705"
+          },
+          {
+            "key": "B",
+            "text": "Futures"
+          },
+          {
+            "key": "C",
+            "text": "Swaps"
+          },
+          {
+            "key": "D",
+            "text": "Options"
+          }
+        ],
+        "correct": "A",
+        "explanation": "Preference shares are equity instruments and not derivative products."
+      },
+      {
+        "id": 46,
+        "question": "According to the Securities Contracts (Regulation) Act (SCRA), which of the following is excluded from the definition of 'securities'?",
+        "options": [
+          {
+            "key": "A",
+            "text": "Derivatives"
+          },
+          {
+            "key": "B",
+            "text": "Government Securities"
+          },
+          {
+            "key": "C",
+            "text": "Unit Linked Insurance Policy (ULIP)"
+          },
+          {
+            "key": "D",
+            "text": "Rights of interest in securities"
+          }
+        ],
+        "correct": "C",
+        "explanation": "ULIPs are insurance products regulated by IRDAI and are not classified as securities under SCRA."
+      },
+      {
+        "id": 47,
+        "question": "What is the role of speculators in the market?",
+        "options": [
+          {
+            "key": "A",
+            "text": "They stabilize the markets"
+          },
+          {
+            "key": "B",
+            "text": "They reduce their risks by speculating"
+          },
+          {
+            "key": "C",
+            "text": "They maintain Dollar-Rupee price parity"
+          },
+          {
+            "key": "D",
+            "text": "They add liquidity to the futures market \u2705"
+          }
+        ],
+        "correct": "D",
+        "explanation": "Speculators increase trading activity and liquidity by taking positions based on expected price movements."
+      },
+      {
+        "id": 48,
+        "question": "Mr. Nayar buys 8 March NSE Nifty futures contracts and sells 6 April contracts. His net open position is:",
+        "options": [
+          {
+            "key": "A",
+            "text": "14"
+          },
+          {
+            "key": "B",
+            "text": "8"
+          },
+          {
+            "key": "C",
+            "text": "2"
+          },
+          {
+            "key": "D",
+            "text": "6"
+          }
+        ],
+        "correct": "C",
+        "explanation": "Net open position = 8 \u2212 6 = 2 contracts."
+      },
+      {
+        "id": 49,
+        "question": "A trader has a short position in a futures contract. If futures prices increase, the mark-to-market margin account will be:",
+        "options": [
+          {
+            "key": "A",
+            "text": "Credited for the loss"
+          },
+          {
+            "key": "B",
+            "text": "Credited for the gain"
+          },
+          {
+            "key": "C",
+            "text": "Debited for the loss \u2705"
+          },
+          {
+            "key": "D",
+            "text": "Debited for the gain"
+          }
+        ],
+        "correct": "C",
+        "explanation": "A short futures position loses when prices rise, resulting in a debit from the margin account."
+      },
+      {
+        "id": 50,
+        "question": "When will an Indian investor in a US Dollar based fund benefit?",
+        "options": [
+          {
+            "key": "A",
+            "text": "When US Dollar becomes weak"
+          },
+          {
+            "key": "B",
+            "text": "When US Dollar becomes stronger"
+          },
+          {
+            "key": "C",
+            "text": "When US Dollar remains steady"
+          }
+        ],
+        "correct": "B",
+        "explanation": "An Indian investor will benefit when the US Dollar strengthens against the Indian Rupee. If the US Dollar appreciates, the investor\u2019s returns in Indian Rupees will increase when the value is converted."
+      }
+    ]
+  },
+  "mini4": {
+    "id": "mini4",
+    "type": "mini",
+    "title": "Mini Mock 4: Core Curriculum Speed Drill",
+    "badge": "Curated Drill",
+    "badgeColor": "purple",
+    "description": "50-question curated speed drill drawn from Full Mock Tests 1 through 5, balancing SIF regulations, option payoffs, and valuation principles.",
+    "totalQuestions": 50,
+    "durationMinutes": 60,
+    "totalMarks": 50,
+    "passMarks": 30,
+    "negativeMark": 0.1,
+    "questions": [
+      {
+        "id": 1,
+        "question": "From which of these can the mutual fund NOT distribute dividends?",
+        "options": [
+          {
+            "key": "A",
+            "text": "Income accruals"
+          },
+          {
+            "key": "B",
+            "text": "Dividends which are received from equity investments"
+          },
+          {
+            "key": "C",
+            "text": "Realized gain from sale of investments"
+          },
+          {
+            "key": "D",
+            "text": "Unrealized appreciation in value of investments"
+          }
+        ],
+        "correct": "D",
+        "explanation": "According to SEBI guidelines, mutual funds can only distribute dividends from realized profits (e.g., income accruals or realized gains). Unrealized appreciation cannot be used to pay dividends."
+      },
+      {
+        "id": 2,
+        "question": "Identify the TRUE statements with respect to Transmission of mutual fund units. (A) Before the transfer is effected, the mutual fund will insist for an indemnity against future problems for the mutual fund arising out of the transfer (B) Before the transfer is effected, the mutual fund will not insist on the death certificate of the deceased unit-holder (C) Before the transfer is effected, the mutual fund will insist on the KYC documentation from the nominee",
+        "options": [
+          {
+            "key": "A",
+            "text": "A and B are true"
+          },
+          {
+            "key": "B",
+            "text": "B and C are true"
+          },
+          {
+            "key": "C",
+            "text": "A and C are true"
+          },
+          {
+            "key": "D",
+            "text": "All A, B, and C are true"
+          }
+        ],
+        "correct": "C",
+        "explanation": "In case of the transmission of mutual fund units (when the unit holder dies), the mutual fund will typically request an indemnity from the nominee against future issues and will also require KYC documentation from the nominee. The death certificate is also required for the transfer."
+      },
+      {
+        "id": 3,
+        "question": "What is the investment of a constant amount at regular intervals in a mutual fund scheme called?",
+        "options": [
+          {
+            "key": "A",
+            "text": "Systematic Withdrawal Plan"
+          },
+          {
+            "key": "B",
+            "text": "Systematic Transfer Plan"
+          },
+          {
+            "key": "C",
+            "text": "Value Investing"
+          },
+          {
+            "key": "D",
+            "text": "Systematic Investment Plan"
+          }
+        ],
+        "correct": "D",
+        "explanation": "The Systematic Investment Plan (SIP) is a strategy where an investor invests a fixed amount in a mutual fund at regular intervals, such as monthly, which helps in averaging the cost of investment over time."
+      },
+      {
+        "id": 4,
+        "question": "An inter-bond spread in futures involves two trades with these features:",
+        "options": [
+          {
+            "key": "A",
+            "text": "Different market side but same expiry month"
+          },
+          {
+            "key": "B",
+            "text": "Different market side, different underlying but same expiry month"
+          },
+          {
+            "key": "C",
+            "text": "Different market side and different expiry months"
+          },
+          {
+            "key": "D",
+            "text": "Same market side but different expiry months"
+          }
+        ],
+        "correct": "B",
+        "explanation": "Inter-bond spreads involve buying one bond future and selling another of a different underlying, both with the same expiry."
+      },
+      {
+        "id": 5,
+        "question": "A calendar spread in index futures will be treated as _________ in a far month contract if the near month contract is expired.",
+        "options": [
+          {
+            "key": "A",
+            "text": "Long position"
+          },
+          {
+            "key": "B",
+            "text": "Short position"
+          },
+          {
+            "key": "C",
+            "text": "Optional position"
+          },
+          {
+            "key": "D",
+            "text": "Naked position"
+          }
+        ],
+        "correct": "D",
+        "explanation": "The remaining position in far month after near-month expiry is considered a naked or open position."
+      },
+      {
+        "id": 6,
+        "question": "Identify the true statement(s) -(A) An Addendum must accompany the KIM (B) Addendum is considered to be a part of the Scheme Related Documents",
+        "options": [
+          {
+            "key": "A",
+            "text": "Only A is true"
+          },
+          {
+            "key": "B",
+            "text": "Only B is true"
+          },
+          {
+            "key": "C",
+            "text": "Both A and B are true"
+          },
+          {
+            "key": "D",
+            "text": "None of them are true"
+          }
+        ],
+        "correct": "C",
+        "explanation": "An Addendum is issued to update or modify the Scheme Information Document (SID), Key Information Memorandum (KIM), etc. It is considered part of the scheme-related documents and must accompany the KIM."
+      },
+      {
+        "id": 7,
+        "question": "Identify the FALSE statement with respect to Options.",
+        "options": [
+          {
+            "key": "A",
+            "text": "Option contracts are NOT symmetrical regarding the rights and obligations of the parties involved"
+          },
+          {
+            "key": "B",
+            "text": "Buyer of an option gets the right while seller of an option bears the obligation"
+          },
+          {
+            "key": "C",
+            "text": "Options contracts have non-linear payoffs"
+          },
+          {
+            "key": "D",
+            "text": "Options contracts have linear payoffs"
+          }
+        ],
+        "correct": "D",
+        "explanation": "Options have non-linear payoffs, unlike linear payoff profiles of some other derivatives."
+      },
+      {
+        "id": 8,
+        "question": "If a speculator purchases a naked Call Option, this means he/she has a ____.",
+        "options": [
+          {
+            "key": "A",
+            "text": "Bullish position"
+          },
+          {
+            "key": "B",
+            "text": "Bearish position"
+          },
+          {
+            "key": "C",
+            "text": "Hedged position"
+          },
+          {
+            "key": "D",
+            "text": "Arbitrage position"
+          }
+        ],
+        "correct": "A",
+        "explanation": "Buying a naked call is bullish."
+      },
+      {
+        "id": 9,
+        "question": "Who has the responsibility of overseeing legal compliance in a mutual fund?",
+        "options": [
+          {
+            "key": "A",
+            "text": "The Custodian"
+          },
+          {
+            "key": "B",
+            "text": "The Sponsors"
+          },
+          {
+            "key": "C",
+            "text": "The AMC"
+          },
+          {
+            "key": "D",
+            "text": "The Trustees"
+          }
+        ],
+        "correct": "D",
+        "explanation": "Trustees are responsible for ensuring legal compliance in mutual funds and protecting the interests of investors, as required by SEBI."
+      },
+      {
+        "id": 10,
+        "question": "On what basis are Treasury Bill futures contracts quoted?",
+        "options": [
+          {
+            "key": "A",
+            "text": "100 plus discount yield"
+          },
+          {
+            "key": "B",
+            "text": "100 minus discount yield"
+          },
+          {
+            "key": "C",
+            "text": "100 plus investment yield"
+          },
+          {
+            "key": "D",
+            "text": "100 minus investment yield"
+          }
+        ],
+        "correct": "B",
+        "explanation": "T-bill futures are quoted as 100 minus the annualized discount yield."
+      },
+      {
+        "id": 11,
+        "question": "Which date is the 'Expiry Date' in Interest Rate futures contract?",
+        "options": [
+          {
+            "key": "A",
+            "text": "Settlement Date of the Interest Rate futures contract"
+          },
+          {
+            "key": "B",
+            "text": "Last Trading Date of the Interest Rate futures contract"
+          },
+          {
+            "key": "C",
+            "text": "Both 1 and 2 are the same"
+          },
+          {
+            "key": "D",
+            "text": "None of the above"
+          }
+        ],
+        "correct": "B",
+        "explanation": "The expiry date is the last trading day, after which settlement occurs."
+      },
+      {
+        "id": 12,
+        "question": "The key variable(s) affecting an option's price is/are ________.",
+        "options": [
+          {
+            "key": "A",
+            "text": "The spot price of underlying asset"
+          },
+          {
+            "key": "B",
+            "text": "The time to expiration"
+          },
+          {
+            "key": "C",
+            "text": "The strike price of an option"
+          },
+          {
+            "key": "D",
+            "text": "All of the above"
+          }
+        ],
+        "correct": "D",
+        "explanation": "The option price depends on spot price, time to expiry, and strike price, among other factors."
+      },
+      {
+        "id": 13,
+        "question": "The extent to which an option is In-the-money is known as its ________.",
+        "options": [
+          {
+            "key": "A",
+            "text": "Intrinsic Value"
+          },
+          {
+            "key": "B",
+            "text": "Time Value"
+          },
+          {
+            "key": "C",
+            "text": "Premium Value"
+          },
+          {
+            "key": "D",
+            "text": "Notional Value"
+          }
+        ],
+        "correct": "A",
+        "explanation": "Intrinsic value measures how much an option is in-the-money."
+      },
+      {
+        "id": 14,
+        "question": "Statement of Additional Information (SAI) has to be regularly updated and the update has to be done by the end of 3 months every financial year - State whether True or False?",
+        "options": [
+          {
+            "key": "A",
+            "text": "True"
+          },
+          {
+            "key": "B",
+            "text": "False"
+          }
+        ],
+        "correct": "A",
+        "explanation": "The Statement of Additional Information (SAI) must be updated regularly, and this update should be completed by the end of 3 months in every financial year. Any material changes must be updated promptly and made available on the mutual fund's website and AMFI\u2019s website."
+      },
+      {
+        "id": 15,
+        "question": "The minimum number of investors that a mutual fund scheme should have:",
+        "options": [
+          {
+            "key": "A",
+            "text": "10 investors"
+          },
+          {
+            "key": "B",
+            "text": "20 investors"
+          },
+          {
+            "key": "C",
+            "text": "50 investors"
+          },
+          {
+            "key": "D",
+            "text": "100 investors"
+          }
+        ],
+        "correct": "B",
+        "explanation": "A mutual fund scheme must have at least 20 investors to ensure diversification. Additionally, no single investor should own more than 25% of the scheme\u2019s corpus."
+      },
+      {
+        "id": 16,
+        "question": "In connection with the futures market, the basis is _____.",
+        "options": [
+          {
+            "key": "A",
+            "text": "The difference between spot and futures price"
+          },
+          {
+            "key": "B",
+            "text": "The sum of spot and futures price"
+          },
+          {
+            "key": "C",
+            "text": "The difference between the strike and spot price"
+          },
+          {
+            "key": "D",
+            "text": "The difference between the futures price and strike price"
+          }
+        ],
+        "correct": "A",
+        "explanation": "Basis = Spot - Futures (or vice versa)."
+      },
+      {
+        "id": 17,
+        "question": "Who issues the 'Certificates of Deposit'?",
+        "options": [
+          {
+            "key": "A",
+            "text": "Local Municipality"
+          },
+          {
+            "key": "B",
+            "text": "Banks"
+          },
+          {
+            "key": "C",
+            "text": "RBI"
+          },
+          {
+            "key": "D",
+            "text": "Corporates"
+          }
+        ],
+        "correct": "B",
+        "explanation": "Certificates of Deposit (CDs) are issued by scheduled commercial banks in India as short-term money market instruments."
+      },
+      {
+        "id": 18,
+        "question": "No investor can have a holding of more than 20 percent of a scheme. State True or False.",
+        "options": [
+          {
+            "key": "A",
+            "text": "True"
+          },
+          {
+            "key": "B",
+            "text": "False"
+          }
+        ],
+        "correct": "B",
+        "explanation": "The minimum requirement for a scheme is that it must have at least 20 investors, and no single investor should hold more than 25% of the corpus of the scheme."
+      },
+      {
+        "id": 19,
+        "question": "Identify the FALSE statement(s) with respect to benchmarks for mutual fund schemes. 1. A Multi-Cap fund can have the Nifty 500 index as its benchmark. 2. A Multi-Cap fund can have BSE Sensex as its benchmark.",
+        "options": [
+          {
+            "key": "A",
+            "text": "Only 1 is false"
+          },
+          {
+            "key": "B",
+            "text": "Only 2 is false"
+          },
+          {
+            "key": "C",
+            "text": "Both 1 and 2 are false"
+          },
+          {
+            "key": "D",
+            "text": "None of the above"
+          }
+        ],
+        "correct": "B",
+        "explanation": "A Multi-Cap fund invests across large-cap, mid-cap, and small-cap stocks, which makes the Nifty 500 index a suitable benchmark since it represents 500 stocks across all these categories. However, the BSE Sensex consists of only 30 large-cap stocks, so it is more suitable for large-cap funds and not for a multi-cap fund."
+      },
+      {
+        "id": 20,
+        "question": "______ is used to measure a fund\u2019s risk relative to the market index.",
+        "options": [
+          {
+            "key": "A",
+            "text": "Tracking error"
+          },
+          {
+            "key": "B",
+            "text": "Beta coefficient"
+          },
+          {
+            "key": "C",
+            "text": "Treynor ratio"
+          },
+          {
+            "key": "D",
+            "text": "Sharpe ratio"
+          }
+        ],
+        "correct": "B",
+        "explanation": "Beta measures a mutual fund's relative volatility compared to the market index. A beta of 1 indicates the fund moves in line with the market, while a beta greater than 1 means the fund is more volatile. For example, a beta of 1.5 means that for every 1% change in the market, the fund is expected to change by 1.5%."
+      },
+      {
+        "id": 21,
+        "question": "Which of the following is true about the Conversion Factor?",
+        "options": [
+          {
+            "key": "A",
+            "text": "It makes the adjustment always perfect"
+          },
+          {
+            "key": "B",
+            "text": "It makes the adjustment always imperfect"
+          },
+          {
+            "key": "C",
+            "text": "It is a good and practical approximation for adjustment"
+          },
+          {
+            "key": "D",
+            "text": "None of the above"
+          }
+        ],
+        "correct": "C",
+        "explanation": "The conversion factor provides a practical, though not perfect, pricing adjustment."
+      },
+      {
+        "id": 22,
+        "question": "The intrinsic value of an option is the sum of the option premium and the time value.",
+        "options": [
+          {
+            "key": "A",
+            "text": "True"
+          },
+          {
+            "key": "B",
+            "text": "False"
+          }
+        ],
+        "correct": "B",
+        "explanation": "Option Premium = Intrinsic Value + Time Value."
+      },
+      {
+        "id": 23,
+        "question": "Identify the FALSE statement: A) As per AMFI guidelines, the intermediary has no right of appeal to AMFI. B) It is not the sole responsibility of the mutual fund distributors for spreading investor awareness",
+        "options": [
+          {
+            "key": "A",
+            "text": "Only A is false"
+          },
+          {
+            "key": "B",
+            "text": "Only B is false"
+          },
+          {
+            "key": "C",
+            "text": "Both A and B are false"
+          }
+        ],
+        "correct": "A",
+        "explanation": "The intermediary does have the right to appeal to AMFI under the AMFI Guidelines & Norms for Intermediaries (AGNI). Mutual fund distributors are not solely responsible for investor awareness. AMFI (Association of Mutual Funds in India) also undertakes investor awareness programs to promote mutual fund literacy."
+      },
+      {
+        "id": 24,
+        "question": "The exercise date and expiration date of a European option is ________.",
+        "options": [
+          {
+            "key": "A",
+            "text": "Always the same"
+          },
+          {
+            "key": "B",
+            "text": "Always on the 28th of the expiry month"
+          },
+          {
+            "key": "C",
+            "text": "Always different"
+          },
+          {
+            "key": "D",
+            "text": "May be the same"
+          }
+        ],
+        "correct": "A",
+        "explanation": "European options can only be exercised on their expiration date."
+      },
+      {
+        "id": 25,
+        "question": "Investors who have not transacted during the previous ______ are known as dormant investors.",
+        "options": [
+          {
+            "key": "A",
+            "text": "15 months"
+          },
+          {
+            "key": "B",
+            "text": "12 months"
+          },
+          {
+            "key": "C",
+            "text": "9 months"
+          },
+          {
+            "key": "D",
+            "text": "6 months"
+          }
+        ],
+        "correct": "D",
+        "explanation": "Investors who have not made any transactions in their mutual fund accounts for the previous 6 months are classified as dormant investors."
+      },
+      {
+        "id": 26,
+        "question": "As per accounting standards for derivatives in India, which is TRUE?",
+        "options": [
+          {
+            "key": "A",
+            "text": "Value of derivative in balance sheet is \"book value\""
+          },
+          {
+            "key": "B",
+            "text": "Value of derivative in balance sheet is \"zero value\""
+          },
+          {
+            "key": "C",
+            "text": "Fair value will be taken to Profit/Loss Account except for hedging transactions"
+          },
+          {
+            "key": "D",
+            "text": "All derivative transactions must be brought into balance sheet except those settled after balance sheet date"
+          }
+        ],
+        "correct": "C",
+        "explanation": "Fair value changes are recognized in the Profit & Loss Account unless hedge accounting applies."
+      },
+      {
+        "id": 27,
+        "question": "The last trading day for Treasury Bill futures contract is ______.",
+        "options": [
+          {
+            "key": "A",
+            "text": "Last Wednesday of Contract Month"
+          },
+          {
+            "key": "B",
+            "text": "Last Thursday of Contract Month"
+          },
+          {
+            "key": "C",
+            "text": "Last Friday of Contract Month"
+          },
+          {
+            "key": "D",
+            "text": "None of the above"
+          }
+        ],
+        "correct": "A",
+        "explanation": "Treasury Bill futures expire on the last Wednesday of the contract month."
+      },
+      {
+        "id": 28,
+        "question": "The permissible maturity for underlying Treasury Bill futures in India is ________.",
+        "options": [
+          {
+            "key": "A",
+            "text": "91, 182 and 364 days"
+          },
+          {
+            "key": "B",
+            "text": "14, 182 and 364 days"
+          },
+          {
+            "key": "C",
+            "text": "14, 91 and 182 days"
+          },
+          {
+            "key": "D",
+            "text": "None of the above"
+          }
+        ],
+        "correct": "D",
+        "explanation": "Only the 91-day Treasury Bill is permitted as the underlying for Treasury Bill futures in India."
+      },
+      {
+        "id": 29,
+        "question": "Floating interest rate is _________.",
+        "options": [
+          {
+            "key": "A",
+            "text": "A rate which is payable only on maturity"
+          },
+          {
+            "key": "B",
+            "text": "Base Rate + Spread"
+          },
+          {
+            "key": "C",
+            "text": "Prime rate of lending"
+          },
+          {
+            "key": "D",
+            "text": "The yield on spread"
+          }
+        ],
+        "correct": "B",
+        "explanation": "Floating interest rates are linked to a base rate (such as the Government Securities rate) and a spread For example, a floating rate might be expressed as Base Rate + Spread, indicating it is adjustable according to the base rate."
+      },
+      {
+        "id": 30,
+        "question": "Mutual fund units issued against purchase transactions would be subject to levy of stamp duty at ______ of the amount invested.",
+        "options": [
+          {
+            "key": "A",
+            "text": "0.5%"
+          },
+          {
+            "key": "B",
+            "text": "0.05%"
+          },
+          {
+            "key": "C",
+            "text": "0.005%"
+          },
+          {
+            "key": "D",
+            "text": "0.01%"
+          }
+        ],
+        "correct": "C",
+        "explanation": "From July 1, 2020, mutual fund units issued in purchase transactions are subject to stamp duty at 0.005% of the invested amount. This includes purchases made through lump sum, SIP, STP, switch-ins, or dividend reinvestment."
+      },
+      {
+        "id": 31,
+        "question": "Which intermediary is responsible for the implementation of uniform KYC?",
+        "options": [
+          {
+            "key": "A",
+            "text": "Asset Management Company"
+          },
+          {
+            "key": "B",
+            "text": "KYC Registration Agencies"
+          },
+          {
+            "key": "C",
+            "text": "Registrar and Transfer Agents"
+          },
+          {
+            "key": "D",
+            "text": "Depository participants"
+          }
+        ],
+        "correct": "B",
+        "explanation": "KYC Registration Agencies (KRAs) are responsible for maintaining the uniform KYC process across all mutual fund investments, as per SEBI regulations."
+      },
+      {
+        "id": 32,
+        "question": "Mr. X invests in a liquid fund at 4 pm. When will the applicable NAV for unit allotment be?",
+        "options": [
+          {
+            "key": "A",
+            "text": "Closing NAV of the day preceding the day funds are available"
+          },
+          {
+            "key": "B",
+            "text": "Closing NAV of the day the funds are available"
+          },
+          {
+            "key": "C",
+            "text": "Closing NAV of the day immediately preceding the date of application"
+          },
+          {
+            "key": "D",
+            "text": "Closing NAV of the day of the date of application"
+          }
+        ],
+        "correct": "A",
+        "explanation": "For liquid funds,the NAV of the previous business day from the date of funds availability is used for allotment."
+      },
+      {
+        "id": 33,
+        "question": "Identify the correct formula for the Cost of Carry model.",
+        "options": [
+          {
+            "key": "A",
+            "text": "Price of Futures = Cost of carry"
+          },
+          {
+            "key": "B",
+            "text": "Price of Futures = Spot price"
+          },
+          {
+            "key": "C",
+            "text": "Price of Futures = Spot + Cost of carry"
+          },
+          {
+            "key": "D",
+            "text": "Price of Futures = Spot - Cost of carry"
+          }
+        ],
+        "correct": "C",
+        "explanation": "Futures price equals the spot price plus the cost of carrying the asset."
+      },
+      {
+        "id": 34,
+        "question": "In a zero coupon bond, the Macaulay Duration will be ________.",
+        "options": [
+          {
+            "key": "A",
+            "text": "Equal / proportionate to maturity"
+          },
+          {
+            "key": "B",
+            "text": "Less than maturity"
+          },
+          {
+            "key": "C",
+            "text": "More than maturity"
+          },
+          {
+            "key": "D",
+            "text": "Zero"
+          }
+        ],
+        "correct": "A",
+        "explanation": "For a zero-coupon bond, duration equals its maturity. ________________"
+      },
+      {
+        "id": 35,
+        "question": "Who maintains Constituent Subsidiary General Ledger account with the PDO of RBI?",
+        "options": [
+          {
+            "key": "A",
+            "text": "Scheduled Commercial Banks"
+          },
+          {
+            "key": "B",
+            "text": "Primary Dealers"
+          },
+          {
+            "key": "C",
+            "text": "Both of the above"
+          },
+          {
+            "key": "D",
+            "text": "None of the above"
+          }
+        ],
+        "correct": "C",
+        "explanation": "Both Scheduled Commercial Banks and Primary Dealers maintain CSGL accounts. ________________"
+      },
+      {
+        "id": 36,
+        "question": "Investors who believe the markets will fall are known as Bulls.",
+        "options": [
+          {
+            "key": "A",
+            "text": "True"
+          },
+          {
+            "key": "B",
+            "text": "False"
+          }
+        ],
+        "correct": "B",
+        "explanation": "Investors expecting the market to fall are called bears, while bulls expect the market to rise."
+      },
+      {
+        "id": 37,
+        "question": "Identify the TRUE statement with respect to Systematic Investment Plan (SIP).",
+        "options": [
+          {
+            "key": "A",
+            "text": "A SIP cannot be done in a New Fund Offer (NFO)"
+          },
+          {
+            "key": "B",
+            "text": "A SIP can be done only in an existing folio"
+          },
+          {
+            "key": "C",
+            "text": "A SIP can be done in a Closed-end fund"
+          },
+          {
+            "key": "D",
+            "text": "All of the above"
+          }
+        ],
+        "correct": "A",
+        "explanation": "SIPs require an ongoing scheme NAV to allot units periodically. In an NFO, units are allotted only once at the close of the offer period, so SIP cannot be registered during NFO. SIPs can be started only after the scheme is launched and becomes open for continuous sale/redemption. Exam trap: Many learners think SIP can be done during NFO, but it\u2019s not allowed."
+      },
+      {
+        "id": 38,
+        "question": "Which of the following is NOT included in the Statement of Additional Information (SAI)?",
+        "options": [
+          {
+            "key": "A",
+            "text": "Rights of Unit-holders"
+          },
+          {
+            "key": "B",
+            "text": "Transmission procedure"
+          },
+          {
+            "key": "C",
+            "text": "SIP returns of the schemes"
+          },
+          {
+            "key": "D",
+            "text": "Investment Valuation Norms"
+          }
+        ],
+        "correct": "C",
+        "explanation": "The SAI contains statutory information like the rights of unit-holders, investment norms, and the transmission process, but SIP returns are not part of it. This data is available in the Fund Fact Sheet."
+      },
+      {
+        "id": 39,
+        "question": "Identify the true statement(s) with respect to Scheme Performance Disclosures?",
+        "options": [
+          {
+            "key": "A",
+            "text": "AMFI provides mutual fund performance data on its website."
+          },
+          {
+            "key": "B",
+            "text": "SEBI mandates the publication of mutual fund performance data for regulatory compliance."
+          },
+          {
+            "key": "C",
+            "text": "Only A is true"
+          },
+          {
+            "key": "D",
+            "text": "Only B is true"
+          },
+          {
+            "key": "E",
+            "text": "Both A and B are true"
+          },
+          {
+            "key": "F",
+            "text": "Both A and B are false"
+          }
+        ],
+        "correct": "C",
+        "explanation": "Both the AMFI website and SEBI mandate the disclosure of mutual fund performance datA) AMFI provides this data, and SEBI requires its publication as part of regulatory compliance."
+      },
+      {
+        "id": 40,
+        "question": "As per accounting standards for derivatives in India, which is TRUE?",
+        "options": [
+          {
+            "key": "A",
+            "text": "Value of derivative in balance sheet is \"book value\""
+          },
+          {
+            "key": "B",
+            "text": "Value of derivative in balance sheet is \"zero value\""
+          },
+          {
+            "key": "C",
+            "text": "Fair value will be taken to Profit/Loss Account except for hedging transactions"
+          },
+          {
+            "key": "D",
+            "text": "All derivative transactions must be brought into balance sheet except those settled after balance sheet date"
+          }
+        ],
+        "correct": "C",
+        "explanation": "Fair value changes are recognized in the Profit & Loss account unless hedge accounting applies. ________________"
+      },
+      {
+        "id": 41,
+        "question": "Who regulates interest rate derivatives in India?",
+        "options": [
+          {
+            "key": "A",
+            "text": "SEBI"
+          },
+          {
+            "key": "B",
+            "text": "RBI"
+          },
+          {
+            "key": "C",
+            "text": "Jointly by SEBI and RBI"
+          },
+          {
+            "key": "D",
+            "text": "None of the above"
+          }
+        ],
+        "correct": "C",
+        "explanation": "SEBI regulates exchange-traded IRDs, while RBI regulates OTC IRDs. ________________"
+      },
+      {
+        "id": 42,
+        "question": "If you anticipate the 3-month interest rate to increase in one month, what should you do today?",
+        "options": [
+          {
+            "key": "A",
+            "text": "Buy the 3-month contract on a 1-month sensitive asset"
+          },
+          {
+            "key": "B",
+            "text": "Buy the 1-month contract on a 3-month sensitive asset"
+          },
+          {
+            "key": "C",
+            "text": "Sell the 1-month contract on a 3-month sensitive asset"
+          },
+          {
+            "key": "D",
+            "text": "Sell the 3-month contract on a 1-month sensitive asset"
+          }
+        ],
+        "correct": "C",
+        "explanation": "Selling the near-term contract benefits if interest rates rise. ________________"
+      },
+      {
+        "id": 43,
+        "question": "The Asset Management Companies have to disclose the Total Expense Ratios (TER) of the various schemes on their websites on a ______ basis.",
+        "options": [
+          {
+            "key": "A",
+            "text": "Daily"
+          },
+          {
+            "key": "B",
+            "text": "Weekly"
+          },
+          {
+            "key": "C",
+            "text": "Monthly"
+          },
+          {
+            "key": "D",
+            "text": "Annual"
+          }
+        ],
+        "correct": "A",
+        "explanation": "SEBI mandates that AMCs disclose the Total Expense Ratio (TER) of their mutual fund schemes daily on their websites. This helps investors stay informed about the expenses associated with the schemes."
+      },
+      {
+        "id": 44,
+        "question": "When can mutual funds charge an additional expense of 0.30% of daily net assets of the scheme?",
+        "options": [
+          {
+            "key": "A",
+            "text": "If the new inflows from beyond top 30 cities are at least (a) 30 percent of gross new inflows in the scheme or (b) 15 percent of the average assets under management (year to date) of the scheme, whichever is higher"
+          },
+          {
+            "key": "B",
+            "text": "If the new inflows from beyond top 30 cities are at least (a) 20 percent of gross new inflows in the scheme or (b) 5 percent of the average assets under management (year to date) of the scheme, whichever is higher"
+          },
+          {
+            "key": "C",
+            "text": "If the new inflows from beyond top 15 cities are at least (a) 25 percent of gross new inflows in the scheme or (b) 15 percent of the average assets under management (year to date) of the scheme, whichever is higher"
+          },
+          {
+            "key": "D",
+            "text": "If the new inflows from beyond top 15 cities are at least (a) 10 percent of gross new inflows in the scheme or (b) 5 percent of the average assets under management (year to date) of the scheme, whichever is higher"
+          }
+        ],
+        "correct": "A",
+        "explanation": "Mutual funds can charge an additional expense of 0.30% of daily net assets if the new inflows from beyond the top 30 cities are significant, as defined by the option A."
+      },
+      {
+        "id": 45,
+        "question": "Mr. Sunny buys a call option (Strike \u20b940.25, Premium \u20b90.20) and sells a call option (Strike \u20b939.50, Premium \u20b90.60). If the underlying closes at \u20b939.50, what is his net result?",
+        "options": [
+          {
+            "key": "A",
+            "text": "Loss of Rs.0.60"
+          },
+          {
+            "key": "B",
+            "text": "Profit of Rs.0.20"
+          },
+          {
+            "key": "C",
+            "text": "Profit of Rs.0.40"
+          },
+          {
+            "key": "D",
+            "text": "No profit or loss"
+          }
+        ],
+        "correct": "C",
+        "explanation": "Both options expire worthless, so the net premium received (\u20b90.40) is the profit. ________________"
+      },
+      {
+        "id": 46,
+        "question": "Which risk is mitigated by the Delivery versus Payment (DvP) mode of settlement?",
+        "options": [
+          {
+            "key": "A",
+            "text": "Settlement Risk"
+          },
+          {
+            "key": "B",
+            "text": "Counterparty Risk"
+          },
+          {
+            "key": "C",
+            "text": "Credit Risk"
+          },
+          {
+            "key": "D",
+            "text": "All of the above"
+          }
+        ],
+        "correct": "A",
+        "explanation": "DvP ensures that securities and funds are exchanged simultaneously, reducing settlement risk. ________________"
+      },
+      {
+        "id": 47,
+        "question": "What is the minimum market-wide position limit for a stock to be eligible for futures and options trading in India?",
+        "options": [
+          {
+            "key": "A",
+            "text": "Rs. 100 crores"
+          },
+          {
+            "key": "B",
+            "text": "Rs. 500 crores"
+          },
+          {
+            "key": "C",
+            "text": "Rs. 1,000 crores"
+          },
+          {
+            "key": "D",
+            "text": "Rs. 2,500 crores"
+          }
+        ],
+        "correct": "B",
+        "explanation": "SEBI requires a minimum market-wide position limit of Rs. 500 crore for F&O eligibility. ________________"
+      },
+      {
+        "id": 48,
+        "question": "Which of the below investors will require the approval of the board before investing in mutual funds?",
+        "options": [
+          {
+            "key": "A",
+            "text": "Non Resident investors"
+          },
+          {
+            "key": "B",
+            "text": "Institutional investors"
+          },
+          {
+            "key": "C",
+            "text": "High Networth investors"
+          },
+          {
+            "key": "D",
+            "text": "Retail investors"
+          }
+        ],
+        "correct": "B",
+        "explanation": "Institutional investors typically require approval from their board of directors before making investments in mutual funds. This is because institutional investors are large entities and their investment decisions involve more formal approval processes compared to retail or high-net-worth individuals."
+      },
+      {
+        "id": 49,
+        "question": "Counterparty risk can also be called ________.",
+        "options": [
+          {
+            "key": "A",
+            "text": "Credit Risk"
+          },
+          {
+            "key": "B",
+            "text": "Default Risk"
+          },
+          {
+            "key": "C",
+            "text": "Both A and B"
+          },
+          {
+            "key": "D",
+            "text": "Both A and B are incorrect"
+          }
+        ],
+        "correct": "C",
+        "explanation": "Counterparty risk is the possibility that the other party defaults on its contractual obligations. ________________"
+      },
+      {
+        "id": 50,
+        "question": "Which of these documents is not required to be submitted for investing in mutual funds by a charitable organization?",
+        "options": [
+          {
+            "key": "A",
+            "text": "List of authorized signatories"
+          },
+          {
+            "key": "B",
+            "text": "Trust deed"
+          },
+          {
+            "key": "C",
+            "text": "Board resolution"
+          },
+          {
+            "key": "D",
+            "text": "Memorandum and Articles of Association"
+          }
+        ],
+        "correct": "D",
+        "explanation": "A charitable organization, such as a trust does not have a Memorandum and Articles of Association. Instead, it will provide a Trust Deed along with other necessary documents like the list of authorized signatories and board resolutions."
+      }
+    ]
+  },
+  "mini5": {
+    "id": "mini5",
+    "type": "mini",
+    "title": "Mini Mock 5: Master Review Speed Drill",
+    "badge": "Curated Drill",
+    "badgeColor": "indigo",
+    "description": "50-question curated challenge drill drawn from Full Mock Tests 1 through 5, testing mathematical formulas, duration hedging, and regulatory limits.",
+    "totalQuestions": 50,
+    "durationMinutes": 60,
+    "totalMarks": 50,
+    "passMarks": 30,
+    "negativeMark": 0.1,
+    "questions": [
+      {
+        "id": 1,
+        "question": "If the sale and purchase transactions for a year amounted to Rs. 10,000 crore, and the average size of net assets is Rs. 5,000 crore, this means that investments are held in the portfolio, on an average for ________.",
+        "options": [
+          {
+            "key": "A",
+            "text": "2 months"
+          },
+          {
+            "key": "B",
+            "text": "3 months"
+          },
+          {
+            "key": "C",
+            "text": "6 months"
+          },
+          {
+            "key": "D",
+            "text": "12 months"
+          }
+        ],
+        "correct": "C",
+        "explanation": "The Portfolio Turnover Ratio is calculated by dividing the total transactions (purchase and sale) by the average size of the net assets. Here, the turnover ratio = Rs. 10,000 crore / Rs. 5,000 crore = 2. This means that the assets are held for an average of 6 months (12 months \u00f7 2)."
+      },
+      {
+        "id": 2,
+        "question": "A future contract ______.",
+        "options": [
+          {
+            "key": "A",
+            "text": "Can be traded on a one-to-one basis by counterparties"
+          },
+          {
+            "key": "B",
+            "text": "Will never have a specified maturity"
+          },
+          {
+            "key": "C",
+            "text": "Can be squared off any time before expiry"
+          },
+          {
+            "key": "D",
+            "text": "Cannot be squared off before expiry"
+          }
+        ],
+        "correct": "C",
+        "explanation": "Futures are offsettable before expiry."
+      },
+      {
+        "id": 3,
+        "question": "All the 50 stocks of the NSE Nifty index are equally weighted while calculating the index.",
+        "options": [
+          {
+            "key": "A",
+            "text": "True"
+          },
+          {
+            "key": "B",
+            "text": "False"
+          }
+        ],
+        "correct": "B",
+        "explanation": "Nifty is based on free float market cap, not equal weights."
+      },
+      {
+        "id": 4,
+        "question": "The main reason for using 'Options' instead of 'Futures' is:",
+        "options": [
+          {
+            "key": "A",
+            "text": "Options provide the right but not obligation to buy/sell"
+          },
+          {
+            "key": "B",
+            "text": "Options have no expiry date"
+          },
+          {
+            "key": "C",
+            "text": "Futures are more flexible than options"
+          },
+          {
+            "key": "D",
+            "text": "Options always guarantee profit"
+          }
+        ],
+        "correct": "A",
+        "explanation": "Options give the holder the right to execute, offering asymmetric risk and reward."
+      },
+      {
+        "id": 5,
+        "question": "What is the specified face value amount for one lot of treasury bill futures that can be traded?",
+        "options": [
+          {
+            "key": "A",
+            "text": "Rs 1 lakh"
+          },
+          {
+            "key": "B",
+            "text": "Rs 2 lakh"
+          },
+          {
+            "key": "C",
+            "text": "Rs 4 lakh"
+          },
+          {
+            "key": "D",
+            "text": "Rs 10 lakh"
+          }
+        ],
+        "correct": "B",
+        "explanation": "The standard lot size for Indian treasury bill futures is Rs 2 lakh face value."
+      },
+      {
+        "id": 6,
+        "question": "The Beta of a portfolio is the ______.",
+        "options": [
+          {
+            "key": "A",
+            "text": "Sum of individual betas"
+          },
+          {
+            "key": "B",
+            "text": "Product of individual betas"
+          },
+          {
+            "key": "C",
+            "text": "Weighted average of individual betas based on investment proportion"
+          },
+          {
+            "key": "D",
+            "text": "Fixed at 1 for all portfolios"
+          }
+        ],
+        "correct": "C",
+        "explanation": "Portfolio beta is weighted average."
+      },
+      {
+        "id": 7,
+        "question": "Which of the following statements is true with respect to 'Mark to Market'?",
+        "options": [
+          {
+            "key": "A",
+            "text": "Securities in the portfolio are valued at current market prices"
+          },
+          {
+            "key": "B",
+            "text": "Securities in the portfolio are valued at 52 week high prices"
+          },
+          {
+            "key": "C",
+            "text": "Securities in the portfolio are valued at 52 week low prices"
+          },
+          {
+            "key": "D",
+            "text": "Securities in the portfolio are valued at purchase price"
+          }
+        ],
+        "correct": "A",
+        "explanation": "Mark to Market (MTM) is a process of valuing securities in a portfolio at their current market prices, which is done daily to calculate the NAV of the mutual fund."
+      },
+      {
+        "id": 8,
+        "question": "At which price can a Close Ended fund be sold?",
+        "options": [
+          {
+            "key": "A",
+            "text": "At a price higher than NAV"
+          },
+          {
+            "key": "B",
+            "text": "At a price lower than NAV"
+          },
+          {
+            "key": "C",
+            "text": "At a price same as NAV"
+          },
+          {
+            "key": "D",
+            "text": "At a price which can be higher or lower or same as NAV"
+          }
+        ],
+        "correct": "D",
+        "explanation": "Close-ended funds are traded on stock exchanges. The price at which they are sold may vary from the NAV (Net Asset Value) depending on market demand, liquidity, and investor sentiment. It can be higher, lower, or the same as the NAV."
+      },
+      {
+        "id": 9,
+        "question": "Which of the following derivatives have the largest market size globally?",
+        "options": [
+          {
+            "key": "A",
+            "text": "Currency derivatives"
+          },
+          {
+            "key": "B",
+            "text": "Commodity derivatives"
+          },
+          {
+            "key": "C",
+            "text": "Equity derivatives"
+          },
+          {
+            "key": "D",
+            "text": "Interest rate derivatives"
+          }
+        ],
+        "correct": "D",
+        "explanation": "Globally, interest rate derivatives dominate in notional value, including swaps and futures."
+      },
+      {
+        "id": 10,
+        "question": "On the derivatives futures market, if there are three series of one, two, and three months open, how many calendar spreads can one have?",
+        "options": [
+          {
+            "key": "A",
+            "text": "1"
+          },
+          {
+            "key": "B",
+            "text": "2"
+          },
+          {
+            "key": "C",
+            "text": "3"
+          },
+          {
+            "key": "D",
+            "text": "4"
+          }
+        ],
+        "correct": "C",
+        "explanation": "Spreads are between months 1 & 2, 2 & 3, and 1 & 3."
+      },
+      {
+        "id": 11,
+        "question": "Assuming no other changes, what happens to the price of a put option when the underlying asset becomes more volatile?",
+        "options": [
+          {
+            "key": "A",
+            "text": "The price of a put option will increase"
+          },
+          {
+            "key": "B",
+            "text": "The price of a put option will decrease"
+          },
+          {
+            "key": "C",
+            "text": "No change"
+          },
+          {
+            "key": "D",
+            "text": "Cannot be determined"
+          }
+        ],
+        "correct": "A",
+        "explanation": "Higher volatility increases option premiums."
+      },
+      {
+        "id": 12,
+        "question": "The risk which is faced by the highest number of market participants is ______.",
+        "options": [
+          {
+            "key": "A",
+            "text": "Equity Risk"
+          },
+          {
+            "key": "B",
+            "text": "Commodity Risk"
+          },
+          {
+            "key": "C",
+            "text": "Forex Risk"
+          },
+          {
+            "key": "D",
+            "text": "Interest Rate Risk"
+          }
+        ],
+        "correct": "D",
+        "explanation": "Interest rate fluctuations impact the broadest segment of market participants, including banks, corporates, and investors."
+      },
+      {
+        "id": 13,
+        "question": "Mr. X has invested Rs. 2,00,000 in a 370-day FMP and on maturity he received Rs. 2,15,832. What is the capital gain in this transaction?",
+        "options": [
+          {
+            "key": "A",
+            "text": "Rs. 7916"
+          },
+          {
+            "key": "B",
+            "text": "Rs. 13750"
+          },
+          {
+            "key": "C",
+            "text": "Rs. 15832"
+          },
+          {
+            "key": "D",
+            "text": "Insufficient Data"
+          }
+        ],
+        "correct": "C",
+        "explanation": "Capital gains are calculated as the difference between the amount realized at maturity and the initial investment. Capital Gain = Rs. 2,15,832 - Rs. 2,00,000 = Rs. 15,832."
+      },
+      {
+        "id": 14,
+        "question": "When the term structure curve shifts in anti-clockwise direction, the shift is _______.",
+        "options": [
+          {
+            "key": "A",
+            "text": "Parallel"
+          },
+          {
+            "key": "B",
+            "text": "Steepening"
+          },
+          {
+            "key": "C",
+            "text": "Flattening"
+          },
+          {
+            "key": "D",
+            "text": "Vertical"
+          }
+        ],
+        "correct": "B",
+        "explanation": "A steepening indicates long-term rates increase more than short-term rates, causing the curve to tilt upward."
+      },
+      {
+        "id": 15,
+        "question": "Which one of these complaints against a trading member can an exchange take up for redressal?",
+        "options": [
+          {
+            "key": "A",
+            "text": "Claims for expenses incurred for taking up the matter with the ISC"
+          },
+          {
+            "key": "B",
+            "text": "Losses for transactions which are not within the framework of the exchange"
+          },
+          {
+            "key": "C",
+            "text": "Claims for opportunity loss for the disputed trade"
+          },
+          {
+            "key": "D",
+            "text": "Claims regarding unauthorized transaction in the client's account"
+          }
+        ],
+        "correct": "D",
+        "explanation": "Unauthorized trades are actionable complaints."
+      },
+      {
+        "id": 16,
+        "question": "Which of the following is INCORRECT with respect to advertisements of Mutual Funds by AMCs?",
+        "options": [
+          {
+            "key": "A",
+            "text": "The advertisements can use celebrities for endorsements."
+          },
+          {
+            "key": "B",
+            "text": "The advertisements can show past performance of the scheme."
+          },
+          {
+            "key": "C",
+            "text": "The advertisements can show the return numbers."
+          },
+          {
+            "key": "D",
+            "text": "All of the above are incorrect."
+          }
+        ],
+        "correct": "A",
+        "explanation": "As per SEBI\u2019s Advertisement Code for Mutual Funds, mutual fund advertisements cannot feature celebrities. (AMFI can use celebrities for promotion, but individual mutual funds cannot.)"
+      },
+      {
+        "id": 17,
+        "question": "When does the monthly series of Nifty index futures on NSE mature?",
+        "options": [
+          {
+            "key": "A",
+            "text": "First Wednesday of the month"
+          },
+          {
+            "key": "B",
+            "text": "First Thursday of the month"
+          },
+          {
+            "key": "C",
+            "text": "Last Wednesday of the month"
+          },
+          {
+            "key": "D",
+            "text": "Last Thursday of the month"
+          }
+        ],
+        "correct": "D",
+        "explanation": "Expiry is on the last Thursday (or preceding trading day if holiday)."
+      },
+      {
+        "id": 18,
+        "question": "Which one of these is an advantage of investing in Mutual Funds?",
+        "options": [
+          {
+            "key": "A",
+            "text": "Economies of scale"
+          },
+          {
+            "key": "B",
+            "text": "Portfolio customization"
+          },
+          {
+            "key": "C",
+            "text": "Choice overload"
+          },
+          {
+            "key": "D",
+            "text": "All of the above"
+          }
+        ],
+        "correct": "A",
+        "explanation": "Economies of scale result from the large investment corpus of a mutual funD) These economies help reduce the cost of investment research, transactions, and other services. However, mutual funds typically lack portfolio customization as individual investors cannot influence the specific securities chosen by the fund manager, and choice overload can occur due to the many available schemes."
+      },
+      {
+        "id": 19,
+        "question": "How can you close a short position in a futures market?",
+        "options": [
+          {
+            "key": "A",
+            "text": "By buying a Call Option"
+          },
+          {
+            "key": "B",
+            "text": "By entering into a suitable forward contract"
+          },
+          {
+            "key": "C",
+            "text": "By executing a purchase of the same futures contracts"
+          },
+          {
+            "key": "D",
+            "text": "By executing a sale of the same futures contracts"
+          }
+        ],
+        "correct": "C",
+        "explanation": "Short futures are closed by buying back the same contracts."
+      },
+      {
+        "id": 20,
+        "question": "Most consumer loans and housing loans are structured as ________.",
+        "options": [
+          {
+            "key": "A",
+            "text": "Zero-coupon instrument"
+          },
+          {
+            "key": "B",
+            "text": "Coupon instrument"
+          },
+          {
+            "key": "C",
+            "text": "Consolidated Annuity (Consol)"
+          },
+          {
+            "key": "D",
+            "text": "Annuity"
+          }
+        ],
+        "correct": "D",
+        "explanation": "Annuity payments (EMIs) consist of periodic coupon + part principal, with equal spaced cash flows."
+      },
+      {
+        "id": 21,
+        "question": "Long Duration debt scheme invests in debt instruments with Macaulay duration _____.",
+        "options": [
+          {
+            "key": "A",
+            "text": "between 1 year and 3 years"
+          },
+          {
+            "key": "B",
+            "text": "below 1 year"
+          },
+          {
+            "key": "C",
+            "text": "greater than 7 years"
+          },
+          {
+            "key": "D",
+            "text": "6 months and 12 months"
+          }
+        ],
+        "correct": "C",
+        "explanation": "A Long Duration Debt Scheme is defined as one that invests in debt instruments with a Macaulay duration of more than 7 years. The Macaulay duration measures the weighted average time to receive cash flows from a bond."
+      },
+      {
+        "id": 22,
+        "question": "The actual performance of an index fund can be better or worse than its benchmark due to _________ .",
+        "options": [
+          {
+            "key": "A",
+            "text": "Arbitrage error"
+          },
+          {
+            "key": "B",
+            "text": "Tracking error"
+          },
+          {
+            "key": "C",
+            "text": "Systematic risk"
+          },
+          {
+            "key": "D",
+            "text": "Investment objective"
+          }
+        ],
+        "correct": "B",
+        "explanation": "Tracking error refers to the difference between the performance of an index fund and its benchmark index. It occurs due to factors like transaction costs, fund management fees, or differences in how the fund and the index are constructeD) It is the key reason why an index fund\u2019s performance can be slightly better or worse than its benchmark."
+      },
+      {
+        "id": 23,
+        "question": "If you buy a PUT option, you expect the market/scrip to move ________.",
+        "options": [
+          {
+            "key": "A",
+            "text": "Up"
+          },
+          {
+            "key": "B",
+            "text": "Down"
+          },
+          {
+            "key": "C",
+            "text": "Range bound"
+          },
+          {
+            "key": "D",
+            "text": "Not applicable"
+          }
+        ],
+        "correct": "B",
+        "explanation": "Put buyers profit when the underlying asset price declines."
+      },
+      {
+        "id": 24,
+        "question": "Arrange these funds according to their risk sequence - highest to lowest.",
+        "options": [
+          {
+            "key": "A",
+            "text": "Capital protection oriented, Flexible allocation, Monthly income plan"
+          },
+          {
+            "key": "B",
+            "text": "Flexible allocation, Monthly income plan, Capital protection oriented"
+          },
+          {
+            "key": "C",
+            "text": "Monthly income plan, Capital protection oriented, Fixed allocation"
+          },
+          {
+            "key": "D",
+            "text": "Monthly income plan, Fixed allocation, Capital protection oriented"
+          }
+        ],
+        "correct": "B",
+        "explanation": "The risk sequence from highest to lowest is: Flexible Allocation (higher risk as the asset allocation changes based on market conditions), Monthly Income Plan (moderate risk, but relatively more stable), Capital Protection Oriented (lowest risk, primarily invested in safer assets)."
+      },
+      {
+        "id": 25,
+        "question": "The Intrinsic Value is zero for out-of-the-money options but always positive for in-the-money options.",
+        "options": [
+          {
+            "key": "A",
+            "text": "True"
+          },
+          {
+            "key": "B",
+            "text": "False"
+          }
+        ],
+        "correct": "A",
+        "explanation": "Out-of-the-money options have zero intrinsic value, while in-the-money options have positive intrinsic value."
+      },
+      {
+        "id": 26,
+        "question": "Dividends which are paid by mutual funds can be paid out of ________.",
+        "options": [
+          {
+            "key": "A",
+            "text": "Profits of the Asset Management Company"
+          },
+          {
+            "key": "B",
+            "text": "Mark to Market profits"
+          },
+          {
+            "key": "C",
+            "text": "All realised and unrealised gains"
+          },
+          {
+            "key": "D",
+            "text": "Distributable surplus only"
+          }
+        ],
+        "correct": "D",
+        "explanation": "According to SEBI guidelines, dividends can only be paid out of the distributable surplus, which includes realized profits from the scheme. Unrealized gains, such as valuation gains, cannot be used to pay dividends."
+      },
+      {
+        "id": 27,
+        "question": "For long-term interest rate speculation or hedging with a long-term outlook, which instrument should be used?",
+        "options": [
+          {
+            "key": "A",
+            "text": "Treasury Bills futures"
+          },
+          {
+            "key": "B",
+            "text": "10-year Government Bond futures"
+          },
+          {
+            "key": "C",
+            "text": "Both of these"
+          },
+          {
+            "key": "D",
+            "text": "None of these"
+          }
+        ],
+        "correct": "B",
+        "explanation": "Long-term government bond futures are suitable for long-term interest rate strategies."
+      },
+      {
+        "id": 28,
+        "question": "Identify the FALSE statement: A) When the mutual fund distributor understands the needs of his investor, one can ignore the investment objective of the mutual fund schemes. B) The best strategy in selecting a mutual fund scheme is based on its past performance",
+        "options": [
+          {
+            "key": "A",
+            "text": "Only A is false"
+          },
+          {
+            "key": "B",
+            "text": "Only B is false"
+          },
+          {
+            "key": "C",
+            "text": "Both A and B are false"
+          }
+        ],
+        "correct": "C",
+        "explanation": "Both statements are false: Ignoring the investment objective: It is essential to consider the investment objective of the mutual fund schemes when making recommendations. The mutual fund's objective should align with the investor\u2019s financial goals and risk tolerance. Past performance: Relying solely on past performance is not a reliable strategy for selecting mutual funds, as future performance may differ significantly. A more comprehensive approach includes understanding the scheme\u2019s strategy, risk factors, and suitability for the investor's needs."
+      },
+      {
+        "id": 29,
+        "question": "Can the exercise price be more than, equal to, or less than the cash spot price?",
+        "options": [
+          {
+            "key": "A",
+            "text": "Yes"
+          },
+          {
+            "key": "B",
+            "text": "No"
+          }
+        ],
+        "correct": "A",
+        "explanation": "Strike prices may be above, below, or equal to the current market price."
+      },
+      {
+        "id": 30,
+        "question": "____ can write an option in the Indian stock market.",
+        "options": [
+          {
+            "key": "A",
+            "text": "Market Makers"
+          },
+          {
+            "key": "B",
+            "text": "Foreign Portfolio Investors"
+          },
+          {
+            "key": "C",
+            "text": "Individuals"
+          },
+          {
+            "key": "D",
+            "text": "All of the above"
+          }
+        ],
+        "correct": "D",
+        "explanation": "All eligible market participants can write options, subject to regulatory requirements."
+      },
+      {
+        "id": 31,
+        "question": "One way to calculate the Real Rate is by ________.",
+        "options": [
+          {
+            "key": "A",
+            "text": "Nominal rate plus effective rate"
+          },
+          {
+            "key": "B",
+            "text": "Nominal interest rate less inflation"
+          },
+          {
+            "key": "C",
+            "text": "Nominal rate plus inflation"
+          },
+          {
+            "key": "D",
+            "text": "Inflation less nominal rate"
+          }
+        ],
+        "correct": "B",
+        "explanation": "Real interest rate \u2248 Nominal interest rate \u2212 Inflation rate."
+      },
+      {
+        "id": 32,
+        "question": "The sponsor of a mutual fund must contribute a minimum of _____ of the net worth of the AMC.",
+        "options": [
+          {
+            "key": "A",
+            "text": "25%"
+          },
+          {
+            "key": "B",
+            "text": "40%"
+          },
+          {
+            "key": "C",
+            "text": "50%"
+          },
+          {
+            "key": "D",
+            "text": "66%"
+          }
+        ],
+        "correct": "B",
+        "explanation": "The sponsor, who establishes the mutual fund, must contribute at least 40% of the AMC\u2019s net worth."
+      },
+      {
+        "id": 33,
+        "question": "The primary purpose of a futures margin is to:",
+        "options": [
+          {
+            "key": "A",
+            "text": "Cover credit risk of the counterparty"
+          },
+          {
+            "key": "B",
+            "text": "Guarantee performance of the contract"
+          },
+          {
+            "key": "C",
+            "text": "Generate profit for the exchange"
+          },
+          {
+            "key": "D",
+            "text": "Reduce transaction costs"
+          }
+        ],
+        "correct": "B",
+        "explanation": "Margins ensure contractual obligations are fulfilled. ________________"
+      },
+      {
+        "id": 34,
+        "question": "Implication of 'Inverted' shape of the term structure?",
+        "options": [
+          {
+            "key": "A",
+            "text": "Rate high for medium term, falls off sides"
+          },
+          {
+            "key": "B",
+            "text": "Rate same for all terms"
+          },
+          {
+            "key": "C",
+            "text": "Longer term, higher rate"
+          },
+          {
+            "key": "D",
+            "text": "Rate rises then falls with term"
+          }
+        ],
+        "correct": "D",
+        "explanation": "An inverted yield curve reflects declining long-term rates after rising initially."
+      },
+      {
+        "id": 35,
+        "question": "What is the most significant risk to which banks are exposed?",
+        "options": [
+          {
+            "key": "A",
+            "text": "Currency risk"
+          },
+          {
+            "key": "B",
+            "text": "Equity risk"
+          },
+          {
+            "key": "C",
+            "text": "Interest rate risk"
+          },
+          {
+            "key": "D",
+            "text": "Commodity risk"
+          }
+        ],
+        "correct": "C",
+        "explanation": "Banks face significant interest rate risk due to mismatches between assets and liabilities. ________________"
+      },
+      {
+        "id": 36,
+        "question": "Identify which of these is NOT a function of the Association of Mutual Funds in India (AMFI)?",
+        "options": [
+          {
+            "key": "A",
+            "text": "To represent to the Government, Reserve Bank of India, and other bodies on all matters relating to the mutual fund industry"
+          },
+          {
+            "key": "B",
+            "text": "To disseminate information on the mutual fund industry and undertake studies and research"
+          },
+          {
+            "key": "C",
+            "text": "To conduct a certification examination for Mutual Fund distributors"
+          },
+          {
+            "key": "D",
+            "text": "To undertake a nationwide investor awareness program to promote proper understanding of mutual funds"
+          }
+        ],
+        "correct": "C",
+        "explanation": "AMFI is not responsible for conducting certification exams for mutual fund distributors; this is done by the National Institute of Securities Markets (NISM)."
+      },
+      {
+        "id": 37,
+        "question": "An existing investor in mutual funds invests Rs 25,000 in ABC scheme\u2019s direct plan. Calculate the amount that will be the net investment made in the scheme after accounting for transaction charges.",
+        "options": [
+          {
+            "key": "A",
+            "text": "Rs. 24,500"
+          },
+          {
+            "key": "B",
+            "text": "Rs. 25,000"
+          },
+          {
+            "key": "C",
+            "text": "Rs. 24,750"
+          },
+          {
+            "key": "D",
+            "text": "Rs. 24,800"
+          }
+        ],
+        "correct": "B",
+        "explanation": "For direct plans, no transaction charges are levied, so the entire Rs. 25,000 will be invested in the scheme."
+      },
+      {
+        "id": 38,
+        "question": "The credit rating of a bond migrates from AAA to AA+. Determine what will be the impact of this migration on the market price of the bond?",
+        "options": [
+          {
+            "key": "A",
+            "text": "Bond price will rise"
+          },
+          {
+            "key": "B",
+            "text": "Bond price will fall"
+          },
+          {
+            "key": "C",
+            "text": "No change in the bond price"
+          },
+          {
+            "key": "D",
+            "text": "The price can rise or fall depending on market conditions"
+          }
+        ],
+        "correct": "B",
+        "explanation": "A downgrade in a bond\u2019s credit rating (from AAA to AA+) indicates increased risk, leading to a decline in its market price as investors demand a higher yield for the added risk."
+      },
+      {
+        "id": 39,
+        "question": "When compared to open-ended funds, investors in close-ended funds face a higher level of _______.",
+        "options": [
+          {
+            "key": "A",
+            "text": "Credit risk"
+          },
+          {
+            "key": "B",
+            "text": "Liquidity risk"
+          },
+          {
+            "key": "C",
+            "text": "Market risk"
+          },
+          {
+            "key": "D",
+            "text": "Investment risk"
+          }
+        ],
+        "correct": "B",
+        "explanation": "Close-ended funds are listed on stock exchanges, but they may have lower liquidity, making it harder for investors to buy or sell units at their desired price. In contrast, open-ended funds offer better liquidity."
+      },
+      {
+        "id": 40,
+        "question": "The initial margin/contract level minimum margin will be ________.",
+        "options": [
+          {
+            "key": "A",
+            "text": "Same for Treasury Bills and Government Bonds"
+          },
+          {
+            "key": "B",
+            "text": "Different for Treasury Bills and Government Bonds"
+          },
+          {
+            "key": "C",
+            "text": "Different for Treasury Bills and Government Bonds but same for all Government Bonds"
+          },
+          {
+            "key": "D",
+            "text": "No margins are payable on Treasury Bills and Government Bonds"
+          }
+        ],
+        "correct": "C",
+        "explanation": "Minimum margin requirements differ between Treasury Bills and Government Bonds, while Government Bond contracts follow a common margin structure."
+      },
+      {
+        "id": 41,
+        "question": "What would be the impact on an International fund investing in US stocks when the US Dollar appreciates against Indian Rupee?",
+        "options": [
+          {
+            "key": "A",
+            "text": "The NAV of the scheme in Indian Rupees will appreciate"
+          },
+          {
+            "key": "B",
+            "text": "The NAV of the scheme in Indian Rupees will depreciate"
+          },
+          {
+            "key": "C",
+            "text": "No impact on the fund as its investing in stocks and not currency"
+          }
+        ],
+        "correct": "A",
+        "explanation": "If the US Dollar appreciates against the Indian Rupee, the value of the international investment in US stocks will increase in terms of Indian Rupees, thus causing the NAV of the scheme to appreciate. This occurs because the Indian investor is holding an asset denominated in US Dollars, so the value of the investment in rupee terms rises when the dollar strengthens."
+      },
+      {
+        "id": 42,
+        "question": "The risk which is faced by the highest number of market participants is ______.",
+        "options": [
+          {
+            "key": "A",
+            "text": "Equity Risk"
+          },
+          {
+            "key": "B",
+            "text": "Commodity Risk"
+          },
+          {
+            "key": "C",
+            "text": "Forex Risk"
+          },
+          {
+            "key": "D",
+            "text": "Interest Rate Risk"
+          }
+        ],
+        "correct": "D",
+        "explanation": "Interest rate movements affect banks, businesses, investors, and governments. ________________"
+      },
+      {
+        "id": 43,
+        "question": "The contract amount (market lot) for Government Bond futures is ______.",
+        "options": [
+          {
+            "key": "A",
+            "text": "Rs. 25,000"
+          },
+          {
+            "key": "B",
+            "text": "Rs. 1,00,000"
+          },
+          {
+            "key": "C",
+            "text": "Rs. 2,00,000"
+          },
+          {
+            "key": "D",
+            "text": "Rs. 5,00,000"
+          }
+        ],
+        "correct": "C",
+        "explanation": "The standard contract size for Government Bond futures in India is Rs. 2 lakh face value. ________________"
+      },
+      {
+        "id": 44,
+        "question": "Mr. Ashu holds his mutual fund units in demat form. If he wants to change his nominee or his bank account, he has to contact the ______ and complete the required procedure.",
+        "options": [
+          {
+            "key": "A",
+            "text": "Stock Exchange"
+          },
+          {
+            "key": "B",
+            "text": "Depository Participant"
+          },
+          {
+            "key": "C",
+            "text": "R&T agent of the mutual fund"
+          },
+          {
+            "key": "D",
+            "text": "AMC / Mutual fund"
+          }
+        ],
+        "correct": "B",
+        "explanation": "For mutual fund units held in demat form, any changes to personal details, including nominee or bank account information, must be made by contacting the Depository Participant (DP), who manages the demat accounts."
+      },
+      {
+        "id": 45,
+        "question": "The impact of time decay on an option's price is measured by ______.",
+        "options": [
+          {
+            "key": "A",
+            "text": "Theta"
+          },
+          {
+            "key": "B",
+            "text": "Gamma"
+          },
+          {
+            "key": "C",
+            "text": "Rho"
+          },
+          {
+            "key": "D",
+            "text": "Delta"
+          }
+        ],
+        "correct": "A",
+        "explanation": "Theta measures the loss in option value as time passes. ________________"
+      },
+      {
+        "id": 46,
+        "question": "What does a portfolio with a beta less than 1 mean?",
+        "options": [
+          {
+            "key": "A",
+            "text": "Highly risky as compared to market"
+          },
+          {
+            "key": "B",
+            "text": "More risky than market"
+          },
+          {
+            "key": "C",
+            "text": "Less risky than market"
+          },
+          {
+            "key": "D",
+            "text": "Same risk as that of market"
+          }
+        ],
+        "correct": "C",
+        "explanation": "Beta measures a portfolio's volatility compared to the market. A beta less than 1 indicates that the portfolio is less volatile and therefore less risky than the broader market. A beta greater than 1 would indicate higher volatility and risk compared to the market."
+      },
+      {
+        "id": 47,
+        "question": "If you anticipate the 3-month interest rate to increase in one month, which action should you take today?",
+        "options": [
+          {
+            "key": "A",
+            "text": "Buy the contract expiring in three months on an asset sensitive to 1-month interest rates"
+          },
+          {
+            "key": "B",
+            "text": "Buy the contract expiring in one month on an asset sensitive to 3-month interest rates"
+          },
+          {
+            "key": "C",
+            "text": "Sell the contract expiring in one month on an asset sensitive to 3-month interest rates"
+          },
+          {
+            "key": "D",
+            "text": "Sell the contract expiring in three months on an asset sensitive to 1-month interest rates"
+          }
+        ],
+        "correct": "C",
+        "explanation": "Selling the near-term futures contract benefits from an expected rise in interest rates. ________________"
+      },
+      {
+        "id": 48,
+        "question": "Mr. A is an existing investor in a mutual fund scheme and he is now investing Rs. 5000 in the direct plan of the scheme. What will be his net investment in the scheme after considering the transaction charges?",
+        "options": [
+          {
+            "key": "A",
+            "text": "Rs. 4950"
+          },
+          {
+            "key": "B",
+            "text": "Rs. 4900"
+          },
+          {
+            "key": "C",
+            "text": "Rs. 4875"
+          },
+          {
+            "key": "D",
+            "text": "Rs. 5000"
+          }
+        ],
+        "correct": "D",
+        "explanation": "In a Direct Plan, there are no transaction charges. Therefore, Mr. A\u2019s net investment will be the full amount of Rs. 5000."
+      },
+      {
+        "id": 49,
+        "question": "How can risks be controlled in the derivatives segment by the stock exchange?",
+        "options": [
+          {
+            "key": "A",
+            "text": "Margin system"
+          },
+          {
+            "key": "B",
+            "text": "Control systems and audits"
+          },
+          {
+            "key": "C",
+            "text": "Periodic evaluation"
+          },
+          {
+            "key": "D",
+            "text": "All of the above"
+          }
+        ],
+        "correct": "D",
+        "explanation": "Exchanges use multiple risk management measures, including margins, audits, and regular monitoring. ________________"
+      },
+      {
+        "id": 50,
+        "question": "A board resolution for investing in a mutual fund scheme is compulsorily required by _______.",
+        "options": [
+          {
+            "key": "A",
+            "text": "Non-Resident Indians (NRIs)"
+          },
+          {
+            "key": "B",
+            "text": "Hindu Undivided Family (HUF)"
+          },
+          {
+            "key": "C",
+            "text": "Institutional Investors"
+          },
+          {
+            "key": "D",
+            "text": "Minors"
+          }
+        ],
+        "correct": "C",
+        "explanation": "Institutional investors (e.g., corporate investors, banks, etc.) require a board resolution to authorize investments in mutual funds or other securities, as opposed to individuals or minors who don't need such formal documentation."
       }
     ]
   }

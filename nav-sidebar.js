@@ -322,11 +322,20 @@
   const NISM_QUICK_ACTIONS = [
     {
       type: "action",
-      title: "Mock Test Center (5 Full Exams • 150Q Each)",
-      sub: "750 Questions, 3-Hour Simulation, Negative Marking (-0.10) & Instant Review",
+      title: "Mock Test Center (10 Exams • 1,000 Questions)",
+      sub: "5 Full-Length Exams (150Q • 3h) & 5 Rapid Mini Mocks (50Q • 1h)",
       badge: "Mock Exams",
       icon: "award",
-      keywords: "mock test exam 150 questions test center practice simulation quiz",
+      keywords: "mock test exam 150 questions 50 questions test center practice simulation quiz mini mock",
+      action: () => { window.location.href = "mock-tests.html"; }
+    },
+    {
+      type: "action",
+      title: "Mini Mock Series (50-Question Speed Drills)",
+      sub: "5 Rapid 50-Question Timed Drills (60 Mins Each • 50 Marks)",
+      badge: "Mini Mocks",
+      icon: "zap",
+      keywords: "mini mock 50 questions speed drill practice test rapid fire",
       action: () => { window.location.href = "mock-tests.html"; }
     },
     {
