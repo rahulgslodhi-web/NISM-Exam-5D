@@ -322,6 +322,24 @@
   const NISM_QUICK_ACTIONS = [
     {
       type: "action",
+      title: "Master NISM Portal (All Certifications)",
+      sub: "Unified Directory for Series V-D, V-A, VIII, XV, X-A/B & XXI-A",
+      badge: "Master Portal",
+      icon: "compass",
+      keywords: "master portal home certifications nism directory exams all series va vd viii xv xa xb xxia",
+      action: () => { window.location.href = "index.html"; }
+    },
+    {
+      type: "action",
+      title: "Series V-D Study Hub (Mutual Fund & SIF)",
+      sub: "All 22 Chapters, Weightage Breakdown & Flagship Curriculum",
+      badge: "Series V-D",
+      icon: "book-open",
+      keywords: "series vd 5d mutual fund sif specialized investment fund dashboard chapters",
+      action: () => { window.location.href = "nism-5d.html"; }
+    },
+    {
+      type: "action",
       title: "Mock Test Center (10 Exams • 1,000 Questions)",
       sub: "5 Full-Length Exams (150Q • 3h) & 5 Rapid Mini Mocks (50Q • 1h)",
       badge: "Mock Exams",
@@ -1036,12 +1054,15 @@
         </div>
 
         <!-- Quick Footer Link -->
-        <div class="p-2.5 bg-slate-50 border-t border-slate-100 flex items-center justify-between text-[11px] text-slate-500">
-          <a href="index.html" class="flex items-center gap-1.5 hover:text-indigo-600 font-semibold transition-colors">
-            <i data-lucide="home" class="w-3.5 h-3.5"></i> Course Home
+        <div class="p-2.5 bg-slate-50 dark:bg-slate-900 border-t border-slate-100 dark:border-slate-800 flex items-center justify-between text-[11px] text-slate-500">
+          <a href="index.html" class="flex items-center gap-1 hover:text-indigo-600 font-semibold transition-colors" title="Master NISM Portal">
+            <i data-lucide="compass" class="w-3.5 h-3.5"></i> All Exams
           </a>
-          <a href="mock-tests.html" class="flex items-center gap-1.5 text-indigo-600 hover:text-indigo-800 font-bold transition-colors">
-            <i data-lucide="award" class="w-3.5 h-3.5"></i> Mock Tests (150Q)
+          <a href="nism-5d.html" class="flex items-center gap-1 hover:text-indigo-600 font-semibold transition-colors" title="Series V-D Study Hub">
+            <i data-lucide="book-open" class="w-3.5 h-3.5"></i> V-D Hub
+          </a>
+          <a href="mock-tests.html" class="flex items-center gap-1 text-indigo-600 hover:text-indigo-800 font-bold transition-colors">
+            <i data-lucide="award" class="w-3.5 h-3.5"></i> 10 Mocks
           </a>
         </div>
       </div>
@@ -1060,6 +1081,18 @@
     dock.id = "nism-macos-dock";
     dock.className = "macos-dock";
     dock.innerHTML = `
+      <!-- Master Portal Home -->
+      <a href="index.html" class="macos-dock-item" aria-label="Master NISM Portal">
+        <i data-lucide="compass" class="w-4 h-4 text-indigo-500"></i>
+        <span class="macos-dock-tooltip">All Certifications</span>
+      </a>
+
+      <!-- Series V-D Hub -->
+      <a href="nism-5d.html" class="macos-dock-item" aria-label="Series V-D Hub">
+        <i data-lucide="book-open" class="w-4 h-4 text-blue-600"></i>
+        <span class="macos-dock-tooltip">Series V-D Hub</span>
+      </a>
+
       <!-- Spotlight Search -->
       <button onclick="window.openSpotlightModal()" class="macos-dock-item primary" aria-label="Spotlight Search">
         <i data-lucide="search" class="w-4 h-4"></i>
@@ -1084,10 +1117,10 @@
         <span class="macos-dock-tooltip">Exam Cram Sheet</span>
       </button>
 
-      <!-- 150-Question Mock Test Center -->
+      <!-- 10-Mock Exam Center -->
       <a href="mock-tests.html" class="macos-dock-item" aria-label="Mock Test Center">
         <i data-lucide="award" class="w-4 h-4 text-amber-500"></i>
-        <span class="macos-dock-tooltip">Mock Tests (150Q)</span>
+        <span class="macos-dock-tooltip">10 Mocks (1,000Q)</span>
       </a>
 
       <!-- Chapters Drawer -->
