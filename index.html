@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>NISM Certifications Master Portal | Capital Markets Exam Prep & Simulators</title>
+  <title>NISM Certifications Portal | Exam Hub & Simulators</title>
   
   <!-- Tailwind CSS CDN -->
   <script src="https://cdn.tailwindcss.com"></script>
@@ -11,10 +11,10 @@
   <!-- Google Fonts & Lucide Icons -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Space+Grotesk:wght@600;700&display=swap" rel="stylesheet">
   <script src="https://unpkg.com/lucide@latest"></script>
 
-  <!-- Modern Documentation Design System & Zoom Engine -->
+  <!-- Design System & Spotlight / Formula Engines -->
   <link rel="stylesheet" href="modern-docs.css">
   <script defer src="nav-sidebar.js"></script>
 
@@ -26,17 +26,6 @@
           fontFamily: {
             sans: ['"Plus Jakarta Sans"', 'sans-serif'],
             display: ['"Space Grotesk"', 'sans-serif']
-          },
-          colors: {
-            brand: {
-              50: '#eef2ff',
-              100: '#e0e7ff',
-              500: '#6366f1',
-              600: '#4f46e5',
-              700: '#4338ca',
-              800: '#3730a3',
-              900: '#312e81',
-            }
           }
         }
       }
@@ -47,695 +36,351 @@
     body {
       font-family: 'Plus Jakarta Sans', sans-serif;
     }
-    .glass-card {
-      background: rgba(255, 255, 255, 0.95);
-      backdrop-filter: blur(14px);
-      border: 1px solid rgba(226, 232, 240, 0.9);
-    }
-    html.dark .glass-card {
-      background: rgba(15, 23, 42, 0.85);
-      border: 1px solid rgba(255, 255, 255, 0.08);
-    }
-    .hero-mesh {
-      background-image: 
-        radial-gradient(at 10% 20%, rgba(99, 102, 241, 0.08) 0px, transparent 50%),
-        radial-gradient(at 90% 10%, rgba(16, 185, 129, 0.08) 0px, transparent 50%),
-        radial-gradient(at 50% 80%, rgba(168, 85, 247, 0.06) 0px, transparent 50%);
-    }
-    html.dark .hero-mesh {
-      background-image: 
-        radial-gradient(at 10% 20%, rgba(99, 102, 241, 0.15) 0px, transparent 50%),
-        radial-gradient(at 90% 10%, rgba(16, 185, 129, 0.15) 0px, transparent 50%),
-        radial-gradient(at 50% 80%, rgba(168, 85, 247, 0.12) 0px, transparent 50%);
-    }
   </style>
 </head>
-<body class="bg-slate-50 dark:bg-slate-950 text-slate-900 dark:text-slate-100 min-h-screen flex flex-col selection:bg-indigo-500 selection:text-white antialiased transition-colors duration-200">
+<body class="bg-slate-50 dark:bg-slate-950 text-slate-900 dark:text-slate-100 min-h-screen flex flex-col antialiased transition-colors duration-200">
 
-  <!-- Top Announcement Bar -->
-  <div class="bg-gradient-to-r from-indigo-600 via-indigo-700 to-violet-700 text-white text-xs font-medium py-2 px-4 shadow-sm">
-    <div class="max-w-7xl mx-auto flex items-center justify-between flex-wrap gap-2">
-      <div class="flex items-center gap-2">
-        <span class="px-2 py-0.5 rounded-full bg-white/20 text-white font-bold text-[10px] uppercase tracking-wider">New</span>
-        <span>NISM Series V-D (Mutual Fund & SIF) is now 100% Live with 22 Chapters & 10 Mock Exams!</span>
-      </div>
-      <div class="flex items-center gap-4 text-[11px]">
-        <a href="nism-5d.html" class="underline underline-offset-2 hover:text-indigo-100 font-semibold flex items-center gap-1">
-          <span>Go to Series V-D Hub</span>
-          <i data-lucide="arrow-right" class="w-3 h-3"></i>
-        </a>
-      </div>
-    </div>
-  </div>
-
-  <!-- Master Portal Navigation Bar -->
-  <header class="sticky top-0 z-50 bg-white/95 dark:bg-slate-900/95 backdrop-blur-md border-b border-slate-200 dark:border-slate-800 shadow-xs transition-colors duration-200">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
+  <!-- Minimal Header -->
+  <header class="sticky top-0 z-40 bg-white/90 dark:bg-slate-900/90 backdrop-blur-md border-b border-slate-200/80 dark:border-slate-800 shadow-2xs">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 h-16 flex items-center justify-between">
       
       <!-- Brand Logo -->
-      <a href="index.html" class="flex items-center gap-3 group focus:outline-none focus:ring-2 focus:ring-indigo-500 rounded-xl p-1">
-        <div class="w-10 h-10 rounded-xl bg-gradient-to-tr from-indigo-600 via-indigo-700 to-violet-600 flex items-center justify-center text-white font-bold shadow-md shadow-indigo-200 dark:shadow-indigo-950 group-hover:scale-105 transition-transform">
+      <a href="index.html" class="flex items-center gap-2.5 group">
+        <div class="w-9 h-9 rounded-xl bg-indigo-600 flex items-center justify-center text-white font-bold shadow-xs group-hover:scale-105 transition-transform">
           <i data-lucide="shield-check" class="w-5 h-5"></i>
         </div>
         <div>
-          <span class="font-display font-bold text-lg tracking-tight text-slate-900 dark:text-white block leading-tight">NISM Portal</span>
-          <span class="block text-[11px] text-indigo-600 dark:text-indigo-400 font-bold tracking-wider uppercase">Master Exam Academy</span>
+          <span class="font-display font-bold text-base tracking-tight text-slate-900 dark:text-white block leading-tight">NISM Portal</span>
+          <span class="block text-[10px] text-indigo-600 dark:text-indigo-400 font-bold uppercase tracking-wider">Exam Academy</span>
         </div>
       </a>
 
-      <!-- Desktop Navigation Links -->
-      <nav class="hidden md:flex items-center gap-1.5" aria-label="Portal Navigation">
-        <a href="#catalog" class="px-3.5 py-2 rounded-xl text-sm font-semibold text-slate-700 dark:text-slate-300 hover:text-indigo-600 dark:hover:text-indigo-400 hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors">All Certifications</a>
-        
-        <!-- Flagship Series V-D Link -->
-        <a href="nism-5d.html" class="px-3.5 py-2 rounded-xl text-sm font-bold text-indigo-700 dark:text-indigo-300 bg-indigo-50 dark:bg-indigo-950/70 border border-indigo-200/80 dark:border-indigo-800/80 transition-colors flex items-center gap-1.5 shadow-2xs">
-          <span class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
-          <span>Series V-D (Active)</span>
+      <!-- Quick Nav Links -->
+      <nav class="hidden sm:flex items-center gap-2 text-sm font-medium">
+        <a href="#certifications" class="px-3 py-1.5 rounded-lg text-slate-600 dark:text-slate-300 hover:text-slate-900 dark:hover:text-white hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors">
+          Certifications
         </a>
-
-        <!-- Mock Tests Link -->
-        <a href="mock-tests.html" class="px-3.5 py-2 rounded-xl text-sm font-medium text-slate-700 dark:text-slate-300 hover:text-indigo-600 dark:hover:text-indigo-400 hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors flex items-center gap-1.5">
-          <i data-lucide="award" class="w-4 h-4 text-amber-500"></i>
-          <span>Mock Tests (10 Mocks)</span>
+        <a href="nism-5d.html" class="px-3 py-1.5 rounded-lg font-semibold text-indigo-600 dark:text-indigo-400 bg-indigo-50 dark:bg-indigo-950/60 hover:bg-indigo-100 transition-colors flex items-center gap-1.5">
+          <span class="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-pulse"></span>
+          <span>Series V-D</span>
         </a>
-
-        <!-- Formula Lab Link -->
-        <button onclick="window.openFormulaLab()" class="px-3.5 py-2 rounded-xl text-sm font-medium text-slate-700 dark:text-slate-300 hover:text-emerald-600 dark:hover:text-emerald-400 hover:bg-emerald-50/60 dark:hover:bg-emerald-950/40 transition-colors flex items-center gap-1.5">
-          <i data-lucide="calculator" class="w-4 h-4 text-emerald-600"></i>
+        <a href="mock-tests.html" class="px-3 py-1.5 rounded-lg text-slate-600 dark:text-slate-300 hover:text-slate-900 dark:hover:text-white hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors flex items-center gap-1">
+          <i data-lucide="award" class="w-3.5 h-3.5 text-amber-500"></i>
+          <span>10 Mocks</span>
+        </a>
+        <button onclick="window.openFormulaLab()" class="px-3 py-1.5 rounded-lg text-slate-600 dark:text-slate-300 hover:text-slate-900 dark:hover:text-white hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors flex items-center gap-1">
+          <i data-lucide="calculator" class="w-3.5 h-3.5 text-emerald-600"></i>
           <span>Formula Lab</span>
         </button>
-
-        <a href="#comparison" class="px-3.5 py-2 rounded-xl text-sm font-medium text-slate-700 dark:text-slate-300 hover:text-slate-900 dark:hover:text-white hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors">Compare Exams</a>
       </nav>
 
-      <!-- Header Right: Spotlight, Theme Toggle & Mobile Menu -->
-      <div class="flex items-center gap-2.5">
-        <!-- Spotlight Search Trigger -->
+      <!-- Right Actions: Spotlight & Theme Toggle -->
+      <div class="flex items-center gap-2">
         <button 
           onclick="window.openSpotlightModal()"
-          class="hidden sm:flex items-center gap-2 px-3 py-1.5 rounded-xl border border-slate-200 dark:border-slate-700 bg-slate-50 dark:bg-slate-800/80 text-slate-500 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white hover:border-slate-300 transition-all text-xs font-medium shadow-2xs"
-          title="Search Topics (⌘K)"
+          class="flex items-center gap-2 px-3 py-1.5 rounded-xl border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-800 text-slate-500 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white text-xs font-medium transition-all shadow-2xs"
+          title="Search (⌘K)"
         >
           <i data-lucide="search" class="w-3.5 h-3.5"></i>
-          <span>Search...</span>
-          <kbd class="px-1.5 py-0.5 rounded bg-white dark:bg-slate-700 border border-slate-200 dark:border-slate-600 font-mono text-[10px] text-slate-400">⌘K</kbd>
+          <span class="hidden md:inline">Quick Search</span>
+          <kbd class="px-1.5 py-0.5 rounded bg-slate-100 dark:bg-slate-700 text-[10px] font-mono text-slate-400">⌘K</kbd>
         </button>
 
-        <!-- Theme Toggle Button -->
         <button 
           id="nism-header-theme-btn" 
-          type="button" 
           onclick="window.toggleDarkMode()"
-          class="p-2 rounded-xl border border-slate-200 dark:border-slate-700 hover:border-slate-300 dark:hover:border-slate-600 text-slate-600 dark:text-slate-300 hover:text-slate-900 dark:hover:text-white bg-white dark:bg-slate-800 hover:bg-slate-50 transition-colors shadow-2xs"
-          title="Toggle Dark / Light Mode (⌘D)"
+          class="p-2 rounded-xl border border-slate-200 dark:border-slate-700 hover:border-slate-300 dark:hover:border-slate-600 text-slate-600 dark:text-slate-300 bg-white dark:bg-slate-800 transition-colors shadow-2xs"
+          title="Toggle Theme (⌘D)"
           aria-label="Toggle theme"
         >
           <i data-lucide="moon" class="w-4 h-4"></i>
         </button>
-
-        <!-- Mobile Menu Toggle Button -->
-        <button id="mobile-menu-btn" type="button" class="md:hidden inline-flex items-center justify-center p-2 rounded-xl text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white hover:bg-slate-100 dark:hover:bg-slate-800 focus:outline-none focus:ring-2 focus:ring-indigo-500 transition-colors" aria-expanded="false" aria-label="Toggle navigation menu">
-          <i data-lucide="menu" id="menu-icon" class="w-6 h-6"></i>
-          <i data-lucide="x" id="close-icon" class="w-6 h-6 hidden"></i>
-        </button>
       </div>
-    </div>
-
-    <!-- Mobile Dropdown Menu -->
-    <div id="mobile-menu" class="hidden md:hidden border-t border-slate-200 dark:border-slate-800 bg-white/95 dark:bg-slate-900/95 backdrop-blur-md px-4 pt-3 pb-4 space-y-1.5 shadow-lg">
-      <div class="flex items-center justify-between pb-2 mb-1 border-b border-slate-100 dark:border-slate-800">
-        <span class="text-xs font-bold uppercase tracking-wider text-slate-400">Master Directory</span>
-        <span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-[11px] font-semibold bg-emerald-50 dark:bg-emerald-950/70 text-emerald-700 dark:text-emerald-300 border border-emerald-200 dark:border-emerald-800/60">
-          6 Certifications
-        </span>
-      </div>
-      <a href="nism-5d.html" class="flex items-center justify-between px-3.5 py-2.5 rounded-xl text-sm font-bold text-indigo-700 dark:text-indigo-300 bg-indigo-50 dark:bg-indigo-950/70 border border-indigo-200 dark:border-indigo-800">
-        <span class="flex items-center gap-2.5">
-          <i data-lucide="book-open" class="w-4 h-4 text-indigo-600"></i>
-          <span>Series V-D Hub (Active)</span>
-        </span>
-        <span class="text-xs bg-emerald-500 text-white font-bold px-2 py-0.5 rounded-full">Live</span>
-      </a>
-      <a href="mock-tests.html" class="flex items-center gap-2.5 px-3.5 py-2.5 rounded-xl text-sm font-medium text-slate-700 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800">
-        <i data-lucide="award" class="w-4 h-4 text-amber-500"></i>
-        <span>Mock Tests (10 Mocks • 1,000Q)</span>
-      </a>
-      <a href="#catalog" class="flex items-center gap-2.5 px-3.5 py-2.5 rounded-xl text-sm font-medium text-slate-700 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800">
-        <i data-lucide="layers" class="w-4 h-4 text-blue-500"></i>
-        <span>All Certifications Catalog</span>
-      </a>
-      <a href="#comparison" class="flex items-center gap-2.5 px-3.5 py-2.5 rounded-xl text-sm font-medium text-slate-700 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800">
-        <i data-lucide="table" class="w-4 h-4 text-purple-500"></i>
-        <span>Exam Comparison Table</span>
-      </a>
-      <button onclick="window.openFormulaLab()" class="w-full flex items-center gap-2.5 px-3.5 py-2.5 rounded-xl text-sm font-medium text-slate-700 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800 text-left">
-        <i data-lucide="calculator" class="w-4 h-4 text-emerald-600"></i>
-        <span>Interactive Formula Lab (⌘M)</span>
-      </button>
     </div>
   </header>
 
-  <!-- Hero Section -->
-  <section class="relative overflow-hidden hero-mesh border-b border-slate-200 dark:border-slate-800 py-16 sm:py-24">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
-      
-      <!-- Regulatory Badge -->
-      <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full text-xs font-bold bg-white dark:bg-slate-800 text-indigo-700 dark:text-indigo-300 border border-indigo-200 dark:border-indigo-800/80 shadow-xs mb-6">
-        <span class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
-        <span>SEBI & NISM Regulatory Curriculum Platform • 2026 Edition</span>
-      </div>
+  <!-- Clean, Minimal Hero Section -->
+  <section class="pt-12 pb-8 sm:pt-16 sm:pb-12 text-center px-4 max-w-4xl mx-auto">
+    <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-semibold bg-indigo-50 dark:bg-indigo-950/70 text-indigo-700 dark:text-indigo-300 border border-indigo-200/80 dark:border-indigo-800/80 mb-4">
+      <span class="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-pulse"></span>
+      <span>NISM & SEBI Certifications Platform</span>
+    </div>
 
-      <!-- Main Headline -->
-      <h1 class="font-display text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight text-slate-900 dark:text-white max-w-4xl mx-auto leading-[1.15]">
-        Master India's <span class="bg-gradient-to-r from-indigo-600 via-violet-600 to-indigo-700 bg-clip-text text-transparent">Capital Markets</span> Certifications
-      </h1>
+    <h1 class="font-display text-3xl sm:text-4xl md:text-5xl font-extrabold text-slate-900 dark:text-white tracking-tight">
+      Choose Your <span class="text-indigo-600 dark:text-indigo-400">Certification</span> Exam
+    </h1>
 
-      <!-- Subtitle -->
-      <p class="mt-6 text-base sm:text-lg lg:text-xl text-slate-600 dark:text-slate-400 max-w-3xl mx-auto leading-relaxed">
-        The unified preparation portal for professional securities examinations. Featuring in-depth regulatory syllabus coverage, interactive mathematical formula engines, and realistic timed exam simulations.
-      </p>
+    <p class="mt-3 text-sm sm:text-base text-slate-600 dark:text-slate-400 max-w-xl mx-auto">
+      Access comprehensive chapter notes, regulatory frameworks, interactive financial calculators, and full-length timed mock tests.
+    </p>
 
-      <!-- Key Stat Pills -->
-      <div class="mt-8 flex flex-wrap items-center justify-center gap-3 sm:gap-4 max-w-4xl mx-auto">
-        <div class="flex items-center gap-2 px-3.5 py-1.5 rounded-xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 shadow-2xs text-xs font-semibold text-slate-700 dark:text-slate-300">
-          <i data-lucide="layers" class="w-4 h-4 text-indigo-600"></i>
-          <span>6 Certifications Cataloged</span>
-        </div>
-        <div class="flex items-center gap-2 px-3.5 py-1.5 rounded-xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 shadow-2xs text-xs font-semibold text-slate-700 dark:text-slate-300">
-          <i data-lucide="book-open" class="w-4 h-4 text-blue-600"></i>
-          <span>22 In-Depth Chapters (Series V-D)</span>
-        </div>
-        <div class="flex items-center gap-2 px-3.5 py-1.5 rounded-xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 shadow-2xs text-xs font-semibold text-slate-700 dark:text-slate-300">
-          <i data-lucide="award" class="w-4 h-4 text-amber-500"></i>
-          <span>1,000 Practice Questions</span>
-        </div>
-        <div class="flex items-center gap-2 px-3.5 py-1.5 rounded-xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 shadow-2xs text-xs font-semibold text-slate-700 dark:text-slate-300">
-          <i data-lucide="check-circle" class="w-4 h-4 text-emerald-600"></i>
-          <span>100% Free & Open Access</span>
-        </div>
-      </div>
-
-      <!-- Action Buttons -->
-      <div class="mt-10 flex flex-wrap items-center justify-center gap-4">
-        <a 
-          href="nism-5d.html" 
-          class="inline-flex items-center justify-center gap-2.5 px-6 py-3.5 rounded-xl font-bold text-sm text-white bg-gradient-to-r from-indigo-600 to-violet-600 hover:from-indigo-700 hover:to-violet-700 shadow-md shadow-indigo-300 dark:shadow-indigo-950 transition-all hover:scale-[1.02] active:scale-100"
-        >
-          <i data-lucide="sparkles" class="w-4 h-4 text-indigo-200"></i>
-          <span>Launch Series V-D Hub (Active Exam)</span>
-          <i data-lucide="arrow-right" class="w-4 h-4"></i>
-        </a>
-
-        <a 
-          href="mock-tests.html" 
-          class="inline-flex items-center justify-center gap-2 px-5 py-3.5 rounded-xl font-semibold text-sm text-slate-800 dark:text-slate-200 bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 hover:bg-slate-50 dark:hover:bg-slate-850 hover:border-slate-300 shadow-2xs transition-all"
-        >
-          <i data-lucide="award" class="w-4 h-4 text-indigo-600"></i>
-          <span>Exam Simulator (10 Mocks)</span>
-        </a>
-
-        <a 
-          href="#catalog" 
-          class="inline-flex items-center justify-center gap-2 px-4 py-3.5 rounded-xl font-semibold text-sm text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white transition-colors"
-        >
-          <span>View All Certifications</span>
-          <i data-lucide="arrow-down" class="w-4 h-4"></i>
-        </a>
-      </div>
+    <!-- Quick Search Pill Bar -->
+    <div class="mt-6 max-w-lg mx-auto">
+      <button 
+        onclick="window.openSpotlightModal()"
+        class="w-full flex items-center justify-between px-4 py-2.5 rounded-2xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 shadow-xs hover:border-indigo-400 dark:hover:border-indigo-600 text-slate-400 dark:text-slate-500 text-xs sm:text-sm transition-all group"
+      >
+        <span class="flex items-center gap-2.5">
+          <i data-lucide="search" class="w-4 h-4 text-slate-400 group-hover:text-indigo-500 transition-colors"></i>
+          <span>Search any exam, topic, formula, or regulation...</span>
+        </span>
+        <kbd class="px-2 py-0.5 rounded-lg bg-slate-100 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 text-[11px] font-mono">⌘K</kbd>
+      </button>
     </div>
   </section>
 
-  <!-- Main Content Body -->
-  <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 space-y-16 flex-1">
+  <!-- Main Container -->
+  <main class="max-w-6xl mx-auto px-4 sm:px-6 pb-16 space-y-14 flex-1">
 
     <!-- ======================================================== -->
-    <!-- SECTION 1: FLAGSHIP SPOTLIGHT (NISM SERIES V-D)           -->
+    <!-- 1. CERTIFICATION EXAM CARDS (CLEAN & MINIMAL)            -->
     <!-- ======================================================== -->
-    <section id="flagship" class="scroll-mt-24">
-      <div class="relative rounded-3xl bg-gradient-to-br from-white via-indigo-50/30 to-violet-50/40 dark:from-slate-900 dark:via-indigo-950/20 dark:to-slate-900 border-2 border-indigo-200 dark:border-indigo-800/70 p-6 sm:p-10 shadow-lg shadow-indigo-100/50 dark:shadow-none overflow-hidden">
-        
-        <!-- Background Ambient Accent -->
-        <div class="absolute -right-20 -top-20 w-80 h-80 rounded-full bg-indigo-500/10 blur-3xl pointer-events-none"></div>
-        <div class="absolute -left-20 -bottom-20 w-80 h-80 rounded-full bg-violet-500/10 blur-3xl pointer-events-none"></div>
-
-        <div class="relative z-10">
-          
-          <!-- Top Flagship Header & Badge -->
-          <div class="flex flex-wrap items-center justify-between gap-4 pb-6 border-b border-slate-200/80 dark:border-slate-800">
-            <div class="flex items-center gap-3">
-              <span class="px-3.5 py-1 rounded-full text-xs font-extrabold uppercase tracking-wider bg-emerald-500 text-white shadow-xs flex items-center gap-1.5">
-                <i data-lucide="star" class="w-3.5 h-3.5 fill-current"></i>
-                Active Flagship Certification
-              </span>
-              <span class="text-xs font-semibold text-indigo-700 dark:text-indigo-400 bg-indigo-50 dark:bg-indigo-950/80 px-3 py-1 rounded-full border border-indigo-200 dark:border-indigo-800">
-                March 2026 Edition
-              </span>
-            </div>
-
-            <!-- Fast Navigation Links -->
-            <div class="flex items-center gap-2 text-xs font-bold">
-              <a href="nism-5d.html" class="text-indigo-600 dark:text-indigo-400 hover:underline flex items-center gap-1">
-                <span>Complete V-D Dashboard</span>
-                <i data-lucide="external-link" class="w-3.5 h-3.5"></i>
-              </a>
-            </div>
-          </div>
-
-          <!-- Title & Overview Grid -->
-          <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center mt-6">
-            
-            <div class="lg:col-span-8 space-y-4">
-              <div class="flex items-center gap-3">
-                <span class="px-2.5 py-1 rounded-lg bg-indigo-100 dark:bg-indigo-900/60 text-indigo-800 dark:text-indigo-300 font-mono text-xs font-bold">
-                  NISM-Series-V-D
-                </span>
-                <span class="text-xs text-slate-500 dark:text-slate-400">SEBI Regulated Mandate</span>
-              </div>
-              <h2 class="font-display text-2xl sm:text-3xl font-extrabold text-slate-900 dark:text-white tracking-tight">
-                Mutual Fund & Specialized Investment Fund (SIF) Distributors
-              </h2>
-              <p class="text-sm sm:text-base text-slate-600 dark:text-slate-300 leading-relaxed">
-                The flagship examination required to distribute both traditional Mutual Funds and the brand-new SEBI-approved <span class="font-bold text-slate-900 dark:text-white">Specialized Investment Funds (SIF)</span> with a ₹10 Lakhs minimum ticket size. Encompasses mutual fund structures, equity derivatives hedging, and fixed-income exchange-traded contracts.
-              </p>
-
-              <!-- Key Exam Quick Facts -->
-              <div class="grid grid-cols-2 sm:grid-cols-4 gap-3 pt-2">
-                <div class="p-3 rounded-xl bg-white dark:bg-slate-800/80 border border-slate-200 dark:border-slate-700/80 shadow-2xs">
-                  <span class="block text-[11px] font-semibold text-slate-500 dark:text-slate-400 uppercase">Questions</span>
-                  <span class="text-base font-extrabold text-slate-900 dark:text-white">150 MCQs</span>
-                </div>
-                <div class="p-3 rounded-xl bg-white dark:bg-slate-800/80 border border-slate-200 dark:border-slate-700/80 shadow-2xs">
-                  <span class="block text-[11px] font-semibold text-slate-500 dark:text-slate-400 uppercase">Duration</span>
-                  <span class="text-base font-extrabold text-slate-900 dark:text-white">3 Hours (180m)</span>
-                </div>
-                <div class="p-3 rounded-xl bg-white dark:bg-slate-800/80 border border-slate-200 dark:border-slate-700/80 shadow-2xs">
-                  <span class="block text-[11px] font-semibold text-slate-500 dark:text-slate-400 uppercase">Passing Mark</span>
-                  <span class="text-base font-extrabold text-emerald-600 dark:text-emerald-400">50% (75/150)</span>
-                </div>
-                <div class="p-3 rounded-xl bg-white dark:bg-slate-800/80 border border-slate-200 dark:border-slate-700/80 shadow-2xs">
-                  <span class="block text-[11px] font-semibold text-slate-500 dark:text-slate-400 uppercase">Negative Mark</span>
-                  <span class="text-base font-extrabold text-rose-600 dark:text-rose-400">25% (0.25 Mark)</span>
-                </div>
-              </div>
-            </div>
-
-            <!-- Right Box: Progress Tracker & Quick Launch -->
-            <div class="lg:col-span-4 bg-white dark:bg-slate-800 rounded-2xl p-5 border border-slate-200 dark:border-slate-700 shadow-sm flex flex-col justify-between space-y-4">
-              <div>
-                <div class="flex items-center justify-between text-xs font-bold text-slate-600 dark:text-slate-400 mb-1">
-                  <span>Your Study Progress</span>
-                  <span id="home-progress-percent" class="text-indigo-600 dark:text-indigo-400">0%</span>
-                </div>
-                <div class="w-full bg-slate-100 dark:bg-slate-700 h-2.5 rounded-full overflow-hidden">
-                  <div id="home-progress-bar" class="bg-gradient-to-r from-indigo-500 to-emerald-500 h-full rounded-full transition-all duration-500" style="width: 0%"></div>
-                </div>
-                <p id="home-progress-count" class="text-[11px] text-slate-500 dark:text-slate-400 mt-1.5 font-medium">0 of 22 Chapters Completed</p>
-              </div>
-
-              <div class="space-y-2 pt-2 border-t border-slate-100 dark:border-slate-700/60">
-                <a 
-                  href="nism-5d.html" 
-                  class="w-full py-2.5 px-4 rounded-xl font-bold text-xs text-white bg-indigo-600 hover:bg-indigo-700 shadow-xs flex items-center justify-center gap-2 transition-colors"
-                >
-                  <i data-lucide="book-open" class="w-4 h-4"></i>
-                  <span>Enter Series V-D Hub</span>
-                </a>
-                <a 
-                  href="mock-tests.html" 
-                  class="w-full py-2.5 px-4 rounded-xl font-bold text-xs text-indigo-700 dark:text-indigo-300 bg-indigo-50 dark:bg-indigo-950/70 hover:bg-indigo-100 dark:hover:bg-indigo-900 border border-indigo-200 dark:border-indigo-800 flex items-center justify-center gap-2 transition-colors"
-                >
-                  <i data-lucide="award" class="w-4 h-4 text-amber-500"></i>
-                  <span>Mock Exam Simulator (10 Mocks)</span>
-                </a>
-              </div>
-            </div>
-
-          </div>
-
-          <!-- Series V-D Module Triad Cards -->
-          <div class="grid grid-cols-1 md:grid-cols-3 gap-5 mt-8">
-            
-            <!-- Module 1 Card -->
-            <a href="module1.html" class="group block p-5 rounded-2xl bg-white dark:bg-slate-800/90 border border-slate-200 dark:border-slate-700 hover:border-blue-400 dark:hover:border-blue-500 shadow-2xs hover:shadow-md transition-all">
-              <div class="flex items-center justify-between mb-3">
-                <span class="px-2.5 py-1 rounded-md text-[11px] font-bold bg-blue-50 dark:bg-blue-950/80 text-blue-700 dark:text-blue-300 border border-blue-200 dark:border-blue-800">
-                  Module 1 • 70 Marks (46.7%)
-                </span>
-                <i data-lucide="arrow-right" class="w-4 h-4 text-slate-400 group-hover:text-blue-600 group-hover:translate-x-1 transition-all"></i>
-              </div>
-              <h3 class="font-display font-bold text-base text-slate-900 dark:text-white group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors">
-                Mutual Funds Foundation & Products
-              </h3>
-              <p class="text-xs text-slate-500 dark:text-slate-400 mt-2 leading-relaxed">
-                Chapters 1–12: Pass-through trusts, SIF ₹10L rules, MF Lite, 36 SEBI categories, Regulation 52 TER slabs, 2024 Budget tax reforms, and Cut-off realization.
-              </p>
-              <div class="mt-4 pt-3 border-t border-slate-100 dark:border-slate-700/60 flex items-center justify-between text-[11px] text-slate-500">
-                <span>12 Detailed Chapters</span>
-                <span class="font-semibold text-blue-600 dark:text-blue-400">Open Module 1 →</span>
-              </div>
-            </a>
-
-            <!-- Module 2 Card -->
-            <a href="module2.html" class="group block p-5 rounded-2xl bg-white dark:bg-slate-800/90 border border-slate-200 dark:border-slate-700 hover:border-emerald-400 dark:hover:border-emerald-500 shadow-2xs hover:shadow-md transition-all">
-              <div class="flex items-center justify-between mb-3">
-                <span class="px-2.5 py-1 rounded-md text-[11px] font-bold bg-emerald-50 dark:bg-emerald-950/80 text-emerald-700 dark:text-emerald-300 border border-emerald-200 dark:border-emerald-800">
-                  Module 2 • 50 Marks (33.3%)
-                </span>
-                <i data-lucide="arrow-right" class="w-4 h-4 text-slate-400 group-hover:text-emerald-600 group-hover:translate-x-1 transition-all"></i>
-              </div>
-              <h3 class="font-display font-bold text-base text-slate-900 dark:text-white group-hover:text-emerald-600 dark:group-hover:text-emerald-400 transition-colors">
-                Equity Derivatives & Strategies
-              </h3>
-              <p class="text-xs text-slate-500 dark:text-slate-400 mt-2 leading-relaxed">
-                Chapters 13–17: Free-float index construction, Impact Cost, Futures Cost of Carry, Option Greeks (&Delta;, &Gamma;, &Theta;, &Vega;, &Rho;), Beta Hedging, and Bull/Bear Spreads.
-              </p>
-              <div class="mt-4 pt-3 border-t border-slate-100 dark:border-slate-700/60 flex items-center justify-between text-[11px] text-slate-500">
-                <span>5 Deep Chapters</span>
-                <span class="font-semibold text-emerald-600 dark:text-emerald-400">Open Module 2 →</span>
-              </div>
-            </a>
-
-            <!-- Module 3 Card -->
-            <a href="module3.html" class="group block p-5 rounded-2xl bg-white dark:bg-slate-800/90 border border-slate-200 dark:border-slate-700 hover:border-purple-400 dark:hover:border-purple-500 shadow-2xs hover:shadow-md transition-all">
-              <div class="flex items-center justify-between mb-3">
-                <span class="px-2.5 py-1 rounded-md text-[11px] font-bold bg-purple-50 dark:bg-purple-950/80 text-purple-700 dark:text-purple-300 border border-purple-200 dark:border-purple-800">
-                  Module 3 • 30 Marks (20.0%)
-                </span>
-                <i data-lucide="arrow-right" class="w-4 h-4 text-slate-400 group-hover:text-purple-600 group-hover:translate-x-1 transition-all"></i>
-              </div>
-              <h3 class="font-display font-bold text-base text-slate-900 dark:text-white group-hover:text-purple-600 dark:group-hover:text-purple-400 transition-colors">
-                Fixed Income & IR Derivatives
-              </h3>
-              <p class="text-xs text-slate-500 dark:text-slate-400 mt-2 leading-relaxed">
-                Chapters 18–22: Dirty vs Clean price, Macaulay Duration, PV01, 10-Year GoI Bond Futures (Tick Value = ₹5.00), NDS-OM VWAP cash settlement, and Negative Yield Delta.
-              </p>
-              <div class="mt-4 pt-3 border-t border-slate-100 dark:border-slate-700/60 flex items-center justify-between text-[11px] text-slate-500">
-                <span>5 Quantitative Chapters</span>
-                <span class="font-semibold text-purple-600 dark:text-purple-400">Open Module 3 →</span>
-              </div>
-            </a>
-
-          </div>
-
-        </div>
-      </div>
-    </section>
-
-    <!-- ======================================================== -->
-    <!-- SECTION 2: COMPREHENSIVE NISM CERTIFICATION DIRECTORY     -->
-    <!-- ======================================================== -->
-    <section id="catalog" class="scroll-mt-24 space-y-8">
-      
-      <!-- Section Header -->
-      <div class="flex flex-col md:flex-row md:items-end justify-between gap-4">
+    <section id="certifications" class="scroll-mt-20">
+      <div class="flex items-center justify-between mb-4">
         <div>
-          <div class="flex items-center gap-2 text-xs font-bold uppercase tracking-wider text-indigo-600 dark:text-indigo-400">
-            <i data-lucide="layers" class="w-4 h-4"></i>
-            <span>NISM Certification Catalog</span>
-          </div>
-          <h2 class="font-display text-2xl sm:text-3xl font-extrabold text-slate-900 dark:text-white tracking-tight mt-1">
-            Top Industry-Mandated Qualifications
+          <h2 class="font-display text-lg sm:text-xl font-bold text-slate-900 dark:text-white">
+            Available Certifications
           </h2>
-          <p class="text-sm text-slate-600 dark:text-slate-400 mt-1 max-w-2xl">
-            Explore SEBI-mandated certifications for Mutual Funds, Wealth Management, Derivatives Trading, and Securities Research.
+          <p class="text-xs text-slate-500 dark:text-slate-400">
+            Select an exam to start studying or practicing mock exams
           </p>
         </div>
-
-        <!-- Filter Buttons -->
-        <div class="flex flex-wrap items-center gap-2 text-xs font-semibold">
-          <button onclick="filterCatalog('all')" id="btn-filter-all" class="px-3.5 py-1.5 rounded-xl bg-indigo-600 text-white shadow-xs">All Exams (6)</button>
-          <button onclick="filterCatalog('distribution')" id="btn-filter-distribution" class="px-3.5 py-1.5 rounded-xl bg-white dark:bg-slate-800 text-slate-700 dark:text-slate-300 border border-slate-200 dark:border-slate-700 hover:bg-slate-50">Distribution & Wealth</button>
-          <button onclick="filterCatalog('trading')" id="btn-filter-trading" class="px-3.5 py-1.5 rounded-xl bg-white dark:bg-slate-800 text-slate-700 dark:text-slate-300 border border-slate-200 dark:border-slate-700 hover:bg-slate-50">Derivatives & Trading</button>
-          <button onclick="filterCatalog('research')" id="btn-filter-research" class="px-3.5 py-1.5 rounded-xl bg-white dark:bg-slate-800 text-slate-700 dark:text-slate-300 border border-slate-200 dark:border-slate-700 hover:bg-slate-50">Research & Advisory</button>
-        </div>
+        <span class="text-xs font-semibold px-2.5 py-1 rounded-full bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300">
+          6 Certifications
+        </span>
       </div>
 
-      <!-- Catalog Grid -->
-      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+      <!-- 6-Card Grid -->
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
 
-        <!-- Card 1: Series V-D (ACTIVE) -->
-        <div class="catalog-card distribution trading bg-white dark:bg-slate-800 rounded-2xl p-6 border-2 border-indigo-400 dark:border-indigo-600 shadow-md relative flex flex-col justify-between">
+        <!-- Card 1: Series V-D (ACTIVE FLAGSHIP) -->
+        <div class="rounded-2xl p-5 bg-white dark:bg-slate-900 border-2 border-indigo-500 dark:border-indigo-600 shadow-sm flex flex-col justify-between relative group hover:shadow-md transition-all">
           <div>
-            <div class="flex items-center justify-between mb-3">
-              <span class="px-2.5 py-0.5 rounded-md text-[11px] font-mono font-bold bg-indigo-50 dark:bg-indigo-950 text-indigo-700 dark:text-indigo-300 border border-indigo-200">
+            <div class="flex items-center justify-between mb-2.5">
+              <span class="px-2.5 py-0.5 rounded-md font-mono text-[11px] font-bold bg-indigo-50 dark:bg-indigo-950 text-indigo-700 dark:text-indigo-300 border border-indigo-200 dark:border-indigo-800">
                 Series V-D
               </span>
-              <span class="px-2.5 py-0.5 rounded-full text-[11px] font-extrabold bg-emerald-500 text-white flex items-center gap-1 shadow-2xs">
-                <span class="w-1.5 h-1.5 rounded-full bg-white animate-ping"></span>
+              <span class="px-2 py-0.5 rounded-full text-[10px] font-extrabold uppercase bg-emerald-500 text-white flex items-center gap-1 shadow-2xs">
+                <span class="w-1.5 h-1.5 rounded-full bg-white animate-pulse"></span>
                 Active Exam Hub
               </span>
             </div>
-            
-            <h3 class="font-display font-bold text-lg text-slate-900 dark:text-white">
+
+            <h3 class="font-display font-bold text-base text-slate-900 dark:text-white group-hover:text-indigo-600 dark:group-hover:text-indigo-400 transition-colors">
               Mutual Fund & SIF Distributors
             </h3>
-            
-            <p class="text-xs text-slate-600 dark:text-slate-400 mt-2 leading-relaxed">
-              Mandatory for distributing Mutual Funds and the ₹10 Lakhs Specialized Investment Fund (SIF) asset class. Blends MFs with Equity & Fixed Income derivatives.
+
+            <p class="text-xs text-slate-500 dark:text-slate-400 mt-1.5 leading-relaxed">
+              Mandatory qualification for distributing Mutual Funds and the ₹10L Specialized Investment Fund (SIF) asset class.
             </p>
 
-            <div class="mt-4 p-3 rounded-xl bg-slate-50 dark:bg-slate-900/60 border border-slate-100 dark:border-slate-700/60 space-y-1.5 text-xs">
-              <div class="flex justify-between text-slate-500">
-                <span>Format:</span>
-                <span class="font-bold text-slate-900 dark:text-white">150 Questions • 3 Hours</span>
-              </div>
-              <div class="flex justify-between text-slate-500">
-                <span>Passing / Penalty:</span>
-                <span class="font-bold text-slate-900 dark:text-white">50% (75M) • 25% Negative</span>
-              </div>
-              <div class="flex justify-between text-slate-500">
-                <span>Study Depth:</span>
-                <span class="font-bold text-indigo-600 dark:text-indigo-400">22 Chapters • 10 Mocks (1,000Q)</span>
-              </div>
+            <!-- Quick Specs -->
+            <div class="mt-3.5 pt-3 border-t border-slate-100 dark:border-slate-800 flex items-center justify-between text-[11px] text-slate-600 dark:text-slate-400 font-medium">
+              <span>22 Chapters • 3 Modules</span>
+              <span class="font-bold text-slate-900 dark:text-white">10 Mocks (1,000Q)</span>
             </div>
           </div>
 
-          <div class="mt-6 pt-4 border-t border-slate-100 dark:border-slate-700 flex items-center gap-2">
-            <a href="nism-5d.html" class="flex-1 py-2 px-3 rounded-xl font-bold text-xs text-white bg-indigo-600 hover:bg-indigo-700 text-center transition-colors shadow-2xs">
-              Study Hub
+          <!-- Direct Launch Button -->
+          <div class="mt-4 pt-3 border-t border-slate-100 dark:border-slate-800 flex items-center gap-2">
+            <a 
+              href="nism-5d.html" 
+              class="flex-1 py-2 px-3 rounded-xl font-bold text-xs text-white bg-indigo-600 hover:bg-indigo-700 text-center transition-colors shadow-2xs flex items-center justify-center gap-1.5"
+            >
+              <i data-lucide="book-open" class="w-3.5 h-3.5"></i>
+              <span>Open Study Hub</span>
             </a>
-            <a href="mock-tests.html" class="py-2 px-3 rounded-xl font-bold text-xs text-indigo-700 dark:text-indigo-300 bg-indigo-50 dark:bg-indigo-950/70 border border-indigo-200 dark:border-indigo-800 text-center transition-colors">
+            <a 
+              href="mock-tests.html" 
+              class="py-2 px-3 rounded-xl font-bold text-xs text-indigo-700 dark:text-indigo-300 bg-indigo-50 dark:bg-indigo-950/70 border border-indigo-200 dark:border-indigo-800 hover:bg-indigo-100 text-center transition-colors"
+              title="Practice Mock Tests"
+            >
               10 Mocks
             </a>
           </div>
         </div>
 
-        <!-- Card 2: Series V-A (Mutual Fund Distributors) -->
-        <div class="catalog-card distribution bg-white dark:bg-slate-800 rounded-2xl p-6 border border-slate-200 dark:border-slate-700 shadow-2xs hover:shadow-md transition-all flex flex-col justify-between">
+        <!-- Card 2: Series V-A -->
+        <div class="rounded-2xl p-5 bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 shadow-2xs hover:border-slate-300 dark:hover:border-slate-700 flex flex-col justify-between transition-all">
           <div>
-            <div class="flex items-center justify-between mb-3">
-              <span class="px-2.5 py-0.5 rounded-md text-[11px] font-mono font-bold bg-blue-50 dark:bg-blue-950 text-blue-700 dark:text-blue-300 border border-blue-200">
+            <div class="flex items-center justify-between mb-2.5">
+              <span class="px-2.5 py-0.5 rounded-md font-mono text-[11px] font-bold bg-blue-50 dark:bg-blue-950 text-blue-700 dark:text-blue-300 border border-blue-200 dark:border-blue-800">
                 Series V-A
               </span>
-              <span class="px-2.5 py-0.5 rounded-full text-[11px] font-semibold bg-blue-100 dark:bg-blue-900/60 text-blue-800 dark:text-blue-200">
-                Curriculum Roadmap
+              <span class="px-2 py-0.5 rounded-full text-[10px] font-semibold bg-slate-100 dark:bg-slate-800 text-slate-500">
+                Coming Soon
               </span>
             </div>
-            
-            <h3 class="font-display font-bold text-lg text-slate-900 dark:text-white">
+
+            <h3 class="font-display font-bold text-base text-slate-900 dark:text-white">
               Mutual Fund Distributors (MFD)
             </h3>
-            
-            <p class="text-xs text-slate-600 dark:text-slate-400 mt-2 leading-relaxed">
-              The benchmark entry-level qualification required by AMFI for ARN registration. Covers mutual fund concepts, distribution models, scheme types, and operational guidelines.
+
+            <p class="text-xs text-slate-500 dark:text-slate-400 mt-1.5 leading-relaxed">
+              The benchmark entry-level qualification required by AMFI for individual ARN issuance and fund distribution.
             </p>
 
-            <div class="mt-4 p-3 rounded-xl bg-slate-50 dark:bg-slate-900/60 border border-slate-100 dark:border-slate-700/60 space-y-1.5 text-xs">
-              <div class="flex justify-between text-slate-500">
-                <span>Format:</span>
-                <span class="font-bold text-slate-900 dark:text-white">100 Questions • 2 Hours</span>
-              </div>
-              <div class="flex justify-between text-slate-500">
-                <span>Passing / Penalty:</span>
-                <span class="font-bold text-emerald-600 dark:text-emerald-400">50% (50M) • No Negative</span>
-              </div>
-              <div class="flex justify-between text-slate-500">
-                <span>Role:</span>
-                <span class="font-bold text-slate-900 dark:text-white">Individual MFDs, Bank RMs</span>
-              </div>
+            <div class="mt-3.5 pt-3 border-t border-slate-100 dark:border-slate-800 flex items-center justify-between text-[11px] text-slate-500 font-medium">
+              <span>100 MCQs • 2 Hours</span>
+              <span>Passing: 50% (No Negative)</span>
             </div>
           </div>
 
-          <div class="mt-6 pt-4 border-t border-slate-100 dark:border-slate-700 flex items-center justify-between">
-            <span class="text-[11px] font-medium text-slate-500">12 Core Chapters</span>
-            <button onclick="openExamModal('va')" class="py-1.5 px-3 rounded-xl font-bold text-xs text-blue-700 dark:text-blue-300 bg-blue-50 dark:bg-blue-950/70 border border-blue-200 dark:border-blue-800 hover:bg-blue-100 transition-colors">
-              Syllabus & Roadmap →
+          <div class="mt-4 pt-3 border-t border-slate-100 dark:border-slate-800">
+            <button 
+              onclick="openExamModal('va')" 
+              class="w-full py-2 px-3 rounded-xl font-semibold text-xs text-slate-700 dark:text-slate-300 bg-slate-50 dark:bg-slate-800 hover:bg-slate-100 dark:hover:bg-slate-750 border border-slate-200 dark:border-slate-700 text-center transition-colors flex items-center justify-center gap-1.5"
+            >
+              <span>View Syllabus & Details</span>
+              <i data-lucide="chevron-right" class="w-3.5 h-3.5"></i>
             </button>
           </div>
         </div>
 
-        <!-- Card 3: Series VIII (Equity Derivatives) -->
-        <div class="catalog-card trading bg-white dark:bg-slate-800 rounded-2xl p-6 border border-slate-200 dark:border-slate-700 shadow-2xs hover:shadow-md transition-all flex flex-col justify-between">
+        <!-- Card 3: Series VIII -->
+        <div class="rounded-2xl p-5 bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 shadow-2xs hover:border-slate-300 dark:hover:border-slate-700 flex flex-col justify-between transition-all">
           <div>
-            <div class="flex items-center justify-between mb-3">
-              <span class="px-2.5 py-0.5 rounded-md text-[11px] font-mono font-bold bg-emerald-50 dark:bg-emerald-950 text-emerald-700 dark:text-emerald-300 border border-emerald-200">
+            <div class="flex items-center justify-between mb-2.5">
+              <span class="px-2.5 py-0.5 rounded-md font-mono text-[11px] font-bold bg-emerald-50 dark:bg-emerald-950 text-emerald-700 dark:text-emerald-300 border border-emerald-200 dark:border-emerald-800">
                 Series VIII
               </span>
-              <span class="px-2.5 py-0.5 rounded-full text-[11px] font-semibold bg-emerald-100 dark:bg-emerald-900/60 text-emerald-800 dark:text-emerald-200">
-                Curriculum Roadmap
+              <span class="px-2 py-0.5 rounded-full text-[10px] font-semibold bg-slate-100 dark:bg-slate-800 text-slate-500">
+                Coming Soon
               </span>
             </div>
-            
-            <h3 class="font-display font-bold text-lg text-slate-900 dark:text-white">
+
+            <h3 class="font-display font-bold text-base text-slate-900 dark:text-white">
               Equity Derivatives Certification
             </h3>
-            
-            <p class="text-xs text-slate-600 dark:text-slate-400 mt-2 leading-relaxed">
-              Mandatory under SEBI norms for approved users and sales personnel of trading members in the equity derivatives segment of NSE and BSE.
+
+            <p class="text-xs text-slate-500 dark:text-slate-400 mt-1.5 leading-relaxed">
+              Mandatory qualification for approved users, sales personnel, and derivative dealers on NSE & BSE trading terminals.
             </p>
 
-            <div class="mt-4 p-3 rounded-xl bg-slate-50 dark:bg-slate-900/60 border border-slate-100 dark:border-slate-700/60 space-y-1.5 text-xs">
-              <div class="flex justify-between text-slate-500">
-                <span>Format:</span>
-                <span class="font-bold text-slate-900 dark:text-white">100 Questions • 2 Hours</span>
-              </div>
-              <div class="flex justify-between text-slate-500">
-                <span>Passing / Penalty:</span>
-                <span class="font-bold text-slate-900 dark:text-white">60% (60M) • 25% Negative</span>
-              </div>
-              <div class="flex justify-between text-slate-500">
-                <span>Role:</span>
-                <span class="font-bold text-slate-900 dark:text-white">Derivatives Dealers, Traders</span>
-              </div>
+            <div class="mt-3.5 pt-3 border-t border-slate-100 dark:border-slate-800 flex items-center justify-between text-[11px] text-slate-500 font-medium">
+              <span>100 MCQs • 2 Hours</span>
+              <span>Passing: 60% (25% Neg)</span>
             </div>
           </div>
 
-          <div class="mt-6 pt-4 border-t border-slate-100 dark:border-slate-700 flex items-center justify-between">
-            <span class="text-[11px] font-medium text-slate-500">10 Quantitative Modules</span>
-            <button onclick="openExamModal('viii')" class="py-1.5 px-3 rounded-xl font-bold text-xs text-emerald-700 dark:text-emerald-300 bg-emerald-50 dark:bg-emerald-950/70 border border-emerald-200 dark:border-emerald-800 hover:bg-emerald-100 transition-colors">
-              Syllabus & Roadmap →
+          <div class="mt-4 pt-3 border-t border-slate-100 dark:border-slate-800">
+            <button 
+              onclick="openExamModal('viii')" 
+              class="w-full py-2 px-3 rounded-xl font-semibold text-xs text-slate-700 dark:text-slate-300 bg-slate-50 dark:bg-slate-800 hover:bg-slate-100 dark:hover:bg-slate-750 border border-slate-200 dark:border-slate-700 text-center transition-colors flex items-center justify-center gap-1.5"
+            >
+              <span>View Syllabus & Details</span>
+              <i data-lucide="chevron-right" class="w-3.5 h-3.5"></i>
             </button>
           </div>
         </div>
 
-        <!-- Card 4: Series XV (Research Analyst) -->
-        <div class="catalog-card research bg-white dark:bg-slate-800 rounded-2xl p-6 border border-slate-200 dark:border-slate-700 shadow-2xs hover:shadow-md transition-all flex flex-col justify-between">
+        <!-- Card 4: Series XV -->
+        <div class="rounded-2xl p-5 bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 shadow-2xs hover:border-slate-300 dark:hover:border-slate-700 flex flex-col justify-between transition-all">
           <div>
-            <div class="flex items-center justify-between mb-3">
-              <span class="px-2.5 py-0.5 rounded-md text-[11px] font-mono font-bold bg-purple-50 dark:bg-purple-950 text-purple-700 dark:text-purple-300 border border-purple-200">
+            <div class="flex items-center justify-between mb-2.5">
+              <span class="px-2.5 py-0.5 rounded-md font-mono text-[11px] font-bold bg-purple-50 dark:bg-purple-950 text-purple-700 dark:text-purple-300 border border-purple-200 dark:border-purple-800">
                 Series XV
               </span>
-              <span class="px-2.5 py-0.5 rounded-full text-[11px] font-semibold bg-purple-100 dark:bg-purple-900/60 text-purple-800 dark:text-purple-200">
-                Curriculum Roadmap
+              <span class="px-2 py-0.5 rounded-full text-[10px] font-semibold bg-slate-100 dark:bg-slate-800 text-slate-500">
+                Coming Soon
               </span>
             </div>
-            
-            <h3 class="font-display font-bold text-lg text-slate-900 dark:text-white">
+
+            <h3 class="font-display font-bold text-base text-slate-900 dark:text-white">
               Research Analyst Certification
             </h3>
-            
-            <p class="text-xs text-slate-600 dark:text-slate-400 mt-2 leading-relaxed">
-              Statutory qualification for individuals registered under SEBI (Research Analysts) Regulations 2014 or employed by brokerages, AMCs, or independent research firms.
+
+            <p class="text-xs text-slate-500 dark:text-slate-400 mt-1.5 leading-relaxed">
+              Statutory qualification for buy-side and sell-side equity analysts under SEBI Research Analysts Regulations.
             </p>
 
-            <div class="mt-4 p-3 rounded-xl bg-slate-50 dark:bg-slate-900/60 border border-slate-100 dark:border-slate-700/60 space-y-1.5 text-xs">
-              <div class="flex justify-between text-slate-500">
-                <span>Format:</span>
-                <span class="font-bold text-slate-900 dark:text-white">100 Questions • 2 Hours</span>
-              </div>
-              <div class="flex justify-between text-slate-500">
-                <span>Passing / Penalty:</span>
-                <span class="font-bold text-slate-900 dark:text-white">60% (60M) • 25% Negative</span>
-              </div>
-              <div class="flex justify-between text-slate-500">
-                <span>Role:</span>
-                <span class="font-bold text-slate-900 dark:text-white">Sell/Buy-Side Equity Analysts</span>
-              </div>
+            <div class="mt-3.5 pt-3 border-t border-slate-100 dark:border-slate-800 flex items-center justify-between text-[11px] text-slate-500 font-medium">
+              <span>100 MCQs • 2 Hours</span>
+              <span>Passing: 60% (25% Neg)</span>
             </div>
           </div>
 
-          <div class="mt-6 pt-4 border-t border-slate-100 dark:border-slate-700 flex items-center justify-between">
-            <span class="text-[11px] font-medium text-slate-500">16 Deep Modules</span>
-            <button onclick="openExamModal('xv')" class="py-1.5 px-3 rounded-xl font-bold text-xs text-purple-700 dark:text-purple-300 bg-purple-50 dark:bg-purple-950/70 border border-purple-200 dark:border-purple-800 hover:bg-purple-100 transition-colors">
-              Syllabus & Roadmap →
+          <div class="mt-4 pt-3 border-t border-slate-100 dark:border-slate-800">
+            <button 
+              onclick="openExamModal('xv')" 
+              class="w-full py-2 px-3 rounded-xl font-semibold text-xs text-slate-700 dark:text-slate-300 bg-slate-50 dark:bg-slate-800 hover:bg-slate-100 dark:hover:bg-slate-750 border border-slate-200 dark:border-slate-700 text-center transition-colors flex items-center justify-center gap-1.5"
+            >
+              <span>View Syllabus & Details</span>
+              <i data-lucide="chevron-right" class="w-3.5 h-3.5"></i>
             </button>
           </div>
         </div>
 
-        <!-- Card 5: Series X-A & X-B (Investment Adviser Level 1 & 2) -->
-        <div class="catalog-card research distribution bg-white dark:bg-slate-800 rounded-2xl p-6 border border-slate-200 dark:border-slate-700 shadow-2xs hover:shadow-md transition-all flex flex-col justify-between">
+        <!-- Card 5: Series X-A & X-B -->
+        <div class="rounded-2xl p-5 bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 shadow-2xs hover:border-slate-300 dark:hover:border-slate-700 flex flex-col justify-between transition-all">
           <div>
-            <div class="flex items-center justify-between mb-3">
-              <span class="px-2.5 py-0.5 rounded-md text-[11px] font-mono font-bold bg-amber-50 dark:bg-amber-950 text-amber-700 dark:text-amber-300 border border-amber-200">
+            <div class="flex items-center justify-between mb-2.5">
+              <span class="px-2.5 py-0.5 rounded-md font-mono text-[11px] font-bold bg-amber-50 dark:bg-amber-950 text-amber-700 dark:text-amber-300 border border-amber-200 dark:border-amber-800">
                 Series X-A & X-B
               </span>
-              <span class="px-2.5 py-0.5 rounded-full text-[11px] font-semibold bg-amber-100 dark:bg-amber-900/60 text-amber-800 dark:text-amber-200">
-                Curriculum Roadmap
+              <span class="px-2 py-0.5 rounded-full text-[10px] font-semibold bg-slate-100 dark:bg-slate-800 text-slate-500">
+                Coming Soon
               </span>
             </div>
-            
-            <h3 class="font-display font-bold text-lg text-slate-900 dark:text-white">
+
+            <h3 class="font-display font-bold text-base text-slate-900 dark:text-white">
               Investment Adviser (Level 1 & 2)
             </h3>
-            
-            <p class="text-xs text-slate-600 dark:text-slate-400 mt-2 leading-relaxed">
-              Required for registration as a SEBI Registered Investment Adviser (RIA). Covers holistic financial planning, retirement, risk profiling, estate planning, and code of conduct.
+
+            <p class="text-xs text-slate-500 dark:text-slate-400 mt-1.5 leading-relaxed">
+              Required for registration as a SEBI Registered Investment Adviser (RIA) covering personal wealth planning.
             </p>
 
-            <div class="mt-4 p-3 rounded-xl bg-slate-50 dark:bg-slate-900/60 border border-slate-100 dark:border-slate-700/60 space-y-1.5 text-xs">
-              <div class="flex justify-between text-slate-500">
-                <span>Format:</span>
-                <span class="font-bold text-slate-900 dark:text-white">100Q per Level • 2 Hours</span>
-              </div>
-              <div class="flex justify-between text-slate-500">
-                <span>Passing / Penalty:</span>
-                <span class="font-bold text-slate-900 dark:text-white">60% (60M) • 25% Negative</span>
-              </div>
-              <div class="flex justify-between text-slate-500">
-                <span>Role:</span>
-                <span class="font-bold text-slate-900 dark:text-white">SEBI RIAs, Wealth Strategists</span>
-              </div>
+            <div class="mt-3.5 pt-3 border-t border-slate-100 dark:border-slate-800 flex items-center justify-between text-[11px] text-slate-500 font-medium">
+              <span>Two Levels • 200 Total MCQs</span>
+              <span>Passing: 60% (25% Neg)</span>
             </div>
           </div>
 
-          <div class="mt-6 pt-4 border-t border-slate-100 dark:border-slate-700 flex items-center justify-between">
-            <span class="text-[11px] font-medium text-slate-500">Two-Tier Comprehensive</span>
-            <button onclick="openExamModal('x')" class="py-1.5 px-3 rounded-xl font-bold text-xs text-amber-700 dark:text-amber-300 bg-amber-50 dark:bg-amber-950/70 border border-amber-200 dark:border-amber-800 hover:bg-amber-100 transition-colors">
-              Syllabus & Roadmap →
+          <div class="mt-4 pt-3 border-t border-slate-100 dark:border-slate-800">
+            <button 
+              onclick="openExamModal('x')" 
+              class="w-full py-2 px-3 rounded-xl font-semibold text-xs text-slate-700 dark:text-slate-300 bg-slate-50 dark:bg-slate-800 hover:bg-slate-100 dark:hover:bg-slate-750 border border-slate-200 dark:border-slate-700 text-center transition-colors flex items-center justify-center gap-1.5"
+            >
+              <span>View Syllabus & Details</span>
+              <i data-lucide="chevron-right" class="w-3.5 h-3.5"></i>
             </button>
           </div>
         </div>
 
-        <!-- Card 6: Series XXI-A (Portfolio Management Services) -->
-        <div class="catalog-card distribution bg-white dark:bg-slate-800 rounded-2xl p-6 border border-slate-200 dark:border-slate-700 shadow-2xs hover:shadow-md transition-all flex flex-col justify-between">
+        <!-- Card 6: Series XXI-A -->
+        <div class="rounded-2xl p-5 bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 shadow-2xs hover:border-slate-300 dark:hover:border-slate-700 flex flex-col justify-between transition-all">
           <div>
-            <div class="flex items-center justify-between mb-3">
-              <span class="px-2.5 py-0.5 rounded-md text-[11px] font-mono font-bold bg-teal-50 dark:bg-teal-950 text-teal-700 dark:text-teal-300 border border-teal-200">
+            <div class="flex items-center justify-between mb-2.5">
+              <span class="px-2.5 py-0.5 rounded-md font-mono text-[11px] font-bold bg-teal-50 dark:bg-teal-950 text-teal-700 dark:text-teal-300 border border-teal-200 dark:border-teal-800">
                 Series XXI-A
               </span>
-              <span class="px-2.5 py-0.5 rounded-full text-[11px] font-semibold bg-teal-100 dark:bg-teal-900/60 text-teal-800 dark:text-teal-200">
-                Curriculum Roadmap
+              <span class="px-2 py-0.5 rounded-full text-[10px] font-semibold bg-slate-100 dark:bg-slate-800 text-slate-500">
+                Coming Soon
               </span>
             </div>
-            
-            <h3 class="font-display font-bold text-lg text-slate-900 dark:text-white">
+
+            <h3 class="font-display font-bold text-base text-slate-900 dark:text-white">
               PMS Distributors Certification
             </h3>
-            
-            <p class="text-xs text-slate-600 dark:text-slate-400 mt-2 leading-relaxed">
-              Mandatory for distributors and relationship managers marketing Portfolio Management Services to High-Net-Worth Individuals (₹50 Lakhs ticket).
+
+            <p class="text-xs text-slate-500 dark:text-slate-400 mt-1.5 leading-relaxed">
+              Mandatory for distributors and relationship managers marketing Portfolio Management Services to HNIs (₹50L ticket).
             </p>
 
-            <div class="mt-4 p-3 rounded-xl bg-slate-50 dark:bg-slate-900/60 border border-slate-100 dark:border-slate-700/60 space-y-1.5 text-xs">
-              <div class="flex justify-between text-slate-500">
-                <span>Format:</span>
-                <span class="font-bold text-slate-900 dark:text-white">100 Questions • 2 Hours</span>
-              </div>
-              <div class="flex justify-between text-slate-500">
-                <span>Passing / Penalty:</span>
-                <span class="font-bold text-slate-900 dark:text-white">60% (60M) • 25% Negative</span>
-              </div>
-              <div class="flex justify-between text-slate-500">
-                <span>Role:</span>
-                <span class="font-bold text-slate-900 dark:text-white">PMS Marketers, Private Bankers</span>
-              </div>
+            <div class="mt-3.5 pt-3 border-t border-slate-100 dark:border-slate-800 flex items-center justify-between text-[11px] text-slate-500 font-medium">
+              <span>100 MCQs • 2 Hours</span>
+              <span>Passing: 60% (25% Neg)</span>
             </div>
           </div>
 
-          <div class="mt-6 pt-4 border-t border-slate-100 dark:border-slate-700 flex items-center justify-between">
-            <span class="text-[11px] font-medium text-slate-500">8 Focused Modules</span>
-            <button onclick="openExamModal('xxia')" class="py-1.5 px-3 rounded-xl font-bold text-xs text-teal-700 dark:text-teal-300 bg-teal-50 dark:bg-teal-950/70 border border-teal-200 dark:border-teal-800 hover:bg-teal-100 transition-colors">
-              Syllabus & Roadmap →
+          <div class="mt-4 pt-3 border-t border-slate-100 dark:border-slate-800">
+            <button 
+              onclick="openExamModal('xxia')" 
+              class="w-full py-2 px-3 rounded-xl font-semibold text-xs text-slate-700 dark:text-slate-300 bg-slate-50 dark:bg-slate-800 hover:bg-slate-100 dark:hover:bg-slate-750 border border-slate-200 dark:border-slate-700 text-center transition-colors flex items-center justify-center gap-1.5"
+            >
+              <span>View Syllabus & Details</span>
+              <i data-lucide="chevron-right" class="w-3.5 h-3.5"></i>
             </button>
           </div>
         </div>
@@ -744,203 +389,83 @@
     </section>
 
     <!-- ======================================================== -->
-    <!-- SECTION 3: EXAM COMPARISON MATRIX                         -->
+    <!-- 2. ESSENTIAL PLATFORM FEATURES (CLEAN 3-CARD ROW)         -->
     <!-- ======================================================== -->
-    <section id="comparison" class="scroll-mt-24 space-y-6">
-      <div>
-        <div class="flex items-center gap-2 text-xs font-bold uppercase tracking-wider text-indigo-600 dark:text-indigo-400">
-          <i data-lucide="table" class="w-4 h-4"></i>
-          <span>Comparative Analysis</span>
-        </div>
-        <h2 class="font-display text-2xl sm:text-3xl font-extrabold text-slate-900 dark:text-white tracking-tight mt-1">
-          NISM Examination Matrix at a Glance
+    <section class="pt-4">
+      <div class="mb-4">
+        <h2 class="font-display text-lg sm:text-xl font-bold text-slate-900 dark:text-white">
+          Essential Study Tools
         </h2>
-        <p class="text-sm text-slate-600 dark:text-slate-400 mt-1 max-w-2xl">
-          Directly compare questions, duration, negative marking rules, passing cut-offs, and regulatory mandates across all certifications.
+        <p class="text-xs text-slate-500 dark:text-slate-400">
+          Tools built to simulate exam conditions and simplify financial calculations
         </p>
       </div>
 
-      <!-- Responsive Table Container -->
-      <div class="overflow-x-auto rounded-2xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 shadow-2xs">
-        <table class="w-full text-left border-collapse text-xs sm:text-sm">
-          <thead>
-            <tr class="bg-slate-50 dark:bg-slate-800/80 border-b border-slate-200 dark:border-slate-700 text-slate-700 dark:text-slate-300 font-bold">
-              <th class="py-3.5 px-4 font-mono">Exam Code</th>
-              <th class="py-3.5 px-4">Certification Title</th>
-              <th class="py-3.5 px-4">Questions</th>
-              <th class="py-3.5 px-4">Duration</th>
-              <th class="py-3.5 px-4">Pass %</th>
-              <th class="py-3.5 px-4">Negative Marking</th>
-              <th class="py-3.5 px-4">Platform Status</th>
-            </tr>
-          </thead>
-          <tbody class="divide-y divide-slate-100 dark:divide-slate-800 text-slate-600 dark:text-slate-300">
-            
-            <!-- Series V-D -->
-            <tr class="bg-indigo-50/40 dark:bg-indigo-950/20 font-medium">
-              <td class="py-3.5 px-4 font-mono font-bold text-indigo-700 dark:text-indigo-400">Series V-D</td>
-              <td class="py-3.5 px-4">
-                <span class="font-bold text-slate-900 dark:text-white">Mutual Fund & SIF Distributors</span>
-                <span class="block text-[11px] text-slate-500">Includes Equity & IR Derivatives</span>
-              </td>
-              <td class="py-3.5 px-4 font-bold text-slate-900 dark:text-white">150 Q</td>
-              <td class="py-3.5 px-4">3 Hours</td>
-              <td class="py-3.5 px-4 font-bold text-emerald-600 dark:text-emerald-400">50% (75M)</td>
-              <td class="py-3.5 px-4 text-rose-600 dark:text-rose-400">25% (0.25 M)</td>
-              <td class="py-3.5 px-4">
-                <a href="nism-5d.html" class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full text-xs font-bold bg-emerald-500 text-white shadow-2xs hover:bg-emerald-600 transition-colors">
-                  <span class="w-1.5 h-1.5 rounded-full bg-white animate-pulse"></span>
-                  <span>Live Hub →</span>
-                </a>
-              </td>
-            </tr>
-
-            <!-- Series V-A -->
-            <tr class="hover:bg-slate-50/60 dark:hover:bg-slate-800/40">
-              <td class="py-3.5 px-4 font-mono font-bold text-blue-700 dark:text-blue-400">Series V-A</td>
-              <td class="py-3.5 px-4">Mutual Fund Distributors</td>
-              <td class="py-3.5 px-4">100 Q</td>
-              <td class="py-3.5 px-4">2 Hours</td>
-              <td class="py-3.5 px-4 font-bold text-emerald-600 dark:text-emerald-400">50% (50M)</td>
-              <td class="py-3.5 px-4 text-slate-500">None (0%)</td>
-              <td class="py-3.5 px-4">
-                <button onclick="openExamModal('va')" class="text-xs font-semibold text-blue-600 dark:text-blue-400 hover:underline">Preview Roadmap</button>
-              </td>
-            </tr>
-
-            <!-- Series VIII -->
-            <tr class="hover:bg-slate-50/60 dark:hover:bg-slate-800/40">
-              <td class="py-3.5 px-4 font-mono font-bold text-emerald-700 dark:text-emerald-400">Series VIII</td>
-              <td class="py-3.5 px-4">Equity Derivatives Certification</td>
-              <td class="py-3.5 px-4">100 Q</td>
-              <td class="py-3.5 px-4">2 Hours</td>
-              <td class="py-3.5 px-4 font-bold text-slate-900 dark:text-white">60% (60M)</td>
-              <td class="py-3.5 px-4 text-rose-600 dark:text-rose-400">25% (0.25 M)</td>
-              <td class="py-3.5 px-4">
-                <button onclick="openExamModal('viii')" class="text-xs font-semibold text-emerald-600 dark:text-emerald-400 hover:underline">Preview Roadmap</button>
-              </td>
-            </tr>
-
-            <!-- Series XV -->
-            <tr class="hover:bg-slate-50/60 dark:hover:bg-slate-800/40">
-              <td class="py-3.5 px-4 font-mono font-bold text-purple-700 dark:text-purple-400">Series XV</td>
-              <td class="py-3.5 px-4">Research Analyst Certification</td>
-              <td class="py-3.5 px-4">100 Q</td>
-              <td class="py-3.5 px-4">2 Hours</td>
-              <td class="py-3.5 px-4 font-bold text-slate-900 dark:text-white">60% (60M)</td>
-              <td class="py-3.5 px-4 text-rose-600 dark:text-rose-400">25% (0.25 M)</td>
-              <td class="py-3.5 px-4">
-                <button onclick="openExamModal('xv')" class="text-xs font-semibold text-purple-600 dark:text-purple-400 hover:underline">Preview Roadmap</button>
-              </td>
-            </tr>
-
-            <!-- Series X-A / X-B -->
-            <tr class="hover:bg-slate-50/60 dark:hover:bg-slate-800/40">
-              <td class="py-3.5 px-4 font-mono font-bold text-amber-700 dark:text-amber-400">Series X-A/B</td>
-              <td class="py-3.5 px-4">Investment Adviser (Levels 1 & 2)</td>
-              <td class="py-3.5 px-4">100 Q (each)</td>
-              <td class="py-3.5 px-4">2 Hours (each)</td>
-              <td class="py-3.5 px-4 font-bold text-slate-900 dark:text-white">60% (60M)</td>
-              <td class="py-3.5 px-4 text-rose-600 dark:text-rose-400">25% (0.25 M)</td>
-              <td class="py-3.5 px-4">
-                <button onclick="openExamModal('x')" class="text-xs font-semibold text-amber-600 dark:text-amber-400 hover:underline">Preview Roadmap</button>
-              </td>
-            </tr>
-
-            <!-- Series XXI-A -->
-            <tr class="hover:bg-slate-50/60 dark:hover:bg-slate-800/40">
-              <td class="py-3.5 px-4 font-mono font-bold text-teal-700 dark:text-teal-400">Series XXI-A</td>
-              <td class="py-3.5 px-4">Portfolio Management Services (PMS)</td>
-              <td class="py-3.5 px-4">100 Q</td>
-              <td class="py-3.5 px-4">2 Hours</td>
-              <td class="py-3.5 px-4 font-bold text-slate-900 dark:text-white">60% (60M)</td>
-              <td class="py-3.5 px-4 text-rose-600 dark:text-rose-400">25% (0.25 M)</td>
-              <td class="py-3.5 px-4">
-                <button onclick="openExamModal('xxia')" class="text-xs font-semibold text-teal-600 dark:text-teal-400 hover:underline">Preview Roadmap</button>
-              </td>
-            </tr>
-
-          </tbody>
-        </table>
-      </div>
-    </section>
-
-    <!-- ======================================================== -->
-    <!-- SECTION 4: PLATFORM CORE TOOLS SHOWCASE                   -->
-    <!-- ======================================================== -->
-    <section class="space-y-6">
-      <div class="text-center max-w-3xl mx-auto">
-        <span class="text-xs font-bold uppercase tracking-wider text-indigo-600 dark:text-indigo-400">Built for Exam Success</span>
-        <h2 class="font-display text-2xl sm:text-3xl font-extrabold text-slate-900 dark:text-white tracking-tight mt-1">
-          Interactive Financial Learning Engines
-        </h2>
-        <p class="text-sm text-slate-600 dark:text-slate-400 mt-2">
-          Experience sophisticated tools built to simulate NISM computer-based testing, solve complex financial mathematics, and navigate regulations in seconds.
-        </p>
-      </div>
-
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-6 pt-4">
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
         
-        <!-- Tool 1: 10 Mock Exam Engine -->
-        <div class="p-6 rounded-2xl bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 shadow-2xs hover:shadow-md transition-all flex flex-col justify-between">
+        <!-- Tool 1: 10 Mock Exam Simulator -->
+        <a 
+          href="mock-tests.html" 
+          class="p-5 rounded-2xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 shadow-2xs hover:border-amber-400 dark:hover:border-amber-500 group transition-all flex flex-col justify-between"
+        >
           <div>
-            <div class="w-12 h-12 rounded-xl bg-amber-100 dark:bg-amber-950/70 text-amber-600 dark:text-amber-400 flex items-center justify-center mb-4">
-              <i data-lucide="clipboard-check" class="w-6 h-6"></i>
+            <div class="w-10 h-10 rounded-xl bg-amber-50 dark:bg-amber-950/70 text-amber-600 dark:text-amber-400 flex items-center justify-center mb-3">
+              <i data-lucide="award" class="w-5 h-5"></i>
             </div>
-            <h3 class="font-display font-bold text-base text-slate-900 dark:text-white">
-              Real-Time Exam Simulator
+            <h3 class="font-display font-bold text-sm text-slate-900 dark:text-white group-hover:text-amber-600 dark:group-hover:text-amber-400 transition-colors">
+              10-Mock Exam Simulator
             </h3>
-            <p class="text-xs text-slate-600 dark:text-slate-400 mt-2 leading-relaxed">
-              10 complete practice exams (5 Full 150Q 3-hour tests + 5 Rapid 50Q mini mocks) with the authentic NISM color palette, timer countdown, review flagging, and instant scorecards.
+            <p class="text-xs text-slate-500 dark:text-slate-400 mt-1 leading-relaxed">
+              Practice 5 full 150Q 3-hour tests and 5 rapid 50Q mini tests with official NISM question palette and countdown timer.
             </p>
           </div>
-          <div class="mt-6 pt-4 border-t border-slate-100 dark:border-slate-700">
-            <a href="mock-tests.html" class="inline-flex items-center gap-1.5 text-xs font-bold text-indigo-600 dark:text-indigo-400 hover:underline">
-              <span>Launch Simulator (10 Mocks)</span>
-              <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i>
-            </a>
+          <div class="mt-4 pt-3 border-t border-slate-100 dark:border-slate-800 flex items-center justify-between text-xs font-semibold text-amber-600 dark:text-amber-400">
+            <span>1,000 Questions</span>
+            <span class="flex items-center gap-1">Take Mock Test <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i></span>
           </div>
-        </div>
+        </a>
 
         <!-- Tool 2: Formula Lab -->
-        <div class="p-6 rounded-2xl bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 shadow-2xs hover:shadow-md transition-all flex flex-col justify-between">
+        <div 
+          onclick="window.openFormulaLab()" 
+          class="p-5 rounded-2xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 shadow-2xs hover:border-emerald-400 dark:hover:border-emerald-500 group transition-all flex flex-col justify-between cursor-pointer"
+        >
           <div>
-            <div class="w-12 h-12 rounded-xl bg-emerald-100 dark:bg-emerald-950/70 text-emerald-600 dark:text-emerald-400 flex items-center justify-center mb-4">
-              <i data-lucide="calculator" class="w-6 h-6"></i>
+            <div class="w-10 h-10 rounded-xl bg-emerald-50 dark:bg-emerald-950/70 text-emerald-600 dark:text-emerald-400 flex items-center justify-center mb-3">
+              <i data-lucide="calculator" class="w-5 h-5"></i>
             </div>
-            <h3 class="font-display font-bold text-base text-slate-900 dark:text-white">
-              Interactive Formula Lab (⌘M)
+            <h3 class="font-display font-bold text-sm text-slate-900 dark:text-white group-hover:text-emerald-600 dark:group-hover:text-emerald-400 transition-colors">
+              Interactive Formula Lab
             </h3>
-            <p class="text-xs text-slate-600 dark:text-slate-400 mt-2 leading-relaxed">
-              Instant calculators for Sharpe Ratio, Treynor Ratio, Futures Cost of Carry, Option Greeks, Macaulay Duration, Modified Duration, and Portfolio Beta Hedging.
+            <p class="text-xs text-slate-500 dark:text-slate-400 mt-1 leading-relaxed">
+              Instant dynamic calculators for Sharpe Ratio, Futures Cost of Carry, Macaulay Duration, and Beta Hedging.
             </p>
           </div>
-          <div class="mt-6 pt-4 border-t border-slate-100 dark:border-slate-700">
-            <button onclick="window.openFormulaLab()" class="inline-flex items-center gap-1.5 text-xs font-bold text-emerald-600 dark:text-emerald-400 hover:underline">
-              <span>Open Formula Lab (⌘M)</span>
-              <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i>
-            </button>
+          <div class="mt-4 pt-3 border-t border-slate-100 dark:border-slate-800 flex items-center justify-between text-xs font-semibold text-emerald-600 dark:text-emerald-400">
+            <span>Shortcut: ⌘M</span>
+            <span class="flex items-center gap-1">Open Calculators <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i></span>
           </div>
         </div>
 
         <!-- Tool 3: Spotlight Quick Search -->
-        <div class="p-6 rounded-2xl bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 shadow-2xs hover:shadow-md transition-all flex flex-col justify-between">
+        <div 
+          onclick="window.openSpotlightModal()" 
+          class="p-5 rounded-2xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 shadow-2xs hover:border-indigo-400 dark:hover:border-indigo-500 group transition-all flex flex-col justify-between cursor-pointer"
+        >
           <div>
-            <div class="w-12 h-12 rounded-xl bg-indigo-100 dark:bg-indigo-950/70 text-indigo-600 dark:text-indigo-400 flex items-center justify-center mb-4">
-              <i data-lucide="search" class="w-6 h-6"></i>
+            <div class="w-10 h-10 rounded-xl bg-indigo-50 dark:bg-indigo-950/70 text-indigo-600 dark:text-indigo-400 flex items-center justify-center mb-3">
+              <i data-lucide="search" class="w-5 h-5"></i>
             </div>
-            <h3 class="font-display font-bold text-base text-slate-900 dark:text-white">
-              macOS Spotlight Quick Search (⌘K)
+            <h3 class="font-display font-bold text-sm text-slate-900 dark:text-white group-hover:text-indigo-600 dark:group-hover:text-indigo-400 transition-colors">
+              Instant Topic Spotlight
             </h3>
-            <p class="text-xs text-slate-600 dark:text-slate-400 mt-2 leading-relaxed">
-              Instant keyword and topic search across every chapter, regulatory provision, formula, and mock test with keyboard arrow navigation and immediate lookup.
+            <p class="text-xs text-slate-500 dark:text-slate-400 mt-1 leading-relaxed">
+              Instant fuzzy search across all regulatory topics, chapters, and formula cheatsheets with keyboard arrows.
             </p>
           </div>
-          <div class="mt-6 pt-4 border-t border-slate-100 dark:border-slate-700">
-            <button onclick="window.openSpotlightModal()" class="inline-flex items-center gap-1.5 text-xs font-bold text-indigo-600 dark:text-indigo-400 hover:underline">
-              <span>Open Spotlight (⌘K)</span>
-              <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i>
-            </button>
+          <div class="mt-4 pt-3 border-t border-slate-100 dark:border-slate-800 flex items-center justify-between text-xs font-semibold text-indigo-600 dark:text-indigo-400">
+            <span>Shortcut: ⌘K</span>
+            <span class="flex items-center gap-1">Search Now <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i></span>
           </div>
         </div>
 
@@ -952,54 +477,46 @@
   <!-- ======================================================== -->
   <!-- MODAL: ROADMAP & SYLLABUS DETAILS PREVIEW                -->
   <!-- ======================================================== -->
-  <div id="exam-detail-modal" class="fixed inset-0 z-50 hidden items-center justify-center p-4 bg-slate-900/60 backdrop-blur-sm transition-opacity">
-    <div class="bg-white dark:bg-slate-900 rounded-3xl border border-slate-200 dark:border-slate-700 shadow-2xl max-w-2xl w-full p-6 sm:p-8 overflow-hidden relative animate-in fade-in zoom-in-95 duration-150">
+  <div id="exam-detail-modal" class="fixed inset-0 z-50 hidden items-center justify-center p-4 bg-slate-900/60 backdrop-blur-xs transition-opacity">
+    <div class="bg-white dark:bg-slate-900 rounded-2xl border border-slate-200 dark:border-slate-700 shadow-xl max-w-xl w-full p-6 overflow-hidden relative">
       
       <!-- Close Button -->
-      <button onclick="closeExamModal()" class="absolute top-5 right-5 p-2 rounded-xl text-slate-400 hover:text-slate-600 dark:hover:text-white hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors">
-        <i data-lucide="x" class="w-5 h-5"></i>
+      <button onclick="closeExamModal()" class="absolute top-4 right-4 p-1.5 rounded-lg text-slate-400 hover:text-slate-700 dark:hover:text-white hover:bg-slate-100 dark:hover:bg-slate-800">
+        <i data-lucide="x" class="w-4 h-4"></i>
       </button>
 
-      <!-- Modal Content Header -->
-      <div class="flex items-center gap-3 mb-4">
-        <span id="modal-exam-code" class="px-3 py-1 rounded-lg text-xs font-mono font-bold bg-indigo-50 dark:bg-indigo-950 text-indigo-700 dark:text-indigo-300 border border-indigo-200 dark:border-indigo-800">
+      <div class="flex items-center gap-2 mb-2">
+        <span id="modal-exam-code" class="px-2 py-0.5 rounded text-[11px] font-mono font-bold bg-indigo-50 dark:bg-indigo-950 text-indigo-700 dark:text-indigo-300 border border-indigo-200 dark:border-indigo-800">
           NISM Series
         </span>
-        <span class="text-xs font-semibold text-emerald-600 dark:text-emerald-400 flex items-center gap-1">
-          <i data-lucide="check-circle" class="w-3.5 h-3.5"></i> SEBI Mandated
-        </span>
+        <span class="text-[11px] text-slate-400">SEBI Regulated Mandate</span>
       </div>
 
-      <h3 id="modal-exam-title" class="font-display font-bold text-xl sm:text-2xl text-slate-900 dark:text-white">
+      <h3 id="modal-exam-title" class="font-display font-bold text-lg text-slate-900 dark:text-white">
         Certification Title
       </h3>
 
-      <p id="modal-exam-desc" class="text-xs sm:text-sm text-slate-600 dark:text-slate-300 mt-2 leading-relaxed">
+      <p id="modal-exam-desc" class="text-xs text-slate-500 dark:text-slate-400 mt-1 leading-relaxed">
         Description
       </p>
 
-      <!-- Specifications Grid -->
-      <div id="modal-exam-specs" class="grid grid-cols-2 sm:grid-cols-4 gap-3 my-5 p-3 rounded-2xl bg-slate-50 dark:bg-slate-800/80 border border-slate-100 dark:border-slate-700/80 text-xs">
-        <!-- Injected via JS -->
+      <!-- Specs Grid -->
+      <div id="modal-exam-specs" class="grid grid-cols-2 sm:grid-cols-4 gap-2 my-4 p-2.5 rounded-xl bg-slate-50 dark:bg-slate-800/80 border border-slate-100 dark:border-slate-700 text-xs"></div>
+
+      <!-- Topics -->
+      <div>
+        <span class="text-[11px] font-bold uppercase tracking-wider text-slate-400 block mb-1.5">Syllabus Overview</span>
+        <div id="modal-exam-topics" class="space-y-1 max-h-40 overflow-y-auto text-xs text-slate-600 dark:text-slate-300"></div>
       </div>
 
-      <!-- Syllabus Modules Outline -->
-      <div class="space-y-2">
-        <h4 class="text-xs font-bold uppercase tracking-wider text-slate-500 dark:text-slate-400">Curriculum Highlights</h4>
-        <div id="modal-exam-topics" class="space-y-1.5 max-h-48 overflow-y-auto pr-1 text-xs text-slate-600 dark:text-slate-300">
-          <!-- Injected via JS -->
-        </div>
-      </div>
-
-      <!-- Action Buttons -->
-      <div class="mt-6 pt-4 border-t border-slate-100 dark:border-slate-800 flex items-center justify-between">
-        <span class="text-[11px] text-slate-400">Expansion updates arriving weekly</span>
+      <div class="mt-5 pt-3 border-t border-slate-100 dark:border-slate-800 flex items-center justify-between">
+        <span class="text-[11px] text-slate-400">Roadmap updates arriving weekly</span>
         <div class="flex items-center gap-2">
-          <button onclick="closeExamModal()" class="px-4 py-2 rounded-xl text-xs font-semibold text-slate-600 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors">
+          <button onclick="closeExamModal()" class="px-3 py-1.5 rounded-lg text-xs font-semibold text-slate-600 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800">
             Close
           </button>
-          <a href="nism-5d.html" class="px-4 py-2 rounded-xl text-xs font-bold text-white bg-indigo-600 hover:bg-indigo-700 transition-colors shadow-2xs">
-            Explore Active Series V-D Hub →
+          <a href="nism-5d.html" class="px-3 py-1.5 rounded-lg text-xs font-bold text-white bg-indigo-600 hover:bg-indigo-700 shadow-2xs">
+            Open Series V-D Hub →
           </a>
         </div>
       </div>
@@ -1007,128 +524,35 @@
     </div>
   </div>
 
-  <!-- Master Portal Modern Footer -->
-  <footer class="bg-white dark:bg-slate-900 border-t border-slate-200 dark:border-slate-800 py-12 transition-colors">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-8">
-      
-      <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
-        
-        <!-- Brand Info -->
-        <div class="space-y-3 md:col-span-1">
-          <div class="flex items-center gap-2.5">
-            <div class="w-8 h-8 rounded-lg bg-indigo-600 flex items-center justify-center text-white font-bold">
-              <i data-lucide="shield-check" class="w-4 h-4"></i>
-            </div>
-            <span class="font-display font-bold text-base text-slate-900 dark:text-white">NISM Portal</span>
-          </div>
-          <p class="text-xs text-slate-500 dark:text-slate-400 leading-relaxed">
-            The comprehensive prep academy and real-time exam simulator for SEBI and National Institute of Securities Markets qualifications.
-          </p>
-        </div>
-
-        <!-- Flagship Series V-D Links -->
-        <div class="space-y-2 text-xs">
-          <span class="font-bold text-slate-900 dark:text-white uppercase tracking-wider text-[11px]">Series V-D Flagship</span>
-          <ul class="space-y-1.5 text-slate-600 dark:text-slate-400">
-            <li><a href="nism-5d.html" class="hover:text-indigo-600 transition-colors">Series V-D Master Hub</a></li>
-            <li><a href="module1.html" class="hover:text-indigo-600 transition-colors">Module 1: Mutual Funds (70M)</a></li>
-            <li><a href="module2.html" class="hover:text-indigo-600 transition-colors">Module 2: Equity F&O (50M)</a></li>
-            <li><a href="module3.html" class="hover:text-indigo-600 transition-colors">Module 3: Fixed Income (30M)</a></li>
-            <li><a href="mock-tests.html" class="hover:text-indigo-600 transition-colors">10 Mock Exams Simulator</a></li>
-          </ul>
-        </div>
-
-        <!-- Catalog Certifications -->
-        <div class="space-y-2 text-xs">
-          <span class="font-bold text-slate-900 dark:text-white uppercase tracking-wider text-[11px]">All Certifications</span>
-          <ul class="space-y-1.5 text-slate-600 dark:text-slate-400">
-            <li><a href="#catalog" onclick="openExamModal('va')" class="hover:text-indigo-600 transition-colors">Series V-A: Mutual Funds</a></li>
-            <li><a href="#catalog" onclick="openExamModal('viii')" class="hover:text-indigo-600 transition-colors">Series VIII: Equity Derivatives</a></li>
-            <li><a href="#catalog" onclick="openExamModal('xv')" class="hover:text-indigo-600 transition-colors">Series XV: Research Analyst</a></li>
-            <li><a href="#catalog" onclick="openExamModal('x')" class="hover:text-indigo-600 transition-colors">Series X-A/B: Investment Adviser</a></li>
-            <li><a href="#catalog" onclick="openExamModal('xxia')" class="hover:text-indigo-600 transition-colors">Series XXI-A: PMS Distributors</a></li>
-          </ul>
-        </div>
-
-        <!-- Regulatory & External Resources -->
-        <div class="space-y-2 text-xs">
-          <span class="font-bold text-slate-900 dark:text-white uppercase tracking-wider text-[11px]">Official Resources</span>
-          <ul class="space-y-1.5 text-slate-600 dark:text-slate-400">
-            <li><a href="https://www.nism.ac.in" target="_blank" rel="noopener" class="hover:text-indigo-600 transition-colors flex items-center gap-1">NISM Official Website <i data-lucide="external-link" class="w-3 h-3"></i></a></li>
-            <li><a href="https://www.sebi.gov.in" target="_blank" rel="noopener" class="hover:text-indigo-600 transition-colors flex items-center gap-1">SEBI Regulatory Portal <i data-lucide="external-link" class="w-3 h-3"></i></a></li>
-            <li><a href="https://www.amfiindia.com" target="_blank" rel="noopener" class="hover:text-indigo-600 transition-colors flex items-center gap-1">AMFI India Portal <i data-lucide="external-link" class="w-3 h-3"></i></a></li>
-            <li><button onclick="window.openFormulaLab()" class="hover:text-indigo-600 transition-colors">Interactive Formula Lab (⌘M)</button></li>
-          </ul>
-        </div>
-
+  <!-- Minimal Footer -->
+  <footer class="bg-white dark:bg-slate-900 border-t border-slate-200 dark:border-slate-800 py-6 text-xs text-slate-500">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 flex flex-col sm:flex-row items-center justify-between gap-3">
+      <div class="flex items-center gap-2">
+        <span class="font-display font-bold text-slate-800 dark:text-slate-200">NISM Exam Portal</span>
+        <span>•</span>
+        <span>Educational Exam Preparation & Simulators</span>
       </div>
-
-      <div class="pt-8 border-t border-slate-100 dark:border-slate-800 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-slate-500">
-        <p>© 2026 NISM Certifications Master Portal. Educational study companion & exam simulator.</p>
-        <p class="flex items-center gap-1">Built with precision for financial market aspirants</p>
+      <div class="flex items-center gap-4">
+        <a href="nism-5d.html" class="hover:text-indigo-600">Series V-D Hub</a>
+        <a href="mock-tests.html" class="hover:text-indigo-600">Mock Tests (1,000Q)</a>
+        <button onclick="window.openFormulaLab()" class="hover:text-indigo-600">Formula Lab (⌘M)</button>
+        <button onclick="window.openSpotlightModal()" class="hover:text-indigo-600">Spotlight (⌘K)</button>
       </div>
-
     </div>
   </footer>
 
-  <!-- Script: Catalog Filtering & Modal Logic -->
+  <!-- Modal Script -->
   <script>
-    // Mobile navigation toggle
-    const mobileBtn = document.getElementById("mobile-menu-btn");
-    const mobileMenu = document.getElementById("mobile-menu");
-    const menuIcon = document.getElementById("menu-icon");
-    const closeIcon = document.getElementById("close-icon");
-
-    if (mobileBtn && mobileMenu) {
-      mobileBtn.addEventListener("click", () => {
-        const isClosed = mobileMenu.classList.contains("hidden");
-        mobileMenu.classList.toggle("hidden");
-        if (menuIcon && closeIcon) {
-          menuIcon.classList.toggle("hidden", isClosed);
-          closeIcon.classList.toggle("hidden", !isClosed);
-        }
-      });
-    }
-
-    // Catalog Category Filter
-    function filterCatalog(category) {
-      const cards = document.querySelectorAll(".catalog-card");
-      const buttons = ["btn-filter-all", "btn-filter-distribution", "btn-filter-trading", "btn-filter-research"];
-      
-      buttons.forEach(id => {
-        const b = document.getElementById(id);
-        if (b) {
-          b.className = "px-3.5 py-1.5 rounded-xl bg-white dark:bg-slate-800 text-slate-700 dark:text-slate-300 border border-slate-200 dark:border-slate-700 hover:bg-slate-50 text-xs font-semibold";
-        }
-      });
-
-      const activeBtn = document.getElementById("btn-filter-" + category);
-      if (activeBtn) {
-        activeBtn.className = "px-3.5 py-1.5 rounded-xl bg-indigo-600 text-white shadow-xs text-xs font-semibold";
-      }
-
-      cards.forEach(card => {
-        if (category === "all") {
-          card.classList.remove("hidden");
-        } else if (card.classList.contains(category)) {
-          card.classList.remove("hidden");
-        } else {
-          card.classList.add("hidden");
-        }
-      });
-    }
-
-    // Exam Data for Modal
     const EXAM_DETAILS = {
       va: {
         code: "NISM-Series-V-A",
         title: "Mutual Fund Distributors Certification",
-        desc: "The regulatory benchmark required by AMFI for issuing ARN cards. Qualifies candidates to distribute open-ended and closed-ended mutual fund schemes across India.",
+        desc: "The benchmark entry-level qualification required by AMFI for ARN registration and mutual fund distribution in India.",
         specs: [
           { label: "Questions", val: "100 MCQs" },
-          { label: "Duration", val: "2 Hours (120m)" },
+          { label: "Duration", val: "2 Hours" },
           { label: "Passing Mark", val: "50% (50/100)" },
-          { label: "Negative Marking", val: "None (0%)" }
+          { label: "Negative", val: "None (0%)" }
         ],
         topics: [
           "• Concept and Role of a Mutual Fund & Fund House Architecture",
@@ -1137,19 +561,18 @@
           "• Fund Distribution and Channel Management (ARN, KYD, EUIN)",
           "• Net Asset Value (NAV), Total Expense Ratio (TER), and Pricing",
           "• Taxation of Mutual Funds & Capital Gains (Budget 2024)",
-          "• Investor Services, Cut-Off Timings & SCORES 2.0 Redressal",
-          "• Return Metrics (CAGR, XIRR) & Risk Profiling Framework"
+          "• Investor Services, Cut-Off Timings & SCORES 2.0 Redressal"
         ]
       },
       viii: {
         code: "NISM-Series-VIII",
         title: "Equity Derivatives Certification Examination",
-        desc: "SEBI mandated qualification for approved users, sales personnel, and derivatives dealers of trading members on the National Stock Exchange (NSE) and BSE.",
+        desc: "SEBI mandated qualification for approved users, sales personnel, and derivative dealers on NSE & BSE trading terminals.",
         specs: [
           { label: "Questions", val: "100 MCQs" },
-          { label: "Duration", val: "2 Hours (120m)" },
+          { label: "Duration", val: "2 Hours" },
           { label: "Passing Mark", val: "60% (60/100)" },
-          { label: "Negative Marking", val: "25% (0.25 Mark)" }
+          { label: "Negative", val: "25% (0.25 Mark)" }
         ],
         topics: [
           "• Basics of Derivatives (SCRA Section 2(ac), L.C. Gupta Committee)",
@@ -1157,46 +580,43 @@
           "• Introduction to Forwards and Futures & Cost of Carry Model",
           "• Options Pricing, Intrinsic vs Time Value & Option Greeks",
           "• Trading Strategies (Covered Call, Protective Put, Straddles, Spreads)",
-          "• Regulatory & Risk Containment Framework (SPAN Margins, MWPL, ELM)",
-          "• Clearing, Physical Delivery & Settlement Mechanisms"
+          "• Regulatory & Risk Containment Framework (SPAN Margins, MWPL, ELM)"
         ]
       },
       xv: {
         code: "NISM-Series-XV",
         title: "Research Analyst Certification Examination",
-        desc: "Statutory qualification required under SEBI (Research Analysts) Regulations 2014 for equity research associates, independent analysts, and institutional advisors.",
+        desc: "Statutory qualification required under SEBI (Research Analysts) Regulations 2014 for equity research associates and analysts.",
         specs: [
           { label: "Questions", val: "100 MCQs" },
-          { label: "Duration", val: "2 Hours (120m)" },
+          { label: "Duration", val: "2 Hours" },
           { label: "Passing Mark", val: "60% (60/100)" },
-          { label: "Negative Marking", val: "25% (0.25 Mark)" }
+          { label: "Negative", val: "25% (0.25 Mark)" }
         ],
         topics: [
-          "• Introduction to the Research Analyst Profession & SEBI Mandate",
-          "• Macroeconomic Analysis, GDP, Inflation & Monetary Policy Signals",
+          "• Introduction to Research Analyst Profession & SEBI Mandate",
+          "• Macroeconomic Analysis, GDP, Inflation & Monetary Signals",
           "• Industry Analysis: Porter's 5 Forces, Life-Cycle Dynamics",
           "• Financial Statement Analysis & Quality of Earnings Audits",
           "• Valuation Methodologies: Discounted Cash Flow (DCF), Relative Multiples",
-          "• Behavioral Biases in Financial Modeling & Technical Indicators",
           "• Mandatory Disclosures and Code of Conduct for Research Reports"
         ]
       },
       x: {
         code: "NISM-Series-X-A & X-B",
         title: "Investment Adviser (Levels 1 & 2)",
-        desc: "Dual certification required by SEBI to obtain registration as a Registered Investment Adviser (RIA). Establishes comprehensive fiduciary advisory standards.",
+        desc: "Dual certification required by SEBI to register as a SEBI Registered Investment Adviser (RIA).",
         specs: [
-          { label: "Questions", val: "100 MCQs (each)" },
+          { label: "Questions", val: "100 MCQs each" },
           { label: "Duration", val: "2 Hours each" },
           { label: "Passing Mark", val: "60% (60/100)" },
-          { label: "Negative Marking", val: "25% (0.25 Mark)" }
+          { label: "Negative", val: "25% (0.25 Mark)" }
         ],
         topics: [
           "• Personal Financial Planning Fundamentals & Client Profiling",
           "• Risk Profiling and Asset Allocation (Strategic vs Tactical)",
-          "• Investment Products: Equities, Fixed Income, Alternatives, Real Estate",
+          "• Investment Products: Equities, Fixed Income, Alternatives",
           "• Insurance Planning: Life, Health, General Risk Management",
-          "• Retirement Solutions & Pension Funds (NPS, Annuities)",
           "• Comprehensive Tax Planning & Wealth Transfer / Estate Law",
           "• SEBI (Investment Advisers) Regulations 2013 & Fiduciary Duties"
         ]
@@ -1204,21 +624,19 @@
       xxia: {
         code: "NISM-Series-XXI-A",
         title: "Portfolio Management Services (PMS) Distributors",
-        desc: "Mandatory qualification for distributors, marketing partners, and relationship managers promoting Portfolio Management Services to High-Net-Worth Individuals.",
+        desc: "Mandatory qualification for distributors and relationship managers marketing Portfolio Management Services to HNIs.",
         specs: [
           { label: "Questions", val: "100 MCQs" },
-          { label: "Duration", val: "2 Hours (120m)" },
+          { label: "Duration", val: "2 Hours" },
           { label: "Passing Mark", val: "60% (60/100)" },
-          { label: "Negative Marking", val: "25% (0.25 Mark)" }
+          { label: "Negative", val: "25% (0.25 Mark)" }
         ],
         topics: [
           "• Overview of Portfolio Management Services Ecosystem in India",
           "• SEBI (Portfolio Managers) Regulations 2020 & Minimum ₹50L Ticket",
           "• Discretionary, Non-Discretionary & Advisory PMS Modalities",
           "• Performance Measurement: Time-Weighted Return (TWRR) vs IRR",
-          "• Fee Structures: Fixed, Performance, Hurdle Rates & High-Water Mark",
-          "• Operations, Client Reporting & Tax Implications for PMS Accounts",
-          "• Governance, Risk Profiling & Distributor Due Diligence"
+          "• Fee Structures: Fixed, Performance, Hurdle Rates & High-Water Mark"
         ]
       }
     };
@@ -1233,15 +651,15 @@
 
       const specsContainer = document.getElementById("modal-exam-specs");
       specsContainer.innerHTML = data.specs.map(s => `
-        <div class="p-2.5 rounded-xl bg-white dark:bg-slate-900 border border-slate-200/80 dark:border-slate-700/80">
+        <div class="p-2 rounded-lg bg-white dark:bg-slate-900 border border-slate-200/80 dark:border-slate-700/80">
           <span class="block text-[10px] uppercase font-semibold text-slate-400">${s.label}</span>
-          <span class="font-extrabold text-slate-900 dark:text-white text-xs sm:text-sm">${s.val}</span>
+          <span class="font-extrabold text-slate-900 dark:text-white text-xs">${s.val}</span>
         </div>
       `).join("");
 
       const topicsContainer = document.getElementById("modal-exam-topics");
       topicsContainer.innerHTML = data.topics.map(t => `
-        <div class="py-1 border-b border-slate-100 dark:border-slate-800 last:border-0">${t}</div>
+        <div class="py-0.5">${t}</div>
       `).join("");
 
       const modal = document.getElementById("exam-detail-modal");
@@ -1259,7 +677,6 @@
       modal.classList.remove("flex");
     }
 
-    // Close on backdrop click or Escape
     window.addEventListener("click", (e) => {
       const modal = document.getElementById("exam-detail-modal");
       if (e.target === modal) closeExamModal();
@@ -1268,7 +685,6 @@
       if (e.key === "Escape") closeExamModal();
     });
 
-    // Create Lucide Icons
     document.addEventListener("DOMContentLoaded", () => {
       if (window.lucide && typeof window.lucide.createIcons === "function") {
         window.lucide.createIcons();
