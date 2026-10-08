@@ -1,0 +1,811 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Chapter 8: Capital Gains | NISM Series X-B Notes</title>
+  
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  
+  <!-- Google Fonts: DM Sans & Jost (Eduleb Benchmark) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Jost:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+  
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+
+  <!-- Modern Documentation Design System -->
+  <link rel="stylesheet" href="modern-docs.css">
+  <script defer src="nav-sidebar.js"></script>
+
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['"DM Sans"', 'sans-serif'],
+            display: ['"Jost"', 'sans-serif'],
+            heading: ['"Jost"', 'sans-serif']
+          },
+          colors: {
+            brand: {
+              50: '#eef2ff',
+              100: '#e0e7ff',
+              500: '#525fe1',
+              600: '#434ec9',
+              700: '#353db3',
+              800: '#282f9c',
+              900: '#0b104a'
+            }
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    body {
+      font-family: 'DM Sans', sans-serif;
+      font-size: 16px;
+      line-height: 26px;
+      color: #4a5355;
+    }
+    h1, h2, h3, h4, h5, h6, .font-display, .font-heading {
+      font-family: 'Jost', sans-serif;
+      font-weight: 700;
+    }
+  </style>
+</head>
+<body class="bg-slate-50 dark:bg-slate-950 text-slate-900 dark:text-slate-100 min-h-screen flex flex-col selection:bg-amber-500 selection:text-white antialiased transition-colors duration-200">
+
+  <!-- Smooth Opening Preloader -->
+  <div class="preloaders" id="eduleb-preloader">
+    <span class="loader"></span>
+    <div class="preloader-label">Chapter 8: Capital Gains</div>
+  </div>
+
+  <!-- Standardized Header (Single-Tier, 64px) -->
+  <header class="sticky top-0 z-40 bg-white/95 dark:bg-slate-900/95 backdrop-blur-md border-b border-slate-200/80 dark:border-slate-800 shadow-xs">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 h-16 flex items-center justify-between">
+      <!-- Left: Navigation Back & Chapter Info -->
+      <div class="flex items-center gap-3">
+        <a href="module9.html" class="flex items-center gap-2 text-slate-500 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white transition-colors" title="Back to Module 9 Hub">
+          <div class="w-9 h-9 rounded-xl bg-slate-100 dark:bg-slate-800 hover:bg-slate-200 dark:hover:bg-slate-700 flex items-center justify-center text-slate-700 dark:text-slate-200 transition-colors">
+            <i data-lucide="arrow-left" class="w-4 h-4"></i>
+          </div>
+        </a>
+        <div>
+          <div class="flex items-center gap-2">
+            <span class="text-[11px] font-bold uppercase tracking-wider text-amber-600 dark:text-amber-400 bg-amber-50 dark:bg-amber-950/70 px-2 py-0.5 rounded">Module 9</span>
+            <span class="text-[11px] text-slate-400 font-medium">Chapter 8 of 13</span>
+          </div>
+          <h1 class="font-display font-bold text-sm sm:text-base text-slate-900 dark:text-white leading-tight">Capital Gains</h1>
+        </div>
+      </div>
+
+      <!-- Right: Search, Theme, Quiz Jump -->
+      <div class="flex items-center gap-2">
+        <span class="hidden md:inline-flex items-center gap-1 px-3 py-1 rounded-full text-xs font-bold bg-amber-50 dark:bg-amber-950/70 text-amber-700 dark:text-amber-300 border border-amber-200 dark:border-amber-800">
+          <i data-lucide="star" class="w-3.5 h-3.5 fill-amber-500 text-amber-500"></i>
+          Core Exam Pillar ⭐
+        </span>
+        <button onclick="window.openSpotlightModal()" class="flex items-center gap-2 px-3 py-1.5 rounded-full border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-800 text-slate-500 dark:text-slate-400 text-xs font-medium" title="Search (⌘K)">
+          <i data-lucide="search" class="w-3.5 h-3.5 text-amber-600"></i>
+          <span class="hidden sm:inline">Search</span>
+          <kbd class="px-1.5 py-0.5 rounded bg-slate-100 dark:bg-slate-700 text-[10px] font-mono text-slate-400">⌘K</kbd>
+        </button>
+        <button id="nism-header-theme-btn" onclick="window.toggleDarkMode()" class="p-2 rounded-full border border-slate-200 dark:border-slate-700 text-slate-600 dark:text-slate-300 bg-white dark:bg-slate-800" title="Toggle Theme (⌘D)">
+          <i data-lucide="moon" class="w-4 h-4"></i>
+        </button>
+        <a href="#interactive-quiz" class="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-full text-xs font-bold text-white bg-amber-600 hover:bg-amber-700 font-display transition-colors">
+          <i data-lucide="help-circle" class="w-3.5 h-3.5"></i>
+          <span>Chapter Quiz</span>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Content Layout -->
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 grid grid-cols-1 lg:grid-cols-12 gap-8 flex-grow">
+    
+    <!-- Table of Contents Sidebar (Desktop) -->
+    <aside class="hidden lg:block lg:col-span-3">
+      <div class="sticky top-24 space-y-4">
+        <div class="rounded-2xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 p-4 shadow-xs">
+          <div class="flex items-center gap-2 font-display font-bold text-xs uppercase tracking-wider text-slate-400 mb-3">
+            <i data-lucide="bookmark" class="w-3.5 h-3.5 text-amber-600"></i>
+            <span>Chapter Sections</span>
+          </div>
+          <nav class="space-y-1 text-xs">
+            <a href="#section-1" class="block px-2.5 py-1.5 rounded-lg text-slate-600 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800 hover:text-amber-600 transition-colors">8.1 Capital Asset & Transfer Defined</a>
+            <a href="#section-2" class="block px-2.5 py-1.5 rounded-lg text-amber-700 dark:text-amber-400 font-bold bg-amber-50/80 dark:bg-amber-950/40 hover:bg-amber-100 transition-colors">8.2 Holding Periods (STCA vs LTCA) ⭐</a>
+            <a href="#section-3" class="block px-2.5 py-1.5 rounded-lg text-slate-600 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800 hover:text-amber-600 transition-colors">8.3 Computation Framework</a>
+            <a href="#section-4" class="block px-2.5 py-1.5 rounded-lg text-slate-600 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800 hover:text-amber-600 transition-colors">8.4 Indexation & FA 2024 Changes</a>
+            <a href="#section-5" class="block px-2.5 py-1.5 rounded-lg text-blue-700 dark:text-blue-300 font-bold bg-blue-50/80 dark:bg-blue-950/40 hover:bg-blue-100 transition-colors">8.5 Sec 112A Grandfathering Math ⭐</a>
+            <a href="#section-6" class="block px-2.5 py-1.5 rounded-lg text-emerald-700 dark:text-emerald-400 font-bold bg-emerald-50/80 dark:bg-emerald-950/40 hover:bg-emerald-100 transition-colors">8.6 Exemptions: Sec 54, 54EC, 54F ⭐</a>
+            <a href="#section-7" class="block px-2.5 py-1.5 rounded-lg text-slate-600 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800 hover:text-amber-600 transition-colors">8.7 Capital Gains Account Scheme (CGAS)</a>
+            <a href="#interactive-quiz" class="block px-2.5 py-1.5 rounded-lg text-amber-600 dark:text-amber-400 font-bold bg-amber-50 dark:bg-amber-950/70 hover:bg-amber-100 transition-colors mt-2">Practice Quiz (12 Questions)</a>
+          </nav>
+        </div>
+
+        <!-- Exam Tip Card -->
+        <div class="p-4 rounded-2xl bg-gradient-to-br from-amber-600 to-orange-700 text-white shadow-sm text-xs space-y-2">
+          <div class="flex items-center gap-1.5 font-bold">
+            <i data-lucide="award" class="w-4 h-4 text-amber-200"></i>
+            <span>High-Probability Exam Math</span>
+          </div>
+          <p class="text-amber-100 leading-relaxed">
+            The exam frequently includes a numerical case on <strong>Section 112A grandfathering</strong> (bought before 1-Feb-2018) and a calculation of <strong>proportionate exemption under Section 54F</strong> where only a fraction of net consideration is reinvested.
+          </p>
+        </div>
+      </div>
+    </aside>
+
+    <!-- Main Content Area -->
+    <main class="lg:col-span-9 space-y-8">
+      
+      <!-- Section 8.1 -->
+      <section id="section-1" class="bg-white dark:bg-slate-900 rounded-3xl p-6 sm:p-8 border border-slate-200/90 dark:border-slate-800 shadow-xs space-y-4">
+        <div class="flex items-center gap-2 text-xs font-bold text-amber-600 dark:text-amber-400 uppercase tracking-wider">
+          <span class="w-2 h-2 rounded-full bg-amber-600"></span> Section 8.1
+        </div>
+        <h2 class="font-display text-2xl font-bold text-slate-900 dark:text-white">
+          Capital Asset (Sec 2(14)) & Transfer (Sec 2(47)) Defined
+        </h2>
+        <p class="text-slate-600 dark:text-slate-300 text-sm leading-relaxed">
+          Under Section 45(1), any profits or gains arising from the <strong>transfer</strong> of a <strong>capital asset</strong> effected in the previous year are chargeable to income tax under the head "Capital Gains".
+        </p>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4 text-xs sm:text-sm">
+          <div class="p-4 rounded-xl bg-slate-50 dark:bg-slate-800/60 border border-slate-200 dark:border-slate-700 space-y-2">
+            <h4 class="font-bold text-slate-900 dark:text-white flex items-center gap-1.5">
+              <i data-lucide="check-circle" class="w-4 h-4 text-emerald-600"></i> Capital Asset Includes:
+            </h4>
+            <ul class="list-disc pl-4 space-y-1 text-slate-600 dark:text-slate-400">
+              <li>Property of any kind held by an assessee, whether connected with business or not.</li>
+              <li>Securities held by Foreign Institutional Investors (FIIs/FPIs).</li>
+              <li>Jewellery, archaeological collections, drawings, paintings, sculptures, or any work of art.</li>
+            </ul>
+          </div>
+          <div class="p-4 rounded-xl bg-slate-50 dark:bg-slate-800/60 border border-slate-200 dark:border-slate-700 space-y-2">
+            <h4 class="font-bold text-rose-600 dark:text-rose-400 flex items-center gap-1.5">
+              <i data-lucide="x-circle" class="w-4 h-4 text-rose-500"></i> Capital Asset Specifically EXCLUDES:
+            </h4>
+            <ul class="list-disc pl-4 space-y-1 text-slate-600 dark:text-slate-400">
+              <li><strong>Stock-in-trade:</strong> Consumable stores or raw materials held for business (taxable under PGBP).</li>
+              <li><strong>Personal effects:</strong> Movable personal items (wearing apparel, furniture, cars, mobile phones).</li>
+              <li><strong>Rural Agricultural Land:</strong> Agricultural land in India outside specified municipal limits.</li>
+              <li>Specified Gold Bonds (6.5% Gold Bonds 1977, National Defence Gold Bonds 1980, Special Bearer Bonds 1991, Gold Deposit Bonds / Deposit Certificates under Gold Monetisation Scheme 2015).</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <!-- Section 8.2: Holding Periods ⭐ -->
+      <section id="section-2" class="bg-white dark:bg-slate-900 rounded-3xl p-6 sm:p-8 border-2 border-amber-400/80 dark:border-amber-600/50 shadow-xs space-y-6">
+        <div class="flex items-center justify-between">
+          <div class="flex items-center gap-2 text-xs font-bold text-amber-600 dark:text-amber-400 uppercase tracking-wider">
+            <span class="w-2 h-2 rounded-full bg-amber-500"></span> Section 8.2 &bull; High Yield Focus
+          </div>
+          <span class="px-2.5 py-0.5 rounded-full text-xs font-bold bg-amber-100 dark:bg-amber-950 text-amber-800 dark:text-amber-300 border border-amber-300 dark:border-amber-700 flex items-center gap-1">
+            <i data-lucide="star" class="w-3 h-3 fill-amber-500"></i> FA 2024 Rationalized
+          </span>
+        </div>
+        <h2 class="font-display text-2xl font-bold text-slate-900 dark:text-white">
+          Holding Periods: Short-Term vs Long-Term Capital Assets
+        </h2>
+        <p class="text-slate-600 dark:text-slate-300 text-sm leading-relaxed">
+          The Finance (No. 2) Act 2024 streamlined holding periods into two universal tiers: <strong>12 months</strong> for listed financial assets and <strong>24 months</strong> for all other assets (eliminating the previous 36-month threshold).
+        </p>
+
+        <!-- Holding Period Comparison Table -->
+        <div class="overflow-x-auto">
+          <table class="w-full text-left text-xs sm:text-sm border-collapse">
+            <thead>
+              <tr class="bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 border-b border-slate-200 dark:border-slate-700 font-bold">
+                <th class="p-3.5">Asset Category</th>
+                <th class="p-3.5">Short-Term Threshold</th>
+                <th class="p-3.5">Long-Term Threshold</th>
+                <th class="p-3.5">Key Examples</th>
+              </tr>
+            </thead>
+            <tbody class="divide-y divide-slate-100 dark:divide-slate-800 text-slate-600 dark:text-slate-300">
+              <tr class="hover:bg-slate-50/80 dark:hover:bg-slate-800/40">
+                <td class="p-3.5 font-bold text-blue-700 dark:text-blue-400">12 Months Tier</td>
+                <td class="p-3.5">Held &le; 12 months</td>
+                <td class="p-3.5 font-semibold text-emerald-600">Held &gt; 12 months</td>
+                <td class="p-3.5">Listed equity shares, units of equity-oriented MFs, listed units of business trusts (REIT/InvIT), Zero Coupon Bonds</td>
+              </tr>
+              <tr class="hover:bg-slate-50/80 dark:hover:bg-slate-800/40">
+                <td class="p-3.5 font-bold text-amber-700 dark:text-amber-400">24 Months Tier</td>
+                <td class="p-3.5">Held &le; 24 months</td>
+                <td class="p-3.5 font-semibold text-emerald-600">Held &gt; 24 months</td>
+                <td class="p-3.5">Immovable property (land/building), unlisted equity shares, physical gold, silver, unlisted debentures/bonds</td>
+              </tr>
+              <tr class="hover:bg-slate-50/80 dark:hover:bg-slate-800/40 bg-rose-50/40 dark:bg-rose-950/20">
+                <td class="p-3.5 font-bold text-rose-700 dark:text-rose-400">Section 50AA Exception ⭐</td>
+                <td class="p-3.5 font-bold text-rose-600">Always Short-Term</td>
+                <td class="p-3.5 font-bold text-slate-400">Never Long-Term</td>
+                <td class="p-3.5 text-rose-950 dark:text-rose-300">Specified Mutual Funds (&le;35% equity) acquired on/after 1-Apr-2023 & Market Linked Debentures (MLDs)</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <!-- Section 8.3 & 8.4: Computation Framework & Indexation -->
+      <section id="section-3" class="bg-white dark:bg-slate-900 rounded-3xl p-6 sm:p-8 border border-slate-200/90 dark:border-slate-800 shadow-xs space-y-6">
+        <div class="flex items-center gap-2 text-xs font-bold text-amber-600 dark:text-amber-400 uppercase tracking-wider">
+          <span class="w-2 h-2 rounded-full bg-amber-600"></span> Section 8.3 & 8.4
+        </div>
+        <h2 class="font-display text-2xl font-bold text-slate-900 dark:text-white">
+          Computation of Capital Gains & Indexation Framework
+        </h2>
+        
+        <!-- Formula Box -->
+        <div class="p-5 rounded-2xl bg-slate-50 dark:bg-slate-800/60 border border-slate-200 dark:border-slate-700 space-y-3 font-mono text-xs sm:text-sm">
+          <div class="text-slate-900 dark:text-white font-bold">Standard Computation Equation (Sec 48):</div>
+          <div class="pl-4 border-l-2 border-amber-500 space-y-1 text-slate-700 dark:text-slate-300">
+            <p>Full Value of Consideration (Sale Price)</p>
+            <p class="text-rose-600 dark:text-rose-400">(&minus;) Transfer Expenses (Brokerage, commission, stamp duties on transfer)</p>
+            <p class="font-bold text-blue-600 dark:text-blue-400">= Net Consideration</p>
+            <p class="text-rose-600 dark:text-rose-400">(&minus;) Cost of Acquisition / Indexed Cost of Acquisition (ICOA)</p>
+            <p class="text-rose-600 dark:text-rose-400">(&minus;) Cost of Improvement / Indexed Cost of Improvement (ICOI)</p>
+            <p class="font-bold text-emerald-600 dark:text-emerald-400">= Gross Capital Gains (STCG / LTCG)</p>
+            <p class="text-rose-600 dark:text-rose-400">(&minus;) Exemptions under Sections 54 / 54EC / 54F</p>
+            <p class="font-bold text-indigo-600 dark:text-indigo-400">= Net Taxable Capital Gains</p>
+          </div>
+        </div>
+
+        <!-- Indexed Cost Formula & FA 2024 Changes -->
+        <div class="p-5 rounded-2xl bg-amber-50/60 dark:bg-slate-800/80 border border-amber-200 dark:border-slate-700 space-y-3 text-xs sm:text-sm">
+          <h4 class="font-bold text-slate-900 dark:text-white flex items-center gap-1.5">
+            <i data-lucide="calculator" class="w-4 h-4 text-amber-600"></i> Indexed Cost of Acquisition (ICOA) Formula:
+          </h4>
+          <div class="p-3 bg-white dark:bg-slate-900 rounded-xl border border-slate-200 dark:border-slate-700 font-mono text-xs text-amber-800 dark:text-amber-300">
+            ICOA = Cost of Acquisition &times; (CII of Year of Sale &divide; CII of Year of Purchase or 2001-02, whichever is later)
+          </div>
+          <p class="text-slate-600 dark:text-slate-300 text-xs leading-relaxed">
+            <em>Base Year Rule:</em> For assets acquired prior to 1 April 2001, the Cost of Acquisition is taken as <strong>Higher of: (Actual Cost) and (Fair Market Value as on 1 April 2001)</strong>, capped at the stamp duty value (SDV) on 1 April 2001 for immovable property.
+          </p>
+
+          <!-- Grandfathering for Real Estate Callout -->
+          <div class="p-4 rounded-xl bg-amber-100 dark:bg-amber-950/70 border border-amber-300 dark:border-amber-800 text-xs text-amber-900 dark:text-amber-200 space-y-1.5">
+            <span class="font-bold block">⭐ Real Estate Grandfathering Option (Finance (No. 2) Act 2024):</span>
+            <p>
+              For immovable property (land or building) acquired <strong>BEFORE 23rd July 2024</strong>, resident individuals and HUFs are given a taxpayer-friendly dual choice:
+            </p>
+            <ul class="list-disc pl-5 space-y-0.5">
+              <li><strong>Option A:</strong> Pay tax @ <strong>12.5% without indexation</strong>.</li>
+              <li><strong>Option B:</strong> Pay tax @ <strong>20% with indexation</strong>.</li>
+            </ul>
+            <p class="font-bold text-amber-950 dark:text-amber-100">
+              The assessee can calculate under both methods and pay whichever tax amount is LOWER! For property acquired on or after 23 July 2024, the tax is strictly 12.5% without indexation.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Section 8.5: Grandfathering under Section 112A ⭐ -->
+      <section id="section-5" class="bg-white dark:bg-slate-900 rounded-3xl p-6 sm:p-8 border-2 border-blue-400/80 dark:border-blue-600/50 shadow-xs space-y-6">
+        <div class="flex items-center justify-between">
+          <div class="flex items-center gap-2 text-xs font-bold text-blue-600 dark:text-blue-400 uppercase tracking-wider">
+            <span class="w-2 h-2 rounded-full bg-blue-600"></span> Section 8.5 &bull; High Yield Focus
+          </div>
+          <span class="px-2.5 py-0.5 rounded-full text-xs font-bold bg-blue-100 dark:bg-blue-950 text-blue-800 dark:text-blue-300 border border-blue-300 dark:border-blue-700 flex items-center gap-1">
+            <i data-lucide="star" class="w-3 h-3 fill-blue-500"></i> Sec 112A Math
+          </span>
+        </div>
+        <h2 class="font-display text-2xl font-bold text-slate-900 dark:text-white">
+          Grandfathering Provisions under Section 112A for Listed Equities
+        </h2>
+        <p class="text-slate-600 dark:text-slate-300 text-sm leading-relaxed">
+          When Long-Term Capital Gains on listed equities and equity mutual funds were re-introduced from 1 April 2018, all capital gains accrued up to <strong>31 January 2018</strong> were grandfathered (exempted from tax).
+        </p>
+
+        <!-- Grandfathering 3-Step Rule Box -->
+        <div class="p-5 rounded-2xl bg-blue-50 dark:bg-slate-800/80 border border-blue-200 dark:border-slate-700 space-y-3 text-xs sm:text-sm">
+          <h4 class="font-bold text-blue-950 dark:text-blue-200">Deemed Cost of Acquisition Formula:</h4>
+          <p class="text-slate-700 dark:text-slate-300">
+            For assets acquired on or before <strong>31st January 2018</strong>, the Cost of Acquisition is determined as:
+          </p>
+          <div class="p-4 bg-white dark:bg-slate-900 rounded-xl border border-blue-200 dark:border-slate-700 font-mono text-xs space-y-2">
+            <p class="font-bold text-blue-700 dark:text-blue-300">Cost of Acquisition = HIGHER of:</p>
+            <p class="pl-4">1. Actual Cost of Acquisition</p>
+            <p class="pl-4">2. LOWER of:</p>
+            <p class="pl-8 text-amber-700 dark:text-amber-400">(a) Fair Market Value (FMV) as on 31 January 2018*</p>
+            <p class="pl-8 text-amber-700 dark:text-amber-400">(b) Full Value of Consideration (Actual Sale Price)</p>
+          </div>
+          <p class="text-[11px] text-slate-500 dark:text-slate-400">
+            *FMV is the highest traded price on 31-Jan-2018 for listed shares, or the NAV on 31-Jan-2018 for mutual fund units.
+          </p>
+        </div>
+
+        <!-- Worked Numerical Scenarios -->
+        <div class="space-y-3">
+          <h4 class="font-bold text-sm text-slate-900 dark:text-white">Worked Numerical Examples (Must Memorize):</h4>
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-3 text-xs">
+            <div class="p-3.5 rounded-xl bg-slate-50 dark:bg-slate-800/60 border border-slate-200 dark:border-slate-700 space-y-1.5">
+              <span class="font-bold text-emerald-600 block">Scenario 1: Full Gain Protected</span>
+              <p>• Actual Cost: ₹100</p>
+              <p>• FMV on 31-Jan-2018: ₹150</p>
+              <p>• Sale Price: ₹220</p>
+              <p class="pt-1 text-slate-600 dark:text-slate-400">Lower of (150, 220) = 150.<br>Higher of (100, 150) = <strong>₹150</strong> (Cost).<br><strong class="text-slate-900 dark:text-white">LTCG = ₹220 &minus; ₹150 = ₹70</strong></p>
+            </div>
+
+            <div class="p-3.5 rounded-xl bg-slate-50 dark:bg-slate-800/60 border border-slate-200 dark:border-slate-700 space-y-1.5">
+              <span class="font-bold text-amber-600 block">Scenario 2: Sold Below FMV</span>
+              <p>• Actual Cost: ₹100</p>
+              <p>• FMV on 31-Jan-2018: ₹150</p>
+              <p>• Sale Price: ₹130</p>
+              <p class="pt-1 text-slate-600 dark:text-slate-400">Lower of (150, 130) = 130.<br>Higher of (100, 130) = <strong>₹130</strong> (Cost).<br><strong class="text-slate-900 dark:text-white">LTCG = ₹130 &minus; ₹130 = ₹0</strong> (No gain/loss)</p>
+            </div>
+
+            <div class="p-3.5 rounded-xl bg-slate-50 dark:bg-slate-800/60 border border-slate-200 dark:border-slate-700 space-y-1.5">
+              <span class="font-bold text-rose-600 block">Scenario 3: FMV Below Cost</span>
+              <p>• Actual Cost: ₹100</p>
+              <p>• FMV on 31-Jan-2018: ₹80</p>
+              <p>• Sale Price: ₹140</p>
+              <p class="pt-1 text-slate-600 dark:text-slate-400">Lower of (80, 140) = 80.<br>Higher of (100, 80) = <strong>₹100</strong> (Cost).<br><strong class="text-slate-900 dark:text-white">LTCG = ₹140 &minus; ₹100 = ₹40</strong></p>
+            </div>
+          </div>
+        </div>
+
+        <div class="p-3.5 rounded-xl bg-blue-100/70 dark:bg-blue-950/60 border border-blue-200 dark:border-blue-800 text-xs text-blue-950 dark:text-blue-200 flex items-center gap-2">
+          <i data-lucide="info" class="w-4 h-4 text-blue-600 shrink-0"></i>
+          <span><strong>Exemption Threshold:</strong> Post Finance (No. 2) Act 2024, LTCG under Section 112A is exempt up to <strong>₹1,25,000 per financial year</strong> (raised from ₹1,00,000), and the excess is taxed @ <strong>12.5%</strong> (raised from 10%).</span>
+        </div>
+      </section>
+
+      <!-- Section 8.6: Capital Gains Exemptions (54, 54EC, 54F) ⭐ -->
+      <section id="section-6" class="bg-white dark:bg-slate-900 rounded-3xl p-6 sm:p-8 border-2 border-emerald-400/80 dark:border-emerald-600/50 shadow-xs space-y-6">
+        <div class="flex items-center justify-between">
+          <div class="flex items-center gap-2 text-xs font-bold text-emerald-600 dark:text-emerald-400 uppercase tracking-wider">
+            <span class="w-2 h-2 rounded-full bg-emerald-500"></span> Section 8.6 &bull; High Yield Focus
+          </div>
+          <span class="px-2.5 py-0.5 rounded-full text-xs font-bold bg-emerald-100 dark:bg-emerald-950 text-emerald-800 dark:text-emerald-300 border border-emerald-300 dark:border-emerald-700 flex items-center gap-1">
+            <i data-lucide="star" class="w-3 h-3 fill-emerald-500"></i> Exemptions Triad
+          </span>
+        </div>
+        <h2 class="font-display text-2xl font-bold text-slate-900 dark:text-white">
+          Capital Gains Exemptions: Section 54, Section 54EC & Section 54F
+        </h2>
+        <p class="text-slate-600 dark:text-slate-300 text-sm leading-relaxed">
+          The Income Tax Act provides specific statutory rollover exemptions to eliminate or minimize capital gains taxes when proceeds are reinvested into housing or specified infrastructure bonds:
+        </p>
+
+        <!-- Master Exemptions Comparison Grid -->
+        <div class="overflow-x-auto">
+          <table class="w-full text-left text-xs sm:text-sm border-collapse">
+            <thead>
+              <tr class="bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 border-b border-slate-200 dark:border-slate-700 font-bold">
+                <th class="p-3">Feature</th>
+                <th class="p-3">Section 54</th>
+                <th class="p-3">Section 54EC</th>
+                <th class="p-3">Section 54F ⭐</th>
+              </tr>
+            </thead>
+            <tbody class="divide-y divide-slate-100 dark:divide-slate-800 text-slate-600 dark:text-slate-300">
+              <tr class="hover:bg-slate-50/80 dark:hover:bg-slate-800/40">
+                <td class="p-3 font-semibold text-slate-900 dark:text-white">Eligible Asset Sold</td>
+                <td class="p-3 font-bold text-blue-700 dark:text-blue-300">Long-term Residential House Property</td>
+                <td class="p-3 font-bold text-amber-700 dark:text-amber-300">Long-term Land or Building (or both)</td>
+                <td class="p-3 font-bold text-emerald-700 dark:text-emerald-300">Any Long-term Asset OTHER than Residential House (Shares, Gold, Land)</td>
+              </tr>
+              <tr class="hover:bg-slate-50/80 dark:hover:bg-slate-800/40">
+                <td class="p-3 font-semibold text-slate-900 dark:text-white">Eligible Assessee</td>
+                <td class="p-3">Individual or HUF</td>
+                <td class="p-3">Any Assessee (Ind, HUF, Co, Firm)</td>
+                <td class="p-3">Individual or HUF</td>
+              </tr>
+              <tr class="hover:bg-slate-50/80 dark:hover:bg-slate-800/40">
+                <td class="p-3 font-semibold text-slate-900 dark:text-white">New Asset to Acquire</td>
+                <td class="p-3">One Residential House in India (or 2 houses if LTCG &le; ₹2 Cr, once in lifetime)</td>
+                <td class="p-3">Specified Bonds (NHAI, REC, PFC, IRFC)</td>
+                <td class="p-3">One Residential House in India</td>
+              </tr>
+              <tr class="hover:bg-slate-50/80 dark:hover:bg-slate-800/40">
+                <td class="p-3 font-semibold text-slate-900 dark:text-white">Reinvestment Amount</td>
+                <td class="p-3 font-bold text-blue-700 dark:text-blue-300">Amount of Capital Gain</td>
+                <td class="p-3 font-bold text-amber-700 dark:text-amber-300">Amount of Capital Gain (up to ₹50L)</td>
+                <td class="p-3 font-bold text-rose-600 dark:text-rose-400">Entire NET CONSIDERATION (Full sale price)</td>
+              </tr>
+              <tr class="hover:bg-slate-50/80 dark:hover:bg-slate-800/40">
+                <td class="p-3 font-semibold text-slate-900 dark:text-white">Time Window to Invest</td>
+                <td class="p-3">Purchase: 1 yr before or 2 yrs after sale.<br>Construct: within 3 yrs after sale.</td>
+                <td class="p-3">Within <strong>6 months</strong> from date of transfer</td>
+                <td class="p-3">Purchase: 1 yr before or 2 yrs after sale.<br>Construct: within 3 yrs after sale.</td>
+              </tr>
+              <tr class="hover:bg-slate-50/80 dark:hover:bg-slate-800/40">
+                <td class="p-3 font-semibold text-slate-900 dark:text-white">Statutory Ceiling / Cap</td>
+                <td class="p-3 font-bold text-purple-700 dark:text-purple-300">₹10 Crores</td>
+                <td class="p-3 font-bold text-purple-700 dark:text-purple-300">₹50 Lakhs per Financial Year</td>
+                <td class="p-3 font-bold text-purple-700 dark:text-purple-300">₹10 Crores</td>
+              </tr>
+              <tr class="hover:bg-slate-50/80 dark:hover:bg-slate-800/40">
+                <td class="p-3 font-semibold text-slate-900 dark:text-white">Holding / Lock-in Period</td>
+                <td class="p-3 font-bold">3 Years</td>
+                <td class="p-3 font-bold">5 Years (Bonds)</td>
+                <td class="p-3 font-bold">3 Years</td>
+              </tr>
+              <tr class="hover:bg-slate-50/80 dark:hover:bg-slate-800/40">
+                <td class="p-3 font-semibold text-slate-900 dark:text-white">Special Restrictive Condition</td>
+                <td class="p-3">None</td>
+                <td class="p-3">Cannot pledge or take loan against bonds</td>
+                <td class="p-3 font-bold text-rose-600 dark:text-rose-400">Assessee must NOT own more than ONE residential house on date of transfer</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <!-- Section 54F Proportionate Formula Card -->
+        <div class="p-5 rounded-2xl bg-emerald-50 dark:bg-slate-800/80 border border-emerald-200 dark:border-slate-700 space-y-3 text-xs sm:text-sm">
+          <h4 class="font-bold text-emerald-950 dark:text-emerald-200 flex items-center gap-1.5">
+            <i data-lucide="percent" class="w-4 h-4 text-emerald-600"></i> Section 54F Proportionate Exemption Formula:
+          </h4>
+          <p class="text-slate-600 dark:text-slate-300">
+            Unlike Section 54 (which requires reinvesting only the capital gain), Section 54F requires reinvesting the <strong>entire Net Sale Consideration</strong>. If only a part is reinvested, proportionate exemption is granted:
+          </p>
+          <div class="p-3 bg-white dark:bg-slate-900 rounded-xl border border-emerald-200 dark:border-slate-700 font-mono text-xs text-emerald-800 dark:text-emerald-300">
+            Exemption under Sec 54F = Long-Term Capital Gain &times; (Amount Reinvested &divide; Net Consideration)
+          </div>
+          <p class="text-[11px] text-slate-600 dark:text-slate-400">
+            <strong>Worked Example:</strong> Listed shares sold for Net Consideration ₹1 Crore generating LTCG of ₹60 Lakhs. The investor reinvests ₹50 Lakhs in a new residential flat. Exemption = ₹60L &times; (₹50L &divide; ₹100L) = <strong>₹30 Lakhs</strong>. Remaining ₹30 Lakhs is taxable LTCG.
+          </p>
+        </div>
+      </section>
+
+      <!-- Section 8.7: CGAS 1988 -->
+      <section id="section-7" class="bg-white dark:bg-slate-900 rounded-3xl p-6 sm:p-8 border border-slate-200/90 dark:border-slate-800 shadow-xs space-y-4">
+        <div class="flex items-center gap-2 text-xs font-bold text-amber-600 dark:text-amber-400 uppercase tracking-wider">
+          <span class="w-2 h-2 rounded-full bg-amber-600"></span> Section 8.7
+        </div>
+        <h2 class="font-display text-2xl font-bold text-slate-900 dark:text-white">
+          Capital Gains Account Scheme (CGAS), 1988
+        </h2>
+        <p class="text-slate-600 dark:text-slate-300 text-sm leading-relaxed">
+          If the capital gain (for Sec 54) or net consideration (for Sec 54F) is not utilized for purchase/construction of the new house before the <strong>due date of filing the income tax return under Section 139(1)</strong>, the unutilized amount MUST be deposited into a <strong>Capital Gains Account Scheme (CGAS)</strong> with an authorized bank to claim the exemption in that tax return.
+        </p>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 text-xs">
+          <div class="p-4 rounded-xl bg-slate-50 dark:bg-slate-800/60 border border-slate-200 dark:border-slate-700">
+            <h4 class="font-bold text-slate-900 dark:text-white mb-1">Account Types in CGAS</h4>
+            <p class="text-slate-600 dark:text-slate-400 leading-relaxed">
+              <strong>Account 'A' (Savings Deposit):</strong> For ongoing piecemeal construction payments.<br>
+              <strong>Account 'B' (Term Deposit):</strong> Suitable when full funds are required on a fixed future date for purchase.
+            </p>
+          </div>
+          <div class="p-4 rounded-xl bg-slate-50 dark:bg-slate-800/60 border border-slate-200 dark:border-slate-700">
+            <h4 class="font-bold text-rose-600 dark:text-rose-400 mb-1">Failure to Utilize Funds</h4>
+            <p class="text-slate-600 dark:text-slate-400 leading-relaxed">
+              If the deposited amount is not utilized within the prescribed period (3 years from date of transfer of original asset), the unutilized balance is treated and taxed as <strong>Long-Term Capital Gain of the previous year in which the 3-year period expires</strong>.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Interactive 12-Question Quiz -->
+      <section id="interactive-quiz" class="bg-gradient-to-br from-slate-900 to-indigo-950 text-white rounded-3xl p-6 sm:p-8 shadow-xl space-y-6">
+        <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 pb-4 border-b border-white/10">
+          <div>
+            <span class="px-2.5 py-1 rounded-full text-xs font-bold uppercase tracking-wider bg-amber-500/20 text-amber-300 border border-amber-400/30">
+              Exam Benchmark Quiz
+            </span>
+            <h3 class="font-display text-xl sm:text-2xl font-bold mt-1 text-white">
+              Chapter 8 Practice Quiz (12 Questions)
+            </h3>
+          </div>
+          <div class="flex items-center gap-3">
+            <div class="text-right">
+              <span class="text-xs text-slate-400 block">Progress</span>
+              <span class="text-sm font-bold text-amber-300"><span id="answered-count">0</span> / 12 Answered</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Quiz Questions Container -->
+        <div id="questions-container" class="space-y-6"></div>
+
+        <!-- Quiz Submission & Results -->
+        <div class="pt-4 border-t border-white/10 flex flex-col sm:flex-row items-center justify-between gap-4">
+          <button id="submit-quiz-btn" onclick="submitQuiz()" class="w-full sm:w-auto px-6 py-3 rounded-xl bg-amber-600 hover:bg-amber-500 text-white font-bold text-sm transition-all shadow-md flex items-center justify-center gap-2">
+            <i data-lucide="check-circle" class="w-4 h-4"></i>
+            <span>Submit Quiz & Validate Answers</span>
+          </button>
+          <button id="reset-quiz-btn" onclick="resetQuiz()" class="hidden w-full sm:w-auto px-6 py-3 rounded-xl bg-slate-800 hover:bg-slate-700 text-slate-200 font-bold text-sm transition-all border border-slate-700 flex items-center justify-center gap-2">
+            <i data-lucide="rotate-ccw" class="w-4 h-4"></i>
+            <span>Retake Chapter Quiz</span>
+          </button>
+        </div>
+
+        <!-- Results Display Box -->
+        <div id="quiz-results" class="hidden p-6 rounded-2xl bg-white/10 border border-white/20 space-y-3">
+          <div class="flex items-center justify-between">
+            <span id="result-status-badge" class="px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider"></span>
+            <span id="score-display" class="font-display font-extrabold text-2xl text-white"></span>
+          </div>
+          <p id="percentage-display" class="text-sm text-amber-200 font-medium"></p>
+          <p id="result-summary-text" class="text-xs text-slate-300 leading-relaxed"></p>
+        </div>
+      </section>
+
+    </main>
+  </div>
+
+  <!-- Quiz Script -->
+  <script>
+    const questionsData = [
+      {
+        id: 1,
+        question: "Post Finance (No. 2) Act 2024, what is the holding period threshold for an unlisted equity share to qualify as a Long-Term Capital Asset (LTCA)?",
+        options: [
+          { key: "a", text: "More than 12 months" },
+          { key: "b", text: "More than 24 months" },
+          { key: "c", text: "More than 36 months" },
+          { key: "d", text: "Always deemed short-term" }
+        ],
+        correct: "b",
+        explanation: "Post Finance Act 2024, the holding period for unlisted shares and immovable property is more than 24 months to qualify as long-term."
+      },
+      {
+        id: 2,
+        question: "An investor bought listed equity shares on 10th January 2017 for ₹200. On 31st January 2018, the FMV of the shares was ₹350. The investor sold the shares on 15th September 2024 for ₹500. What is the deemed cost of acquisition under Section 112A?",
+        options: [
+          { key: "a", text: "₹200" },
+          { key: "b", text: "₹350" },
+          { key: "c", text: "₹500" },
+          { key: "d", text: "₹150" }
+        ],
+        correct: "b",
+        explanation: "Cost of Acquisition = Higher of Actual Cost (₹200) and Lower of FMV on 31-Jan-2018 (₹350) or Sale Price (₹500). Lower of (₹350, ₹500) = ₹350. Higher of (₹200, ₹350) = ₹350. Taxable gain = ₹500 - ₹350 = ₹150 per share."
+      },
+      {
+        id: 3,
+        question: "An investor purchased shares for ₹300 in 2016. On 31st January 2018, the FMV was ₹450. The shares were sold in August 2024 for ₹400. What is the Long-Term Capital Gain per share under Section 112A?",
+        options: [
+          { key: "a", text: "₹100 gain" },
+          { key: "b", text: "₹0 (Nil)" },
+          { key: "c", text: "₹50 loss" },
+          { key: "d", text: "₹150 gain" }
+        ],
+        correct: "b",
+        explanation: "Lower of FMV (₹450) and Sale Price (₹400) is ₹400. Higher of Actual Cost (₹300) and ₹400 is ₹400. Cost of acquisition = ₹400. LTCG = ₹400 (Sale Price) - ₹400 (Cost) = ₹0."
+      },
+      {
+        id: 4,
+        question: "What is the annual exemption limit for LTCG on listed equity shares and equity mutual funds under Section 112A following Finance (No. 2) Act 2024?",
+        options: [
+          { key: "a", text: "₹50,000" },
+          { key: "b", text: "₹1,00,000" },
+          { key: "c", text: "₹1,25,000" },
+          { key: "d", text: "₹2,00,000" }
+        ],
+        correct: "c",
+        explanation: "Finance (No. 2) Act 2024 increased the annual LTCG exemption threshold under Section 112A from ₹1,00,000 to ₹1,25,000."
+      },
+      {
+        id: 5,
+        question: "For a residential house property acquired before 23rd July 2024 by a resident individual, what tax options are available upon long-term capital sale?",
+        options: [
+          { key: "a", text: "Only 12.5% without indexation" },
+          { key: "b", text: "Only 20% with indexation" },
+          { key: "c", text: "Lower of 12.5% without indexation OR 20% with indexation" },
+          { key: "d", text: "Exempt from all capital gains tax" }
+        ],
+        correct: "c",
+        explanation: "Finance (No. 2) Act 2024 grandfathered residential properties acquired prior to 23 July 2024 for resident individuals and HUFs, allowing them to calculate tax under both 12.5% (no indexation) and 20% (with indexation) and pay whichever is lower."
+      },
+      {
+        id: 6,
+        question: "Which of the following assets sold qualifies for capital gains exemption under Section 54?",
+        options: [
+          { key: "a", text: "Commercial office building" },
+          { key: "b", text: "Long-term residential house property" },
+          { key: "c", text: "Vacant agricultural land in municipal limits" },
+          { key: "d", text: "Listed equity shares held for 5 years" }
+        ],
+        correct: "b",
+        explanation: "Section 54 specifically applies ONLY to the transfer of a Long-Term Residential House Property where proceeds are invested in another residential house."
+      },
+      {
+        id: 7,
+        question: "What is the maximum investment limit allowed under Section 54EC in specified capital gains bonds (REC, PFC, NHAI, IRFC) in a financial year?",
+        options: [
+          { key: "a", text: "₹25 Lakhs" },
+          { key: "b", text: "₹50 Lakhs" },
+          { key: "c", text: "₹1 Crore" },
+          { key: "d", text: "₹10 Crores" }
+        ],
+        correct: "b",
+        explanation: "Under Section 54EC, the maximum deduction in specified infrastructure bonds is capped at ₹50 Lakhs per financial year."
+      },
+      {
+        id: 8,
+        question: "Within what timeframe must specified bonds under Section 54EC be acquired from the date of transfer of the original asset?",
+        options: [
+          { key: "a", text: "Within 30 days" },
+          { key: "b", text: "Within 60 days" },
+          { key: "c", text: "Within 6 months" },
+          { key: "d", text: "Before the due date of filing ITR" }
+        ],
+        correct: "c",
+        explanation: "Bonds under Section 54EC must be purchased within 6 months from the date of transfer of the capital asset."
+      },
+      {
+        id: 9,
+        question: "Under Section 54F, what essential condition regarding house property ownership must the assessee satisfy on the date of transfer of the original asset?",
+        options: [
+          { key: "a", text: "Must not own any residential house property" },
+          { key: "b", text: "Must not own more than one residential house property" },
+          { key: "c", text: "Must not own more than two residential house properties" },
+          { key: "d", text: "Must reside in rented accommodation" }
+        ],
+        correct: "b",
+        explanation: "To claim Section 54F exemption, the assessee must not own more than one residential house (other than the new asset being acquired) on the date of transfer of the original asset."
+      },
+      {
+        id: 10,
+        question: "Ravi sold listed shares for Net Consideration of ₹80 Lakhs, making a Long-Term Capital Gain of ₹40 Lakhs. He invests ₹40 Lakhs in purchasing a new residential house. What is his exemption under Section 54F?",
+        options: [
+          { key: "a", text: "₹40 Lakhs" },
+          { key: "b", text: "₹20 Lakhs" },
+          { key: "c", text: "₹10 Lakhs" },
+          { key: "d", text: "₹0 because shares are not covered under Sec 54F" }
+        ],
+        correct: "b",
+        explanation: "Under Sec 54F, exemption is proportionate: LTCG * (Investment / Net Consideration) = ₹40L * (₹40L / ₹80L) = ₹20 Lakhs."
+      },
+      {
+        id: 11,
+        question: "What is the maximum monetary cap on exemption under both Section 54 and Section 54F introduced by the Finance Act?",
+        options: [
+          { key: "a", text: "₹2 Crores" },
+          { key: "b", text: "₹5 Crores" },
+          { key: "c", text: "₹10 Crores" },
+          { key: "d", text: "Unlimited" }
+        ],
+        correct: "c",
+        explanation: "The Finance Act capped the maximum deduction allowable under Section 54 and Section 54F at ₹10 Crores."
+      },
+      {
+        id: 12,
+        question: "If funds deposited in a Capital Gains Account Scheme (CGAS) under Section 54 are not utilized within 3 years, how is the unutilized balance taxed?",
+        options: [
+          { key: "a", text: "Taxed as Short-Term Capital Gain in the 4th year" },
+          { key: "b", text: "Taxed as Long-Term Capital Gain of the previous year in which the 3-year period expires" },
+          { key: "c", text: "Taxed as Income from Other Sources" },
+          { key: "d", text: "Forfeited by the Central Government" }
+        ],
+        correct: "b",
+        explanation: "Unutilized amounts in CGAS are charged to tax as Long-Term Capital Gains of the previous year in which the 3-year period from the transfer of the original asset expires."
+      }
+    ];
+
+    let userAnswers = {};
+
+    function renderQuiz() {
+      const container = document.getElementById("questions-container");
+      container.innerHTML = "";
+
+      questionsData.forEach((q, index) => {
+        const qDiv = document.createElement("div");
+        qDiv.className = "p-5 rounded-2xl bg-white/5 border border-white/10 space-y-4 transition-all";
+        qDiv.id = `q-box-${q.id}`;
+
+        let optionsHtml = "";
+        q.options.forEach(opt => {
+          optionsHtml += `
+            <label class="flex items-center gap-3 p-3 rounded-xl bg-white/5 hover:bg-white/10 border border-white/5 cursor-pointer text-xs sm:text-sm transition-all" onclick="selectOption(${q.id}, '${opt.key}')" id="label-${q.id}-${opt.key}">
+              <input type="radio" name="question-${q.id}" value="${opt.key}" class="w-4 h-4 text-amber-500 focus:ring-0 focus:ring-offset-0 bg-transparent border-slate-500">
+              <span class="font-bold text-amber-300 w-5 uppercase">${opt.key}.</span>
+              <span class="text-slate-200">${opt.text}</span>
+            </label>
+          `;
+        });
+
+        qDiv.innerHTML = `
+          <div class="flex items-start justify-between gap-2">
+            <span class="text-xs font-bold text-amber-400 uppercase tracking-wider">Question ${index + 1} of ${questionsData.length}</span>
+            <span id="badge-${q.id}" class="text-xs px-2 py-0.5 rounded-full bg-white/5 text-slate-400 font-medium">Unanswered</span>
+          </div>
+          <h4 class="font-display font-semibold text-sm sm:text-base text-white">${q.question}</h4>
+          <div class="space-y-2 mt-3">
+            ${optionsHtml}
+          </div>
+          <div id="explanation-${q.id}" class="hidden p-4 rounded-xl text-xs sm:text-sm mt-3 space-y-1"></div>
+        `;
+        container.appendChild(qDiv);
+      });
+      lucide.createIcons();
+    }
+
+    function selectOption(qId, key) {
+      userAnswers[qId] = key;
+      const count = Object.keys(userAnswers).length;
+      document.getElementById("answered-count").innerText = count;
+      
+      const badge = document.getElementById(`badge-${qId}`);
+      if (badge) {
+        badge.innerText = "Answered";
+        badge.className = "text-xs px-2 py-0.5 rounded-full bg-amber-500/20 text-amber-300 font-medium";
+      }
+
+      const q = questionsData.find(item => item.id === qId);
+      q.options.forEach(opt => {
+        const lbl = document.getElementById(`label-${qId}-${opt.key}`);
+        if (opt.key === key) {
+          lbl.className = "flex items-center gap-3 p-3 rounded-xl bg-amber-600/30 border border-amber-400/50 cursor-pointer text-xs sm:text-sm transition-all";
+        } else {
+          lbl.className = "flex items-center gap-3 p-3 rounded-xl bg-white/5 hover:bg-white/10 border border-white/5 cursor-pointer text-xs sm:text-sm transition-all";
+        }
+      });
+    }
+
+    function submitQuiz() {
+      let score = 0;
+      questionsData.forEach(q => {
+        const selected = userAnswers[q.id];
+        const isCorrect = selected === q.correct;
+        if (isCorrect) score++;
+
+        const explanationDiv = document.getElementById(`explanation-${q.id}`);
+        explanationDiv.classList.remove("hidden");
+
+        if (isCorrect) {
+          explanationDiv.className = "p-4 rounded-xl text-xs sm:text-sm mt-3 bg-emerald-950/60 border border-emerald-600 text-emerald-200 space-y-1";
+          explanationDiv.innerHTML = `<div class="font-bold text-emerald-400 flex items-center gap-1.5"><i data-lucide="check" class="w-4 h-4"></i> Correct!</div><p>${q.explanation}</p>`;
+        } else {
+          explanationDiv.className = "p-4 rounded-xl text-xs sm:text-sm mt-3 bg-rose-950/60 border border-rose-600 text-rose-200 space-y-1";
+          explanationDiv.innerHTML = `<div class="font-bold text-rose-400 flex items-center gap-1.5"><i data-lucide="x" class="w-4 h-4"></i> Incorrect (Correct Answer: ${q.correct.toUpperCase()})</div><p>${q.explanation}</p>`;
+        }
+      });
+
+      const percentage = Math.round((score / questionsData.length) * 100);
+      const passed = percentage >= 60;
+      
+      const resultsDiv = document.getElementById("quiz-results");
+      resultsDiv.classList.remove("hidden");
+
+      const statusBadge = document.getElementById("result-status-badge");
+      statusBadge.innerText = passed ? "Status: Passed (60%+ Benchmark)" : "Status: Needs Revision";
+      statusBadge.className = passed ? "px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider bg-emerald-500 text-emerald-950" : "px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider bg-amber-500 text-amber-950";
+
+      document.getElementById("score-display").innerText = `${score} / ${questionsData.length}`;
+      document.getElementById("percentage-display").innerText = `${percentage}% Score (NISM Passing Benchmark: 60%)`;
+
+      document.getElementById("result-summary-text").innerText = passed
+        ? `Superb! You scored ${percentage}%, mastering core capital gains principles, Section 112A grandfathering, and rollover exemptions.`
+        : `You scored ${percentage}%. Review Section 54F proportionate exemption formulas and Section 112A grandfathering rules before retaking.`;
+
+      document.getElementById("submit-quiz-btn").classList.add("hidden");
+      document.getElementById("reset-quiz-btn").classList.remove("hidden");
+
+      resultsDiv.scrollIntoView({ behavior: 'smooth' });
+      lucide.createIcons();
+    }
+
+    function resetQuiz() {
+      userAnswers = {};
+      document.getElementById("answered-count").innerText = "0";
+      document.getElementById("quiz-results").classList.add("hidden");
+      document.getElementById("submit-quiz-btn").classList.remove("hidden");
+      document.getElementById("reset-quiz-btn").classList.add("hidden");
+      renderQuiz();
+      document.getElementById("interactive-quiz").scrollIntoView({ behavior: 'smooth' });
+    }
+
+    // Initialize Quiz & Preloader
+    window.addEventListener('load', () => {
+      const preloader = document.getElementById('eduleb-preloader');
+      if (preloader) {
+        preloader.classList.add('loaded');
+        setTimeout(() => preloader.style.display = 'none', 400);
+      }
+      renderQuiz();
+      lucide.createIcons();
+    });
+  </script>
+</body>
+</html>

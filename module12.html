@@ -1,0 +1,604 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Module 12: Comprehensive Financial Advice | NISM Series X-B Hub</title>
+  
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  
+  <!-- Google Fonts: DM Sans & Jost (Eduleb Benchmark) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Jost:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+  
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+
+  <!-- Modern Documentation Design System & Zoom Engine -->
+  <link rel="stylesheet" href="modern-docs.css">
+  <script defer src="nav-sidebar.js"></script>
+
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['"DM Sans"', 'sans-serif'],
+            display: ['"Jost"', 'sans-serif'],
+            heading: ['"Jost"', 'sans-serif']
+          },
+          colors: {
+            brand: {
+              50: '#eef2ff',
+              100: '#e0e7ff',
+              500: '#525fe1',
+              600: '#434ec9',
+              700: '#353db3',
+              800: '#282f9c',
+              900: '#0b104a'
+            }
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    body {
+      font-family: 'DM Sans', sans-serif;
+      font-size: 16px;
+      line-height: 26px;
+      color: #4a5355;
+    }
+    h1, h2, h3, h4, h5, h6, .font-display, .font-heading {
+      font-family: 'Jost', sans-serif;
+      font-weight: 700;
+    }
+  </style>
+</head>
+<body class="bg-slate-50 dark:bg-slate-950 text-slate-900 dark:text-slate-100 min-h-screen flex flex-col selection:bg-indigo-500 selection:text-white antialiased transition-colors duration-200">
+
+  <!-- Smooth Opening Preloader -->
+  <div class="preloaders" id="eduleb-preloader">
+    <span class="loader"></span>
+    <div class="preloader-label">Module 12: Comprehensive Financial Advice</div>
+  </div>
+
+  <!-- Standardized Header (Single-Tier, 64px) -->
+  <header class="sticky top-0 z-40 bg-white/95 dark:bg-slate-900/95 backdrop-blur-md border-b border-slate-200/80 dark:border-slate-800 shadow-xs">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 h-16 flex items-center justify-between">
+      <!-- Left: Logo & Context Label -->
+      <a href="index.html" class="flex items-center gap-2.5 group">
+        <div class="w-9 h-9 rounded-xl bg-indigo-600 flex items-center justify-center text-white font-bold shadow-xs group-hover:scale-105 transition-transform">
+          <i data-lucide="shield-check" class="w-5 h-5"></i>
+        </div>
+        <div>
+          <span class="font-display font-bold text-base tracking-tight text-[#0b104a] dark:text-white block leading-tight">NISM Portal</span>
+          <span class="block text-[10px] text-indigo-600 dark:text-indigo-400 font-bold uppercase tracking-wider">Series X-B &bull; Module 12</span>
+        </div>
+      </a>
+
+      <!-- Center: Navigation Links -->
+      <nav class="hidden lg:flex items-center gap-1 text-sm font-medium font-display">
+        <a href="index.html#certifications" class="px-2.5 py-1.5 rounded-lg text-slate-600 dark:text-slate-300 hover:text-[#0b104a] hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors">All Exams</a>
+        <a href="nism-10b.html" class="px-2.5 py-1.5 rounded-lg text-slate-600 dark:text-slate-300 hover:text-amber-600 hover:bg-amber-50 dark:hover:bg-amber-950/40 transition-colors">Series X-B Hub</a>
+        <a href="module12.html" class="px-2.5 py-1.5 rounded-lg font-bold text-indigo-700 dark:text-indigo-300 bg-indigo-50 dark:bg-indigo-950/80 border border-indigo-200 dark:border-indigo-800 transition-colors">Module 12 Hub (45M ⭐)</a>
+        <a href="module12-ch18.html" class="px-2.5 py-1.5 rounded-lg text-slate-600 dark:text-slate-300 hover:text-indigo-600 hover:bg-indigo-50/60 dark:hover:bg-slate-800 transition-colors">Ch 18: Risk Profiling</a>
+        <a href="module12-ch19.html" class="px-2.5 py-1.5 rounded-lg text-slate-600 dark:text-slate-300 hover:text-indigo-600 hover:bg-indigo-50/60 dark:hover:bg-slate-800 transition-colors">Ch 19: Performance</a>
+        <a href="module12-ch20.html" class="px-2.5 py-1.5 rounded-lg text-slate-600 dark:text-slate-300 hover:text-amber-600 hover:bg-amber-50/60 dark:hover:bg-slate-800 transition-colors font-bold">Ch 20: 4 Case Studies ⭐⭐⭐</a>
+      </nav>
+
+      <!-- Right: Search, Theme, CTA -->
+      <div class="flex items-center gap-2">
+        <button onclick="window.openSpotlightModal()" class="flex items-center gap-2 px-3 py-1.5 rounded-full border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-800 text-slate-500 dark:text-slate-400 text-xs font-medium" title="Search (⌘K)">
+          <i data-lucide="search" class="w-3.5 h-3.5 text-indigo-600"></i>
+          <span class="hidden sm:inline">Search</span>
+          <kbd class="px-1.5 py-0.5 rounded bg-slate-100 dark:bg-slate-700 text-[10px] font-mono text-slate-400">⌘K</kbd>
+        </button>
+        <button id="nism-header-theme-btn" onclick="window.toggleDarkMode()" class="p-2 rounded-full border border-slate-200 dark:border-slate-700 text-slate-600 dark:text-slate-300 bg-white dark:bg-slate-800" title="Toggle Theme (⌘D)">
+          <i data-lucide="moon" class="w-4 h-4"></i>
+        </button>
+        <a href="module12-ch20.html" class="hidden sm:inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-full text-xs font-bold text-white bg-indigo-600 hover:bg-indigo-700 font-display shadow-xs">
+          <span>Case Studies</span>
+          <i data-lucide="arrow-right" class="w-3 h-3"></i>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero Banner: Module 12 Special Spotlight -->
+  <section class="relative overflow-hidden bg-gradient-to-b from-indigo-50/90 via-amber-50/30 to-slate-50 dark:from-slate-900 dark:via-indigo-950/40 dark:to-slate-950 py-12 sm:py-16 border-b border-slate-200 dark:border-slate-800">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+      <div class="flex flex-wrap items-center gap-2 mb-4">
+        <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-indigo-100 dark:bg-indigo-950/80 text-indigo-800 dark:text-indigo-300 text-xs font-bold border border-indigo-200 dark:border-indigo-800">
+          <i data-lucide="layers" class="w-3.5 h-3.5"></i>
+          Module 12: Final Capstone Module
+        </span>
+        <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-amber-100 dark:bg-amber-950/80 text-amber-800 dark:text-amber-300 text-xs font-extrabold border border-amber-300 dark:border-amber-700 shadow-2xs">
+          <i data-lucide="star" class="w-3.5 h-3.5 fill-amber-500 text-amber-600"></i>
+          Super High Yield: 45 of 150 Marks (30.0%)
+        </span>
+        <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-emerald-100 dark:bg-emerald-950 text-emerald-800 dark:text-emerald-300 text-xs font-semibold">
+          <i data-lucide="check-circle" class="w-3.5 h-3.5"></i>
+          Tested via Theory + Multi-Question Cases
+        </span>
+      </div>
+
+      <div class="max-w-4xl">
+        <h1 class="font-display font-extrabold text-3xl sm:text-5xl text-[#0b104a] dark:text-white tracking-tight leading-tight">
+          Comprehensive Financial Advice & Case Studies
+        </h1>
+        <p class="mt-4 text-base sm:text-lg text-slate-600 dark:text-slate-300 leading-relaxed">
+          The ultimate testing module for the <strong>NISM Series X-B: Investment Adviser Level 2 Certification</strong>. 
+          Module 12 brings together investor risk profiling frameworks, cross-product performance attribution (Sharpe, Treynor, Sortino, Alpha, Information Ratio), and the official <strong>60-mark multi-goal case study examination structure</strong> spanning HLV life insurance adequacy, step-up retirement corpus planning, capital gains optimization under Budget 2024, and private family estate trusts.
+        </p>
+      </div>
+
+      <!-- Quick Metrics Strip -->
+      <div class="grid grid-cols-2 sm:grid-cols-4 gap-4 mt-8 pt-8 border-t border-slate-200/80 dark:border-slate-800">
+        <div class="bg-white/80 dark:bg-slate-900/80 p-4 rounded-2xl border border-slate-200 dark:border-slate-800 shadow-xs">
+          <div class="text-xs text-slate-500 dark:text-slate-400 font-medium">Exam Weightage</div>
+          <div class="text-2xl font-black text-indigo-600 dark:text-indigo-400 mt-1 font-display">45 Marks</div>
+          <div class="text-[11px] text-slate-500 dark:text-slate-400 mt-0.5">30% of total 150 marks</div>
+        </div>
+        <div class="bg-white/80 dark:bg-slate-900/80 p-4 rounded-2xl border border-slate-200 dark:border-slate-800 shadow-xs">
+          <div class="text-xs text-slate-500 dark:text-slate-400 font-medium">Curriculum Scope</div>
+          <div class="text-2xl font-black text-slate-900 dark:text-white mt-1 font-display">3 Chapters</div>
+          <div class="text-[11px] text-slate-500 dark:text-slate-400 mt-0.5">Ch 18, Ch 19 & Ch 20</div>
+        </div>
+        <div class="bg-white/80 dark:bg-slate-900/80 p-4 rounded-2xl border border-slate-200 dark:border-slate-800 shadow-xs">
+          <div class="text-xs text-slate-500 dark:text-slate-400 font-medium">Case Studies In Depth</div>
+          <div class="text-2xl font-black text-amber-600 dark:text-amber-400 mt-1 font-display">4 Master Cases</div>
+          <div class="text-[11px] text-slate-500 dark:text-slate-400 mt-0.5">20 Solved Sub-questions ⭐</div>
+        </div>
+        <div class="bg-white/80 dark:bg-slate-900/80 p-4 rounded-2xl border border-slate-200 dark:border-slate-800 shadow-xs">
+          <div class="text-xs text-slate-500 dark:text-slate-400 font-medium">Interactive Practice</div>
+          <div class="text-2xl font-black text-emerald-600 dark:text-emerald-400 mt-1 font-display">44 Questions</div>
+          <div class="text-[11px] text-slate-500 dark:text-slate-400 mt-0.5">12Q + 12Q + 20 Case Qs</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Main Content Layout -->
+  <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10 flex-grow space-y-12">
+
+    <!-- Section 1: The 3 Core Chapters Architecture -->
+    <section class="space-y-6">
+      <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-3">
+        <div>
+          <span class="text-xs font-bold text-indigo-600 dark:text-indigo-400 uppercase tracking-wider">Chapter Roadmaps</span>
+          <h2 class="font-display font-extrabold text-2xl sm:text-3xl text-slate-900 dark:text-white mt-1">
+            Module 12 Chapter Breakdown & Study Guides
+          </h2>
+        </div>
+        <span class="text-xs font-semibold px-3 py-1.5 rounded-full bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300">
+          Target Passing: 60% (90/150)
+        </span>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+
+        <!-- Chapter 18 Card -->
+        <div class="rounded-3xl p-6 bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 shadow-xs hover:shadow-md hover:border-indigo-300 dark:hover:border-indigo-700 transition-all flex flex-col justify-between group">
+          <div>
+            <div class="flex items-center justify-between mb-4">
+              <span class="px-2.5 py-1 rounded-lg font-mono text-xs font-bold bg-indigo-50 dark:bg-indigo-950 text-indigo-700 dark:text-indigo-300 border border-indigo-200 dark:border-indigo-800">
+                Chapter 18
+              </span>
+              <span class="px-2.5 py-0.5 rounded-full text-xs font-bold bg-amber-50 dark:bg-amber-950 text-amber-700 dark:text-amber-300 border border-amber-200 dark:border-amber-800">
+                10 Marks ⭐
+              </span>
+            </div>
+
+            <h3 class="font-display font-bold text-xl text-slate-900 dark:text-white group-hover:text-indigo-600 dark:group-hover:text-indigo-400 transition-colors">
+              Risk Profiling for Investors
+            </h3>
+
+            <p class="text-xs sm:text-sm text-slate-600 dark:text-slate-400 mt-2.5 leading-relaxed">
+              Master the foundational distinction between <strong>Risk Capacity</strong> (objective financial ability) and <strong>Risk Tolerance / Appetite</strong> (psychological tolerance). Learn psychometric questionnaire design, behavioral traps, and asset allocation linkages (Strategic SAA vs Tactical TAA).
+            </p>
+
+            <div class="mt-4 pt-4 border-t border-slate-100 dark:border-slate-800 space-y-2 text-xs text-slate-600 dark:text-slate-400">
+              <div class="flex items-start gap-2">
+                <i data-lucide="check" class="w-4 h-4 text-indigo-600 shrink-0 mt-0.5"></i>
+                <span><strong>Capacity strictly overrides Tolerance</strong> in suitability</span>
+              </div>
+              <div class="flex items-start gap-2">
+                <i data-lucide="check" class="w-4 h-4 text-indigo-600 shrink-0 mt-0.5"></i>
+                <span>Questionnaire design flaws & framing biases</span>
+              </div>
+              <div class="flex items-start gap-2">
+                <i data-lucide="check" class="w-4 h-4 text-indigo-600 shrink-0 mt-0.5"></i>
+                <span>Core & Satellite allocation framework (65-80% / 20-35%)</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="mt-6 pt-4 border-t border-slate-100 dark:border-slate-800">
+            <a href="module12-ch18.html" class="w-full py-2.5 px-4 rounded-xl font-bold text-xs text-white bg-indigo-600 hover:bg-indigo-700 text-center transition-colors flex items-center justify-center gap-1.5 shadow-2xs">
+              <span>Read Chapter 18 Notes & Quiz</span>
+              <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- Chapter 19 Card -->
+        <div class="rounded-3xl p-6 bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 shadow-xs hover:shadow-md hover:border-indigo-300 dark:hover:border-indigo-700 transition-all flex flex-col justify-between group">
+          <div>
+            <div class="flex items-center justify-between mb-4">
+              <span class="px-2.5 py-1 rounded-lg font-mono text-xs font-bold bg-indigo-50 dark:bg-indigo-950 text-indigo-700 dark:text-indigo-300 border border-indigo-200 dark:border-indigo-800">
+                Chapter 19
+              </span>
+              <span class="px-2.5 py-0.5 rounded-full text-xs font-bold bg-amber-50 dark:bg-amber-950 text-amber-700 dark:text-amber-300 border border-amber-200 dark:border-amber-800">
+                15 Marks ⭐
+              </span>
+            </div>
+
+            <h3 class="font-display font-bold text-xl text-slate-900 dark:text-white group-hover:text-indigo-600 dark:group-hover:text-indigo-400 transition-colors">
+              Comparison of Products Across Categories
+            </h3>
+
+            <p class="text-xs sm:text-sm text-slate-600 dark:text-slate-400 mt-2.5 leading-relaxed">
+              Cross-category evaluation of Direct Equities, Mutual Funds, PMS (₹50L ticket), AIFs (₹1 Cr ticket, Cat I/II/III), Gold instruments (SGB vs ETF), and Fixed Income. In-depth risk-adjusted attribution metrics: Sharpe, Treynor, Sortino, Jensen's Alpha, and Information Ratio.
+            </p>
+
+            <div class="mt-4 pt-4 border-t border-slate-100 dark:border-slate-800 space-y-2 text-xs text-slate-600 dark:text-slate-400">
+              <div class="flex items-start gap-2">
+                <i data-lucide="check" class="w-4 h-4 text-indigo-600 shrink-0 mt-0.5"></i>
+                <span>Complete Performance Attribution Formulas & Math</span>
+              </div>
+              <div class="flex items-start gap-2">
+                <i data-lucide="check" class="w-4 h-4 text-indigo-600 shrink-0 mt-0.5"></i>
+                <span>Sharpe (Total Risk) vs Treynor (Beta Risk) Selection</span>
+              </div>
+              <div class="flex items-start gap-2">
+                <i data-lucide="check" class="w-4 h-4 text-indigo-600 shrink-0 mt-0.5"></i>
+                <span>Portfolio Rebalancing Triggers (Corridor vs Calendar)</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="mt-6 pt-4 border-t border-slate-100 dark:border-slate-800">
+            <a href="module12-ch19.html" class="w-full py-2.5 px-4 rounded-xl font-bold text-xs text-white bg-indigo-600 hover:bg-indigo-700 text-center transition-colors flex items-center justify-center gap-1.5 shadow-2xs">
+              <span>Read Chapter 19 Notes & Quiz</span>
+              <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- Chapter 20 Card (Flagship) -->
+        <div class="rounded-3xl p-6 bg-gradient-to-br from-indigo-900 via-indigo-950 to-slate-950 text-white shadow-md flex flex-col justify-between relative group border border-indigo-700/80">
+          <div class="absolute -top-3 right-6 px-3 py-0.5 rounded-full bg-amber-500 text-slate-950 font-extrabold text-[10px] uppercase tracking-wider shadow-sm flex items-center gap-1">
+            <i data-lucide="award" class="w-3 h-3"></i>
+            Highest Exam Weightage
+          </div>
+
+          <div>
+            <div class="flex items-center justify-between mb-4">
+              <span class="px-2.5 py-1 rounded-lg font-mono text-xs font-bold bg-white/10 text-amber-300 border border-white/20">
+                Chapter 20
+              </span>
+              <span class="px-2.5 py-0.5 rounded-full text-xs font-bold bg-amber-400 text-slate-950">
+                20M + 60M Case Exam ⭐⭐⭐
+              </span>
+            </div>
+
+            <h3 class="font-display font-bold text-xl text-white group-hover:text-amber-300 transition-colors">
+              Comprehensive Financial Advice & Case Studies
+            </h3>
+
+            <p class="text-xs sm:text-sm text-slate-300 mt-2.5 leading-relaxed">
+              The capstone chapter with <strong>4 complete real-world client case studies</strong> featuring full financial balance sheets, cash flow tables, and 5 multi-part sub-questions per case (20 questions total) with step-by-step mathematical working.
+            </p>
+
+            <div class="mt-4 pt-4 border-t border-white/10 space-y-2 text-xs text-slate-300">
+              <div class="flex items-start gap-2">
+                <i data-lucide="check" class="w-4 h-4 text-amber-400 shrink-0 mt-0.5"></i>
+                <span><strong>Case 1:</strong> HLV Life Insurance & Children Education</span>
+              </div>
+              <div class="flex items-start gap-2">
+                <i data-lucide="check" class="w-4 h-4 text-amber-400 shrink-0 mt-0.5"></i>
+                <span><strong>Case 2:</strong> Step-Up Retirement Corpus & SWP Decumulation</span>
+              </div>
+              <div class="flex items-start gap-2">
+                <i data-lucide="check" class="w-4 h-4 text-amber-400 shrink-0 mt-0.5"></i>
+                <span><strong>Case 3:</strong> Capital Gains Optimization (Budget 2024 & Sec 54)</span>
+              </div>
+              <div class="flex items-start gap-2">
+                <i data-lucide="check" class="w-4 h-4 text-amber-400 shrink-0 mt-0.5"></i>
+                <span><strong>Case 4:</strong> Private Family Trust & Special Needs Succession</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="mt-6 pt-4 border-t border-white/10">
+            <a href="module12-ch20.html" class="w-full py-2.5 px-4 rounded-xl font-bold text-xs text-slate-950 bg-amber-400 hover:bg-amber-300 text-center transition-colors flex items-center justify-center gap-1.5 shadow-sm">
+              <span>Launch 4 Solved Master Cases</span>
+              <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i>
+            </a>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Section 2: Six-Step Comprehensive Financial Planning Process -->
+    <section class="p-8 sm:p-10 rounded-3xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 shadow-xs space-y-6">
+      <div class="max-w-3xl">
+        <span class="text-xs font-bold text-indigo-600 dark:text-indigo-400 uppercase tracking-wider">Advisory Practice Standard</span>
+        <h2 class="font-display font-extrabold text-2xl sm:text-3xl text-slate-900 dark:text-white mt-1">
+          The 6-Step Financial Planning Process (SEBI & FPSB Framework)
+        </h2>
+        <p class="text-xs sm:text-sm text-slate-600 dark:text-slate-400 mt-2 leading-relaxed">
+          SEBI (Investment Advisers) Regulations, 2013 mandates that all advice provided to clients must follow a formalized, objective, and documented suitability process. Every case study in the exam maps directly to these 6 steps:
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
+        
+        <div class="p-5 rounded-2xl bg-slate-50 dark:bg-slate-800/60 border border-slate-200 dark:border-slate-700">
+          <div class="w-8 h-8 rounded-xl bg-indigo-100 dark:bg-indigo-950 text-indigo-700 dark:text-indigo-300 font-black text-sm flex items-center justify-center mb-3">1</div>
+          <h4 class="font-display font-bold text-base text-slate-900 dark:text-white">Establishing Client-Adviser Relationship</h4>
+          <p class="text-xs text-slate-600 dark:text-slate-400 mt-1.5 leading-relaxed">
+            Defining scope of services, fee arrangements (fixed / AUA cap of 2.5%), regulatory disclosures, fiduciary duties, and obtaining written consent.
+          </p>
+        </div>
+
+        <div class="p-5 rounded-2xl bg-slate-50 dark:bg-slate-800/60 border border-slate-200 dark:border-slate-700">
+          <div class="w-8 h-8 rounded-xl bg-indigo-100 dark:bg-indigo-950 text-indigo-700 dark:text-indigo-300 font-black text-sm flex items-center justify-center mb-3">2</div>
+          <h4 class="font-display font-bold text-base text-slate-900 dark:text-white">Gathering Client Data & Goal Identification</h4>
+          <p class="text-xs text-slate-600 dark:text-slate-400 mt-1.5 leading-relaxed">
+            Collecting financial balance sheets, tax returns, liabilities, dependent details, and quantifying financial goals with specific time horizons and current costs.
+          </p>
+        </div>
+
+        <div class="p-5 rounded-2xl bg-slate-50 dark:bg-slate-800/60 border border-slate-200 dark:border-slate-700">
+          <div class="w-8 h-8 rounded-xl bg-indigo-100 dark:bg-indigo-950 text-indigo-700 dark:text-indigo-300 font-black text-sm flex items-center justify-center mb-3">3</div>
+          <h4 class="font-display font-bold text-base text-slate-900 dark:text-white">Analyzing Financial Status & Risk Profiling</h4>
+          <p class="text-xs text-slate-600 dark:text-slate-400 mt-1.5 leading-relaxed">
+            Evaluating emergency cash reserves (3–6 months), debt-service ratios, net worth, calculating Risk Capacity vs. Tolerance, and identifying insurance shortfalls.
+          </p>
+        </div>
+
+        <div class="p-5 rounded-2xl bg-slate-50 dark:bg-slate-800/60 border border-slate-200 dark:border-slate-700">
+          <div class="w-8 h-8 rounded-xl bg-indigo-100 dark:bg-indigo-950 text-indigo-700 dark:text-indigo-300 font-black text-sm flex items-center justify-center mb-3">4</div>
+          <h4 class="font-display font-bold text-base text-slate-900 dark:text-white">Developing Financial Plan & SAA Strategy</h4>
+          <p class="text-xs text-slate-600 dark:text-slate-400 mt-1.5 leading-relaxed">
+            Formulating Strategic Asset Allocation (Core & Satellite), mathematical modeling for retirement/education corpus, tax optimization, and estate trust structures.
+          </p>
+        </div>
+
+        <div class="p-5 rounded-2xl bg-slate-50 dark:bg-slate-800/60 border border-slate-200 dark:border-slate-700">
+          <div class="w-8 h-8 rounded-xl bg-indigo-100 dark:bg-indigo-950 text-indigo-700 dark:text-indigo-300 font-black text-sm flex items-center justify-center mb-3">5</div>
+          <h4 class="font-display font-bold text-base text-slate-900 dark:text-white">Implementing Recommendations</h4>
+          <p class="text-xs text-slate-600 dark:text-slate-400 mt-1.5 leading-relaxed">
+            Adviser assists with execution through direct plans (no distribution commission permitted for RIAs), pure term life policies, and legal trust deed drafting.
+          </p>
+        </div>
+
+        <div class="p-5 rounded-2xl bg-slate-50 dark:bg-slate-800/60 border border-slate-200 dark:border-slate-700">
+          <div class="w-8 h-8 rounded-xl bg-indigo-100 dark:bg-indigo-950 text-indigo-700 dark:text-indigo-300 font-black text-sm flex items-center justify-center mb-3">6</div>
+          <h4 class="font-display font-bold text-base text-slate-900 dark:text-white">Monitoring & Periodic Rebalancing</h4>
+          <p class="text-xs text-slate-600 dark:text-slate-400 mt-1.5 leading-relaxed">
+            Reviewing portfolio performance at least annually, assessing life milestone changes, and executing corridor-based asset rebalancing (e.g. &plusmn;5% drift).
+          </p>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Section 3: High-Yield Formula Quick Reference Matrix -->
+    <section class="space-y-6">
+      <div class="flex items-center justify-between">
+        <div>
+          <span class="text-xs font-bold text-amber-600 dark:text-amber-400 uppercase tracking-wider">Exam Memorization Matrix</span>
+          <h2 class="font-display font-extrabold text-2xl text-slate-900 dark:text-white mt-1">
+            Master Formulas & Mathematical Frameworks ⭐
+          </h2>
+        </div>
+        <span class="text-xs px-2.5 py-1 rounded-full bg-amber-50 dark:bg-amber-950 text-amber-700 dark:text-amber-300 font-bold border border-amber-200 dark:border-amber-800">
+          Tested in 70% of Numerical MCQs
+        </span>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+
+        <!-- Formula 1: Sharpe Ratio -->
+        <div class="p-5 rounded-2xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 shadow-xs space-y-2">
+          <div class="flex items-center justify-between text-xs font-bold text-indigo-600 dark:text-indigo-400 uppercase">
+            <span>Total Risk Adjusted</span>
+            <span class="px-2 py-0.5 rounded bg-indigo-50 dark:bg-indigo-950">Ch 19</span>
+          </div>
+          <h3 class="font-display font-bold text-lg text-slate-900 dark:text-white">Sharpe Ratio</h3>
+          <div class="p-3 rounded-xl bg-slate-100 dark:bg-slate-800 font-mono text-xs sm:text-sm text-center font-bold text-indigo-700 dark:text-indigo-300">
+            Sharpe = (R<sub>p</sub> - R<sub>f</sub>) / &sigma;<sub>p</sub>
+          </div>
+          <p class="text-xs text-slate-500 dark:text-slate-400 leading-relaxed">
+            Measures excess return per unit of <strong>Total Risk</strong> (&sigma;). Crucial for evaluating entire standalone portfolios.
+          </p>
+        </div>
+
+        <!-- Formula 2: Treynor Ratio -->
+        <div class="p-5 rounded-2xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 shadow-xs space-y-2">
+          <div class="flex items-center justify-between text-xs font-bold text-indigo-600 dark:text-indigo-400 uppercase">
+            <span>Systematic Risk Adjusted</span>
+            <span class="px-2 py-0.5 rounded bg-indigo-50 dark:bg-indigo-950">Ch 19</span>
+          </div>
+          <h3 class="font-display font-bold text-lg text-slate-900 dark:text-white">Treynor Ratio</h3>
+          <div class="p-3 rounded-xl bg-slate-100 dark:bg-slate-800 font-mono text-xs sm:text-sm text-center font-bold text-indigo-700 dark:text-indigo-300">
+            Treynor = (R<sub>p</sub> - R<sub>f</sub>) / &beta;<sub>p</sub>
+          </div>
+          <p class="text-xs text-slate-500 dark:text-slate-400 leading-relaxed">
+            Measures excess return per unit of <strong>Systematic Risk</strong> (&beta;). Valid when fund is part of a well-diversified multi-asset holding.
+          </p>
+        </div>
+
+        <!-- Formula 3: Sortino Ratio -->
+        <div class="p-5 rounded-2xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 shadow-xs space-y-2">
+          <div class="flex items-center justify-between text-xs font-bold text-indigo-600 dark:text-indigo-400 uppercase">
+            <span>Downside Volatility</span>
+            <span class="px-2 py-0.5 rounded bg-indigo-50 dark:bg-indigo-950">Ch 19</span>
+          </div>
+          <h3 class="font-display font-bold text-lg text-slate-900 dark:text-white">Sortino Ratio</h3>
+          <div class="p-3 rounded-xl bg-slate-100 dark:bg-slate-800 font-mono text-xs sm:text-sm text-center font-bold text-indigo-700 dark:text-indigo-300">
+            Sortino = (R<sub>p</sub> - MAR) / &sigma;<sub>d</sub>
+          </div>
+          <p class="text-xs text-slate-500 dark:text-slate-400 leading-relaxed">
+            Penalizes only harmful downside volatility (&sigma;<sub>d</sub>) below the Minimum Acceptable Return (MAR).
+          </p>
+        </div>
+
+        <!-- Formula 4: Jensen's Alpha -->
+        <div class="p-5 rounded-2xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 shadow-xs space-y-2">
+          <div class="flex items-center justify-between text-xs font-bold text-amber-600 dark:text-amber-400 uppercase">
+            <span>Excess CAPM Return</span>
+            <span class="px-2 py-0.5 rounded bg-amber-50 dark:bg-amber-950">Ch 19</span>
+          </div>
+          <h3 class="font-display font-bold text-lg text-slate-900 dark:text-white">Jensen's Alpha (&alpha;)</h3>
+          <div class="p-3 rounded-xl bg-slate-100 dark:bg-slate-800 font-mono text-xs sm:text-sm text-center font-bold text-amber-700 dark:text-amber-300">
+            &alpha; = R<sub>p</sub> - [R<sub>f</sub> + &beta;<sub>p</sub>(R<sub>m</sub> - R<sub>f</sub>)]
+          </div>
+          <p class="text-xs text-slate-500 dark:text-slate-400 leading-relaxed">
+            Measures manager stock-picking skill. Positive &alpha; indicates the fund generated returns beyond its systematic risk level.
+          </p>
+        </div>
+
+        <!-- Formula 5: Real Rate of Return -->
+        <div class="p-5 rounded-2xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 shadow-xs space-y-2">
+          <div class="flex items-center justify-between text-xs font-bold text-amber-600 dark:text-amber-400 uppercase">
+            <span>Inflation Adjustment</span>
+            <span class="px-2 py-0.5 rounded bg-amber-50 dark:bg-amber-950">Ch 20</span>
+          </div>
+          <h3 class="font-display font-bold text-lg text-slate-900 dark:text-white">Real Rate of Return (r)</h3>
+          <div class="p-3 rounded-xl bg-slate-100 dark:bg-slate-800 font-mono text-xs sm:text-sm text-center font-bold text-amber-700 dark:text-amber-300">
+            r = [(1 + i) / (1 + g)] - 1
+          </div>
+          <p class="text-xs text-slate-500 dark:text-slate-400 leading-relaxed">
+            Fisher formula for retirement planning: <i>i</i> = nominal investment return, <i>g</i> = inflation rate. Essential for annuity corpus calculations.
+          </p>
+        </div>
+
+        <!-- Formula 6: Human Life Value (HLV) -->
+        <div class="p-5 rounded-2xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 shadow-xs space-y-2">
+          <div class="flex items-center justify-between text-xs font-bold text-amber-600 dark:text-amber-400 uppercase">
+            <span>Life Insurance Adequacy</span>
+            <span class="px-2 py-0.5 rounded bg-amber-50 dark:bg-amber-950">Ch 20</span>
+          </div>
+          <h3 class="font-display font-bold text-lg text-slate-900 dark:text-white">HLV (Income Replacement)</h3>
+          <div class="p-3 rounded-xl bg-slate-100 dark:bg-slate-800 font-mono text-xs sm:text-sm text-center font-bold text-amber-700 dark:text-amber-300">
+            HLV = PV(Annual Earnings - Personal Expenses, n, r)
+          </div>
+          <p class="text-xs text-slate-500 dark:text-slate-400 leading-relaxed">
+            Discounting the breadwinner's net financial contribution to family across remaining working years at real rate of return.
+          </p>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Section 4: Blueprint for the 60-Mark Case Studies Section -->
+    <section class="p-8 sm:p-10 rounded-3xl bg-gradient-to-br from-indigo-50/90 via-white to-amber-50/60 dark:from-slate-900 dark:to-indigo-950/60 border-2 border-indigo-500/80 dark:border-indigo-600 shadow-md space-y-6">
+      <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+        <div>
+          <span class="px-3 py-1 rounded-full bg-amber-500 text-slate-950 font-extrabold text-xs uppercase tracking-wider inline-flex items-center gap-1.5 shadow-2xs">
+            <i data-lucide="zap" class="w-3.5 h-3.5"></i>
+            Official Exam Pattern Breakdown
+          </span>
+          <h2 class="font-display font-extrabold text-2xl sm:text-3xl text-slate-900 dark:text-white mt-2">
+            Mastering the 60-Mark Case Studies Examination
+          </h2>
+        </div>
+        <a href="module12-ch20.html" class="px-5 py-2.5 rounded-xl font-bold text-xs text-white bg-indigo-600 hover:bg-indigo-700 transition-all flex items-center gap-2 shrink-0">
+          <span>Go Directly to Case Studies</span>
+          <i data-lucide="arrow-right" class="w-4 h-4"></i>
+        </a>
+      </div>
+
+      <div class="text-xs sm:text-sm text-slate-600 dark:text-slate-300 leading-relaxed space-y-3">
+        <p>
+          In the actual NISM Series X-B examination, <strong>60 marks out of 150 (40% of the entire paper)</strong> are delivered through <strong>6 Comprehensive Case Studies</strong> (each case containing 5 sub-questions worth 2 marks each = 10 marks per case). Candidates frequently struggle with time management because each case requires parsing dense client balance sheets, multi-year timelines, and multi-step compounding equations.
+        </p>
+      </div>
+
+      <!-- 4 Scenarios Covered in Chapter 20 -->
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 pt-2">
+        
+        <div class="p-4 rounded-2xl bg-white dark:bg-slate-800/80 border border-slate-200 dark:border-slate-700">
+          <div class="text-indigo-600 dark:text-indigo-400 font-bold text-xs">Case Study 1</div>
+          <div class="font-display font-bold text-slate-900 dark:text-white text-sm mt-1">Vikram Sharma (IT VP, Age 42)</div>
+          <div class="text-[11px] text-slate-500 dark:text-slate-400 mt-2 space-y-1">
+            <div>&bull; HLV Income Replacement calculation</div>
+            <div>&bull; Need-based insurance adequacy</div>
+            <div>&bull; Child education goal inflation (8%)</div>
+            <div>&bull; Buy Term & Invest Difference (BTID)</div>
+          </div>
+        </div>
+
+        <div class="p-4 rounded-2xl bg-white dark:bg-slate-800/80 border border-slate-200 dark:border-slate-700">
+          <div class="text-indigo-600 dark:text-indigo-400 font-bold text-xs">Case Study 2</div>
+          <div class="font-display font-bold text-slate-900 dark:text-white text-sm mt-1">Rajesh Kulkarni (Mfg Dir, Age 52)</div>
+          <div class="text-[11px] text-slate-500 dark:text-slate-400 mt-2 space-y-1">
+            <div>&bull; Step-up retirement corpus formula</div>
+            <div>&bull; Real rate of return annuity due</div>
+            <div>&bull; Asset-liability duration gap</div>
+            <div>&bull; Post-retirement 3-bucket SWP</div>
+          </div>
+        </div>
+
+        <div class="p-4 rounded-2xl bg-white dark:bg-slate-800/80 border border-slate-200 dark:border-slate-700">
+          <div class="text-indigo-600 dark:text-indigo-400 font-bold text-xs">Case Study 3</div>
+          <div class="font-display font-bold text-slate-900 dark:text-white text-sm mt-1">Dr. Sanjeev Singhania (Surgeon, Age 58)</div>
+          <div class="text-[11px] text-slate-500 dark:text-slate-400 mt-2 space-y-1">
+            <div>&bull; Budget 2024 capital gains regime</div>
+            <div>&bull; Section 54 / 54EC / 54F exemptions</div>
+            <div>&bull; Grandfathering vs 12.5% property tax</div>
+            <div>&bull; Equity tax-loss & gain harvesting</div>
+          </div>
+        </div>
+
+        <div class="p-4 rounded-2xl bg-white dark:bg-slate-800/80 border border-slate-200 dark:border-slate-700">
+          <div class="text-indigo-600 dark:text-indigo-400 font-bold text-xs">Case Study 4</div>
+          <div class="font-display font-bold text-slate-900 dark:text-white text-sm mt-1">Arvind Mittal (Industrialist, Age 64)</div>
+          <div class="text-[11px] text-slate-500 dark:text-slate-400 mt-2 space-y-1">
+            <div>&bull; Irrevocable Private Family Trust</div>
+            <div>&bull; Special needs child guardianship</div>
+            <div>&bull; Section 56(2)(x) relative exemptions</div>
+            <div>&bull; Portfolio corridor rebalancing triggers</div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Module Navigation Bar -->
+    <div class="pt-6 border-t border-slate-200 dark:border-slate-800 flex flex-col sm:flex-row items-center justify-between gap-4">
+      <a href="nism-10b.html" class="flex items-center gap-2 px-4 py-2.5 rounded-xl border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-800 hover:bg-slate-50 dark:hover:bg-slate-750 text-slate-700 dark:text-slate-300 font-medium text-xs transition-colors">
+        <i data-lucide="arrow-left" class="w-4 h-4"></i>
+        <span>Return to Series X-B Master Hub</span>
+      </a>
+      <div class="flex items-center gap-3">
+        <a href="module12-ch18.html" class="flex items-center gap-2 px-5 py-2.5 rounded-xl bg-indigo-600 hover:bg-indigo-700 text-white font-bold text-xs shadow-sm transition-colors">
+          <span>Start Chapter 18: Risk Profiling</span>
+          <i data-lucide="arrow-right" class="w-4 h-4"></i>
+        </a>
+      </div>
+    </div>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="bg-white dark:bg-slate-900 border-t border-slate-200 dark:border-slate-800 py-8 text-center text-xs text-slate-500 dark:text-slate-400">
+    <div class="max-w-7xl mx-auto px-4">
+      <p>NISM Series X-B: Investment Adviser (Level 2) Certification Curriculum Portal &bull; Module 12 Comprehensive Financial Advice</p>
+      <p class="mt-1 text-[11px] text-slate-400 dark:text-slate-500">Updated in alignment with SEBI IA Regulations & Budget 2024 Capital Gains Tax Directives</p>
+    </div>
+  </footer>
+
+  <script>
+    lucide.createIcons();
+  </script>
+</body>
+</html>

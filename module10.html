@@ -1,0 +1,661 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Module 10: Estate Planning (20 Marks) | NISM Series X-B Hub</title>
+  
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  
+  <!-- Google Fonts: DM Sans & Jost (Eduleb Benchmark) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Jost:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+  <script src="https://unpkg.com/lucide@latest"></script>
+
+  <!-- Modern Documentation Design System -->
+  <link rel="stylesheet" href="modern-docs.css">
+  <script defer src="nav-sidebar.js"></script>
+
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['"DM Sans"', 'sans-serif'],
+            display: ['"Jost"', 'sans-serif'],
+            heading: ['"Jost"', 'sans-serif']
+          },
+          colors: {
+            brand: {
+              50: '#eef2ff',
+              100: '#e0e7ff',
+              500: '#525fe1',
+              600: '#434ec9',
+              700: '#353db3',
+              800: '#282f9c',
+              900: '#0b104a'
+            }
+          }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    body {
+      font-family: 'DM Sans', sans-serif;
+      font-size: 16px;
+      line-height: 26px;
+      color: #4a5355;
+    }
+    h1, h2, h3, h4, h5, h6, .font-display, .font-heading {
+      font-family: 'Jost', sans-serif;
+      font-weight: 700;
+    }
+    .star-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.35rem;
+      padding: 0.25rem 0.65rem;
+      border-radius: 9999px;
+      font-size: 0.75rem;
+      font-weight: 700;
+      background: linear-gradient(135deg, #fef3c7, #fde68a);
+      color: #92400e;
+      border: 1px solid #f59e0b;
+      box-shadow: 0 1px 2px rgba(245, 158, 11, 0.15);
+    }
+    .dark .star-badge {
+      background: linear-gradient(135deg, #78350f, #92400e);
+      color: #fef3c7;
+      border-color: #d97706;
+    }
+    .legal-card-gradient {
+      background: linear-gradient(135deg, rgba(238, 242, 255, 0.7) 0%, rgba(245, 243, 255, 0.5) 100%);
+    }
+    .dark .legal-card-gradient {
+      background: linear-gradient(135deg, rgba(30, 27, 75, 0.4) 0%, rgba(46, 16, 101, 0.3) 100%);
+    }
+  </style>
+</head>
+<body class="bg-slate-50 dark:bg-slate-950 text-slate-900 dark:text-slate-100 min-h-screen flex flex-col selection:bg-indigo-500 selection:text-white antialiased transition-colors duration-200">
+
+  <!-- Smooth Opening Preloader -->
+  <div class="preloaders" id="eduleb-preloader">
+    <span class="loader"></span>
+    <div class="preloader-label">Module 10: Estate Planning</div>
+  </div>
+
+  <!-- Standardized Header (Single-Tier, 64px) -->
+  <header class="sticky top-0 z-40 bg-white/95 dark:bg-slate-900/95 backdrop-blur-md border-b border-slate-200/80 dark:border-slate-800 shadow-xs">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 h-16 flex items-center justify-between">
+      <!-- Left: Logo & Context Label -->
+      <a href="index.html" class="flex items-center gap-2.5 group">
+        <div class="w-9 h-9 rounded-xl bg-[#525fe1] flex items-center justify-center text-white font-bold shadow-xs group-hover:scale-105 transition-transform">
+          <i data-lucide="scale" class="w-5 h-5"></i>
+        </div>
+        <div>
+          <span class="font-display font-bold text-base tracking-tight text-[#0b104a] dark:text-white block leading-tight">NISM Series X-B</span>
+          <span class="block text-[10px] text-[#525fe1] dark:text-indigo-400 font-bold uppercase tracking-wider">Module 10 Hub • Level 2</span>
+        </div>
+      </a>
+
+      <!-- Center: Minimal Navigation Links -->
+      <nav class="hidden md:flex items-center gap-1.5 text-sm font-medium font-display">
+        <a href="index.html" class="px-3 py-1.5 rounded-lg text-slate-600 dark:text-slate-300 hover:text-[#0b104a] hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors">Portal Home</a>
+        <a href="module10.html" class="px-3 py-1.5 rounded-lg font-semibold text-[#525fe1] dark:text-indigo-400 bg-indigo-50 dark:bg-indigo-950/70 border border-indigo-200/80 dark:border-indigo-800/80 transition-colors">Module 10 Hub</a>
+        <a href="module10-ch14.html" class="px-3 py-1.5 rounded-lg text-slate-600 dark:text-slate-300 hover:text-[#0b104a] hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors">Chapter 14</a>
+        <a href="module10-ch15.html" class="px-3 py-1.5 rounded-lg text-slate-600 dark:text-slate-300 hover:text-[#0b104a] hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors">Chapter 15 ⭐</a>
+      </nav>
+
+      <!-- Right: Search (⌘K), Theme (⌘D), and Start Quiz CTA -->
+      <div class="flex items-center gap-2">
+        <button onclick="window.openSpotlightModal()" class="flex items-center gap-2 px-3 py-1.5 rounded-full border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-800 text-slate-500 dark:text-slate-400 text-xs font-medium" title="Search (⌘K)">
+          <i data-lucide="search" class="w-3.5 h-3.5 text-[#525fe1]"></i>
+          <span class="hidden sm:inline">Search</span>
+          <kbd class="px-1.5 py-0.5 rounded bg-slate-100 dark:bg-slate-700 text-[10px] font-mono text-slate-400">⌘K</kbd>
+        </button>
+        <button id="nism-header-theme-btn" onclick="window.toggleDarkMode()" class="p-2 rounded-full border border-slate-200 dark:border-slate-700 text-slate-600 dark:text-slate-300 bg-white dark:bg-slate-800" title="Toggle Theme (⌘D)">
+          <i data-lucide="moon" class="w-4 h-4"></i>
+        </button>
+        <a href="module10-ch14.html#interactive-quiz" class="hidden sm:inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-full text-xs font-bold text-white bg-[#525fe1] hover:bg-[#404dc7] font-display">
+          <span>Take Ch 14 Quiz</span>
+          <i data-lucide="arrow-right" class="w-3 h-3"></i>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Module Banner (Indigo / Violet Legal Dual Tone) -->
+  <section class="bg-gradient-to-b from-indigo-50/90 via-purple-50/40 to-slate-50 dark:from-indigo-950/40 dark:via-purple-950/20 dark:to-slate-950 py-12 border-b border-slate-200/80 dark:border-slate-800">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex flex-wrap items-center gap-2.5 mb-4">
+        <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-indigo-100 dark:bg-indigo-900/60 text-indigo-900 dark:text-indigo-200 text-xs font-bold border border-indigo-200 dark:border-indigo-800">
+          <i data-lucide="shield" class="w-3.5 h-3.5 text-indigo-600 dark:text-indigo-400"></i>
+          NISM Series X-B: Investment Adviser (Level 2)
+        </span>
+        <span class="star-badge">
+          <i data-lucide="sparkles" class="w-3.5 h-3.5 text-amber-600"></i>
+          High Exam Weightage: 20 Marks (Chapters 14 & 15)
+        </span>
+        <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-slate-200/70 dark:bg-slate-800 text-slate-700 dark:text-slate-300 text-xs font-semibold">
+          <i data-lucide="clock" class="w-3.5 h-3.5 text-slate-500"></i>
+          Estimated Study Time: 4.5 Hours
+        </span>
+      </div>
+
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+        <div class="lg:col-span-8 space-y-4">
+          <h1 class="font-display text-3xl sm:text-4xl lg:text-5xl font-extrabold text-[#0b104a] dark:text-white tracking-tight leading-tight">
+            Module 10: Estate Planning
+          </h1>
+          <p class="text-base sm:text-lg text-slate-600 dark:text-slate-300 leading-relaxed max-w-3xl">
+            Master the legal architecture of inter-generational wealth preservation and transmission. From the intricate rules of the <strong>Hindu Succession Act (Class I & II heirs)</strong> and <strong>Indian Succession Act</strong>, to high-yield estate planning vehicles like <strong>Private Family Trusts</strong>, <strong>Wills & Probate</strong>, <strong>Gifts under Section 56(2)(x)</strong>, and the crucial distinction between <strong>Nomination vs. Legal Ownership</strong>.
+          </p>
+
+          <!-- Module Highlights Metric Bar -->
+          <div class="grid grid-cols-2 sm:grid-cols-4 gap-3 pt-3">
+            <div class="p-3.5 rounded-2xl bg-white dark:bg-slate-900 border border-slate-200/80 dark:border-slate-800 shadow-xs">
+              <span class="text-xs font-bold text-slate-400 uppercase tracking-wider block">Exam Marks</span>
+              <span class="text-2xl font-bold font-display text-indigo-600 dark:text-indigo-400">20 / 100</span>
+              <span class="text-[11px] text-slate-500 dark:text-slate-400 block mt-0.5">20% of Total Paper</span>
+            </div>
+            <div class="p-3.5 rounded-2xl bg-white dark:bg-slate-900 border border-slate-200/80 dark:border-slate-800 shadow-xs">
+              <span class="text-xs font-bold text-slate-400 uppercase tracking-wider block">Curriculum</span>
+              <span class="text-2xl font-bold font-display text-slate-800 dark:text-slate-100">2 Chapters</span>
+              <span class="text-[11px] text-slate-500 dark:text-slate-400 block mt-0.5">Ch 14 & Ch 15</span>
+            </div>
+            <div class="p-3.5 rounded-2xl bg-white dark:bg-slate-900 border border-slate-200/80 dark:border-slate-800 shadow-xs">
+              <span class="text-xs font-bold text-slate-400 uppercase tracking-wider block">Statutory Focus</span>
+              <span class="text-2xl font-bold font-display text-emerald-600 dark:text-emerald-400">5 Acts</span>
+              <span class="text-[11px] text-slate-500 dark:text-slate-400 block mt-0.5">HSA, ISA, ITA, TPA, Trusts</span>
+            </div>
+            <div class="p-3.5 rounded-2xl bg-white dark:bg-slate-900 border border-slate-200/80 dark:border-slate-800 shadow-xs">
+              <span class="text-xs font-bold text-slate-400 uppercase tracking-wider block">Practice Bank</span>
+              <span class="text-2xl font-bold font-display text-purple-600 dark:text-purple-400">24 MCQs</span>
+              <span class="text-[11px] text-slate-500 dark:text-slate-400 block mt-0.5">12 per chapter with solutions</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right Quick Action Widget -->
+        <div class="lg:col-span-4">
+          <div class="p-6 rounded-3xl bg-white dark:bg-slate-900 border border-indigo-100 dark:border-slate-800 shadow-sm space-y-4">
+            <div class="flex items-center gap-2.5 pb-2 border-b border-slate-100 dark:border-slate-800">
+              <span class="p-2 rounded-xl bg-amber-100 dark:bg-amber-950/60 text-amber-700 dark:text-amber-400">
+                <i data-lucide="zap" class="w-5 h-5"></i>
+              </span>
+              <div>
+                <h4 class="font-display font-bold text-sm text-slate-900 dark:text-white">Exam Alert: Series X-B Level 2</h4>
+                <p class="text-xs text-slate-500 dark:text-slate-400">Core focus areas heavily tested</p>
+              </div>
+            </div>
+            <ul class="text-xs space-y-2 text-slate-600 dark:text-slate-300">
+              <li class="flex items-start gap-2">
+                <i data-lucide="check-circle-2" class="w-4 h-4 text-emerald-500 shrink-0 mt-0.5"></i>
+                <span><strong>Father is Class II</strong> (Category I), NOT a Class I heir under Hindu Succession Act.</span>
+              </li>
+              <li class="flex items-start gap-2">
+                <i data-lucide="check-circle-2" class="w-4 h-4 text-emerald-500 shrink-0 mt-0.5"></i>
+                <span><strong>Nominee is NOT the owner</strong> (Supreme Court: <em>Sarbati Devi</em> & <em>Shakti Yezdani</em>). Nominee is merely a trustee.</span>
+              </li>
+              <li class="flex items-start gap-2">
+                <i data-lucide="check-circle-2" class="w-4 h-4 text-emerald-500 shrink-0 mt-0.5"></i>
+                <span><strong>Discretionary Trusts</strong> are taxed at the <strong>Maximum Marginal Rate (MMR)</strong> unless specific statutory exceptions apply.</span>
+              </li>
+              <li class="flex items-start gap-2">
+                <i data-lucide="check-circle-2" class="w-4 h-4 text-emerald-500 shrink-0 mt-0.5"></i>
+                <span><strong>Probate is mandatory</strong> for Hindu Wills executed in or dealing with immovable property in Mumbai, Kolkata, and Chennai.</span>
+              </li>
+            </ul>
+            <div class="pt-2">
+              <a href="module10-ch14.html" class="w-full inline-flex items-center justify-center gap-2 py-2.5 px-4 rounded-xl text-xs font-bold bg-[#525fe1] hover:bg-[#434ec9] text-white shadow-xs transition-colors">
+                <span>Start Reading Chapter 14</span>
+                <i data-lucide="arrow-right" class="w-4 h-4"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Main Content Container -->
+  <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10 flex-grow space-y-12">
+
+    <!-- Section 1: The Two Chapters of Module 10 -->
+    <section class="space-y-6">
+      <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-3 pb-2 border-b border-slate-200 dark:border-slate-800">
+        <div>
+          <span class="text-xs font-bold uppercase tracking-wider text-indigo-600 dark:text-indigo-400">Curriculum Structure</span>
+          <h2 class="font-display text-2xl font-bold text-slate-900 dark:text-white">Module 10 Chapters & Weightage</h2>
+        </div>
+        <span class="text-xs font-semibold px-3 py-1 rounded-full bg-indigo-50 dark:bg-indigo-950 text-indigo-700 dark:text-indigo-300 border border-indigo-200 dark:border-indigo-800">
+          Total Weightage: 20 Marks
+        </span>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+
+        <!-- Chapter 14 Card -->
+        <a href="module10-ch14.html" class="group block p-6 sm:p-8 rounded-3xl bg-white dark:bg-slate-900 border border-slate-200/90 dark:border-slate-800 hover:border-indigo-400 dark:hover:border-indigo-500 shadow-sm hover:shadow-md transition-all duration-200 relative overflow-hidden">
+          <div class="absolute top-0 right-0 w-32 h-32 bg-indigo-50 dark:bg-indigo-950/40 rounded-full blur-2xl group-hover:scale-125 transition-transform pointer-events-none"></div>
+          
+          <div class="flex items-center justify-between gap-2 mb-4">
+            <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-bold bg-indigo-50 dark:bg-indigo-950/70 text-indigo-700 dark:text-indigo-300 border border-indigo-200/70 dark:border-indigo-800">
+              <i data-lucide="book-open" class="w-3.5 h-3.5"></i>
+              Chapter 14
+            </span>
+            <span class="text-xs font-bold text-slate-500 dark:text-slate-400 bg-slate-100 dark:bg-slate-800 px-2.5 py-0.5 rounded-full">
+              Weightage: ~8-10 Marks
+            </span>
+          </div>
+
+          <h3 class="font-display text-xl sm:text-2xl font-bold text-slate-900 dark:text-white group-hover:text-[#525fe1] dark:group-hover:text-indigo-400 transition-colors mb-3">
+            Basics of Estate Planning
+          </h3>
+
+          <p class="text-sm text-slate-600 dark:text-slate-300 leading-relaxed mb-6">
+            Explore the definition of an estate, constituents of net wealth, testamentary vs intestate succession, and statutory devolution under the Hindu Succession Act (Class I, Class II, Agnates, Cognates, Female Intestacy) and Indian Succession Act.
+          </p>
+
+          <div class="space-y-2 mb-6">
+            <div class="flex items-center gap-2 text-xs font-medium text-slate-700 dark:text-slate-300">
+              <i data-lucide="check" class="w-4 h-4 text-emerald-500 shrink-0"></i>
+              <span>Constituents of Estate & Net Worth Equation</span>
+            </div>
+            <div class="flex items-center gap-2 text-xs font-medium text-slate-700 dark:text-slate-300">
+              <i data-lucide="check" class="w-4 h-4 text-emerald-500 shrink-0"></i>
+              <span>Hindu Succession Act: Class I & Class II Heir Hierarchy</span>
+            </div>
+            <div class="flex items-center gap-2 text-xs font-medium text-slate-700 dark:text-slate-300">
+              <i data-lucide="check" class="w-4 h-4 text-emerald-500 shrink-0"></i>
+              <span>Female Intestate Succession & Special Source Reversion Rules</span>
+            </div>
+            <div class="flex items-center gap-2 text-xs font-medium text-slate-700 dark:text-slate-300">
+              <i data-lucide="check" class="w-4 h-4 text-emerald-500 shrink-0"></i>
+              <span>Mutation of Property vs Legal Title (Revenue Record limits)</span>
+            </div>
+          </div>
+
+          <div class="flex items-center justify-between pt-4 border-t border-slate-100 dark:border-slate-800 text-xs font-bold text-[#525fe1] dark:text-indigo-400">
+            <span class="flex items-center gap-1.5">
+              <i data-lucide="help-circle" class="w-4 h-4"></i> Includes 12-Question Quiz
+            </span>
+            <span class="inline-flex items-center gap-1 group-hover:translate-x-1 transition-transform">
+              Study Chapter 14 <i data-lucide="arrow-right" class="w-4 h-4"></i>
+            </span>
+          </div>
+        </a>
+
+        <!-- Chapter 15 Card -->
+        <a href="module10-ch15.html" class="group block p-6 sm:p-8 rounded-3xl bg-white dark:bg-slate-900 border border-slate-200/90 dark:border-slate-800 hover:border-amber-400 dark:hover:border-amber-500 shadow-sm hover:shadow-md transition-all duration-200 relative overflow-hidden">
+          <div class="absolute top-0 right-0 w-32 h-32 bg-amber-50 dark:bg-amber-950/30 rounded-full blur-2xl group-hover:scale-125 transition-transform pointer-events-none"></div>
+
+          <div class="flex items-center justify-between gap-2 mb-4">
+            <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-bold bg-amber-50 dark:bg-amber-950/70 text-amber-800 dark:text-amber-300 border border-amber-200/80 dark:border-amber-800">
+              <i data-lucide="award" class="w-3.5 h-3.5 text-amber-600"></i>
+              Chapter 15
+            </span>
+            <span class="star-badge">
+              <i data-lucide="sparkles" class="w-3.5 h-3.5"></i>
+              Top Exam Yield: ~10-12 Marks ⭐
+            </span>
+          </div>
+
+          <h3 class="font-display text-xl sm:text-2xl font-bold text-slate-900 dark:text-white group-hover:text-amber-600 dark:group-hover:text-amber-400 transition-colors mb-3">
+            Tools for Estate Planning ⭐
+          </h3>
+
+          <p class="text-sm text-slate-600 dark:text-slate-300 leading-relaxed mb-6">
+            Detailed examination of actionable instruments: Wills execution & attestation, Codicil, Probate & Letters of Administration, Section 56(2)(x) Gift exemptions, Joint Holding, Nominee vs Legal Heir doctrine, Private Family Trusts & taxation, and POAs.
+          </p>
+
+          <div class="space-y-2 mb-6">
+            <div class="flex items-center gap-2 text-xs font-medium text-slate-700 dark:text-slate-300">
+              <i data-lucide="check" class="w-4 h-4 text-amber-500 shrink-0"></i>
+              <span>Wills, Codicils, Revocation & Mandatory Probate Rules</span>
+            </div>
+            <div class="flex items-center gap-2 text-xs font-medium text-slate-700 dark:text-slate-300">
+              <i data-lucide="check" class="w-4 h-4 text-amber-500 shrink-0"></i>
+              <span>Gifts under TPA 1882 & Sec 56(2)(x) Relative Exemptions</span>
+            </div>
+            <div class="flex items-center gap-2 text-xs font-medium text-slate-700 dark:text-slate-300">
+              <i data-lucide="check" class="w-4 h-4 text-amber-500 shrink-0"></i>
+              <span>Nomination vs Legal Ownership (Landmark Supreme Court Precedents)</span>
+            </div>
+            <div class="flex items-center gap-2 text-xs font-medium text-slate-700 dark:text-slate-300">
+              <i data-lucide="check" class="w-4 h-4 text-amber-500 shrink-0"></i>
+              <span>Private Trusts: Revocable/Irrevocable & Discretionary (MMR) Taxation</span>
+            </div>
+          </div>
+
+          <div class="flex items-center justify-between pt-4 border-t border-slate-100 dark:border-slate-800 text-xs font-bold text-amber-700 dark:text-amber-400">
+            <span class="flex items-center gap-1.5">
+              <i data-lucide="help-circle" class="w-4 h-4"></i> Includes 12-Question Quiz
+            </span>
+            <span class="inline-flex items-center gap-1 group-hover:translate-x-1 transition-transform">
+              Study Chapter 15 <i data-lucide="arrow-right" class="w-4 h-4"></i>
+            </span>
+          </div>
+        </a>
+
+      </div>
+    </section>
+
+    <!-- Section 2: Core Legal Comparison Matrix -->
+    <section class="bg-white dark:bg-slate-900 rounded-3xl p-6 sm:p-8 border border-slate-200/90 dark:border-slate-800 shadow-sm space-y-6">
+      <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2 pb-4 border-b border-slate-100 dark:border-slate-800">
+        <div>
+          <span class="text-xs font-bold uppercase tracking-wider text-indigo-600 dark:text-indigo-400">High-Yield Knowledge Base</span>
+          <h3 class="font-display text-xl sm:text-2xl font-bold text-slate-900 dark:text-white">Comparative Legal Matrix for Level 2</h3>
+        </div>
+        <span class="star-badge">
+          <i data-lucide="award" class="w-3.5 h-3.5"></i> Essential Comparison Tables
+        </span>
+      </div>
+
+      <!-- Comparison 1: Succession Types -->
+      <div class="space-y-3">
+        <h4 class="font-display text-base font-bold text-slate-900 dark:text-white flex items-center gap-2">
+          <i data-lucide="git-branch" class="w-4 h-4 text-indigo-600"></i>
+          1. Testamentary Succession vs. Intestate Succession
+        </h4>
+        <div class="overflow-x-auto rounded-2xl border border-slate-200 dark:border-slate-800">
+          <table class="w-full text-left text-xs sm:text-sm">
+            <thead class="bg-slate-100 dark:bg-slate-800/80 font-bold text-slate-800 dark:text-slate-200 border-b border-slate-200 dark:border-slate-700">
+              <tr>
+                <th class="p-3.5 sm:p-4">Parameter</th>
+                <th class="p-3.5 sm:p-4 text-indigo-700 dark:text-indigo-300">Testamentary Succession</th>
+                <th class="p-3.5 sm:p-4 text-slate-700 dark:text-slate-300">Intestate Succession</th>
+              </tr>
+            </thead>
+            <tbody class="divide-y divide-slate-100 dark:divide-slate-800 text-slate-600 dark:text-slate-300">
+              <tr class="hover:bg-slate-50 dark:hover:bg-slate-800/40">
+                <td class="p-3.5 sm:p-4 font-bold text-slate-900 dark:text-white">Governing Principle</td>
+                <td class="p-3.5 sm:p-4">Governed by the deceased's written intention through a valid <strong>Will or Codicil</strong>.</td>
+                <td class="p-3.5 sm:p-4">Governed strictly by default <strong>Personal Laws of Religion / Statutes</strong> (e.g. Hindu Succession Act).</td>
+              </tr>
+              <tr class="hover:bg-slate-50 dark:hover:bg-slate-800/40">
+                <td class="p-3.5 sm:p-4 font-bold text-slate-900 dark:text-white">Freedom of Distribution</td>
+                <td class="p-3.5 sm:p-4">Testator enjoys complete freedom over self-acquired property; can exclude legal heirs or bequeath to third parties/charities.</td>
+                <td class="p-3.5 sm:p-4">Zero individual freedom. Devolves strictly to predetermined statutory classes (Class I, Class II, etc.).</td>
+              </tr>
+              <tr class="hover:bg-slate-50 dark:hover:bg-slate-800/40">
+                <td class="p-3.5 sm:p-4 font-bold text-slate-900 dark:text-white">Primary Administrator</td>
+                <td class="p-3.5 sm:p-4"><strong>Executor</strong> named in the Will (obtains Probate where required).</td>
+                <td class="p-3.5 sm:p-4"><strong>Administrator</strong> appointed by court through <strong>Letters of Administration</strong>.</td>
+              </tr>
+              <tr class="hover:bg-slate-50 dark:hover:bg-slate-800/40">
+                <td class="p-3.5 sm:p-4 font-bold text-slate-900 dark:text-white">Dispute Risk & Delays</td>
+                <td class="p-3.5 sm:p-4">Significantly lower dispute risk if properly drafted and witnessed; clear roadmaps.</td>
+                <td class="p-3.5 sm:p-4">High risk of family friction, multiple claimant conflicts, costly legal proceedings to obtain succession certificates.</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <!-- Comparison 2: Nomination vs Legal Ownership -->
+      <div class="space-y-3 pt-4">
+        <h4 class="font-display text-base font-bold text-slate-900 dark:text-white flex items-center gap-2">
+          <i data-lucide="alert-triangle" class="w-4 h-4 text-amber-500"></i>
+          2. Nomination vs. Legal Ownership (⭐ Exam Classic)
+        </h4>
+        <div class="overflow-x-auto rounded-2xl border border-slate-200 dark:border-slate-800">
+          <table class="w-full text-left text-xs sm:text-sm">
+            <thead class="bg-amber-50/80 dark:bg-amber-950/40 font-bold text-amber-900 dark:text-amber-200 border-b border-amber-200 dark:border-amber-800">
+              <tr>
+                <th class="p-3.5 sm:p-4">Dimension</th>
+                <th class="p-3.5 sm:p-4">Nominee (Custodian / Trustee)</th>
+                <th class="p-3.5 sm:p-4">Legal Heir / Beneficiary (Owner)</th>
+              </tr>
+            </thead>
+            <tbody class="divide-y divide-slate-100 dark:divide-slate-800 text-slate-600 dark:text-slate-300">
+              <tr class="hover:bg-slate-50 dark:hover:bg-slate-800/40">
+                <td class="p-3.5 sm:p-4 font-bold text-slate-900 dark:text-white">Legal Nature of Right</td>
+                <td class="p-3.5 sm:p-4">A nominee is <strong>NOT</strong> an owner. The nominee is merely a <strong>statutory receiver / custodian / trustee</strong> authorized to give a valid discharge to the financial institution.</td>
+                <td class="p-3.5 sm:p-4">The legal heir holds the <strong>beneficial title and ownership</strong> of the asset under succession law or Will.</td>
+              </tr>
+              <tr class="hover:bg-slate-50 dark:hover:bg-slate-800/40">
+                <td class="p-3.5 sm:p-4 font-bold text-slate-900 dark:text-white">Supreme Court Precedents</td>
+                <td class="p-3.5 sm:p-4">
+                  • <em>Sarbati Devi v. Usha Devi (1984)</em> (Life Insurance)<br>
+                  • <em>Ram Chander Talwar v. Devinder Kumar (2010)</em> (Bank Deposits)<br>
+                  • <em>Shakti Yezdani v. Jayanand Salgaonkar (2023)</em> (Company Shares under Companies Act)
+                </td>
+                <td class="p-3.5 sm:p-4">Legal heirs are legally entitled to claim the entire proceeds from the nominee, who is legally bound to hold the asset in trust for them.</td>
+              </tr>
+              <tr class="hover:bg-slate-50 dark:hover:bg-slate-800/40">
+                <td class="p-3.5 sm:p-4 font-bold text-slate-900 dark:text-white">Insurance Act Exception</td>
+                <td class="p-3.5 sm:p-4" colspan="2">
+                  <strong>Section 39 Amendment (2015):</strong> If the nominee in a life insurance policy is an immediate family member (spouse, children, or parents), they become a <strong>"Beneficial Nominee"</strong> and receive absolute title, excluding other legal heirs.
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <!-- Comparison 3: Private Family Trust Classification -->
+      <div class="space-y-3 pt-4">
+        <h4 class="font-display text-base font-bold text-slate-900 dark:text-white flex items-center gap-2">
+          <i data-lucide="layers" class="w-4 h-4 text-purple-600"></i>
+          3. Private Family Trust Architecture & Taxation Matrix
+        </h4>
+        <div class="overflow-x-auto rounded-2xl border border-slate-200 dark:border-slate-800">
+          <table class="w-full text-left text-xs sm:text-sm">
+            <thead class="bg-purple-50/80 dark:bg-purple-950/40 font-bold text-purple-900 dark:text-purple-200 border-b border-purple-200 dark:border-purple-800">
+              <tr>
+                <th class="p-3.5 sm:p-4">Trust Type</th>
+                <th class="p-3.5 sm:p-4">Beneficiary Rights</th>
+                <th class="p-3.5 sm:p-4">Tax Treatment under Income Tax Act, 1961</th>
+              </tr>
+            </thead>
+            <tbody class="divide-y divide-slate-100 dark:divide-slate-800 text-slate-600 dark:text-slate-300">
+              <tr class="hover:bg-slate-50 dark:hover:bg-slate-800/40">
+                <td class="p-3.5 sm:p-4 font-bold text-slate-900 dark:text-white">Revocable Trust</td>
+                <td class="p-3.5 sm:p-4">Settlor retains power to alter, revoke, or claw back trust assets.</td>
+                <td class="p-3.5 sm:p-4 text-rose-600 dark:text-rose-400 font-semibold">
+                  <strong>Clubbed in Hands of Settlor</strong> under Sections 61 to 63 of the Income Tax Act. Zero tax shelter.
+                </td>
+              </tr>
+              <tr class="hover:bg-slate-50 dark:hover:bg-slate-800/40">
+                <td class="p-3.5 sm:p-4 font-bold text-slate-900 dark:text-white">Irrevocable Determinate (Specific)</td>
+                <td class="p-3.5 sm:p-4">Settlor cannot revoke. Beneficiaries and their respective shares are explicitly identified and fixed.</td>
+                <td class="p-3.5 sm:p-4 text-emerald-700 dark:text-emerald-300 font-medium">
+                  Taxed at the <strong>individual slab rates of the beneficiaries</strong> (Trustee assessed as representative assessee under Section 161).
+                </td>
+              </tr>
+              <tr class="hover:bg-slate-50 dark:hover:bg-slate-800/40">
+                <td class="p-3.5 sm:p-4 font-bold text-slate-900 dark:text-white">Irrevocable Discretionary (⭐ Exam Classic)</td>
+                <td class="p-3.5 sm:p-4">Trustees hold complete discretion over the quantum and timing of distribution; shares are indeterminate.</td>
+                <td class="p-3.5 sm:p-4 text-amber-700 dark:text-amber-300 font-semibold">
+                  Taxed at the <strong>Maximum Marginal Rate (MMR - ~39% or 42.74%)</strong> under Section 164. <br>
+                  <em>Exceptions:</em> Beneficiaries with no taxable income, testamentary trust for relatives, or Section 80U disabled dependent trust.
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 3: Estate Planning Workflow Roadmap -->
+    <section class="bg-gradient-to-br from-slate-900 via-indigo-950 to-slate-900 rounded-3xl p-6 sm:p-8 text-white shadow-xl space-y-6">
+      <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2 pb-4 border-b border-white/10">
+        <div>
+          <span class="text-xs font-bold uppercase tracking-wider text-indigo-400">Advisory Framework</span>
+          <h3 class="font-display text-xl sm:text-2xl font-bold text-white">5-Stage Estate Planning Roadmap for RIAs</h3>
+        </div>
+        <span class="text-xs font-bold px-3 py-1 rounded-full bg-white/10 text-indigo-200 border border-white/20">
+          Professional Execution
+        </span>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-5 gap-4">
+        <div class="p-4 rounded-2xl bg-white/5 border border-white/10 space-y-2">
+          <div class="w-8 h-8 rounded-xl bg-indigo-500 text-white font-bold flex items-center justify-center text-sm">1</div>
+          <h4 class="font-bold text-sm text-white">Asset Inventory</h4>
+          <p class="text-xs text-slate-300 leading-relaxed">
+            Consolidate real estate, demat holdings, bank FDs, private businesses, insurance policies, and digital keys with valuation & liabilities.
+          </p>
+        </div>
+
+        <div class="p-4 rounded-2xl bg-white/5 border border-white/10 space-y-2">
+          <div class="w-8 h-8 rounded-xl bg-indigo-500 text-white font-bold flex items-center justify-center text-sm">2</div>
+          <h4 class="font-bold text-sm text-white">Legal Audit</h4>
+          <p class="text-xs text-slate-300 leading-relaxed">
+            Verify title deeds vs mutation entries, personal religious succession rules, joint holding mandates (E or S), and nominee updates across accounts.
+          </p>
+        </div>
+
+        <div class="p-4 rounded-2xl bg-white/5 border border-white/10 space-y-2">
+          <div class="w-8 h-8 rounded-xl bg-indigo-500 text-white font-bold flex items-center justify-center text-sm">3</div>
+          <h4 class="font-bold text-sm text-white">Vehicle Selection</h4>
+          <p class="text-xs text-slate-300 leading-relaxed">
+            Choose right mix: Will for post-demise distribution, Private Trust for ring-fencing & minor protection, POA for lifetime incapacity, Lifetime Gifts for relatives.
+          </p>
+        </div>
+
+        <div class="p-4 rounded-2xl bg-white/5 border border-white/10 space-y-2">
+          <div class="w-8 h-8 rounded-xl bg-indigo-500 text-white font-bold flex items-center justify-center text-sm">4</div>
+          <h4 class="font-bold text-sm text-white">Drafting & Execution</h4>
+          <p class="text-xs text-slate-300 leading-relaxed">
+            Ensure sound disposing capacity, 2 independent non-beneficiary witnesses, clear executor appointment, stamp duty payment, and registration where required.
+          </p>
+        </div>
+
+        <div class="p-4 rounded-2xl bg-white/5 border border-white/10 space-y-2">
+          <div class="w-8 h-8 rounded-xl bg-indigo-500 text-white font-bold flex items-center justify-center text-sm">5</div>
+          <h4 class="font-bold text-sm text-white">Event Review</h4>
+          <p class="text-xs text-slate-300 leading-relaxed">
+            Mandatory periodic review triggered by marriage, divorce, birth of child, asset acquisition/sale, relocation, or tax legislative changes.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 4: High-Yield Exam Pitfalls & Cheat Sheet -->
+    <section class="bg-amber-50/70 dark:bg-amber-950/20 rounded-3xl p-6 sm:p-8 border border-amber-200/80 dark:border-amber-800/60 space-y-6">
+      <div class="flex items-center gap-3">
+        <span class="p-2.5 rounded-2xl bg-amber-500 text-white">
+          <i data-lucide="alert-octagon" class="w-6 h-6"></i>
+        </span>
+        <div>
+          <h3 class="font-display text-xl sm:text-2xl font-bold text-amber-950 dark:text-amber-100">
+            Common Traps in NISM Level 2 Estate Planning Questions
+          </h3>
+          <p class="text-xs sm:text-sm text-amber-800/80 dark:text-amber-300">
+            Memorize these 6 counter-intuitive rules to ensure full 20/20 marks in Module 10:
+          </p>
+        </div>
+      </div>
+
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 text-xs sm:text-sm">
+        <div class="p-4 rounded-2xl bg-white dark:bg-slate-900 border border-amber-200/60 dark:border-slate-800 space-y-1.5">
+          <span class="font-bold text-amber-900 dark:text-amber-300 block">1. The Father Trap</span>
+          <p class="text-slate-600 dark:text-slate-300">
+            Under Hindu Succession Act, the <strong>Mother is a Class I heir</strong>, but the <strong>Father is a Class II heir</strong>. If a Hindu male dies leaving mother and father, mother takes the entire estate to the exclusion of the father!
+          </p>
+        </div>
+
+        <div class="p-4 rounded-2xl bg-white dark:bg-slate-900 border border-amber-200/60 dark:border-slate-800 space-y-1.5">
+          <span class="font-bold text-amber-900 dark:text-amber-300 block">2. Female Intestate Reversion</span>
+          <p class="text-slate-600 dark:text-slate-300">
+            If a Hindu female dies intestate without children, property inherited from her parents <strong>reverts to her father's heirs</strong>, NOT her husband or husband's heirs (Sec 15(2)(a)).
+          </p>
+        </div>
+
+        <div class="p-4 rounded-2xl bg-white dark:bg-slate-900 border border-amber-200/60 dark:border-slate-800 space-y-1.5">
+          <span class="font-bold text-amber-900 dark:text-amber-300 block">3. Presidential Probate Rule</span>
+          <p class="text-slate-600 dark:text-slate-300">
+            Probate is only compulsory for Hindu Wills executed in or dealing with immovable property situated in the former presidency towns: <strong>Mumbai, Kolkata, and Chennai</strong> (Sec 57 & 213 of ISA).
+          </p>
+        </div>
+
+        <div class="p-4 rounded-2xl bg-white dark:bg-slate-900 border border-amber-200/60 dark:border-slate-800 space-y-1.5">
+          <span class="font-bold text-amber-900 dark:text-amber-300 block">4. Attesting Witness Bequest Void</span>
+          <p class="text-slate-600 dark:text-slate-300">
+            Under Section 67 of the Indian Succession Act, if an attesting witness is named as a beneficiary under the Will, the bequest to that witness is <strong>VOID</strong>, though the Will itself remains valid.
+          </p>
+        </div>
+
+        <div class="p-4 rounded-2xl bg-white dark:bg-slate-900 border border-amber-200/60 dark:border-slate-800 space-y-1.5">
+          <span class="font-bold text-amber-900 dark:text-amber-300 block">5. Mutation Does NOT Equal Title</span>
+          <p class="text-slate-600 dark:text-slate-300">
+            Mutation in municipal/Panchayat revenue records is strictly for collecting property taxes. The Supreme Court has repeatedly held that mutation does <strong>NOT create or extinguish legal ownership</strong>.
+          </p>
+        </div>
+
+        <div class="p-4 rounded-2xl bg-white dark:bg-slate-900 border border-amber-200/60 dark:border-slate-800 space-y-1.5">
+          <span class="font-bold text-amber-900 dark:text-amber-300 block">6. Discretionary Trust MMR</span>
+          <p class="text-slate-600 dark:text-slate-300">
+            An irrevocable trust where trustee has discretion over payout is taxed at the <strong>Maximum Marginal Rate (MMR)</strong>. It does not get individual slab rates unless it falls under the 3 statutory exemptions.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Bottom Navigation Callout -->
+    <div class="flex flex-col sm:flex-row items-center justify-between gap-4 p-6 rounded-3xl bg-indigo-50 dark:bg-indigo-950/50 border border-indigo-200/80 dark:border-indigo-800/80">
+      <div class="flex items-center gap-3">
+        <div class="w-12 h-12 rounded-2xl bg-[#525fe1] text-white flex items-center justify-center shrink-0 shadow-xs">
+          <i data-lucide="graduation-cap" class="w-6 h-6"></i>
+        </div>
+        <div>
+          <h4 class="font-display font-bold text-base text-slate-900 dark:text-white">Ready to begin your Module 10 prep?</h4>
+          <p class="text-xs sm:text-sm text-slate-600 dark:text-slate-300">Start with Chapter 14: Basics of Estate Planning and practice the 12-question quiz.</p>
+        </div>
+      </div>
+      <div class="flex items-center gap-3 shrink-0">
+        <a href="module10-ch14.html" class="px-5 py-2.5 rounded-xl text-xs font-bold text-white bg-[#525fe1] hover:bg-[#434ec9] shadow-xs transition-colors flex items-center gap-1.5 font-display">
+          <span>Go to Chapter 14</span>
+          <i data-lucide="arrow-right" class="w-4 h-4"></i>
+        </a>
+      </div>
+    </div>
+
+  </main>
+
+  <!-- Standardized Footer -->
+  <footer class="bg-white dark:bg-slate-900 border-t border-slate-200 dark:border-slate-800 py-8 mt-12">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-slate-500 dark:text-slate-400">
+      <div class="flex items-center gap-2">
+        <div class="w-6 h-6 rounded-lg bg-[#525fe1] flex items-center justify-center text-white font-bold text-[10px]">
+          X-B
+        </div>
+        <span>NISM Series X-B (Investment Adviser Level 2) Examination Prep Portal</span>
+      </div>
+      <div class="flex items-center gap-4">
+        <a href="index.html" class="hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors">Master Portal</a>
+        <a href="module10.html" class="hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors font-bold text-indigo-600 dark:text-indigo-400">Module 10 Hub</a>
+        <a href="module10-ch14.html" class="hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors">Chapter 14</a>
+        <a href="module10-ch15.html" class="hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors">Chapter 15</a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Smooth Preloader Auto-dismiss
+    function dismissPreloader() {
+      const preloader = document.getElementById("eduleb-preloader");
+      if (preloader && !preloader.classList.contains("fade-out")) {
+        preloader.classList.add("fade-out");
+        setTimeout(() => { if (preloader.parentNode) preloader.parentNode.removeChild(preloader); }, 550);
+      }
+    }
+    window.addEventListener("load", () => setTimeout(dismissPreloader, 350));
+    setTimeout(dismissPreloader, 1000);
+
+    document.addEventListener("DOMContentLoaded", () => {
+      if (window.lucide && typeof window.lucide.createIcons === "function") {
+        window.lucide.createIcons();
+      }
+    });
+  </script>
+</body>
+</html>

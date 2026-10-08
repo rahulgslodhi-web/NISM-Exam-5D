@@ -1,0 +1,685 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Chapter 10: Taxation of Debt Products | NISM Series X-B Notes</title>
+  
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  
+  <!-- Google Fonts: DM Sans & Jost (Eduleb Benchmark) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Jost:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+  
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+
+  <!-- Modern Documentation Design System -->
+  <link rel="stylesheet" href="modern-docs.css">
+  <script defer src="nav-sidebar.js"></script>
+
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['"DM Sans"', 'sans-serif'],
+            display: ['"Jost"', 'sans-serif'],
+            heading: ['"Jost"', 'sans-serif']
+          },
+          colors: {
+            brand: {
+              50: '#eef2ff',
+              100: '#e0e7ff',
+              500: '#525fe1',
+              600: '#434ec9',
+              700: '#353db3',
+              800: '#282f9c',
+              900: '#0b104a'
+            }
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    body {
+      font-family: 'DM Sans', sans-serif;
+      font-size: 16px;
+      line-height: 26px;
+      color: #4a5355;
+    }
+    h1, h2, h3, h4, h5, h6, .font-display, .font-heading {
+      font-family: 'Jost', sans-serif;
+      font-weight: 700;
+    }
+  </style>
+</head>
+<body class="bg-slate-50 dark:bg-slate-950 text-slate-900 dark:text-slate-100 min-h-screen flex flex-col selection:bg-rose-500 selection:text-white antialiased transition-colors duration-200">
+
+  <!-- Smooth Opening Preloader -->
+  <div class="preloaders" id="eduleb-preloader">
+    <span class="loader"></span>
+    <div class="preloader-label">Chapter 10: Taxation of Debt Products</div>
+  </div>
+
+  <!-- Standardized Header (Single-Tier, 64px) -->
+  <header class="sticky top-0 z-40 bg-white/95 dark:bg-slate-900/95 backdrop-blur-md border-b border-slate-200/80 dark:border-slate-800 shadow-xs">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 h-16 flex items-center justify-between">
+      <!-- Left: Navigation Back & Chapter Info -->
+      <div class="flex items-center gap-3">
+        <a href="module9.html" class="flex items-center gap-2 text-slate-500 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white transition-colors" title="Back to Module 9 Hub">
+          <div class="w-9 h-9 rounded-xl bg-slate-100 dark:bg-slate-800 hover:bg-slate-200 dark:hover:bg-slate-700 flex items-center justify-center text-slate-700 dark:text-slate-200 transition-colors">
+            <i data-lucide="arrow-left" class="w-4 h-4"></i>
+          </div>
+        </a>
+        <div>
+          <div class="flex items-center gap-2">
+            <span class="text-[11px] font-bold uppercase tracking-wider text-rose-600 dark:text-rose-400 bg-rose-50 dark:bg-rose-950/70 px-2 py-0.5 rounded">Module 9</span>
+            <span class="text-[11px] text-slate-400 font-medium">Chapter 10 of 13</span>
+          </div>
+          <h1 class="font-display font-bold text-sm sm:text-base text-slate-900 dark:text-white leading-tight">Taxation of Debt Products</h1>
+        </div>
+      </div>
+
+      <!-- Right: Search, Theme, Quiz Jump -->
+      <div class="flex items-center gap-2">
+        <span class="hidden md:inline-flex items-center gap-1 px-3 py-1 rounded-full text-xs font-bold bg-rose-50 dark:bg-rose-950/70 text-rose-700 dark:text-rose-300 border border-rose-200 dark:border-rose-800">
+          <i data-lucide="alert-circle" class="w-3.5 h-3.5 text-rose-600"></i>
+          Sec 50AA Critical Focus ⭐
+        </span>
+        <button onclick="window.openSpotlightModal()" class="flex items-center gap-2 px-3 py-1.5 rounded-full border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-800 text-slate-500 dark:text-slate-400 text-xs font-medium" title="Search (⌘K)">
+          <i data-lucide="search" class="w-3.5 h-3.5 text-rose-600"></i>
+          <span class="hidden sm:inline">Search</span>
+          <kbd class="px-1.5 py-0.5 rounded bg-slate-100 dark:bg-slate-700 text-[10px] font-mono text-slate-400">⌘K</kbd>
+        </button>
+        <button id="nism-header-theme-btn" onclick="window.toggleDarkMode()" class="p-2 rounded-full border border-slate-200 dark:border-slate-700 text-slate-600 dark:text-slate-300 bg-white dark:bg-slate-800" title="Toggle Theme (⌘D)">
+          <i data-lucide="moon" class="w-4 h-4"></i>
+        </button>
+        <a href="#interactive-quiz" class="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-full text-xs font-bold text-white bg-rose-600 hover:bg-rose-700 font-display transition-colors">
+          <i data-lucide="help-circle" class="w-3.5 h-3.5"></i>
+          <span>Chapter Quiz</span>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Content Layout -->
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 grid grid-cols-1 lg:grid-cols-12 gap-8 flex-grow">
+    
+    <!-- Table of Contents Sidebar (Desktop) -->
+    <aside class="hidden lg:block lg:col-span-3">
+      <div class="sticky top-24 space-y-4">
+        <div class="rounded-2xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 p-4 shadow-xs">
+          <div class="flex items-center gap-2 font-display font-bold text-xs uppercase tracking-wider text-slate-400 mb-3">
+            <i data-lucide="bookmark" class="w-3.5 h-3.5 text-rose-600"></i>
+            <span>Chapter Sections</span>
+          </div>
+          <nav class="space-y-1 text-xs">
+            <a href="#section-1" class="block px-2.5 py-1.5 rounded-lg text-slate-600 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800 hover:text-rose-600 transition-colors">10.1 Bank Deposits & TDS Sec 194A</a>
+            <a href="#section-2" class="block px-2.5 py-1.5 rounded-lg text-slate-600 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800 hover:text-rose-600 transition-colors">10.2 Corporate Bonds & Debentures</a>
+            <a href="#section-3" class="block px-2.5 py-1.5 rounded-lg text-rose-700 dark:text-rose-400 font-bold bg-rose-50/80 dark:bg-rose-950/40 hover:bg-rose-100 transition-colors">10.3 Section 50AA Debt MFs ⭐</a>
+            <a href="#section-4" class="block px-2.5 py-1.5 rounded-lg text-amber-700 dark:text-amber-400 font-bold bg-amber-50/80 dark:bg-amber-950/40 hover:bg-amber-100 transition-colors">10.4 Market Linked Debentures (MLDs) ⭐</a>
+            <a href="#section-5" class="block px-2.5 py-1.5 rounded-lg text-slate-600 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800 hover:text-rose-600 transition-colors">10.5 Non-Specified Hybrid Debt Funds</a>
+            <a href="#section-6" class="block px-2.5 py-1.5 rounded-lg text-slate-600 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800 hover:text-rose-600 transition-colors">10.6 Tax-Free & Deep Discount Bonds</a>
+            <a href="#interactive-quiz" class="block px-2.5 py-1.5 rounded-lg text-rose-600 dark:text-rose-400 font-bold bg-rose-50 dark:bg-rose-950/70 hover:bg-rose-100 transition-colors mt-2">Practice Quiz (12 Questions)</a>
+          </nav>
+        </div>
+
+        <!-- Exam Alert Card -->
+        <div class="p-4 rounded-2xl bg-gradient-to-br from-rose-600 to-red-700 text-white shadow-sm text-xs space-y-2">
+          <div class="flex items-center gap-1.5 font-bold">
+            <i data-lucide="flame" class="w-4 h-4 text-amber-300"></i>
+            <span>Series X-B Exam Priority</span>
+          </div>
+          <p class="text-rose-100 leading-relaxed">
+            Questions rigorously test the <strong>1st April 2023 cut-off date</strong> for Section 50AA. Units of debt funds (&le;35% equity) bought <em>before</em> 1-Apr-2023 retain indexation (if held &gt; 36m), whereas units bought <em>on or after</em> 1-Apr-2023 are <strong>deemed STCG at slab rates</strong>!
+          </p>
+        </div>
+      </div>
+    </aside>
+
+    <!-- Main Content Area -->
+    <main class="lg:col-span-9 space-y-8">
+      
+      <!-- Section 10.1 -->
+      <section id="section-1" class="bg-white dark:bg-slate-900 rounded-3xl p-6 sm:p-8 border border-slate-200/90 dark:border-slate-800 shadow-xs space-y-4">
+        <div class="flex items-center gap-2 text-xs font-bold text-rose-600 dark:text-rose-400 uppercase tracking-wider">
+          <span class="w-2 h-2 rounded-full bg-rose-600"></span> Section 10.1
+        </div>
+        <h2 class="font-display text-2xl font-bold text-slate-900 dark:text-white">
+          Bank Fixed Deposits, Recurring Deposits & TDS (Section 194A)
+        </h2>
+        <p class="text-slate-600 dark:text-slate-300 text-sm leading-relaxed">
+          Interest from Bank Fixed Deposits (FDs) and Recurring Deposits (RDs) is taxable under <strong>Income from Other Sources</strong> on an accrual basis at the investor's applicable slab rates.
+        </p>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4 text-xs sm:text-sm">
+          <div class="p-4 rounded-xl bg-slate-50 dark:bg-slate-800/60 border border-slate-200 dark:border-slate-700 space-y-2">
+            <h4 class="font-bold text-slate-900 dark:text-white flex items-center gap-1.5">
+              <i data-lucide="shield-check" class="w-4 h-4 text-blue-600"></i> TDS Thresholds under Section 194A
+            </h4>
+            <ul class="list-disc pl-4 space-y-1 text-slate-600 dark:text-slate-400">
+              <li><strong>General Depositors (&lt;60 yrs):</strong> TDS @ <strong>10%</strong> if aggregate interest paid by a banking company/co-operative bank exceeds <strong>₹40,000</strong> in a financial year.</li>
+              <li><strong>Senior Citizens (&ge;60 yrs):</strong> Enhanced TDS threshold of <strong>₹50,000</strong>.</li>
+              <li><strong>Non-Banking Entities (NBFCs / Corporates):</strong> Threshold is <strong>₹5,000</strong>.</li>
+              <li><strong>Absence of PAN:</strong> TDS is deducted at <strong>20%</strong> under Section 206AA.</li>
+            </ul>
+          </div>
+
+          <div class="p-4 rounded-xl bg-slate-50 dark:bg-slate-800/60 border border-slate-200 dark:border-slate-700 space-y-2">
+            <h4 class="font-bold text-slate-900 dark:text-white flex items-center gap-1.5">
+              <i data-lucide="file-text" class="w-4 h-4 text-emerald-600"></i> Form 15G and Form 15H
+            </h4>
+            <p class="text-slate-600 dark:text-slate-400 leading-relaxed">
+              <strong>Form 15G:</strong> For resident individuals (&lt;60 yrs) whose total estimated income is below the basic exemption limit and tax liability is Nil.<br>
+              <strong>Form 15H:</strong> For resident senior citizens (&ge;60 yrs) if estimated net tax liability is Nil (even if gross interest exceeds basic exemption limit, as long as final tax is zero).
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Section 10.2: Corporate Bonds & Debentures -->
+      <section id="section-2" class="bg-white dark:bg-slate-900 rounded-3xl p-6 sm:p-8 border border-slate-200/90 dark:border-slate-800 shadow-xs space-y-4">
+        <div class="flex items-center gap-2 text-xs font-bold text-rose-600 dark:text-rose-400 uppercase tracking-wider">
+          <span class="w-2 h-2 rounded-full bg-rose-600"></span> Section 10.2
+        </div>
+        <h2 class="font-display text-2xl font-bold text-slate-900 dark:text-white">
+          Taxation of Corporate Bonds & Debentures (TDS Sec 193)
+        </h2>
+        <p class="text-slate-600 dark:text-slate-300 text-sm leading-relaxed">
+          Coupon (interest) on corporate bonds is charged to tax under IFOS at applicable marginal income tax slab rates. Capital gains arise upon transfer or redemption in the secondary market.
+        </p>
+
+        <!-- TDS Exemption Withdrawal Box -->
+        <div class="p-4 rounded-xl bg-amber-50 dark:bg-amber-950/60 border border-amber-300 dark:border-amber-800 text-xs text-amber-950 dark:text-amber-200 space-y-1.5">
+          <span class="font-bold flex items-center gap-1.5">
+            <i data-lucide="alert-triangle" class="w-4 h-4 text-amber-600"></i>
+            ⭐ Crucial Legal Amendment: Removal of TDS Exemption under Section 193
+          </span>
+          <p>
+            Prior to 1st April 2023, interest on listed debentures held in demat form was exempt from TDS. <strong>Finance Act 2023 omitted this exemption!</strong> With effect from <strong>1st April 2023</strong>, all companies paying interest on listed debentures to resident unitholders MUST deduct <strong>TDS @ 10% under Section 193</strong> (threshold of ₹5,000 for listed debentures paid to resident individuals by cheque/ECS).
+          </p>
+        </div>
+
+        <div class="overflow-x-auto">
+          <table class="w-full text-left text-xs sm:text-sm border-collapse">
+            <thead>
+              <tr class="bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 border-b border-slate-200 dark:border-slate-700 font-bold">
+                <th class="p-3">Debenture Type</th>
+                <th class="p-3">Holding Period (LTCG)</th>
+                <th class="p-3">STCG Tax Rate</th>
+                <th class="p-3">LTCG Tax Rate (Post FA 2024)</th>
+              </tr>
+            </thead>
+            <tbody class="divide-y divide-slate-100 dark:divide-slate-800 text-slate-600 dark:text-slate-300">
+              <tr class="hover:bg-slate-50/80 dark:hover:bg-slate-800/40">
+                <td class="p-3 font-semibold text-slate-900 dark:text-white">Listed Bonds / Debentures</td>
+                <td class="p-3 font-bold">&gt; 12 Months</td>
+                <td class="p-3">Applicable Slab Rate</td>
+                <td class="p-3 font-semibold text-emerald-600">12.5% without indexation (Sec 112)</td>
+              </tr>
+              <tr class="hover:bg-slate-50/80 dark:hover:bg-slate-800/40">
+                <td class="p-3 font-semibold text-slate-900 dark:text-white">Unlisted Bonds / Debentures</td>
+                <td class="p-3 font-bold">&gt; 24 Months</td>
+                <td class="p-3">Applicable Slab Rate</td>
+                <td class="p-3 font-semibold text-emerald-600">12.5% without indexation (Sec 112)</td>
+              </tr>
+              <tr class="hover:bg-slate-50/80 dark:hover:bg-slate-800/40">
+                <td class="p-3 font-semibold text-slate-900 dark:text-white">Zero Coupon Bonds (Listed/Specified)</td>
+                <td class="p-3 font-bold">&gt; 12 Months</td>
+                <td class="p-3">Applicable Slab Rate</td>
+                <td class="p-3 font-semibold text-emerald-600">12.5% without indexation (Sec 112)</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <!-- Section 10.3: Section 50AA Debt MFs ⭐ -->
+      <section id="section-3" class="bg-white dark:bg-slate-900 rounded-3xl p-6 sm:p-8 border-2 border-rose-400/80 dark:border-rose-600/50 shadow-xs space-y-6">
+        <div class="flex items-center justify-between">
+          <div class="flex items-center gap-2 text-xs font-bold text-rose-600 dark:text-rose-400 uppercase tracking-wider">
+            <span class="w-2 h-2 rounded-full bg-rose-600"></span> Section 10.3 &bull; Core RIA Syllabus
+          </div>
+          <span class="px-2.5 py-0.5 rounded-full text-xs font-bold bg-rose-100 dark:bg-rose-950 text-rose-800 dark:text-rose-300 border border-rose-300 dark:border-rose-700 flex items-center gap-1">
+            <i data-lucide="star" class="w-3 h-3 fill-rose-500"></i> Landmark Regime
+          </span>
+        </div>
+        <h2 class="font-display text-2xl font-bold text-slate-900 dark:text-white">
+          Section 50AA: Taxation of "Specified Mutual Funds"
+        </h2>
+        <p class="text-slate-600 dark:text-slate-300 text-sm leading-relaxed">
+          The Finance Act 2023 introduced <strong>Section 50AA</strong> to eliminate the tax arbitrage between bank fixed deposits and pure debt mutual funds. It completely removed the indexation benefit and long-term capital gains status for specified mutual funds.
+        </p>
+
+        <!-- Definition of Specified Mutual Fund -->
+        <div class="p-5 rounded-2xl bg-rose-50 dark:bg-slate-800/80 border border-rose-200 dark:border-slate-700 space-y-3 text-xs sm:text-sm">
+          <h4 class="font-bold text-rose-950 dark:text-rose-200 text-sm">Definition of "Specified Mutual Fund" (Section 50AA):</h4>
+          <p class="text-slate-700 dark:text-slate-300 leading-relaxed">
+            A mutual fund scheme where <strong>not more than 35%</strong> of its total proceeds is invested in the equity shares of domestic companies. This captures all pure debt funds:
+          </p>
+          <div class="grid grid-cols-2 sm:grid-cols-4 gap-2 text-xs font-medium text-slate-700 dark:text-slate-300">
+            <div class="p-2 bg-white dark:bg-slate-900 rounded border border-rose-200 dark:border-slate-700 text-center">Overnight & Liquid Funds</div>
+            <div class="p-2 bg-white dark:bg-slate-900 rounded border border-rose-200 dark:border-slate-700 text-center">Ultra Short / Low Duration</div>
+            <div class="p-2 bg-white dark:bg-slate-900 rounded border border-rose-200 dark:border-slate-700 text-center">Corporate Bond & Banking PSU</div>
+            <div class="p-2 bg-white dark:bg-slate-900 rounded border border-rose-200 dark:border-slate-700 text-center">Gilt Funds & Target Maturity</div>
+          </div>
+        </div>
+
+        <!-- The 1-April-2023 Cut-off Architecture -->
+        <div class="p-5 rounded-2xl bg-slate-50 dark:bg-slate-800/60 border border-slate-200 dark:border-slate-700 space-y-3 text-xs">
+          <h4 class="font-bold text-slate-900 dark:text-white text-sm">Grandfathering & Date-of-Acquisition Rules:</h4>
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <div class="p-4 rounded-xl bg-white dark:bg-slate-900 border border-emerald-300 dark:border-emerald-800">
+              <span class="font-bold text-emerald-700 dark:text-emerald-400 block mb-1">Units Acquired BEFORE 1st April 2023:</span>
+              <p class="text-slate-600 dark:text-slate-400">
+                • <strong>Holding &gt; 36 Months:</strong> Grandfathered! Qualifies as Long-Term Capital Asset.<br>
+                • <strong>Tax Rate:</strong> 20% with indexation benefit (using Cost Inflation Index).<br>
+                • <strong>Holding &le; 36 Months:</strong> Short-Term Capital Gain at applicable slab rates.
+              </p>
+            </div>
+
+            <div class="p-4 rounded-xl bg-white dark:bg-slate-900 border border-rose-300 dark:border-rose-800">
+              <span class="font-bold text-rose-700 dark:text-rose-400 block mb-1">Units Acquired ON or AFTER 1st April 2023:</span>
+              <p class="text-slate-600 dark:text-slate-400">
+                • <strong>Deemed Short-Term:</strong> Gains from transfer, redemption, or maturity are <strong>statutorily deemed to be Short-Term Capital Gains</strong> under Section 50AA.<br>
+                • <strong>Holding Period Irrelevant:</strong> Even if held for 5 or 10 years!<br>
+                • <strong>Tax Rate:</strong> Charged at applicable marginal income tax slab rates.<br>
+                • <strong>Zero Indexation:</strong> No indexation benefit allowed.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Section 10.4: Market Linked Debentures (MLDs) ⭐ -->
+      <section id="section-4" class="bg-white dark:bg-slate-900 rounded-3xl p-6 sm:p-8 border-2 border-amber-400/80 dark:border-amber-600/50 shadow-xs space-y-4">
+        <div class="flex items-center justify-between">
+          <div class="flex items-center gap-2 text-xs font-bold text-amber-600 dark:text-amber-400 uppercase tracking-wider">
+            <span class="w-2 h-2 rounded-full bg-amber-500"></span> Section 10.4 &bull; High Yield Focus
+          </div>
+          <span class="px-2.5 py-0.5 rounded-full text-xs font-bold bg-amber-100 dark:bg-amber-950 text-amber-800 dark:text-amber-300 border border-amber-300 dark:border-amber-700">
+            Deemed STCG
+          </span>
+        </div>
+        <h2 class="font-display text-2xl font-bold text-slate-900 dark:text-white">
+          Market Linked Debentures (MLDs) under Section 50AA
+        </h2>
+        <p class="text-slate-600 dark:text-slate-300 text-sm leading-relaxed">
+          Market Linked Debentures are debt securities whose returns are linked to an underlying market index (e.g. Nifty 50 or 10-year G-sec yields). Historically, MLDs held for more than 12 months were taxed @ 10% without indexation under Section 112.
+        </p>
+
+        <div class="p-4 rounded-xl bg-amber-50 dark:bg-amber-950/70 border border-amber-300 dark:border-amber-800 text-xs text-amber-950 dark:text-amber-200 space-y-2">
+          <div class="font-bold flex items-center gap-1.5">
+            <i data-lucide="zap" class="w-4 h-4 text-amber-600"></i> Statutory Treatment of MLDs (Post 1 April 2023):
+          </div>
+          <ul class="list-disc pl-5 space-y-1">
+            <li>Section 50AA explicitly defines a <em>Market Linked Debenture</em> as a security having an underlying principal in the form of a debt security and where returns are linked to market variations.</li>
+            <li><strong>All capital gains</strong> arising from the transfer, redemption, or maturity of an MLD on or after 1st April 2023 are <strong>deemed to be capital gains from a Short-Term Capital Asset</strong>.</li>
+            <li>Taxable at the investor's <strong>applicable marginal income tax slab rates</strong>, regardless of the holding duration or listing status.</li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- Section 10.5 & 10.6: Hybrid Debt Funds & Tax-Free Bonds -->
+      <section id="section-5" class="bg-white dark:bg-slate-900 rounded-3xl p-6 sm:p-8 border border-slate-200/90 dark:border-slate-800 shadow-xs space-y-4">
+        <div class="flex items-center gap-2 text-xs font-bold text-rose-600 dark:text-rose-400 uppercase tracking-wider">
+          <span class="w-2 h-2 rounded-full bg-rose-600"></span> Section 10.5 & 10.6
+        </div>
+        <h2 class="font-display text-2xl font-bold text-slate-900 dark:text-white">
+          Non-Specified Hybrid Debt Funds & Special Bond Structures
+        </h2>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4 text-xs sm:text-sm">
+          <div class="p-4 rounded-xl bg-slate-50 dark:bg-slate-800/60 border border-slate-200 dark:border-slate-700 space-y-2">
+            <h4 class="font-bold text-slate-900 dark:text-white flex items-center gap-1.5">
+              <i data-lucide="layers" class="w-4 h-4 text-indigo-600"></i> Hybrid Funds (Equity &gt;35% to &lt;65%)
+            </h4>
+            <p class="text-slate-600 dark:text-slate-400 leading-relaxed">
+              Conservative Hybrid Funds and Multi-Asset Allocation Funds having between 35% and 65% domestic equity do <strong>NOT fall under Section 50AA</strong>!<br>
+              • <strong>Holding Period:</strong> <strong>&gt; 24 Months</strong> for LTCG (Finance Act 2024).<br>
+              • <strong>STCG (&le;24m):</strong> Taxed at marginal slab rates.<br>
+              • <strong>LTCG (&gt;24m):</strong> Taxed at <strong>12.5% without indexation</strong>.
+            </p>
+          </div>
+
+          <div class="p-4 rounded-xl bg-slate-50 dark:bg-slate-800/60 border border-slate-200 dark:border-slate-700 space-y-2">
+            <h4 class="font-bold text-slate-900 dark:text-white flex items-center gap-1.5">
+              <i data-lucide="award" class="w-4 h-4 text-amber-600"></i> Tax-Free Bonds (Section 10(15)(iv)(h))
+            </h4>
+            <p class="text-slate-600 dark:text-slate-400 leading-relaxed">
+              Bonds issued by PFC, REC, NHAI, HUDCO, IRFC.<br>
+              • <strong>Interest:</strong> 100% EXEMPT from income tax; no TDS.<br>
+              • <strong>Capital Gains on Sale:</strong> If sold in the secondary market, capital gains are <strong>taxable</strong> (holding period 12m for listed; LTCG @ 12.5% without indexation).
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Interactive 12-Question Quiz -->
+      <section id="interactive-quiz" class="bg-gradient-to-br from-slate-900 to-indigo-950 text-white rounded-3xl p-6 sm:p-8 shadow-xl space-y-6">
+        <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 pb-4 border-b border-white/10">
+          <div>
+            <span class="px-2.5 py-1 rounded-full text-xs font-bold uppercase tracking-wider bg-rose-500/20 text-rose-300 border border-rose-400/30">
+              Exam Simulator Quiz
+            </span>
+            <h3 class="font-display text-xl sm:text-2xl font-bold mt-1 text-white">
+              Chapter 10 Practice Quiz (12 Questions)
+            </h3>
+          </div>
+          <div class="flex items-center gap-3">
+            <div class="text-right">
+              <span class="text-xs text-slate-400 block">Progress</span>
+              <span class="text-sm font-bold text-rose-300"><span id="answered-count">0</span> / 12 Answered</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Quiz Questions Container -->
+        <div id="questions-container" class="space-y-6"></div>
+
+        <!-- Quiz Submission & Results -->
+        <div class="pt-4 border-t border-white/10 flex flex-col sm:flex-row items-center justify-between gap-4">
+          <button id="submit-quiz-btn" onclick="submitQuiz()" class="w-full sm:w-auto px-6 py-3 rounded-xl bg-rose-600 hover:bg-rose-500 text-white font-bold text-sm transition-all shadow-md flex items-center justify-center gap-2">
+            <i data-lucide="check-circle" class="w-4 h-4"></i>
+            <span>Submit Quiz & Validate Answers</span>
+          </button>
+          <button id="reset-quiz-btn" onclick="resetQuiz()" class="hidden w-full sm:w-auto px-6 py-3 rounded-xl bg-slate-800 hover:bg-slate-700 text-slate-200 font-bold text-sm transition-all border border-slate-700 flex items-center justify-center gap-2">
+            <i data-lucide="rotate-ccw" class="w-4 h-4"></i>
+            <span>Retake Chapter Quiz</span>
+          </button>
+        </div>
+
+        <!-- Results Display Box -->
+        <div id="quiz-results" class="hidden p-6 rounded-2xl bg-white/10 border border-white/20 space-y-3">
+          <div class="flex items-center justify-between">
+            <span id="result-status-badge" class="px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider"></span>
+            <span id="score-display" class="font-display font-extrabold text-2xl text-white"></span>
+          </div>
+          <p id="percentage-display" class="text-sm text-rose-200 font-medium"></p>
+          <p id="result-summary-text" class="text-xs text-slate-300 leading-relaxed"></p>
+        </div>
+      </section>
+
+    </main>
+  </div>
+
+  <!-- Quiz Script -->
+  <script>
+    const questionsData = [
+      {
+        id: 1,
+        question: "Under Section 50AA of the Income Tax Act, how is a 'Specified Mutual Fund' defined?",
+        options: [
+          { key: "a", text: "A mutual fund scheme investing not more than 35% of proceeds in domestic equity shares" },
+          { key: "b", text: "A mutual fund scheme investing not more than 50% of proceeds in domestic equity shares" },
+          { key: "c", text: "A mutual fund investing 100% in government securities" },
+          { key: "d", text: "Any mutual fund scheme investing in foreign stocks" }
+        ],
+        correct: "a",
+        explanation: "Section 50AA defines a Specified Mutual Fund as a mutual fund scheme where not more than 35% of its total proceeds is invested in the equity shares of domestic companies."
+      },
+      {
+        id: 2,
+        question: "An investor purchases units of a pure Corporate Bond Debt Fund on 15th May 2023 and redeems them on 20th May 2026 (holding period: 3 years). How will the capital gains be taxed?",
+        options: [
+          { key: "a", text: "Long-Term Capital Gain taxed @ 20% with indexation" },
+          { key: "b", text: "Long-Term Capital Gain taxed @ 12.5% without indexation" },
+          { key: "c", text: "Deemed Short-Term Capital Gain taxed at applicable slab rates" },
+          { key: "d", text: "Exempt from tax up to ₹1.25 Lakhs" }
+        ],
+        correct: "c",
+        explanation: "Under Section 50AA, units of specified debt funds acquired on or after 1st April 2023 are statutorily deemed to be Short-Term Capital Gains taxed at applicable slab rates, irrespective of how long they are held."
+      },
+      {
+        id: 3,
+        question: "What is the tax treatment for units of a debt mutual fund purchased on 15th January 2022 and redeemed in August 2025 after holding for 43 months?",
+        options: [
+          { key: "a", text: "Taxed at slab rates as deemed STCG under Section 50AA" },
+          { key: "b", text: "Long-Term Capital Gain taxed @ 20% with indexation benefit (grandfathered)" },
+          { key: "c", text: "Taxed @ 12.5% without indexation" },
+          { key: "d", text: "Exempt under Section 10(23D)" }
+        ],
+        correct: "b",
+        explanation: "Section 50AA applies ONLY to units acquired on or after 1st April 2023. Units acquired prior to 1-Apr-2023 and held for more than 36 months retain their grandfathered LTCG status taxed @ 20% with indexation."
+      },
+      {
+        id: 4,
+        question: "How are capital gains arising from the transfer or redemption of Market Linked Debentures (MLDs) taxed on or after 1st April 2023?",
+        options: [
+          { key: "a", text: "10% without indexation if held for more than 12 months" },
+          { key: "b", text: "12.5% without indexation if held for more than 24 months" },
+          { key: "c", text: "Deemed Short-Term Capital Gain taxed at applicable marginal slab rates under Section 50AA" },
+          { key: "d", text: "Exempt from capital gains tax" }
+        ],
+        correct: "c",
+        explanation: "Under Section 50AA, all gains arising from the transfer, redemption, or maturity of MLDs are deemed to be short-term capital gains and taxed at applicable slab rates."
+      },
+      {
+        id: 5,
+        question: "What is the threshold for TDS deduction under Section 194A on bank fixed deposit interest paid to a resident non-senior citizen individual?",
+        options: [
+          { key: "a", text: "₹5,000" },
+          { key: "b", text: "₹10,000" },
+          { key: "c", text: "₹40,000" },
+          { key: "d", text: "₹50,000" }
+        ],
+        correct: "c",
+        explanation: "Under Section 194A, banks deduct TDS @ 10% if the aggregate interest paid on time deposits exceeds ₹40,000 in a financial year (₹50,000 for senior citizens)."
+      },
+      {
+        id: 6,
+        question: "With effect from 1st April 2023, what is the TDS rate under Section 193 on interest from listed dematerialized corporate debentures?",
+        options: [
+          { key: "a", text: "Nil (Exempt from TDS)" },
+          { key: "b", text: "5%" },
+          { key: "c", text: "10%" },
+          { key: "d", text: "20%" }
+        ],
+        correct: "c",
+        explanation: "Finance Act 2023 removed the clause exempting listed dematerialized debentures from TDS. Companies must now deduct TDS @ 10% under Section 193."
+      },
+      {
+        id: 7,
+        question: "A Conservative Hybrid Mutual Fund maintains 25% in domestic equity and 75% in debt instruments. Units are acquired on 10th June 2023 and sold in 2026. How are the gains classified?",
+        options: [
+          { key: "a", text: "Equity oriented fund taxed under Section 112A" },
+          { key: "b", text: "Specified Mutual Fund under Section 50AA, deemed STCG at slab rates" },
+          { key: "c", text: "Taxed @ 12.5% after 24 months" },
+          { key: "d", text: "Taxed @ 20% with indexation" }
+        ],
+        correct: "b",
+        explanation: "Because equity exposure is 25% (which is &le; 35%), it qualifies as a 'Specified Mutual Fund' under Section 50AA and is taxed as deemed STCG at slab rates."
+      },
+      {
+        id: 8,
+        question: "A Multi-Asset Allocation Fund maintains 45% in domestic equities, 40% in debt, and 15% in gold ETFs. Post Finance Act 2024, what is the holding period and tax rate for LTCG?",
+        options: [
+          { key: "a", text: "12 months; 20% tax rate" },
+          { key: "b", text: "24 months; 12.5% tax rate without indexation" },
+          { key: "c", text: "36 months; 20% tax rate with indexation" },
+          { key: "d", text: "Always deemed short-term at slab rates" }
+        ],
+        correct: "b",
+        explanation: "Because equity is >35% but <65%, it falls outside Section 50AA. Post Finance Act 2024, the holding period for such unlisted/other funds is >24 months, and LTCG is taxed @ 12.5% without indexation."
+      },
+      {
+        id: 9,
+        question: "Which form should a resident senior citizen (aged 63) submit to a bank to prevent TDS on FD interest when their estimated net tax liability for the year is Nil?",
+        options: [
+          { key: "a", text: "Form 15G" },
+          { key: "b", text: "Form 15H" },
+          { key: "c", text: "Form 16A" },
+          { key: "d", text: "Form 49A" }
+        ],
+        correct: "b",
+        explanation: "Form 15H is the statutory declaration specifically designed for resident senior citizens (aged 60 and above) whose estimated net tax liability for the financial year is nil."
+      },
+      {
+        id: 10,
+        question: "An investor purchases 8.2% Tax-Free Bonds of NHAI in 2014. In 2024, he sells them on the stock exchange at a capital gain of ₹80,000. How is this gain treated?",
+        options: [
+          { key: "a", text: "Completely exempt from tax because the bonds are tax-free" },
+          { key: "b", text: "Taxable as Long-Term Capital Gain" },
+          { key: "c", text: "Taxable as Income from Other Sources" },
+          { key: "d", text: "Taxable as business income" }
+        ],
+        correct: "b",
+        explanation: "Under Section 10(15)(iv)(h), only the periodic coupon interest is tax-free. Capital gains arising from the sale of tax-free bonds in the secondary market are fully taxable."
+      },
+      {
+        id: 11,
+        question: "What is the holding period threshold for listed corporate debentures to qualify as long-term capital assets?",
+        options: [
+          { key: "a", text: "More than 12 months" },
+          { key: "b", text: "More than 24 months" },
+          { key: "c", text: "More than 36 months" },
+          { key: "d", text: "More than 60 months" }
+        ],
+        correct: "a",
+        explanation: "For listed debentures and bonds traded on a recognized stock exchange, the holding period for long-term status is more than 12 months."
+      },
+      {
+        id: 12,
+        question: "If a depositor does NOT furnish their PAN to the bank, at what rate will TDS be deducted on their fixed deposit interest?",
+        options: [
+          { key: "a", text: "10%" },
+          { key: "b", text: "15%" },
+          { key: "c", text: "20%" },
+          { key: "d", text: "30%" }
+        ],
+        correct: "c",
+        explanation: "Under Section 206AA, if an assessee entitled to receive any sum on which TDS is deductible fails to furnish their PAN, TDS must be deducted at 20%."
+      }
+    ];
+
+    let userAnswers = {};
+
+    function renderQuiz() {
+      const container = document.getElementById("questions-container");
+      container.innerHTML = "";
+
+      questionsData.forEach((q, index) => {
+        const qDiv = document.createElement("div");
+        qDiv.className = "p-5 rounded-2xl bg-white/5 border border-white/10 space-y-4 transition-all";
+        qDiv.id = `q-box-${q.id}`;
+
+        let optionsHtml = "";
+        q.options.forEach(opt => {
+          optionsHtml += `
+            <label class="flex items-center gap-3 p-3 rounded-xl bg-white/5 hover:bg-white/10 border border-white/5 cursor-pointer text-xs sm:text-sm transition-all" onclick="selectOption(${q.id}, '${opt.key}')" id="label-${q.id}-${opt.key}">
+              <input type="radio" name="question-${q.id}" value="${opt.key}" class="w-4 h-4 text-rose-500 focus:ring-0 focus:ring-offset-0 bg-transparent border-slate-500">
+              <span class="font-bold text-rose-300 w-5 uppercase">${opt.key}.</span>
+              <span class="text-slate-200">${opt.text}</span>
+            </label>
+          `;
+        });
+
+        qDiv.innerHTML = `
+          <div class="flex items-start justify-between gap-2">
+            <span class="text-xs font-bold text-rose-400 uppercase tracking-wider">Question ${index + 1} of ${questionsData.length}</span>
+            <span id="badge-${q.id}" class="text-xs px-2 py-0.5 rounded-full bg-white/5 text-slate-400 font-medium">Unanswered</span>
+          </div>
+          <h4 class="font-display font-semibold text-sm sm:text-base text-white">${q.question}</h4>
+          <div class="space-y-2 mt-3">
+            ${optionsHtml}
+          </div>
+          <div id="explanation-${q.id}" class="hidden p-4 rounded-xl text-xs sm:text-sm mt-3 space-y-1"></div>
+        `;
+        container.appendChild(qDiv);
+      });
+      lucide.createIcons();
+    }
+
+    function selectOption(qId, key) {
+      userAnswers[qId] = key;
+      const count = Object.keys(userAnswers).length;
+      document.getElementById("answered-count").innerText = count;
+      
+      const badge = document.getElementById(`badge-${qId}`);
+      if (badge) {
+        badge.innerText = "Answered";
+        badge.className = "text-xs px-2 py-0.5 rounded-full bg-rose-500/20 text-rose-300 font-medium";
+      }
+
+      const q = questionsData.find(item => item.id === qId);
+      q.options.forEach(opt => {
+        const lbl = document.getElementById(`label-${qId}-${opt.key}`);
+        if (opt.key === key) {
+          lbl.className = "flex items-center gap-3 p-3 rounded-xl bg-rose-600/30 border border-rose-400/50 cursor-pointer text-xs sm:text-sm transition-all";
+        } else {
+          lbl.className = "flex items-center gap-3 p-3 rounded-xl bg-white/5 hover:bg-white/10 border border-white/5 cursor-pointer text-xs sm:text-sm transition-all";
+        }
+      });
+    }
+
+    function submitQuiz() {
+      let score = 0;
+      questionsData.forEach(q => {
+        const selected = userAnswers[q.id];
+        const isCorrect = selected === q.correct;
+        if (isCorrect) score++;
+
+        const explanationDiv = document.getElementById(`explanation-${q.id}`);
+        explanationDiv.classList.remove("hidden");
+
+        if (isCorrect) {
+          explanationDiv.className = "p-4 rounded-xl text-xs sm:text-sm mt-3 bg-emerald-950/60 border border-emerald-600 text-emerald-200 space-y-1";
+          explanationDiv.innerHTML = `<div class="font-bold text-emerald-400 flex items-center gap-1.5"><i data-lucide="check" class="w-4 h-4"></i> Correct!</div><p>${q.explanation}</p>`;
+        } else {
+          explanationDiv.className = "p-4 rounded-xl text-xs sm:text-sm mt-3 bg-rose-950/60 border border-rose-600 text-rose-200 space-y-1";
+          explanationDiv.innerHTML = `<div class="font-bold text-rose-400 flex items-center gap-1.5"><i data-lucide="x" class="w-4 h-4"></i> Incorrect (Correct Answer: ${q.correct.toUpperCase()})</div><p>${q.explanation}</p>`;
+        }
+      });
+
+      const percentage = Math.round((score / questionsData.length) * 100);
+      const passed = percentage >= 60;
+      
+      const resultsDiv = document.getElementById("quiz-results");
+      resultsDiv.classList.remove("hidden");
+
+      const statusBadge = document.getElementById("result-status-badge");
+      statusBadge.innerText = passed ? "Status: Passed (60%+ Benchmark)" : "Status: Needs Revision";
+      statusBadge.className = passed ? "px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider bg-emerald-500 text-emerald-950" : "px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider bg-amber-500 text-amber-950";
+
+      document.getElementById("score-display").innerText = `${score} / ${questionsData.length}`;
+      document.getElementById("percentage-display").innerText = `${percentage}% Score (NISM Passing Benchmark: 60%)`;
+
+      document.getElementById("result-summary-text").innerText = passed
+        ? `Superb! You scored ${percentage}%, mastering Section 50AA debt fund provisions and MLD tax principles.`
+        : `You scored ${percentage}%. Revisit Section 50AA cut-off dates and TDS Section 193/194A rules before re-attempting.`;
+
+      document.getElementById("submit-quiz-btn").classList.add("hidden");
+      document.getElementById("reset-quiz-btn").classList.remove("hidden");
+
+      resultsDiv.scrollIntoView({ behavior: 'smooth' });
+      lucide.createIcons();
+    }
+
+    function resetQuiz() {
+      userAnswers = {};
+      document.getElementById("answered-count").innerText = "0";
+      document.getElementById("quiz-results").classList.add("hidden");
+      document.getElementById("submit-quiz-btn").classList.remove("hidden");
+      document.getElementById("reset-quiz-btn").classList.add("hidden");
+      renderQuiz();
+      document.getElementById("interactive-quiz").scrollIntoView({ behavior: 'smooth' });
+    }
+
+    // Initialize Quiz & Preloader
+    window.addEventListener('load', () => {
+      const preloader = document.getElementById('eduleb-preloader');
+      if (preloader) {
+        preloader.classList.add('loaded');
+        setTimeout(() => preloader.style.display = 'none', 400);
+      }
+      renderQuiz();
+      lucide.createIcons();
+    });
+  </script>
+</body>
+</html>

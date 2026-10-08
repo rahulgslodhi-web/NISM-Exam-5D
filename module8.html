@@ -1,0 +1,533 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Module 8: Retirement Planning | NISM Series X-B Investment Adviser (Level 2)</title>
+  
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  
+  <!-- Google Fonts: DM Sans & Jost (Eduleb Benchmark) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Jost:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+  <script src="https://unpkg.com/lucide@latest"></script>
+
+  <!-- Modern Documentation Design System -->
+  <link rel="stylesheet" href="modern-docs.css">
+
+  <!-- KaTeX for formula rendering -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.min.css">
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.min.js"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/contrib/auto-render.min.js" onload="renderMathInElement(document.body);"></script>
+
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['"DM Sans"', 'sans-serif'],
+            display: ['"Jost"', 'sans-serif'],
+            heading: ['"Jost"', 'sans-serif']
+          },
+          colors: {
+            brand: {
+              50: '#eef2ff',
+              100: '#e0e7ff',
+              500: '#525fe1',
+              600: '#434ec9',
+              700: '#353db3',
+              800: '#282f9c',
+              900: '#0b104a'
+            }
+          }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    body {
+      font-family: 'DM Sans', sans-serif;
+      font-size: 16px;
+      line-height: 26px;
+    }
+    h1, h2, h3, h4, h5, h6, .font-display, .font-heading {
+      font-family: 'Jost', sans-serif;
+      font-weight: 700;
+    }
+  </style>
+</head>
+<body class="bg-slate-50 dark:bg-slate-950 text-slate-900 dark:text-slate-100 min-h-screen flex flex-col antialiased transition-colors duration-200">
+
+  <!-- Smooth Opening Preloader -->
+  <div class="preloaders" id="eduleb-preloader">
+    <span class="loader"></span>
+    <div class="preloader-label">Module 8: Retirement Planning</div>
+  </div>
+
+  <!-- Standardized Header (Single-Tier, 64px) -->
+  <header class="sticky top-0 z-40 bg-white/95 dark:bg-slate-900/95 backdrop-blur-md border-b border-slate-200/80 dark:border-slate-800 shadow-xs">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
+      <!-- Left: Logo & Context Label -->
+      <a href="index.html" class="flex items-center gap-2.5 group">
+        <div class="w-9 h-9 rounded-xl bg-[#525fe1] flex items-center justify-center text-white font-bold shadow-xs group-hover:scale-105 transition-transform">
+          <i data-lucide="shield-check" class="w-5 h-5"></i>
+        </div>
+        <div>
+          <span class="font-display font-bold text-base tracking-tight text-[#0b104a] dark:text-white block leading-tight">NISM Level 2</span>
+          <span class="block text-[10px] text-[#525fe1] dark:text-indigo-400 font-bold uppercase tracking-wider">Series X-B: Module 8</span>
+        </div>
+      </a>
+
+      <!-- Center: Minimal Navigation Links -->
+      <nav class="hidden md:flex items-center gap-1 text-sm font-medium font-display">
+        <a href="index.html" class="px-3 py-1.5 rounded-lg text-slate-600 dark:text-slate-300 hover:text-[#0b104a] dark:hover:text-white hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors">All Certifications</a>
+        <a href="module8.html" class="px-3 py-1.5 rounded-lg font-semibold text-[#525fe1] dark:text-indigo-400 bg-indigo-50 dark:bg-indigo-950/70 border border-indigo-200/80 dark:border-indigo-800/80 transition-colors">Module 8 Hub</a>
+        <a href="module8-ch4.html" class="px-3 py-1.5 rounded-lg text-slate-600 dark:text-slate-300 hover:text-[#0b104a] dark:hover:text-white hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors">Chapter 4</a>
+        <a href="module8-ch5.html" class="px-3 py-1.5 rounded-lg text-slate-600 dark:text-slate-300 hover:text-[#0b104a] dark:hover:text-white hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors">Chapter 5</a>
+        <a href="module8-ch6.html" class="px-3 py-1.5 rounded-lg text-slate-600 dark:text-slate-300 hover:text-[#0b104a] dark:hover:text-white hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors">Chapter 6</a>
+      </nav>
+
+      <!-- Right: Search (⌘K), Theme (⌘D), and Practice CTA -->
+      <div class="flex items-center gap-2">
+        <button onclick="window.toggleDarkMode()" id="nism-header-theme-btn" class="p-2 rounded-full border border-slate-200 dark:border-slate-700 text-slate-600 dark:text-slate-300 bg-white dark:bg-slate-800 hover:bg-slate-50 dark:hover:bg-slate-700 transition-colors" title="Toggle Theme (⌘D)">
+          <i data-lucide="moon" class="w-4 h-4"></i>
+        </button>
+        <a href="module8-ch4.html#interactive-quiz" class="hidden sm:inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-full text-xs font-bold text-white bg-[#525fe1] hover:bg-[#404dc7] font-display shadow-xs transition-colors">
+          <span>Start Practicing</span>
+          <i data-lucide="arrow-right" class="w-3 h-3"></i>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Module Hero Banner -->
+  <section class="bg-gradient-to-b from-indigo-50/80 via-purple-50/30 to-slate-50 dark:from-slate-900 dark:via-slate-900/80 dark:to-slate-950 py-12 sm:py-16 border-b border-slate-200/80 dark:border-slate-800">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex flex-wrap items-center gap-2 mb-4">
+        <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-indigo-100 dark:bg-indigo-950/80 text-indigo-800 dark:text-indigo-300 text-xs font-bold border border-indigo-200 dark:border-indigo-800">
+          <i data-lucide="award" class="w-3.5 h-3.5"></i>
+          Exam Weightage: 30 Marks (Highest Single Weightage)
+        </span>
+        <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-amber-50 dark:bg-amber-950/60 text-amber-800 dark:text-amber-300 border border-amber-200 dark:border-amber-800 text-xs font-semibold">
+          <i data-lucide="sparkles" class="w-3.5 h-3.5 text-amber-600 dark:text-amber-400"></i>
+          NISM Series X-B: Investment Adviser (Level 2)
+        </span>
+        <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-emerald-50 dark:bg-emerald-950/60 text-emerald-800 dark:text-emerald-300 border border-emerald-200 dark:border-emerald-800 text-xs font-semibold">
+          <i data-lucide="check-circle" class="w-3.5 h-3.5 text-emerald-600 dark:text-emerald-400"></i>
+          100% Exam Aligned Syllabus
+        </span>
+      </div>
+      
+      <h1 class="font-display text-3xl sm:text-4xl md:text-5xl font-extrabold text-slate-900 dark:text-white tracking-tight">
+        Module 8: <span class="text-indigo-600 dark:text-indigo-400">Retirement Planning</span>
+      </h1>
+      
+      <p class="mt-4 text-slate-600 dark:text-slate-300 max-w-3xl leading-relaxed text-sm sm:text-base">
+        Master the core pillar of personal financial advisory. This comprehensive module covers longevity and inflation risks, income replacement ratios, pension architectures (NPS, APY, EPF/EPS, PPF, SCSS, PMVVY), annuity contracts, reverse mortgage structures, and the advanced financial mathematics of retirement corpus computation (PV, FV, PMT, and Safe Withdrawal Rates).
+      </p>
+
+      <!-- Key Metrics Chips -->
+      <div class="mt-6 flex flex-wrap gap-3 text-xs">
+        <div class="px-3.5 py-2 rounded-xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 shadow-xs text-slate-700 dark:text-slate-300 font-medium flex items-center gap-2">
+          <i data-lucide="book-open" class="w-4 h-4 text-indigo-600 dark:text-indigo-400"></i>
+          <span>3 Core Chapters (Ch 4, Ch 5, Ch 6)</span>
+        </div>
+        <div class="px-3.5 py-2 rounded-xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 shadow-xs text-slate-700 dark:text-slate-300 font-medium flex items-center gap-2">
+          <i data-lucide="help-circle" class="w-4 h-4 text-indigo-600 dark:text-indigo-400"></i>
+          <span>36 Solved Practice MCQs</span>
+        </div>
+        <div class="px-3.5 py-2 rounded-xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 shadow-xs text-slate-700 dark:text-slate-300 font-medium flex items-center gap-2">
+          <i data-lucide="calculator" class="w-4 h-4 text-amber-600 dark:text-amber-400"></i>
+          <span>8+ Worked Mathematical Formulas</span>
+        </div>
+        <div class="px-3.5 py-2 rounded-xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 shadow-xs text-slate-700 dark:text-slate-300 font-medium flex items-center gap-2">
+          <i data-lucide="shield-check" class="w-4 h-4 text-emerald-600 dark:text-emerald-400"></i>
+          <span>SEBI IA Regulations Compliant</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Main Container -->
+  <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 flex-grow space-y-14">
+
+    <!-- High-Yield Exam Notice -->
+    <div class="rounded-2xl p-5 bg-gradient-to-r from-amber-500/10 via-indigo-500/10 to-purple-500/10 border border-amber-300/60 dark:border-amber-700/50 flex flex-col md:flex-row items-start md:items-center justify-between gap-4">
+      <div class="flex items-start gap-3.5">
+        <div class="w-10 h-10 rounded-xl bg-amber-500 text-slate-950 flex items-center justify-center font-bold shrink-0">
+          <i data-lucide="zap" class="w-5 h-5"></i>
+        </div>
+        <div>
+          <h2 class="font-display font-bold text-slate-900 dark:text-white text-base">Module 8 High-Yield Advisory Note (30 Marks)</h2>
+          <p class="text-xs sm:text-sm text-slate-600 dark:text-slate-300 mt-0.5 leading-relaxed">
+            In NISM Series X-B, Retirement Planning carries <strong>30 out of 100/150 marks</strong>. Candidates consistently encounter 6 to 8 multi-step numerical problems requiring annuity-due and inflation-adjusted real return calculations, plus tricky product questions on NPS active/auto choices and reverse mortgages.
+          </p>
+        </div>
+      </div>
+      <a href="module8-ch6.html" class="shrink-0 px-4 py-2 rounded-xl text-xs font-bold bg-indigo-600 hover:bg-indigo-700 text-white transition-colors flex items-center gap-1.5">
+        <span>Review Math Formulas</span>
+        <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i>
+      </a>
+    </div>
+
+    <!-- 3 Core Chapter Cards Grid -->
+    <div>
+      <div class="flex items-center justify-between mb-6">
+        <div>
+          <h2 class="font-display text-2xl font-bold text-slate-900 dark:text-white">Curriculum Chapters</h2>
+          <p class="text-xs sm:text-sm text-slate-500 dark:text-slate-400 mt-1">Select a chapter below to access comprehensive notes, comparative tables, and 12-question interactive quizzes.</p>
+        </div>
+        <span class="text-xs font-bold px-3 py-1 rounded-full bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300">
+          3 Study Units
+        </span>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+
+        <!-- Card 1: Chapter 4 -->
+        <a href="module8-ch4.html" class="group bg-white dark:bg-slate-900 rounded-2xl p-6 border border-slate-200 dark:border-slate-800 shadow-xs hover:shadow-lg hover:border-indigo-400 dark:hover:border-indigo-600 transition-all flex flex-col justify-between">
+          <div>
+            <div class="flex items-center justify-between mb-3">
+              <span class="text-xs font-bold uppercase tracking-wider text-indigo-600 dark:text-indigo-400 bg-indigo-50 dark:bg-indigo-950/80 px-2.5 py-1 rounded-lg">Chapter 04</span>
+              <span class="text-xs font-bold text-amber-700 dark:text-amber-400 bg-amber-50 dark:bg-amber-950/60 px-2 py-0.5 rounded border border-amber-200 dark:border-amber-800">⭐ High-Yield</span>
+            </div>
+            <h3 class="font-display text-lg font-bold text-slate-900 dark:text-white group-hover:text-indigo-600 dark:group-hover:text-indigo-400 transition-colors">
+              Retirement Planning Basics
+            </h3>
+            <p class="text-xs text-slate-600 dark:text-slate-400 mt-2.5 leading-relaxed">
+              Foundations of retirement advisory: Longevity risk & mortality dynamics, compounding inflation effects, double-digit healthcare cost escalation, Income Replacement Ratio (IRR) method vs Expense Protection budgeting, and the critical transition from the Accumulation Phase to the Decumulation Phase.
+            </p>
+
+            <div class="mt-4 pt-3 border-t border-slate-100 dark:border-slate-800/80 space-y-1 text-[11px] text-slate-500 dark:text-slate-400">
+              <div class="flex items-center gap-1.5">
+                <i data-lucide="check" class="w-3.5 h-3.5 text-emerald-500"></i>
+                <span>Longevity & Purchasing Power Risks</span>
+              </div>
+              <div class="flex items-center gap-1.5">
+                <i data-lucide="check" class="w-3.5 h-3.5 text-emerald-500"></i>
+                <span>IRR (60-80%) vs Detailed Expense Budgeting</span>
+              </div>
+              <div class="flex items-center gap-1.5">
+                <i data-lucide="check" class="w-3.5 h-3.5 text-emerald-500"></i>
+                <span>Sequence of Returns Risk (SRR)</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="mt-6 pt-4 border-t border-slate-100 dark:border-slate-800 flex items-center justify-between text-xs font-bold text-indigo-600 dark:text-indigo-400">
+            <span>Read Chapter Notes & 12 MCQs</span>
+            <i data-lucide="arrow-right" class="w-4 h-4 group-hover:translate-x-1 transition-transform"></i>
+          </div>
+        </a>
+
+        <!-- Card 2: Chapter 5 -->
+        <a href="module8-ch5.html" class="group bg-white dark:bg-slate-900 rounded-2xl p-6 border border-slate-200 dark:border-slate-800 shadow-xs hover:shadow-lg hover:border-indigo-400 dark:hover:border-indigo-600 transition-all flex flex-col justify-between">
+          <div>
+            <div class="flex items-center justify-between mb-3">
+              <span class="text-xs font-bold uppercase tracking-wider text-indigo-600 dark:text-indigo-400 bg-indigo-50 dark:bg-indigo-950/80 px-2.5 py-1 rounded-lg">Chapter 05</span>
+              <span class="text-xs font-bold text-amber-700 dark:text-amber-400 bg-amber-50 dark:bg-amber-950/60 px-2 py-0.5 rounded border border-amber-200 dark:border-amber-800">⭐ Heavily Tested</span>
+            </div>
+            <h3 class="font-display text-lg font-bold text-slate-900 dark:text-white group-hover:text-indigo-600 dark:group-hover:text-indigo-400 transition-colors">
+              Retirement Products
+            </h3>
+            <p class="text-xs text-slate-600 dark:text-slate-400 mt-2.5 leading-relaxed">
+              Complete inventory of retirement vehicles in India: National Pension System (NPS Tier I & II, Active vs Auto Life-Cycle LC75/50/25), Atal Pension Yojana (APY), statutory safety nets (EPF, EPS, EDLI), PPF, Senior Citizens Savings Scheme (₹30 Lakh limit), PMVVY, Annuity contracts, and Reverse Mortgages.
+            </p>
+
+            <div class="mt-4 pt-3 border-t border-slate-100 dark:border-slate-800/80 space-y-1 text-[11px] text-slate-500 dark:text-slate-400">
+              <div class="flex items-center gap-1.5">
+                <i data-lucide="check" class="w-3.5 h-3.5 text-emerald-500"></i>
+                <span>NPS Tier I Tax Slabs (80CCD(1), 1B, 2)</span>
+              </div>
+              <div class="flex items-center gap-1.5">
+                <i data-lucide="check" class="w-3.5 h-3.5 text-emerald-500"></i>
+                <span>EPF/EPS Wage Cap (₹15,000) & Pension Formula</span>
+              </div>
+              <div class="flex items-center gap-1.5">
+                <i data-lucide="check" class="w-3.5 h-3.5 text-emerald-500"></i>
+                <span>Reverse Mortgage Tax Exemption (Sec 10(43))</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="mt-6 pt-4 border-t border-slate-100 dark:border-slate-800 flex items-center justify-between text-xs font-bold text-indigo-600 dark:text-indigo-400">
+            <span>Read Chapter Notes & 12 MCQs</span>
+            <i data-lucide="arrow-right" class="w-4 h-4 group-hover:translate-x-1 transition-transform"></i>
+          </div>
+        </a>
+
+        <!-- Card 3: Chapter 6 -->
+        <a href="module8-ch6.html" class="group bg-white dark:bg-slate-900 rounded-2xl p-6 border border-slate-200 dark:border-slate-800 shadow-xs hover:shadow-lg hover:border-indigo-400 dark:hover:border-indigo-600 transition-all flex flex-col justify-between">
+          <div>
+            <div class="flex items-center justify-between mb-3">
+              <span class="text-xs font-bold uppercase tracking-wider text-indigo-600 dark:text-indigo-400 bg-indigo-50 dark:bg-indigo-950/80 px-2.5 py-1 rounded-lg">Chapter 06</span>
+              <span class="text-xs font-bold text-amber-700 dark:text-amber-400 bg-amber-50 dark:bg-amber-950/60 px-2 py-0.5 rounded border border-amber-200 dark:border-amber-800">⭐ Math & Case Studies</span>
+            </div>
+            <h3 class="font-display text-lg font-bold text-slate-900 dark:text-white group-hover:text-indigo-600 dark:group-hover:text-indigo-400 transition-colors">
+              Miscellaneous Aspects & Corpus Math
+            </h3>
+            <p class="text-xs text-slate-600 dark:text-slate-400 mt-2.5 leading-relaxed">
+              Advanced retirement mathematics & strategic execution: Inflation-adjusted real rates of return, step-by-step 3-stage corpus calculations, Annuity-Due mode conversions, William Bengen's 4% Safe Withdrawal Rate (SWR), annuity selection criteria, and estate/philanthropy integration.
+            </p>
+
+            <div class="mt-4 pt-3 border-t border-slate-100 dark:border-slate-800/80 space-y-1 text-[11px] text-slate-500 dark:text-slate-400">
+              <div class="flex items-center gap-1.5">
+                <i data-lucide="check" class="w-3.5 h-3.5 text-emerald-500"></i>
+                <span>Fisher Real Rate: $r_{\text{real}} = \frac{1+r}{1+e} - 1$</span>
+              </div>
+              <div class="flex items-center gap-1.5">
+                <i data-lucide="check" class="w-3.5 h-3.5 text-emerald-500"></i>
+                <span>Corpus PV Formula & Annual SIP Requirement</span>
+              </div>
+              <div class="flex items-center gap-1.5">
+                <i data-lucide="check" class="w-3.5 h-3.5 text-emerald-500"></i>
+                <span>Safe Withdrawal Rate (4% Rule in India)</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="mt-6 pt-4 border-t border-slate-100 dark:border-slate-800 flex items-center justify-between text-xs font-bold text-indigo-600 dark:text-indigo-400">
+            <span>Read Chapter Notes & 12 MCQs</span>
+            <i data-lucide="arrow-right" class="w-4 h-4 group-hover:translate-x-1 transition-transform"></i>
+          </div>
+        </a>
+
+      </div>
+    </div>
+
+    <!-- Master Product Comparison Matrix Table -->
+    <section class="bg-white dark:bg-slate-900 rounded-3xl p-6 sm:p-8 border border-slate-200 dark:border-slate-800 shadow-xs space-y-6">
+      <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-3">
+        <div>
+          <span class="text-xs font-bold uppercase tracking-wider text-indigo-600 dark:text-indigo-400">Executive Summary</span>
+          <h2 class="font-display text-xl sm:text-2xl font-bold text-slate-900 dark:text-white mt-0.5">Retirement Products Comparative Matrix</h2>
+        </div>
+        <span class="text-xs font-medium px-3 py-1 rounded-full bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300">
+          Quick Revision Cheat Sheet
+        </span>
+      </div>
+
+      <div class="overflow-x-auto rounded-2xl border border-slate-200 dark:border-slate-800">
+        <table class="w-full text-left text-xs sm:text-sm">
+          <thead class="bg-slate-100 dark:bg-slate-800/80 text-slate-700 dark:text-slate-200 font-bold uppercase border-b border-slate-200 dark:border-slate-700">
+            <tr>
+              <th class="p-3.5">Product</th>
+              <th class="p-3.5">Target & Entry Age</th>
+              <th class="p-3.5">Max Investment Limit</th>
+              <th class="p-3.5">Lock-in / Tenure</th>
+              <th class="p-3.5">Tax Status (Accumulation)</th>
+              <th class="p-3.5">Withdrawal / Maturity Tax</th>
+            </tr>
+          </thead>
+          <tbody class="divide-y divide-slate-200 dark:divide-slate-800 text-slate-700 dark:text-slate-300">
+            <tr class="hover:bg-slate-50/60 dark:hover:bg-slate-800/50">
+              <td class="p-3.5 font-bold text-slate-900 dark:text-white">NPS (Tier I)</td>
+              <td class="p-3.5">18 - 70 Years (All Citizens)</td>
+              <td class="p-3.5">No upper limit</td>
+              <td class="p-3.5">Till age 60 (deferrable to 75)</td>
+              <td class="p-3.5">Sec 80CCD(1) + 80CCD(1B) + 80CCD(2)</td>
+              <td class="p-3.5"><span class="font-semibold text-emerald-600 dark:text-emerald-400">60% Lump sum 100% Tax-Free</span>; 40% Annuity payout taxable</td>
+            </tr>
+            <tr class="hover:bg-slate-50/60 dark:hover:bg-slate-800/50">
+              <td class="p-3.5 font-bold text-slate-900 dark:text-white">EPF & EPS</td>
+              <td class="p-3.5">Salaried employees</td>
+              <td class="p-3.5">12% Basic+DA (voluntary higher VPF)</td>
+              <td class="p-3.5">Retirement (58 years)</td>
+              <td class="p-3.5">Sec 80C (interest exempt up to ₹2.5L employee contrib)</td>
+              <td class="p-3.5">Tax-free after 5 continuous years of service</td>
+            </tr>
+            <tr class="hover:bg-slate-50/60 dark:hover:bg-slate-800/50">
+              <td class="p-3.5 font-bold text-slate-900 dark:text-white">PPF</td>
+              <td class="p-3.5">Resident Indians (no age limit)</td>
+              <td class="p-3.5">₹1,50,000 per financial year</td>
+              <td class="p-3.5">15 Years (extendable in 5-yr blocks)</td>
+              <td class="p-3.5">Sec 80C (EEE status)</td>
+              <td class="p-3.5"><span class="font-semibold text-emerald-600 dark:text-emerald-400">100% Tax-Free</span> (Interest & Principal)</td>
+            </tr>
+            <tr class="hover:bg-slate-50/60 dark:hover:bg-slate-800/50">
+              <td class="p-3.5 font-bold text-slate-900 dark:text-white">SCSS</td>
+              <td class="p-3.5">60+ years (55 for VRS, 50 defense)</td>
+              <td class="p-3.5"><span class="font-bold text-indigo-600 dark:text-indigo-400">₹30,00,000</span> (Enhanced limit)</td>
+              <td class="p-3.5">5 Years (extendable by 3 years)</td>
+              <td class="p-3.5">Sec 80C on deposit amount</td>
+              <td class="p-3.5">Quarterly interest fully taxable (TDS if &gt; ₹50,000/yr)</td>
+            </tr>
+            <tr class="hover:bg-slate-50/60 dark:hover:bg-slate-800/50">
+              <td class="p-3.5 font-bold text-slate-900 dark:text-white">Atal Pension Yojana (APY)</td>
+              <td class="p-3.5">18 - 40 Years (Non-taxpayers)</td>
+              <td class="p-3.5">Fixed contribution for ₹1k-₹5k pension</td>
+              <td class="p-3.5">Till age 60</td>
+              <td class="p-3.5">Sec 80CCD</td>
+              <td class="p-3.5">Monthly pension fully taxable as income</td>
+            </tr>
+            <tr class="hover:bg-slate-50/60 dark:hover:bg-slate-800/50">
+              <td class="p-3.5 font-bold text-slate-900 dark:text-white">Reverse Mortgage</td>
+              <td class="p-3.5">60+ years (Spouse 55+)</td>
+              <td class="p-3.5">Based on property valuation & LTV</td>
+              <td class="p-3.5">10 - 20 years or lifetime</td>
+              <td class="p-3.5">N/A (Loan advancement)</td>
+              <td class="p-3.5"><span class="font-semibold text-emerald-600 dark:text-emerald-400">100% Tax-Free</span> under Section 10(43)</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- Key Mathematical Formulas Reference Card -->
+    <section class="bg-gradient-to-br from-slate-900 via-indigo-950 to-slate-900 text-white rounded-3xl p-6 sm:p-8 shadow-xl space-y-6">
+      <div class="flex items-center justify-between border-b border-indigo-800/70 pb-4">
+        <div>
+          <span class="text-xs font-bold text-amber-400 uppercase tracking-wider">Formula Cheat Sheet</span>
+          <h2 class="font-display text-xl sm:text-2xl font-bold text-white mt-0.5">Module 8 Mathematical Core Formulas</h2>
+        </div>
+        <span class="text-xs px-3 py-1 rounded-full bg-white/10 text-indigo-300 font-semibold border border-white/10">
+          KaTeX Formulated
+        </span>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 text-xs sm:text-sm">
+        
+        <!-- Formula 1 -->
+        <div class="p-4 rounded-2xl bg-white/5 border border-white/10 space-y-2">
+          <div class="flex items-center justify-between text-indigo-300 font-bold">
+            <span>Real Rate of Return ($r_{\text{real}}$)</span>
+            <span class="text-[10px] bg-amber-400/20 text-amber-300 px-2 py-0.5 rounded">Super Critical</span>
+          </div>
+          <div class="p-3 bg-black/30 rounded-xl text-center font-mono text-sm text-amber-300">
+            $$r_{\text{real}} = \frac{1 + r}{1 + e} - 1$$
+          </div>
+          <p class="text-slate-300 text-xs leading-relaxed">
+            Where $r$ = nominal investment return rate and $e$ = annual inflation rate. Do NOT use simple subtraction ($r - e$) for multi-year corpus compounding!
+          </p>
+        </div>
+
+        <!-- Formula 2 -->
+        <div class="p-4 rounded-2xl bg-white/5 border border-white/10 space-y-2">
+          <div class="flex items-center justify-between text-indigo-300 font-bold">
+            <span>Expenses at Retirement ($FV_{\text{exp}}$)</span>
+            <span class="text-[10px] bg-indigo-400/20 text-indigo-200 px-2 py-0.5 rounded">Compounding</span>
+          </div>
+          <div class="p-3 bg-black/30 rounded-xl text-center font-mono text-sm text-amber-300">
+            $$FV = PV \times (1 + e)^n$$
+          </div>
+          <p class="text-slate-300 text-xs leading-relaxed">
+            Where $PV$ = current annual expenses today, $e$ = pre-retirement inflation rate, and $n$ = number of years until retirement date.
+          </p>
+        </div>
+
+        <!-- Formula 3 -->
+        <div class="p-4 rounded-2xl bg-white/5 border border-white/10 space-y-2">
+          <div class="flex items-center justify-between text-indigo-300 font-bold">
+            <span>Retirement Corpus ($PV_{\text{due}}$)</span>
+            <span class="text-[10px] bg-emerald-400/20 text-emerald-300 px-2 py-0.5 rounded">Annuity Due</span>
+          </div>
+          <div class="p-3 bg-black/30 rounded-xl text-center font-mono text-sm text-amber-300">
+            $$C = \text{Exp} \times \left[\frac{1 - (1 + r_{\text{real}})^{-N}}{r_{\text{real}}}\right] \times (1 + r_{\text{real}})$$
+          </div>
+          <p class="text-slate-300 text-xs leading-relaxed">
+            Annuity Due formula because retirement living expenses must be withdrawn at the <em>beginning</em> of every year (BGN mode on financial calculators).
+          </p>
+        </div>
+
+      </div>
+
+      <div class="pt-2 text-center sm:text-right">
+        <a href="module8-ch6.html" class="inline-flex items-center gap-2 text-xs font-bold text-indigo-300 hover:text-white transition-colors">
+          <span>View all worked numerical examples & 3-step calculation walkthroughs</span>
+          <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i>
+        </a>
+      </div>
+    </section>
+
+    <!-- Advisory Practice Best Practices -->
+    <section class="bg-white dark:bg-slate-900 rounded-3xl p-6 sm:p-8 border border-slate-200 dark:border-slate-800 shadow-xs space-y-5">
+      <h2 class="font-display text-xl sm:text-2xl font-bold text-slate-900 dark:text-white">
+        SEBI Investment Adviser Code of Conduct for Retirement Planning
+      </h2>
+      <p class="text-xs sm:text-sm text-slate-600 dark:text-slate-400 leading-relaxed">
+        Under SEBI (Investment Advisers) Regulations, 2013, an adviser holds a strict fiduciary duty towards the retiree. Key compliance benchmarks include:
+      </p>
+
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 text-xs">
+        <div class="p-4 rounded-2xl bg-slate-50 dark:bg-slate-800/60 border border-slate-200 dark:border-slate-700/80 space-y-2">
+          <div class="w-8 h-8 rounded-lg bg-indigo-100 dark:bg-indigo-950 text-indigo-700 dark:text-indigo-300 flex items-center justify-center font-bold">1</div>
+          <strong class="text-slate-900 dark:text-white block font-bold text-sm">Fiduciary Duty</strong>
+          <p class="text-slate-600 dark:text-slate-400">Advisers must always prioritize the client’s capital longevity over distribution incentives or commission-loaded products.</p>
+        </div>
+
+        <div class="p-4 rounded-2xl bg-slate-50 dark:bg-slate-800/60 border border-slate-200 dark:border-slate-700/80 space-y-2">
+          <div class="w-8 h-8 rounded-lg bg-indigo-100 dark:bg-indigo-950 text-indigo-700 dark:text-indigo-300 flex items-center justify-center font-bold">2</div>
+          <strong class="text-slate-900 dark:text-white block font-bold text-sm">Risk Suitability</strong>
+          <p class="text-slate-600 dark:text-slate-400">Retirees have reduced human capital and lower risk capacity. Portfolios must emphasize asset-liability matching (ALM).</p>
+        </div>
+
+        <div class="p-4 rounded-2xl bg-slate-50 dark:bg-slate-800/60 border border-slate-200 dark:border-slate-700/80 space-y-2">
+          <div class="w-8 h-8 rounded-lg bg-indigo-100 dark:bg-indigo-950 text-indigo-700 dark:text-indigo-300 flex items-center justify-center font-bold">3</div>
+          <strong class="text-slate-900 dark:text-white block font-bold text-sm">SRR Mitigation</strong>
+          <p class="text-slate-600 dark:text-slate-400">Implement bucket strategies (1-3 yrs cash buffer) to eliminate the risk of selling equity during market drawdowns early in retirement.</p>
+        </div>
+
+        <div class="p-4 rounded-2xl bg-slate-50 dark:bg-slate-800/60 border border-slate-200 dark:border-slate-700/80 space-y-2">
+          <div class="w-8 h-8 rounded-lg bg-indigo-100 dark:bg-indigo-950 text-indigo-700 dark:text-indigo-300 flex items-center justify-center font-bold">4</div>
+          <strong class="text-slate-900 dark:text-white block font-bold text-sm">Annual Review</strong>
+          <p class="text-slate-600 dark:text-slate-400">Mandatory annual portfolio rebalancing, healthcare escalation reviews, and nominee/estate document validation.</p>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Global Footer -->
+  <footer class="bg-white dark:bg-slate-900 border-t border-slate-200 dark:border-slate-800 py-8 text-center text-xs text-slate-500 dark:text-slate-400">
+    <div class="max-w-7xl mx-auto px-4 space-y-2">
+      <p class="font-bold text-slate-700 dark:text-slate-300">NISM Series X-B: Investment Adviser (Level 2) Certification Curriculum</p>
+      <p>Module 8: Retirement Planning (30 Marks) &bull; Chapters 4, 5 & 6 &bull; High-Yield Interactive Study System</p>
+    </div>
+  </footer>
+
+  <script>
+    // Theme initialization
+    function initTheme() {
+      const saved = localStorage.getItem("nism-theme");
+      if (saved === "dark" || (!saved && window.matchMedia("(prefers-color-scheme: dark)").matches)) {
+        document.documentElement.classList.add("dark");
+      } else {
+        document.documentElement.classList.remove("dark");
+      }
+      updateThemeIcon();
+    }
+
+    window.toggleDarkMode = function() {
+      const isDark = document.documentElement.classList.toggle("dark");
+      localStorage.setItem("nism-theme", isDark ? "dark" : "light");
+      updateThemeIcon();
+    };
+
+    function updateThemeIcon() {
+      const btn = document.getElementById("nism-header-theme-btn");
+      if (btn) {
+        const isDark = document.documentElement.classList.contains("dark");
+        btn.innerHTML = `<i data-lucide="${isDark ? 'sun' : 'moon'}" class="w-4 h-4 ${isDark ? 'text-amber-400' : 'text-slate-600'}"></i>`;
+        if (window.lucide) lucide.createIcons();
+      }
+    }
+
+    // Preloader dismissal
+    window.addEventListener("DOMContentLoaded", () => {
+      initTheme();
+      const preloader = document.getElementById("eduleb-preloader");
+      if (preloader) {
+        setTimeout(() => {
+          preloader.style.opacity = "0";
+          setTimeout(() => { preloader.style.display = "none"; }, 350);
+        }, 200);
+      }
+      if (window.lucide) lucide.createIcons();
+    });
+  </script>
+</body>
+</html>

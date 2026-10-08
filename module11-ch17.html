@@ -1,0 +1,1106 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Chapter 17: Behavioral Finance in Practice | NISM Series X-B Certification Notes</title>
+  
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  
+  <!-- Google Fonts: DM Sans & Jost (Eduleb Benchmark) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Jost:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+  <script src="https://unpkg.com/lucide@latest"></script>
+
+  <!-- Modern Documentation Design System & Navigation -->
+  <link rel="stylesheet" href="modern-docs.css">
+  <script defer src="nav-sidebar.js"></script>
+
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['"DM Sans"', 'sans-serif'],
+            display: ['"Jost"', 'sans-serif'],
+            heading: ['"Jost"', 'sans-serif']
+          },
+          colors: {
+            brand: {
+              50: '#eef2ff',
+              100: '#e0e7ff',
+              500: '#525fe1',
+              600: '#434ec9',
+              700: '#353db3',
+              800: '#282f9c',
+              900: '#0b104a'
+            }
+          }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    body {
+      font-family: 'DM Sans', sans-serif;
+      font-size: 16px;
+      line-height: 26px;
+      color: #4a5355;
+    }
+    h1, h2, h3, h4, h5, h6, .font-display, .font-heading {
+      font-family: 'Jost', sans-serif;
+      font-weight: 700;
+    }
+    .star-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.25rem;
+      background: linear-gradient(135deg, #fef3c7 0%, #fde68a 100%);
+      color: #92400e;
+      border: 1px solid #f59e0b;
+      padding: 0.15rem 0.5rem;
+      border-radius: 9999px;
+      font-size: 0.75rem;
+      font-weight: 700;
+    }
+    html.dark .star-badge {
+      background: linear-gradient(135deg, #451a03 0%, #78350f 100%);
+      color: #fde68a;
+      border-color: #d97706;
+    }
+  </style>
+</head>
+<body class="bg-slate-50 dark:bg-slate-950 text-slate-900 dark:text-slate-100 min-h-screen flex flex-col selection:bg-indigo-500 selection:text-white antialiased transition-colors duration-200">
+
+  <!-- Smooth Opening Preloader -->
+  <div class="preloaders" id="eduleb-preloader">
+    <span class="loader"></span>
+    <div class="preloader-label">Chapter 17: Behavioral Finance in Practice</div>
+  </div>
+
+  <!-- Standardized Header (Single-Tier, 64px) -->
+  <header class="sticky top-0 z-40 bg-white/95 dark:bg-slate-900/95 backdrop-blur-md border-b border-slate-200/80 dark:border-slate-800 shadow-xs">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 h-16 flex items-center justify-between">
+      <!-- Left: Logo, Module & Chapter Label -->
+      <div class="flex items-center gap-3">
+        <a href="module11.html" class="flex items-center gap-2 text-slate-500 hover:text-slate-900 dark:hover:text-white transition-colors" title="Back to Module 11 Hub">
+          <div class="w-9 h-9 rounded-xl bg-slate-100 dark:bg-slate-800 hover:bg-slate-200 dark:hover:bg-slate-700 flex items-center justify-center text-slate-700 dark:text-slate-200 transition-colors">
+            <i data-lucide="arrow-left" class="w-4 h-4"></i>
+          </div>
+        </a>
+        <div>
+          <div class="flex items-center gap-2">
+            <span class="text-xs font-bold uppercase tracking-wider text-indigo-600 dark:text-indigo-400 bg-indigo-50 dark:bg-indigo-950/80 px-2 py-0.5 rounded">Module 11</span>
+            <span class="text-xs text-slate-400 dark:text-slate-500 font-medium">Chapter 17 of 17</span>
+          </div>
+          <h1 class="font-display font-bold text-base sm:text-lg text-slate-900 dark:text-white leading-tight">Behavioral Finance in Practice</h1>
+        </div>
+      </div>
+
+      <!-- Right: Weightage Badge, Theme Toggle & Quiz Jump -->
+      <div class="flex items-center gap-2.5">
+        <span class="hidden sm:inline-flex items-center gap-1 px-3 py-1 rounded-full text-xs font-bold bg-amber-50 dark:bg-amber-950/70 text-amber-700 dark:text-amber-300 border border-amber-200 dark:border-amber-800">
+          <i data-lucide="star" class="w-3.5 h-3.5 fill-amber-500 text-amber-500"></i>
+          Weightage: 4-5 Marks
+        </span>
+        <button id="nism-header-theme-btn" onclick="window.toggleDarkMode()" class="p-2 rounded-full border border-slate-200 dark:border-slate-700 text-slate-600 dark:text-slate-300 bg-white dark:bg-slate-800" title="Toggle Theme (⌘D)">
+          <i data-lucide="moon" class="w-4 h-4"></i>
+        </button>
+        <a href="#interactive-quiz" class="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-full text-xs font-bold bg-indigo-600 hover:bg-indigo-700 text-white shadow-xs transition-all font-display">
+          <i data-lucide="help-circle" class="w-3.5 h-3.5"></i>
+          <span>Chapter Quiz</span>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Grid Layout -->
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 grid grid-cols-1 lg:grid-cols-12 gap-8 flex-grow">
+    
+    <!-- Table of Contents Sidebar (Desktop) -->
+    <aside class="hidden lg:block lg:col-span-3">
+      <div class="sticky top-24 space-y-4">
+        
+        <!-- Module 11 Quick Navigation Card -->
+        <div class="p-4 rounded-2xl bg-white dark:bg-slate-900 border border-slate-200/90 dark:border-slate-800 shadow-xs space-y-3">
+          <div class="flex items-center justify-between text-xs font-bold text-slate-700 dark:text-slate-300 uppercase tracking-wider">
+            <span class="flex items-center gap-1.5">
+              <i data-lucide="layers" class="w-4 h-4 text-indigo-600 dark:text-indigo-400"></i>
+              Module 11 Chapters
+            </span>
+            <span class="text-indigo-600 dark:text-indigo-400">10 Marks</span>
+          </div>
+          <div class="space-y-1.5 text-xs">
+            <a href="module11.html" class="flex items-center justify-between px-2.5 py-2 rounded-xl text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors">
+              <span>Module 11 Hub</span>
+              <i data-lucide="home" class="w-3.5 h-3.5"></i>
+            </a>
+            <a href="module11-ch16.html" class="flex items-center justify-between px-2.5 py-2 rounded-xl text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors">
+              <span>16. Basics of Behavioral Finance</span>
+              <i data-lucide="chevron-left" class="w-3.5 h-3.5"></i>
+            </a>
+            <a href="module11-ch17.html" class="flex items-center justify-between px-2.5 py-2 rounded-xl bg-indigo-50 dark:bg-indigo-950/80 font-bold text-indigo-700 dark:text-indigo-300 border border-indigo-200 dark:border-indigo-800 transition-colors">
+              <span>17. Behavioral Finance in Practice</span>
+              <span class="w-2 h-2 rounded-full bg-indigo-600"></span>
+            </a>
+          </div>
+        </div>
+
+        <!-- In-Page Section Jump (Collapsible) -->
+        <details open class="group rounded-2xl bg-white dark:bg-slate-900 border border-slate-200/90 dark:border-slate-800 shadow-xs overflow-hidden text-xs">
+          <summary class="flex items-center justify-between p-3.5 cursor-pointer select-none bg-slate-50/70 dark:bg-slate-800/50 hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors font-bold text-slate-700 dark:text-slate-200">
+            <span class="flex items-center gap-2">
+              <i data-lucide="bookmark" class="w-3.5 h-3.5 text-indigo-600 dark:text-indigo-400"></i>
+              <span>On This Page (Sections)</span>
+            </span>
+            <i data-lucide="chevron-down" class="w-3.5 h-3.5 text-slate-400 transition-transform duration-200 group-open:rotate-180"></i>
+          </summary>
+          <nav class="p-3 pt-1 space-y-1 text-xs max-h-72 overflow-y-auto border-t border-slate-100 dark:border-slate-800">
+            <a href="#section-17-1" class="block px-2.5 py-1.5 rounded-lg text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800 hover:text-indigo-600 transition-colors">17.1 Emotional Cycle Across Market Extremes</a>
+            <a href="#section-17-2" class="block px-2.5 py-1.5 rounded-lg text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800 hover:text-indigo-600 transition-colors">17.2 Goal-Based Bucketing & Mental Accounting</a>
+            <a href="#section-17-3" class="block px-2.5 py-1.5 rounded-lg text-amber-700 dark:text-amber-400 font-semibold bg-amber-50/60 dark:bg-amber-950/40 hover:bg-amber-100 transition-colors">17.3 Choice Architecture & Nudges ⭐</a>
+            <a href="#section-17-4" class="block px-2.5 py-1.5 rounded-lg text-indigo-700 dark:text-indigo-400 font-semibold bg-indigo-50/60 dark:bg-indigo-950/40 hover:bg-indigo-100 transition-colors">17.4 Adviser as Behavioral Coach (Advisor's Alpha) ⭐</a>
+            <a href="#section-17-5" class="block px-2.5 py-1.5 rounded-lg text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800 hover:text-indigo-600 transition-colors">17.5 Practical Advisory Scripts for Client Dilemmas</a>
+            <a href="#interactive-quiz" class="block px-2.5 py-1.5 rounded-lg text-indigo-700 dark:text-indigo-300 font-bold bg-indigo-50 dark:bg-indigo-950/80 hover:bg-indigo-100 transition-colors mt-2">Practice Quiz (12 MCQs)</a>
+          </nav>
+        </details>
+
+        <!-- High-Yield Exam Tip Card -->
+        <div class="p-4 rounded-2xl bg-gradient-to-br from-indigo-600 to-violet-700 text-white shadow-sm text-xs space-y-2">
+          <div class="flex items-center gap-1.5 font-bold">
+            <i data-lucide="zap" class="w-4 h-4 text-amber-300"></i>
+            <span>Vanguard Advisor's Alpha ⭐</span>
+          </div>
+          <p class="text-indigo-100 leading-relaxed">
+            NISM frequently tests Vanguard's research: Total Advisor's Alpha is approximately <strong>300 bps (3.0%)</strong>, and <strong>Behavioral Coaching is the single largest component (~150 bps or 1.5%)</strong>!
+          </p>
+        </div>
+
+      </div>
+    </aside>
+
+    <!-- Main Content Area -->
+    <main class="lg:col-span-9 space-y-10">
+
+      <!-- Chapter Hero / Introduction Banner -->
+      <div class="p-6 sm:p-8 rounded-3xl bg-white dark:bg-slate-900 border border-slate-200/90 dark:border-slate-800 shadow-sm relative overflow-hidden">
+        <div class="relative z-10 space-y-3">
+          <div class="flex flex-wrap items-center gap-2">
+            <span class="star-badge">
+              <i data-lucide="star" class="w-3 h-3 fill-amber-500"></i>
+              Core Exam Focus: 4-5 Marks
+            </span>
+            <span class="px-2.5 py-0.5 rounded-full text-xs font-semibold bg-indigo-50 dark:bg-indigo-950 text-indigo-700 dark:text-indigo-300 border border-indigo-200/60 dark:border-indigo-800">
+              NISM Series X-B Syllabus
+            </span>
+          </div>
+          <h2 class="font-display text-2xl sm:text-3xl font-extrabold text-slate-900 dark:text-white">
+            Behavioral Finance in Practice
+          </h2>
+          <p class="text-slate-600 dark:text-slate-300 text-sm sm:text-base leading-relaxed">
+            Understanding behavioral psychology is only the first step; the true hallmark of a SEBI Registered Investment Adviser is the practical capability to manage client emotions, build robust choice architectures, channel mental accounting into goal-based buckets, and act as an empathetic behavioral coach during market panics and euphoric manias.
+          </p>
+        </div>
+      </div>
+
+      <!-- Section 17.1 -->
+      <section id="section-17-1" class="space-y-5">
+        <div class="flex items-center gap-2.5 border-b border-slate-200 dark:border-slate-800 pb-3">
+          <div class="w-8 h-8 rounded-xl bg-indigo-100 dark:bg-indigo-950 flex items-center justify-center text-indigo-600 dark:text-indigo-400 font-bold text-sm">
+            17.1
+          </div>
+          <h3 class="font-display text-xl sm:text-2xl font-bold text-slate-900 dark:text-white">
+            Managing Client Emotions Across Bull & Bear Market Cycles
+          </h3>
+        </div>
+
+        <div class="prose dark:prose-invert max-w-none text-xs sm:text-sm text-slate-600 dark:text-slate-300 space-y-4 leading-relaxed">
+          <p>
+            Investors invariably ride a predictable psychological roller coaster throughout market cycles. Without disciplined advisory intervention, clients buy at the point of maximum financial risk and sell out at the point of maximum financial opportunity.
+          </p>
+
+          <!-- Cycle of Emotions Visual Journey Card -->
+          <div class="p-6 rounded-3xl bg-slate-900 text-white border border-slate-800 shadow-md space-y-5">
+            <div class="flex items-center justify-between border-b border-slate-800 pb-3">
+              <div class="flex items-center gap-2">
+                <i data-lucide="activity" class="w-4 h-4 text-indigo-400"></i>
+                <h4 class="font-display font-bold text-base text-white">The 14-Stage Emotional Roller-Coaster</h4>
+              </div>
+              <span class="text-[11px] px-2.5 py-0.5 rounded-full bg-indigo-500/20 text-indigo-300 font-mono">Market Psychology</span>
+            </div>
+
+            <!-- Cycle Stages -->
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-4 text-xs">
+              
+              <!-- Bull Phase -->
+              <div class="p-4 rounded-2xl bg-white/5 border border-white/10 space-y-2">
+                <span class="text-emerald-400 font-bold uppercase tracking-wider text-[11px] flex items-center gap-1.5">
+                  <i data-lucide="trending-up" class="w-3.5 h-3.5"></i>
+                  The Bull Run (Greed)
+                </span>
+                <p class="text-slate-300 leading-relaxed">
+                  <strong>Optimism &rarr; Excitement &rarr; Thrill &rarr; Euphoria</strong><br>
+                  At <strong>Euphoria</strong>, investors feel invincible. Returns appear effortless. Retail pours savings into small-caps and penny stocks. This is the <strong>Point of Maximum Financial Risk</strong>!
+                </p>
+              </div>
+
+              <!-- Market Top to Descent -->
+              <div class="p-4 rounded-2xl bg-white/5 border border-white/10 space-y-2">
+                <span class="text-amber-400 font-bold uppercase tracking-wider text-[11px] flex items-center gap-1.5">
+                  <i data-lucide="alert-triangle" class="w-3.5 h-3.5"></i>
+                  The Turning Point (Doubt)
+                </span>
+                <p class="text-slate-300 leading-relaxed">
+                  <strong>Anxiety &rarr; Denial &rarr; Fear &rarr; Desperation</strong><br>
+                  Initial dips are dismissed as "healthy corrections." As losses deepen, anxiety turns into fear. Investors anchor on recent highs and search for reassuring narratives.
+                </p>
+              </div>
+
+              <!-- Market Bottom & Rebirth -->
+              <div class="p-4 rounded-2xl bg-white/5 border border-white/10 space-y-2">
+                <span class="text-rose-400 font-bold uppercase tracking-wider text-[11px] flex items-center gap-1.5">
+                  <i data-lucide="trending-down" class="w-3.5 h-3.5"></i>
+                  The Trough (Panic to Hope)
+                </span>
+                <p class="text-slate-300 leading-relaxed">
+                  <strong>Panic &rarr; Capitulation &rarr; Despondency</strong><br>
+                  At <strong>Despondency / Depression</strong>, emotional exhaustion forces the client to sell at the bottom. Paradoxically, this represents the <strong>Point of Maximum Financial Opportunity</strong>!
+                </p>
+              </div>
+
+            </div>
+          </div>
+
+          <!-- Advisor Interventions: Greed vs Fear -->
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-4 my-4">
+            
+            <div class="p-5 rounded-2xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 shadow-xs space-y-3">
+              <div class="flex items-center gap-2 text-amber-600 dark:text-amber-400 font-bold text-sm">
+                <i data-lucide="flame" class="w-4 h-4"></i>
+                <span>Advisor Interventions at Market Peaks (Taming Greed)</span>
+              </div>
+              <ul class="space-y-2 text-xs text-slate-600 dark:text-slate-300">
+                <li class="flex items-start gap-2">
+                  <i data-lucide="check" class="w-3.5 h-3.5 text-amber-500 shrink-0 mt-0.5"></i>
+                  <span><strong>Enforce Rebalancing Discipline:</strong> Systematically trim equity back to target weights (e.g. from 75% back to 60%) to book gains without trying to time market tops.</span>
+                </li>
+                <li class="flex items-start gap-2">
+                  <i data-lucide="check" class="w-3.5 h-3.5 text-amber-500 shrink-0 mt-0.5"></i>
+                  <span><strong>Conduct Drawdown Stress-Tests:</strong> Run simulations demonstrating how a 35-45% bear market would impact their retirement date in rupee terms.</span>
+                </li>
+                <li class="flex items-start gap-2">
+                  <i data-lucide="check" class="w-3.5 h-3.5 text-amber-500 shrink-0 mt-0.5"></i>
+                  <span><strong>Shift Focus to Rolling Returns:</strong> Demystify the 60% trailing 1-year return by presenting rolling 7-10 year return averages.</span>
+                </li>
+              </ul>
+            </div>
+
+            <div class="p-5 rounded-2xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 shadow-xs space-y-3">
+              <div class="flex items-center gap-2 text-indigo-600 dark:text-indigo-400 font-bold text-sm">
+                <i data-lucide="shield" class="w-4 h-4"></i>
+                <span>Advisor Interventions at Market Troughs (Taming Fear)</span>
+              </div>
+              <ul class="space-y-2 text-xs text-slate-600 dark:text-slate-300">
+                <li class="flex items-start gap-2">
+                  <i data-lucide="check" class="w-3.5 h-3.5 text-indigo-500 shrink-0 mt-0.5"></i>
+                  <span><strong>Enforce "First, Do No Harm":</strong> Stop clients from liquidating equities in panic, which converts temporary paper drawdowns into permanent, irreversible capital loss.</span>
+                </li>
+                <li class="flex items-start gap-2">
+                  <i data-lucide="check" class="w-3.5 h-3.5 text-indigo-500 shrink-0 mt-0.5"></i>
+                  <span><strong>Demonstrate Rupee Cost Averaging:</strong> Show mathematical proof of how continuing SIPs at low NAVs drastically reduces the break-even time on recovery.</span>
+                </li>
+                <li class="flex items-start gap-2">
+                  <i data-lucide="check" class="w-3.5 h-3.5 text-indigo-500 shrink-0 mt-0.5"></i>
+                  <span><strong>Point to the Safety Cash Buffer:</strong> Reassure the client that their next 2-3 years of living cash flows are parked safely in liquid/debt funds.</span>
+                </li>
+              </ul>
+            </div>
+
+          </div>
+        </div>
+      </section>
+
+      <!-- Section 17.2 -->
+      <section id="section-17-2" class="space-y-5">
+        <div class="flex items-center gap-2.5 border-b border-slate-200 dark:border-slate-800 pb-3">
+          <div class="w-8 h-8 rounded-xl bg-indigo-100 dark:bg-indigo-950 flex items-center justify-center text-indigo-600 dark:text-indigo-400 font-bold text-sm">
+            17.2
+          </div>
+          <h3 class="font-display text-xl sm:text-2xl font-bold text-slate-900 dark:text-white">
+            Goal-Based Investing & Constructive Mental Accounting
+          </h3>
+        </div>
+
+        <div class="prose dark:prose-invert max-w-none text-xs sm:text-sm text-slate-600 dark:text-slate-300 space-y-4 leading-relaxed">
+          <p>
+            In Chapter 16, we saw that Mental Accounting is a cognitive error violating fungibility. However, brilliant behavioral advisers do not attempt to stamp out mental accounting; instead, they <strong>harness it constructively through Goal-Based Portfolio Bucketing</strong>.
+          </p>
+
+          <!-- 3-Tier Bucketing Framework Grid -->
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-4 my-4">
+            
+            <div class="p-5 rounded-2xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 shadow-xs space-y-3">
+              <div class="w-8 h-8 rounded-xl bg-blue-100 dark:bg-blue-950 text-blue-600 dark:text-blue-400 flex items-center justify-center font-bold text-sm">
+                1
+              </div>
+              <h4 class="font-display font-bold text-base text-slate-900 dark:text-white">Safety / Baseline Bucket</h4>
+              <div class="text-[11px] font-semibold text-blue-600 dark:text-blue-400">Zero Tolerance for Loss</div>
+              <p class="text-xs text-slate-500 dark:text-slate-400 leading-relaxed">
+                Emergency funds, health contingencies, and living expenses for the next 24–36 months. Invested in liquid funds, ultra-short debt funds, and bank fixed deposits. Protects client peace of mind.
+              </p>
+            </div>
+
+            <div class="p-5 rounded-2xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 shadow-xs space-y-3">
+              <div class="w-8 h-8 rounded-xl bg-indigo-100 dark:bg-indigo-950 text-indigo-600 dark:text-indigo-400 flex items-center justify-center font-bold text-sm">
+                2
+              </div>
+              <h4 class="font-display font-bold text-base text-slate-900 dark:text-white">Growth / Market Bucket</h4>
+              <div class="text-[11px] font-semibold text-indigo-600 dark:text-indigo-400">Targeting Real Wealth Creation</div>
+              <p class="text-xs text-slate-500 dark:text-slate-400 leading-relaxed">
+                Core long-term life milestones (Retirement at 60, Children's Higher Education in 12 years). Invested in diversified equity index funds, large/flexi-cap funds, and balanced advantage funds.
+              </p>
+            </div>
+
+            <div class="p-5 rounded-2xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 shadow-xs space-y-3">
+              <div class="w-8 h-8 rounded-xl bg-purple-100 dark:bg-purple-950 text-purple-600 dark:text-purple-400 flex items-center justify-center font-bold text-sm">
+                3
+              </div>
+              <h4 class="font-display font-bold text-base text-slate-900 dark:text-white">Aspiration / Legacy Bucket</h4>
+              <div class="text-[11px] font-semibold text-purple-600 dark:text-purple-400">High Risk & Wealth Expansion</div>
+              <p class="text-xs text-slate-500 dark:text-slate-400 leading-relaxed">
+                Discretionary aspirations (vacation villa, angel investing, generational legacy, philanthropy). Invested in mid/small caps, PMS/AIFs, and international equities with capital that can be risked.
+              </p>
+            </div>
+
+          </div>
+
+          <!-- Why Bucketing Works Psychologically Callout -->
+          <div class="p-4 rounded-2xl bg-emerald-50 dark:bg-emerald-950/60 border border-emerald-200 dark:border-emerald-800/80 text-xs space-y-1.5">
+            <div class="font-bold text-emerald-900 dark:text-emerald-200 flex items-center gap-1.5">
+              <i data-lucide="check-circle" class="w-4 h-4 text-emerald-600 dark:text-emerald-400"></i>
+              <span>The Psychological Armor of Goal Bucketing ⭐</span>
+            </div>
+            <p class="text-emerald-950 dark:text-emerald-200/90 leading-relaxed">
+              When the stock market drops by 30%, clients do not see a 30% collapse in their entire net worth. The adviser reminds them: <em>"Your Safety Bucket is 100% intact, and your child does not need their college fees for another 9 years. The Growth Bucket has ample time to recover."</em> This completely neutralizes panic redemptions.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Section 17.3 -->
+      <section id="section-17-3" class="space-y-5">
+        <div class="flex items-center gap-2.5 border-b border-slate-200 dark:border-slate-800 pb-3">
+          <div class="w-8 h-8 rounded-xl bg-amber-100 dark:bg-amber-950 flex items-center justify-center text-amber-700 dark:text-amber-400 font-bold text-sm">
+            17.3
+          </div>
+          <div>
+            <div class="flex items-center gap-2">
+              <h3 class="font-display text-xl sm:text-2xl font-bold text-slate-900 dark:text-white">
+                Choice Architecture & Behavioral Nudges
+              </h3>
+              <span class="star-badge">⭐ Heavily Tested</span>
+            </div>
+            <p class="text-xs text-slate-500 dark:text-slate-400">Richard Thaler & Cass Sunstein Framework</p>
+          </div>
+        </div>
+
+        <div class="prose dark:prose-invert max-w-none text-xs sm:text-sm text-slate-600 dark:text-slate-300 space-y-4 leading-relaxed">
+          <p>
+            In their seminal work <em>"Nudge"</em>, Richard Thaler and Cass Sunstein defined <strong>Choice Architecture</strong> as the practice of influencing choice by organizing the context in which people make decisions. A <strong>nudge</strong> alters behavior in a predictable way without forbidding any choices or changing their financial incentives.
+          </p>
+
+          <!-- Core Nudge Strategies for Investment Advisers -->
+          <div class="space-y-4 my-4">
+            
+            <div class="p-5 rounded-2xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 shadow-xs space-y-2">
+              <div class="flex items-center justify-between">
+                <h4 class="font-display font-bold text-base text-slate-900 dark:text-white flex items-center gap-2">
+                  <span class="w-6 h-6 rounded-lg bg-indigo-100 dark:bg-indigo-950 flex items-center justify-center text-xs font-bold text-indigo-600">1</span>
+                  <span>Constructive Default Options (Harnessing Inertia)</span>
+                </h4>
+                <span class="text-[11px] px-2.5 py-0.5 rounded-full bg-indigo-50 dark:bg-indigo-950 text-indigo-700 dark:text-indigo-300 font-semibold">The Power of Defaults</span>
+              </div>
+              <p class="text-xs text-slate-600 dark:text-slate-400 leading-relaxed">
+                Because clients suffer from status quo bias and procrastination, setting the ideal path as the <strong>pre-selected default</strong> (e.g., automatic annual SIP escalation, automated portfolio rebalancing triggers, opt-out dividend reinvestment) dramatically enhances long-term goal completion rates.
+              </p>
+            </div>
+
+            <div class="p-5 rounded-2xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 shadow-xs space-y-2">
+              <div class="flex items-center justify-between">
+                <h4 class="font-display font-bold text-base text-slate-900 dark:text-white flex items-center gap-2">
+                  <span class="w-6 h-6 rounded-lg bg-indigo-100 dark:bg-indigo-950 flex items-center justify-center text-xs font-bold text-indigo-600">2</span>
+                  <span>"Save More Tomorrow" (SMRT - Thaler & Benartzi) ⭐</span>
+                </h4>
+                <span class="text-[11px] px-2.5 py-0.5 rounded-full bg-amber-50 dark:bg-amber-950 text-amber-700 dark:text-amber-300 font-semibold">Overcoming Present Bias</span>
+              </div>
+              <p class="text-xs text-slate-600 dark:text-slate-400 leading-relaxed">
+                Investors resist saving today because of <em>present bias</em> (hyperbolic discounting) and <em>loss aversion</em> (saving feels like a painful cut in take-home pay). Under the SMRT program, clients commit in advance to allocate a predetermined percentage (e.g., 50%) of their <strong>future salary increments</strong> toward investment SIPs. Because the money is saved from future raises, the client never experiences a nominal pay cut!
+              </p>
+            </div>
+
+            <div class="p-5 rounded-2xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 shadow-xs space-y-2">
+              <div class="flex items-center justify-between">
+                <h4 class="font-display font-bold text-base text-slate-900 dark:text-white flex items-center gap-2">
+                  <span class="w-6 h-6 rounded-lg bg-indigo-100 dark:bg-indigo-950 flex items-center justify-center text-xs font-bold text-indigo-600">3</span>
+                  <span>Pre-Commitment Contracts (Behavioral IPS)</span>
+                </h4>
+                <span class="text-[11px] px-2.5 py-0.5 rounded-full bg-indigo-50 dark:bg-indigo-950 text-indigo-700 dark:text-indigo-300 font-semibold">Ulysses Contract</span>
+              </div>
+              <p class="text-xs text-slate-600 dark:text-slate-400 leading-relaxed">
+                Like Ulysses tying himself to the ship's mast to resist the Sirens' call, clients sign a written <strong>Behavioral Investment Policy Statement (IPS)</strong> during calm, rational market periods. The client formally binds themselves: <em>"I agree that during market drops of over 20%, I will not redeem equity funds without a formal mandatory review with my adviser."</em>
+              </p>
+            </div>
+
+            <div class="p-5 rounded-2xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 shadow-xs space-y-2">
+              <div class="flex items-center justify-between">
+                <h4 class="font-display font-bold text-base text-slate-900 dark:text-white flex items-center gap-2">
+                  <span class="w-6 h-6 rounded-lg bg-indigo-100 dark:bg-indigo-950 flex items-center justify-center text-xs font-bold text-indigo-600">4</span>
+                  <span>Choice Editing & The Paradox of Choice (Barry Schwartz)</span>
+                </h4>
+                <span class="text-[11px] px-2.5 py-0.5 rounded-full bg-indigo-50 dark:bg-indigo-950 text-indigo-700 dark:text-indigo-300 font-semibold">Eliminating Analysis Paralysis</span>
+              </div>
+              <p class="text-xs text-slate-600 dark:text-slate-400 leading-relaxed">
+                When presented with 100 mutual fund options, clients experience decision fatigue, cognitive overload, and complete paralysis. By curating choices into 2 or 3 clear, goal-aligned model options (Conservative, Balanced, Aggressive), the adviser facilitates confident, timely execution.
+              </p>
+            </div>
+
+            <div class="p-5 rounded-2xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 shadow-xs space-y-2">
+              <div class="flex items-center justify-between">
+                <h4 class="font-display font-bold text-base text-slate-900 dark:text-white flex items-center gap-2">
+                  <span class="w-6 h-6 rounded-lg bg-indigo-100 dark:bg-indigo-950 flex items-center justify-center text-xs font-bold text-indigo-600">5</span>
+                  <span>Speed Bumps & Mandatory Cooling-Off Periods</span>
+                </h4>
+                <span class="text-[11px] px-2.5 py-0.5 rounded-full bg-indigo-50 dark:bg-indigo-950 text-indigo-700 dark:text-indigo-300 font-semibold">De-escalating Impulse</span>
+              </div>
+              <p class="text-xs text-slate-600 dark:text-slate-400 leading-relaxed">
+                Inserting a mandatory 48-to-72 hour pause between an impulsive client request (e.g. dumping a corpus into a hot meme stock or panic-selling a fund during a geopolitical flare-up) and actual trade execution allows visceral amygdala reactions to subside.
+              </p>
+            </div>
+
+          </div>
+        </div>
+      </section>
+
+      <!-- Section 17.4 -->
+      <section id="section-17-4" class="space-y-5">
+        <div class="flex items-center gap-2.5 border-b border-slate-200 dark:border-slate-800 pb-3">
+          <div class="w-8 h-8 rounded-xl bg-indigo-100 dark:bg-indigo-950 flex items-center justify-center text-indigo-600 dark:text-indigo-400 font-bold text-sm">
+            17.4
+          </div>
+          <div>
+            <div class="flex items-center gap-2">
+              <h3 class="font-display text-xl sm:text-2xl font-bold text-slate-900 dark:text-white">
+                The Investment Adviser as a Behavioral Coach
+              </h3>
+              <span class="star-badge">⭐ Vanguard Advisor's Alpha</span>
+            </div>
+            <p class="text-xs text-slate-500 dark:text-slate-400">Quantifying the economic value of advisory intervention</p>
+          </div>
+        </div>
+
+        <div class="prose dark:prose-invert max-w-none text-xs sm:text-sm text-slate-600 dark:text-slate-300 space-y-4 leading-relaxed">
+          <p>
+            Vanguard's landmark <strong>"Advisor's Alpha"</strong> research quantified the net value added by an adviser across various advisory disciplines. The total value is estimated at approximately <strong>300 basis points (3.00% net annualized return)</strong>.
+          </p>
+
+          <!-- Advisor's Alpha Breakdown Visual -->
+          <div class="p-6 rounded-2xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 shadow-sm space-y-4">
+            <h4 class="font-display font-bold text-base text-slate-900 dark:text-white flex items-center gap-2">
+              <i data-lucide="pie-chart" class="w-4 h-4 text-indigo-600"></i>
+              <span>Vanguard Advisor's Alpha Composition (~300 bps Total)</span>
+            </h4>
+
+            <div class="space-y-3 text-xs">
+              <!-- Behavioral Coaching -->
+              <div>
+                <div class="flex justify-between font-bold text-slate-800 dark:text-slate-200 mb-1">
+                  <span class="flex items-center gap-1.5 text-indigo-600 dark:text-indigo-400">
+                    <i data-lucide="heart-handshake" class="w-4 h-4"></i>
+                    Behavioral Coaching (Largest Component ⭐)
+                  </span>
+                  <span class="font-mono text-indigo-600 dark:text-indigo-400">~150 bps (1.50%)</span>
+                </div>
+                <div class="w-full bg-slate-100 dark:bg-slate-800 rounded-full h-3 overflow-hidden">
+                  <div class="bg-indigo-600 h-3 rounded-full" style="width: 50%"></div>
+                </div>
+                <p class="text-slate-500 dark:text-slate-400 mt-1">Guiding clients through market swings, preventing panic selling, stopping FOMO chases.</p>
+              </div>
+
+              <!-- Asset Allocation -->
+              <div>
+                <div class="flex justify-between font-semibold text-slate-700 dark:text-slate-300 mb-1">
+                  <span>Suitable Asset Allocation Strategy</span>
+                  <span class="font-mono">~75 bps (0.75%)</span>
+                </div>
+                <div class="w-full bg-slate-100 dark:bg-slate-800 rounded-full h-2 overflow-hidden">
+                  <div class="bg-emerald-500 h-2 rounded-full" style="width: 25%"></div>
+                </div>
+              </div>
+
+              <!-- Cost-effective implementation -->
+              <div>
+                <div class="flex justify-between font-semibold text-slate-700 dark:text-slate-300 mb-1">
+                  <span>Cost-Effective Implementation (Low TER, Direct Plans)</span>
+                  <span class="font-mono">~40 bps (0.40%)</span>
+                </div>
+                <div class="w-full bg-slate-100 dark:bg-slate-800 rounded-full h-2 overflow-hidden">
+                  <div class="bg-blue-500 h-2 rounded-full" style="width: 13%"></div>
+                </div>
+              </div>
+
+              <!-- Systematic Rebalancing -->
+              <div>
+                <div class="flex justify-between font-semibold text-slate-700 dark:text-slate-300 mb-1">
+                  <span>Systematic Portfolio Rebalancing</span>
+                  <span class="font-mono">~35 bps (0.35%)</span>
+                </div>
+                <div class="w-full bg-slate-100 dark:bg-slate-800 rounded-full h-2 overflow-hidden">
+                  <div class="bg-amber-500 h-2 rounded-full" style="width: 12%"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Three Dimensions of Behavioral Risk Profiling -->
+          <div class="p-5 rounded-2xl bg-indigo-50/70 dark:bg-indigo-950/60 border border-indigo-200 dark:border-indigo-800 space-y-3">
+            <h4 class="font-bold text-indigo-900 dark:text-indigo-200 text-sm flex items-center gap-2">
+              <i data-lucide="user-check" class="w-4 h-4 text-indigo-600"></i>
+              <span>Beyond Questionnaires: The 3 Dimensions of Risk Profiling</span>
+            </h4>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-3 text-xs">
+              <div class="p-3 rounded-xl bg-white dark:bg-slate-900 border border-indigo-100 dark:border-indigo-900">
+                <strong class="text-indigo-700 dark:text-indigo-300 block mb-1">1. Risk Capacity</strong>
+                <span class="text-slate-600 dark:text-slate-400">Objective financial ability to endure loss based on net worth, income stability, time horizon, and liability burden.</span>
+              </div>
+              <div class="p-3 rounded-xl bg-white dark:bg-slate-900 border border-indigo-100 dark:border-indigo-900">
+                <strong class="text-indigo-700 dark:text-indigo-300 block mb-1">2. Risk Tolerance</strong>
+                <span class="text-slate-600 dark:text-slate-400">Psychological willingness to accept financial risk, usually measured via static risk profiling questionnaires.</span>
+              </div>
+              <div class="p-3 rounded-xl bg-white dark:bg-slate-900 border border-indigo-100 dark:border-indigo-900">
+                <strong class="text-indigo-700 dark:text-indigo-300 block mb-1">3. Risk Composure ⭐</strong>
+                <span class="text-slate-600 dark:text-slate-400">Real-world behavioral resilience: how calmly the client actually responds during real market crashes when their portfolio turns red.</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Section 17.5 -->
+      <section id="section-17-5" class="space-y-5">
+        <div class="flex items-center gap-2.5 border-b border-slate-200 dark:border-slate-800 pb-3">
+          <div class="w-8 h-8 rounded-xl bg-indigo-100 dark:bg-indigo-950 flex items-center justify-center text-indigo-600 dark:text-indigo-400 font-bold text-sm">
+            17.5
+          </div>
+          <div>
+            <div class="flex items-center gap-2">
+              <h3 class="font-display text-xl sm:text-2xl font-bold text-slate-900 dark:text-white">
+                Practical Advisory Scripts for Common Client Behavioral Traps
+              </h3>
+              <span class="star-badge">⭐ High-Yield Practical Tool</span>
+            </div>
+            <p class="text-xs text-slate-500 dark:text-slate-400">Field-tested de-escalation dialogues for SEBI RIAs</p>
+          </div>
+        </div>
+
+        <div class="space-y-4">
+          
+          <!-- Script 1: Client Panics in Crash -->
+          <div class="p-5 rounded-2xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 shadow-xs space-y-3">
+            <div class="flex items-center justify-between">
+              <div class="flex items-center gap-2">
+                <span class="w-6 h-6 rounded-lg bg-rose-100 dark:bg-rose-950 flex items-center justify-center text-xs font-bold text-rose-600">1</span>
+                <h4 class="font-display font-bold text-sm sm:text-base text-slate-900 dark:text-white">Scenario 1: Client Panics During a 25% Bear Market Drop & Wants to Stop SIPs</h4>
+              </div>
+              <span class="text-[11px] px-2 py-0.5 rounded-full bg-rose-50 dark:bg-rose-950 text-rose-700 dark:text-rose-300 font-semibold">Trough Panic</span>
+            </div>
+            <div class="p-3.5 rounded-xl bg-slate-50 dark:bg-slate-800/60 border border-slate-200/80 dark:border-slate-700 text-xs space-y-2">
+              <p class="italic text-slate-600 dark:text-slate-300">
+                <strong>Client:</strong> <em>"The market has crashed 25%! Geopolitical tensions are rising, and every news channel says worse is coming. Please stop my monthly SIP of ₹50,000 immediately until things become stable."</em>
+              </p>
+              <div class="border-t border-slate-200 dark:border-slate-700 pt-2 text-indigo-700 dark:text-indigo-300 space-y-1">
+                <strong class="flex items-center gap-1.5 text-slate-900 dark:text-white">
+                  <i data-lucide="message-square" class="w-3.5 h-3.5 text-indigo-600"></i>
+                  Adviser Coaching Script:
+                </strong>
+                <p class="leading-relaxed">
+                  "I completely understand your anxiety—watching your portfolio decline is genuinely stressful, and that feeling is completely natural. But let's pause and remember why we started this SIP: for your daughter's medical education in 11 years.
+                  <br><br>
+                  Stopping your SIP today means you stop buying mutual fund units when they are on a 25% festive discount! In 2008 and March 2020, clients who stopped their SIPs locked in their losses, whereas those who continued bought extra units at bargain prices that fueled multi-bagger wealth when markets recovered. Your emergency buffer has 12 months of living expenses safe in liquid funds. Let the market do its job while your SIP accumulates cheap units."
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Script 2: Client Greed at Peak -->
+          <div class="p-5 rounded-2xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 shadow-xs space-y-3">
+            <div class="flex items-center justify-between">
+              <div class="flex items-center gap-2">
+                <span class="w-6 h-6 rounded-lg bg-amber-100 dark:bg-amber-950 flex items-center justify-center text-xs font-bold text-amber-600">2</span>
+                <h4 class="font-display font-bold text-sm sm:text-base text-slate-900 dark:text-white">Scenario 2: Client Demands to Dump Debt Funds & Go 100% Small-Cap at Market Peak</h4>
+              </div>
+              <span class="text-[11px] px-2 py-0.5 rounded-full bg-amber-50 dark:bg-amber-950 text-amber-700 dark:text-amber-300 font-semibold">Peak Greed</span>
+            </div>
+            <div class="p-3.5 rounded-xl bg-slate-50 dark:bg-slate-800/60 border border-slate-200/80 dark:border-slate-700 text-xs space-y-2">
+              <p class="italic text-slate-600 dark:text-slate-300">
+                <strong>Client:</strong> <em>"My debt funds are only giving 7% while small-cap funds have doubled in 18 months! I am losing out on huge returns. Redeem all my debt funds and deploy 100% into small-cap momentum funds."</em>
+              </p>
+              <div class="border-t border-slate-200 dark:border-slate-700 pt-2 text-indigo-700 dark:text-indigo-300 space-y-1">
+                <strong class="flex items-center gap-1.5 text-slate-900 dark:text-white">
+                  <i data-lucide="message-square" class="w-3.5 h-3.5 text-indigo-600"></i>
+                  Adviser Coaching Script:
+                </strong>
+                <p class="leading-relaxed">
+                  "It is thrilling to see small-caps perform so well! But remember, the purpose of your debt allocation was never to maximize returns—it was to act as the shock absorber for your wealth.
+                  <br><br>
+                  Historically, small-caps experience brutal 40% to 60% corrections when market liquidity tightens. If we move 100% into small caps at today's record valuation multiples, any sudden correction will destroy the capital earmarked for your retirement in 4 years. Instead of chasing past returns, our Investment Policy Statement mandates that we do the exact opposite: we take some profits off the table and rebalance, preserving your gains."
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Script 3: Ancestral Stock Loss -->
+          <div class="p-5 rounded-2xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 shadow-xs space-y-3">
+            <div class="flex items-center justify-between">
+              <div class="flex items-center gap-2">
+                <span class="w-6 h-6 rounded-lg bg-indigo-100 dark:bg-indigo-950 flex items-center justify-center text-xs font-bold text-indigo-600">3</span>
+                <h4 class="font-display font-bold text-sm sm:text-base text-slate-900 dark:text-white">Scenario 3: Client Holding a 60% Loss in Ancestral Stock Refusing to Exit</h4>
+              </div>
+              <span class="text-[11px] px-2 py-0.5 rounded-full bg-indigo-50 dark:bg-indigo-950 text-indigo-700 dark:text-indigo-300 font-semibold">Endowment & Loss Aversion</span>
+            </div>
+            <div class="p-3.5 rounded-xl bg-slate-50 dark:bg-slate-800/60 border border-slate-200/80 dark:border-slate-700 text-xs space-y-2">
+              <p class="italic text-slate-600 dark:text-slate-300">
+                <strong>Client:</strong> <em>"This company was gifted to me by my father 15 years ago. Even though it is down 60% and has corporate governance issues, I cannot sell it. Selling would betray my father's memory and lock in a loss."</em>
+              </p>
+              <div class="border-t border-slate-200 dark:border-slate-700 pt-2 text-indigo-700 dark:text-indigo-300 space-y-1">
+                <strong class="flex items-center gap-1.5 text-slate-900 dark:text-white">
+                  <i data-lucide="message-square" class="w-3.5 h-3.5 text-indigo-600"></i>
+                  Adviser Coaching Script:
+                </strong>
+                <p class="leading-relaxed">
+                  "Your father gifted you this stock out of deep love to ensure your financial security—not to bind you to a declining corporate entity. If your father were sitting here today with the facts showing that this company's business model is compromised, he would want you to protect that capital.
+                  <br><br>
+                  Let's reallocate this capital into a high-quality diversified equity portfolio. That way, the capital he gave you will continue to compound and fulfill the exact purpose he intended for your family's future."
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Script 4: Social Club FOMO -->
+          <div class="p-5 rounded-2xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 shadow-xs space-y-3">
+            <div class="flex items-center justify-between">
+              <div class="flex items-center gap-2">
+                <span class="w-6 h-6 rounded-lg bg-indigo-100 dark:bg-indigo-950 flex items-center justify-center text-xs font-bold text-indigo-600">4</span>
+                <h4 class="font-display font-bold text-sm sm:text-base text-slate-900 dark:text-white">Scenario 4: High-Net-Worth Client Suffers FOMO from Peer Conversations</h4>
+              </div>
+              <span class="text-[11px] px-2 py-0.5 rounded-full bg-indigo-50 dark:bg-indigo-950 text-indigo-700 dark:text-indigo-300 font-semibold">Social Proof / FOMO</span>
+            </div>
+            <div class="p-3.5 rounded-xl bg-slate-50 dark:bg-slate-800/60 border border-slate-200/80 dark:border-slate-700 text-xs space-y-2">
+              <p class="italic text-slate-600 dark:text-slate-300">
+                <strong>Client:</strong> <em>"At the golf club, everyone is talking about how they made 300% on a crypto token and unlisted startup shares. Our disciplined 12% mutual fund portfolio feels boring and slow."</em>
+              </p>
+              <div class="border-t border-slate-200 dark:border-slate-700 pt-2 text-indigo-700 dark:text-indigo-300 space-y-1">
+                <strong class="flex items-center gap-1.5 text-slate-900 dark:text-white">
+                  <i data-lucide="message-square" class="w-3.5 h-3.5 text-indigo-600"></i>
+                  Adviser Coaching Script:
+                </strong>
+                <p class="leading-relaxed">
+                  "People love talking about their winners at social gatherings, but almost nobody shares the losing trades where they lost 80% of their money. That is classic self-attribution bias.
+                  <br><br>
+                  Good investing should feel like watching paint dry or watching grass grow. If you want excitement, take ₹5,00,000 into your Aspiration/Play Bucket—money you can afford to lose 100% of without endangering your family's future. But we will never gamble your core wealth."
+                </p>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </section>
+
+      <!-- Chapter Completion Card -->
+      <div id="chapter-completion-box" class="p-5 rounded-2xl bg-white dark:bg-slate-900 border border-slate-200/90 dark:border-slate-800 shadow-xs flex flex-col sm:flex-row items-center justify-between gap-4">
+        <div class="flex items-center gap-3 text-left">
+          <div class="w-10 h-10 rounded-xl bg-indigo-100 dark:bg-indigo-950 text-indigo-600 dark:text-indigo-400 flex items-center justify-center shrink-0">
+            <i data-lucide="book-open" class="w-5 h-5"></i>
+          </div>
+          <div>
+            <h4 class="font-bold text-slate-900 dark:text-white text-sm">Chapter 17 Theory Completed</h4>
+            <p class="text-xs text-slate-500 dark:text-slate-400 mt-0.5" id="ch-completion-desc">
+              Test your understanding of client emotional coaching, choice architecture, and behavioral advisory practice with the 12-question quiz.
+            </p>
+          </div>
+        </div>
+        <a href="#interactive-quiz" class="px-4 py-2.5 rounded-xl text-xs font-bold transition-all duration-200 flex items-center gap-2 shadow-xs shrink-0 bg-indigo-600 hover:bg-indigo-700 text-white font-display">
+          <i data-lucide="check-circle" class="w-4 h-4"></i>
+          <span>Take 12-Question Quiz</span>
+        </a>
+      </div>
+
+      <!-- Interactive Quiz Section -->
+      <section id="interactive-quiz" class="space-y-6 pt-6">
+        <div class="p-6 rounded-3xl bg-slate-900 text-white border border-slate-800 shadow-xl space-y-6">
+          
+          <!-- Quiz Header -->
+          <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-3 border-b border-slate-800 pb-4">
+            <div>
+              <div class="flex items-center gap-2">
+                <span class="px-2.5 py-0.5 rounded-full text-xs font-bold uppercase tracking-wider bg-indigo-500/20 text-indigo-300 border border-indigo-500/30">
+                  Interactive Practice Simulator
+                </span>
+                <span class="text-xs text-slate-400">12 High-Yield Questions</span>
+              </div>
+              <h3 class="font-display font-bold text-xl sm:text-2xl text-white mt-1">
+                Chapter 17: Behavioral Finance in Practice Quiz
+              </h3>
+            </div>
+
+            <!-- Score Summary Widget -->
+            <div class="flex items-center gap-3">
+              <div class="text-right">
+                <div class="text-xs text-slate-400">Answered</div>
+                <div class="text-base font-bold text-indigo-400 font-mono"><span id="answered-count">0</span> / 12</div>
+              </div>
+              <div class="h-8 w-px bg-slate-800"></div>
+              <div class="text-right">
+                <div class="text-xs text-slate-400">Pass Mark</div>
+                <div class="text-base font-bold text-emerald-400 font-mono">60%</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Questions Container -->
+          <div id="questions-container" class="space-y-5">
+            <!-- Dynamically injected via JavaScript -->
+          </div>
+
+          <!-- Quiz Action Buttons -->
+          <div class="flex flex-col sm:flex-row items-center justify-between gap-4 pt-4 border-t border-slate-800">
+            <button id="submit-quiz-btn" onclick="submitQuiz()" class="w-full sm:w-auto px-6 py-3 rounded-xl bg-indigo-600 hover:bg-indigo-700 text-white font-bold text-xs sm:text-sm font-display flex items-center justify-center gap-2 shadow-lg transition-all">
+              <i data-lucide="check-check" class="w-4 h-4"></i>
+              <span>Submit & Evaluate Answers</span>
+            </button>
+            <button id="reset-quiz-btn" onclick="resetQuiz()" class="hidden w-full sm:w-auto px-6 py-3 rounded-xl bg-slate-800 hover:bg-slate-700 text-slate-200 font-bold text-xs sm:text-sm font-display flex items-center justify-center gap-2 transition-all">
+              <i data-lucide="rotate-ccw" class="w-4 h-4"></i>
+              <span>Retake Quiz</span>
+            </button>
+          </div>
+
+          <!-- Results Scorecard Container -->
+          <div id="quiz-results" class="hidden p-6 rounded-2xl bg-white/5 border border-white/10 space-y-4">
+            <div class="flex items-center justify-between">
+              <span id="result-status-badge" class="px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider"></span>
+              <span class="text-xs text-slate-400">NISM X-B Module 11 Benchmark</span>
+            </div>
+            <div class="flex items-baseline gap-3">
+              <div class="text-3xl font-extrabold text-white font-mono" id="score-display">0 / 12</div>
+              <div class="text-sm font-semibold text-slate-300" id="percentage-display">0% Score</div>
+            </div>
+            <p class="text-xs sm:text-sm text-slate-300 leading-relaxed" id="result-summary-text"></p>
+          </div>
+
+        </div>
+      </section>
+
+      <!-- Bottom Chapter Navigation -->
+      <div class="flex flex-col sm:flex-row items-center justify-between gap-4 pt-6 border-t border-slate-200 dark:border-slate-800">
+        <a href="module11-ch16.html" class="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-5 py-2.5 rounded-xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 hover:bg-slate-100 dark:hover:bg-slate-800 text-slate-700 dark:text-slate-300 font-bold text-xs sm:text-sm transition-all">
+          <i data-lucide="arrow-left" class="w-4 h-4"></i>
+          <span>Previous: Chapter 16 (Basics of Behavioral Finance)</span>
+        </a>
+        <a href="module11.html" class="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-5 py-2.5 rounded-xl bg-indigo-600 hover:bg-indigo-700 text-white font-bold text-xs sm:text-sm shadow-sm transition-all font-display">
+          <span>Module 11 Hub Overview</span>
+          <i data-lucide="home" class="w-4 h-4"></i>
+        </a>
+      </div>
+
+    </main>
+  </div>
+
+  <!-- Standardized Footer -->
+  <footer class="bg-slate-900 text-slate-400 py-6 border-t border-slate-800 text-center text-xs">
+    NISM Series X-B Certification Notes &bull; Chapter 17: Behavioral Finance in Practice (March 2026 Edition)
+  </footer>
+
+  <!-- Quiz Engine Script -->
+  <script>
+    const questionsData = [
+      {
+        id: 1,
+        question: "In the psychological cycle of market emotions, which phase represents the 'Point of Maximum Financial Risk'?",
+        options: [
+          { text: "Optimism", key: "a" },
+          { text: "Euphoria", key: "b" },
+          { text: "Panic", key: "c" },
+          { text: "Despondency", key: "d" }
+        ],
+        correct: "b",
+        explanation: "Euphoria marks the peak of the bull cycle where retail participation is highest, caution is completely abandoned, leverage is maximized, and asset prices are at historic extremes. This is the point of maximum financial risk."
+      },
+      {
+        id: 2,
+        question: "In the psychological cycle of market emotions, which stage represents the 'Point of Maximum Financial Opportunity'?",
+        options: [
+          { text: "Thrill", key: "a" },
+          { text: "Anxiety", key: "b" },
+          { text: "Despondency / Depression", key: "c" },
+          { text: "Excitement", key: "d" }
+        ],
+        correct: "c",
+        explanation: "Despondency / Depression occurs at the absolute trough of a bear market when investors have completely given up hope, capitulated, and sold off assets at distressed valuations. This represents the point of maximum financial opportunity."
+      },
+      {
+        id: 3,
+        question: "According to Vanguard's 'Advisor's Alpha' empirical research, what is the single largest contributor to an investment adviser's total value-add of ~300 bps?",
+        options: [
+          { text: "Tactical stock selection and market timing", key: "a" },
+          { text: "Behavioral coaching (approximately 150 basis points per annum)", key: "b" },
+          { text: "Minimizing fund management expense ratios (40 bps)", key: "c" },
+          { text: "Annual tax harvesting strategies (45 bps)", key: "d" }
+        ],
+        correct: "b",
+        explanation: "Vanguard's research demonstrates that behavioral coaching is the single largest component of Advisor's Alpha, contributing approximately 150 bps (1.50%) out of the total ~300 bps of net annualized value."
+      },
+      {
+        id: 4,
+        question: "How does Goal-Based Portfolio Bucketing turn the cognitive error of 'Mental Accounting' into an effective behavioral coaching tool?",
+        options: [
+          { text: "By eliminating all debt investments and forcing the client into high-yield dividend stocks.", key: "a" },
+          { text: "By isolating near-term living expenses in a 'Safety Bucket' so market drawdowns do not provoke panic selling in the 'Growth Bucket'.", key: "b" },
+          { text: "By guaranteeing that all equity funds deliver positive nominal returns every calendar year.", key: "c" },
+          { text: "By making all withdrawals completely exempt from income tax.", key: "d" }
+        ],
+        correct: "b",
+        explanation: "Bucketing matches mental accounts to explicit life priorities. When markets crash, clients remain calm because their immediate living needs are safely secured in liquid/debt instruments in the Safety Bucket, giving the Growth Bucket time to recover."
+      },
+      {
+        id: 5,
+        question: "What is a 'Nudge' as defined in behavioral economics by Richard Thaler and Cass Sunstein?",
+        options: [
+          { text: "A government mandate that makes certain risky investments illegal for retail investors.", key: "a" },
+          { text: "An aspect of choice architecture that alters people's behavior in a predictable way without forbidding any choices or altering economic incentives.", key: "b" },
+          { text: "A financial penalty imposed on investors who redeem mutual funds within 12 months.", key: "c" },
+          { text: "A high-pressure sales pitch used by aggressive product distributors.", key: "d" }
+        ],
+        correct: "b",
+        explanation: "A nudge alters the choice architecture to guide people toward better decisions (e.g. setting auto-escalation as a default) while preserving full freedom of choice and without altering economic incentives."
+      },
+      {
+        id: 6,
+        question: "How does the 'Save More Tomorrow' (SMRT) program designed by Richard Thaler and Shlomo Benartzi overcome present bias and loss aversion?",
+        options: [
+          { text: "It penalizes clients if they do not save at least 50% of their current paycheck.", key: "a" },
+          { text: "It commits clients in advance to allocate a portion of their future salary raises to investment SIPs, avoiding a drop in current take-home pay.", key: "b" },
+          { text: "It transfers all savings into lottery-linked bank accounts to exploit overconfidence.", key: "c" },
+          { text: "It restricts withdrawals until the client reaches the age of 65.", key: "d" }
+        ],
+        correct: "b",
+        explanation: "SMRT asks clients to commit now to save from future salary increments. Because the additional savings come out of future raises, clients never see their current nominal paycheck decrease, neutralizing loss aversion and present bias."
+      },
+      {
+        id: 7,
+        question: "What is Barry Schwartz's 'Paradox of Choice', and how should an investment adviser solve it for clients?",
+        options: [
+          { text: "Offering too many options causes cognitive overload and decision paralysis; the adviser should curate a concise menu of 2–3 suitable model portfolios.", key: "a" },
+          { text: "Clients always pick the highest risk investment; advisers must hide equity schemes.", key: "b" },
+          { text: "Choice is an illusion; all mutual fund schemes have identical underlying volatility.", key: "c" },
+          { text: "Having only one investment option causes clients to stop investing entirely.", key: "d" }
+        ],
+        correct: "a",
+        explanation: "The Paradox of Choice proves that an overabundance of options creates anxiety, regret, and analysis paralysis. Advisers act as choice architects by simplifying and curating a small set of well-defined model portfolios."
+      },
+      {
+        id: 8,
+        question: "What is the purpose of an Investment Policy Statement (IPS) acting as a 'Ulysses Contract' during market turbulence?",
+        options: [
+          { text: "It guarantees that the fund manager will outperform the Nifty 50 index.", key: "a" },
+          { text: "It serves as a pre-commitment contract signed during calm market conditions, binding the client against impulsive emotional liquidations during market drawdowns.", key: "b" },
+          { text: "It relieves the adviser of all fiduciary responsibility under SEBI RIA regulations.", key: "c" },
+          { text: "It forces the client to borrow money to buy equities whenever markets drop 10%.", key: "d" }
+        ],
+        correct: "b",
+        explanation: "A behavioral IPS acts as a pre-commitment mechanism. Signed when the client is rational and calm, it establishes agreed-upon rules and cooling-off procedures to prevent panicked decision-making during severe market downturns."
+      },
+      {
+        id: 9,
+        question: "In behavioral risk profiling, what is the critical difference between 'Risk Tolerance' and 'Risk Composure'?",
+        options: [
+          { text: "Risk tolerance is evaluated by SEBI, whereas risk composure is evaluated by AMFI.", key: "a" },
+          { text: "Risk tolerance measures subjective stated willingness on questionnaires, while risk composure reflects actual emotional resilience and behavior during real market crashes.", key: "b" },
+          { text: "Risk tolerance applies only to debt funds, while risk composure applies to equity derivatives.", key: "c" },
+          { text: "There is no difference; both terms refer strictly to mathematical portfolio variance.", key: "d" }
+        ],
+        correct: "b",
+        explanation: "Risk tolerance is typically an investor's hypothetical, stated willingness to take risk in calm questionnaire settings. Risk composure reflects their actual emotional fortitude and self-control when their real portfolio is down 20-30%."
+      },
+      {
+        id: 10,
+        question: "A client calls in a panic after a 20% geopolitical market drop, insisting on liquidating all equity mutual funds. What is the adviser's MOST appropriate immediate response?",
+        options: [
+          { text: "Execute the redemptions immediately to respect the client's autonomy without questioning.", key: "a" },
+          { text: "Tell the client that their reaction is completely irrational and show them statistical regression tables.", key: "b" },
+          { text: "Acknowledge and empathize with their emotional anxiety, review their goal horizon and Safety Bucket, and institute a mandatory 48-hour cooling-off period.", key: "c" },
+          { text: "Advise the client to borrow money on margin to double down on speculative small-cap stocks.", key: "d" }
+        ],
+        correct: "c",
+        explanation: "A skilled behavioral coach first validates the client's emotional state with empathy, refocuses attention on their intact Safety Bucket and long-term goal horizon, and implements a cooling-off pause before executing any irreversible liquidation."
+      },
+      {
+        id: 11,
+        question: "Why is enforcing a disciplined portfolio rebalancing policy (e.g. 5% tolerance bands) an effective counter-measure to behavioral biases?",
+        options: [
+          { text: "It mechanically forces the investor to sell high (trimming outperforming euphoric assets) and buy low (allocating to lagging assets) without relying on emotional market timing.", key: "a" },
+          { text: "It ensures the portfolio never experiences negative returns in any calendar quarter.", key: "b" },
+          { text: "It eliminates all brokerage commissions and custodial fees permanently.", key: "c" },
+          { text: "It converts all debt instruments into equity when interest rates decline.", key: "d" }
+        ],
+        correct: "a",
+        explanation: "Rebalancing imposes a systematic, rules-based discipline. By taking profits from an asset class that has surged above target allocation and reallocating to lagging asset classes, it forces investors to 'sell high and buy low' without emotional interference."
+      },
+      {
+        id: 12,
+        question: "When a high-net-worth client experiences intense FOMO after hearing about peers' speculative 300% returns in unlisted assets, how should a behavioral adviser manage the situation?",
+        options: [
+          { text: "Liquidate the client's retirement mutual funds to match their peers' unlisted holdings.", key: "a" },
+          { text: "Explain self-attribution bias (people boast of wins but hide losses), and allocate a small, ring-fenced 'Aspiration / Play Bucket' (e.g. 2-5%) that does not jeopardize core goals.", key: "b" },
+          { text: "Terminate the advisory relationship immediately due to non-compliance.", key: "c" },
+          { text: "Advise the client to stop attending social clubs and interacting with peers.", key: "d" }
+        ],
+        correct: "b",
+        explanation: "Advisers explain that social peers selectively broadcast successes while concealing painful losses. To satisfy the client's emotional curiosity without endangering core retirement goals, the adviser can ring-fence a small 'Aspiration / Play Bucket' with money the client can afford to lose."
+      }
+    ];
+
+    let userAnswers = {};
+
+    function renderQuiz() {
+      const container = document.getElementById("questions-container");
+      container.innerHTML = "";
+
+      questionsData.forEach((q, index) => {
+        const qDiv = document.createElement("div");
+        qDiv.className = "p-5 rounded-2xl bg-white/5 border border-white/10 space-y-4 transition-all";
+        qDiv.id = `q-box-${q.id}`;
+
+        let optionsHtml = "";
+        q.options.forEach(opt => {
+          optionsHtml += `
+            <label class="flex items-center gap-3 p-3 rounded-xl bg-white/5 hover:bg-white/10 border border-white/5 cursor-pointer text-xs sm:text-sm transition-all" onclick="selectOption(${q.id}, '${opt.key}')" id="label-${q.id}-${opt.key}">
+              <input type="radio" name="question-${q.id}" value="${opt.key}" class="w-4 h-4 text-indigo-500 focus:ring-0 focus:ring-offset-0 bg-transparent border-slate-500">
+              <span class="font-bold text-indigo-300 w-5 uppercase font-mono">${opt.key}.</span>
+              <span class="text-slate-200">${opt.text}</span>
+            </label>
+          `;
+        });
+
+        qDiv.innerHTML = `
+          <div class="flex items-start justify-between gap-2">
+            <span class="text-xs font-bold text-indigo-400 uppercase tracking-wider font-mono">Question ${index + 1} of ${questionsData.length}</span>
+            <span id="badge-${q.id}" class="text-[11px] px-2.5 py-0.5 rounded-full bg-white/5 text-slate-400 font-medium">Unanswered</span>
+          </div>
+          <h4 class="font-display font-semibold text-sm sm:text-base text-white leading-snug">${q.question}</h4>
+          <div class="space-y-2 mt-3">
+            ${optionsHtml}
+          </div>
+          <div id="explanation-${q.id}" class="hidden p-4 rounded-xl text-xs sm:text-sm mt-3 space-y-1"></div>
+        `;
+        container.appendChild(qDiv);
+      });
+      lucide.createIcons();
+    }
+
+    function selectOption(qId, key) {
+      userAnswers[qId] = key;
+      const count = Object.keys(userAnswers).length;
+      document.getElementById("answered-count").innerText = count;
+      
+      const badge = document.getElementById(`badge-${qId}`);
+      if (badge) {
+        badge.innerText = "Answered";
+        badge.className = "text-[11px] px-2.5 py-0.5 rounded-full bg-indigo-500/20 text-indigo-300 font-medium";
+      }
+
+      // Highlight selected label
+      const q = questionsData.find(item => item.id === qId);
+      q.options.forEach(opt => {
+        const lbl = document.getElementById(`label-${qId}-${opt.key}`);
+        if (opt.key === key) {
+          lbl.className = "flex items-center gap-3 p-3 rounded-xl bg-indigo-600/30 border border-indigo-400/50 cursor-pointer text-xs sm:text-sm transition-all";
+        } else {
+          lbl.className = "flex items-center gap-3 p-3 rounded-xl bg-white/5 hover:bg-white/10 border border-white/5 cursor-pointer text-xs sm:text-sm transition-all";
+        }
+      });
+    }
+
+    function submitQuiz() {
+      let score = 0;
+      questionsData.forEach(q => {
+        const selected = userAnswers[q.id];
+        const isCorrect = selected === q.correct;
+        if (isCorrect) score++;
+
+        const explanationDiv = document.getElementById(`explanation-${q.id}`);
+        explanationDiv.classList.remove("hidden");
+
+        if (isCorrect) {
+          explanationDiv.className = "p-4 rounded-xl text-xs sm:text-sm mt-3 bg-emerald-950/60 border border-emerald-600 text-emerald-200 space-y-1";
+          explanationDiv.innerHTML = `<div class="font-bold text-emerald-400 flex items-center gap-1.5"><i data-lucide="check" class="w-4 h-4"></i> Correct!</div><p>${q.explanation}</p>`;
+        } else {
+          explanationDiv.className = "p-4 rounded-xl text-xs sm:text-sm mt-3 bg-rose-950/60 border border-rose-600 text-rose-200 space-y-1";
+          explanationDiv.innerHTML = `<div class="font-bold text-rose-400 flex items-center gap-1.5"><i data-lucide="x" class="w-4 h-4"></i> Incorrect (Correct Answer: ${q.correct.toUpperCase()})</div><p>${q.explanation}</p>`;
+        }
+      });
+
+      // Show results scorecard
+      const percentage = Math.round((score / questionsData.length) * 100);
+      const passed = percentage >= 60;
+      
+      const resultsDiv = document.getElementById("quiz-results");
+      resultsDiv.classList.remove("hidden");
+
+      const statusBadge = document.getElementById("result-status-badge");
+      statusBadge.innerText = passed ? "Status: Passed (60%+ Benchmark)" : "Status: Needs Revision";
+      statusBadge.className = passed ? "px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider bg-emerald-500 text-emerald-950" : "px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider bg-amber-500 text-amber-950";
+
+      document.getElementById("score-display").innerText = `${score} / ${questionsData.length}`;
+      document.getElementById("percentage-display").innerText = `${percentage}% Score (Passing criteria: 60%)`;
+
+      document.getElementById("result-summary-text").innerText = passed
+        ? `Superb performance! You scored ${percentage}%, successfully clearing the NISM Series X-B Chapter 17 benchmark. You understand the practical craft of behavioral coaching, nudging, and choice architecture.`
+        : `You scored ${percentage}%. Re-read the sections on Vanguard Advisor's Alpha, Choice Architecture nudges, and Goal Bucketing before re-attempting.`;
+
+      document.getElementById("submit-quiz-btn").classList.add("hidden");
+      document.getElementById("reset-quiz-btn").classList.remove("hidden");
+
+      resultsDiv.scrollIntoView({ behavior: 'smooth' });
+      lucide.createIcons();
+    }
+
+    function resetQuiz() {
+      userAnswers = {};
+      document.getElementById("answered-count").innerText = "0";
+      document.getElementById("quiz-results").classList.add("hidden");
+      document.getElementById("submit-quiz-btn").classList.remove("hidden");
+      document.getElementById("reset-quiz-btn").classList.add("hidden");
+      renderQuiz();
+      document.getElementById("interactive-quiz").scrollIntoView({ behavior: 'smooth' });
+    }
+
+    // Initialize Quiz
+    renderQuiz();
+    lucide.createIcons();
+
+    // Preloader Auto-dismiss
+    function dismissPreloader() {
+      const preloader = document.getElementById("eduleb-preloader");
+      if (preloader && !preloader.classList.contains("fade-out")) {
+        preloader.classList.add("fade-out");
+        setTimeout(() => { if (preloader.parentNode) preloader.parentNode.removeChild(preloader); }, 550);
+      }
+    }
+    window.addEventListener("load", () => setTimeout(dismissPreloader, 350));
+    setTimeout(dismissPreloader, 1000);
+  </script>
+</body>
+</html>

@@ -1,0 +1,1133 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Chapter 5: Retirement Products | NISM Series X-B (Level 2)</title>
+  
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  
+  <!-- Google Fonts: DM Sans & Jost (Eduleb Benchmark) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Jost:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+  <script src="https://unpkg.com/lucide@latest"></script>
+
+  <!-- Modern Documentation Design System -->
+  <link rel="stylesheet" href="modern-docs.css">
+
+  <!-- KaTeX for formula rendering -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.min.css">
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.min.js"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/contrib/auto-render.min.js" onload="renderMathInElement(document.body);"></script>
+
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['"DM Sans"', 'sans-serif'],
+            display: ['"Jost"', 'sans-serif'],
+            heading: ['"Jost"', 'sans-serif']
+          },
+          colors: {
+            brand: {
+              50: '#eef2ff',
+              100: '#e0e7ff',
+              500: '#525fe1',
+              600: '#434ec9',
+              700: '#353db3',
+              800: '#282f9c',
+              900: '#0b104a'
+            }
+          }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    body {
+      font-family: 'DM Sans', sans-serif;
+      font-size: 16px;
+      line-height: 26px;
+    }
+    h1, h2, h3, h4, h5, h6, .font-display, .font-heading {
+      font-family: 'Jost', sans-serif;
+      font-weight: 700;
+    }
+  </style>
+</head>
+<body class="bg-slate-50 dark:bg-slate-950 text-slate-900 dark:text-slate-100 min-h-screen flex flex-col antialiased transition-colors duration-200 selection:bg-indigo-500 selection:text-white">
+
+  <!-- Smooth Opening Preloader -->
+  <div class="preloaders" id="eduleb-preloader">
+    <span class="loader"></span>
+    <div class="preloader-label">Chapter 5: Retirement Products</div>
+  </div>
+
+  <!-- Standardized Header (Single-Tier, 64px) -->
+  <header class="sticky top-0 z-40 bg-white/95 dark:bg-slate-900/95 backdrop-blur-md border-b border-slate-200/80 dark:border-slate-800 shadow-xs">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
+      <!-- Left: Logo & Context Label -->
+      <div class="flex items-center gap-3">
+        <a href="module8.html" class="flex items-center gap-2 text-slate-500 hover:text-slate-900 dark:text-slate-400 dark:hover:text-white transition-colors">
+          <div class="w-9 h-9 rounded-xl bg-slate-100 dark:bg-slate-800 hover:bg-slate-200 dark:hover:bg-slate-700 flex items-center justify-center text-slate-700 dark:text-slate-200 transition-colors">
+            <i data-lucide="arrow-left" class="w-4 h-4"></i>
+          </div>
+        </a>
+        <div>
+          <div class="flex items-center gap-2">
+            <span class="text-xs font-bold uppercase tracking-wider text-indigo-600 dark:text-indigo-400 bg-indigo-50 dark:bg-indigo-950/80 px-2 py-0.5 rounded">Module 8</span>
+            <span class="text-xs text-slate-400 font-medium">Chapter 5 of 6</span>
+          </div>
+          <h1 class="font-display font-bold text-base sm:text-lg text-slate-900 dark:text-white leading-tight">Retirement Products</h1>
+        </div>
+      </div>
+
+      <!-- Right: Badges, Theme, and Quiz Link -->
+      <div class="flex items-center gap-2 sm:gap-3">
+        <span class="hidden sm:inline-flex items-center gap-1 px-3 py-1 rounded-full text-xs font-bold bg-amber-50 dark:bg-amber-950/60 text-amber-700 dark:text-amber-300 border border-amber-200 dark:border-amber-800">
+          <i data-lucide="award" class="w-3.5 h-3.5"></i>
+          Heavy Weightage
+        </span>
+        <button onclick="window.toggleDarkMode()" id="nism-header-theme-btn" class="p-2 rounded-full border border-slate-200 dark:border-slate-700 text-slate-600 dark:text-slate-300 bg-white dark:bg-slate-800 hover:bg-slate-50 dark:hover:bg-slate-700 transition-colors" title="Toggle Theme (⌘D)">
+          <i data-lucide="moon" class="w-4 h-4"></i>
+        </button>
+        <a href="#interactive-quiz" class="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-full text-xs font-bold bg-indigo-600 hover:bg-indigo-700 text-white shadow-xs transition-all">
+          <i data-lucide="help-circle" class="w-3.5 h-3.5"></i>
+          <span>Chapter Quiz (12 Q)</span>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Content Grid -->
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 grid grid-cols-1 lg:grid-cols-12 gap-8 flex-grow">
+    
+    <!-- Sidebar Navigation -->
+    <aside class="hidden lg:block lg:col-span-3">
+      <div class="sticky top-24 space-y-4">
+        
+        <div class="bg-white dark:bg-slate-900 p-5 rounded-2xl border border-slate-200 dark:border-slate-800 shadow-xs">
+          <h2 class="text-xs font-bold text-slate-400 uppercase tracking-wider mb-3">Chapter Navigation</h2>
+          <nav class="space-y-1 text-xs">
+            <a href="#section-1" class="block px-2.5 py-1.5 rounded-lg text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800 hover:text-indigo-600">5.1 NPS Architecture & Structure</a>
+            <a href="#section-2" class="block px-2.5 py-1.5 rounded-lg text-amber-700 dark:text-amber-400 font-semibold bg-amber-50/70 dark:bg-amber-950/40 hover:bg-amber-100">5.2 NPS Tier I vs Tier II ⭐</a>
+            <a href="#section-3" class="block px-2.5 py-1.5 rounded-lg text-amber-700 dark:text-amber-400 font-semibold bg-amber-50/70 dark:bg-amber-950/40 hover:bg-amber-100">5.3 NPS Tax Deductions & Exit Norms ⭐</a>
+            <a href="#section-4" class="block px-2.5 py-1.5 rounded-lg text-amber-700 dark:text-amber-400 font-semibold bg-amber-50/70 dark:bg-amber-950/40 hover:bg-amber-100">5.4 Active Choice vs Auto Choice ⭐</a>
+            <a href="#section-5" class="block px-2.5 py-1.5 rounded-lg text-amber-700 dark:text-amber-400 font-semibold bg-amber-50/70 dark:bg-amber-950/40 hover:bg-amber-100">5.5 Atal Pension Yojana (APY) ⭐</a>
+            <a href="#section-6" class="block px-2.5 py-1.5 rounded-lg text-amber-700 dark:text-amber-400 font-semibold bg-amber-50/70 dark:bg-amber-950/40 hover:bg-amber-100">5.6 EPF, EPS (1995) & EDLI ⭐</a>
+            <a href="#section-7" class="block px-2.5 py-1.5 rounded-lg text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800 hover:text-indigo-600">5.7 Small Savings: PPF, SCSS & PMVVY ⭐</a>
+            <a href="#section-8" class="block px-2.5 py-1.5 rounded-lg text-amber-700 dark:text-amber-400 font-semibold bg-amber-50/70 dark:bg-amber-950/40 hover:bg-amber-100">5.8 Annuity Types & Classification ⭐</a>
+            <a href="#section-9" class="block px-2.5 py-1.5 rounded-lg text-amber-700 dark:text-amber-400 font-semibold bg-amber-50/70 dark:bg-amber-950/40 hover:bg-amber-100">5.9 Reverse Mortgage Scheme (RMS) ⭐</a>
+            <a href="#interactive-quiz" class="block px-2.5 py-1.5 rounded-lg text-indigo-700 dark:text-indigo-300 font-bold bg-indigo-50 dark:bg-indigo-950/70 hover:bg-indigo-100 dark:hover:bg-indigo-900/80 mt-2">Interactive Quiz (12 MCQs)</a>
+          </nav>
+        </div>
+
+        <div class="p-4 rounded-2xl bg-gradient-to-br from-indigo-600 to-purple-700 text-white shadow-xs text-xs space-y-2">
+          <div class="flex items-center gap-1.5 font-bold">
+            <i data-lucide="zap" class="w-4 h-4 text-amber-300"></i>
+            <span>Exam Focus Numbers</span>
+          </div>
+          <p class="text-indigo-100 leading-relaxed space-y-1">
+            • <strong>NPS Sec 80CCD(1B):</strong> Exclusive extra ₹50,000 deduction.<br>
+            • <strong>NPS Exit at 60:</strong> 60% lump sum tax-free; min 40% annuity.<br>
+            • <strong>NPS Small Corpus:</strong> $\le$ ₹5 Lakhs &rarr; 100% lump sum allowed.<br>
+            • <strong>SCSS Ceiling:</strong> ₹30,00,000 (Quarterly interest).<br>
+            • <strong>Reverse Mortgage:</strong> Senior 60+, spouse 55+; Section 10(43) tax-free.<br>
+            • <strong>EPS Wage Ceiling:</strong> ₹15,000/mo (Employer 8.33% capped at ₹1,250).<br>
+            • <strong>APY Age:</strong> 18 to 40 yrs; pension ₹1k-₹5k; taxpayers barred.
+          </p>
+        </div>
+
+        <!-- Quick Module Nav Links -->
+        <div class="p-3 bg-white dark:bg-slate-900 rounded-2xl border border-slate-200 dark:border-slate-800 text-xs space-y-2">
+          <span class="text-[10px] uppercase font-bold text-slate-400 tracking-wider">Module 8 Chapters</span>
+          <div class="flex flex-col gap-1 font-medium">
+            <a href="module8-ch4.html" class="text-slate-600 dark:text-slate-400 hover:text-indigo-600">Ch 4: Retirement Basics</a>
+            <a href="module8-ch5.html" class="text-indigo-600 dark:text-indigo-400 font-bold">Ch 5: Retirement Products</a>
+            <a href="module8-ch6.html" class="text-slate-600 dark:text-slate-400 hover:text-indigo-600">Ch 6: Miscellaneous & Corpus Math</a>
+          </div>
+        </div>
+
+      </div>
+    </aside>
+
+    <!-- Main Notes -->
+    <div class="lg:col-span-9 space-y-8">
+
+      <!-- Section 5.1 -->
+      <section id="section-1" class="bg-white dark:bg-slate-900 rounded-3xl p-6 sm:p-8 border border-slate-200/90 dark:border-slate-800 shadow-xs space-y-5">
+        <div class="flex items-center justify-between">
+          <div class="flex items-center gap-2 text-xs font-bold text-slate-500 uppercase tracking-wider">
+            <span class="w-2 h-2 rounded-full bg-slate-400"></span> Section 5.1 &bull; Institutional Framework
+          </div>
+          <span class="px-2 py-0.5 rounded text-[11px] font-semibold bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300">PFRDA Architecture</span>
+        </div>
+        
+        <div>
+          <h2 class="font-display text-xl sm:text-2xl font-bold text-slate-900 dark:text-white">National Pension System (NPS) Architecture</h2>
+          <p class="text-xs sm:text-sm text-slate-600 dark:text-slate-300 mt-1 leading-relaxed">
+            The <strong>National Pension System (NPS)</strong> was instituted by the Government of India on January 1, 2004 for new civil service recruits (except armed forces), and subsequently opened to <strong>All Citizens of India (including NRIs and OCIs)</strong> aged 18 to 70 years from May 1, 2009.
+          </p>
+        </div>
+
+        <!-- 6 Institutional Entities Grid -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3 text-xs">
+          <div class="p-3 bg-slate-50 dark:bg-slate-800/60 rounded-xl border border-slate-200 dark:border-slate-700 space-y-1">
+            <strong class="text-slate-900 dark:text-white font-bold block">1. PFRDA</strong>
+            <p class="text-slate-600 dark:text-slate-400">Pension Fund Regulatory and Development Authority; statutory apex regulator established under the PFRDA Act, 2013.</p>
+          </div>
+
+          <div class="p-3 bg-slate-50 dark:bg-slate-800/60 rounded-xl border border-slate-200 dark:border-slate-700 space-y-1">
+            <strong class="text-slate-900 dark:text-white font-bold block">2. NPS Trust</strong>
+            <p class="text-slate-600 dark:text-slate-400">Holds legal ownership of all assets and funds of the NPS for the collective benefit of subscribers, executing fiduciary oversight.</p>
+          </div>
+
+          <div class="p-3 bg-slate-50 dark:bg-slate-800/60 rounded-xl border border-slate-200 dark:border-slate-700 space-y-1">
+            <strong class="text-slate-900 dark:text-white font-bold block">3. CRAs (Recordkeeping)</strong>
+            <p class="text-slate-600 dark:text-slate-400">Central Recordkeeping Agencies (Protean e-Gov, KFintech, CAMS). Maintain subscriber PRAN (Permanent Retirement Account Number) and unit ledgers.</p>
+          </div>
+
+          <div class="p-3 bg-slate-50 dark:bg-slate-800/60 rounded-xl border border-slate-200 dark:border-slate-700 space-y-1">
+            <strong class="text-slate-900 dark:text-white font-bold block">4. Pension Fund Managers</strong>
+            <p class="text-slate-600 dark:text-slate-400">Regulated asset managers (SBI, LIC, UTI, HDFC, ICICI, Kotak, Axis, Tata, etc.) that manage the investment pools under strict asset allocation caps.</p>
+          </div>
+
+          <div class="p-3 bg-slate-50 dark:bg-slate-800/60 rounded-xl border border-slate-200 dark:border-slate-700 space-y-1">
+            <strong class="text-slate-900 dark:text-white font-bold block">5. Trustee Bank & Custodian</strong>
+            <p class="text-slate-600 dark:text-slate-400">Axis Bank serves as the Trustee Bank managing cash clearing. Stock Holding Corporation of India Ltd (SHCIL) serves as Custodian of securities.</p>
+          </div>
+
+          <div class="p-3 bg-slate-50 dark:bg-slate-800/60 rounded-xl border border-slate-200 dark:border-slate-700 space-y-1">
+            <strong class="text-slate-900 dark:text-white font-bold block">6. POPs (Points of Presence)</strong>
+            <p class="text-slate-600 dark:text-slate-400">Commercial banks, post offices, and financial distributors acting as customer-facing registration and contribution collection gateways.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Section 5.2 -->
+      <section id="section-2" class="bg-white dark:bg-slate-900 rounded-3xl p-6 sm:p-8 border border-amber-200 dark:border-amber-800/80 shadow-xs space-y-6">
+        <div class="flex items-center justify-between">
+          <div class="flex items-center gap-2 text-xs font-bold text-amber-700 dark:text-amber-400 uppercase tracking-wider">
+            <span class="w-2 h-2 rounded-full bg-amber-500"></span> Section 5.2 &bull; ⭐ Super High Exam Yield
+          </div>
+          <span class="px-2.5 py-0.5 rounded-full text-xs font-extrabold bg-amber-100 dark:bg-amber-950 text-amber-800 dark:text-amber-300 border border-amber-300 dark:border-amber-700">
+            NPS Tier I vs Tier II
+          </span>
+        </div>
+
+        <div>
+          <h2 class="font-display text-xl sm:text-2xl font-bold text-slate-900 dark:text-white">NPS Tier I vs Tier II Accounts: Structural Comparison</h2>
+          <p class="text-xs sm:text-sm text-slate-600 dark:text-slate-300 mt-1 leading-relaxed">
+            Every NPS subscriber opens a primary pension account (Tier I). Subscribers can optionally activate a secondary, liquid investment facility (Tier II).
+          </p>
+        </div>
+
+        <!-- Comparative Table -->
+        <div class="overflow-x-auto rounded-2xl border border-slate-200 dark:border-slate-800">
+          <table class="w-full text-left text-xs sm:text-sm">
+            <thead class="bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 font-bold uppercase border-b border-slate-200 dark:border-slate-700">
+              <tr>
+                <th class="p-3">Feature</th>
+                <th class="p-3">NPS Tier I (Primary Pension Account) ⭐</th>
+                <th class="p-3">NPS Tier II (Voluntary Investment Account)</th>
+              </tr>
+            </thead>
+            <tbody class="divide-y divide-slate-200 dark:divide-slate-800 text-slate-700 dark:text-slate-300">
+              <tr class="hover:bg-slate-50/60 dark:hover:bg-slate-800/50">
+                <td class="p-3 font-semibold text-slate-900 dark:text-white">Account Character</td>
+                <td class="p-3 font-semibold text-indigo-600 dark:text-indigo-400">Non-withdrawable retirement pension account</td>
+                <td class="p-3">Open-ended voluntary savings/investment facility</td>
+              </tr>
+              <tr class="hover:bg-slate-50/60 dark:hover:bg-slate-800/50">
+                <td class="p-3 font-semibold text-slate-900 dark:text-white">Pre-condition</td>
+                <td class="p-3">Independent; can be opened directly by any citizen aged 18-70</td>
+                <td class="p-3">Must hold an active, valid Tier I PRAN account</td>
+              </tr>
+              <tr class="hover:bg-slate-50/60 dark:hover:bg-slate-800/50">
+                <td class="p-3 font-semibold text-slate-900 dark:text-white">Min Opening Deposit</td>
+                <td class="p-3 font-mono font-bold text-slate-900 dark:text-white">₹500</td>
+                <td class="p-3 font-mono">₹1,000</td>
+              </tr>
+              <tr class="hover:bg-slate-50/60 dark:hover:bg-slate-800/50">
+                <td class="p-3 font-semibold text-slate-900 dark:text-white">Min Contribution / Year</td>
+                <td class="p-3 font-mono font-bold text-slate-900 dark:text-white">₹500 per contrib; ₹1,000 per financial year</td>
+                <td class="p-3 font-mono">₹250 per contrib; no annual minimum requirement</td>
+              </tr>
+              <tr class="hover:bg-slate-50/60 dark:hover:bg-slate-800/50">
+                <td class="p-3 font-semibold text-slate-900 dark:text-white">Liquidity / Lock-in</td>
+                <td class="p-3 text-rose-600 dark:text-rose-400 font-semibold">Locked until age 60 (strict partial withdrawal exceptions)</td>
+                <td class="p-3 text-emerald-600 dark:text-emerald-400 font-semibold">100% Liquid anytime; no lock-in or exit load</td>
+              </tr>
+              <tr class="hover:bg-slate-50/60 dark:hover:bg-slate-800/50">
+                <td class="p-3 font-semibold text-slate-900 dark:text-white">Tax Deductions</td>
+                <td class="p-3 font-bold text-indigo-600 dark:text-indigo-400">Sec 80CCD(1), 80CCD(1B) [₹50k], & 80CCD(2)</td>
+                <td class="p-3">No tax deductions for private citizens (Sec 80C only for Central Govt with 3-yr lock-in)</td>
+              </tr>
+              <tr class="hover:bg-slate-50/60 dark:hover:bg-slate-800/50">
+                <td class="p-3 font-semibold text-slate-900 dark:text-white">Tax on Capital Gains</td>
+                <td class="p-3 font-bold text-emerald-600 dark:text-emerald-400">60% Lump sum 100% Tax-Exempt; 40% Annuity tax-deferred</td>
+                <td class="p-3">Gains taxed as normal capital gains (debt/equity rules)</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <!-- Section 5.3 -->
+      <section id="section-3" class="bg-white dark:bg-slate-900 rounded-3xl p-6 sm:p-8 border border-amber-200 dark:border-amber-800/80 shadow-xs space-y-6">
+        <div class="flex items-center justify-between">
+          <div class="flex items-center gap-2 text-xs font-bold text-amber-700 dark:text-amber-400 uppercase tracking-wider">
+            <span class="w-2 h-2 rounded-full bg-amber-500"></span> Section 5.3 &bull; ⭐ Super High Exam Yield
+          </div>
+          <span class="px-2.5 py-0.5 rounded-full text-xs font-extrabold bg-amber-100 dark:bg-amber-950 text-amber-800 dark:text-amber-300 border border-amber-300 dark:border-amber-700">
+            NPS Tax & Exits
+          </span>
+        </div>
+
+        <div>
+          <h2 class="font-display text-xl sm:text-2xl font-bold text-slate-900 dark:text-white">NPS Tax Deductions & Exit Regulations</h2>
+          <p class="text-xs sm:text-sm text-slate-600 dark:text-slate-300 mt-1 leading-relaxed">
+            NPS Tier I provides a powerful three-tier tax deduction under the Income Tax Act, 1961, making it one of the most tax-efficient accumulation vehicles in India.
+          </p>
+        </div>
+
+        <!-- Tax Slabs 3-Tier Grid -->
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-4 text-xs sm:text-sm">
+          <div class="p-4 rounded-2xl bg-indigo-50/70 dark:bg-indigo-950/40 border border-indigo-200 dark:border-indigo-800 space-y-1.5">
+            <span class="px-2 py-0.5 rounded bg-indigo-200 dark:bg-indigo-900 text-indigo-800 dark:text-indigo-200 text-xs font-bold">Tier 1 Tax Deduction</span>
+            <strong class="text-indigo-950 dark:text-indigo-300 block text-base font-bold">Section 80CCD(1)</strong>
+            <p class="text-slate-600 dark:text-slate-400">
+              Employee or individual contribution up to <strong>10% of Salary (Basic + DA)</strong> for salaried, or up to <strong>20% of Gross Total Income (GTI)</strong> for self-employed individuals. Subject to the overall ceiling of <strong>₹1.5 Lakhs under Section 80CCE</strong> (clubbed with 80C and 80CCC).
+            </p>
+          </div>
+
+          <div class="p-4 rounded-2xl bg-amber-50/70 dark:bg-amber-950/40 border border-amber-200 dark:border-amber-800 space-y-1.5">
+            <span class="px-2 py-0.5 rounded bg-amber-200 dark:bg-amber-900 text-amber-800 dark:text-amber-200 text-xs font-bold">Exclusive Additional Deduction</span>
+            <strong class="text-amber-950 dark:text-amber-300 block text-base font-bold">Section 80CCD(1B) ⭐</strong>
+            <p class="text-slate-600 dark:text-slate-400">
+              An exclusive deduction of up to <strong>₹50,000</strong> for contributions to NPS Tier I. This is <strong>over and above</strong> the ₹1.5 Lakh limit under Section 80CCE, creating a combined total personal deduction of <strong>₹2,00,000</strong>!
+            </p>
+          </div>
+
+          <div class="p-4 rounded-2xl bg-purple-50/70 dark:bg-purple-950/40 border border-purple-200 dark:border-purple-800 space-y-1.5">
+            <span class="px-2 py-0.5 rounded bg-purple-200 dark:bg-purple-900 text-purple-800 dark:text-purple-200 text-xs font-bold">Employer Contribution</span>
+            <strong class="text-purple-950 dark:text-purple-300 block text-base font-bold">Section 80CCD(2) ⭐</strong>
+            <p class="text-slate-600 dark:text-slate-400">
+              Employer contribution up to <strong>10% of Salary (Basic + DA)</strong> for private corporate employees, or up to <strong>14%</strong> for Central and State Government employees. Has <strong>no upper rupee limit</strong> under 80CCD, but is subject to the aggregate ₹7.5 Lakh cap across PF + NPS + Superannuation.
+            </p>
+          </div>
+        </div>
+
+        <!-- Exit & Withdrawal Rules Matrix -->
+        <div class="space-y-3">
+          <h3 class="font-display text-sm font-bold text-slate-900 dark:text-white">NPS Exit Rules (Normal vs Premature vs Partial)</h3>
+          
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-3 text-xs">
+            <div class="p-3.5 bg-slate-50 dark:bg-slate-800/60 rounded-xl border border-slate-200 dark:border-slate-700 space-y-1.5">
+              <strong class="text-slate-900 dark:text-white font-bold block">1. Normal Superannuation (Age 60) ⭐</strong>
+              <div class="text-slate-600 dark:text-slate-400 space-y-1">
+                <p>• <strong>Lump Sum:</strong> Up to <strong>60% of total corpus</strong> can be withdrawn as lump sum. This 60% is <strong>100% Tax-Free</strong>!</p>
+                <p>• <strong>Mandatory Annuity:</strong> Minimum <strong>40% of corpus</strong> must be used to purchase an immediate annuity from an approved life insurer.</p>
+                <p>• <strong>Small Corpus Rule:</strong> If total corpus is <strong>$\le$ ₹5 Lakhs</strong>, the subscriber can withdraw <strong>100% as lump sum tax-free</strong> without buying any annuity!</p>
+              </div>
+            </div>
+
+            <div class="p-3.5 bg-slate-50 dark:bg-slate-800/60 rounded-xl border border-slate-200 dark:border-slate-700 space-y-1.5">
+              <strong class="text-slate-900 dark:text-white font-bold block">2. Premature Exit (Before Age 60) ⭐</strong>
+              <div class="text-slate-600 dark:text-slate-400 space-y-1">
+                <p>• Permitted only after completing <strong>at least 5 years</strong> of subscription.</p>
+                <p>• <strong>Mandatory Annuity:</strong> Minimum <strong>80% of corpus</strong> must be annuitized.</p>
+                <p>• <strong>Lump Sum:</strong> Maximum <strong>20% of corpus</strong> can be withdrawn (tax-free).</p>
+                <p>• <strong>Small Corpus Rule:</strong> If total corpus is <strong>$\le$ ₹2.5 Lakhs</strong>, 100% lump sum withdrawal is permitted.</p>
+              </div>
+            </div>
+
+            <div class="p-3.5 bg-slate-50 dark:bg-slate-800/60 rounded-xl border border-slate-200 dark:border-slate-700 space-y-1.5">
+              <strong class="text-slate-900 dark:text-white font-bold block">3. Partial Withdrawal (During Tenure)</strong>
+              <div class="text-slate-600 dark:text-slate-400 space-y-1">
+                <p>• Allowed after <strong>3 years</strong> of subscription.</p>
+                <p>• Maximum <strong>25% of own contributions</strong> (excluding employer contribution and returns).</p>
+                <p>• Permitted maximum <strong>3 times</strong> during entire tenure for specified purposes (higher education/marriage of children, buying first residential house, critical illness).</p>
+                <p>• 100% Tax-Exempt under Section 10(12B).</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Section 5.4 -->
+      <section id="section-4" class="bg-white dark:bg-slate-900 rounded-3xl p-6 sm:p-8 border border-amber-200 dark:border-amber-800/80 shadow-xs space-y-6">
+        <div class="flex items-center justify-between">
+          <div class="flex items-center gap-2 text-xs font-bold text-amber-700 dark:text-amber-400 uppercase tracking-wider">
+            <span class="w-2 h-2 rounded-full bg-amber-500"></span> Section 5.4 &bull; ⭐ Super High Exam Yield
+          </div>
+          <span class="px-2.5 py-0.5 rounded-full text-xs font-extrabold bg-amber-100 dark:bg-amber-950 text-amber-800 dark:text-amber-300 border border-amber-300 dark:border-amber-700">
+            NPS Investment Choices
+          </span>
+        </div>
+
+        <div>
+          <h2 class="font-display text-xl sm:text-2xl font-bold text-slate-900 dark:text-white">NPS Asset Classes & Choices: Active vs Auto (Life Cycle)</h2>
+          <p class="text-xs sm:text-sm text-slate-600 dark:text-slate-300 mt-1 leading-relaxed">
+            NPS offers four underlying asset classes managed by authorized Pension Fund Managers (PFMs):
+          </p>
+        </div>
+
+        <!-- 4 Asset Classes Cards -->
+        <div class="grid grid-cols-2 sm:grid-cols-4 gap-2.5 text-xs text-center font-semibold">
+          <div class="p-3 rounded-xl bg-blue-50 dark:bg-blue-950/60 border border-blue-200 dark:border-blue-800">
+            <span class="text-lg font-bold text-blue-700 dark:text-blue-300 block">Class E</span>
+            <span class="text-slate-600 dark:text-slate-300 text-[11px]">Equities (High Risk)</span>
+          </div>
+          <div class="p-3 rounded-xl bg-indigo-50 dark:bg-indigo-950/60 border border-indigo-200 dark:border-indigo-800">
+            <span class="text-lg font-bold text-indigo-700 dark:text-indigo-300 block">Class C</span>
+            <span class="text-slate-600 dark:text-slate-300 text-[11px]">Corporate Debt (Medium)</span>
+          </div>
+          <div class="p-3 rounded-xl bg-emerald-50 dark:bg-emerald-950/60 border border-emerald-200 dark:border-emerald-800">
+            <span class="text-lg font-bold text-emerald-700 dark:text-emerald-300 block">Class G</span>
+            <span class="text-slate-600 dark:text-slate-300 text-[11px]">Govt Securities (Low Risk)</span>
+          </div>
+          <div class="p-3 rounded-xl bg-purple-50 dark:bg-purple-950/60 border border-purple-200 dark:border-purple-800">
+            <span class="text-lg font-bold text-purple-700 dark:text-purple-300 block">Class A</span>
+            <span class="text-slate-600 dark:text-slate-300 text-[11px]">Alternative Assets (Max 5%)</span>
+          </div>
+        </div>
+
+        <!-- Active Choice vs Auto Choice Breakdown -->
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4 text-xs sm:text-sm">
+          
+          <!-- Active Choice -->
+          <div class="p-4 rounded-2xl bg-slate-50 dark:bg-slate-800/60 border border-slate-200 dark:border-slate-700 space-y-2">
+            <div class="flex items-center justify-between font-bold">
+              <span class="text-slate-900 dark:text-white text-base">Option A: Active Choice</span>
+              <span class="px-2 py-0.5 rounded bg-blue-100 dark:bg-blue-950 text-blue-800 dark:text-blue-200 text-xs">Self-Directed</span>
+            </div>
+            <p class="text-slate-600 dark:text-slate-400 leading-relaxed">
+              Subscriber actively decides the asset allocation across Classes E, C, G, and A according to risk appetite:
+            </p>
+            <ul class="space-y-1 text-slate-700 dark:text-slate-300 text-xs">
+              <li>• <strong>Equity (E) Cap:</strong> Maximum allocation to Equity is <strong>75% up to age 50</strong>.</li>
+              <li>• <strong>Tapering Rule:</strong> From age 51 to 60, the maximum equity cap reduces by <strong>2.5% every year</strong>, tapering to <strong>50% at age 60</strong>.</li>
+              <li>• <strong>Alternative Assets (A) Cap:</strong> Strictly capped at a maximum of <strong>5%</strong> at all times.</li>
+              <li>• <strong>Govt Securities (G):</strong> Can be up to 100%.</li>
+            </ul>
+          </div>
+
+          <!-- Auto Choice -->
+          <div class="p-4 rounded-2xl bg-amber-50/60 dark:bg-amber-950/30 border border-amber-200 dark:border-amber-800 space-y-2">
+            <div class="flex items-center justify-between font-bold">
+              <span class="text-amber-950 dark:text-amber-300 text-base">Option B: Auto Choice (Life Cycle) ⭐</span>
+              <span class="px-2 py-0.5 rounded bg-amber-200 dark:bg-amber-900 text-amber-800 dark:text-amber-200 text-xs">Age-Based Rebalancing</span>
+            </div>
+            <p class="text-slate-700 dark:text-slate-300 leading-relaxed">
+              Asset allocation automatically adjusts based on subscriber age according to a pre-defined life-cycle matrix:
+            </p>
+            <div class="space-y-1.5 text-xs text-slate-700 dark:text-slate-300">
+              <p>• <strong>Aggressive (LC75):</strong> Starts with <strong>75% in E</strong> up to age 35, tapering annually to 15% at age 55.</p>
+              <p>• <strong>Moderate (LC50) - DEFAULT:</strong> Starts with <strong>50% in E</strong> up to age 35, tapering annually to 10% at age 55. If subscriber does not select an option, LC50 is applied automatically!</p>
+              <p>• <strong>Conservative (LC25):</strong> Starts with <strong>25% in E</strong> up to age 35, tapering annually to 5% at age 55.</p>
+            </div>
+          </div>
+
+        </div>
+      </section>
+
+      <!-- Section 5.5 -->
+      <section id="section-5" class="bg-white dark:bg-slate-900 rounded-3xl p-6 sm:p-8 border border-amber-200 dark:border-amber-800/80 shadow-xs space-y-5">
+        <div class="flex items-center justify-between">
+          <div class="flex items-center gap-2 text-xs font-bold text-amber-700 dark:text-amber-400 uppercase tracking-wider">
+            <span class="w-2 h-2 rounded-full bg-amber-500"></span> Section 5.5 &bull; ⭐ Super High Exam Yield
+          </div>
+          <span class="px-2.5 py-0.5 rounded-full text-xs font-extrabold bg-amber-100 dark:bg-amber-950 text-amber-800 dark:text-amber-300 border border-amber-300 dark:border-amber-700">
+            APY Scheme
+          </span>
+        </div>
+
+        <div>
+          <h2 class="font-display text-xl sm:text-2xl font-bold text-slate-900 dark:text-white">Atal Pension Yojana (APY)</h2>
+          <p class="text-xs sm:text-sm text-slate-600 dark:text-slate-300 mt-1 leading-relaxed">
+            Administered by PFRDA under the National Pension System architecture, APY is primarily targeted at unorganized sector workers to provide a government-guaranteed minimum monthly pension.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3 text-xs">
+          <div class="p-3.5 bg-slate-50 dark:bg-slate-800/60 rounded-xl border border-slate-200 dark:border-slate-700 space-y-1">
+            <strong class="text-slate-900 dark:text-white font-bold block">Entry Age Horizon</strong>
+            <span class="text-indigo-600 dark:text-indigo-400 font-bold text-sm block">18 to 40 Years</span>
+            <p class="text-slate-500 dark:text-slate-400">Contributions must continue for a minimum of 20 years until age 60.</p>
+          </div>
+
+          <div class="p-3.5 bg-slate-50 dark:bg-slate-800/60 rounded-xl border border-slate-200 dark:border-slate-700 space-y-1">
+            <strong class="text-slate-900 dark:text-white font-bold block">Pension Slabs (Age 60)</strong>
+            <span class="text-emerald-600 dark:text-emerald-400 font-bold text-sm block">₹1,000 to ₹5,000 / mo</span>
+            <p class="text-slate-500 dark:text-slate-400">Guaranteed fixed options: ₹1,000, ₹2,000, ₹3,000, ₹4,000, or ₹5,000 monthly.</p>
+          </div>
+
+          <div class="p-3.5 bg-slate-50 dark:bg-slate-800/60 rounded-xl border border-slate-200 dark:border-slate-700 space-y-1">
+            <strong class="text-slate-900 dark:text-white font-bold block">Triple Benefit Waterfall</strong>
+            <span class="text-slate-900 dark:text-white font-bold text-sm block">Subscriber &rarr; Spouse &rarr; Nominee</span>
+            <p class="text-slate-500 dark:text-slate-400">On subscriber death, spouse receives same pension; on spouse death, corpus is returned to nominee.</p>
+          </div>
+
+          <div class="p-3.5 bg-rose-50/70 dark:bg-rose-950/40 rounded-xl border border-rose-200 dark:border-rose-900/60 space-y-1">
+            <strong class="text-rose-900 dark:text-rose-300 font-bold block">Taxpayer Bar (Oct 2022) ⭐</strong>
+            <span class="text-rose-700 dark:text-rose-400 font-bold text-sm block">Income Taxpayers Ineligible</span>
+            <p class="text-slate-600 dark:text-slate-400">Anyone who is or has been an income-tax payer is barred from joining APY since Oct 1, 2022.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Section 5.6 -->
+      <section id="section-6" class="bg-white dark:bg-slate-900 rounded-3xl p-6 sm:p-8 border border-amber-200 dark:border-amber-800/80 shadow-xs space-y-6">
+        <div class="flex items-center justify-between">
+          <div class="flex items-center gap-2 text-xs font-bold text-amber-700 dark:text-amber-400 uppercase tracking-wider">
+            <span class="w-2 h-2 rounded-full bg-amber-500"></span> Section 5.6 &bull; ⭐ Super High Exam Yield
+          </div>
+          <span class="px-2.5 py-0.5 rounded-full text-xs font-extrabold bg-amber-100 dark:bg-amber-950 text-amber-800 dark:text-amber-300 border border-amber-300 dark:border-amber-700">
+            EPF, EPS & EDLI
+          </span>
+        </div>
+
+        <div>
+          <h2 class="font-display text-xl sm:text-2xl font-bold text-slate-900 dark:text-white">Statutory Social Security: EPF, EPS (1995) & EDLI</h2>
+          <p class="text-xs sm:text-sm text-slate-600 dark:text-slate-300 mt-1 leading-relaxed">
+            Governed by the Employees' Provident Funds and Miscellaneous Provisions Act, 1952, applicable to establishments employing 20 or more persons.
+          </p>
+        </div>
+
+        <!-- 12% Split Visual Card -->
+        <div class="p-5 rounded-2xl bg-indigo-50/60 dark:bg-indigo-950/30 border border-indigo-200 dark:border-indigo-800 space-y-4">
+          <h3 class="font-display text-base font-bold text-indigo-950 dark:text-indigo-300">The 12% + 12% Contribution Breakdown</h3>
+          
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-4 text-xs sm:text-sm">
+            <!-- Employee -->
+            <div class="p-3.5 bg-white dark:bg-slate-900 rounded-xl border border-indigo-200 dark:border-indigo-800 space-y-1.5">
+              <div class="flex items-center justify-between font-bold text-slate-900 dark:text-white">
+                <span>Employee Contribution</span>
+                <span class="text-indigo-600 dark:text-indigo-400 text-sm">12.0% of Basic + DA</span>
+              </div>
+              <p class="text-slate-600 dark:text-slate-400">
+                100% of the employee's 12% is credited directly to the <strong>EPF Account</strong>. Eligible for Section 80C deduction.
+              </p>
+              <div class="text-[11px] text-amber-700 dark:text-amber-400 font-semibold pt-1">
+                Tax Alert: Interest earned on employee contribution exceeding ₹2.5 Lakhs per year is taxable as income!
+              </div>
+            </div>
+
+            <!-- Employer -->
+            <div class="p-3.5 bg-white dark:bg-slate-900 rounded-xl border border-indigo-200 dark:border-indigo-800 space-y-1.5">
+              <div class="flex items-center justify-between font-bold text-slate-900 dark:text-white">
+                <span>Employer Contribution</span>
+                <span class="text-indigo-600 dark:text-indigo-400 text-sm">12.0% of Basic + DA</span>
+              </div>
+              <p class="text-slate-600 dark:text-slate-400">
+                The employer's 12% is split into two mandatory statutory buckets:
+              </p>
+              <div class="space-y-0.5 text-xs">
+                <div>• <strong>8.33% to EPS:</strong> Capped at ₹15,000 wage ceiling = <strong>₹1,250/month</strong> maximum!</div>
+                <div>• <strong>3.67% to EPF:</strong> Balance credited to the employee's EPF account (plus any surplus above ₹15k wage cap).</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- EPS Pension Formula Card -->
+        <div class="p-4 rounded-2xl bg-gradient-to-br from-indigo-900 via-slate-900 to-indigo-950 text-white space-y-3">
+          <div class="flex items-center justify-between">
+            <span class="text-xs font-bold text-indigo-300 uppercase tracking-wider">Exam Formula Card</span>
+            <span class="text-xs px-2.5 py-0.5 rounded bg-white/10 text-amber-300 font-mono">EPS 1995 Pension</span>
+          </div>
+          <div class="text-center font-mono text-base sm:text-lg text-amber-300 py-1">
+            $$\text{Monthly Pension} = \frac{\text{Pensionable Salary} \times \text{Pensionable Service}}{70}$$
+          </div>
+          <div class="text-xs text-slate-300 space-y-1 border-t border-indigo-800/60 pt-2">
+            <p>• <strong>Eligibility:</strong> Minimum <strong>10 years of contributory service</strong> required to qualify for superannuation pension at age 58.</p>
+            <p>• <strong>Pensionable Salary:</strong> Average monthly pay drawn in the last 60 months of contributory service, capped at <strong>₹15,000/month</strong> (unless higher pension opted under SC judgment).</p>
+            <p>• <strong>Maximum Regular Pension:</strong> With 35 years maximum recognized service: $\frac{15000 \times 35}{70} = \mathbf{₹7,500\text{ per month}}$.</p>
+          </div>
+        </div>
+
+        <!-- EDLI Note -->
+        <div class="p-3 bg-slate-50 dark:bg-slate-800/60 rounded-xl border border-slate-200 dark:border-slate-700 text-xs flex items-center justify-between">
+          <div>
+            <strong class="text-slate-900 dark:text-white font-bold">Employees' Deposit Linked Insurance (EDLI):</strong>
+            <span class="text-slate-600 dark:text-slate-400 block mt-0.5">Provides life insurance coverage up to <strong>₹7,00,000</strong> to the nominee upon death of an active EPF member. Funded 100% by employer (0.5% of wage).</span>
+          </div>
+        </div>
+      </section>
+
+      <!-- Section 5.7 -->
+      <section id="section-7" class="bg-white dark:bg-slate-900 rounded-3xl p-6 sm:p-8 border border-slate-200 dark:border-slate-800 shadow-xs space-y-6">
+        <div class="flex items-center justify-between">
+          <div class="flex items-center gap-2 text-xs font-bold text-slate-500 uppercase tracking-wider">
+            <span class="w-2 h-2 rounded-full bg-slate-400"></span> Section 5.7 &bull; Small Savings Instruments
+          </div>
+          <span class="px-2 py-0.5 rounded text-[11px] font-semibold bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300">Govt Guaranteed</span>
+        </div>
+
+        <div>
+          <h2 class="font-display text-xl sm:text-2xl font-bold text-slate-900 dark:text-white">Small Savings: PPF, SCSS & PMVVY</h2>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-4 text-xs sm:text-sm">
+          
+          <!-- PPF -->
+          <div class="p-4 rounded-2xl bg-slate-50 dark:bg-slate-800/60 border border-slate-200 dark:border-slate-700 space-y-2">
+            <span class="px-2 py-0.5 rounded bg-blue-100 dark:bg-blue-950 text-blue-800 dark:text-blue-200 text-xs font-bold">Accumulation</span>
+            <strong class="text-slate-900 dark:text-white block font-bold text-base">Public Provident Fund (PPF)</strong>
+            <div class="text-slate-600 dark:text-slate-400 space-y-1 text-xs">
+              <p>• <strong>Tenure:</strong> 15 years, extendable in blocks of 5 years (with or without contributions).</p>
+              <p>• <strong>Limits:</strong> Min ₹500, Max <strong>₹1,50,000</strong> per financial year.</p>
+              <p>• <strong>Tax:</strong> Pure <strong>EEE</strong> status (Exempt on contribution under 80C, Exempt on interest, Exempt on maturity).</p>
+              <p>• <strong>Attachment Protection:</strong> Cannot be attached by any court decree for debts.</p>
+            </div>
+          </div>
+
+          <!-- SCSS -->
+          <div class="p-4 rounded-2xl bg-amber-50/60 dark:bg-amber-950/30 border border-amber-200 dark:border-amber-800 space-y-2">
+            <span class="px-2 py-0.5 rounded bg-amber-200 dark:bg-amber-900 text-amber-800 dark:text-amber-200 text-xs font-bold">Decumulation ⭐</span>
+            <strong class="text-amber-950 dark:text-amber-300 block font-bold text-base">Senior Citizens Savings Scheme</strong>
+            <div class="text-slate-700 dark:text-slate-300 space-y-1 text-xs">
+              <p>• <strong>Eligibility:</strong> Age 60+ (55 for VRS retirees, 50 for defense retirees).</p>
+              <p>• <strong>Enhanced Cap:</strong> Max <strong>₹30,00,000</strong> deposit per individual (doubled from ₹15L in Budget 2023).</p>
+              <p>• <strong>Payout:</strong> <strong>Quarterly interest</strong> credited directly to bank account.</p>
+              <p>• <strong>Tax:</strong> Sec 80C on deposit. Quarterly interest is <strong>fully taxable</strong> (TDS applies if interest &gt; ₹50,000/yr).</p>
+            </div>
+          </div>
+
+          <!-- PMVVY -->
+          <div class="p-4 rounded-2xl bg-purple-50/60 dark:bg-purple-950/30 border border-purple-200 dark:border-purple-800 space-y-2">
+            <span class="px-2 py-0.5 rounded bg-purple-200 dark:bg-purple-900 text-purple-800 dark:text-purple-200 text-xs font-bold">Govt Subsidized</span>
+            <strong class="text-purple-950 dark:text-purple-300 block font-bold text-base">PMVVY (Pradhan Mantri Vaya Vandana)</strong>
+            <div class="text-slate-600 dark:text-slate-400 space-y-1 text-xs">
+              <p>• <strong>Operated Exclusively:</strong> Life Insurance Corporation of India (LIC).</p>
+              <p>• <strong>Status:</strong> Closed to new enrollments on <strong>March 31, 2023</strong> (existing policies run full 10-year term).</p>
+              <p>• <strong>Max Investment:</strong> ₹15 Lakhs per senior citizen (age 60+).</p>
+              <p>• <strong>Ceiling:</strong> Monthly pension ceiling of ₹9,250 to ₹10,000.</p>
+            </div>
+          </div>
+
+        </div>
+      </section>
+
+      <!-- Section 5.8 -->
+      <section id="section-8" class="bg-white dark:bg-slate-900 rounded-3xl p-6 sm:p-8 border border-amber-200 dark:border-amber-800/80 shadow-xs space-y-6">
+        <div class="flex items-center justify-between">
+          <div class="flex items-center gap-2 text-xs font-bold text-amber-700 dark:text-amber-400 uppercase tracking-wider">
+            <span class="w-2 h-2 rounded-full bg-amber-500"></span> Section 5.8 &bull; ⭐ Super High Exam Yield
+          </div>
+          <span class="px-2.5 py-0.5 rounded-full text-xs font-extrabold bg-amber-100 dark:bg-amber-950 text-amber-800 dark:text-amber-300 border border-amber-300 dark:border-amber-700">
+            Annuity Contracts
+          </span>
+        </div>
+
+        <div>
+          <h2 class="font-display text-xl sm:text-2xl font-bold text-slate-900 dark:text-white">Annuity Contracts & Payout Classification</h2>
+          <p class="text-xs sm:text-sm text-slate-600 dark:text-slate-300 mt-1 leading-relaxed">
+            An <strong>annuity</strong> is a financial contract issued by a life insurance company that converts a lump sum corpus into a guaranteed series of periodic cash payouts for life.
+          </p>
+        </div>
+
+        <!-- Immediate vs Deferred -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 text-xs sm:text-sm">
+          <div class="p-4 bg-slate-50 dark:bg-slate-800/60 rounded-2xl border border-slate-200 dark:border-slate-700 space-y-1.5">
+            <strong class="text-slate-900 dark:text-white block font-bold text-sm">Immediate Annuity</strong>
+            <p class="text-slate-600 dark:text-slate-400">Purchased with a single lump sum premium; income payouts begin immediately at the end of the first chosen interval (1 month, 3 months, or 1 year). Mandatory upon NPS exit at age 60.</p>
+          </div>
+          <div class="p-4 bg-slate-50 dark:bg-slate-800/60 rounded-2xl border border-slate-200 dark:border-slate-700 space-y-1.5">
+            <strong class="text-slate-900 dark:text-white block font-bold text-sm">Deferred Annuity</strong>
+            <p class="text-slate-600 dark:text-slate-400">Features a deferment (accumulation) period. Premium accumulates interest or market-linked NAV before the annuitization phase begins years later.</p>
+          </div>
+        </div>
+
+        <!-- 5 Key Annuity Variations Table -->
+        <div class="space-y-3">
+          <h3 class="font-display text-sm font-bold text-slate-900 dark:text-white">The 5 Core Life Annuity Options Tested in NISM Series X-B</h3>
+          
+          <div class="overflow-x-auto rounded-2xl border border-slate-200 dark:border-slate-800">
+            <table class="w-full text-left text-xs sm:text-sm">
+              <thead class="bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 font-bold uppercase border-b border-slate-200 dark:border-slate-700">
+                <tr>
+                  <th class="p-3">Option</th>
+                  <th class="p-3">How Payout Works</th>
+                  <th class="p-3">On Annuitant's Death</th>
+                  <th class="p-3">Relative Payout Rate</th>
+                </tr>
+              </thead>
+              <tbody class="divide-y divide-slate-200 dark:divide-slate-800 text-slate-700 dark:text-slate-300">
+                <tr class="hover:bg-slate-50/60 dark:hover:bg-slate-800/50">
+                  <td class="p-3 font-semibold text-slate-900 dark:text-white">Life Annuity without Return of Purchase Price (No ROP)</td>
+                  <td class="p-3">Guaranteed fixed cash payout for life of annuitant</td>
+                  <td class="p-3 text-rose-600 dark:text-rose-400">Annuity terminates immediately; purchase price retained by insurer!</td>
+                  <td class="p-3 font-bold text-emerald-600 dark:text-emerald-400">Highest Initial Payout (e.g. 8.5% - 9%)</td>
+                </tr>
+                <tr class="hover:bg-slate-50/60 dark:hover:bg-slate-800/50">
+                  <td class="p-3 font-semibold text-slate-900 dark:text-white">Life Annuity with Return of Purchase Price (ROP) ⭐</td>
+                  <td class="p-3">Guaranteed fixed cash payout for life of annuitant</td>
+                  <td class="p-3 font-semibold text-indigo-600 dark:text-indigo-400">100% of initial purchase price refunded to nominee</td>
+                  <td class="p-3 text-slate-600 dark:text-slate-400">Lower Payout Rate (e.g. 6.2% - 6.8%)</td>
+                </tr>
+                <tr class="hover:bg-slate-50/60 dark:hover:bg-slate-800/50">
+                  <td class="p-3 font-semibold text-slate-900 dark:text-white">Joint Life Last Survivor (with ROP)</td>
+                  <td class="p-3">Paid to primary annuitant for life, then 100% to spouse for life</td>
+                  <td class="p-3">On death of both spouses, purchase price refunded to nominee</td>
+                  <td class="p-3 text-slate-600 dark:text-slate-400">Lowest Payout Rate (insures two distinct lives)</td>
+                </tr>
+                <tr class="hover:bg-slate-50/60 dark:hover:bg-slate-800/50">
+                  <td class="p-3 font-semibold text-slate-900 dark:text-white">Increasing Annuity (Inflation-Adjusted)</td>
+                  <td class="p-3">Annuity payout increases by 3% to 5% every year</td>
+                  <td class="p-3">Depends on whether ROP option was selected</td>
+                  <td class="p-3 text-slate-600 dark:text-slate-400">Starts very low, but escalates over time</td>
+                </tr>
+                <tr class="hover:bg-slate-50/60 dark:hover:bg-slate-800/50">
+                  <td class="p-3 font-semibold text-slate-900 dark:text-white">Guaranteed Period Annuity (5 / 10 / 15 / 20 Years)</td>
+                  <td class="p-3">Guaranteed for fixed term (e.g. 15 yrs) even if annuitant dies, and for life thereafter</td>
+                  <td class="p-3">If death occurs in yr 4, nominee receives payout for remaining 11 yrs</td>
+                  <td class="p-3 text-slate-600 dark:text-slate-400">Moderate Payout Rate</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <div class="p-3 bg-amber-50 dark:bg-amber-950/40 rounded-xl border border-amber-200 dark:border-amber-800 text-xs text-amber-950 dark:text-amber-300">
+            <strong>Taxation Alert:</strong> Regardless of annuity type, all annuity payouts are treated as <strong>Income from Other Sources</strong> and taxed at the retiree's normal income tax slab rate!
+          </div>
+        </div>
+      </section>
+
+      <!-- Section 5.9 -->
+      <section id="section-9" class="bg-white dark:bg-slate-900 rounded-3xl p-6 sm:p-8 border border-amber-200 dark:border-amber-800/80 shadow-xs space-y-6">
+        <div class="flex items-center justify-between">
+          <div class="flex items-center gap-2 text-xs font-bold text-amber-700 dark:text-amber-400 uppercase tracking-wider">
+            <span class="w-2 h-2 rounded-full bg-amber-500"></span> Section 5.9 &bull; ⭐ Super High Exam Yield
+          </div>
+          <span class="px-2.5 py-0.5 rounded-full text-xs font-extrabold bg-amber-100 dark:bg-amber-950 text-amber-800 dark:text-amber-300 border border-amber-300 dark:border-amber-700">
+            Reverse Mortgage
+          </span>
+        </div>
+
+        <div>
+          <h2 class="font-display text-xl sm:text-2xl font-bold text-slate-900 dark:text-white">Reverse Mortgage Scheme (RMS) for Senior Citizens</h2>
+          <p class="text-xs sm:text-sm text-slate-600 dark:text-slate-300 mt-1 leading-relaxed">
+            Introduced by the National Housing Bank (NHB) and commercial lenders, a <strong>Reverse Mortgage</strong> enables "house-rich, cash-poor" senior citizens to convert the equity in their self-occupied residential property into tax-free periodic income streams without losing possession.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4 text-xs sm:text-sm">
+          
+          <div class="p-4 rounded-2xl bg-slate-50 dark:bg-slate-800/60 border border-slate-200 dark:border-slate-700 space-y-2">
+            <strong class="text-slate-900 dark:text-white block font-bold text-base">Eligibility & Property Norms</strong>
+            <div class="text-slate-600 dark:text-slate-400 space-y-1 text-xs">
+              <p>• <strong>Age:</strong> Primary borrower must be <strong>at least 60 years old</strong>. In joint applications, spouse must be <strong>at least 55 years old</strong>.</p>
+              <p>• <strong>Property:</strong> Self-acquired, clear-titled, self-occupied residential property with a residual life of at least 20 years. Commercial properties are ineligible.</p>
+              <p>• <strong>Tenure:</strong> Typically 10 to 20 years, or until the lifetime of the last surviving spouse.</p>
+              <p>• <strong>LTV:</strong> Typically 60% to 80% of assessed market value (revalued every 3-5 years).</p>
+            </div>
+          </div>
+
+          <div class="p-4 rounded-2xl bg-indigo-50/70 dark:bg-indigo-950/40 border border-indigo-200 dark:border-indigo-800 space-y-2">
+            <strong class="text-indigo-950 dark:text-indigo-300 block font-bold text-base">Tax Exemption: Section 10(43) ⭐</strong>
+            <p class="text-slate-700 dark:text-slate-300 text-xs leading-relaxed">
+              Under <strong>Section 10(43) of the Income Tax Act, 1961</strong>, any loan installments received by the senior citizen (monthly, quarterly, or lump sum) are <strong>100% Tax-Exempt</strong> because they represent loan disbursements, NOT income!
+            </p>
+            <div class="p-2.5 bg-white dark:bg-slate-900 rounded-xl border border-indigo-200 dark:border-indigo-800 text-[11px] text-indigo-900 dark:text-indigo-300 font-semibold">
+              No repayment of principal or interest is ever required during the lifetime of the borrower or surviving spouse while they reside in the house!
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Settlement Mechanics Box -->
+        <div class="p-4 bg-slate-50 dark:bg-slate-800/60 rounded-2xl border border-slate-200 dark:border-slate-700 space-y-2 text-xs">
+          <strong class="text-slate-900 dark:text-white block font-bold text-sm">Settlement upon Demise of Both Borrowers:</strong>
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 text-slate-600 dark:text-slate-400">
+            <div class="p-3 bg-white dark:bg-slate-900 rounded-xl border border-slate-200 dark:border-slate-800">
+              <strong class="text-slate-900 dark:text-white block font-semibold">Option A: Heirs Redeem Property</strong>
+              Legal heirs have the first right to settle the accumulated loan balance (principal + interest) from their own funds and reclaim clear ownership of the home.
+            </div>
+            <div class="p-3 bg-white dark:bg-slate-900 rounded-xl border border-slate-200 dark:border-slate-800">
+              <strong class="text-slate-900 dark:text-white block font-semibold">Option B: Bank Sells Property</strong>
+              The bank sells the property. If sale proceeds exceed the loan balance, the surplus is paid to legal heirs. If sale proceeds fall short (shortfall), the bank <em>cannot seek recovery</em> from the heirs (non-recourse to heirs).
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Interactive Quiz Section -->
+      <section id="interactive-quiz" class="bg-gradient-to-br from-indigo-950 via-slate-900 to-slate-950 rounded-3xl p-6 sm:p-10 text-white shadow-xl space-y-8 border border-indigo-800/60">
+        <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 border-b border-indigo-800/80 pb-6">
+          <div>
+            <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-indigo-500/20 text-indigo-300 text-xs font-semibold mb-2">
+              <i data-lucide="check-circle" class="w-3.5 h-3.5 text-indigo-400"></i>
+              Chapter 5 High-Yield Assessment
+            </div>
+            <h2 class="font-display text-2xl sm:text-3xl font-bold text-white">Chapter 5 Interactive Assessment Test</h2>
+            <p class="text-xs sm:text-sm text-slate-300 mt-1">12 comprehensive questions on NPS Tier I & II, Active/Auto choice, APY, EPF/EPS formulas, SCSS limits, Annuity ROP, and Reverse Mortgage.</p>
+          </div>
+          <div class="flex items-center gap-2 px-4 py-2 rounded-xl bg-white/10 backdrop-blur-md border border-white/10 text-xs font-semibold">
+            <span id="answered-count" class="text-indigo-300 font-bold">0</span> / 12 Answered
+          </div>
+        </div>
+
+        <form id="quiz-form" class="space-y-6">
+          <div id="questions-container" class="space-y-6"></div>
+
+          <div class="pt-6 border-t border-indigo-800/80 flex flex-col sm:flex-row items-center justify-between gap-4">
+            <button type="button" id="submit-quiz-btn" onclick="submitQuiz()" class="w-full sm:w-auto px-8 py-3.5 rounded-xl bg-indigo-600 hover:bg-indigo-500 text-white font-bold text-sm shadow-lg shadow-indigo-600/30 transition-all flex items-center justify-center gap-2">
+              <i data-lucide="send" class="w-4 h-4"></i>
+              <span>Submit Assessment & View Detailed Solutions</span>
+            </button>
+            <button type="button" id="reset-quiz-btn" onclick="resetQuiz()" class="hidden w-full sm:w-auto px-6 py-3.5 rounded-xl bg-white/10 hover:bg-white/20 text-slate-200 font-semibold text-sm transition-all flex items-center justify-center gap-2">
+              <i data-lucide="rotate-ccw" class="w-4 h-4"></i>
+              <span>Retake Quiz</span>
+            </button>
+          </div>
+        </form>
+
+        <!-- Quiz Result & Scorecard -->
+        <div id="quiz-results" class="hidden rounded-2xl bg-white/10 p-6 sm:p-8 border border-white/15 backdrop-blur-lg space-y-6">
+          <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+            <div>
+              <span id="result-status-badge" class="px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider"></span>
+              <h3 class="font-display text-2xl font-bold mt-2 text-white">Your Chapter 5 Scorecard</h3>
+            </div>
+            <div class="text-right">
+              <span id="score-display" class="font-display text-4xl font-extrabold text-indigo-300">0 / 12</span>
+              <span id="percentage-display" class="block text-xs text-slate-300 mt-0.5">0%</span>
+            </div>
+          </div>
+          <p id="result-summary-text" class="text-sm text-slate-200 leading-relaxed"></p>
+        </div>
+      </section>
+
+      <!-- Bottom Navigation -->
+      <div class="flex items-center justify-between p-6 rounded-2xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800">
+        <a href="module8-ch4.html" class="inline-flex items-center gap-2 text-sm font-semibold text-slate-600 dark:text-slate-400 hover:text-indigo-600 transition-colors">
+          <i data-lucide="arrow-left" class="w-4 h-4"></i>
+          <span>Previous: Chapter 4 (Retirement Basics)</span>
+        </a>
+        <a href="module8-ch6.html" class="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl bg-indigo-600 hover:bg-indigo-700 text-white font-semibold text-sm shadow-xs transition-all">
+          <span>Next: Chapter 6 (Corpus Mathematics)</span>
+          <i data-lucide="arrow-right" class="w-4 h-4"></i>
+        </a>
+      </div>
+
+    </div>
+  </div>
+
+  <footer class="bg-white dark:bg-slate-900 border-t border-slate-200 dark:border-slate-800 py-6 text-center text-xs text-slate-500 dark:text-slate-400">
+    NISM Series X-B Certification Notes &bull; Module 8: Chapter 5 (Retirement Products) &bull; Level 2 Curriculum
+  </footer>
+
+  <script>
+    const questionsData = [
+      {
+        id: 1,
+        question: "What is the maximum exclusive tax deduction available for an individual's voluntary contribution to NPS Tier I under Section 80CCD(1B)?",
+        options: [
+          { text: "₹1,50,000", key: "a" },
+          { text: "₹50,000 over and above the Section 80CCE limit", key: "b" },
+          { text: "₹1,00,000 subject to employer matching", key: "c" },
+          { text: "₹25,000 exclusively for senior citizens", key: "d" }
+        ],
+        correct: "b",
+        explanation: "Section 80CCD(1B) provides an exclusive deduction of up to ₹50,000 for contributions to NPS Tier I, over and above the ₹1.5 Lakh limit under Section 80CCE."
+      },
+      {
+        id: 2,
+        question: "Upon superannuation at age 60, what are the mandatory exit parameters for an NPS Tier I subscriber?",
+        options: [
+          { text: "100% of the corpus must be converted into an immediate annuity", key: "a" },
+          { text: "At least 40% of the corpus must be annuitized; up to 60% can be withdrawn as a tax-free lump sum", key: "b" },
+          { text: "50% lump sum taxable at 20%, 50% annuity tax-free", key: "c" },
+          { text: "Up to 80% lump sum allowed if the subscriber worked in private enterprise", key: "d" }
+        ],
+        correct: "b",
+        explanation: "At age 60, at least 40% of the corpus must be utilized to purchase an immediate annuity. The remaining up to 60% can be withdrawn as a 100% tax-free lump sum."
+      },
+      {
+        id: 3,
+        question: "If an NPS Tier I subscriber reaches age 60 with a total accumulated corpus of ₹4,50,000, what exit option is available?",
+        options: [
+          { text: "The subscriber is mandated to purchase an annuity of at least ₹2,00,000", key: "a" },
+          { text: "The subscriber can withdraw 100% of the corpus as a lump sum without purchasing any annuity", key: "b" },
+          { text: "The corpus is forfeited to the PFRDA welfare reserve", key: "c" },
+          { text: "Only ₹1 Lakh can be withdrawn; the rest is locked for another 5 years", key: "d" }
+        ],
+        correct: "b",
+        explanation: "Under PFRDA exit regulations, if the accumulated corpus at normal superannuation (age 60) is equal to or less than ₹5 Lakhs, the subscriber has the option to withdraw 100% as a lump sum without any annuity purchase."
+      },
+      {
+        id: 4,
+        question: "Under the Active Choice investment option of NPS, what is the maximum permissible allocation to Asset Class E (Equity) for an individual aged 45?",
+        options: [
+          { text: "50%", key: "a" },
+          { text: "75%", key: "b" },
+          { text: "100%", key: "c" },
+          { text: "25%", key: "d" }
+        ],
+        correct: "b",
+        explanation: "Under Active Choice, the maximum allocation to Equity (Class E) is 75% up to age 50. After age 50, it tapers down by 2.5% per annum to 50% at age 60."
+      },
+      {
+        id: 5,
+        question: "Which of the following represents the DEFAULT option under NPS if a subscriber does not specify an investment choice?",
+        options: [
+          { text: "Active Choice with 100% Govt Securities (Class G)", key: "a" },
+          { text: "Aggressive Life Cycle Fund (LC75)", key: "b" },
+          { text: "Moderate Life Cycle Fund (LC50)", key: "c" },
+          { text: "Conservative Life Cycle Fund (LC25)", key: "d" }
+        ],
+        correct: "c",
+        explanation: "If a subscriber does not explicitly select an investment choice, the Moderate Life Cycle Fund (LC50) is assigned as the default option."
+      },
+      {
+        id: 6,
+        question: "What is the maximum entry age for enrolling in the Atal Pension Yojana (APY)?",
+        options: [
+          { text: "35 years", key: "a" },
+          { text: "40 years", key: "b" },
+          { text: "50 years", key: "c" },
+          { text: "60 years", key: "d" }
+        ],
+        correct: "b",
+        explanation: "The eligibility age for enrolling in APY is 18 to 40 years, ensuring a minimum contribution period of 20 years before the pension commences at age 60."
+      },
+      {
+        id: 7,
+        question: "Out of the employer's 12% statutory contribution to the Provident Fund, what portion is diverted to the Employees' Pension Scheme (EPS)?",
+        options: [
+          { text: "3.67% uncapped", key: "a" },
+          { text: "8.33% subject to the ₹15,000 monthly wage ceiling (max ₹1,250/month)", key: "b" },
+          { text: "6.0% subject to a ₹25,000 wage ceiling", key: "c" },
+          { text: "12% completely to EPS for all corporate employees", key: "d" }
+        ],
+        correct: "b",
+        explanation: "8.33% of the employer's 12% contribution is diverted to EPS, capped at the statutory wage ceiling of ₹15,000 per month (maximum ₹1,250/month). The remaining 3.67% goes to the EPF account."
+      },
+      {
+        id: 8,
+        question: "What is the minimum contributory service required under EPS 1995 to be eligible for a monthly superannuation pension at age 58?",
+        options: [
+          { text: "5 years", key: "a" },
+          { text: "10 years", key: "b" },
+          { text: "15 years", key: "c" },
+          { text: "20 years", key: "d" }
+        ],
+        correct: "b",
+        explanation: "An employee must have rendered a minimum of 10 years of contributory service to qualify for a monthly pension under EPS 1995. If service is under 10 years, only a withdrawal benefit is paid."
+      },
+      {
+        id: 9,
+        question: "What is the enhanced maximum deposit limit for an individual under the Senior Citizens Savings Scheme (SCSS) as per Union Budget 2023?",
+        options: [
+          { text: "₹15 Lakhs", key: "a" },
+          { text: "₹20 Lakhs", key: "b" },
+          { text: "₹30 Lakhs", key: "c" },
+          { text: "₹50 Lakhs", key: "d" }
+        ],
+        correct: "c",
+        explanation: "Union Budget 2023 doubled the maximum deposit limit under SCSS from ₹15 Lakhs to ₹30 Lakhs per individual."
+      },
+      {
+        id: 10,
+        question: "Which annuity option provides the HIGHEST initial regular payout for a given purchase price?",
+        options: [
+          { text: "Life Annuity with Return of Purchase Price (ROP)", key: "a" },
+          { text: "Life Annuity without Return of Purchase Price (No ROP)", key: "b" },
+          { text: "Joint Life Last Survivor Annuity with 100% ROP", key: "c" },
+          { text: "Increasing Annuity escalating by 5% per year", key: "d" }
+        ],
+        correct: "b",
+        explanation: "Life Annuity without Return of Purchase Price yields the highest payout because the insurer retains the entire purchase price upon the annuitant's death and uses mortality pooling credits to boost ongoing payouts."
+      },
+      {
+        id: 11,
+        question: "Under which section of the Income Tax Act are payments received by a senior citizen under a Reverse Mortgage Scheme 100% tax-exempt?",
+        options: [
+          { text: "Section 80C", key: "a" },
+          { text: "Section 10(10D)", key: "b" },
+          { text: "Section 10(43)", key: "c" },
+          { text: "Section 54EC", key: "d" }
+        ],
+        correct: "c",
+        explanation: "Under Section 10(43) of the Income Tax Act, 1961, any lump sum or periodic installment received by a senior citizen borrower under a reverse mortgage is fully exempt from income tax as it constitutes a loan advance, not income."
+      },
+      {
+        id: 12,
+        question: "Under a Reverse Mortgage Scheme, what happens if the net sale proceeds of the residential house upon the borrowers' demise are LESS than the outstanding loan balance?",
+        options: [
+          { text: "The legal heirs must pay the difference from their personal assets within 90 days", key: "a" },
+          { text: "The bank absorbs the shortfall; it cannot seek recovery from the borrower's heirs or other estate assets", key: "b" },
+          { text: "The local municipal corporation reimburses the bank", key: "c" },
+          { text: "The property is handed over to the National Housing Bank without settlement", key: "d" }
+        ],
+        correct: "b",
+        explanation: "A reverse mortgage is a non-recourse loan to the heirs. If the sale proceeds are insufficient to cover the loan balance, the lending bank bears the loss and cannot pursue the legal heirs for the deficit."
+      }
+    ];
+
+    let userAnswers = {};
+
+    function renderQuiz() {
+      const container = document.getElementById("questions-container");
+      container.innerHTML = "";
+
+      questionsData.forEach((q, index) => {
+        const qDiv = document.createElement("div");
+        qDiv.className = "p-5 rounded-2xl bg-white/5 border border-white/10 space-y-4";
+        qDiv.id = `q-box-${q.id}`;
+
+        let optionsHtml = "";
+        q.options.forEach(opt => {
+          optionsHtml += `
+            <label class="flex items-center gap-3 p-3 rounded-xl bg-white/5 hover:bg-white/10 border border-white/5 cursor-pointer text-xs sm:text-sm transition-all" onclick="selectOption(${q.id}, '${opt.key}')" id="label-${q.id}-${opt.key}">
+              <input type="radio" name="question-${q.id}" value="${opt.key}" class="w-4 h-4 text-indigo-500 focus:ring-0">
+              <span class="font-bold text-indigo-300 w-5 uppercase">${opt.key}.</span>
+              <span class="text-slate-200">${opt.text}</span>
+            </label>
+          `;
+        });
+
+        qDiv.innerHTML = `
+          <div class="flex items-start justify-between gap-2">
+            <span class="text-xs font-bold text-indigo-400 uppercase tracking-wider">Question ${index + 1} of ${questionsData.length}</span>
+            <span id="badge-${q.id}" class="text-xs px-2 py-0.5 rounded-full bg-white/5 text-slate-400 font-medium">Unanswered</span>
+          </div>
+          <h4 class="font-display font-semibold text-sm sm:text-base text-white">${q.question}</h4>
+          <div class="space-y-2 mt-3">${optionsHtml}</div>
+          <div id="explanation-${q.id}" class="hidden p-4 rounded-xl text-xs sm:text-sm mt-3 space-y-1"></div>
+        `;
+        container.appendChild(qDiv);
+      });
+      if (window.lucide) lucide.createIcons();
+    }
+
+    function selectOption(qId, key) {
+      userAnswers[qId] = key;
+      document.getElementById("answered-count").innerText = Object.keys(userAnswers).length;
+      
+      const badge = document.getElementById(`badge-${qId}`);
+      if (badge) {
+        badge.innerText = "Answered";
+        badge.className = "text-xs px-2 py-0.5 rounded-full bg-indigo-500/20 text-indigo-300 font-medium";
+      }
+
+      const q = questionsData.find(item => item.id === qId);
+      q.options.forEach(opt => {
+        const lbl = document.getElementById(`label-${qId}-${opt.key}`);
+        if (opt.key === key) {
+          lbl.className = "flex items-center gap-3 p-3 rounded-xl bg-indigo-600/30 border border-indigo-400/50 cursor-pointer text-xs sm:text-sm transition-all";
+        } else {
+          lbl.className = "flex items-center gap-3 p-3 rounded-xl bg-white/5 hover:bg-white/10 border border-white/5 cursor-pointer text-xs sm:text-sm transition-all";
+        }
+      });
+    }
+
+    function submitQuiz() {
+      let score = 0;
+      questionsData.forEach(q => {
+        const selected = userAnswers[q.id];
+        const isCorrect = selected === q.correct;
+        if (isCorrect) score++;
+
+        const explanationDiv = document.getElementById(`explanation-${q.id}`);
+        explanationDiv.classList.remove("hidden");
+
+        if (isCorrect) {
+          explanationDiv.className = "p-4 rounded-xl text-xs sm:text-sm mt-3 bg-emerald-950/60 border border-emerald-600 text-emerald-200";
+          explanationDiv.innerHTML = `
+            <div class="font-bold text-emerald-400 flex items-center gap-1.5">
+              <i data-lucide="check-circle" class="w-4 h-4"></i> Correct!
+            </div>
+            <p class="mt-1 text-slate-200">${q.explanation}</p>
+          `;
+        } else {
+          explanationDiv.className = "p-4 rounded-xl text-xs sm:text-sm mt-3 bg-rose-950/60 border border-rose-600 text-rose-200";
+          explanationDiv.innerHTML = `
+            <div class="font-bold text-rose-400 flex items-center gap-1.5">
+              <i data-lucide="x-circle" class="w-4 h-4"></i> Incorrect (Correct Answer: Option ${q.correct.toUpperCase()})
+            </div>
+            <p class="mt-1 text-slate-200">${q.explanation}</p>
+          `;
+        }
+      });
+
+      const percentage = Math.round((score / questionsData.length) * 100);
+      const passed = percentage >= 60;
+      
+      const resultsDiv = document.getElementById("quiz-results");
+      resultsDiv.classList.remove("hidden");
+
+      const statusBadge = document.getElementById("result-status-badge");
+      statusBadge.innerText = passed ? "Status: Passed (60%+ Benchmark)" : "Status: Needs Revision";
+      statusBadge.className = passed ? "px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider bg-emerald-500 text-emerald-950" : "px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider bg-amber-500 text-amber-950";
+
+      document.getElementById("score-display").innerText = `${score} / ${questionsData.length}`;
+      document.getElementById("percentage-display").innerText = `${percentage}% Score (Passing criteria: 60%)`;
+
+      document.getElementById("result-summary-text").innerText = passed
+        ? `Magnificent! You scored ${percentage}%, mastering retirement product parameters, NPS tax rules, statutory schemes (EPF/EPS), SCSS, and reverse mortgages.`
+        : `You scored ${percentage}%, below the 60% passing mark. Review Section 5.3 (NPS Tax & Exits), Section 5.4 (Active/Auto Choice), Section 5.6 (EPF/EPS Split), and Section 5.9 (Reverse Mortgage) before re-attempting.`;
+
+      document.getElementById("submit-quiz-btn").classList.add("hidden");
+      document.getElementById("reset-quiz-btn").classList.remove("hidden");
+
+      resultsDiv.scrollIntoView({ behavior: 'smooth' });
+      if (window.lucide) lucide.createIcons();
+    }
+
+    function resetQuiz() {
+      userAnswers = {};
+      document.getElementById("answered-count").innerText = "0";
+      document.getElementById("quiz-results").classList.add("hidden");
+      document.getElementById("submit-quiz-btn").classList.remove("hidden");
+      document.getElementById("reset-quiz-btn").classList.add("hidden");
+      renderQuiz();
+      document.getElementById("interactive-quiz").scrollIntoView({ behavior: 'smooth' });
+    }
+
+    // Theme toggler
+    function initTheme() {
+      const saved = localStorage.getItem("nism-theme");
+      if (saved === "dark" || (!saved && window.matchMedia("(prefers-color-scheme: dark)").matches)) {
+        document.documentElement.classList.add("dark");
+      } else {
+        document.documentElement.classList.remove("dark");
+      }
+      updateThemeIcon();
+    }
+
+    window.toggleDarkMode = function() {
+      const isDark = document.documentElement.classList.toggle("dark");
+      localStorage.setItem("nism-theme", isDark ? "dark" : "light");
+      updateThemeIcon();
+    };
+
+    function updateThemeIcon() {
+      const btn = document.getElementById("nism-header-theme-btn");
+      if (btn) {
+        const isDark = document.documentElement.classList.contains("dark");
+        btn.innerHTML = `<i data-lucide="${isDark ? 'sun' : 'moon'}" class="w-4 h-4 ${isDark ? 'text-amber-400' : 'text-slate-600'}"></i>`;
+        if (window.lucide) lucide.createIcons();
+      }
+    }
+
+    window.addEventListener("DOMContentLoaded", () => {
+      initTheme();
+      renderQuiz();
+      const preloader = document.getElementById("eduleb-preloader");
+      if (preloader) {
+        setTimeout(() => {
+          preloader.style.opacity = "0";
+          setTimeout(() => { preloader.style.display = "none"; }, 350);
+        }, 200);
+      }
+    });
+  </script>
+</body>
+</html>

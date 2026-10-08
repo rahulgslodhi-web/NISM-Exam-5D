@@ -1,0 +1,924 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Chapter 19: Comparison of Products Across Categories | NISM Series X-B Notes</title>
+  
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  
+  <!-- Google Fonts: DM Sans & Jost (Eduleb Benchmark) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Jost:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+  
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+
+  <!-- Modern Documentation Design System & Zoom Engine -->
+  <link rel="stylesheet" href="modern-docs.css">
+  <script defer src="nav-sidebar.js"></script>
+
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['"DM Sans"', 'sans-serif'],
+            display: ['"Jost"', 'sans-serif'],
+            heading: ['"Jost"', 'sans-serif']
+          },
+          colors: {
+            brand: {
+              50: '#eef2ff',
+              100: '#e0e7ff',
+              500: '#525fe1',
+              600: '#434ec9',
+              700: '#353db3',
+              800: '#282f9c',
+              900: '#0b104a'
+            }
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    body {
+      font-family: 'DM Sans', sans-serif;
+      font-size: 16px;
+      line-height: 26px;
+      color: #4a5355;
+    }
+    h1, h2, h3, h4, h5, h6, .font-display, .font-heading {
+      font-family: 'Jost', sans-serif;
+      font-weight: 700;
+    }
+  </style>
+</head>
+<body class="bg-slate-50 dark:bg-slate-950 text-slate-900 dark:text-slate-100 min-h-screen flex flex-col selection:bg-indigo-500 selection:text-white antialiased transition-colors duration-200">
+
+  <!-- Smooth Opening Preloader -->
+  <div class="preloaders" id="eduleb-preloader">
+    <span class="loader"></span>
+    <div class="preloader-label">Chapter 19: Comparison of Products Across Categories</div>
+  </div>
+
+  <!-- Standardized Header (Single-Tier, 64px) -->
+  <header class="sticky top-0 z-40 bg-white/95 dark:bg-slate-900/95 backdrop-blur-md border-b border-slate-200/80 dark:border-slate-800 shadow-xs">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 h-16 flex items-center justify-between">
+      <!-- Left: Logo & Context Label -->
+      <div class="flex items-center gap-3">
+        <a href="module12.html" class="flex items-center gap-2 text-slate-500 hover:text-slate-900 dark:hover:text-white transition-colors">
+          <div class="w-9 h-9 rounded-xl bg-slate-100 dark:bg-slate-800 hover:bg-slate-200 dark:hover:bg-slate-700 flex items-center justify-center text-slate-700 dark:text-slate-200 transition-colors">
+            <i data-lucide="arrow-left" class="w-4 h-4"></i>
+          </div>
+        </a>
+        <div>
+          <div class="flex items-center gap-2">
+            <span class="text-xs font-bold uppercase tracking-wider text-indigo-600 dark:text-indigo-400 bg-indigo-50 dark:bg-indigo-950/80 px-2 py-0.5 rounded border border-indigo-200 dark:border-indigo-800">Module 12</span>
+            <span class="text-xs text-slate-400 font-medium">Chapter 19 of 20</span>
+          </div>
+          <h1 class="font-display font-bold text-base sm:text-lg text-slate-900 dark:text-white leading-tight">Comparison of Products Across Categories</h1>
+        </div>
+      </div>
+
+      <!-- Right: Search, Theme, Quiz CTA -->
+      <div class="flex items-center gap-2">
+        <span class="hidden sm:inline-flex items-center gap-1 px-3 py-1 rounded-full text-xs font-bold bg-amber-50 dark:bg-amber-950 text-amber-700 dark:text-amber-300 border border-amber-200 dark:border-amber-800">
+          <i data-lucide="award" class="w-3.5 h-3.5"></i>
+          Weightage: 15 Marks ⭐
+        </span>
+        <button onclick="window.openSpotlightModal()" class="flex items-center gap-2 px-3 py-1.5 rounded-full border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-800 text-slate-500 dark:text-slate-400 text-xs font-medium" title="Search (⌘K)">
+          <i data-lucide="search" class="w-3.5 h-3.5 text-indigo-600"></i>
+          <span class="hidden sm:inline">Search</span>
+          <kbd class="px-1.5 py-0.5 rounded bg-slate-100 dark:bg-slate-700 text-[10px] font-mono text-slate-400">⌘K</kbd>
+        </button>
+        <button id="nism-header-theme-btn" onclick="window.toggleDarkMode()" class="p-2 rounded-full border border-slate-200 dark:border-slate-700 text-slate-600 dark:text-slate-300 bg-white dark:bg-slate-800" title="Toggle Theme (⌘D)">
+          <i data-lucide="moon" class="w-4 h-4"></i>
+        </button>
+        <a href="#interactive-quiz" class="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-lg text-xs font-bold bg-indigo-600 hover:bg-indigo-700 text-white shadow-xs transition-all">
+          <i data-lucide="help-circle" class="w-3.5 h-3.5"></i>
+          <span class="hidden sm:inline">Chapter Quiz</span>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Content Grid -->
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 grid grid-cols-1 lg:grid-cols-12 gap-8 flex-grow">
+    
+    <!-- Sidebar Navigation -->
+    <aside class="hidden lg:block lg:col-span-3">
+      <div class="sticky top-24 space-y-4">
+        
+        <!-- Module Navigation Quick Switcher -->
+        <div class="bg-white dark:bg-slate-900 p-4 rounded-2xl border border-slate-200 dark:border-slate-800 shadow-xs">
+          <div class="text-[11px] font-bold text-indigo-600 dark:text-indigo-400 uppercase tracking-wider mb-2">Module 12 Chapters</div>
+          <div class="space-y-1">
+            <a href="module12-ch18.html" class="flex items-center justify-between px-3 py-2 rounded-xl text-xs font-semibold text-slate-600 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800">
+              <span>Ch 18: Risk Profiling</span>
+              <span class="text-[10px] px-1.5 py-0.5 rounded bg-slate-200 dark:bg-slate-750">10M</span>
+            </a>
+            <a href="module12-ch19.html" class="flex items-center justify-between px-3 py-2 rounded-xl text-xs font-bold bg-indigo-50 dark:bg-indigo-950/80 text-indigo-700 dark:text-indigo-300 border border-indigo-200 dark:border-indigo-800">
+              <span>Ch 19: Performance Attribution</span>
+              <span class="text-[10px] px-1.5 py-0.5 rounded bg-indigo-200 dark:bg-indigo-800 font-bold">15M ⭐</span>
+            </a>
+            <a href="module12-ch20.html" class="flex items-center justify-between px-3 py-2 rounded-xl text-xs font-semibold text-amber-700 dark:text-amber-300 hover:bg-amber-50 dark:hover:bg-amber-950/50">
+              <span>Ch 20: 4 Solved Cases</span>
+              <span class="text-[10px] px-1.5 py-0.5 rounded bg-amber-200 dark:bg-amber-800 font-bold">20M ⭐</span>
+            </a>
+          </div>
+        </div>
+
+        <!-- Table of Contents -->
+        <div class="bg-white dark:bg-slate-900 p-5 rounded-2xl border border-slate-200 dark:border-slate-800 shadow-xs">
+          <h2 class="text-xs font-bold text-slate-400 uppercase tracking-wider mb-3">On This Page</h2>
+          <nav class="space-y-1 text-xs">
+            <a href="#section-1" class="block px-2.5 py-1.5 rounded-lg text-slate-600 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800 hover:text-indigo-600">19.1 Cross-Product Evaluation: MFs, PMS & AIFs ⭐</a>
+            <a href="#section-2" class="block px-2.5 py-1.5 rounded-lg text-amber-700 dark:text-amber-300 font-semibold bg-amber-50/70 dark:bg-amber-950/50 hover:bg-amber-100">19.2 SGB vs. Gold ETFs vs. Physical Gold</a>
+            <a href="#section-3" class="block px-2.5 py-1.5 rounded-lg text-indigo-700 dark:text-indigo-300 font-bold bg-indigo-50/70 dark:bg-indigo-950/50 hover:bg-indigo-100">19.3 Performance Attribution Formulas ⭐⭐⭐</a>
+            <a href="#section-4" class="block px-2.5 py-1.5 rounded-lg text-slate-600 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800">19.4 Solved Mathematical Attribution Model</a>
+            <a href="#section-5" class="block px-2.5 py-1.5 rounded-lg text-amber-700 dark:text-amber-300 font-semibold bg-amber-50/70 dark:bg-amber-950/50 hover:bg-amber-100">19.5 Rebalancing Triggers & Tax Frictions ⭐</a>
+            <a href="#interactive-quiz" class="block px-2.5 py-1.5 rounded-lg text-indigo-700 dark:text-indigo-300 font-bold bg-indigo-50 dark:bg-indigo-950 hover:bg-indigo-100 mt-2">Practice Quiz (12 MCQs)</a>
+          </nav>
+        </div>
+
+        <!-- High-Yield Callout Box -->
+        <div class="p-4 rounded-2xl bg-gradient-to-br from-indigo-600 to-indigo-800 text-white shadow-xs text-xs">
+          <div class="flex items-center gap-1.5 font-bold mb-2">
+            <i data-lucide="zap" class="w-4 h-4 text-amber-300"></i>
+            <span>Performance Cheat Codes</span>
+          </div>
+          <p class="text-indigo-100 leading-relaxed space-y-1.5">
+            &bull; <strong>Sharpe Ratio:</strong> Denominator is Total Risk (&sigma;). Use for complete standalone portfolios.<br>
+            &bull; <strong>Treynor Ratio:</strong> Denominator is Systematic Risk (&beta;). Use for evaluating sub-funds within diversified portfolios.<br>
+            &bull; <strong>Sortino:</strong> Penalizes only harmful downside volatility below MAR.<br>
+            &bull; <strong>R-Squared Alert:</strong> If R<sup>2</sup> &lt; 0.70, Beta & Treynor are statistically unreliable.<br>
+            &bull; <strong>PMS vs AIF Ticket:</strong> PMS minimum ₹50 Lakhs; AIF minimum ₹1 Crore.
+          </p>
+        </div>
+
+      </div>
+    </aside>
+
+    <!-- Main Notes Content -->
+    <div class="lg:col-span-9 space-y-8">
+
+      <!-- Section 19.1 -->
+      <section id="section-1" class="bg-white dark:bg-slate-900 rounded-3xl p-6 sm:p-8 border border-slate-200 dark:border-slate-800 shadow-xs space-y-5">
+        <div class="flex items-center justify-between">
+          <div class="flex items-center gap-2 text-xs font-bold text-slate-500 uppercase tracking-wider">
+            <span class="w-2 h-2 rounded-full bg-indigo-600"></span> Section 19.1 &bull; Product Spectrum
+          </div>
+          <span class="text-xs px-2.5 py-1 rounded-full bg-amber-50 dark:bg-amber-950 text-amber-700 dark:text-amber-300 font-bold border border-amber-200 dark:border-amber-800">
+            SEBI Regulatory Ticket Thresholds ⭐
+          </span>
+        </div>
+
+        <div>
+          <h2 class="font-display font-bold text-xl sm:text-2xl text-slate-900 dark:text-white">
+            Comparison of Investment Vehicles: Mutual Funds vs. PMS vs. AIFs
+          </h2>
+          <p class="text-xs sm:text-sm text-slate-600 dark:text-slate-300 mt-1 leading-relaxed">
+            Investment Advisers must understand the structural, operational, and tax differences across collective investment vehicles to recommend suitable products for retail, affluent, and high-net-worth (HNI) clients:
+          </p>
+        </div>
+
+        <!-- Master Product Comparison Table -->
+        <div class="overflow-x-auto rounded-2xl border border-slate-200 dark:border-slate-800">
+          <table class="min-w-full text-xs text-left">
+            <thead class="bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 font-bold uppercase tracking-wider">
+              <tr>
+                <th class="p-3">Attribute</th>
+                <th class="p-3 bg-blue-50/70 dark:bg-blue-950/60 text-blue-900 dark:text-blue-200">Mutual Funds (MFs)</th>
+                <th class="p-3 bg-indigo-50/70 dark:bg-indigo-950/60 text-indigo-900 dark:text-indigo-200">Portfolio Management (PMS)</th>
+                <th class="p-3 bg-purple-50/70 dark:bg-purple-950/60 text-purple-900 dark:text-purple-200">Alternative Investment Funds (AIF)</th>
+              </tr>
+            </thead>
+            <tbody class="divide-y divide-slate-200 dark:divide-slate-800">
+              <tr class="hover:bg-slate-50 dark:hover:bg-slate-800/50">
+                <td class="p-3 font-semibold text-slate-900 dark:text-white">Governing Regulation</td>
+                <td class="p-3 text-slate-600 dark:text-slate-300">SEBI (Mutual Funds) Regulations, 1996</td>
+                <td class="p-3 text-slate-600 dark:text-slate-300">SEBI (Portfolio Managers) Regulations, 2020</td>
+                <td class="p-3 text-slate-600 dark:text-slate-300">SEBI (AIF) Regulations, 2012</td>
+              </tr>
+              <tr class="hover:bg-slate-50 dark:hover:bg-slate-800/50">
+                <td class="p-3 font-semibold text-slate-900 dark:text-white">Minimum Ticket Size ⭐</td>
+                <td class="p-3 font-bold text-emerald-600 dark:text-emerald-400">₹100 (SIP) / ₹500 (Lump-sum)</td>
+                <td class="p-3 font-bold text-indigo-600 dark:text-indigo-400">₹50 Lakhs (Mandatory SEBI Floor)</td>
+                <td class="p-3 font-bold text-purple-600 dark:text-purple-400">₹1 Crore (₹25L for fund employees)</td>
+              </tr>
+              <tr class="hover:bg-slate-50 dark:hover:bg-slate-800/50">
+                <td class="p-3 font-semibold text-slate-900 dark:text-white">Legal Structure & Ownership</td>
+                <td class="p-3 text-slate-600 dark:text-slate-300">Public Trust; investor holds scheme units. No direct share title.</td>
+                <td class="p-3 text-slate-600 dark:text-slate-300">Contractual agreement; individual securities held in client's own demat account.</td>
+                <td class="p-3 text-slate-600 dark:text-slate-300">Trust, Company, or LLP; investor holds unit tranches/commitments.</td>
+              </tr>
+              <tr class="hover:bg-slate-50 dark:hover:bg-slate-800/50">
+                <td class="p-3 font-semibold text-slate-900 dark:text-white">Portfolio Customization</td>
+                <td class="p-3 text-slate-600 dark:text-slate-300">Nil (Standardized pooled portfolio for all unit holders).</td>
+                <td class="p-3 text-slate-600 dark:text-slate-300">High (Discretionary, Non-Discretionary, or Advisory with model mandates).</td>
+                <td class="p-3 text-slate-600 dark:text-slate-300">Negotiable for large commitments; defined by PPM strategy.</td>
+              </tr>
+              <tr class="hover:bg-slate-50 dark:hover:bg-slate-800/50">
+                <td class="p-3 font-semibold text-slate-900 dark:text-white">Category Spectrum</td>
+                <td class="p-3 text-slate-600 dark:text-slate-300">Equity (11), Debt (16), Hybrid (6), Solution & Other (5).</td>
+                <td class="p-3 text-slate-600 dark:text-slate-300">Discretionary vs. Non-Discretionary vs. Advisory.</td>
+                <td class="p-3 text-slate-600 dark:text-slate-300">Cat I (VC, Angel, Infra); Cat II (PE, Debt); Cat III (Hedge / Long-Short).</td>
+              </tr>
+              <tr class="hover:bg-slate-50 dark:hover:bg-slate-800/50">
+                <td class="p-3 font-semibold text-slate-900 dark:text-white">Fee Structure & Water Mark</td>
+                <td class="p-3 text-slate-600 dark:text-slate-300">Total Expense Ratio (TER) capped by SEBI Regulation 52 (No performance fee).</td>
+                <td class="p-3 text-slate-600 dark:text-slate-300">Fixed Fee + Performance Fee with Hurdle Rate and High-Water Mark (HWM).</td>
+                <td class="p-3 text-slate-600 dark:text-slate-300">Management Fee (1.5-2.5%) + Carried Interest (15-20%) above Hurdle Rate.</td>
+              </tr>
+              <tr class="hover:bg-slate-50 dark:hover:bg-slate-800/50">
+                <td class="p-3 font-semibold text-slate-900 dark:text-white">Taxation Pass-Through ⭐</td>
+                <td class="p-3 text-slate-600 dark:text-slate-300">Exempt under Sec 10(23D); taxed only upon unit redemption by investor.</td>
+                <td class="p-3 text-slate-600 dark:text-slate-300">No pool tax. Every portfolio buy/sell triggers immediate capital gain for client!</td>
+                <td class="p-3 text-slate-600 dark:text-slate-300">Pass-through under Sec 115UB for Cat I & II; Cat III taxed at fund level at MMR.</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="p-4 rounded-2xl bg-amber-50 dark:bg-amber-950/50 border border-amber-200 dark:border-amber-800 text-xs space-y-1.5">
+          <div class="font-bold text-amber-800 dark:text-amber-300 flex items-center gap-1.5">
+            <i data-lucide="info" class="w-4 h-4 text-amber-600"></i>
+            Key Exam Concept: High-Water Mark (HWM) Principle in PMS
+          </div>
+          <p class="text-slate-600 dark:text-slate-300 leading-relaxed">
+            Under SEBI PMS regulations, a performance fee can <strong>only be charged if the portfolio NAV exceeds the highest previous peak (High-Water Mark)</strong>. If a portfolio drops from ₹60 Lakhs to ₹50 Lakhs and subsequently recovers to ₹58 Lakhs, the manager cannot charge a performance fee on the ₹8 Lakh gain because the portfolio is still below its historic high of ₹60 Lakhs!
+          </p>
+        </div>
+      </section>
+
+      <!-- Section 19.2 -->
+      <section id="section-2" class="bg-white dark:bg-slate-900 rounded-3xl p-6 sm:p-8 border border-slate-200 dark:border-slate-800 shadow-xs space-y-5">
+        <div class="flex items-center justify-between">
+          <div class="flex items-center gap-2 text-xs font-bold text-slate-500 uppercase tracking-wider">
+            <span class="w-2 h-2 rounded-full bg-amber-500"></span> Section 19.2 &bull; Alternative Assets
+          </div>
+          <span class="text-xs px-2.5 py-1 rounded-full bg-amber-50 dark:bg-amber-950 text-amber-700 dark:text-amber-300 font-bold border border-amber-200 dark:border-amber-800">
+            Gold Instruments Comparison ⭐
+          </span>
+        </div>
+
+        <div>
+          <h2 class="font-display font-bold text-xl sm:text-2xl text-slate-900 dark:text-white">
+            Gold Investment Products: SGBs vs. Gold ETFs vs. Physical Gold
+          </h2>
+          <p class="text-xs sm:text-sm text-slate-600 dark:text-slate-300 mt-1 leading-relaxed">
+            Gold acts as a strategic inflation hedge and crisis asset. Advisers must compare post-tax net realization across available instruments:
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-5">
+          
+          <!-- SGB Card -->
+          <div class="p-5 rounded-2xl bg-amber-50/60 dark:bg-amber-950/40 border border-amber-200 dark:border-amber-800 space-y-3">
+            <div class="flex items-center justify-between">
+              <span class="text-xs font-black uppercase text-amber-700 dark:text-amber-300">Sovereign Gold Bonds (SGB)</span>
+              <span class="px-2 py-0.5 rounded text-[10px] font-bold bg-amber-500 text-slate-950">Most Tax-Efficient</span>
+            </div>
+            <ul class="text-xs text-slate-600 dark:text-slate-300 space-y-1.5 leading-relaxed">
+              <li>&bull; <strong>Issuer:</strong> Reserve Bank of India on behalf of GoI.</li>
+              <li>&bull; <strong>Interest Income:</strong> <strong>2.50% p.a.</strong> paid semi-annually on nominal issue price (taxable at investor slab).</li>
+              <li>&bull; <strong>Tenor:</strong> 8 years (early encashment window after year 5).</li>
+              <li>&bull; <strong>Taxation on Maturity:</strong> <strong>100% EXEMPT from Capital Gains Tax</strong> if redeemed with RBI after 8 years!</li>
+              <li>&bull; <strong>Secondary Sale:</strong> LTCG at 12.5% if sold on exchange prior to maturity.</li>
+            </ul>
+          </div>
+
+          <!-- Gold ETF Card -->
+          <div class="p-5 rounded-2xl bg-slate-50 dark:bg-slate-800/70 border border-slate-200 dark:border-slate-700 space-y-3">
+            <div class="flex items-center justify-between">
+              <span class="text-xs font-black uppercase text-slate-800 dark:text-slate-200">Gold ETFs / Gold Mutual Funds</span>
+              <span class="px-2 py-0.5 rounded text-[10px] font-bold bg-slate-200 dark:bg-slate-700 text-slate-800 dark:text-slate-200">High Liquidity</span>
+            </div>
+            <ul class="text-xs text-slate-600 dark:text-slate-300 space-y-1.5 leading-relaxed">
+              <li>&bull; <strong>Underlying:</strong> Physical gold of 99.5% purity held in vaults.</li>
+              <li>&bull; <strong>Expense Ratio:</strong> 0.30% to 0.60% p.a. (drag on net gold return).</li>
+              <li>&bull; <strong>Liquidity:</strong> Real-time exchange trading during market hours.</li>
+              <li>&bull; <strong>Taxation (Post Budget 2024):</strong> LTCG at <strong>12.5%</strong> if held &gt; 12 months (or 24 months for unlisted FoFs). No indexation benefit.</li>
+              <li>&bull; <strong>Interest:</strong> Zero coupon / zero ongoing cash flow.</li>
+            </ul>
+          </div>
+
+          <!-- Physical Gold Card -->
+          <div class="p-5 rounded-2xl bg-slate-50 dark:bg-slate-800/70 border border-slate-200 dark:border-slate-700 space-y-3">
+            <div class="flex items-center justify-between">
+              <span class="text-xs font-black uppercase text-slate-800 dark:text-slate-200">Physical Jewelry / Coins</span>
+              <span class="px-2 py-0.5 rounded text-[10px] font-bold bg-rose-100 dark:bg-rose-950 text-rose-700 dark:text-rose-300">Least Efficient</span>
+            </div>
+            <ul class="text-xs text-slate-600 dark:text-slate-300 space-y-1.5 leading-relaxed">
+              <li>&bull; <strong>Friction Costs:</strong> 3% GST on purchase + 10% to 25% making/melting charges lost on resale.</li>
+              <li>&bull; <strong>Storage Costs:</strong> Bank locker charges and theft insurance.</li>
+              <li>&bull; <strong>Purity Risk:</strong> Risk of impurity and caratage haircut during resale.</li>
+              <li>&bull; <strong>Advisory Verdict:</strong> Strictly unsuitable for pure financial investment; recommend only for cultural consumption.</li>
+            </ul>
+          </div>
+
+        </div>
+      </section>
+
+      <!-- Section 19.3 -->
+      <section id="section-3" class="bg-white dark:bg-slate-900 rounded-3xl p-6 sm:p-8 border border-slate-200 dark:border-slate-800 shadow-xs space-y-5">
+        <div class="flex items-center justify-between">
+          <div class="flex items-center gap-2 text-xs font-bold text-slate-500 uppercase tracking-wider">
+            <span class="w-2 h-2 rounded-full bg-indigo-600"></span> Section 19.3 &bull; Quantitative Attribution
+          </div>
+          <span class="text-xs px-2.5 py-1 rounded-full bg-indigo-50 dark:bg-indigo-950 text-indigo-700 dark:text-indigo-300 font-bold border border-indigo-200 dark:border-indigo-800">
+            Core Numerical Formulas ⭐⭐⭐
+          </span>
+        </div>
+
+        <div>
+          <h2 class="font-display font-bold text-xl sm:text-2xl text-slate-900 dark:text-white">
+            Risk-Adjusted Performance Attribution Formulas
+          </h2>
+          <p class="text-xs sm:text-sm text-slate-600 dark:text-slate-300 mt-1 leading-relaxed">
+            Raw returns tell only half the story. Portfolio managers must be evaluated based on the degree of risk undertaken to generate that return.
+          </p>
+        </div>
+
+        <!-- 5 Formula Cards Grid -->
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
+          
+          <!-- Formula 1: Sharpe Ratio -->
+          <div class="p-5 rounded-2xl bg-indigo-50/50 dark:bg-slate-800/80 border border-indigo-200 dark:border-slate-700 space-y-3">
+            <div class="flex items-center justify-between">
+              <h3 class="font-display font-bold text-base text-slate-900 dark:text-white">1. Sharpe Ratio (Total Risk)</h3>
+              <span class="px-2 py-0.5 rounded text-[10px] font-bold bg-indigo-100 text-indigo-800 dark:bg-indigo-950 dark:text-indigo-300">William Sharpe</span>
+            </div>
+            <div class="p-3 rounded-xl bg-white dark:bg-slate-900 font-mono text-center font-bold text-indigo-700 dark:text-indigo-300 text-sm border border-slate-200 dark:border-slate-800">
+              Sharpe Ratio = (R<sub>p</sub> - R<sub>f</sub>) / &sigma;<sub>p</sub>
+            </div>
+            <p class="text-xs text-slate-600 dark:text-slate-300 leading-relaxed">
+              &bull; <i>R<sub>p</sub></i> = Portfolio Return, <i>R<sub>f</sub></i> = Risk-Free Rate, <i>&sigma;<sub>p</sub></i> = Standard Deviation (Total Risk).<br>
+              &bull; <strong>Application Rule:</strong> Use Sharpe when evaluating a fund as a <strong>standalone, unconstrained investment</strong> or when assessing an entire overall portfolio.
+            </p>
+          </div>
+
+          <!-- Formula 2: Treynor Ratio -->
+          <div class="p-5 rounded-2xl bg-indigo-50/50 dark:bg-slate-800/80 border border-indigo-200 dark:border-slate-700 space-y-3">
+            <div class="flex items-center justify-between">
+              <h3 class="font-display font-bold text-base text-slate-900 dark:text-white">2. Treynor Ratio (Systematic Risk)</h3>
+              <span class="px-2 py-0.5 rounded text-[10px] font-bold bg-indigo-100 text-indigo-800 dark:bg-indigo-950 dark:text-indigo-300">Jack Treynor</span>
+            </div>
+            <div class="p-3 rounded-xl bg-white dark:bg-slate-900 font-mono text-center font-bold text-indigo-700 dark:text-indigo-300 text-sm border border-slate-200 dark:border-slate-800">
+              Treynor Ratio = (R<sub>p</sub> - R<sub>f</sub>) / &beta;<sub>p</sub>
+            </div>
+            <p class="text-xs text-slate-600 dark:text-slate-300 leading-relaxed">
+              &bull; <i>&beta;<sub>p</sub></i> = Portfolio Beta (Systematic / Market Risk).<br>
+              &bull; <strong>Application Rule:</strong> Use Treynor when evaluating a scheme to be added to an <strong>already well-diversified portfolio</strong>, where unsystematic risk has been diversified away.
+            </p>
+          </div>
+
+          <!-- Formula 3: Sortino Ratio -->
+          <div class="p-5 rounded-2xl bg-indigo-50/50 dark:bg-slate-800/80 border border-indigo-200 dark:border-slate-700 space-y-3">
+            <div class="flex items-center justify-between">
+              <h3 class="font-display font-bold text-base text-slate-900 dark:text-white">3. Sortino Ratio (Downside Risk)</h3>
+              <span class="px-2 py-0.5 rounded text-[10px] font-bold bg-indigo-100 text-indigo-800 dark:bg-indigo-950 dark:text-indigo-300">Frank Sortino</span>
+            </div>
+            <div class="p-3 rounded-xl bg-white dark:bg-slate-900 font-mono text-center font-bold text-indigo-700 dark:text-indigo-300 text-sm border border-slate-200 dark:border-slate-800">
+              Sortino Ratio = (R<sub>p</sub> - MAR) / &sigma;<sub>d</sub>
+            </div>
+            <p class="text-xs text-slate-600 dark:text-slate-300 leading-relaxed">
+              &bull; <i>MAR</i> = Minimum Acceptable Return (hurdle rate), <i>&sigma;<sub>d</sub></i> = Downside Deviation.<br>
+              &bull; <strong>Advantage:</strong> Unlike Sharpe, Sortino does NOT penalize positive upside volatility. Investors love upside surprises!
+            </p>
+          </div>
+
+          <!-- Formula 4: Jensen's Alpha -->
+          <div class="p-5 rounded-2xl bg-indigo-50/50 dark:bg-slate-800/80 border border-indigo-200 dark:border-slate-700 space-y-3">
+            <div class="flex items-center justify-between">
+              <h3 class="font-display font-bold text-base text-slate-900 dark:text-white">4. Jensen's Alpha (&alpha;)</h3>
+              <span class="px-2 py-0.5 rounded text-[10px] font-bold bg-amber-100 text-amber-800 dark:bg-amber-950 dark:text-amber-300">Michael Jensen</span>
+            </div>
+            <div class="p-3 rounded-xl bg-white dark:bg-slate-900 font-mono text-center font-bold text-amber-700 dark:text-amber-300 text-sm border border-slate-200 dark:border-slate-800">
+              &alpha; = R<sub>p</sub> - [ R<sub>f</sub> + &beta;<sub>p</sub>(R<sub>m</sub> - R<sub>f</sub>) ]
+            </div>
+            <p class="text-xs text-slate-600 dark:text-slate-300 leading-relaxed">
+              &bull; Measures return in excess of the CAPM theoretical benchmark.<br>
+              &bull; <strong>Interpretation:</strong> &alpha; &gt; 0 indicates the manager added value through stock picking/timing. &alpha; &lt; 0 indicates manager underperformed required risk return.
+            </p>
+          </div>
+
+        </div>
+
+        <!-- Formula 5: Information Ratio & Tracking Error Full Width Card -->
+        <div class="p-5 rounded-2xl bg-slate-50 dark:bg-slate-800/70 border border-slate-200 dark:border-slate-700 space-y-3">
+          <div class="flex items-center justify-between">
+            <h3 class="font-display font-bold text-base text-slate-900 dark:text-white">5. Information Ratio (IR) & Tracking Error (TE)</h3>
+            <span class="px-2 py-0.5 rounded text-[10px] font-bold bg-emerald-100 text-emerald-800 dark:bg-emerald-950 dark:text-emerald-300">Active Consistency</span>
+          </div>
+          <div class="p-3 rounded-xl bg-white dark:bg-slate-900 font-mono text-center font-bold text-emerald-700 dark:text-emerald-300 text-sm border border-slate-200 dark:border-slate-800">
+            Information Ratio (IR) = (R<sub>p</sub> - R<sub>b</sub>) / Tracking Error
+          </div>
+          <div class="text-xs text-slate-600 dark:text-slate-300 space-y-1 leading-relaxed">
+            <p>&bull; <strong>Tracking Error (TE):</strong> The annualized standard deviation of excess returns: <i>TE = &sigma;<sub>(Rp - Rb)</sub></i>.</p>
+            <p>&bull; <strong>Benchmarking Standards:</strong> IR measures consistency of alpha generation per unit of active deviation from benchmark. An IR of <strong>0.50 is good</strong>, <strong>0.75 is very good</strong>, and <strong>&ge;1.0 is exceptional</strong>.</p>
+          </div>
+        </div>
+
+        <!-- R-Squared Warning Callout -->
+        <div class="p-4 rounded-2xl bg-rose-50 dark:bg-rose-950/60 border border-rose-200 dark:border-rose-800 text-xs space-y-1">
+          <div class="font-bold text-rose-800 dark:text-rose-300 flex items-center gap-1.5">
+            <i data-lucide="alert-octagon" class="w-4 h-4 text-rose-600"></i>
+            Exam Alert: The R-Squared (R<sup>2</sup>) Reliability Threshold ⭐
+          </div>
+          <p class="text-rose-900 dark:text-rose-200 leading-relaxed">
+            R-Squared (Coefficient of Determination) measures what percentage of a fund's performance is explained by the benchmark index. <strong>If R<sup>2</sup> is less than 0.70 (70%), the fund's Beta and Treynor ratio become statistically unreliable and invalid!</strong> In such cases, Sharpe ratio must be utilized instead.
+          </p>
+        </div>
+      </section>
+
+      <!-- Section 19.4 -->
+      <section id="section-4" class="bg-white dark:bg-slate-900 rounded-3xl p-6 sm:p-8 border border-slate-200 dark:border-slate-800 shadow-xs space-y-5">
+        <div class="flex items-center justify-between">
+          <div class="flex items-center gap-2 text-xs font-bold text-slate-500 uppercase tracking-wider">
+            <span class="w-2 h-2 rounded-full bg-emerald-600"></span> Section 19.4 &bull; Practical Application
+          </div>
+          <span class="text-xs px-2.5 py-1 rounded-full bg-emerald-50 dark:bg-emerald-950 text-emerald-700 dark:text-emerald-300 font-bold border border-emerald-200 dark:border-emerald-800">
+            Solved Exam Model ⭐
+          </span>
+        </div>
+
+        <div>
+          <h2 class="font-display font-bold text-xl sm:text-2xl text-slate-900 dark:text-white">
+            Comprehensive Solved Performance Attribution Problem
+          </h2>
+          <p class="text-xs sm:text-sm text-slate-600 dark:text-slate-300 mt-1 leading-relaxed">
+            Consider the following market scenario tested in NISM Series X-B:
+          </p>
+        </div>
+
+        <!-- Problem Statement Table -->
+        <div class="overflow-x-auto rounded-2xl border border-slate-200 dark:border-slate-800">
+          <table class="min-w-full text-xs text-left">
+            <thead class="bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 font-bold uppercase tracking-wider">
+              <tr>
+                <th class="p-3">Portfolio / Benchmark</th>
+                <th class="p-3">Annual Return (R)</th>
+                <th class="p-3">Std Dev (&sigma;)</th>
+                <th class="p-3">Beta (&beta;)</th>
+                <th class="p-3">Downside Dev (&sigma;<sub>d</sub>)</th>
+                <th class="p-3">Tracking Error (TE)</th>
+              </tr>
+            </thead>
+            <tbody class="divide-y divide-slate-200 dark:divide-slate-800">
+              <tr class="hover:bg-slate-50 dark:hover:bg-slate-800/50">
+                <td class="p-3 font-bold text-indigo-600 dark:text-indigo-400">Scheme A (Large Cap Active)</td>
+                <td class="p-3 font-semibold text-slate-900 dark:text-white">16.0%</td>
+                <td class="p-3 text-slate-600 dark:text-slate-300">18.0%</td>
+                <td class="p-3 text-slate-600 dark:text-slate-300">1.10</td>
+                <td class="p-3 text-slate-600 dark:text-slate-300">10.0%</td>
+                <td class="p-3 text-slate-600 dark:text-slate-300">3.5%</td>
+              </tr>
+              <tr class="hover:bg-slate-50 dark:hover:bg-slate-800/50">
+                <td class="p-3 font-bold text-amber-600 dark:text-amber-400">Scheme B (Flexi Cap Active)</td>
+                <td class="p-3 font-semibold text-slate-900 dark:text-white">18.5%</td>
+                <td class="p-3 text-slate-600 dark:text-slate-300">22.0%</td>
+                <td class="p-3 text-slate-600 dark:text-slate-300">1.35</td>
+                <td class="p-3 text-slate-600 dark:text-slate-300">12.5%</td>
+                <td class="p-3 text-slate-600 dark:text-slate-300">5.0%</td>
+              </tr>
+              <tr class="hover:bg-slate-50 dark:hover:bg-slate-800/50 bg-slate-100/60 dark:bg-slate-800/50">
+                <td class="p-3 font-bold text-slate-700 dark:text-slate-300">Nifty 50 TRI (Market Benchmark)</td>
+                <td class="p-3 font-semibold text-slate-900 dark:text-white">13.0%</td>
+                <td class="p-3 text-slate-600 dark:text-slate-300">15.0%</td>
+                <td class="p-3 text-slate-600 dark:text-slate-300">1.00</td>
+                <td class="p-3 text-slate-600 dark:text-slate-300">-</td>
+                <td class="p-3 text-slate-600 dark:text-slate-300">-</td>
+              </tr>
+              <tr class="hover:bg-slate-50 dark:hover:bg-slate-800/50 bg-slate-100/60 dark:bg-slate-800/50">
+                <td class="p-3 font-bold text-slate-700 dark:text-slate-300">Risk-Free Rate (R<sub>f</sub> / 91-DTB)</td>
+                <td class="p-3 font-semibold text-slate-900 dark:text-white">6.5%</td>
+                <td class="p-3 text-slate-600 dark:text-slate-300">0.0%</td>
+                <td class="p-3 text-slate-600 dark:text-slate-300">0.00</td>
+                <td class="p-3 text-slate-600 dark:text-slate-300">-</td>
+                <td class="p-3 text-slate-600 dark:text-slate-300">-</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <!-- Step-by-Step Mathematical Computation Grid -->
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4 text-xs">
+          
+          <div class="p-4 rounded-2xl bg-indigo-50/60 dark:bg-indigo-950/40 border border-indigo-200 dark:border-indigo-800 space-y-2">
+            <h4 class="font-bold text-indigo-900 dark:text-indigo-300 text-sm">Scheme A Computations:</h4>
+            <div>&bull; <strong>Sharpe:</strong> (16.0% - 6.5%) / 18.0% = 9.5 / 18 = <strong>0.528</strong></div>
+            <div>&bull; <strong>Treynor:</strong> (16.0% - 6.5%) / 1.10 = 9.5 / 1.10 = <strong>8.636%</strong></div>
+            <div>&bull; <strong>Sortino:</strong> (16.0% - 6.5%) / 10.0% = 9.5 / 10 = <strong>0.950</strong></div>
+            <div>&bull; <strong>CAPM Required Return:</strong> 6.5% + 1.10 &times; (13.0% - 6.5%) = 6.5% + 7.15% = 13.65%</div>
+            <div>&bull; <strong>Jensen's Alpha (&alpha;):</strong> 16.0% - 13.65% = <strong class="text-emerald-600 dark:text-emerald-400">+2.35%</strong></div>
+            <div>&bull; <strong>Information Ratio:</strong> (16.0% - 13.0%) / 3.5% = 3.0 / 3.5 = <strong>0.857</strong></div>
+          </div>
+
+          <div class="p-4 rounded-2xl bg-amber-50/60 dark:bg-amber-950/40 border border-amber-200 dark:border-amber-800 space-y-2">
+            <h4 class="font-bold text-amber-900 dark:text-amber-300 text-sm">Scheme B Computations:</h4>
+            <div>&bull; <strong>Sharpe:</strong> (18.5% - 6.5%) / 22.0% = 12.0 / 22 = <strong>0.545</strong></div>
+            <div>&bull; <strong>Treynor:</strong> (18.5% - 6.5%) / 1.35 = 12.0 / 1.35 = <strong>8.889%</strong></div>
+            <div>&bull; <strong>Sortino:</strong> (18.5% - 6.5%) / 12.5% = 12.0 / 12.5 = <strong>0.960</strong></div>
+            <div>&bull; <strong>CAPM Required Return:</strong> 6.5% + 1.35 &times; (13.0% - 6.5%) = 6.5% + 8.775% = 15.275%</div>
+            <div>&bull; <strong>Jensen's Alpha (&alpha;):</strong> 18.5% - 15.275% = <strong class="text-emerald-600 dark:text-emerald-400">+3.225%</strong></div>
+            <div>&bull; <strong>Information Ratio:</strong> (18.5% - 13.0%) / 5.0% = 5.5 / 5.0 = <strong>1.100</strong></div>
+          </div>
+
+        </div>
+
+        <div class="p-4 rounded-2xl bg-emerald-50 dark:bg-emerald-950/60 border border-emerald-200 dark:border-emerald-800 text-xs text-slate-700 dark:text-slate-300 leading-relaxed">
+          <strong>Advisory Synthesis:</strong> While Scheme B exhibits higher raw volatility (22% vs 18%), it generated superior risk-adjusted performance across ALL metrics: higher Sharpe (0.545 vs 0.528), higher Treynor (8.89% vs 8.64%), higher Jensen Alpha (+3.225% vs +2.35%), and an exceptional Information Ratio of 1.10, confirming high active management consistency.
+        </div>
+      </section>
+
+      <!-- Section 19.5 -->
+      <section id="section-5" class="bg-white dark:bg-slate-900 rounded-3xl p-6 sm:p-8 border border-slate-200 dark:border-slate-800 shadow-xs space-y-5">
+        <div class="flex items-center justify-between">
+          <div class="flex items-center gap-2 text-xs font-bold text-slate-500 uppercase tracking-wider">
+            <span class="w-2 h-2 rounded-full bg-amber-500"></span> Section 19.5 &bull; Portfolio Maintenance
+          </div>
+          <span class="text-xs px-2.5 py-1 rounded-full bg-amber-50 dark:bg-amber-950 text-amber-700 dark:text-amber-300 font-bold border border-amber-200 dark:border-amber-800">
+            Rebalancing & Tax Friction ⭐
+          </span>
+        </div>
+
+        <div>
+          <h2 class="font-display font-bold text-xl sm:text-2xl text-slate-900 dark:text-white">
+            Portfolio Rebalancing Triggers & Tax Drag Optimization
+          </h2>
+          <p class="text-xs sm:text-sm text-slate-600 dark:text-slate-300 mt-1 leading-relaxed">
+            Market movements inevitably distort a client's baseline Strategic Asset Allocation. Rebalancing restores the risk profile, but incurs transaction brokerage, exit loads, and tax drag.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
+          
+          <div class="p-5 rounded-2xl bg-slate-50 dark:bg-slate-800/70 border border-slate-200 dark:border-slate-700 space-y-3">
+            <h4 class="font-display font-bold text-sm text-slate-900 dark:text-white">1. Rebalancing Trigger Methodologies</h4>
+            <div class="text-xs text-slate-600 dark:text-slate-300 space-y-2 leading-relaxed">
+              <p>&bull; <strong>Calendar Rebalancing:</strong> Rebalancing at predetermined calendar intervals (e.g. annually on April 1). Simple to administer, but can trigger unnecessary trading in sideways markets.</p>
+              <p>&bull; <strong>Percentage-of-Portfolio Corridor Rebalancing ⭐:</strong> Establishing tolerance corridors around SAA targets (e.g., 60% Equity &plusmn; 5%, i.e. 55% to 65%). Rebalance ONLY when weight breaches the corridor. This drastically curtails tax drag and trading friction.</p>
+              <p>&bull; <strong>Volatility / CPPI Triggers:</strong> Dynamic shifts based on market risk multipliers.</p>
+            </div>
+          </div>
+
+          <div class="p-5 rounded-2xl bg-slate-50 dark:bg-slate-800/70 border border-slate-200 dark:border-slate-700 space-y-3">
+            <h4 class="font-display font-bold text-sm text-slate-900 dark:text-white">2. Tax Optimization Rules (Post Budget 2024)</h4>
+            <div class="text-xs text-slate-600 dark:text-slate-300 space-y-2 leading-relaxed">
+              <p>&bull; <strong>Equity LTCG (Sec 112A):</strong> 12.5% on gains exceeding ₹1.25 Lakh per financial year (Holding &gt; 12 months).</p>
+              <p>&bull; <strong>Equity STCG (Sec 111A):</strong> 20% on gains (Holding &le; 12 months).</p>
+              <p>&bull; <strong>Specified Mutual Funds (Sec 50AA):</strong> Debt funds with equity &le; 35% taxed at slab rates regardless of holding period.</p>
+              <p>&bull; <strong>Cash-Flow Rebalancing Strategy:</strong> Rebalance by routing fresh SIPs/dividends into underweighted assets rather than selling appreciated assets, completely eliminating tax liability!</p>
+            </div>
+          </div>
+
+        </div>
+      </section>
+
+      <!-- Section 19.6: Interactive Chapter Quiz -->
+      <section id="interactive-quiz" class="p-6 sm:p-8 rounded-3xl bg-slate-900 text-white space-y-6 shadow-xl">
+        <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 border-b border-slate-800 pb-5">
+          <div>
+            <div class="flex items-center gap-2 text-xs font-bold text-indigo-400 uppercase tracking-wider mb-1">
+              <i data-lucide="check-circle" class="w-4 h-4"></i> Interactive Exam Assessment
+            </div>
+            <h3 class="font-display font-bold text-xl sm:text-2xl text-white">Chapter 19 Practice Quiz</h3>
+            <p class="text-xs text-slate-400 mt-1">12 Exam-standard questions covering PMS vs AIF regulatory tickets, SGB rules, Sharpe, Treynor, Sortino, Jensen's Alpha, and rebalancing corridors.</p>
+          </div>
+          <div class="flex items-center gap-3">
+            <div class="text-right">
+              <span class="text-xs text-slate-400">Progress</span>
+              <div class="text-sm font-bold text-indigo-400"><span id="answered-count">0</span> / 12</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Questions Container -->
+        <div id="quiz-container" class="space-y-6"></div>
+
+        <!-- Action Bar -->
+        <div class="pt-4 border-t border-slate-800 flex flex-col sm:flex-row items-center justify-between gap-4">
+          <button id="submit-quiz-btn" onclick="submitQuiz()" class="w-full sm:w-auto px-6 py-3 rounded-xl bg-indigo-600 hover:bg-indigo-500 font-bold text-sm shadow-lg shadow-indigo-600/30 transition-all flex items-center justify-center gap-2 cursor-pointer">
+            <span>Submit Quiz & View Results</span>
+            <i data-lucide="arrow-right" class="w-4 h-4"></i>
+          </button>
+          <button id="reset-quiz-btn" onclick="resetQuiz()" class="hidden w-full sm:w-auto px-6 py-3 rounded-xl bg-slate-800 hover:bg-slate-700 text-slate-300 font-bold text-sm transition-all flex items-center justify-center gap-2 cursor-pointer">
+            <i data-lucide="rotate-ccw" class="w-4 h-4"></i>
+            <span>Retake Quiz</span>
+          </button>
+        </div>
+
+        <!-- Quiz Results -->
+        <div id="quiz-results" class="hidden p-6 rounded-2xl bg-slate-800/80 border border-slate-700 space-y-4">
+          <div class="flex items-center justify-between">
+            <h4 class="font-display font-bold text-lg text-white">Quiz Score Summary</h4>
+            <span id="result-status-badge" class="px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider"></span>
+          </div>
+          <div class="flex items-baseline gap-3">
+            <span id="score-display" class="font-display font-extrabold text-4xl text-indigo-400"></span>
+            <span id="percentage-display" class="text-sm text-slate-400 font-medium"></span>
+          </div>
+          <p id="result-summary-text" class="text-xs sm:text-sm text-slate-300"></p>
+        </div>
+      </section>
+
+      <!-- Bottom Navigation Footer -->
+      <footer class="pt-6 border-t border-slate-200 dark:border-slate-800 flex items-center justify-between">
+        <a href="module12-ch18.html" class="flex items-center gap-2 px-4 py-2.5 rounded-xl border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-800 hover:bg-slate-50 dark:hover:bg-slate-750 text-slate-700 dark:text-slate-300 font-medium text-xs transition-colors">
+          <i data-lucide="arrow-left" class="w-4 h-4"></i>
+          <span>Prev: Chapter 18 (Risk Profiling)</span>
+        </a>
+        <a href="module12-ch20.html" class="flex items-center gap-2 px-5 py-2.5 rounded-xl bg-amber-500 hover:bg-amber-400 text-slate-950 font-bold text-xs shadow-sm transition-colors">
+          <span>Proceed to Chapter 20 (4 Master Cases)</span>
+          <i data-lucide="arrow-right" class="w-4 h-4"></i>
+        </a>
+      </footer>
+
+    </div>
+  </div>
+
+  <script>
+    const questionsData = [
+      {
+        id: 1,
+        question: "What is the mandatory minimum investment ticket size prescribed by SEBI for an individual client entering a Portfolio Management Services (PMS) contract?",
+        options: [
+          { key: "a", text: "₹10 Lakhs" },
+          { key: "b", text: "₹25 Lakhs" },
+          { key: "c", text: "₹50 Lakhs" },
+          { key: "d", text: "₹1 Crore" }
+        ],
+        correct: "c",
+        explanation: "Under the SEBI (Portfolio Managers) Regulations, 2020, the minimum investment amount per client for Portfolio Management Services (PMS) is ₹50 Lakhs."
+      },
+      {
+        id: 2,
+        question: "What is the minimum investment commitment required from an individual investor in an Alternative Investment Fund (AIF) under SEBI (AIF) Regulations, 2012?",
+        options: [
+          { key: "a", text: "₹50 Lakhs" },
+          { key: "b", text: "₹1 Crore" },
+          { key: "c", text: "₹2 Crores" },
+          { key: "d", text: "₹5 Crores" }
+        ],
+        correct: "b",
+        explanation: "Under SEBI (AIF) Regulations, 2012, the minimum investment commitment for an investor in any category of AIF (Cat I, II, or III) is ₹1 Crore (concessional ₹25 Lakhs for employees/directors of the AIF/manager)."
+      },
+      {
+        id: 3,
+        question: "Under the High-Water Mark (HWM) principle mandated by SEBI for Portfolio Management Services (PMS), when can a portfolio manager levy a performance fee?",
+        options: [
+          { key: "a", text: "Whenever the portfolio posts positive returns in any single quarter" },
+          { key: "b", text: "Only when the portfolio NAV exceeds the highest previous peak net of all fees and expenses" },
+          { key: "c", text: "At the end of every calendar month regardless of NAV performance" },
+          { key: "d", text: "Whenever the Nifty 50 index moves up by more than 5%" }
+        ],
+        correct: "b",
+        explanation: "The High-Water Mark principle ensures that a manager cannot charge performance fees for merely recouping past portfolio losses. Fees can only be levied when the NAV breaks past its previous historic highest level."
+      },
+      {
+        id: 4,
+        question: "How are Sovereign Gold Bonds (SGBs) taxed upon redemption with the Reserve Bank of India at the end of their official 8-year maturity period?",
+        options: [
+          { key: "a", text: "Taxed at 20% with indexation benefit" },
+          { key: "b", text: "Taxed at 12.5% without indexation under Section 112" },
+          { key: "c", text: "Completely 100% EXEMPT from capital gains tax for individual investors" },
+          { key: "d", text: "Taxed as ordinary income at the investor's marginal slab rate" }
+        ],
+        correct: "c",
+        explanation: "Under Section 47 of the Income Tax Act, capital gains arising to an individual on redemption of Sovereign Gold Bonds (SGB) directly with the RBI at maturity (after 8 years) are completely 100% tax-exempt."
+      },
+      {
+        id: 5,
+        question: "An investor is deciding whether to use the Sharpe Ratio or the Treynor Ratio to evaluate a mutual fund scheme. Under which circumstance is the Treynor Ratio the mathematically superior metric?",
+        options: [
+          { key: "a", text: "When the scheme is being evaluated as an entire standalone portfolio" },
+          { key: "b", text: "When the scheme is being added to an already well-diversified multi-asset portfolio where unsystematic risk has been eliminated" },
+          { key: "c", text: "When the scheme holds only physical gold and cash" },
+          { key: "d", text: "When the fund manager has zero track record" }
+        ],
+        correct: "b",
+        explanation: "Treynor ratio uses Beta (Systematic Risk) in the denominator. When an investment is part of a broad diversified portfolio, unique unsystematic risk is diversified away, making systematic risk the only relevant risk parameter."
+      },
+      {
+        id: 6,
+        question: "An equity mutual fund scheme has an annual return of 15.0%, standard deviation of 16.0%, and a beta of 1.20. The risk-free rate is 6.0%. What are the scheme's Sharpe Ratio and Treynor Ratio respectively?",
+        options: [
+          { key: "a", text: "Sharpe: 0.563; Treynor: 7.50%" },
+          { key: "b", text: "Sharpe: 0.938; Treynor: 12.50%" },
+          { key: "c", text: "Sharpe: 0.500; Treynor: 6.00%" },
+          { key: "d", text: "Sharpe: 0.750; Treynor: 9.00%" }
+        ],
+        correct: "a",
+        explanation: "Sharpe = (Rp - Rf) / σ = (15.0% - 6.0%) / 16.0% = 9.0 / 16.0 = 0.5625 (0.563). Treynor = (Rp - Rf) / β = (15.0% - 6.0%) / 1.20 = 9.0 / 1.20 = 7.50%."
+      },
+      {
+        id: 7,
+        question: "A portfolio generated a return of 17.0% with a beta of 1.15. The market return was 13.0% and the risk-free rate was 6.0%. What is the Jensen's Alpha (α) of the portfolio?",
+        options: [
+          { key: "a", text: "+4.00%" },
+          { key: "b", text: "+2.95%" },
+          { key: "c", text: "-1.05%" },
+          { key: "d", text: "+1.50%" }
+        ],
+        correct: "b",
+        explanation: "CAPM Required Return = Rf + β(Rm - Rf) = 6.0% + 1.15 × (13.0% - 6.0%) = 6.0% + 1.15 × 7.0% = 6.0% + 8.05% = 14.05%. Jensen's Alpha = Actual Return - Required Return = 17.0% - 14.05% = +2.95%."
+      },
+      {
+        id: 8,
+        question: "Why do financial advisers prefer the Sortino Ratio over the Sharpe Ratio when evaluating asymmetric return portfolios such as long-short equity or hedge funds?",
+        options: [
+          { key: "a", text: "Sortino ratio ignores taxes and inflation" },
+          { key: "b", text: "Sortino ratio penalizes only harmful downside volatility below a target return, whereas Sharpe penalizes upside volatility equally" },
+          { key: "c", text: "Sortino ratio requires zero historical data" },
+          { key: "d", text: "Sortino ratio is endorsed exclusively by RBI" }
+        ],
+        correct: "b",
+        explanation: "Sharpe ratio uses total standard deviation, which penalizes large positive upside swings as 'risk'. Sortino ratio replaces total standard deviation with downside semi-deviation below MAR, penalizing only negative volatility."
+      },
+      {
+        id: 9,
+        question: "What is the critical statistical warning regarding the Coefficient of Determination (R²) when evaluating a fund's Beta and Treynor Ratio?",
+        options: [
+          { key: "a", text: "If R² exceeds 0.50, the fund must be liquidated" },
+          { key: "b", text: "If R² is less than 0.70 (70%), the fund's Beta and Treynor ratio become statistically unreliable and invalid" },
+          { key: "c", text: "R² must always be negative" },
+          { key: "d", text: "R² applies only to sovereign gold bonds" }
+        ],
+        correct: "b",
+        explanation: "R-squared measures the percentage of fund variation explained by the benchmark. If R² < 0.70, it means the benchmark does not adequately represent the fund's portfolio, rendering its Beta and Treynor ratio statistically unreliable."
+      },
+      {
+        id: 10,
+        question: "An active equity fund generated an annualized return of 16.5% against its benchmark index return of 14.0%. The Tracking Error (annualized standard deviation of excess returns) was 2.5%. What is the fund's Information Ratio (IR)?",
+        options: [
+          { key: "a", text: "0.60" },
+          { key: "b", text: "1.00" },
+          { key: "c", text: "1.50" },
+          { key: "d", text: "2.50" }
+        ],
+        correct: "b",
+        explanation: "Information Ratio = (Portfolio Return - Benchmark Return) / Tracking Error = (16.5% - 14.0%) / 2.5% = 2.5% / 2.5% = 1.00. An IR of 1.00 reflects exceptional active management consistency."
+      },
+      {
+        id: 11,
+        question: "An investor's strategic asset allocation target is 60% Equity and 40% Debt with a ±5% corridor band. Following a massive stock market rally, the portfolio composition drifts to 68% Equity and 32% Debt. What action is required under corridor-based rebalancing?",
+        options: [
+          { key: "a", text: "Take no action because equity is generating high profits" },
+          { key: "b", text: "Rebalance by selling 8% of equity and buying debt to restore the baseline target of 60% Equity : 40% Debt" },
+          { key: "c", text: "Shift 100% of debt into equity derivatives" },
+          { key: "d", text: "Borrow money to purchase additional equity shares" }
+        ],
+        correct: "b",
+        explanation: "The upper tolerance corridor was 65% (60% + 5%). Since equity breached the band at 68%, corridor rebalancing triggers a sell transaction of 8% equity to restore the portfolio to its baseline target of 60% Equity and 40% Debt."
+      },
+      {
+        id: 12,
+        question: "How can a financial adviser minimize capital gains tax drag and transaction costs when rebalancing a growing investor portfolio back to its target asset allocation?",
+        options: [
+          { key: "a", text: "Redeem 100% of all holdings on December 31 every year" },
+          { key: "b", text: "Use fresh incoming cash flows (monthly SIPs, bonus lump-sums, dividends) to purchase the underweighted asset class rather than selling appreciated assets" },
+          { key: "c", text: "Execute short futures contracts on every stock holding" },
+          { key: "d", text: "Ignore asset allocation entirely to avoid paying tax" }
+        ],
+        correct: "b",
+        explanation: "Cash-flow rebalancing uses new savings, SIPs, and dividends to buy underweighted asset classes. This gradually restores target weights without triggering sales of appreciated assets, avoiding capital gains tax and transaction friction."
+      }
+    ];
+
+    let userAnswers = {};
+
+    function renderQuiz() {
+      const container = document.getElementById("quiz-container");
+      container.innerHTML = "";
+      questionsData.forEach((q, idx) => {
+        const qDiv = document.createElement("div");
+        qDiv.className = "p-5 rounded-2xl bg-white/5 border border-white/10 space-y-3";
+        
+        let optionsHtml = "";
+        q.options.forEach(opt => {
+          optionsHtml += `
+            <label id="label-${q.id}-${opt.key}" onclick="selectOption(${q.id}, '${opt.key}')" class="flex items-center gap-3 p-3 rounded-xl bg-white/5 hover:bg-white/10 border border-white/5 cursor-pointer text-xs sm:text-sm transition-all">
+              <input type="radio" name="q-${q.id}" value="${opt.key}" class="hidden" />
+              <div id="circle-${q.id}-${opt.key}" class="w-6 h-6 rounded-full border border-slate-500 flex items-center justify-center font-bold text-xs shrink-0 text-slate-300">${opt.key.toUpperCase()}</div>
+              <span class="text-slate-300">${opt.text}</span>
+            </label>
+          `;
+        });
+
+        qDiv.innerHTML = `
+          <div class="flex items-center justify-between">
+            <span class="text-xs font-bold text-indigo-400">Question ${idx + 1} of ${questionsData.length}</span>
+            <span id="badge-${q.id}" class="text-xs px-2.5 py-0.5 rounded-full bg-slate-800 text-slate-400 font-medium">Unanswered</span>
+          </div>
+          <h4 class="font-display font-semibold text-sm sm:text-base text-white leading-snug">${q.question}</h4>
+          <div class="space-y-2 mt-3">${optionsHtml}</div>
+          <div id="explanation-${q.id}" class="hidden p-4 rounded-xl text-xs sm:text-sm mt-3 space-y-1"></div>
+        `;
+        container.appendChild(qDiv);
+      });
+      lucide.createIcons();
+    }
+
+    function selectOption(qId, key) {
+      userAnswers[qId] = key;
+      document.getElementById("answered-count").innerText = Object.keys(userAnswers).length;
+      
+      const badge = document.getElementById(`badge-${qId}`);
+      if (badge) {
+        badge.innerText = "Answered";
+        badge.className = "text-xs px-2.5 py-0.5 rounded-full bg-indigo-500/20 text-indigo-300 font-medium border border-indigo-500/30";
+      }
+
+      const q = questionsData.find(item => item.id === qId);
+      q.options.forEach(opt => {
+        const lbl = document.getElementById(`label-${qId}-${opt.key}`);
+        const circle = document.getElementById(`circle-${qId}-${opt.key}`);
+        if (opt.key === key) {
+          lbl.className = "flex items-center gap-3 p-3 rounded-xl bg-indigo-600/30 border border-indigo-400/60 cursor-pointer text-xs sm:text-sm transition-all shadow-sm";
+          circle.className = "w-6 h-6 rounded-full bg-indigo-600 text-white font-bold text-xs shrink-0 flex items-center justify-center border border-indigo-400";
+        } else {
+          lbl.className = "flex items-center gap-3 p-3 rounded-xl bg-white/5 hover:bg-white/10 border border-white/5 cursor-pointer text-xs sm:text-sm transition-all";
+          circle.className = "w-6 h-6 rounded-full border border-slate-500 flex items-center justify-center font-bold text-xs shrink-0 text-slate-300";
+        }
+      });
+    }
+
+    function submitQuiz() {
+      let score = 0;
+      questionsData.forEach(q => {
+        const selected = userAnswers[q.id];
+        const isCorrect = selected === q.correct;
+        if (isCorrect) score++;
+
+        const explanationDiv = document.getElementById(`explanation-${q.id}`);
+        explanationDiv.classList.remove("hidden");
+
+        q.options.forEach(opt => {
+          const lbl = document.getElementById(`label-${q.id}-${opt.key}`);
+          const circle = document.getElementById(`circle-${q.id}-${opt.key}`);
+          lbl.onclick = null;
+          lbl.classList.remove("cursor-pointer");
+
+          if (opt.key === q.correct) {
+            lbl.className = "flex items-center gap-3 p-3 rounded-xl bg-emerald-950/60 border border-emerald-500 text-emerald-200 text-xs sm:text-sm";
+            circle.className = "w-6 h-6 rounded-full bg-emerald-600 text-white font-bold text-xs shrink-0 flex items-center justify-center";
+          } else if (opt.key === selected && !isCorrect) {
+            lbl.className = "flex items-center gap-3 p-3 rounded-xl bg-rose-950/60 border border-rose-500 text-rose-200 text-xs sm:text-sm";
+            circle.className = "w-6 h-6 rounded-full bg-rose-600 text-white font-bold text-xs shrink-0 flex items-center justify-center";
+          }
+        });
+
+        if (isCorrect) {
+          explanationDiv.className = "p-4 rounded-xl text-xs sm:text-sm mt-3 bg-emerald-950/60 border border-emerald-600/80 text-emerald-200 space-y-1";
+          explanationDiv.innerHTML = `<div class="font-bold text-emerald-400 flex items-center gap-1.5"><i data-lucide="check-circle" class="w-4 h-4"></i> Correct!</div><p class="leading-relaxed">${q.explanation}</p>`;
+        } else {
+          explanationDiv.className = "p-4 rounded-xl text-xs sm:text-sm mt-3 bg-rose-950/60 border border-rose-600/80 text-rose-200 space-y-1";
+          explanationDiv.innerHTML = `<div class="font-bold text-rose-400 flex items-center gap-1.5"><i data-lucide="x-circle" class="w-4 h-4"></i> Incorrect (Correct Answer: Option ${q.correct.toUpperCase()})</div><p class="leading-relaxed">${q.explanation}</p>`;
+        }
+      });
+
+      const percentage = Math.round((score / questionsData.length) * 100);
+      const passed = percentage >= 60;
+      
+      const resultsDiv = document.getElementById("quiz-results");
+      resultsDiv.classList.remove("hidden");
+
+      const statusBadge = document.getElementById("result-status-badge");
+      statusBadge.innerText = passed ? "Passed (60%+ Benchmark)" : "Needs Revision (<60%)";
+      statusBadge.className = passed ? "px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider bg-emerald-500 text-emerald-950" : "px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider bg-amber-500 text-amber-950";
+
+      document.getElementById("score-display").innerText = `${score} / ${questionsData.length}`;
+      document.getElementById("percentage-display").innerText = `${percentage}% Score (Passing Benchmark: 60%)`;
+
+      document.getElementById("result-summary-text").innerText = passed
+        ? `Exceptional mastery! You scored ${percentage}%, demonstrating full command of PMS vs AIF regulations, SGB tax advantages, Sharpe/Treynor math, Jensen's Alpha, and portfolio rebalancing corridor triggers.`
+        : `You scored ${percentage}%. Please review the Sharpe vs Treynor denominator distinctions, High-Water Mark rules, and corridor rebalancing mechanics before retesting.`;
+
+      document.getElementById("submit-quiz-btn").classList.add("hidden");
+      document.getElementById("reset-quiz-btn").classList.remove("hidden");
+
+      resultsDiv.scrollIntoView({ behavior: 'smooth' });
+      lucide.createIcons();
+    }
+
+    function resetQuiz() {
+      userAnswers = {};
+      document.getElementById("answered-count").innerText = "0";
+      document.getElementById("quiz-results").classList.add("hidden");
+      document.getElementById("submit-quiz-btn").classList.remove("hidden");
+      document.getElementById("reset-quiz-btn").classList.add("hidden");
+      renderQuiz();
+      document.getElementById("interactive-quiz").scrollIntoView({ behavior: 'smooth' });
+    }
+
+    renderQuiz();
+    lucide.createIcons();
+  </script>
+</body>
+</html>

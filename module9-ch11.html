@@ -1,0 +1,713 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Chapter 11: Taxation of Equity Products | NISM Series X-B Notes</title>
+  
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  
+  <!-- Google Fonts: DM Sans & Jost (Eduleb Benchmark) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Jost:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+  
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+
+  <!-- Modern Documentation Design System -->
+  <link rel="stylesheet" href="modern-docs.css">
+  <script defer src="nav-sidebar.js"></script>
+
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['"DM Sans"', 'sans-serif'],
+            display: ['"Jost"', 'sans-serif'],
+            heading: ['"Jost"', 'sans-serif']
+          },
+          colors: {
+            brand: {
+              50: '#eef2ff',
+              100: '#e0e7ff',
+              500: '#525fe1',
+              600: '#434ec9',
+              700: '#353db3',
+              800: '#282f9c',
+              900: '#0b104a'
+            }
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    body {
+      font-family: 'DM Sans', sans-serif;
+      font-size: 16px;
+      line-height: 26px;
+      color: #4a5355;
+    }
+    h1, h2, h3, h4, h5, h6, .font-display, .font-heading {
+      font-family: 'Jost', sans-serif;
+      font-weight: 700;
+    }
+  </style>
+</head>
+<body class="bg-slate-50 dark:bg-slate-950 text-slate-900 dark:text-slate-100 min-h-screen flex flex-col selection:bg-emerald-500 selection:text-white antialiased transition-colors duration-200">
+
+  <!-- Smooth Opening Preloader -->
+  <div class="preloaders" id="eduleb-preloader">
+    <span class="loader"></span>
+    <div class="preloader-label">Chapter 11: Taxation of Equity Products</div>
+  </div>
+
+  <!-- Standardized Header (Single-Tier, 64px) -->
+  <header class="sticky top-0 z-40 bg-white/95 dark:bg-slate-900/95 backdrop-blur-md border-b border-slate-200/80 dark:border-slate-800 shadow-xs">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 h-16 flex items-center justify-between">
+      <!-- Left: Navigation Back & Chapter Info -->
+      <div class="flex items-center gap-3">
+        <a href="module9.html" class="flex items-center gap-2 text-slate-500 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white transition-colors" title="Back to Module 9 Hub">
+          <div class="w-9 h-9 rounded-xl bg-slate-100 dark:bg-slate-800 hover:bg-slate-200 dark:hover:bg-slate-700 flex items-center justify-center text-slate-700 dark:text-slate-200 transition-colors">
+            <i data-lucide="arrow-left" class="w-4 h-4"></i>
+          </div>
+        </a>
+        <div>
+          <div class="flex items-center gap-2">
+            <span class="text-[11px] font-bold uppercase tracking-wider text-emerald-600 dark:text-emerald-400 bg-emerald-50 dark:bg-emerald-950/70 px-2 py-0.5 rounded">Module 9</span>
+            <span class="text-[11px] text-slate-400 font-medium">Chapter 11 of 13</span>
+          </div>
+          <h1 class="font-display font-bold text-sm sm:text-base text-slate-900 dark:text-white leading-tight">Taxation of Equity Products</h1>
+        </div>
+      </div>
+
+      <!-- Right: Search, Theme, Quiz Jump -->
+      <div class="flex items-center gap-2">
+        <span class="hidden md:inline-flex items-center gap-1 px-3 py-1 rounded-full text-xs font-bold bg-emerald-50 dark:bg-emerald-950/70 text-emerald-700 dark:text-emerald-300 border border-emerald-200 dark:border-emerald-800">
+          <i data-lucide="star" class="w-3.5 h-3.5 fill-emerald-500 text-emerald-500"></i>
+          Core Exam Pillar ⭐
+        </span>
+        <button onclick="window.openSpotlightModal()" class="flex items-center gap-2 px-3 py-1.5 rounded-full border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-800 text-slate-500 dark:text-slate-400 text-xs font-medium" title="Search (⌘K)">
+          <i data-lucide="search" class="w-3.5 h-3.5 text-emerald-600"></i>
+          <span class="hidden sm:inline">Search</span>
+          <kbd class="px-1.5 py-0.5 rounded bg-slate-100 dark:bg-slate-700 text-[10px] font-mono text-slate-400">⌘K</kbd>
+        </button>
+        <button id="nism-header-theme-btn" onclick="window.toggleDarkMode()" class="p-2 rounded-full border border-slate-200 dark:border-slate-700 text-slate-600 dark:text-slate-300 bg-white dark:bg-slate-800" title="Toggle Theme (⌘D)">
+          <i data-lucide="moon" class="w-4 h-4"></i>
+        </button>
+        <a href="#interactive-quiz" class="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-full text-xs font-bold text-white bg-emerald-600 hover:bg-emerald-700 font-display transition-colors">
+          <i data-lucide="help-circle" class="w-3.5 h-3.5"></i>
+          <span>Chapter Quiz</span>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Content Layout -->
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 grid grid-cols-1 lg:grid-cols-12 gap-8 flex-grow">
+    
+    <!-- Table of Contents Sidebar (Desktop) -->
+    <aside class="hidden lg:block lg:col-span-3">
+      <div class="sticky top-24 space-y-4">
+        <div class="rounded-2xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 p-4 shadow-xs">
+          <div class="flex items-center gap-2 font-display font-bold text-xs uppercase tracking-wider text-slate-400 mb-3">
+            <i data-lucide="bookmark" class="w-3.5 h-3.5 text-emerald-600"></i>
+            <span>Chapter Sections</span>
+          </div>
+          <nav class="space-y-1 text-xs">
+            <a href="#section-1" class="block px-2.5 py-1.5 rounded-lg text-emerald-700 dark:text-emerald-400 font-bold bg-emerald-50/80 dark:bg-emerald-950/40 hover:bg-emerald-100 transition-colors">11.1 Listed Shares & Equity MFs (Sec 111A & 112A) ⭐</a>
+            <a href="#section-2" class="block px-2.5 py-1.5 rounded-lg text-slate-600 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800 hover:text-emerald-600 transition-colors">11.2 Unlisted Equity Shares</a>
+            <a href="#section-3" class="block px-2.5 py-1.5 rounded-lg text-slate-600 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800 hover:text-emerald-600 transition-colors">11.3 Securities Transaction Tax (STT)</a>
+            <a href="#section-4" class="block px-2.5 py-1.5 rounded-lg text-amber-700 dark:text-amber-400 font-bold bg-amber-50/80 dark:bg-amber-950/40 hover:bg-amber-100 transition-colors">11.4 Dividend Stripping (Sec 94(7)) ⭐</a>
+            <a href="#section-5" class="block px-2.5 py-1.5 rounded-lg text-rose-700 dark:text-rose-400 font-bold bg-rose-50/80 dark:bg-rose-950/40 hover:bg-rose-100 transition-colors">11.5 Bonus Stripping (Sec 94(8)) ⭐</a>
+            <a href="#interactive-quiz" class="block px-2.5 py-1.5 rounded-lg text-emerald-600 dark:text-emerald-400 font-bold bg-emerald-50 dark:bg-emerald-950/70 hover:bg-emerald-100 transition-colors mt-2">Practice Quiz (12 Questions)</a>
+          </nav>
+        </div>
+
+        <!-- Exam Alert Card -->
+        <div class="p-4 rounded-2xl bg-gradient-to-br from-emerald-600 to-teal-700 text-white shadow-sm text-xs space-y-2">
+          <div class="flex items-center gap-1.5 font-bold">
+            <i data-lucide="award" class="w-4 h-4 text-emerald-200"></i>
+            <span>FA 2024 Key Slabs</span>
+          </div>
+          <p class="text-emerald-100 leading-relaxed">
+            Memorize the new rates effective July 2024: <strong>STCG Sec 111A is 20%</strong> (up from 15%), <strong>LTCG Sec 112A is 12.5%</strong> (up from 10%), and the annual exemption is <strong>₹1.25 Lakhs</strong> (up from ₹1 Lakh).
+          </p>
+        </div>
+      </div>
+    </aside>
+
+    <!-- Main Content Area -->
+    <main class="lg:col-span-9 space-y-8">
+      
+      <!-- Section 11.1: Listed Shares & Equity MFs ⭐ -->
+      <section id="section-1" class="bg-white dark:bg-slate-900 rounded-3xl p-6 sm:p-8 border-2 border-emerald-400/80 dark:border-emerald-600/50 shadow-xs space-y-6">
+        <div class="flex items-center justify-between">
+          <div class="flex items-center gap-2 text-xs font-bold text-emerald-600 dark:text-emerald-400 uppercase tracking-wider">
+            <span class="w-2 h-2 rounded-full bg-emerald-500"></span> Section 11.1 &bull; High Yield Focus
+          </div>
+          <span class="px-2.5 py-0.5 rounded-full text-xs font-bold bg-emerald-100 dark:bg-emerald-950 text-emerald-800 dark:text-emerald-300 border border-emerald-300 dark:border-emerald-700 flex items-center gap-1">
+            <i data-lucide="star" class="w-3 h-3 fill-emerald-500"></i> Sec 111A & 112A
+          </span>
+        </div>
+        <h2 class="font-display text-2xl font-bold text-slate-900 dark:text-white">
+          Taxation of Listed Shares & Equity Mutual Funds
+        </h2>
+        <p class="text-slate-600 dark:text-slate-300 text-sm leading-relaxed">
+          An <strong>Equity-Oriented Mutual Fund</strong> is defined under Section 112A as a fund where the investible funds are invested in equity shares of domestic companies to the extent of <strong>more than 65% of the total proceeds</strong>.
+        </p>
+
+        <!-- Slabs Grid -->
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4 text-xs sm:text-sm">
+          <div class="p-5 rounded-2xl bg-slate-50 dark:bg-slate-800/60 border border-slate-200 dark:border-slate-700 space-y-3">
+            <div class="flex items-center justify-between">
+              <span class="font-bold text-rose-600 dark:text-rose-400 uppercase tracking-wider text-xs">Section 111A</span>
+              <span class="px-2 py-0.5 rounded bg-rose-100 dark:bg-rose-950 text-rose-700 dark:text-rose-300 font-bold text-xs">20% Flat Rate</span>
+            </div>
+            <h4 class="font-bold text-slate-900 dark:text-white text-base">Short-Term Capital Gains (STCG)</h4>
+            <ul class="space-y-1.5 text-slate-600 dark:text-slate-400 text-xs">
+              <li>• <strong>Holding Period:</strong> Held for <strong>&le; 12 Months</strong>.</li>
+              <li>• <strong>Condition:</strong> Transfer entered into on a recognized stock exchange where <strong>STT is paid</strong>.</li>
+              <li>• <strong>Tax Rate:</strong> <strong>20%</strong> (raised from 15% by Finance (No. 2) Act 2024).</li>
+              <li>• <strong>Deductions:</strong> Chapter VI-A deductions are <strong>NOT allowable</strong> against 111A gains.</li>
+              <li>• <strong>Basic Exemption Adjustment:</strong> Resident individuals/HUFs can adjust unexhausted basic exemption against 111A gains.</li>
+            </ul>
+          </div>
+
+          <div class="p-5 rounded-2xl bg-slate-50 dark:bg-slate-800/60 border border-slate-200 dark:border-slate-700 space-y-3">
+            <div class="flex items-center justify-between">
+              <span class="font-bold text-emerald-600 dark:text-emerald-400 uppercase tracking-wider text-xs">Section 112A</span>
+              <span class="px-2 py-0.5 rounded bg-emerald-100 dark:bg-emerald-950 text-emerald-700 dark:text-emerald-300 font-bold text-xs">12.5% above ₹1.25L</span>
+            </div>
+            <h4 class="font-bold text-slate-900 dark:text-white text-base">Long-Term Capital Gains (LTCG)</h4>
+            <ul class="space-y-1.5 text-slate-600 dark:text-slate-400 text-xs">
+              <li>• <strong>Holding Period:</strong> Held for <strong>&gt; 12 Months</strong>.</li>
+              <li>• <strong>Condition:</strong> STT paid on acquisition and transfer (for shares) or transfer (for equity MF units).</li>
+              <li>• <strong>Annual Exemption:</strong> Gains up to <strong>₹1,25,000 per financial year</strong> are completely <strong>EXEMPT</strong>.</li>
+              <li>• <strong>Tax Rate:</strong> Excess gains above ₹1.25 Lakh are taxed @ <strong>12.5%</strong> without indexation.</li>
+              <li>• <strong>Grandfathering:</strong> Gains accrued up to 31 January 2018 protected.</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Worked Numerical Comparison -->
+        <div class="p-4 rounded-xl bg-emerald-50 dark:bg-slate-800/80 border border-emerald-200 dark:border-slate-700 text-xs space-y-1.5">
+          <span class="font-bold text-emerald-950 dark:text-emerald-200 block">Worked Example: Section 112A Tax Calculation</span>
+          <p class="text-slate-700 dark:text-slate-300">
+            An investor realizes Long-Term Capital Gains of ₹3,75,000 from the sale of equity mutual fund units during FY 2024-25. STT was paid on redemption.
+          </p>
+          <div class="font-mono text-xs text-emerald-900 dark:text-emerald-300 space-y-1">
+            <p>• Total LTCG Realized = ₹3,75,000</p>
+            <p>• Less: Annual Statutory Exemption under Section 112A = (&minus;) ₹1,25,000</p>
+            <p>• Net Taxable LTCG = ₹2,50,000</p>
+            <p>• Base Tax @ 12.5% on ₹2,50,000 = ₹31,250</p>
+            <p>• Add: 4% Health & Education Cess = ₹1,250</p>
+            <p class="font-bold text-slate-900 dark:text-white">• Total Tax Liability = ₹32,500</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Section 11.2: Unlisted Shares -->
+      <section id="section-2" class="bg-white dark:bg-slate-900 rounded-3xl p-6 sm:p-8 border border-slate-200/90 dark:border-slate-800 shadow-xs space-y-4">
+        <div class="flex items-center gap-2 text-xs font-bold text-emerald-600 dark:text-emerald-400 uppercase tracking-wider">
+          <span class="w-2 h-2 rounded-full bg-emerald-600"></span> Section 11.2
+        </div>
+        <h2 class="font-display text-2xl font-bold text-slate-900 dark:text-white">
+          Taxation of Unlisted Equity Shares (Startups & Private Companies)
+        </h2>
+        <p class="text-slate-600 dark:text-slate-300 text-sm leading-relaxed">
+          Unlisted shares are shares of unlisted public or private limited companies. STT is not payable on unlisted share transfers.
+        </p>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 text-xs sm:text-sm">
+          <div class="p-4 rounded-xl bg-slate-50 dark:bg-slate-800/60 border border-slate-200 dark:border-slate-700 space-y-1">
+            <h4 class="font-bold text-slate-900 dark:text-white">Short-Term (&le; 24 Months)</h4>
+            <p class="text-slate-600 dark:text-slate-400">
+              Taxable under normal income heads at the investor's <strong>applicable marginal income tax slab rates</strong>.
+            </p>
+          </div>
+          <div class="p-4 rounded-xl bg-slate-50 dark:bg-slate-800/60 border border-slate-200 dark:border-slate-700 space-y-1">
+            <h4 class="font-bold text-slate-900 dark:text-white">Long-Term (&gt; 24 Months)</h4>
+            <p class="text-slate-600 dark:text-slate-400">
+              Post Finance Act 2024, holding period is <strong>&gt;24 months</strong> (reduced from 36m). Taxed @ <strong>12.5% without indexation</strong> under Section 112 (unified rate).
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Section 11.3: Securities Transaction Tax (STT) -->
+      <section id="section-3" class="bg-white dark:bg-slate-900 rounded-3xl p-6 sm:p-8 border border-slate-200/90 dark:border-slate-800 shadow-xs space-y-4">
+        <div class="flex items-center gap-2 text-xs font-bold text-emerald-600 dark:text-emerald-400 uppercase tracking-wider">
+          <span class="w-2 h-2 rounded-full bg-emerald-600"></span> Section 11.3
+        </div>
+        <h2 class="font-display text-2xl font-bold text-slate-900 dark:text-white">
+          Securities Transaction Tax (STT) Framework
+        </h2>
+        <p class="text-slate-600 dark:text-slate-300 text-sm leading-relaxed">
+          STT is a direct turnover tax levied on every purchase or sale of securities listed on recognized stock exchanges in India.
+        </p>
+
+        <div class="overflow-x-auto">
+          <table class="w-full text-left text-xs sm:text-sm border-collapse">
+            <thead>
+              <tr class="bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 border-b border-slate-200 dark:border-slate-700 font-bold">
+                <th class="p-3">Taxable Securities Transaction</th>
+                <th class="p-3">STT Rate (Post FA 2024)</th>
+                <th class="p-3">Payable By</th>
+              </tr>
+            </thead>
+            <tbody class="divide-y divide-slate-100 dark:divide-slate-800 text-slate-600 dark:text-slate-300">
+              <tr class="hover:bg-slate-50/80 dark:hover:bg-slate-800/40">
+                <td class="p-3 font-semibold">Equity Shares - Delivery Basis</td>
+                <td class="p-3 font-bold">0.1%</td>
+                <td class="p-3">Both Purchaser & Seller (0.1% each)</td>
+              </tr>
+              <tr class="hover:bg-slate-50/80 dark:hover:bg-slate-800/40">
+                <td class="p-3 font-semibold">Equity Shares - Intraday (Non-Delivery)</td>
+                <td class="p-3 font-bold">0.025%</td>
+                <td class="p-3">Seller Only</td>
+              </tr>
+              <tr class="hover:bg-slate-50/80 dark:hover:bg-slate-800/40">
+                <td class="p-3 font-semibold">Equity Derivatives - Futures</td>
+                <td class="p-3 font-bold text-rose-600">0.02% (Raised from 0.0125%)</td>
+                <td class="p-3">Seller Only</td>
+              </tr>
+              <tr class="hover:bg-slate-50/80 dark:hover:bg-slate-800/40">
+                <td class="p-3 font-semibold">Equity Derivatives - Options Premium</td>
+                <td class="p-3 font-bold text-rose-600">0.1% (Raised from 0.0625%)</td>
+                <td class="p-3">Seller Only</td>
+              </tr>
+              <tr class="hover:bg-slate-50/80 dark:hover:bg-slate-800/40">
+                <td class="p-3 font-semibold">Equity Mutual Fund Units (Sale to Fund / Exchange)</td>
+                <td class="p-3 font-bold">0.001%</td>
+                <td class="p-3">Seller Only</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="p-3.5 rounded-xl bg-amber-50 dark:bg-amber-950/60 border border-amber-200 dark:border-amber-800 text-xs text-amber-950 dark:text-amber-200 flex items-center gap-2">
+          <i data-lucide="alert-circle" class="w-4 h-4 text-amber-600 shrink-0"></i>
+          <span><strong>Deductibility Rule:</strong> STT paid is <strong>NOT allowed as a deduction</strong> against Capital Gains. It is deductible under Section 36(1)(xv) ONLY if the income from securities trading is assessed as business income under <em>PGBP</em>.</span>
+        </div>
+      </section>
+
+      <!-- Section 11.4: Dividend Stripping (Sec 94(7)) ⭐ -->
+      <section id="section-4" class="bg-white dark:bg-slate-900 rounded-3xl p-6 sm:p-8 border-2 border-amber-400/80 dark:border-amber-600/50 shadow-xs space-y-4">
+        <div class="flex items-center justify-between">
+          <div class="flex items-center gap-2 text-xs font-bold text-amber-600 dark:text-amber-400 uppercase tracking-wider">
+            <span class="w-2 h-2 rounded-full bg-amber-500"></span> Section 11.4 &bull; High Yield Focus
+          </div>
+          <span class="px-2.5 py-0.5 rounded-full text-xs font-bold bg-amber-100 dark:bg-amber-950 text-amber-800 dark:text-amber-300 border border-amber-300 dark:border-amber-700">
+            Anti-Avoidance
+          </span>
+        </div>
+        <h2 class="font-display text-2xl font-bold text-slate-900 dark:text-white">
+          Dividend Stripping (Section 94(7))
+        </h2>
+        <p class="text-slate-600 dark:text-slate-300 text-sm leading-relaxed">
+          Section 94(7) curbs the tax avoidance practice where an investor buys securities cum-dividend, collects dividend, and immediately sells ex-dividend at a capital loss to set off against other capital gains.
+        </p>
+
+        <!-- 3 Conditions Diagram -->
+        <div class="p-4 rounded-xl bg-slate-50 dark:bg-slate-800/60 border border-slate-200 dark:border-slate-700 space-y-2 text-xs">
+          <span class="font-bold text-slate-900 dark:text-white block">Three Cumulative Trigger Conditions:</span>
+          <div class="grid grid-cols-1 sm:grid-cols-3 gap-2">
+            <div class="p-3 bg-white dark:bg-slate-900 rounded-lg border border-slate-200 dark:border-slate-700">
+              <span class="font-bold text-amber-700 dark:text-amber-400 block mb-0.5">Condition 1: Purchase</span>
+              Buys securities/units within <strong>3 months prior</strong> to the Record Date.
+            </div>
+            <div class="p-3 bg-white dark:bg-slate-900 rounded-lg border border-slate-200 dark:border-slate-700">
+              <span class="font-bold text-amber-700 dark:text-amber-400 block mb-0.5">Condition 2: Sale</span>
+              Sells securities within <strong>3 months</strong> (or units of MFs within <strong>9 months</strong>) after the Record Date.
+            </div>
+            <div class="p-3 bg-white dark:bg-slate-900 rounded-lg border border-slate-200 dark:border-slate-700">
+              <span class="font-bold text-amber-700 dark:text-amber-400 block mb-0.5">Condition 3: Dividend</span>
+              Receives dividend or income that is exempt from income tax.
+            </div>
+          </div>
+          <div class="mt-2 p-3 bg-rose-50 dark:bg-rose-950/40 rounded-lg border border-rose-200 dark:border-rose-800 text-rose-900 dark:text-rose-200 font-semibold">
+            Consequence: Capital loss arising on such sale is DISALLOWED / IGNORED to the extent of the dividend income received!
+          </div>
+        </div>
+      </section>
+
+      <!-- Section 11.5: Bonus Stripping (Sec 94(8)) ⭐ -->
+      <section id="section-5" class="bg-white dark:bg-slate-900 rounded-3xl p-6 sm:p-8 border-2 border-rose-400/80 dark:border-rose-600/50 shadow-xs space-y-6">
+        <div class="flex items-center justify-between">
+          <div class="flex items-center gap-2 text-xs font-bold text-rose-600 dark:text-rose-400 uppercase tracking-wider">
+            <span class="w-2 h-2 rounded-full bg-rose-600"></span> Section 11.5 &bull; High Yield Focus
+          </div>
+          <span class="px-2.5 py-0.5 rounded-full text-xs font-bold bg-rose-100 dark:bg-rose-950 text-rose-800 dark:text-rose-300 border border-rose-300 dark:border-rose-700">
+            Expanded to Shares
+          </span>
+        </div>
+        <h2 class="font-display text-2xl font-bold text-slate-900 dark:text-white">
+          Bonus Stripping Provisions (Section 94(8))
+        </h2>
+        <p class="text-slate-600 dark:text-slate-300 text-sm leading-relaxed">
+          Bonus stripping is an aggressive tax manoeuvre where an investor purchases units/shares cum-bonus, receives bonus units at zero cost, sells the original units at a reduced ex-bonus price to book a capital loss, while holding on to the bonus units.
+        </p>
+
+        <!-- Conditions & Scope Extension -->
+        <div class="p-5 rounded-2xl bg-rose-50 dark:bg-slate-800/80 border border-rose-200 dark:border-slate-700 space-y-3 text-xs sm:text-sm">
+          <div class="font-bold text-rose-950 dark:text-rose-200">Three Mandatory Conditions for Section 94(8):</div>
+          <ul class="list-disc pl-5 space-y-1 text-slate-700 dark:text-slate-300 text-xs">
+            <li>Assessee acquires units or securities within <strong>3 months prior to the record date</strong>.</li>
+            <li>Assessee is allotted additional bonus units/securities without any payment on the basis of such holding.</li>
+            <li>Assessee sells or transfers all or any of the <strong>original units/securities within 9 months after the record date</strong>, while continuing to hold all or any of the bonus units/securities.</li>
+          </ul>
+
+          <div class="p-3 bg-white dark:bg-slate-900 rounded-xl border border-rose-300 dark:border-slate-700 text-xs space-y-1 font-mono">
+            <p class="text-rose-700 dark:text-rose-400 font-bold">Statutory Legal Consequences:</p>
+            <p>1. The capital loss arising on the sale of the original units is completely DISALLOWED.</p>
+            <p>2. The disallowed loss is DEEMED to be the Cost of Acquisition of the bonus units!</p>
+          </div>
+
+          <p class="text-xs text-slate-600 dark:text-slate-400">
+            <em>Important Scope Extension:</em> Finance Act 2022 amended Section 94(8) to explicitly apply to <strong>both equity shares and mutual fund units</strong> (previously, it applied only to mutual funds).
+          </p>
+        </div>
+
+        <!-- Worked Numerical on Bonus Stripping -->
+        <div class="p-4 rounded-xl bg-slate-50 dark:bg-slate-800/60 border border-slate-200 dark:border-slate-700 text-xs space-y-1.5">
+          <span class="font-bold text-slate-900 dark:text-white block">Worked Numerical: Bonus Stripping Loss Adjustment</span>
+          <p class="text-slate-600 dark:text-slate-300">
+            • Buys 1,000 shares of XYZ Ltd @ ₹150 = ₹1,50,000 on 1st July (Record date: 20th July).<br>
+            • Receives 1:1 bonus (1,000 bonus shares) on 20th July.<br>
+            • Sells original 1,000 shares on 10th October (within 9 months) @ ₹75 = ₹75,000.<br>
+            • Realized apparent loss = ₹75,000 &minus; ₹1,50,000 = &minus;₹75,000.
+          </p>
+          <div class="p-2.5 bg-white dark:bg-slate-900 rounded border border-slate-200 dark:border-slate-700 font-mono text-[11px] text-rose-700 dark:text-rose-400">
+            Result: The loss of ₹75,000 cannot be set off against any capital gains. Instead, this ₹75,000 becomes the deemed Cost of Acquisition of the 1,000 bonus shares (₹75 per bonus share).
+          </div>
+        </div>
+      </section>
+
+      <!-- Interactive 12-Question Quiz -->
+      <section id="interactive-quiz" class="bg-gradient-to-br from-slate-900 to-indigo-950 text-white rounded-3xl p-6 sm:p-8 shadow-xl space-y-6">
+        <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 pb-4 border-b border-white/10">
+          <div>
+            <span class="px-2.5 py-1 rounded-full text-xs font-bold uppercase tracking-wider bg-emerald-500/20 text-emerald-300 border border-emerald-400/30">
+              Exam Benchmark Simulator
+            </span>
+            <h3 class="font-display text-xl sm:text-2xl font-bold mt-1 text-white">
+              Chapter 11 Practice Quiz (12 Questions)
+            </h3>
+          </div>
+          <div class="flex items-center gap-3">
+            <div class="text-right">
+              <span class="text-xs text-slate-400 block">Progress</span>
+              <span class="text-sm font-bold text-emerald-300"><span id="answered-count">0</span> / 12 Answered</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Quiz Questions Container -->
+        <div id="questions-container" class="space-y-6"></div>
+
+        <!-- Quiz Submission & Results -->
+        <div class="pt-4 border-t border-white/10 flex flex-col sm:flex-row items-center justify-between gap-4">
+          <button id="submit-quiz-btn" onclick="submitQuiz()" class="w-full sm:w-auto px-6 py-3 rounded-xl bg-emerald-600 hover:bg-emerald-500 text-white font-bold text-sm transition-all shadow-md flex items-center justify-center gap-2">
+            <i data-lucide="check-circle" class="w-4 h-4"></i>
+            <span>Submit Quiz & Validate Answers</span>
+          </button>
+          <button id="reset-quiz-btn" onclick="resetQuiz()" class="hidden w-full sm:w-auto px-6 py-3 rounded-xl bg-slate-800 hover:bg-slate-700 text-slate-200 font-bold text-sm transition-all border border-slate-700 flex items-center justify-center gap-2">
+            <i data-lucide="rotate-ccw" class="w-4 h-4"></i>
+            <span>Retake Chapter Quiz</span>
+          </button>
+        </div>
+
+        <!-- Results Display Box -->
+        <div id="quiz-results" class="hidden p-6 rounded-2xl bg-white/10 border border-white/20 space-y-3">
+          <div class="flex items-center justify-between">
+            <span id="result-status-badge" class="px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider"></span>
+            <span id="score-display" class="font-display font-extrabold text-2xl text-white"></span>
+          </div>
+          <p id="percentage-display" class="text-sm text-emerald-200 font-medium"></p>
+          <p id="result-summary-text" class="text-xs text-slate-300 leading-relaxed"></p>
+        </div>
+      </section>
+
+    </main>
+  </div>
+
+  <!-- Quiz Script -->
+  <script>
+    const questionsData = [
+      {
+        id: 1,
+        question: "Following the Finance (No. 2) Act 2024, what is the tax rate applicable to Short-Term Capital Gains under Section 111A on listed equity shares where STT has been paid?",
+        options: [
+          { key: "a", text: "10%" },
+          { key: "b", text: "15%" },
+          { key: "c", text: "20%" },
+          { key: "d", text: "Marginal slab rate" }
+        ],
+        correct: "c",
+        explanation: "Finance (No. 2) Act 2024 increased the tax rate for STCG under Section 111A from 15% to 20%."
+      },
+      {
+        id: 2,
+        question: "What is the revised annual exemption threshold and tax rate for Long-Term Capital Gains under Section 112A post-Finance Act 2024?",
+        options: [
+          { key: "a", text: "Exempt up to ₹1,00,000; excess taxed @ 10%" },
+          { key: "b", text: "Exempt up to ₹1,25,000; excess taxed @ 12.5%" },
+          { key: "c", text: "Exempt up to ₹2,00,000; excess taxed @ 15%" },
+          { key: "d", text: "Exempt up to ₹2,50,000; excess taxed @ 20%" }
+        ],
+        correct: "b",
+        explanation: "Section 112A provides an annual exemption of up to ₹1,25,000 per financial year, with gains in excess of this limit taxed at 12.5%."
+      },
+      {
+        id: 3,
+        question: "Can an assessee claim deductions under Chapter VI-A (such as Section 80C or 80D) against Long-Term Capital Gains taxable under Section 112A?",
+        options: [
+          { key: "a", text: "Yes, up to a maximum of ₹1.5 Lakhs" },
+          { key: "b", text: "No, Chapter VI-A deductions cannot be set off against Section 112A or 111A gains" },
+          { key: "c", text: "Yes, but only under the Old Tax Regime" },
+          { key: "d", text: "Only Section 80D is permitted" }
+        ],
+        correct: "b",
+        explanation: "The provisions of the Income Tax Act explicitly state that deductions under Chapter VI-A are not allowed against special rate capital gains under Section 111A, 112, or 112A."
+      },
+      {
+        id: 4,
+        question: "An investor realizing LTCG of ₹4,25,000 on equity mutual fund units will pay what amount of base tax (excluding cess)?",
+        options: [
+          { key: "a", text: "₹42,500" },
+          { key: "b", text: "₹37,500" },
+          { key: "c", text: "₹30,000" },
+          { key: "d", text: "₹53,125" }
+        ],
+        correct: "b",
+        explanation: "Exemption = ₹1,25,000. Taxable gain = ₹4,25,000 - ₹1,25,000 = ₹3,00,000. Base tax @ 12.5% = ₹3,00,000 * 12.5% = ₹37,500."
+      },
+      {
+        id: 5,
+        question: "Is Securities Transaction Tax (STT) paid during the purchase and sale of equity shares deductible from the sale consideration when computing capital gains?",
+        options: [
+          { key: "a", text: "Yes, it is deductible as an expenditure incurred in connection with transfer" },
+          { key: "b", text: "No, STT is explicitly not deductible for capital gains computation" },
+          { key: "c", text: "Deductible only for Long-Term Capital Gains" },
+          { key: "d", text: "Deductible up to ₹10,000" }
+        ],
+        correct: "b",
+        explanation: "Under Section 48, STT is not allowed as a deduction when computing capital gains. It is deductible under PGBP only if the assessee is a business trader."
+      },
+      {
+        id: 6,
+        question: "Under Section 94(7) (Dividend Stripping), what is the timeframe within which mutual fund units must be sold after the record date for the loss disallowance to trigger?",
+        options: [
+          { key: "a", text: "Within 3 months" },
+          { key: "b", text: "Within 6 months" },
+          { key: "c", text: "Within 9 months" },
+          { key: "d", text: "Within 12 months" }
+        ],
+        correct: "c",
+        explanation: "Under Section 94(7), the holding window after the record date is within 3 months for securities/shares, and within 9 months for mutual fund units."
+      },
+      {
+        id: 7,
+        question: "Under Section 94(8) (Bonus Stripping), within what period prior to the record date must the original units/shares be acquired?",
+        options: [
+          { key: "a", text: "Within 30 days" },
+          { key: "b", text: "Within 3 months" },
+          { key: "c", text: "Within 6 months" },
+          { key: "d", text: "Within 9 months" }
+        ],
+        correct: "b",
+        explanation: "Section 94(8) applies when the original units or shares are purchased within 3 months prior to the record date of the bonus issue."
+      },
+      {
+        id: 8,
+        question: "When a capital loss on the sale of original units is disallowed under the bonus stripping rules of Section 94(8), how is that disallowed loss treated?",
+        options: [
+          { key: "a", text: "It is forfeited permanently and lost" },
+          { key: "b", text: "It is deemed to be the Cost of Acquisition of the bonus units" },
+          { key: "c", text: "It can be set off against other salary income" },
+          { key: "d", text: "It is carried forward for only 4 years" }
+        ],
+        correct: "b",
+        explanation: "Under Section 94(8), the disallowed loss on the sale of the original units is deemed to be the cost of acquisition of the bonus units held by the investor."
+      },
+      {
+        id: 9,
+        question: "An investor purchases 500 shares at ₹200 on 1st August. On 20th August, 1:1 bonus shares are issued. On 10th November, he sells the original 500 shares at ₹110 while keeping the bonus shares. What is the allowable capital loss?",
+        options: [
+          { key: "a", text: "₹45,000 Short-Term Capital Loss allowable" },
+          { key: "b", text: "₹0 (Disallowed under Section 94(8)); ₹45,000 becomes the cost of the 500 bonus shares" },
+          { key: "c", text: "₹22,500 allowable" },
+          { key: "d", text: "₹45,000 Long-Term Capital Loss" }
+        ],
+        correct: "b",
+        explanation: "Because shares were bought within 3 months before record date and sold within 9 months after record date while retaining bonus shares, Section 94(8) disallows the entire ₹45,000 loss ((₹200-₹110)*500) and adds it as the cost of the bonus shares."
+      },
+      {
+        id: 10,
+        question: "Post Finance (No. 2) Act 2024, what is the STT rate on the sale of equity futures contracts?",
+        options: [
+          { key: "a", text: "0.0125%" },
+          { key: "b", text: "0.02%" },
+          { key: "c", text: "0.05%" },
+          { key: "d", text: "0.1%" }
+        ],
+        correct: "b",
+        explanation: "Finance (No. 2) Act 2024 increased the STT on the sale of futures in securities from 0.0125% to 0.02%."
+      },
+      {
+        id: 11,
+        question: "A fund of funds invests 95% of its assets in units of an equity ETF. For taxation purposes, does it qualify as an equity-oriented fund under Section 112A?",
+        options: [
+          { key: "a", text: "No, because it does not invest directly in equity shares of domestic companies" },
+          { key: "b", text: "Yes, all mutual funds are equity oriented" },
+          { key: "c", text: "Yes, if the underlying ETF holds >65% domestic equity" },
+          { key: "d", text: "Taxed under Section 115BB" }
+        ],
+        correct: "a",
+        explanation: "Under Section 112A, an equity-oriented fund must invest more than 65% of total proceeds directly in equity shares of domestic companies (or 90% in other equity funds which invest 90% in domestic equity). Standard FoFs holding domestic ETFs fall under non-specified hybrid fund rules."
+      },
+      {
+        id: 12,
+        question: "What is the holding period required for unlisted equity shares to qualify for the 12.5% Long-Term Capital Gains tax rate?",
+        options: [
+          { key: "a", text: "More than 12 months" },
+          { key: "b", text: "More than 24 months" },
+          { key: "c", text: "More than 36 months" },
+          { key: "d", text: "More than 48 months" }
+        ],
+        correct: "b",
+        explanation: "Post Finance Act 2024, unlisted shares must be held for more than 24 months to qualify as long-term capital assets."
+      }
+    ];
+
+    let userAnswers = {};
+
+    function renderQuiz() {
+      const container = document.getElementById("questions-container");
+      container.innerHTML = "";
+
+      questionsData.forEach((q, index) => {
+        const qDiv = document.createElement("div");
+        qDiv.className = "p-5 rounded-2xl bg-white/5 border border-white/10 space-y-4 transition-all";
+        qDiv.id = `q-box-${q.id}`;
+
+        let optionsHtml = "";
+        q.options.forEach(opt => {
+          optionsHtml += `
+            <label class="flex items-center gap-3 p-3 rounded-xl bg-white/5 hover:bg-white/10 border border-white/5 cursor-pointer text-xs sm:text-sm transition-all" onclick="selectOption(${q.id}, '${opt.key}')" id="label-${q.id}-${opt.key}">
+              <input type="radio" name="question-${q.id}" value="${opt.key}" class="w-4 h-4 text-emerald-500 focus:ring-0 focus:ring-offset-0 bg-transparent border-slate-500">
+              <span class="font-bold text-emerald-300 w-5 uppercase">${opt.key}.</span>
+              <span class="text-slate-200">${opt.text}</span>
+            </label>
+          `;
+        });
+
+        qDiv.innerHTML = `
+          <div class="flex items-start justify-between gap-2">
+            <span class="text-xs font-bold text-emerald-400 uppercase tracking-wider">Question ${index + 1} of ${questionsData.length}</span>
+            <span id="badge-${q.id}" class="text-xs px-2 py-0.5 rounded-full bg-white/5 text-slate-400 font-medium">Unanswered</span>
+          </div>
+          <h4 class="font-display font-semibold text-sm sm:text-base text-white">${q.question}</h4>
+          <div class="space-y-2 mt-3">
+            ${optionsHtml}
+          </div>
+          <div id="explanation-${q.id}" class="hidden p-4 rounded-xl text-xs sm:text-sm mt-3 space-y-1"></div>
+        `;
+        container.appendChild(qDiv);
+      });
+      lucide.createIcons();
+    }
+
+    function selectOption(qId, key) {
+      userAnswers[qId] = key;
+      const count = Object.keys(userAnswers).length;
+      document.getElementById("answered-count").innerText = count;
+      
+      const badge = document.getElementById(`badge-${qId}`);
+      if (badge) {
+        badge.innerText = "Answered";
+        badge.className = "text-xs px-2 py-0.5 rounded-full bg-emerald-500/20 text-emerald-300 font-medium";
+      }
+
+      const q = questionsData.find(item => item.id === qId);
+      q.options.forEach(opt => {
+        const lbl = document.getElementById(`label-${qId}-${opt.key}`);
+        if (opt.key === key) {
+          lbl.className = "flex items-center gap-3 p-3 rounded-xl bg-emerald-600/30 border border-emerald-400/50 cursor-pointer text-xs sm:text-sm transition-all";
+        } else {
+          lbl.className = "flex items-center gap-3 p-3 rounded-xl bg-white/5 hover:bg-white/10 border border-white/5 cursor-pointer text-xs sm:text-sm transition-all";
+        }
+      });
+    }
+
+    function submitQuiz() {
+      let score = 0;
+      questionsData.forEach(q => {
+        const selected = userAnswers[q.id];
+        const isCorrect = selected === q.correct;
+        if (isCorrect) score++;
+
+        const explanationDiv = document.getElementById(`explanation-${q.id}`);
+        explanationDiv.classList.remove("hidden");
+
+        if (isCorrect) {
+          explanationDiv.className = "p-4 rounded-xl text-xs sm:text-sm mt-3 bg-emerald-950/60 border border-emerald-600 text-emerald-200 space-y-1";
+          explanationDiv.innerHTML = `<div class="font-bold text-emerald-400 flex items-center gap-1.5"><i data-lucide="check" class="w-4 h-4"></i> Correct!</div><p>${q.explanation}</p>`;
+        } else {
+          explanationDiv.className = "p-4 rounded-xl text-xs sm:text-sm mt-3 bg-rose-950/60 border border-rose-600 text-rose-200 space-y-1";
+          explanationDiv.innerHTML = `<div class="font-bold text-rose-400 flex items-center gap-1.5"><i data-lucide="x" class="w-4 h-4"></i> Incorrect (Correct Answer: ${q.correct.toUpperCase()})</div><p>${q.explanation}</p>`;
+        }
+      });
+
+      const percentage = Math.round((score / questionsData.length) * 100);
+      const passed = percentage >= 60;
+      
+      const resultsDiv = document.getElementById("quiz-results");
+      resultsDiv.classList.remove("hidden");
+
+      const statusBadge = document.getElementById("result-status-badge");
+      statusBadge.innerText = passed ? "Status: Passed (60%+ Benchmark)" : "Status: Needs Revision";
+      statusBadge.className = passed ? "px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider bg-emerald-500 text-emerald-950" : "px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider bg-amber-500 text-amber-950";
+
+      document.getElementById("score-display").innerText = `${score} / ${questionsData.length}`;
+      document.getElementById("percentage-display").innerText = `${percentage}% Score (NISM Passing Benchmark: 60%)`;
+
+      document.getElementById("result-summary-text").innerText = passed
+        ? `Outstanding! You scored ${percentage}%, demonstrating mastery of equity taxation under Sections 111A/112A and bonus/dividend stripping provisions.`
+        : `You scored ${percentage}%. Review the revised rates (20% STCG, 12.5% LTCG, ₹1.25L exemption) and bonus stripping rules before retaking.`;
+
+      document.getElementById("submit-quiz-btn").classList.add("hidden");
+      document.getElementById("reset-quiz-btn").classList.remove("hidden");
+
+      resultsDiv.scrollIntoView({ behavior: 'smooth' });
+      lucide.createIcons();
+    }
+
+    function resetQuiz() {
+      userAnswers = {};
+      document.getElementById("answered-count").innerText = "0";
+      document.getElementById("quiz-results").classList.add("hidden");
+      document.getElementById("submit-quiz-btn").classList.remove("hidden");
+      document.getElementById("reset-quiz-btn").classList.add("hidden");
+      renderQuiz();
+      document.getElementById("interactive-quiz").scrollIntoView({ behavior: 'smooth' });
+    }
+
+    // Initialize Quiz & Preloader
+    window.addEventListener('load', () => {
+      const preloader = document.getElementById('eduleb-preloader');
+      if (preloader) {
+        preloader.classList.add('loaded');
+        setTimeout(() => preloader.style.display = 'none', 400);
+      }
+      renderQuiz();
+      lucide.createIcons();
+    });
+  </script>
+</body>
+</html>

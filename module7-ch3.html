@@ -1,0 +1,898 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Chapter 3: Features of Non-Life Insurance Products | NISM Series X-B Notes</title>
+  
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  
+  <!-- Google Fonts: DM Sans & Jost (Eduleb Benchmark) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Jost:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+  
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+
+  <!-- Modern Documentation Design System -->
+  <link rel="stylesheet" href="modern-docs.css">
+  <script defer src="nav-sidebar.js"></script>
+
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['"DM Sans"', 'sans-serif'],
+            display: ['"Jost"', 'sans-serif'],
+            heading: ['"Jost"', 'sans-serif']
+          },
+          colors: {
+            brand: {
+              50: '#fffbeb',
+              100: '#fef3c7',
+              500: '#f59e0b',
+              600: '#d97706',
+              700: '#b45309',
+              800: '#92400e',
+              900: '#78350f'
+            }
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    body {
+      font-family: 'DM Sans', sans-serif;
+      font-size: 16px;
+      line-height: 26px;
+      color: #4a5355;
+    }
+    h1, h2, h3, h4, h5, h6, .font-display, .font-heading {
+      font-family: 'Jost', sans-serif;
+      font-weight: 700;
+    }
+  </style>
+</head>
+<body class="bg-slate-50 dark:bg-slate-950 text-slate-900 dark:text-slate-100 min-h-screen flex flex-col selection:bg-amber-500 selection:text-white antialiased transition-colors duration-200">
+
+  <!-- Smooth Opening Preloader -->
+  <div class="preloaders" id="eduleb-preloader">
+    <span class="loader"></span>
+    <div class="preloader-label">Chapter 3: Non-Life Insurance Products</div>
+  </div>
+
+  <!-- Standardized Header (Single-Tier, 64px) -->
+  <header class="sticky top-0 z-40 bg-white/95 dark:bg-slate-900/95 backdrop-blur-md border-b border-slate-200/80 dark:border-slate-800 shadow-xs">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
+      
+      <!-- Left: Navigation / Breadcrumbs -->
+      <div class="flex items-center gap-3">
+        <a href="module7.html" class="flex items-center gap-2 text-slate-500 hover:text-slate-900 dark:hover:text-white transition-colors" title="Back to Module 7 Hub">
+          <div class="w-9 h-9 rounded-xl bg-slate-100 dark:bg-slate-800 hover:bg-slate-200 dark:hover:bg-slate-750 flex items-center justify-center text-slate-700 dark:text-slate-300 transition-colors">
+            <i data-lucide="arrow-left" class="w-4 h-4"></i>
+          </div>
+        </a>
+        <div>
+          <div class="flex items-center gap-2">
+            <span class="text-[10px] font-bold uppercase tracking-wider text-amber-700 dark:text-amber-400 bg-amber-50 dark:bg-amber-950/80 px-2 py-0.5 rounded border border-amber-200 dark:border-amber-800">
+              Module 7 &bull; Chapter 3
+            </span>
+            <span class="text-xs text-slate-400 font-medium hidden sm:inline">NISM Series X-B</span>
+          </div>
+          <h1 class="font-display font-bold text-base sm:text-lg text-slate-900 dark:text-white leading-tight">
+            Features of Non-Life Insurance Products
+          </h1>
+        </div>
+      </div>
+
+      <!-- Right: Weightage & Quiz CTA -->
+      <div class="flex items-center gap-3">
+        <span class="hidden sm:inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-bold bg-amber-50 dark:bg-amber-950/70 text-amber-800 dark:text-amber-300 border border-amber-200 dark:border-amber-800">
+          <i data-lucide="award" class="w-3.5 h-3.5 text-amber-600"></i>
+          Weightage: ~7 Marks
+        </span>
+        <button onclick="window.openSpotlightModal()" class="p-2 rounded-full border border-slate-200 dark:border-slate-700 text-slate-600 dark:text-slate-300 bg-white dark:bg-slate-800" title="Search (⌘K)">
+          <i data-lucide="search" class="w-4 h-4 text-amber-600"></i>
+        </button>
+        <button id="nism-header-theme-btn" onclick="window.toggleDarkMode()" class="p-2 rounded-full border border-slate-200 dark:border-slate-700 text-slate-600 dark:text-slate-300 bg-white dark:bg-slate-800" title="Toggle Theme (⌘D)">
+          <i data-lucide="moon" class="w-4 h-4"></i>
+        </button>
+        <a href="#interactive-quiz" class="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-xl text-xs font-bold bg-amber-600 hover:bg-amber-700 text-white shadow-xs transition-all">
+          <i data-lucide="help-circle" class="w-3.5 h-3.5"></i>
+          <span class="hidden sm:inline">Chapter Quiz</span>
+          <span class="sm:hidden">Quiz</span>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Content Layout (Sidebar + Notes) -->
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 grid grid-cols-1 lg:grid-cols-12 gap-8 flex-grow">
+    
+    <!-- Table of Contents Sidebar (Desktop) -->
+    <aside class="hidden lg:block lg:col-span-3">
+      <div class="sticky top-24 space-y-4">
+        
+        <!-- In-Page Section Jump -->
+        <div class="rounded-2xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 shadow-xs p-4">
+          <h3 class="font-display font-bold text-xs uppercase tracking-wider text-slate-400 mb-3 flex items-center gap-1.5">
+            <i data-lucide="list" class="w-3.5 h-3.5 text-amber-600"></i>
+            <span>Chapter Sections</span>
+          </h3>
+          <nav class="space-y-1 text-xs">
+            <a href="#sec-health-eco" class="block px-2.5 py-1.5 rounded-lg text-slate-600 dark:text-slate-300 hover:bg-amber-50 dark:hover:bg-amber-950/50 hover:text-amber-700 transition-colors">
+              3.1 Health Ecosystem & Policy Types
+            </a>
+            <a href="#sec-health-clauses" class="block px-2.5 py-1.5 rounded-lg font-bold text-amber-800 dark:text-amber-300 bg-amber-50 dark:bg-amber-950/80 border border-amber-200 dark:border-amber-800">
+              3.2 Deductibles, Co-pay & Waiting Periods ⭐
+            </a>
+            <a href="#sec-super-topup" class="block px-2.5 py-1.5 rounded-lg text-slate-600 dark:text-slate-300 hover:bg-amber-50 dark:hover:bg-amber-950/50 hover:text-amber-700 transition-colors pl-4">
+              &bull; Super Top-Up vs Top-Up Math ⭐
+            </a>
+            <a href="#sec-room-rent" class="block px-2.5 py-1.5 rounded-lg text-slate-600 dark:text-slate-300 hover:bg-amber-50 dark:hover:bg-amber-950/50 hover:text-amber-700 transition-colors pl-4">
+              &bull; Room Rent Proportionate Deduction
+            </a>
+            <a href="#sec-motor" class="block px-2.5 py-1.5 rounded-lg text-slate-600 dark:text-slate-300 hover:bg-amber-50 dark:hover:bg-amber-950/50 hover:text-amber-700 transition-colors">
+              3.3 Motor Insurance: TP, OD & IDV ⭐
+            </a>
+            <a href="#sec-property" class="block px-2.5 py-1.5 rounded-lg text-slate-600 dark:text-slate-300 hover:bg-amber-50 dark:hover:bg-amber-950/50 hover:text-amber-700 transition-colors">
+              3.4 Home Property & Average Clause
+            </a>
+            <a href="#interactive-quiz" class="block px-2.5 py-1.5 rounded-lg text-amber-700 dark:text-amber-400 font-bold bg-amber-50 dark:bg-amber-950/60 hover:bg-amber-100 transition-colors mt-2">
+              Practice Quiz (12 MCQs)
+            </a>
+          </nav>
+        </div>
+
+        <!-- High Yield Alert -->
+        <div class="p-4 rounded-2xl bg-amber-500/10 border border-amber-500/20 text-xs space-y-2">
+          <div class="flex items-center gap-1.5 font-bold text-amber-800 dark:text-amber-300">
+            <i data-lucide="zap" class="w-4 h-4 text-amber-600"></i>
+            <span>Exam Focus: Health & Motor</span>
+          </div>
+          <p class="text-slate-600 dark:text-slate-300 leading-relaxed">
+            In Level 2 non-life, watch out for: <strong>Super Top-Up aggregate deductible</strong> vs Top-Up single claim deductible, <strong>Motor TP unlimited bodily injury liability</strong>, and the <strong>Principle of Average under-insurance penalty formula</strong>.
+          </p>
+        </div>
+
+        <!-- Module Navigation -->
+        <div class="flex items-center justify-between p-3 rounded-xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 text-xs">
+          <a href="module7-ch2.html" class="text-slate-500 hover:text-amber-600 transition-colors flex items-center gap-1">
+            <i data-lucide="chevron-left" class="w-3.5 h-3.5"></i>
+            <span>Ch 2: Life & MWP ⭐</span>
+          </a>
+          <a href="module7.html" class="font-bold text-amber-700 dark:text-amber-400 hover:underline flex items-center gap-1">
+            <span>Module 7 Hub</span>
+            <i data-lucide="home" class="w-3.5 h-3.5"></i>
+          </a>
+        </div>
+
+      </div>
+    </aside>
+
+    <!-- Main Notes Area -->
+    <div class="lg:col-span-9 space-y-10">
+
+      <!-- Section 3.1: Health Ecosystem & Policy Typology -->
+      <section id="sec-health-eco" class="bg-white dark:bg-slate-900 rounded-3xl p-6 sm:p-8 border border-slate-200 dark:border-slate-800 shadow-xs space-y-6">
+        
+        <div class="flex items-center justify-between pb-3 border-b border-slate-100 dark:border-slate-800">
+          <span class="text-xs font-bold text-amber-600 dark:text-amber-400 uppercase tracking-wider flex items-center gap-1.5">
+            <span class="w-2 h-2 rounded-full bg-amber-500"></span> Section 3.1 &bull; Health Insurance Landscape
+          </span>
+          <span class="text-xs px-2.5 py-0.5 rounded-full bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-400 font-semibold">
+            Product Architecture
+          </span>
+        </div>
+
+        <div>
+          <h2 class="font-display text-2xl font-bold text-slate-900 dark:text-white">
+            Health Insurance: Indemnity vs. Fixed-Benefit Policies
+          </h2>
+          <p class="text-xs sm:text-sm text-slate-500 dark:text-slate-400 mt-1">
+            Health insurance covers medical costs arising from disease, illness, or accidental bodily injury. The core divide in health coverage is between <strong>Indemnity</strong> and <strong>Fixed-Benefit</strong> structures.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 text-xs sm:text-sm">
+          
+          <!-- Indemnity Policy -->
+          <div class="p-4 rounded-2xl bg-amber-50/50 dark:bg-amber-950/20 border border-amber-200 dark:border-amber-800/60 space-y-2">
+            <div class="flex items-center justify-between">
+              <span class="font-bold text-amber-900 dark:text-amber-300">Indemnity Plans (Mediclaim)</span>
+              <span class="text-[10px] font-bold px-2 py-0.5 rounded bg-amber-600 text-white">Expense Reimbursement</span>
+            </div>
+            <p class="text-slate-600 dark:text-slate-300 leading-relaxed">
+              Reimburses <strong>actual medical expenses incurred</strong> during hospitalization (inpatient treatment, ICU, daycare surgeries) up to the Sum Insured.
+            </p>
+            <ul class="list-disc pl-4 space-y-1 text-slate-600 dark:text-slate-300 text-xs">
+              <li>Requires hospital bills, discharge summary, and pharmacy receipts.</li>
+              <li>Subject to Principle of Indemnity (insured cannot claim more than actual expenses).</li>
+              <li>Available as Individual or Family Floater covers.</li>
+            </ul>
+          </div>
+
+          <!-- Fixed-Benefit Policy -->
+          <div class="p-4 rounded-2xl bg-slate-50 dark:bg-slate-800/60 border border-slate-200 dark:border-slate-700/80 space-y-2">
+            <div class="flex items-center justify-between">
+              <span class="font-bold text-slate-900 dark:text-white">Fixed-Benefit Plans (Critical Illness)</span>
+              <span class="text-[10px] font-bold px-2 py-0.5 rounded bg-slate-200 dark:bg-slate-700 text-slate-700 dark:text-slate-300">Lump Sum Payout</span>
+            </div>
+            <p class="text-slate-600 dark:text-slate-300 leading-relaxed">
+              Pays a <strong>predetermined lump-sum cash amount</strong> upon the confirmed first diagnosis or occurrence of a specified health event, regardless of hospital costs.
+            </p>
+            <ul class="list-disc pl-4 space-y-1 text-slate-600 dark:text-slate-300 text-xs">
+              <li><strong>Critical Illness:</strong> Pays 100% sum insured on diagnosis of cancer, stroke, kidney failure (subject to 28-30 day survival).</li>
+              <li><strong>Personal Accident (PA):</strong> Death, permanent total disability (PTD), permanent partial disability (PPD).</li>
+              <li>Exempt from indemnity; client can claim full amount across multiple policies!</li>
+            </ul>
+          </div>
+
+        </div>
+
+        <!-- Individual vs Family Floater Comparison -->
+        <div class="p-4 rounded-2xl bg-slate-50 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 space-y-3">
+          <h4 class="font-bold text-slate-900 dark:text-white text-xs sm:text-sm flex items-center gap-2">
+            <i data-lucide="users" class="w-4 h-4 text-amber-600"></i> Individual Cover vs. Family Floater Dynamics
+          </h4>
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 text-xs">
+            <div class="p-3 bg-white dark:bg-slate-900 rounded-xl border border-slate-200 dark:border-slate-800">
+              <strong class="text-slate-900 dark:text-white block mb-1">Individual Health Policy:</strong>
+              Each family member has their own dedicated sum insured (e.g. ₹5 Lakhs each). One member exhausting their cover does not affect others. Ideal when family members have huge age gaps or pre-existing diseases.
+            </div>
+            <div class="p-3 bg-white dark:bg-slate-900 rounded-xl border border-slate-200 dark:border-slate-800">
+              <strong class="text-slate-900 dark:text-white block mb-1">Family Floater Policy:</strong>
+              Single umbrella sum insured (e.g. ₹10 Lakhs) shared by spouse and children. Premium is priced on the age of the <strong>oldest insured member</strong>. Cost-effective for young, healthy families. Feature: <em>Auto-Restoration / Reload</em> restores the sum insured if exhausted mid-year for subsequent unrelated illnesses.
+            </div>
+          </div>
+        </div>
+
+      </section>
+
+      <!-- Section 3.2: Critical Policy Clauses, Deductibles, Co-Pay & Waiting Periods -->
+      <section id="sec-health-clauses" class="bg-white dark:bg-slate-900 rounded-3xl p-6 sm:p-8 border border-slate-200 dark:border-slate-800 shadow-xs space-y-6">
+        
+        <div class="flex items-center justify-between pb-3 border-b border-slate-100 dark:border-slate-800">
+          <span class="text-xs font-bold text-amber-600 dark:text-amber-400 uppercase tracking-wider flex items-center gap-1.5">
+            <span class="w-2 h-2 rounded-full bg-amber-500"></span> Section 3.2 &bull; Cost Sharing & Waiting Clauses
+          </span>
+          <span class="px-2.5 py-0.5 rounded-full text-[11px] font-extrabold uppercase bg-amber-500 text-slate-950 flex items-center gap-1 shadow-2xs">
+            <i data-lucide="star" class="w-3 h-3 fill-slate-950"></i> High Yield
+          </span>
+        </div>
+
+        <div>
+          <h2 class="font-display text-2xl font-bold text-slate-900 dark:text-white">
+            Deductibles, Co-Pay, Room Rent & IRDAI 2024 Waiting Periods
+          </h2>
+          <p class="text-xs sm:text-sm text-slate-500 dark:text-slate-400 mt-1">
+            Understanding cost-sharing terms and statutory waiting periods is crucial for evaluating health proposals.
+          </p>
+        </div>
+
+        <!-- Super Top-Up vs Top-Up (High Yield ⭐) -->
+        <div id="sec-super-topup" class="p-5 rounded-2xl bg-amber-50/60 dark:bg-amber-950/30 border border-amber-200 dark:border-amber-800 space-y-4">
+          <div class="flex items-center justify-between">
+            <h3 class="font-display font-bold text-base sm:text-lg text-slate-900 dark:text-white flex items-center gap-2">
+              <i data-lucide="layers" class="w-5 h-5 text-amber-600"></i>
+              Top-Up vs. Super Top-Up Health Insurance ⭐
+            </h3>
+            <span class="text-[10px] font-extrabold uppercase px-2 py-0.5 rounded bg-amber-600 text-white">Tested in Every Exam</span>
+          </div>
+
+          <p class="text-xs sm:text-sm text-slate-700 dark:text-slate-300 leading-relaxed">
+            Both plans provide high health insurance coverage at a fraction of standard base policy costs by applying a <strong>Deductible</strong> (threshold). However, the way the deductible is triggered is completely different:
+          </p>
+
+          <div class="overflow-x-auto rounded-xl border border-slate-200 dark:border-slate-700">
+            <table class="w-full text-left text-xs">
+              <thead class="bg-white dark:bg-slate-900 text-slate-700 dark:text-slate-200 border-b border-slate-200 dark:border-slate-700">
+                <tr>
+                  <th class="p-3 font-bold">Feature</th>
+                  <th class="p-3 font-bold text-slate-600 dark:text-slate-400">Regular Top-Up Plan</th>
+                  <th class="p-3 font-bold text-amber-700 dark:text-amber-400">Super Top-Up Plan ⭐</th>
+                </tr>
+              </thead>
+              <tbody class="divide-y divide-slate-100 dark:divide-slate-800 text-slate-600 dark:text-slate-300">
+                <tr>
+                  <td class="p-3 font-bold text-slate-900 dark:text-white">Deductible Application</td>
+                  <td class="p-3">Applied to <strong>EACH SINGLE hospitalization claim</strong> independently.</td>
+                  <td class="p-3 font-semibold text-emerald-700 dark:text-emerald-400">Applied to the <strong>AGGREGATE of all claims</strong> across the full policy year!</td>
+                </tr>
+                <tr>
+                  <td class="p-3 font-bold text-slate-900 dark:text-white">Scenario: Deductible ₹5L. Claim 1: ₹3.5L. Claim 2: ₹4.0L.</td>
+                  <td class="p-3 text-rose-600 dark:text-rose-400 font-semibold">
+                    Pays ₹0 on Claim 1 (below ₹5L).<br>
+                    Pays ₹0 on Claim 2 (below ₹5L).<br>
+                    <strong>Total Paid = ₹0!</strong>
+                  </td>
+                  <td class="p-3 text-emerald-600 dark:text-emerald-400 font-bold">
+                    Total Claims = ₹3.5L + ₹4.0L = ₹7.5L.<br>
+                    Deductible = ₹5.0L.<br>
+                    <strong>Super Top-Up Pays = ₹2.5 Lakhs!</strong>
+                  </td>
+                </tr>
+                <tr>
+                  <td class="p-3 font-bold text-slate-900 dark:text-white">Adviser Recommendation</td>
+                  <td class="p-3">Risky; leaves policyholder exposed to multiple moderate claims.</td>
+                  <td class="p-3 font-bold text-amber-700 dark:text-amber-400">Highly recommended to supercharge base cover cheaply.</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <!-- Room Rent Capping & Proportionate Deduction -->
+        <div id="sec-room-rent" class="p-5 rounded-2xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 space-y-3">
+          <div class="flex items-center justify-between">
+            <h3 class="font-display font-bold text-base text-slate-900 dark:text-white flex items-center gap-2">
+              <i data-lucide="home" class="w-4 h-4 text-amber-600"></i>
+              Room Rent Capping & Proportionate Deduction Formula ⭐
+            </h3>
+            <span class="text-[10px] font-bold px-2 py-0.5 rounded bg-rose-100 dark:bg-rose-950/80 text-rose-800 dark:text-rose-300">Penalty Clause</span>
+          </div>
+
+          <p class="text-xs sm:text-sm text-slate-600 dark:text-slate-300 leading-relaxed">
+            Standard policies cap room rent at <strong>1% of Sum Insured per day</strong> (and 2% for ICU). If an insured occupies a room charging higher than their eligible limit, the insurer applies a <strong>Proportionate Deduction</strong> to all associated medical treatment costs (doctor fees, surgery, nursing, operation theatre)!
+          </p>
+
+          <div class="p-3 bg-slate-50 dark:bg-slate-800 rounded-xl border border-slate-200 dark:border-slate-700 font-mono text-xs text-slate-800 dark:text-slate-200 space-y-1">
+            <div class="text-amber-700 dark:text-amber-400 font-bold">Proportionate Claim Payable Formula:</div>
+            <div>Eligible Associated Expense = Actual Incurred Expense &times; [ Eligible Room Rent Limit / Actual Room Rent Occupied ]</div>
+          </div>
+
+          <div class="p-3 bg-amber-50 dark:bg-amber-950/40 rounded-xl border border-amber-200 dark:border-amber-800 text-xs text-slate-700 dark:text-slate-300">
+            <strong>Numerical Case:</strong> Amit has a ₹5 Lakh policy with a 1% room rent cap (₹5,000/day). He stays in a deluxe room at ₹10,000/day for 4 days. His hospital bill is: Room Rent = ₹40,000; Doctor & Surgery charges = ₹2,00,000.<br>
+            &bull; Room rent paid = 4 &times; ₹5,000 = ₹20,000.<br>
+            &bull; Surgery/Doctor paid = ₹2,00,000 &times; (₹5,000 / ₹10,000) = <strong>₹1,00,000 only</strong>!<br>
+            &bull; Amit must pay the remaining ₹1,20,000 out of pocket due to proportionate deduction!
+          </div>
+        </div>
+
+        <!-- Waiting Periods Matrix (IRDAI 2024 Reforms) -->
+        <div class="p-5 rounded-2xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 space-y-3">
+          <h3 class="font-display font-bold text-base text-slate-900 dark:text-white flex items-center gap-2">
+            <i data-lucide="clock" class="w-4 h-4 text-amber-600"></i>
+            Statutory Waiting Periods (IRDAI 2024 Master Circular Reforms) ⭐
+          </h3>
+
+          <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-3 text-xs">
+            <div class="p-3 rounded-xl bg-slate-50 dark:bg-slate-800 border border-slate-200 dark:border-slate-700">
+              <strong class="text-slate-900 dark:text-white block mb-1">Initial Waiting Period</strong>
+              <strong>30 Days</strong> from policy commencement. No claims admissible except emergency accidental injuries.
+            </div>
+            <div class="p-3 rounded-xl bg-slate-50 dark:bg-slate-800 border border-slate-200 dark:border-slate-700">
+              <strong class="text-slate-900 dark:text-white block mb-1">Specific Illness Waiting</strong>
+              <strong>12 to 24 Months</strong> for slow-developing conditions (cataract, hernia, joint replacement, piles, kidney stones).
+            </div>
+            <div class="p-3 rounded-xl bg-amber-50 dark:bg-amber-950/50 border border-amber-300 dark:border-amber-700">
+              <strong class="text-amber-900 dark:text-amber-200 block mb-1">PED Waiting Period ⭐</strong>
+              Reduced to a <strong>maximum of 36 Months (3 Years)</strong> under IRDAI 2024 regulations (earlier 48 months).
+            </div>
+            <div class="p-3 rounded-xl bg-emerald-50 dark:bg-emerald-950/50 border border-emerald-300 dark:border-emerald-700">
+              <strong class="text-emerald-900 dark:text-emerald-200 block mb-1">Moratorium Clause ⭐</strong>
+              Reduced to <strong>5 Years (60 Months)</strong> continuous coverage. Thereafter, claim cannot be contested except for established fraud.
+            </div>
+          </div>
+        </div>
+
+      </section>
+
+      <!-- Section 3.3: Motor Insurance Framework -->
+      <section id="sec-motor" class="bg-white dark:bg-slate-900 rounded-3xl p-6 sm:p-8 border border-slate-200 dark:border-slate-800 shadow-xs space-y-6">
+        
+        <div class="flex items-center justify-between pb-3 border-b border-slate-100 dark:border-slate-800">
+          <span class="text-xs font-bold text-amber-600 dark:text-amber-400 uppercase tracking-wider flex items-center gap-1.5">
+            <span class="w-2 h-2 rounded-full bg-amber-500"></span> Section 3.3 &bull; Motor Vehicles Insurance
+          </span>
+          <span class="text-xs px-2.5 py-0.5 rounded-full bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-400 font-semibold">
+            Motor Vehicles Act Mandates
+          </span>
+        </div>
+
+        <div>
+          <h2 class="font-display text-2xl font-bold text-slate-900 dark:text-white">
+            Motor Insurance: Third-Party (TP), Own Damage (OD) & IDV
+          </h2>
+          <p class="text-xs sm:text-sm text-slate-500 dark:text-slate-400 mt-1">
+            Motor insurance is governed under the <strong>Motor Vehicles Act 1988 (amended in 2019)</strong>.
+          </p>
+        </div>
+
+        <!-- TP vs OD Comparison Table -->
+        <div class="grid grid-cols-1 sm:grid-cols-3 gap-3 text-xs sm:text-sm">
+          <div class="p-4 rounded-2xl bg-amber-50 dark:bg-amber-950/40 border border-amber-300 dark:border-amber-700 space-y-1.5">
+            <span class="text-[10px] font-extrabold uppercase px-2 py-0.5 rounded bg-amber-600 text-white">Statutory Mandate</span>
+            <h4 class="font-bold text-slate-900 dark:text-white">Third-Party (TP) Liability ⭐</h4>
+            <p class="text-slate-600 dark:text-slate-300 leading-relaxed text-xs">
+              Compulsory by law for all vehicles. Covers legal liability to third parties:
+            </p>
+            <ul class="list-disc pl-4 space-y-0.5 text-slate-700 dark:text-slate-300 text-xs">
+              <li><strong>Death / Bodily Injury:</strong> UNLIMITED financial liability! Awarded by Motor Accident Claims Tribunal (MACT).</li>
+              <li><strong>Third-Party Property Damage (TPPD):</strong> Capped at ₹7,50,000.</li>
+            </ul>
+          </div>
+
+          <div class="p-4 rounded-2xl bg-slate-50 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 space-y-1.5">
+            <span class="text-[10px] font-bold uppercase px-2 py-0.5 rounded bg-slate-200 dark:bg-slate-700 text-slate-700 dark:text-slate-300">Optional Cover</span>
+            <h4 class="font-bold text-slate-900 dark:text-white">Own Damage (OD) Cover</h4>
+            <p class="text-slate-600 dark:text-slate-300 leading-relaxed text-xs">
+              Covers loss or damage to the insured vehicle itself due to accidental external collision, fire, self-ignition, lightning, theft, flood, earthquake, or transit damage.
+            </p>
+          </div>
+
+          <div class="p-4 rounded-2xl bg-slate-50 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 space-y-1.5">
+            <span class="text-[10px] font-bold uppercase px-2 py-0.5 rounded bg-emerald-100 dark:bg-emerald-950 text-emerald-800 dark:text-emerald-300">Mandatory Add-On</span>
+            <h4 class="font-bold text-slate-900 dark:text-white">Compulsory Personal Accident (CPA)</h4>
+            <p class="text-slate-600 dark:text-slate-300 leading-relaxed text-xs">
+              Mandatory personal accident cover of <strong>₹15 Lakhs</strong> for the registered owner-driver covering death and permanent total disability. (Exempt if owner holds existing standalone PA policy of ₹15L+).
+            </p>
+          </div>
+        </div>
+
+        <!-- IDV Calculation & CTL -->
+        <div class="p-5 rounded-2xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 space-y-3">
+          <div class="flex items-center justify-between">
+            <h3 class="font-display font-bold text-base text-slate-900 dark:text-white">
+              Insured's Declared Value (IDV) & Constructive Total Loss (CTL) ⭐
+            </h3>
+            <span class="text-[10px] font-bold px-2 py-0.5 rounded bg-blue-50 dark:bg-blue-950/80 text-blue-700">Valuation Engine</span>
+          </div>
+
+          <p class="text-xs sm:text-sm text-slate-600 dark:text-slate-300 leading-relaxed">
+            The <strong>IDV</strong> is the agreed Sum Insured for the vehicle, representing the current market value. It is calculated by taking the manufacturer's listed selling price and subtracting standard age depreciation:
+          </p>
+
+          <div class="overflow-x-auto rounded-xl border border-slate-200 dark:border-slate-700">
+            <table class="w-full text-left text-xs">
+              <thead class="bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-200">
+                <tr>
+                  <th class="p-2.5 font-bold">Age of Vehicle</th>
+                  <th class="p-2.5 font-bold">Depreciation % for IDV</th>
+                  <th class="p-2.5 font-bold">Age of Vehicle</th>
+                  <th class="p-2.5 font-bold">Depreciation % for IDV</th>
+                </tr>
+              </thead>
+              <tbody class="divide-y divide-slate-100 dark:divide-slate-800 text-slate-600 dark:text-slate-300">
+                <tr>
+                  <td class="p-2.5">Not exceeding 6 months</td>
+                  <td class="p-2.5 font-bold text-emerald-600">5%</td>
+                  <td class="p-2.5">Exceeding 2 years but &le; 3 years</td>
+                  <td class="p-2.5 font-bold text-amber-600">30%</td>
+                </tr>
+                <tr>
+                  <td class="p-2.5">Exceeding 6 months but &le; 1 year</td>
+                  <td class="p-2.5 font-bold text-emerald-600">15%</td>
+                  <td class="p-2.5">Exceeding 3 years but &le; 4 years</td>
+                  <td class="p-2.5 font-bold text-amber-600">40%</td>
+                </tr>
+                <tr>
+                  <td class="p-2.5">Exceeding 1 year but &le; 2 years</td>
+                  <td class="p-2.5 font-bold text-amber-600">20%</td>
+                  <td class="p-2.5">Exceeding 4 years but &le; 5 years</td>
+                  <td class="p-2.5 font-bold text-rose-600">50%</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <div class="p-3 bg-amber-50 dark:bg-amber-950/40 rounded-xl border border-amber-200 dark:border-amber-800 text-xs text-slate-700 dark:text-slate-300">
+            <strong>Constructive Total Loss (CTL) Threshold:</strong> A vehicle is treated as a Constructive Total Loss when the aggregate cost of retrieval and repair exceeds <strong>75% of the vehicle's IDV</strong>. The insurer pays the full IDV minus wreck salvage value.
+          </div>
+        </div>
+
+      </section>
+
+      <!-- Section 3.4: Property, Bharat Griha Raksha & Principle of Average -->
+      <section id="sec-property" class="bg-white dark:bg-slate-900 rounded-3xl p-6 sm:p-8 border border-slate-200 dark:border-slate-800 shadow-xs space-y-6">
+        
+        <div class="flex items-center justify-between pb-3 border-b border-slate-100 dark:border-slate-800">
+          <span class="text-xs font-bold text-amber-600 dark:text-amber-400 uppercase tracking-wider flex items-center gap-1.5">
+            <span class="w-2 h-2 rounded-full bg-amber-500"></span> Section 3.4 &bull; Property & Home Insurance
+          </span>
+          <span class="text-xs px-2.5 py-0.5 rounded-full bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-400 font-semibold">
+            Under-Insurance Penalty
+          </span>
+        </div>
+
+        <div>
+          <h2 class="font-display text-2xl font-bold text-slate-900 dark:text-white">
+            Home Insurance (Bharat Griha Raksha) & Principle of Average ⭐
+          </h2>
+          <p class="text-xs sm:text-sm text-slate-500 dark:text-slate-400 mt-1">
+            Standardized home insurance regulations introduced by IRDAI and the penalty mechanics of under-insurance.
+          </p>
+        </div>
+
+        <!-- Bharat Griha Raksha -->
+        <div class="p-4 rounded-2xl bg-slate-50 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 space-y-2">
+          <h4 class="font-bold text-slate-900 dark:text-white text-xs sm:text-sm flex items-center gap-2">
+            <i data-lucide="shield" class="w-4 h-4 text-amber-600"></i> Bharat Griha Raksha (Standard Home Policy)
+          </h4>
+          <p class="text-xs text-slate-600 dark:text-slate-300 leading-relaxed">
+            Introduced by IRDAI to provide a standardized, transparent home building and contents insurance product covering 14 natural and man-made perils (fire, cyclone, flood, earthquake, landslide, terrorism, bursting of water pipes).
+          </p>
+          <ul class="list-disc pl-4 space-y-1 text-xs text-slate-600 dark:text-slate-300">
+            <li><strong>Automatic General Contents Cover:</strong> Automatically covers general home contents for <strong>20% of the building sum insured (maximum ₹10 Lakhs)</strong> without requiring the insured to declare individual item lists.</li>
+            <li><strong>Waiver of Under-Insurance:</strong> Under Bharat Griha Raksha, if under-insurance is within <strong>15%</strong> of true reinstatement value, no under-insurance penalty is applied!</li>
+          </ul>
+        </div>
+
+        <!-- Principle of Average Formula & Numerical -->
+        <div class="p-5 rounded-2xl bg-amber-50/70 dark:bg-amber-950/40 border border-amber-300 dark:border-amber-700 space-y-3">
+          <div class="flex items-center justify-between">
+            <h3 class="font-display font-bold text-base text-slate-900 dark:text-white flex items-center gap-2">
+              <i data-lucide="alert-octagon" class="w-4 h-4 text-amber-600"></i>
+              The Principle of Average (Under-Insurance Penalty Formula) ⭐
+            </h3>
+            <span class="text-[10px] font-bold px-2 py-0.5 rounded bg-amber-600 text-white uppercase">Exam Formula</span>
+          </div>
+
+          <p class="text-xs sm:text-sm text-slate-700 dark:text-slate-300 leading-relaxed">
+            In commercial fire and property policies, if the insured chooses to insure their asset for an amount less than its actual value at the time of loss (to save premium), they are deemed to be their own insurer for the difference and must bear a proportionate fraction of any partial loss.
+          </p>
+
+          <div class="p-3.5 bg-white dark:bg-slate-900 rounded-xl border border-amber-300 dark:border-amber-700 font-mono text-xs sm:text-sm text-amber-900 dark:text-amber-200">
+            Claim Payable = Total Loss Amount &times; [ Sum Insured / Actual Value of Property at Time of Loss ]
+          </div>
+
+          <div class="p-3.5 bg-white dark:bg-slate-900 rounded-xl border border-slate-200 dark:border-slate-800 text-xs space-y-1 text-slate-700 dark:text-slate-300">
+            <span class="font-bold text-slate-900 dark:text-white">Worked Numerical Problem:</span><br>
+            A warehouse with goods actually valued at <strong>₹50,00,000</strong> is insured under a Standard Fire policy with a Sum Insured of only <strong>₹30,00,000</strong> (60% coverage). A fire causes partial damage of <strong>₹10,00,000</strong>.<br>
+            &bull; Claim Payable = ₹10,00,000 &times; (₹30,00,000 / ₹50,00,000) = ₹10,00,000 &times; 0.60 = <strong>₹6,00,000</strong>.<br>
+            &bull; The warehouse owner must bear the remaining <strong>₹4,00,000</strong> loss personally due to the average clause!
+          </div>
+        </div>
+
+      </section>
+
+      <!-- Chapter Completion & Interactive 12-Question Quiz -->
+      <section id="interactive-quiz" class="rounded-3xl p-6 sm:p-8 bg-slate-900 text-white shadow-xl space-y-8 border border-slate-800">
+        
+        <!-- Header -->
+        <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 pb-6 border-b border-white/10">
+          <div>
+            <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-semibold bg-amber-500/20 text-amber-300 border border-amber-400/30 mb-2">
+              <i data-lucide="award" class="w-3.5 h-3.5"></i>
+              <span>Exam Benchmark: 60% Required to Pass</span>
+            </div>
+            <h3 class="font-display text-xl sm:text-2xl font-bold text-white">
+              Chapter 3 Interactive Mastery Quiz
+            </h3>
+            <p class="text-xs text-slate-400 mt-1">
+              12 Practice Questions testing Super Top-up math, Proportionate deduction, Waiting periods, Motor TP, IDV, and Principle of Average.
+            </p>
+          </div>
+          <div class="flex items-center gap-2 self-start sm:self-auto">
+            <span class="text-xs font-medium text-slate-400">Answered:</span>
+            <span id="answered-count" class="font-mono text-sm font-bold text-amber-400 bg-white/10 px-2 py-0.5 rounded">0</span>
+            <span class="text-xs text-slate-400 font-mono">/ 12</span>
+          </div>
+        </div>
+
+        <!-- Quiz Container -->
+        <div id="questions-container" class="space-y-6"></div>
+
+        <!-- Action Buttons -->
+        <div class="flex flex-col sm:flex-row items-center justify-between gap-4 pt-6 border-t border-white/10">
+          <button id="submit-quiz-btn" onclick="submitQuiz()" class="w-full sm:w-auto px-6 py-3 rounded-xl font-bold text-xs sm:text-sm text-slate-950 bg-amber-500 hover:bg-amber-400 transition-colors shadow-sm flex items-center justify-center gap-2">
+            <i data-lucide="check-circle" class="w-4 h-4"></i>
+            <span>Submit Quiz & Validate Answers</span>
+          </button>
+          <button id="reset-quiz-btn" onclick="resetQuiz()" class="hidden w-full sm:w-auto px-6 py-3 rounded-xl font-bold text-xs sm:text-sm text-white bg-slate-800 hover:bg-slate-700 transition-colors border border-white/10 flex items-center justify-center gap-2">
+            <i data-lucide="rotate-ccw" class="w-4 h-4"></i>
+            <span>Retake Quiz</span>
+          </button>
+        </div>
+
+        <!-- Quiz Results Scorecard Modal/Box -->
+        <div id="quiz-results" class="hidden rounded-2xl bg-white/5 border border-white/10 p-6 space-y-4">
+          <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-3">
+            <div>
+              <span id="result-status-badge" class="px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider bg-emerald-500 text-emerald-950">
+                Status: Passed
+              </span>
+              <h4 class="font-display text-2xl font-bold text-white mt-2">Your Chapter Performance</h4>
+            </div>
+            <div class="text-left sm:text-right">
+              <span id="score-display" class="font-mono text-3xl font-extrabold text-amber-400">0 / 12</span>
+              <span id="percentage-display" class="block text-xs text-slate-400 mt-0.5">0% (Passing criteria: 60%)</span>
+            </div>
+          </div>
+          <p id="result-summary-text" class="text-xs sm:text-sm text-slate-300 leading-relaxed border-t border-white/10 pt-3">
+            Review detailed question explanations above to cement your understanding of non-life principles and formulas.
+          </p>
+        </div>
+
+      </section>
+
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="bg-white dark:bg-slate-900 border-t border-slate-200 dark:border-slate-800 py-8 mt-12">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-slate-500 dark:text-slate-400">
+      <div class="flex items-center gap-2">
+        <span class="font-display font-bold text-slate-900 dark:text-white">NISM Series X-B</span>
+        <span>&bull; Module 7 &bull; Chapter 3: Features of Non-Life Insurance Products</span>
+      </div>
+      <div class="flex items-center gap-4 font-medium">
+        <a href="module7.html" class="hover:text-amber-600 transition-colors">Module 7 Hub</a>
+        <a href="nism-10b.html" class="hover:text-amber-600 font-bold transition-colors">Series X-B Exam Hub &rarr;</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Quiz Script -->
+  <script>
+    const questionsData = [
+      {
+        id: 1,
+        question: "How does a Super Top-Up health insurance policy differ fundamentally from a standard Top-Up policy?",
+        options: [
+          { text: "Super Top-Up covers outpatient OPD expenses, whereas Top-Up does not", key: "a" },
+          { text: "Super Top-Up applies the deductible to aggregate claims across the policy year, while Top-Up applies deductible to each claim individually", key: "b" },
+          { text: "Super Top-Up is issued only by government public sector insurers", key: "c" },
+          { text: "Super Top-Up has no waiting periods for pre-existing diseases", key: "d" }
+        ],
+        correct: "b",
+        explanation: "A standard Top-Up policy requires each single hospitalization claim to breach the deductible. In contrast, a Super Top-Up policy aggregates all hospitalization claims incurred throughout the policy year against the single deductible threshold."
+      },
+      {
+        id: 2,
+        question: "Under the latest IRDAI Master Circular (2024), what is the maximum permissible waiting period for Pre-Existing Diseases (PED) in health insurance policies?",
+        options: [
+          { text: "12 Months (1 Year)", key: "a" },
+          { text: "24 Months (2 Years)", key: "b" },
+          { text: "36 Months (3 Years)", key: "c" },
+          { text: "48 Months (4 Years)", key: "d" }
+        ],
+        correct: "c",
+        explanation: "Under the revised IRDAI guidelines in 2024, the maximum waiting period an insurer can impose for Pre-Existing Diseases (PED) was reduced from 48 months (4 years) to 36 months (3 years)."
+      },
+      {
+        id: 3,
+        question: "An individual holds a health policy of ₹4 Lakhs with a 1% room rent daily cap (₹4,000/day). They choose a room costing ₹8,000/day. If surgeon and doctor treatment charges total ₹1,60,000, how much will the insurer pay for these treatment charges under proportionate deduction?",
+        options: [
+          { text: "₹1,60,000 in full", key: "a" },
+          { text: "₹80,000 (50% proportionate reduction)", key: "b" },
+          { text: "₹40,000", key: "c" },
+          { text: "₹1,20,000", key: "d" }
+        ],
+        correct: "b",
+        explanation: "Under proportionate deduction, all associated hospital and doctor expenses are scaled down by the ratio of (Eligible Room Rent / Actual Room Rent) = ₹4,000 / ₹8,000 = 50%. Therefore, the insurer pays 50% of ₹1,60,000 = ₹80,000."
+      },
+      {
+        id: 4,
+        question: "What is the continuous coverage Moratorium Period under updated IRDAI health regulations after which an insurer cannot challenge a policy on non-disclosure (except fraud)?",
+        options: [
+          { text: "3 Years (36 months)", key: "a" },
+          { text: "5 Years (60 months)", key: "b" },
+          { text: "8 Years (96 months)", key: "c" },
+          { text: "10 Years (120 months)", key: "d" }
+        ],
+        correct: "b",
+        explanation: "IRDAI has reduced the Moratorium Period from 8 years to 5 continuous policy years (60 months). After 5 years of continuous renewal, no health claim can be repudiated or policy cancelled on grounds of misrepresentation or non-disclosure (excluding proven fraud)."
+      },
+      {
+        id: 5,
+        question: "What is the mandatory survival period typically required in Critical Illness insurance before the lump-sum benefit becomes payable following diagnosis?",
+        options: [
+          { text: "7 days", key: "a" },
+          { text: "28 to 30 days", key: "b" },
+          { text: "90 days", key: "c" },
+          { text: "180 days", key: "d" }
+        ],
+        correct: "b",
+        explanation: "Critical Illness policies are fixed-benefit policies that require the insured to survive for a specified survival period (typically 28 to 30 days) from the date of diagnosis of the critical illness."
+      },
+      {
+        id: 6,
+        question: "Under the Motor Vehicles Act 1988 (amended in 2019), what is the statutory financial liability limit for an insurer regarding Third-Party Bodily Injury or Death?",
+        options: [
+          { text: "Capped at ₹15 Lakhs", key: "a" },
+          { text: "Capped at ₹50 Lakhs", key: "b" },
+          { text: "Statutorily Unlimited liability", key: "c" },
+          { text: "Capped at the vehicle's Insured Declared Value (IDV)", key: "d" }
+        ],
+        correct: "c",
+        explanation: "Third-party bodily injury or death liability under the Motor Vehicles Act is statutorily unlimited. The award is decided by the Motor Accident Claims Tribunal (MACT) based on the victim's age, earnings, and family dependents."
+      },
+      {
+        id: 7,
+        question: "What is the statutory limit on Third-Party Property Damage (TPPD) under standard Motor Third-Party insurance policies?",
+        options: [
+          { text: "₹1,00,000", key: "a" },
+          { text: "₹7,50,000", key: "b" },
+          { text: "₹15,00,000", key: "c" },
+          { text: "₹25,00,000", key: "d" }
+        ],
+        correct: "b",
+        explanation: "Under the Motor Vehicles Act framework, the statutory liability limit for Third-Party Property Damage (TPPD) is capped at ₹7,50,000 (though the insured can choose to limit it to ₹6,000 for a nominal discount in premium)."
+      },
+      {
+        id: 8,
+        question: "What is the mandatory Compulsory Personal Accident (CPA) coverage amount required for the registered owner-driver of a private vehicle in India?",
+        options: [
+          { text: "₹5 Lakhs", key: "a" },
+          { text: "₹10 Lakhs", key: "b" },
+          { text: "₹15 Lakhs", key: "c" },
+          { text: "₹25 Lakhs", key: "d" }
+        ],
+        correct: "c",
+        explanation: "The Insurance Regulatory and Development Authority of India (IRDAI) mandates a minimum Compulsory Personal Accident (CPA) cover of ₹15 Lakhs for owner-drivers of four-wheelers and two-wheelers."
+      },
+      {
+        id: 9,
+        question: "How is the Insured's Declared Value (IDV) of a private passenger car aged 18 months determined for motor own-damage coverage?",
+        options: [
+          { text: "Current second-hand resale market value as quoted by car dealers", key: "a" },
+          { text: "Manufacturer's listed selling price minus 20% standard depreciation", key: "b" },
+          { text: "Purchase invoice price without any depreciation deduction", key: "c" },
+          { text: "Manufacturer's listed selling price minus 50% depreciation", key: "d" }
+        ],
+        correct: "b",
+        explanation: "As per the standard IDV depreciation schedule, for vehicles aged between 1 year and 2 years (18 months falls here), the depreciation rate applied to the manufacturer's listed selling price is exactly 20%."
+      },
+      {
+        id: 10,
+        question: "At what point is a damaged vehicle declared a 'Constructive Total Loss' (CTL) by the motor insurance surveyor?",
+        options: [
+          { text: "When the repair cost exceeds 25% of IDV", key: "a" },
+          { text: "When the repair cost exceeds 50% of IDV", key: "b" },
+          { text: "When the aggregate cost of retrieval and repair exceeds 75% of the vehicle's IDV", key: "c" },
+          { text: "Only when the engine is completely submerged in water", key: "d" }
+        ],
+        correct: "c",
+        explanation: "A vehicle is considered a Constructive Total Loss (CTL) when the aggregate cost of repair and retrieval exceeds 75% of the vehicle's Insured's Declared Value (IDV)."
+      },
+      {
+        id: 11,
+        question: "Under IRDAI's Bharat Griha Raksha home policy, what percentage of the building sum insured is automatically covered for general home contents without declaring an itemized inventory?",
+        options: [
+          { text: "10% (up to a maximum of ₹5 Lakhs)", key: "a" },
+          { text: "20% (up to a maximum of ₹10 Lakhs)", key: "b" },
+          { text: "30% (up to a maximum of ₹15 Lakhs)", key: "c" },
+          { text: "50% (unlimited)", key: "d" }
+        ],
+        correct: "b",
+        explanation: "Bharat Griha Raksha automatically includes coverage for general home contents up to 20% of the Home Building Sum Insured (subject to a maximum of ₹10 Lakhs) without requiring a declared item list."
+      },
+      {
+        id: 12,
+        question: "A commercial building actually valued at ₹1 Crore is insured under a Standard Fire policy for ₹60 Lakhs. A fire causes a partial loss of ₹20 Lakhs. Applying the Principle of Average, what claim amount will the insurer pay?",
+        options: [
+          { text: "₹20,00,000 (Full loss since loss is within ₹60L)", key: "a" },
+          { text: "₹12,00,000 (60% proportionate payout)", key: "b" },
+          { text: "₹10,00,000", key: "c" },
+          { text: "₹15,00,000", key: "d" }
+        ],
+        correct: "b",
+        explanation: "Applying the Principle of Average for under-insurance: Claim = Loss * (Sum Insured / Actual Value) = ₹20,00,000 * (₹60,00,000 / ₹1,00,00,000) = ₹20,00,000 * 0.60 = ₹12,00,000. The insured bears ₹8,00,000 as self-insurer."
+      }
+    ];
+
+    let userAnswers = {};
+
+    function renderQuiz() {
+      const container = document.getElementById("questions-container");
+      container.innerHTML = "";
+
+      questionsData.forEach((q, index) => {
+        const qDiv = document.createElement("div");
+        qDiv.className = "p-5 rounded-2xl bg-white/5 border border-white/10 space-y-4 transition-all";
+        qDiv.id = `q-box-${q.id}`;
+
+        let optionsHtml = "";
+        q.options.forEach(opt => {
+          optionsHtml += `
+            <label class="flex items-center gap-3 p-3 rounded-xl bg-white/5 hover:bg-white/10 border border-white/5 cursor-pointer text-xs sm:text-sm transition-all" onclick="selectOption(${q.id}, '${opt.key}')" id="label-${q.id}-${opt.key}">
+              <input type="radio" name="question-${q.id}" value="${opt.key}" class="w-4 h-4 text-amber-500 focus:ring-0 focus:ring-offset-0 bg-transparent border-slate-500">
+              <span class="font-bold text-amber-400 w-5 uppercase font-mono">${opt.key}.</span>
+              <span class="text-slate-200">${opt.text}</span>
+            </label>
+          `;
+        });
+
+        qDiv.innerHTML = `
+          <div class="flex items-start justify-between gap-2">
+            <span class="text-xs font-bold text-amber-400 uppercase tracking-wider">Question ${index + 1} of ${questionsData.length}</span>
+            <span id="badge-${q.id}" class="text-xs px-2 py-0.5 rounded-full bg-white/5 text-slate-400 font-medium">Unanswered</span>
+          </div>
+          <h4 class="font-display font-semibold text-sm sm:text-base text-white">${q.question}</h4>
+          <div class="space-y-2 mt-3">
+            ${optionsHtml}
+          </div>
+          <div id="explanation-${q.id}" class="hidden p-4 rounded-xl text-xs sm:text-sm mt-3 space-y-1"></div>
+        `;
+        container.appendChild(qDiv);
+      });
+      lucide.createIcons();
+    }
+
+    function selectOption(qId, key) {
+      userAnswers[qId] = key;
+      const count = Object.keys(userAnswers).length;
+      document.getElementById("answered-count").innerText = count;
+      
+      const badge = document.getElementById(`badge-${qId}`);
+      if (badge) {
+        badge.innerText = "Answered";
+        badge.className = "text-xs px-2 py-0.5 rounded-full bg-amber-500/20 text-amber-300 font-medium";
+      }
+
+      const q = questionsData.find(item => item.id === qId);
+      q.options.forEach(opt => {
+        const lbl = document.getElementById(`label-${qId}-${opt.key}`);
+        if (opt.key === key) {
+          lbl.className = "flex items-center gap-3 p-3 rounded-xl bg-amber-500/30 border border-amber-400/50 cursor-pointer text-xs sm:text-sm transition-all";
+        } else {
+          lbl.className = "flex items-center gap-3 p-3 rounded-xl bg-white/5 hover:bg-white/10 border border-white/5 cursor-pointer text-xs sm:text-sm transition-all";
+        }
+      });
+    }
+
+    function submitQuiz() {
+      let score = 0;
+      questionsData.forEach(q => {
+        const selected = userAnswers[q.id];
+        const isCorrect = selected === q.correct;
+        if (isCorrect) score++;
+
+        const explanationDiv = document.getElementById(`explanation-${q.id}`);
+        explanationDiv.classList.remove("hidden");
+
+        if (isCorrect) {
+          explanationDiv.className = "p-4 rounded-xl text-xs sm:text-sm mt-3 bg-emerald-950/60 border border-emerald-600 text-emerald-200 space-y-1";
+          explanationDiv.innerHTML = `<div class="font-bold text-emerald-400 flex items-center gap-1.5"><i data-lucide="check" class="w-4 h-4"></i> Correct!</div><p>${q.explanation}</p>`;
+        } else {
+          explanationDiv.className = "p-4 rounded-xl text-xs sm:text-sm mt-3 bg-rose-950/60 border border-rose-600 text-rose-200 space-y-1";
+          explanationDiv.innerHTML = `<div class="font-bold text-rose-400 flex items-center gap-1.5"><i data-lucide="x" class="w-4 h-4"></i> Incorrect (Correct Answer: ${q.correct.toUpperCase()})</div><p>${q.explanation}</p>`;
+        }
+      });
+
+      const percentage = Math.round((score / questionsData.length) * 100);
+      const passed = percentage >= 60;
+      
+      const resultsDiv = document.getElementById("quiz-results");
+      resultsDiv.classList.remove("hidden");
+
+      const statusBadge = document.getElementById("result-status-badge");
+      statusBadge.innerText = passed ? "Status: Passed (60%+ Benchmark)" : "Status: Needs Revision";
+      statusBadge.className = passed ? "px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider bg-emerald-500 text-emerald-950" : "px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider bg-amber-500 text-amber-950";
+
+      document.getElementById("score-display").innerText = `${score} / ${questionsData.length}`;
+      document.getElementById("percentage-display").innerText = `${percentage}% Score (Passing criteria: 60%)`;
+
+      document.getElementById("result-summary-text").innerText = passed
+        ? `Great job! You scored ${percentage}%, successfully clearing the NISM Level 2 pass benchmark. Review the explanations above to cement your understanding.`
+        : `You scored ${percentage}%. Revisit the notes on Super Top-Up vs Top-Up, Proportionate Deduction, and the Principle of Average before retaking the quiz.`;
+
+      document.getElementById("submit-quiz-btn").classList.add("hidden");
+      document.getElementById("reset-quiz-btn").classList.remove("hidden");
+
+      resultsDiv.scrollIntoView({ behavior: 'smooth' });
+      lucide.createIcons();
+    }
+
+    function resetQuiz() {
+      userAnswers = {};
+      document.getElementById("answered-count").innerText = "0";
+      document.getElementById("quiz-results").classList.add("hidden");
+      document.getElementById("submit-quiz-btn").classList.remove("hidden");
+      document.getElementById("reset-quiz-btn").classList.add("hidden");
+      renderQuiz();
+      document.getElementById("interactive-quiz").scrollIntoView({ behavior: 'smooth' });
+    }
+
+    // Initialize Quiz
+    renderQuiz();
+    lucide.createIcons();
+  </script>
+</body>
+</html>

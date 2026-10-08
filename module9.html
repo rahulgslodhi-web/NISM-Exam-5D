@@ -1,0 +1,452 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Module 9: Taxation | NISM Series X-B Investment Adviser (Level 2)</title>
+  
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  
+  <!-- Google Fonts: DM Sans & Jost (Eduleb Benchmark) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Jost:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+  
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+
+  <!-- Modern Documentation Design System -->
+  <link rel="stylesheet" href="modern-docs.css">
+  <script defer src="nav-sidebar.js"></script>
+
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['"DM Sans"', 'sans-serif'],
+            display: ['"Jost"', 'sans-serif'],
+            heading: ['"Jost"', 'sans-serif']
+          },
+          colors: {
+            brand: {
+              50: '#eef2ff',
+              100: '#e0e7ff',
+              500: '#525fe1',
+              600: '#434ec9',
+              700: '#353db3',
+              800: '#282f9c',
+              900: '#0b104a'
+            }
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    body {
+      font-family: 'DM Sans', sans-serif;
+      font-size: 16px;
+      line-height: 26px;
+      color: #4a5355;
+    }
+    h1, h2, h3, h4, h5, h6, .font-display, .font-heading {
+      font-family: 'Jost', sans-serif;
+      font-weight: 700;
+    }
+  </style>
+</head>
+<body class="bg-slate-50 dark:bg-slate-950 text-slate-900 dark:text-slate-100 min-h-screen flex flex-col selection:bg-blue-500 selection:text-white antialiased transition-colors duration-200">
+
+  <!-- Smooth Opening Preloader -->
+  <div class="preloaders" id="eduleb-preloader">
+    <span class="loader"></span>
+    <div class="preloader-label">Module 9: Taxation (20 Marks)</div>
+  </div>
+
+  <!-- Standardized Header (Single-Tier, 64px) -->
+  <header class="sticky top-0 z-40 bg-white/95 dark:bg-slate-900/95 backdrop-blur-md border-b border-slate-200/80 dark:border-slate-800 shadow-xs">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 h-16 flex items-center justify-between">
+      <!-- Left: Logo & Context Label -->
+      <a href="nism-10b.html" class="flex items-center gap-2.5 group">
+        <div class="w-9 h-9 rounded-xl bg-blue-600 flex items-center justify-center text-white font-bold shadow-xs group-hover:scale-105 transition-transform">
+          <i data-lucide="shield-check" class="w-5 h-5"></i>
+        </div>
+        <div>
+          <span class="font-display font-bold text-base tracking-tight text-[#0b104a] dark:text-white block leading-tight">NISM Series X-B</span>
+          <span class="block text-[10px] text-blue-600 dark:text-blue-400 font-bold uppercase tracking-wider">Module 9: Taxation</span>
+        </div>
+      </a>
+
+      <!-- Center: Navigation Links -->
+      <nav class="hidden lg:flex items-center gap-1 text-sm font-medium font-display">
+        <a href="index.html#certifications" class="px-2.5 py-1.5 rounded-lg text-slate-600 dark:text-slate-300 hover:text-[#0b104a] hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors">All Exams</a>
+        <a href="nism-10b.html" class="px-2.5 py-1.5 rounded-lg text-slate-600 dark:text-slate-300 hover:text-amber-700 hover:bg-amber-50/60 dark:hover:bg-amber-950/40 transition-colors">Series X-B Hub</a>
+        <a href="module7.html" class="px-2.5 py-1.5 rounded-lg text-slate-600 dark:text-slate-300 hover:text-amber-700 hover:bg-amber-50/60 dark:hover:bg-amber-950/40 transition-colors">Mod 7 (25M)</a>
+        <a href="module8.html" class="px-2.5 py-1.5 rounded-lg text-slate-600 dark:text-slate-300 hover:text-emerald-700 hover:bg-emerald-50/60 dark:hover:bg-emerald-950/40 transition-colors">Mod 8 (30M)</a>
+        <a href="module9.html" class="px-2.5 py-1.5 rounded-lg font-semibold text-blue-700 dark:text-blue-300 bg-blue-50 dark:bg-blue-950/70 border border-blue-200/80 dark:border-blue-800/80 transition-colors">Mod 9 (20M ⭐)</a>
+        <a href="module10.html" class="px-2.5 py-1.5 rounded-lg text-slate-600 dark:text-slate-300 hover:text-rose-700 hover:bg-rose-50/60 dark:hover:bg-rose-950/40 transition-colors">Mod 10 (20M)</a>
+        <a href="module11.html" class="px-2.5 py-1.5 rounded-lg text-slate-600 dark:text-slate-300 hover:text-purple-700 hover:bg-purple-50/60 dark:hover:bg-purple-950/40 transition-colors">Mod 11 (10M)</a>
+        <a href="module12.html" class="px-2.5 py-1.5 rounded-lg text-slate-600 dark:text-slate-300 hover:text-indigo-700 hover:bg-indigo-50/60 dark:hover:bg-indigo-950/40 transition-colors">Mod 12 (45M)</a>
+      </nav>
+
+      <!-- Right: Search, Theme, Quick Nav -->
+      <div class="flex items-center gap-2">
+        <button onclick="window.openSpotlightModal()" class="flex items-center gap-2 px-3 py-1.5 rounded-full border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-800 text-slate-500 dark:text-slate-400 text-xs font-medium" title="Search (⌘K)">
+          <i data-lucide="search" class="w-3.5 h-3.5 text-blue-600"></i>
+          <span class="hidden sm:inline">Search</span>
+          <kbd class="px-1.5 py-0.5 rounded bg-slate-100 dark:bg-slate-700 text-[10px] font-mono text-slate-400">⌘K</kbd>
+        </button>
+        <button id="nism-header-theme-btn" onclick="window.toggleDarkMode()" class="p-2 rounded-full border border-slate-200 dark:border-slate-700 text-slate-600 dark:text-slate-300 bg-white dark:bg-slate-800" title="Toggle Theme (⌘D)">
+          <i data-lucide="moon" class="w-4 h-4"></i>
+        </button>
+        <a href="#chapters-grid" class="hidden sm:inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-full text-xs font-bold text-white bg-blue-600 hover:bg-blue-700 font-display transition-colors">
+          <span>7 Chapters</span>
+          <i data-lucide="arrow-down" class="w-3 h-3"></i>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Module Hero Banner -->
+  <section class="bg-gradient-to-b from-blue-50/90 via-indigo-50/30 to-slate-50 dark:from-slate-900 dark:via-blue-950/20 dark:to-slate-950 py-12 sm:py-16 border-b border-slate-200/80 dark:border-slate-800">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex flex-wrap items-center gap-2 mb-4">
+        <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-blue-100 dark:bg-blue-950/80 text-blue-800 dark:text-blue-300 text-xs font-bold border border-blue-200 dark:border-blue-800">
+          <i data-lucide="file-badge-2" class="w-3.5 h-3.5"></i>
+          Module 9 &bull; 20 Marks Weightage (13.3% of Series X-B Exam)
+        </span>
+        <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-amber-50 dark:bg-amber-950/80 text-amber-800 dark:text-amber-300 border border-amber-200 dark:border-amber-800 text-xs font-semibold">
+          <i data-lucide="sparkles" class="w-3.5 h-3.5 text-amber-600"></i>
+          Finance Act 2024 & Section 50AA Fully Updated
+        </span>
+      </div>
+      
+      <h1 class="font-display text-3xl sm:text-5xl font-extrabold text-[#0b104a] dark:text-white tracking-tight">
+        Module 9: Taxation Concepts & Product Provisions
+      </h1>
+      <p class="mt-4 text-slate-600 dark:text-slate-300 max-w-3xl leading-relaxed text-sm sm:text-base">
+        Master Indian income tax principles essential for SEBI Registered Investment Advisers. Complete coverage of residential status rules, Section 115BAC new tax regime slabs, capital gains holding periods, indexation removal & grandfathering, Section 50AA debt fund taxation, bonus & dividend stripping, REIT/InvIT streams, and inter-head loss set-off rules.
+      </p>
+
+      <!-- Key Metrics Strip -->
+      <div class="mt-8 flex flex-wrap gap-3 text-xs">
+        <div class="px-3.5 py-2 rounded-xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 shadow-xs text-slate-700 dark:text-slate-300 font-medium flex items-center gap-2">
+          <i data-lucide="book-open" class="w-4 h-4 text-blue-600 dark:text-blue-400"></i>
+          <span>7 In-Depth Chapters (Ch 7 to 13)</span>
+        </div>
+        <div class="px-3.5 py-2 rounded-xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 shadow-xs text-slate-700 dark:text-slate-300 font-medium flex items-center gap-2">
+          <i data-lucide="help-circle" class="w-4 h-4 text-blue-600 dark:text-blue-400"></i>
+          <span>84 Solved Interactive MCQs (12 per Chapter)</span>
+        </div>
+        <div class="px-3.5 py-2 rounded-xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 shadow-xs text-slate-700 dark:text-slate-300 font-medium flex items-center gap-2">
+          <i data-lucide="table" class="w-4 h-4 text-emerald-600 dark:text-emerald-400"></i>
+          <span>Structured Tax Matrices & Worked Numericals</span>
+        </div>
+        <div class="px-3.5 py-2 rounded-xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 shadow-xs text-slate-700 dark:text-slate-300 font-medium flex items-center gap-2">
+          <i data-lucide="check-circle" class="w-4 h-4 text-amber-600 dark:text-amber-400"></i>
+          <span>Aligned with AY 2025-26 & AY 2026-27</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Master Tax Rate Cheat Sheet (High-Yield Quick Revision Grid) -->
+  <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-10 pb-6">
+    <div class="p-6 sm:p-8 rounded-3xl bg-white dark:bg-slate-900 border border-slate-200/90 dark:border-slate-800 shadow-sm">
+      <div class="flex flex-col sm:flex-row sm:items-center justify-between pb-4 mb-6 border-b border-slate-100 dark:border-slate-800 gap-3">
+        <div>
+          <span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full text-xs font-bold uppercase tracking-wider bg-blue-50 dark:bg-blue-950/80 text-blue-700 dark:text-blue-300 border border-blue-200 dark:border-blue-800">
+            ⭐ Exam Ready Matrix
+          </span>
+          <h2 class="font-display text-xl sm:text-2xl font-bold text-slate-900 dark:text-white mt-1">
+            Master Investment Taxation Reference Matrix (Post Finance Act 2024)
+          </h2>
+        </div>
+        <span class="text-xs text-slate-500 dark:text-slate-400">Essential for Level 2 Case Studies & MCQs</span>
+      </div>
+
+      <div class="overflow-x-auto">
+        <table class="w-full text-left text-xs sm:text-sm border-collapse">
+          <thead>
+            <tr class="bg-slate-100/80 dark:bg-slate-800/80 text-slate-700 dark:text-slate-300 border-b border-slate-200 dark:border-slate-700 font-bold">
+              <th class="p-3.5">Asset Category</th>
+              <th class="p-3.5">LTCG Period</th>
+              <th class="p-3.5">STCG Tax Rate</th>
+              <th class="p-3.5">LTCG Tax Rate</th>
+              <th class="p-3.5">Key Section & Conditions</th>
+            </tr>
+          </thead>
+          <tbody class="divide-y divide-slate-100 dark:divide-slate-800 text-slate-600 dark:text-slate-300">
+            <tr class="hover:bg-slate-50/60 dark:hover:bg-slate-800/40">
+              <td class="p-3.5 font-bold text-slate-900 dark:text-white flex items-center gap-2">
+                <span class="w-2 h-2 rounded-full bg-blue-500"></span> Listed Equity Shares & Equity MFs (&ge;65% equity)
+              </td>
+              <td class="p-3.5">&gt; 12 Months</td>
+              <td class="p-3.5 font-semibold text-rose-600 dark:text-rose-400">20% (STT Paid)</td>
+              <td class="p-3.5 font-semibold text-emerald-600 dark:text-emerald-400">12.5% above ₹1.25 Lakh</td>
+              <td class="p-3.5">Sec 111A (STCG) & Sec 112A (LTCG); No indexation; Grandfathering up to 31-Jan-2018</td>
+            </tr>
+            <tr class="hover:bg-slate-50/60 dark:hover:bg-slate-800/40">
+              <td class="p-3.5 font-bold text-slate-900 dark:text-white flex items-center gap-2">
+                <span class="w-2 h-2 rounded-full bg-purple-500"></span> Unlisted Equity Shares
+              </td>
+              <td class="p-3.5">&gt; 24 Months</td>
+              <td class="p-3.5">Applicable Slab Rate</td>
+              <td class="p-3.5 font-semibold text-emerald-600 dark:text-emerald-400">12.5% (No Indexation)</td>
+              <td class="p-3.5">Section 112; FA 2024 unified rate; holding reduced from 36m to 24m</td>
+            </tr>
+            <tr class="hover:bg-slate-50/60 dark:hover:bg-slate-800/40 bg-rose-50/30 dark:bg-rose-950/20">
+              <td class="p-3.5 font-bold text-rose-950 dark:text-rose-200 flex items-center gap-2">
+                <span class="w-2 h-2 rounded-full bg-rose-600"></span> Specified Debt MFs (&le;35% equity) & MLDs ⭐
+              </td>
+              <td class="p-3.5 font-bold text-rose-700">None (Deemed STCG)</td>
+              <td class="p-3.5 font-bold text-rose-700 dark:text-rose-400">Applicable Slab Rate</td>
+              <td class="p-3.5 font-bold text-rose-700 dark:text-rose-400">N/A (Always Deemed STCG)</td>
+              <td class="p-3.5 font-semibold text-rose-800 dark:text-rose-300">Section 50AA; Acquired on/after 1-Apr-2023; No indexation; Regardless of holding duration</td>
+            </tr>
+            <tr class="hover:bg-slate-50/60 dark:hover:bg-slate-800/40">
+              <td class="p-3.5 font-bold text-slate-900 dark:text-white flex items-center gap-2">
+                <span class="w-2 h-2 rounded-full bg-indigo-500"></span> Non-Specified Hybrid MFs (35% to 65% equity)
+              </td>
+              <td class="p-3.5">&gt; 24 Months</td>
+              <td class="p-3.5">Applicable Slab Rate</td>
+              <td class="p-3.5 font-semibold text-emerald-600 dark:text-emerald-400">12.5% (No Indexation)</td>
+              <td class="p-3.5">Conservative Hybrid, Multi-Asset (&lt;65% equity); FA 2024 revised holding period</td>
+            </tr>
+            <tr class="hover:bg-slate-50/60 dark:hover:bg-slate-800/40">
+              <td class="p-3.5 font-bold text-slate-900 dark:text-white flex items-center gap-2">
+                <span class="w-2 h-2 rounded-full bg-amber-500"></span> Real Estate (Land & Building) ⭐
+              </td>
+              <td class="p-3.5">&gt; 24 Months</td>
+              <td class="p-3.5">Applicable Slab Rate</td>
+              <td class="p-3.5 font-semibold text-emerald-600 dark:text-emerald-400">12.5% (No Index) OR 20% with Index*</td>
+              <td class="p-3.5">*Grandfathering option for pre-23 July 2024 assets for Resident Ind/HUF; Sec 54/54EC/54F</td>
+            </tr>
+            <tr class="hover:bg-slate-50/60 dark:hover:bg-slate-800/40">
+              <td class="p-3.5 font-bold text-slate-900 dark:text-white flex items-center gap-2">
+                <span class="w-2 h-2 rounded-full bg-yellow-500"></span> Physical Gold & Silver
+              </td>
+              <td class="p-3.5">&gt; 24 Months</td>
+              <td class="p-3.5">Applicable Slab Rate</td>
+              <td class="p-3.5 font-semibold text-emerald-600 dark:text-emerald-400">12.5% (No Indexation)</td>
+              <td class="p-3.5">FA 2024 reduced holding period from 36m to 24m; Section 112</td>
+            </tr>
+            <tr class="hover:bg-slate-50/60 dark:hover:bg-slate-800/40">
+              <td class="p-3.5 font-bold text-slate-900 dark:text-white flex items-center gap-2">
+                <span class="w-2 h-2 rounded-full bg-emerald-500"></span> Sovereign Gold Bonds (SGB) ⭐
+              </td>
+              <td class="p-3.5">&gt; 12m (Exchange)</td>
+              <td class="p-3.5">Applicable Slab Rate</td>
+              <td class="p-3.5 font-bold text-emerald-600 dark:text-emerald-400">100% EXEMPT on RBI Redemption</td>
+              <td class="p-3.5">Section 47(vii); Secondary sale taxed @ 12.5%; Coupon 2.5% p.a. taxed in IFOS</td>
+            </tr>
+            <tr class="hover:bg-slate-50/60 dark:hover:bg-slate-800/40">
+              <td class="p-3.5 font-bold text-slate-900 dark:text-white flex items-center gap-2">
+                <span class="w-2 h-2 rounded-full bg-teal-500"></span> REITs & InvITs Units (Listed)
+              </td>
+              <td class="p-3.5">&gt; 12 Months</td>
+              <td class="p-3.5 font-semibold text-rose-600 dark:text-rose-400">20% (Sec 111A)</td>
+              <td class="p-3.5 font-semibold text-emerald-600 dark:text-emerald-400">12.5% above ₹1.25L</td>
+              <td class="p-3.5">STT paid; Income streams: Dividend/Interest/Repayment taxed per Sec 115UA / 56(2)(xii)</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <!-- Chapters Grid -->
+  <main id="chapters-grid" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10 flex-grow">
+    <div class="flex items-center justify-between mb-8">
+      <div>
+        <h2 class="font-display text-2xl sm:text-3xl font-bold text-slate-900 dark:text-white">
+          Module 9 Chapters & Curriculum Notes
+        </h2>
+        <p class="text-sm text-slate-500 dark:text-slate-400 mt-1">
+          Click any chapter card below for complete syllabus study notes, worked examples, and the interactive 12-question quiz.
+        </p>
+      </div>
+      <span class="hidden sm:inline-flex px-3 py-1 rounded-full text-xs font-bold bg-blue-100 dark:bg-blue-950 text-blue-800 dark:text-blue-300 border border-blue-200 dark:border-blue-800">
+        7 Modules &bull; 84 Questions
+      </span>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+
+      <!-- Chapter 7 -->
+      <a href="module9-ch7.html" class="group bg-white dark:bg-slate-900 rounded-2xl p-6 border-2 border-blue-200 dark:border-blue-900/60 shadow-xs hover:shadow-xl hover:border-blue-500 transition-all flex flex-col justify-between focus:outline-none focus:ring-2 focus:ring-blue-500">
+        <div>
+          <div class="flex items-center justify-between mb-3">
+            <span class="text-xs font-bold uppercase tracking-wider text-blue-700 dark:text-blue-300 bg-blue-50 dark:bg-blue-950/70 px-2.5 py-1 rounded-lg">Chapter 07</span>
+            <span class="text-xs font-bold text-amber-700 dark:text-amber-300 bg-amber-50 dark:bg-amber-950/70 px-2 py-0.5 rounded-full border border-amber-200 dark:border-amber-800 flex items-center gap-1">
+              <i data-lucide="star" class="w-3 h-3 fill-amber-500 text-amber-500"></i> High Yield
+            </span>
+          </div>
+          <h3 class="font-display text-lg font-bold text-slate-900 dark:text-white group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors">
+            Concepts in Taxation
+          </h3>
+          <p class="text-xs text-slate-600 dark:text-slate-400 mt-2 leading-relaxed">
+            Residential status (ROR, RNOR, NR under Sec 6), scope of total income, 5 heads of income, Old vs New Tax Regime (Section 115BAC), Chapter VI-A deductions (80C, 80D, 80CCD), surcharge caps, cess, and advance tax installments (Sec 208/234).
+          </p>
+        </div>
+        <div class="mt-5 pt-3 border-t border-slate-100 dark:border-slate-800 flex items-center justify-between text-xs font-bold text-blue-600 dark:text-blue-400">
+          <span>Read Notes & 12 MCQs</span>
+          <i data-lucide="arrow-right" class="w-3.5 h-3.5 group-hover:translate-x-1 transition-transform"></i>
+        </div>
+      </a>
+
+      <!-- Chapter 8 -->
+      <a href="module9-ch8.html" class="group bg-white dark:bg-slate-900 rounded-2xl p-6 border-2 border-amber-300/80 dark:border-amber-600/40 shadow-xs hover:shadow-xl hover:border-amber-500 transition-all flex flex-col justify-between focus:outline-none focus:ring-2 focus:ring-amber-500">
+        <div>
+          <div class="flex items-center justify-between mb-3">
+            <span class="text-xs font-bold uppercase tracking-wider text-amber-700 dark:text-amber-300 bg-amber-50 dark:bg-amber-950/70 px-2.5 py-1 rounded-lg">Chapter 08</span>
+            <span class="text-xs font-bold text-amber-700 dark:text-amber-300 bg-amber-50 dark:bg-amber-950/70 px-2 py-0.5 rounded-full border border-amber-200 dark:border-amber-800 flex items-center gap-1">
+              <i data-lucide="star" class="w-3 h-3 fill-amber-500 text-amber-500"></i> Core Topic ⭐
+            </span>
+          </div>
+          <h3 class="font-display text-lg font-bold text-slate-900 dark:text-white group-hover:text-amber-600 dark:group-hover:text-amber-400 transition-colors">
+            Capital Gains
+          </h3>
+          <p class="text-xs text-slate-600 dark:text-slate-400 mt-2 leading-relaxed">
+            Capital asset definition, STCA vs LTCA holding period thresholds, Cost Inflation Index (CII), Section 112A grandfathering formula (step-by-step), capital gains exemptions under Section 54, 54EC, and 54F, and CGAS 1988 rules.
+          </p>
+        </div>
+        <div class="mt-5 pt-3 border-t border-slate-100 dark:border-slate-800 flex items-center justify-between text-xs font-bold text-amber-600 dark:text-amber-400">
+          <span>Read Notes & 12 MCQs</span>
+          <i data-lucide="arrow-right" class="w-3.5 h-3.5 group-hover:translate-x-1 transition-transform"></i>
+        </div>
+      </a>
+
+      <!-- Chapter 9 -->
+      <a href="module9-ch9.html" class="group bg-white dark:bg-slate-900 rounded-2xl p-6 border border-slate-200 dark:border-slate-800 shadow-xs hover:shadow-xl hover:border-blue-400 transition-all flex flex-col justify-between focus:outline-none focus:ring-2 focus:ring-blue-500">
+        <div>
+          <div class="flex items-center justify-between mb-3">
+            <span class="text-xs font-bold uppercase tracking-wider text-blue-700 dark:text-blue-300 bg-blue-50 dark:bg-blue-950/70 px-2.5 py-1 rounded-lg">Chapter 09</span>
+            <span class="text-xs font-semibold text-slate-500 dark:text-slate-400">Residuary Head</span>
+          </div>
+          <h3 class="font-display text-lg font-bold text-slate-900 dark:text-white group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors">
+            Income from Other Sources
+          </h3>
+          <p class="text-xs text-slate-600 dark:text-slate-400 mt-2 leading-relaxed">
+            Dividend taxation post-DDT, Sec 194 TDS (₹5k threshold), Section 57 interest expense deduction cap (20%), interest on deposits (80TTA vs 80TTB), deemed gifts under Sec 56(2)(x) (safe harbour 10%), and family pension.
+          </p>
+        </div>
+        <div class="mt-5 pt-3 border-t border-slate-100 dark:border-slate-800 flex items-center justify-between text-xs font-bold text-blue-600 dark:text-blue-400">
+          <span>Read Notes & 12 MCQs</span>
+          <i data-lucide="arrow-right" class="w-3.5 h-3.5 group-hover:translate-x-1 transition-transform"></i>
+        </div>
+      </a>
+
+      <!-- Chapter 10 -->
+      <a href="module9-ch10.html" class="group bg-white dark:bg-slate-900 rounded-2xl p-6 border-2 border-rose-300/80 dark:border-rose-900/60 shadow-xs hover:shadow-xl hover:border-rose-500 transition-all flex flex-col justify-between focus:outline-none focus:ring-2 focus:ring-rose-500">
+        <div>
+          <div class="flex items-center justify-between mb-3">
+            <span class="text-xs font-bold uppercase tracking-wider text-rose-700 dark:text-rose-300 bg-rose-50 dark:bg-rose-950/70 px-2.5 py-1 rounded-lg">Chapter 10</span>
+            <span class="text-xs font-bold text-rose-700 dark:text-rose-300 bg-rose-50 dark:bg-rose-950/70 px-2 py-0.5 rounded-full border border-rose-200 dark:border-rose-800 flex items-center gap-1">
+              <i data-lucide="alert-circle" class="w-3 h-3 text-rose-600"></i> Sec 50AA ⭐
+            </span>
+          </div>
+          <h3 class="font-display text-lg font-bold text-slate-900 dark:text-white group-hover:text-rose-600 dark:group-hover:text-rose-400 transition-colors">
+            Taxation of Debt Products
+          </h3>
+          <p class="text-xs text-slate-600 dark:text-slate-400 mt-2 leading-relaxed">
+            Bank FDs & TDS Sec 194A, corporate debentures (TDS Sec 193 exemption removal), Section 50AA regime for "Specified Mutual Funds" (&le;35% equity), Market Linked Debentures (MLDs), and non-specified hybrid fund rules.
+          </p>
+        </div>
+        <div class="mt-5 pt-3 border-t border-slate-100 dark:border-slate-800 flex items-center justify-between text-xs font-bold text-rose-600 dark:text-rose-400">
+          <span>Read Notes & 12 MCQs</span>
+          <i data-lucide="arrow-right" class="w-3.5 h-3.5 group-hover:translate-x-1 transition-transform"></i>
+        </div>
+      </a>
+
+      <!-- Chapter 11 -->
+      <a href="module9-ch11.html" class="group bg-white dark:bg-slate-900 rounded-2xl p-6 border-2 border-emerald-300/80 dark:border-emerald-900/60 shadow-xs hover:shadow-xl hover:border-emerald-500 transition-all flex flex-col justify-between focus:outline-none focus:ring-2 focus:ring-emerald-500">
+        <div>
+          <div class="flex items-center justify-between mb-3">
+            <span class="text-xs font-bold uppercase tracking-wider text-emerald-700 dark:text-emerald-300 bg-emerald-50 dark:bg-emerald-950/70 px-2.5 py-1 rounded-lg">Chapter 11</span>
+            <span class="text-xs font-bold text-emerald-700 dark:text-emerald-300 bg-emerald-50 dark:bg-emerald-950/70 px-2 py-0.5 rounded-full border border-emerald-200 dark:border-emerald-800 flex items-center gap-1">
+              <i data-lucide="star" class="w-3 h-3 fill-emerald-500 text-emerald-500"></i> Core Topic ⭐
+            </span>
+          </div>
+          <h3 class="font-display text-lg font-bold text-slate-900 dark:text-white group-hover:text-emerald-600 dark:group-hover:text-emerald-400 transition-colors">
+            Taxation of Equity Products
+          </h3>
+          <p class="text-xs text-slate-600 dark:text-slate-400 mt-2 leading-relaxed">
+            Listed shares & equity MFs (&ge;65% equity), Section 111A (20%) & Section 112A (12.5% above ₹1.25L), unlisted shares, Securities Transaction Tax (STT) rate chart, dividend stripping Sec 94(7), and bonus stripping Sec 94(8).
+          </p>
+        </div>
+        <div class="mt-5 pt-3 border-t border-slate-100 dark:border-slate-800 flex items-center justify-between text-xs font-bold text-emerald-600 dark:text-emerald-400">
+          <span>Read Notes & 12 MCQs</span>
+          <i data-lucide="arrow-right" class="w-3.5 h-3.5 group-hover:translate-x-1 transition-transform"></i>
+        </div>
+      </a>
+
+      <!-- Chapter 12 -->
+      <a href="module9-ch12.html" class="group bg-white dark:bg-slate-900 rounded-2xl p-6 border border-slate-200 dark:border-slate-800 shadow-xs hover:shadow-xl hover:border-purple-400 transition-all flex flex-col justify-between focus:outline-none focus:ring-2 focus:ring-purple-500">
+        <div>
+          <div class="flex items-center justify-between mb-3">
+            <span class="text-xs font-bold uppercase tracking-wider text-purple-700 dark:text-purple-300 bg-purple-50 dark:bg-purple-950/70 px-2.5 py-1 rounded-lg">Chapter 12</span>
+            <span class="text-xs font-semibold text-slate-500 dark:text-slate-400">Alternate Assets</span>
+          </div>
+          <h3 class="font-display text-lg font-bold text-slate-900 dark:text-white group-hover:text-purple-600 dark:group-hover:text-purple-400 transition-colors">
+            Taxation of Other Products
+          </h3>
+          <p class="text-xs text-slate-600 dark:text-slate-400 mt-2 leading-relaxed">
+            Real estate (Sec 50C safe harbor, indexation grandfathering choice), physical gold/silver (24m holding), Sovereign Gold Bonds (RBI redemption vs secondary sale), REITs & InvITs 3-stream taxation, and AIF Category I, II, & III.
+          </p>
+        </div>
+        <div class="mt-5 pt-3 border-t border-slate-100 dark:border-slate-800 flex items-center justify-between text-xs font-bold text-purple-600 dark:text-purple-400">
+          <span>Read Notes & 12 MCQs</span>
+          <i data-lucide="arrow-right" class="w-3.5 h-3.5 group-hover:translate-x-1 transition-transform"></i>
+        </div>
+      </a>
+
+      <!-- Chapter 13 -->
+      <a href="module9-ch13.html" class="group bg-white dark:bg-slate-900 rounded-2xl p-6 border border-slate-200 dark:border-slate-800 shadow-xs hover:shadow-xl hover:border-teal-400 transition-all flex flex-col justify-between focus:outline-none focus:ring-2 focus:ring-teal-500 md:col-span-2 lg:col-span-1">
+        <div>
+          <div class="flex items-center justify-between mb-3">
+            <span class="text-xs font-bold uppercase tracking-wider text-teal-700 dark:text-teal-300 bg-teal-50 dark:bg-teal-950/70 px-2.5 py-1 rounded-lg">Chapter 13</span>
+            <span class="text-xs font-bold text-teal-700 dark:text-teal-300 bg-teal-50 dark:bg-teal-950/70 px-2 py-0.5 rounded-full border border-teal-200 dark:border-teal-800">
+              Special Cases ⭐
+            </span>
+          </div>
+          <h3 class="font-display text-lg font-bold text-slate-900 dark:text-white group-hover:text-teal-600 dark:group-hover:text-teal-400 transition-colors">
+            Tax Provisions for Special Cases
+          </h3>
+          <p class="text-xs text-slate-600 dark:text-slate-400 mt-2 leading-relaxed">
+            Set-off and carry forward rules: Intra-head (Sec 70) vs Inter-head (Sec 71), 8-year loss carry forward limits, Section 47 restructuring (M&A, demergers), Securities Lending & Borrowing (SLB), and segregated mutual fund portfolios.
+          </p>
+        </div>
+        <div class="mt-5 pt-3 border-t border-slate-100 dark:border-slate-800 flex items-center justify-between text-xs font-bold text-teal-600 dark:text-teal-400">
+          <span>Read Notes & 12 MCQs</span>
+          <i data-lucide="arrow-right" class="w-3.5 h-3.5 group-hover:translate-x-1 transition-transform"></i>
+        </div>
+      </a>
+
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="bg-white dark:bg-slate-900 border-t border-slate-200 dark:border-slate-800 py-8 mt-12 text-center text-xs text-slate-500 dark:text-slate-400">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6">
+      <p class="font-semibold text-slate-700 dark:text-slate-300">NISM Series X-B: Investment Adviser (Level 2) Certification Study Portal</p>
+      <p class="mt-1">Module 9: Taxation (20 Marks) &bull; Updated for AY 2025-26 & AY 2026-27 (Finance Act 2024)</p>
+    </div>
+  </footer>
+
+  <script>
+    // Smooth Preloader Fadeout
+    window.addEventListener('load', () => {
+      const preloader = document.getElementById('eduleb-preloader');
+      if (preloader) {
+        preloader.classList.add('loaded');
+        setTimeout(() => preloader.style.display = 'none', 400);
+      }
+      lucide.createIcons();
+    });
+  </script>
+</body>
+</html>

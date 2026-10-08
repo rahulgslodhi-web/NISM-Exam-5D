@@ -1,0 +1,1021 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Chapter 4: Retirement Planning Basics | NISM Series X-B (Level 2)</title>
+  
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  
+  <!-- Google Fonts: DM Sans & Jost (Eduleb Benchmark) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Jost:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+  <script src="https://unpkg.com/lucide@latest"></script>
+
+  <!-- Modern Documentation Design System -->
+  <link rel="stylesheet" href="modern-docs.css">
+
+  <!-- KaTeX for formula rendering -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.min.css">
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.min.js"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/contrib/auto-render.min.js" onload="renderMathInElement(document.body);"></script>
+
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['"DM Sans"', 'sans-serif'],
+            display: ['"Jost"', 'sans-serif'],
+            heading: ['"Jost"', 'sans-serif']
+          },
+          colors: {
+            brand: {
+              50: '#eef2ff',
+              100: '#e0e7ff',
+              500: '#525fe1',
+              600: '#434ec9',
+              700: '#353db3',
+              800: '#282f9c',
+              900: '#0b104a'
+            }
+          }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    body {
+      font-family: 'DM Sans', sans-serif;
+      font-size: 16px;
+      line-height: 26px;
+    }
+    h1, h2, h3, h4, h5, h6, .font-display, .font-heading {
+      font-family: 'Jost', sans-serif;
+      font-weight: 700;
+    }
+  </style>
+</head>
+<body class="bg-slate-50 dark:bg-slate-950 text-slate-900 dark:text-slate-100 min-h-screen flex flex-col antialiased transition-colors duration-200 selection:bg-indigo-500 selection:text-white">
+
+  <!-- Smooth Opening Preloader -->
+  <div class="preloaders" id="eduleb-preloader">
+    <span class="loader"></span>
+    <div class="preloader-label">Chapter 4: Retirement Planning Basics</div>
+  </div>
+
+  <!-- Standardized Header (Single-Tier, 64px) -->
+  <header class="sticky top-0 z-40 bg-white/95 dark:bg-slate-900/95 backdrop-blur-md border-b border-slate-200/80 dark:border-slate-800 shadow-xs">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
+      <!-- Left: Logo & Context Label -->
+      <div class="flex items-center gap-3">
+        <a href="module8.html" class="flex items-center gap-2 text-slate-500 hover:text-slate-900 dark:text-slate-400 dark:hover:text-white transition-colors">
+          <div class="w-9 h-9 rounded-xl bg-slate-100 dark:bg-slate-800 hover:bg-slate-200 dark:hover:bg-slate-700 flex items-center justify-center text-slate-700 dark:text-slate-200 transition-colors">
+            <i data-lucide="arrow-left" class="w-4 h-4"></i>
+          </div>
+        </a>
+        <div>
+          <div class="flex items-center gap-2">
+            <span class="text-xs font-bold uppercase tracking-wider text-indigo-600 dark:text-indigo-400 bg-indigo-50 dark:bg-indigo-950/80 px-2 py-0.5 rounded">Module 8</span>
+            <span class="text-xs text-slate-400 font-medium">Chapter 4 of 6</span>
+          </div>
+          <h1 class="font-display font-bold text-base sm:text-lg text-slate-900 dark:text-white leading-tight">Retirement Planning Basics</h1>
+        </div>
+      </div>
+
+      <!-- Right: Badges, Theme, and Quiz Link -->
+      <div class="flex items-center gap-2 sm:gap-3">
+        <span class="hidden sm:inline-flex items-center gap-1 px-3 py-1 rounded-full text-xs font-bold bg-amber-50 dark:bg-amber-950/60 text-amber-700 dark:text-amber-300 border border-amber-200 dark:border-amber-800">
+          <i data-lucide="award" class="w-3.5 h-3.5"></i>
+          Level 2 Core
+        </span>
+        <button onclick="window.toggleDarkMode()" id="nism-header-theme-btn" class="p-2 rounded-full border border-slate-200 dark:border-slate-700 text-slate-600 dark:text-slate-300 bg-white dark:bg-slate-800 hover:bg-slate-50 dark:hover:bg-slate-700 transition-colors" title="Toggle Theme (⌘D)">
+          <i data-lucide="moon" class="w-4 h-4"></i>
+        </button>
+        <a href="#interactive-quiz" class="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-full text-xs font-bold bg-indigo-600 hover:bg-indigo-700 text-white shadow-xs transition-all">
+          <i data-lucide="help-circle" class="w-3.5 h-3.5"></i>
+          <span>Chapter Quiz (12 Q)</span>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Content Grid -->
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 grid grid-cols-1 lg:grid-cols-12 gap-8 flex-grow">
+    
+    <!-- Sidebar Navigation -->
+    <aside class="hidden lg:block lg:col-span-3">
+      <div class="sticky top-24 space-y-4">
+        
+        <div class="bg-white dark:bg-slate-900 p-5 rounded-2xl border border-slate-200 dark:border-slate-800 shadow-xs">
+          <h2 class="text-xs font-bold text-slate-400 uppercase tracking-wider mb-3">Chapter Navigation</h2>
+          <nav class="space-y-1 text-xs">
+            <a href="#section-1" class="block px-2.5 py-1.5 rounded-lg text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800 hover:text-indigo-600 dark:hover:text-indigo-400">4.1 Retirement Need & Demographics</a>
+            <a href="#section-2" class="block px-2.5 py-1.5 rounded-lg text-amber-700 dark:text-amber-400 font-semibold bg-amber-50/70 dark:bg-amber-950/40 hover:bg-amber-100 dark:hover:bg-amber-900/60">4.2 Longevity Risk & Morbidity ⭐</a>
+            <a href="#section-3" class="block px-2.5 py-1.5 rounded-lg text-amber-700 dark:text-amber-400 font-semibold bg-amber-50/70 dark:bg-amber-950/40 hover:bg-amber-100 dark:hover:bg-amber-900/60">4.3 Inflation & Medical Cost Escalation ⭐</a>
+            <a href="#section-4" class="block px-2.5 py-1.5 rounded-lg text-amber-700 dark:text-amber-400 font-semibold bg-amber-50/70 dark:bg-amber-950/40 hover:bg-amber-100 dark:hover:bg-amber-900/60">4.4 Estimating Needs: IRR vs Expense ⭐</a>
+            <a href="#section-5" class="block px-2.5 py-1.5 rounded-lg text-amber-700 dark:text-amber-400 font-semibold bg-amber-50/70 dark:bg-amber-950/40 hover:bg-amber-100 dark:hover:bg-amber-900/60">4.5 Accumulation vs Decumulation ⭐</a>
+            <a href="#section-6" class="block px-2.5 py-1.5 rounded-lg text-amber-700 dark:text-amber-400 font-semibold bg-amber-50/70 dark:bg-amber-950/40 hover:bg-amber-100 dark:hover:bg-amber-900/60">4.6 Sequence of Returns Risk (SRR) ⭐</a>
+            <a href="#interactive-quiz" class="block px-2.5 py-1.5 rounded-lg text-indigo-700 dark:text-indigo-300 font-bold bg-indigo-50 dark:bg-indigo-950/70 hover:bg-indigo-100 dark:hover:bg-indigo-900/80 mt-2">Interactive Quiz (12 MCQs)</a>
+          </nav>
+        </div>
+
+        <div class="p-4 rounded-2xl bg-gradient-to-br from-indigo-600 to-purple-700 text-white shadow-xs text-xs space-y-2">
+          <div class="flex items-center gap-1.5 font-bold">
+            <i data-lucide="zap" class="w-4 h-4 text-amber-300"></i>
+            <span>Exam Focus Numbers</span>
+          </div>
+          <p class="text-indigo-100 leading-relaxed space-y-1">
+            • <strong>IRR Benchmark:</strong> 60% to 80% of pre-retirement gross income.<br>
+            • <strong>Medical Inflation:</strong> Typically 10% - 14% p.a. (double headline CPI).<br>
+            • <strong>Longevity Rule:</strong> Plan for age 85-90 (survivorship horizon 25-30 yrs).<br>
+            • <strong>Rule of 72:</strong> At 6% inflation, costs double in $72/6 = 12$ years.<br>
+            • <strong>SRR Impact:</strong> Early negative returns deplete capital permanently.
+          </p>
+        </div>
+
+        <!-- Quick Module Nav Links -->
+        <div class="p-3 bg-white dark:bg-slate-900 rounded-2xl border border-slate-200 dark:border-slate-800 text-xs space-y-2">
+          <span class="text-[10px] uppercase font-bold text-slate-400 tracking-wider">Module 8 Chapters</span>
+          <div class="flex flex-col gap-1 font-medium">
+            <a href="module8-ch4.html" class="text-indigo-600 dark:text-indigo-400 font-bold">Ch 4: Retirement Basics</a>
+            <a href="module8-ch5.html" class="text-slate-600 dark:text-slate-400 hover:text-indigo-600">Ch 5: Retirement Products</a>
+            <a href="module8-ch6.html" class="text-slate-600 dark:text-slate-400 hover:text-indigo-600">Ch 6: Miscellaneous & Corpus Math</a>
+          </div>
+        </div>
+
+      </div>
+    </aside>
+
+    <!-- Main Notes -->
+    <div class="lg:col-span-9 space-y-8">
+
+      <!-- Section 4.1 -->
+      <section id="section-1" class="bg-white dark:bg-slate-900 rounded-3xl p-6 sm:p-8 border border-slate-200/90 dark:border-slate-800 shadow-xs space-y-5">
+        <div class="flex items-center justify-between">
+          <div class="flex items-center gap-2 text-xs font-bold text-slate-500 uppercase tracking-wider">
+            <span class="w-2 h-2 rounded-full bg-slate-400"></span> Section 4.1 &bull; Conceptual Overview
+          </div>
+          <span class="px-2 py-0.5 rounded text-[11px] font-semibold bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300">Demographic Shift</span>
+        </div>
+        
+        <div>
+          <h2 class="font-display text-xl sm:text-2xl font-bold text-slate-900 dark:text-white">The Imperative of Retirement Planning in India</h2>
+          <p class="text-xs sm:text-sm text-slate-600 dark:text-slate-300 mt-1 leading-relaxed">
+            Retirement planning has evolved from a passive reliance on government pensions or joint families into the single most critical, individualized financial objective for Indian households. 
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 sm:grid-cols-3 gap-3 text-xs">
+          <div class="p-3.5 bg-slate-50 dark:bg-slate-800/60 rounded-xl border border-slate-200 dark:border-slate-700/80 space-y-1.5">
+            <strong class="text-slate-900 dark:text-white font-bold block text-sm">1. Shift from DB to DC</strong>
+            <p class="text-slate-600 dark:text-slate-400">Defined Benefit (DB) pensions (guaranteed life pension by employers) have been replaced almost universally by Defined Contribution (DC) systems like NPS and EPF. The investment and longevity risks are now 100% borne by the individual.</p>
+          </div>
+
+          <div class="p-3.5 bg-slate-50 dark:bg-slate-800/60 rounded-xl border border-slate-200 dark:border-slate-700/80 space-y-1.5">
+            <strong class="text-slate-900 dark:text-white font-bold block text-sm">2. Nuclear Family Transition</strong>
+            <p class="text-slate-600 dark:text-slate-400">Traditional joint family safety nets have dissolved due to rapid urbanization, overseas migration, and lifestyle individualism. Children can no longer be viewed as an economic retirement plan.</p>
+          </div>
+
+          <div class="p-3.5 bg-slate-50 dark:bg-slate-800/60 rounded-xl border border-slate-200 dark:border-slate-700/80 space-y-1.5">
+            <strong class="text-slate-900 dark:text-white font-bold block text-sm">3. Extended Lifespans</strong>
+            <p class="text-slate-600 dark:text-slate-400">Average life expectancy at birth in India has climbed from ~32 years at independence to ~70+ years today. More crucially, conditional life expectancy for an individual reaching age 60 is now 82 to 86 years!</p>
+          </div>
+        </div>
+
+        <!-- Statutory Note -->
+        <div class="p-4 bg-indigo-50/70 dark:bg-indigo-950/40 rounded-2xl border border-indigo-200 dark:border-indigo-800/70 text-xs sm:text-sm text-indigo-950 dark:text-indigo-200 flex items-start gap-3">
+          <i data-lucide="info" class="w-5 h-5 text-indigo-600 dark:text-indigo-400 shrink-0 mt-0.5"></i>
+          <div>
+            <strong class="font-bold text-indigo-900 dark:text-indigo-300">The Golden Financial Planning Rule:</strong>
+            <span class="block mt-0.5 leading-relaxed text-slate-700 dark:text-slate-300">
+              You can get an educational loan for your children, a mortgage for your home, and a car loan for transportation — but <em>no financial institution will ever grant a loan to fund your post-retirement lifestyle</em>. Retirement planning is non-negotiable.
+            </span>
+          </div>
+        </div>
+      </section>
+
+      <!-- Section 4.2 -->
+      <section id="section-2" class="bg-white dark:bg-slate-900 rounded-3xl p-6 sm:p-8 border border-amber-200 dark:border-amber-800/80 shadow-xs space-y-6">
+        <div class="flex items-center justify-between">
+          <div class="flex items-center gap-2 text-xs font-bold text-amber-700 dark:text-amber-400 uppercase tracking-wider">
+            <span class="w-2 h-2 rounded-full bg-amber-500"></span> Section 4.2 &bull; ⭐ Super High Exam Yield
+          </div>
+          <span class="px-2.5 py-0.5 rounded-full text-xs font-extrabold bg-amber-100 dark:bg-amber-950 text-amber-800 dark:text-amber-300 border border-amber-300 dark:border-amber-700">
+            Longevity Risk
+          </span>
+        </div>
+
+        <div>
+          <h2 class="font-display text-xl sm:text-2xl font-bold text-slate-900 dark:text-white">Longevity Risk & Mortality Dynamics</h2>
+          <p class="text-xs sm:text-sm text-slate-600 dark:text-slate-300 mt-1 leading-relaxed">
+            <strong>Longevity Risk</strong> is the risk that an individual or couple will outlive their accumulated financial resources, forcing a drastic reduction in standard of living in their twilight years or total dependence on charity.
+          </p>
+        </div>
+
+        <!-- Longevity Risk Anatomy -->
+        <div class="p-5 rounded-2xl bg-amber-50/60 dark:bg-amber-950/30 border border-amber-200 dark:border-amber-800 text-xs sm:text-sm space-y-3">
+          <h3 class="font-display text-base font-bold text-amber-900 dark:text-amber-300 flex items-center gap-2">
+            <i data-lucide="alert-triangle" class="w-4 h-4 text-amber-600 dark:text-amber-400"></i>
+            The Dual Dimensions of Longevity Risk
+          </h3>
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-4 pt-1">
+            <div class="p-3 bg-white dark:bg-slate-900 rounded-xl border border-amber-300 dark:border-amber-700/80">
+              <strong class="text-slate-900 dark:text-white block font-bold text-sm">Chronological Longevity</strong>
+              <p class="text-slate-600 dark:text-slate-400 mt-1">
+                Due to medical breakthroughs, organ transplants, and pharmacology, individuals retiring at age 60 frequently survive well into their 80s and 90s. A 30-year retirement period (from age 60 to 90) requires funding 360 monthly expenditure cycles without any fresh labor income.
+              </p>
+            </div>
+            <div class="p-3 bg-white dark:bg-slate-900 rounded-xl border border-amber-300 dark:border-amber-700/80">
+              <strong class="text-slate-900 dark:text-white block font-bold text-sm">Morbidity Extension (Health Span vs Lifespan)</strong>
+              <p class="text-slate-600 dark:text-slate-400 mt-1">
+                Living longer does not guarantee healthy living. The gap between lifespan and health span represents years spent battling chronic lifestyle diseases (diabetes, cardiovascular disease, hypertension, dementia) that require intensive caregiving and expensive ongoing therapies.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Survivorship Probability Table -->
+        <div class="space-y-3">
+          <h3 class="font-display text-sm font-bold text-slate-900 dark:text-white">Joint-Life Survivorship Dynamic (Crucial for Client Couple Advisory)</h3>
+          <p class="text-xs text-slate-600 dark:text-slate-400">
+            When planning for a married couple aged 60, the probability that <em>at least one spouse</em> will survive to age 85 or 90 is substantially higher than the probability of any single individual surviving!
+          </p>
+
+          <div class="overflow-x-auto rounded-2xl border border-slate-200 dark:border-slate-800">
+            <table class="w-full text-left text-xs sm:text-sm">
+              <thead class="bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 font-bold uppercase border-b border-slate-200 dark:border-slate-700">
+                <tr>
+                  <th class="p-3">Target Age</th>
+                  <th class="p-3">Probability: Male (Age 60)</th>
+                  <th class="p-3">Probability: Female (Age 60)</th>
+                  <th class="p-3">Probability: At Least One Survives ⭐</th>
+                </tr>
+              </thead>
+              <tbody class="divide-y divide-slate-200 dark:divide-slate-800 text-slate-700 dark:text-slate-300">
+                <tr class="hover:bg-slate-50/60 dark:hover:bg-slate-800/50">
+                  <td class="p-3 font-semibold text-slate-900 dark:text-white">Surviving to Age 80</td>
+                  <td class="p-3">~ 62%</td>
+                  <td class="p-3">~ 71%</td>
+                  <td class="p-3 font-bold text-indigo-600 dark:text-indigo-400">~ 89%</td>
+                </tr>
+                <tr class="hover:bg-slate-50/60 dark:hover:bg-slate-800/50">
+                  <td class="p-3 font-semibold text-slate-900 dark:text-white">Surviving to Age 85</td>
+                  <td class="p-3">~ 44%</td>
+                  <td class="p-3">~ 55%</td>
+                  <td class="p-3 font-bold text-indigo-600 dark:text-indigo-400">~ 75% (3 out of 4 couples!)</td>
+                </tr>
+                <tr class="hover:bg-slate-50/60 dark:hover:bg-slate-800/50">
+                  <td class="p-3 font-semibold text-slate-900 dark:text-white">Surviving to Age 90</td>
+                  <td class="p-3">~ 24%</td>
+                  <td class="p-3">~ 35%</td>
+                  <td class="p-3 font-bold text-indigo-600 dark:text-indigo-400">~ 51% (Greater than a coin flip!)</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <p class="text-[11px] text-slate-500 italic">Key Takeaway for Exam: An investment adviser must always model retirement corpus duration based on the <em>joint last-survivor</em> life expectancy (typically age 88 to 92 for an urban Indian couple), not just the primary earner's lifespan.</p>
+        </div>
+      </section>
+
+      <!-- Section 4.3 -->
+      <section id="section-3" class="bg-white dark:bg-slate-900 rounded-3xl p-6 sm:p-8 border border-amber-200 dark:border-amber-800/80 shadow-xs space-y-6">
+        <div class="flex items-center justify-between">
+          <div class="flex items-center gap-2 text-xs font-bold text-amber-700 dark:text-amber-400 uppercase tracking-wider">
+            <span class="w-2 h-2 rounded-full bg-amber-500"></span> Section 4.3 &bull; ⭐ Super High Exam Yield
+          </div>
+          <span class="px-2.5 py-0.5 rounded-full text-xs font-extrabold bg-amber-100 dark:bg-amber-950 text-amber-800 dark:text-amber-300 border border-amber-300 dark:border-amber-700">
+            Inflation Compounding
+          </span>
+        </div>
+
+        <div>
+          <h2 class="font-display text-xl sm:text-2xl font-bold text-slate-900 dark:text-white">Inflation, Compounding & Healthcare Cost Escalation</h2>
+          <p class="text-xs sm:text-sm text-slate-600 dark:text-slate-300 mt-1 leading-relaxed">
+            Inflation is the silent assassin of retirement plans. Over long decumulation horizons of 25 to 30 years, inflation steadily eviscerates purchasing power, converting once-comfortable nest eggs into poverty traps if portfolios lack equity growth.
+          </p>
+        </div>
+
+        <!-- Inflation Impact Box -->
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4 text-xs sm:text-sm">
+          <div class="p-4 rounded-2xl bg-slate-50 dark:bg-slate-800/70 border border-slate-200 dark:border-slate-700 space-y-2">
+            <div class="flex items-center justify-between font-bold text-slate-900 dark:text-white">
+              <span>Headline Inflation (General CPI)</span>
+              <span class="px-2 py-0.5 rounded bg-blue-100 dark:bg-blue-950 text-blue-700 dark:text-blue-300 text-xs">~6.0% p.a.</span>
+            </div>
+            <p class="text-slate-600 dark:text-slate-400 leading-relaxed">
+              At 6% sustained annual inflation, a monthly living basket costing <strong>₹50,000 today</strong> will escalate to:
+            </p>
+            <ul class="space-y-1 text-slate-700 dark:text-slate-300 font-mono text-xs">
+              <li>• In 10 years: $₹50,000 \times (1.06)^{10} = \mathbf{₹89,542}$</li>
+              <li>• In 20 years: $₹50,000 \times (1.06)^{20} = \mathbf{₹1,60,357}$</li>
+              <li>• In 25 years: $₹50,000 \times (1.06)^{25} = \mathbf{₹2,14,593}$ (4.3x increase!)</li>
+            </ul>
+          </div>
+
+          <div class="p-4 rounded-2xl bg-rose-50/70 dark:bg-rose-950/40 border border-rose-200 dark:border-rose-900/60 space-y-2">
+            <div class="flex items-center justify-between font-bold text-rose-900 dark:text-rose-300">
+              <span>Healthcare Inflation (Medical Trend Rate)</span>
+              <span class="px-2 py-0.5 rounded bg-rose-200 dark:bg-rose-900 text-rose-800 dark:text-rose-200 text-xs font-bold">12.0% - 14.0% p.a. ⭐</span>
+            </div>
+            <p class="text-slate-700 dark:text-slate-300 leading-relaxed">
+              Medical cost escalation in India runs at <strong>2x to 2.5x general CPI</strong> due to cutting-edge diagnostic technology, specialized pharma pricing, private hospital bed inflation, and post-hospitalization nursing care.
+            </p>
+            <div class="p-2.5 bg-white dark:bg-slate-900 rounded-xl border border-rose-300 dark:border-rose-800 text-xs">
+              <strong class="text-rose-700 dark:text-rose-400 block font-bold">The Rule of 72 for Medical Bills:</strong>
+              At 12% medical inflation, health treatment expenses <em>double every 6 years</em> ($72 / 12 = 6$)! A routine surgery costing ₹3 Lakhs today will cost ₹12 Lakhs when the retiree is aged 72.
+            </div>
+          </div>
+        </div>
+
+        <!-- Formula Card: Future Value of Expenses -->
+        <div class="p-5 rounded-2xl bg-gradient-to-br from-indigo-900 via-slate-900 to-indigo-950 text-white space-y-3">
+          <div class="flex items-center justify-between">
+            <span class="text-xs font-bold text-indigo-300 uppercase tracking-wider">Exam Formula Card</span>
+            <span class="text-xs px-2.5 py-0.5 rounded bg-white/10 text-amber-300 font-mono">Future Value of Living Needs</span>
+          </div>
+          <div class="text-center font-mono text-base sm:text-lg text-amber-300 py-2">
+            $$FV = PV \times (1 + e)^n$$
+          </div>
+          <div class="grid grid-cols-1 sm:grid-cols-3 gap-3 text-xs text-slate-300 pt-2 border-t border-indigo-800/60">
+            <div><strong class="text-white">$PV$:</strong> Present Value of annual living expenses today.</div>
+            <div><strong class="text-white">$e$:</strong> Expected rate of inflation until retirement.</div>
+            <div><strong class="text-white">$n$:</strong> Number of accumulation years to retirement.</div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Section 4.4 -->
+      <section id="section-4" class="bg-white dark:bg-slate-900 rounded-3xl p-6 sm:p-8 border border-amber-200 dark:border-amber-800/80 shadow-xs space-y-6">
+        <div class="flex items-center justify-between">
+          <div class="flex items-center gap-2 text-xs font-bold text-amber-700 dark:text-amber-400 uppercase tracking-wider">
+            <span class="w-2 h-2 rounded-full bg-amber-500"></span> Section 4.4 &bull; ⭐ Super High Exam Yield
+          </div>
+          <span class="px-2.5 py-0.5 rounded-full text-xs font-extrabold bg-amber-100 dark:bg-amber-950 text-amber-800 dark:text-amber-300 border border-amber-300 dark:border-amber-700">
+            IRR vs Expense Method
+          </span>
+        </div>
+
+        <div>
+          <h2 class="font-display text-xl sm:text-2xl font-bold text-slate-900 dark:text-white">Estimating Retirement Needs: IRR vs Expense Method</h2>
+          <p class="text-xs sm:text-sm text-slate-600 dark:text-slate-300 mt-1 leading-relaxed">
+            SEBI Investment Advisers must accurately determine the post-retirement cash flow required by a client. In practice and on the NISM exam, two principal methodologies are deployed:
+          </p>
+        </div>
+
+        <!-- 2 Methods Grid -->
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4 text-xs sm:text-sm">
+          <!-- Method 1: IRR -->
+          <div class="p-4 rounded-2xl bg-indigo-50/60 dark:bg-indigo-950/30 border border-indigo-200 dark:border-indigo-800 space-y-3">
+            <div class="flex items-center justify-between">
+              <h3 class="font-display font-bold text-indigo-950 dark:text-indigo-300 text-base">1. Income Replacement Ratio (IRR) Method</h3>
+              <span class="px-2 py-0.5 rounded bg-indigo-200 dark:bg-indigo-900 text-indigo-800 dark:text-indigo-200 text-xs font-bold">Top-Down</span>
+            </div>
+            <p class="text-slate-700 dark:text-slate-300 leading-relaxed">
+              Expresses post-retirement annual income requirement as a <strong>fixed percentage of pre-retirement gross salary</strong> (typically <strong>60% to 80%</strong>).
+            </p>
+            <div class="p-3 bg-white dark:bg-slate-900 rounded-xl border border-indigo-200 dark:border-indigo-800 space-y-1 text-xs">
+              <strong class="text-slate-900 dark:text-white block font-bold">Why less than 100% of pre-retirement salary is needed:</strong>
+              <div class="text-slate-600 dark:text-slate-400 space-y-0.5">
+                • <strong>No Payroll Savings:</strong> Cessation of mandatory EPF/PPF/NPS contributions (typically 15-20% of salary).<br>
+                • <strong>Eliminated Debt:</strong> Home mortgages, auto loans, and children education loans are fully retired.<br>
+                • <strong>Lower Work Costs:</strong> Daily commuting, formal professional wardrobes, business meals drop to zero.<br>
+                • <strong>Lower Tax Slab:</strong> Lower gross income and senior citizen rebate slabs reduce effective income tax.
+              </div>
+            </div>
+          </div>
+
+          <!-- Method 2: Expense Method -->
+          <div class="p-4 rounded-2xl bg-purple-50/60 dark:bg-purple-950/30 border border-purple-200 dark:border-purple-800 space-y-3">
+            <div class="flex items-center justify-between">
+              <h3 class="font-display font-bold text-purple-950 dark:text-purple-300 text-base">2. Expense Protection (Budget) Method</h3>
+              <span class="px-2 py-0.5 rounded bg-purple-200 dark:bg-purple-900 text-purple-800 dark:text-purple-200 text-xs font-bold">Bottom-Up</span>
+            </div>
+            <p class="text-slate-700 dark:text-slate-300 leading-relaxed">
+              A granular, bottom-up itemization of projected actual post-retirement expenditures split into <strong>non-discretionary (essential)</strong> and <strong>discretionary (lifestyle)</strong> categories.
+            </p>
+            <div class="p-3 bg-white dark:bg-slate-900 rounded-xl border border-purple-200 dark:border-purple-800 space-y-1 text-xs">
+              <strong class="text-slate-900 dark:text-white block font-bold">Key Budget Components:</strong>
+              <div class="text-slate-600 dark:text-slate-400 space-y-0.5">
+                • <strong>Essential (Baseline):</strong> Groceries, utilities, domestic help, medical insurance, routine drugs, property taxes.<br>
+                • <strong>Discretionary:</strong> Vacation travel, pilgrimages, club memberships, hobbies, dining out, family gifts.<br>
+                • <strong>Contingency Reserve:</strong> Emergency medical procedures, home repairs, assisted mobility equipment.
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Comparison Table -->
+        <div class="space-y-3">
+          <h3 class="font-display text-sm font-bold text-slate-900 dark:text-white">Comparative Evaluation Matrix: IRR vs Expense Method</h3>
+          <div class="overflow-x-auto rounded-2xl border border-slate-200 dark:border-slate-800">
+            <table class="w-full text-left text-xs sm:text-sm">
+              <thead class="bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 font-bold uppercase border-b border-slate-200 dark:border-slate-700">
+                <tr>
+                  <th class="p-3">Parameter</th>
+                  <th class="p-3">Income Replacement Ratio (IRR) Method</th>
+                  <th class="p-3">Expense Protection (Budget) Method ⭐</th>
+                </tr>
+              </thead>
+              <tbody class="divide-y divide-slate-200 dark:divide-slate-800 text-slate-700 dark:text-slate-300">
+                <tr class="hover:bg-slate-50/60 dark:hover:bg-slate-800/50">
+                  <td class="p-3 font-semibold text-slate-900 dark:text-white">Underlying Approach</td>
+                  <td class="p-3">Top-Down rule of thumb (e.g., 70% of last drawn gross salary)</td>
+                  <td class="p-3 font-semibold text-indigo-600 dark:text-indigo-400">Bottom-up granular budgeting of actual consumption</td>
+                </tr>
+                <tr class="hover:bg-slate-50/60 dark:hover:bg-slate-800/50">
+                  <td class="p-3 font-semibold text-slate-900 dark:text-white">Data Complexity</td>
+                  <td class="p-3">Very simple, requires only current salary & expected salary growth</td>
+                  <td class="p-3">High complexity, requires client to track line-item expenses</td>
+                </tr>
+                <tr class="hover:bg-slate-50/60 dark:hover:bg-slate-800/50">
+                  <td class="p-3 font-semibold text-slate-900 dark:text-white">Accuracy & Customization</td>
+                  <td class="p-3">Low to Moderate; can severely distort needs for ultra-high or low earners</td>
+                  <td class="p-3 font-semibold text-emerald-600 dark:text-emerald-400">High accuracy; tailored to client's specific health & lifestyle goals</td>
+                </tr>
+                <tr class="hover:bg-slate-50/60 dark:hover:bg-slate-800/50">
+                  <td class="p-3 font-semibold text-slate-900 dark:text-white">Ideal Client Stage</td>
+                  <td class="p-3">Young clients (age 25 - 45) in early accumulation far from retirement</td>
+                  <td class="p-3 font-semibold text-indigo-600 dark:text-indigo-400">Mature clients (age 50 - 60) approaching transition within 5-10 yrs</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </section>
+
+      <!-- Section 4.5 -->
+      <section id="section-5" class="bg-white dark:bg-slate-900 rounded-3xl p-6 sm:p-8 border border-amber-200 dark:border-amber-800/80 shadow-xs space-y-6">
+        <div class="flex items-center justify-between">
+          <div class="flex items-center gap-2 text-xs font-bold text-amber-700 dark:text-amber-400 uppercase tracking-wider">
+            <span class="w-2 h-2 rounded-full bg-amber-500"></span> Section 4.5 &bull; ⭐ Super High Exam Yield
+          </div>
+          <span class="px-2.5 py-0.5 rounded-full text-xs font-extrabold bg-amber-100 dark:bg-amber-950 text-amber-800 dark:text-amber-300 border border-amber-300 dark:border-amber-700">
+            Lifecycle Phases
+          </span>
+        </div>
+
+        <div>
+          <h2 class="font-display text-xl sm:text-2xl font-bold text-slate-900 dark:text-white">The Two Pillars: Accumulation Phase vs Decumulation Phase</h2>
+          <p class="text-xs sm:text-sm text-slate-600 dark:text-slate-300 mt-1 leading-relaxed">
+            The retirement lifecycle is bifurcated into two diametrically opposite financial regimes. Financial advisory rules that produce extraordinary wealth during accumulation will cause catastrophic ruin if applied without modification in decumulation.
+          </p>
+        </div>
+
+        <!-- Accumulation vs Decumulation Detailed Split -->
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-5 text-xs sm:text-sm">
+          
+          <!-- Accumulation -->
+          <div class="p-5 rounded-2xl bg-slate-50 dark:bg-slate-800/60 border border-slate-200 dark:border-slate-700 space-y-3">
+            <div class="flex items-center justify-between">
+              <span class="text-xs font-bold uppercase tracking-wider text-emerald-600 dark:text-emerald-400 bg-emerald-50 dark:bg-emerald-950/80 px-2 py-0.5 rounded">Phase 1</span>
+              <span class="text-xs text-slate-500 dark:text-slate-400 font-semibold">Ages 25 to 60 (~30-35 Years)</span>
+            </div>
+            <h3 class="font-display text-lg font-bold text-slate-900 dark:text-white">Accumulation Phase (Wealth Creation)</h3>
+            <p class="text-slate-600 dark:text-slate-300 leading-relaxed">
+              Converting human capital (labor, career earning capacity) into financial capital through disciplined periodic savings and compounding.
+            </p>
+            <div class="space-y-1.5 text-slate-700 dark:text-slate-300 pt-1">
+              <div class="flex items-start gap-2">
+                <i data-lucide="check-circle" class="w-4 h-4 text-emerald-500 shrink-0 mt-0.5"></i>
+                <span><strong>Primary Objective:</strong> Long-term capital growth outstripping inflation and taxes.</span>
+              </div>
+              <div class="flex items-start gap-2">
+                <i data-lucide="check-circle" class="w-4 h-4 text-emerald-500 shrink-0 mt-0.5"></i>
+                <span><strong>Cash Flow Direction:</strong> Net inflows into the portfolio (monthly SIPs, VPF, NPS employer contributions).</span>
+              </div>
+              <div class="flex items-start gap-2">
+                <i data-lucide="check-circle" class="w-4 h-4 text-emerald-500 shrink-0 mt-0.5"></i>
+                <span><strong>Market Volatility Impact:</strong> Market crashes are beneficial because regular SIPs execute <em>Rupee Cost Averaging</em>, acquiring more units at distressed valuations.</span>
+              </div>
+              <div class="flex items-start gap-2">
+                <i data-lucide="check-circle" class="w-4 h-4 text-emerald-500 shrink-0 mt-0.5"></i>
+                <span><strong>Asset Allocation:</strong> High equity tilt (65% to 80% equity) tapering gradually as target retirement date nears.</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Decumulation -->
+          <div class="p-5 rounded-2xl bg-slate-50 dark:bg-slate-800/60 border border-slate-200 dark:border-slate-700 space-y-3">
+            <div class="flex items-center justify-between">
+              <span class="text-xs font-bold uppercase tracking-wider text-indigo-600 dark:text-indigo-400 bg-indigo-50 dark:bg-indigo-950/80 px-2 py-0.5 rounded">Phase 2</span>
+              <span class="text-xs text-slate-500 dark:text-slate-400 font-semibold">Ages 60 to 90+ (~25-30+ Years)</span>
+            </div>
+            <h3 class="font-display text-lg font-bold text-slate-900 dark:text-white">Decumulation Phase (Distribution / Drawdown)</h3>
+            <p class="text-slate-600 dark:text-slate-300 leading-relaxed">
+              Converting financial capital into a steady, reliable, and inflation-indexed stream of purchasing power while safeguarding against premature exhaustion.
+            </p>
+            <div class="space-y-1.5 text-slate-700 dark:text-slate-300 pt-1">
+              <div class="flex items-start gap-2">
+                <i data-lucide="arrow-down-right" class="w-4 h-4 text-indigo-500 shrink-0 mt-0.5"></i>
+                <span><strong>Primary Objective:</strong> Capital preservation, liquid monthly cash flows, and mitigation of tail risks.</span>
+              </div>
+              <div class="flex items-start gap-2">
+                <i data-lucide="arrow-down-right" class="w-4 h-4 text-indigo-500 shrink-0 mt-0.5"></i>
+                <span><strong>Cash Flow Direction:</strong> Continuous net outflows (SWP, annuity payouts, SCSS quarterly dividends).</span>
+              </div>
+              <div class="flex items-start gap-2">
+                <i data-lucide="arrow-down-right" class="w-4 h-4 text-rose-500 shrink-0 mt-0.5"></i>
+                <span><strong>Market Volatility Impact:</strong> Volatility is toxic! Market crashes trigger <em>Reverse Dollar Cost Averaging</em>, forcing unit liquidation at bottom prices to meet living expenses.</span>
+              </div>
+              <div class="flex items-start gap-2">
+                <i data-lucide="arrow-down-right" class="w-4 h-4 text-indigo-500 shrink-0 mt-0.5"></i>
+                <span><strong>Asset Allocation:</strong> Balanced hybrid structure: Fixed income & annuities for core needs (60-70%) + Equity funds (30-40%) to beat inflation.</span>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </section>
+
+      <!-- Section 4.6 -->
+      <section id="section-6" class="bg-white dark:bg-slate-900 rounded-3xl p-6 sm:p-8 border border-amber-200 dark:border-amber-800/80 shadow-xs space-y-6">
+        <div class="flex items-center justify-between">
+          <div class="flex items-center gap-2 text-xs font-bold text-amber-700 dark:text-amber-400 uppercase tracking-wider">
+            <span class="w-2 h-2 rounded-full bg-amber-500"></span> Section 4.6 &bull; ⭐ Super High Exam Yield
+          </div>
+          <span class="px-2.5 py-0.5 rounded-full text-xs font-extrabold bg-amber-100 dark:bg-amber-950 text-amber-800 dark:text-amber-300 border border-amber-300 dark:border-amber-700">
+            SRR Risk
+          </span>
+        </div>
+
+        <div>
+          <h2 class="font-display text-xl sm:text-2xl font-bold text-slate-900 dark:text-white">Sequence of Returns Risk (SRR) & Asset Allocation Strategies</h2>
+          <p class="text-xs sm:text-sm text-slate-600 dark:text-slate-300 mt-1 leading-relaxed">
+            During accumulation, the order in which returns occur does not matter as long as the compounded annual growth rate (CAGR) is identical. <strong>However, in decumulation when systematic withdrawals take place, the order of returns is life or death.</strong>
+          </p>
+        </div>
+
+        <!-- SRR Mathematical Demonstration Table -->
+        <div class="p-4 rounded-2xl bg-amber-50/60 dark:bg-amber-950/30 border border-amber-200 dark:border-amber-800 space-y-3 text-xs sm:text-sm">
+          <div class="flex items-center gap-2 font-bold text-amber-900 dark:text-amber-300">
+            <i data-lucide="calculator" class="w-4 h-4 text-amber-600 dark:text-amber-400"></i>
+            <span>Proof: Why Early Negative Returns Annihilate a Portfolio</span>
+          </div>
+          <p class="text-slate-700 dark:text-slate-300 leading-relaxed">
+            Consider two retirees, Retiree A and Retiree B, each starting retirement with ₹1 Crore and withdrawing ₹6 Lakhs at the beginning of each year. Over a 3-year period, both experience identical annual return sets (+20%, +5%, -20%), but in opposite sequences:
+          </p>
+
+          <div class="overflow-x-auto rounded-xl border border-amber-300 dark:border-amber-700/80 bg-white dark:bg-slate-900">
+            <table class="w-full text-left text-xs">
+              <thead class="bg-amber-100/60 dark:bg-amber-950 text-slate-800 dark:text-slate-200 font-bold uppercase border-b border-amber-200 dark:border-amber-800">
+                <tr>
+                  <th class="p-2.5">Year</th>
+                  <th class="p-2.5">Retiree A (Good Early Sequence: +20%, +5%, -20%)</th>
+                  <th class="p-2.5">Retiree B (Bad Early Sequence: -20%, +5%, +20%) ⭐</th>
+                </tr>
+              </thead>
+              <tbody class="divide-y divide-slate-200 dark:divide-slate-800 text-slate-700 dark:text-slate-300">
+                <tr>
+                  <td class="p-2.5 font-bold">Start</td>
+                  <td class="p-2.5">₹100 Lakhs initial corpus</td>
+                  <td class="p-2.5">₹100 Lakhs initial corpus</td>
+                </tr>
+                <tr>
+                  <td class="p-2.5 font-bold">Year 1</td>
+                  <td class="p-2.5">
+                    Withdraw ₹6L &rarr; Balance ₹94L.<br>
+                    <strong>Return +20%:</strong> Closes at $\mathbf{₹112.80\text{ L}}$.
+                  </td>
+                  <td class="p-2.5">
+                    Withdraw ₹6L &rarr; Balance ₹94L.<br>
+                    <strong>Return -20%:</strong> Closes at $\mathbf{₹75.20\text{ L}}$!
+                  </td>
+                </tr>
+                <tr>
+                  <td class="p-2.5 font-bold">Year 2</td>
+                  <td class="p-2.5">
+                    Withdraw ₹6L &rarr; Balance ₹106.80L.<br>
+                    <strong>Return +5%:</strong> Closes at $\mathbf{₹112.14\text{ L}}$.
+                  </td>
+                  <td class="p-2.5">
+                    Withdraw ₹6L &rarr; Balance ₹69.20L.<br>
+                    <strong>Return +5%:</strong> Closes at $\mathbf{₹72.66\text{ L}}$.
+                  </td>
+                </tr>
+                <tr>
+                  <td class="p-2.5 font-bold">Year 3</td>
+                  <td class="p-2.5">
+                    Withdraw ₹6L &rarr; Balance ₹106.14L.<br>
+                    <strong>Return -20%:</strong> Closes at $\mathbf{₹84.91\text{ L}}$.
+                  </td>
+                  <td class="p-2.5">
+                    Withdraw ₹6L &rarr; Balance ₹66.66L.<br>
+                    <strong>Return +20%:</strong> Closes at $\mathbf{₹79.99\text{ L}}$.
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <p class="text-[11px] text-amber-950 dark:text-amber-200">
+            <strong>Verdict:</strong> Even after only 3 years, Retiree B has nearly <strong>₹5 Lakhs less</strong> capital despite suffering the exact same mathematical rates! If withdrawals continue, Retiree B’s capital will be depleted up to 7-10 years earlier than Retiree A’s.
+          </p>
+        </div>
+
+        <!-- Mitigation Strategy: Three-Bucket Strategy -->
+        <div class="space-y-3">
+          <h3 class="font-display text-base font-bold text-slate-900 dark:text-white flex items-center gap-2">
+            <span class="w-6 h-6 rounded-lg bg-indigo-100 text-indigo-700 dark:bg-indigo-950 dark:text-indigo-300 flex items-center justify-center text-xs font-bold">3</span>
+            The Three-Bucket Solution to Neutralize SRR
+          </h3>
+          <div class="grid grid-cols-1 sm:grid-cols-3 gap-3 text-xs">
+            <div class="p-3.5 bg-blue-50/70 dark:bg-blue-950/40 rounded-xl border border-blue-200 dark:border-blue-800">
+              <strong class="text-blue-900 dark:text-blue-300 font-bold block text-sm">Bucket 1: Cash Buffer</strong>
+              <span class="text-[10px] text-blue-600 dark:text-blue-400 block font-semibold mb-1">Horizon: 1 to 2 Years Needs</span>
+              <p class="text-slate-600 dark:text-slate-400">Maintained in Savings Accounts, Overnight Funds, and Liquid Funds. Protects retiree from ever needing to sell investments at distressed prices during market dips.</p>
+            </div>
+
+            <div class="p-3.5 bg-indigo-50/70 dark:bg-indigo-950/40 rounded-xl border border-indigo-200 dark:border-indigo-800">
+              <strong class="text-indigo-900 dark:text-indigo-300 font-bold block text-sm">Bucket 2: Income / Fixed</strong>
+              <span class="text-[10px] text-indigo-600 dark:text-indigo-400 block font-semibold mb-1">Horizon: 3 to 7 Years Needs</span>
+              <p class="text-slate-600 dark:text-slate-400">Short Duration Debt Funds, Corporate Bond Funds, SCSS, and Banking & PSU Debt Funds. Provides stability, regular coupon yields, and continually refills Bucket 1.</p>
+            </div>
+
+            <div class="p-3.5 bg-emerald-50/70 dark:bg-emerald-950/40 rounded-xl border border-emerald-200 dark:border-emerald-800">
+              <strong class="text-emerald-900 dark:text-emerald-300 font-bold block text-sm">Bucket 3: Growth / Equity</strong>
+              <span class="text-[10px] text-emerald-600 dark:text-emerald-400 block font-semibold mb-1">Horizon: 8+ Years Needs</span>
+              <p class="text-slate-600 dark:text-slate-400">Large Cap Index Funds, Flexi Cap Funds, and Conservative Hybrid Funds. Has a full 8-10 year runway to ride out bear markets and provide inflation-beating capital growth.</p>
+            </div>
+          </div>
+        </div>
+
+      </section>
+
+      <!-- Interactive Quiz Section -->
+      <section id="interactive-quiz" class="bg-gradient-to-br from-indigo-950 via-slate-900 to-slate-950 rounded-3xl p-6 sm:p-10 text-white shadow-xl space-y-8 border border-indigo-800/60">
+        <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 border-b border-indigo-800/80 pb-6">
+          <div>
+            <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-indigo-500/20 text-indigo-300 text-xs font-semibold mb-2">
+              <i data-lucide="check-circle" class="w-3.5 h-3.5 text-indigo-400"></i>
+              Chapter 4 High-Yield Assessment
+            </div>
+            <h2 class="font-display text-2xl sm:text-3xl font-bold text-white">Chapter 4 Interactive Assessment Test</h2>
+            <p class="text-xs sm:text-sm text-slate-300 mt-1">12 realistic NISM-style questions covering longevity risk, medical inflation, IRR budgeting, accumulation vs decumulation, and SRR.</p>
+          </div>
+          <div class="flex items-center gap-2 px-4 py-2 rounded-xl bg-white/10 backdrop-blur-md border border-white/10 text-xs font-semibold">
+            <span id="answered-count" class="text-indigo-300 font-bold">0</span> / 12 Answered
+          </div>
+        </div>
+
+        <form id="quiz-form" class="space-y-6">
+          <div id="questions-container" class="space-y-6"></div>
+
+          <div class="pt-6 border-t border-indigo-800/80 flex flex-col sm:flex-row items-center justify-between gap-4">
+            <button type="button" id="submit-quiz-btn" onclick="submitQuiz()" class="w-full sm:w-auto px-8 py-3.5 rounded-xl bg-indigo-600 hover:bg-indigo-500 text-white font-bold text-sm shadow-lg shadow-indigo-600/30 transition-all flex items-center justify-center gap-2">
+              <i data-lucide="send" class="w-4 h-4"></i>
+              <span>Submit Assessment & View Detailed Solutions</span>
+            </button>
+            <button type="button" id="reset-quiz-btn" onclick="resetQuiz()" class="hidden w-full sm:w-auto px-6 py-3.5 rounded-xl bg-white/10 hover:bg-white/20 text-slate-200 font-semibold text-sm transition-all flex items-center justify-center gap-2">
+              <i data-lucide="rotate-ccw" class="w-4 h-4"></i>
+              <span>Retake Quiz</span>
+            </button>
+          </div>
+        </form>
+
+        <!-- Quiz Result & Scorecard -->
+        <div id="quiz-results" class="hidden rounded-2xl bg-white/10 p-6 sm:p-8 border border-white/15 backdrop-blur-lg space-y-6">
+          <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+            <div>
+              <span id="result-status-badge" class="px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider"></span>
+              <h3 class="font-display text-2xl font-bold mt-2 text-white">Your Chapter 4 Scorecard</h3>
+            </div>
+            <div class="text-right">
+              <span id="score-display" class="font-display text-4xl font-extrabold text-indigo-300">0 / 12</span>
+              <span id="percentage-display" class="block text-xs text-slate-300 mt-0.5">0%</span>
+            </div>
+          </div>
+          <p id="result-summary-text" class="text-sm text-slate-200 leading-relaxed"></p>
+        </div>
+      </section>
+
+      <!-- Bottom Navigation -->
+      <div class="flex items-center justify-between p-6 rounded-2xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800">
+        <a href="module8.html" class="inline-flex items-center gap-2 text-sm font-semibold text-slate-600 dark:text-slate-400 hover:text-indigo-600 transition-colors">
+          <i data-lucide="arrow-left" class="w-4 h-4"></i>
+          <span>Module 8 Hub</span>
+        </a>
+        <a href="module8-ch5.html" class="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl bg-indigo-600 hover:bg-indigo-700 text-white font-semibold text-sm shadow-xs transition-all">
+          <span>Next: Chapter 5 (Retirement Products)</span>
+          <i data-lucide="arrow-right" class="w-4 h-4"></i>
+        </a>
+      </div>
+
+    </div>
+  </div>
+
+  <footer class="bg-white dark:bg-slate-900 border-t border-slate-200 dark:border-slate-800 py-6 text-center text-xs text-slate-500 dark:text-slate-400">
+    NISM Series X-B Certification Notes &bull; Module 8: Chapter 4 (Retirement Planning Basics) &bull; Level 2 Curriculum
+  </footer>
+
+  <script>
+    const questionsData = [
+      {
+        id: 1,
+        question: "In retirement financial planning, what is the exact definition of 'Longevity Risk'?",
+        options: [
+          { text: "The risk that premature death occurs before accumulated debt is cleared", key: "a" },
+          { text: "The risk that an individual or couple outlives their accumulated financial resources", key: "b" },
+          { text: "The risk that equity markets underperform fixed deposits over a 5-year period", key: "c" },
+          { text: "The risk that the insurer fails to pay terminal bonuses on life policies", key: "d" }
+        ],
+        correct: "b",
+        explanation: "Longevity risk is the danger of outliving one's savings, resulting in severe financial distress or impoverishment in the retiree's later years."
+      },
+      {
+        id: 2,
+        question: "Why is the typical benchmark for the Income Replacement Ratio (IRR) set between 60% to 80%, rather than 100% of pre-retirement salary?",
+        options: [
+          { text: "Because retirees eat fewer calories and need far less food", key: "a" },
+          { text: "Because statutory retirement regulations cap income withdrawals at 80%", key: "b" },
+          { text: "Because payroll savings (EPF/NPS), loan EMIs, and work-related expenses cease post-retirement", key: "c" },
+          { text: "Because health insurance costs decline dramatically as age increases", key: "d" }
+        ],
+        correct: "c",
+        explanation: "In retirement, individuals no longer contribute 15-20% towards retirement savings (EPF, PPF, NPS), home mortgages are typically paid off, and work-related costs (commuting, business attire) drop to zero."
+      },
+      {
+        id: 3,
+        question: "According to healthcare industry benchmarks in India, how does medical inflation compare with headline consumer price inflation (CPI)?",
+        options: [
+          { text: "Medical inflation is generally lower than CPI due to government price caps", key: "a" },
+          { text: "Medical inflation is identical to general headline CPI", key: "b" },
+          { text: "Medical inflation typically runs at 2x to 2.5x headline CPI (approx. 10% to 14% p.a.)", key: "c" },
+          { text: "Medical inflation fluctuates randomly without any compounding trend", key: "d" }
+        ],
+        correct: "c",
+        explanation: "Medical cost inflation in India consistently runs at 10% to 14% per annum (roughly 2x to 2.5x general CPI), driven by state-of-the-art diagnostic technologies, patented medications, and hospital room tariff surges."
+      },
+      {
+        id: 4,
+        question: "Under the Expense Protection (Budget) Method, what is the primary distinction between 'non-discretionary' and 'discretionary' expenses?",
+        options: [
+          { text: "Non-discretionary expenses are eligible for tax rebates, whereas discretionary expenses are taxed at 30%", key: "a" },
+          { text: "Non-discretionary expenses are essential for survival (food, healthcare, utilities), while discretionary expenses cover lifestyle choices (vacations, entertainment)", key: "b" },
+          { text: "Non-discretionary expenses are paid through credit cards, while discretionary expenses are paid in cash", key: "c" },
+          { text: "Discretionary expenses are guaranteed by an annuity provider", key: "d" }
+        ],
+        correct: "b",
+        explanation: "Non-discretionary expenses represent survival essentials (housing, food, medicines, utilities) that must be funded under all economic conditions. Discretionary expenses can be postponed or trimmed during bear markets."
+      },
+      {
+        id: 5,
+        question: "For a client currently aged 55 who plans to retire at age 60, which estimation method is generally considered most appropriate by financial advisers?",
+        options: [
+          { text: "Rule of thumb 50% replacement across the board", key: "a" },
+          { text: "Granular Expense Protection (Budget) Method", key: "b" },
+          { text: "Historical pre-independence average spending method", key: "c" },
+          { text: "Simple extrapolation of gross family wealth", key: "d" }
+        ],
+        correct: "b",
+        explanation: "When a client is within 5 to 10 years of retirement, spending patterns, healthcare requirements, and debt payoffs are clearly visible. The bottom-up Expense Protection Method provides far greater accuracy than broad top-down ratios."
+      },
+      {
+        id: 6,
+        question: "What is the key characteristic of market volatility during the 'Accumulation Phase' compared to the 'Decumulation Phase'?",
+        options: [
+          { text: "Volatility is lethal in accumulation but harmless in decumulation", key: "a" },
+          { text: "In accumulation, periodic dips enable Rupee Cost Averaging, whereas in decumulation, systematic withdrawals cause Reverse Dollar Cost Averaging", key: "b" },
+          { text: "Market volatility only affects fixed income instruments, not equities", key: "c" },
+          { text: "Both phases react identically to market volatility if the CAGR is identical", key: "d" }
+        ],
+        correct: "b",
+        explanation: "During accumulation, continuing SIP inflows buy extra units at market lows (Rupee Cost Averaging). In decumulation, regular cash withdrawals force the liquidation of units at distressed values, permanently crippling capital."
+      },
+      {
+        id: 7,
+        question: "What does the term 'Sequence of Returns Risk' (SRR) signify in retirement planning?",
+        options: [
+          { text: "The sequence in which capital gains taxes must be filed with the Income Tax Department", key: "a" },
+          { text: "The risk that the order of investment returns early in retirement can permanently impair portfolio longevity even if long-term average return remains high", key: "b" },
+          { text: "The risk that dividend payments precede interest payments in corporate debt", key: "c" },
+          { text: "The regulatory sequence required to convert mutual fund units into cash", key: "d" }
+        ],
+        correct: "b",
+        explanation: "Sequence of Returns Risk demonstrates that severe negative market returns occurring in the initial 2-5 years of retirement, combined with simultaneous withdrawals, deplete capital prematurely."
+      },
+      {
+        id: 8,
+        question: "In the Three-Bucket Strategy used to neutralize Sequence of Returns Risk, what is the specific role of 'Bucket 1'?",
+        options: [
+          { text: "To hold aggressive small-cap stocks for explosive wealth generation", key: "a" },
+          { text: "To hold 1 to 2 years of living expenses in cash and liquid instruments so the retiree never needs to sell equities during market crashes", key: "b" },
+          { text: "To purchase commercial real estate for speculative capital gains", key: "c" },
+          { text: "To hold physical gold bullion in a bank locker for children inheritance", key: "d" }
+        ],
+        correct: "b",
+        explanation: "Bucket 1 contains 1 to 2 years of immediate living expenses in completely liquid, risk-free assets (overnight/liquid funds, savings deposits), providing an inviolable cash buffer during bear markets."
+      },
+      {
+        id: 9,
+        question: "If a couple aged 60 has life expectancies of 82 years for the husband and 86 years for the wife, what time horizon should the adviser plan for?",
+        options: [
+          { text: "22 years (until the husband reaches age 82)", key: "a" },
+          { text: "26 years (until the wife reaches age 86)", key: "b" },
+          { text: "28 to 32 years (based on joint last-survivor life expectancy, reaching age 88 to 92)", key: "c" },
+          { text: "Exactly 15 years based on the standard corporate retirement model", key: "d" }
+        ],
+        correct: "c",
+        explanation: "The probability that AT LEAST ONE member of a couple survives beyond their individual life expectancies is over 75%. Advisers must always model retirement corpus duration based on joint last-survivor expectancy (~age 90-92)."
+      },
+      {
+        id: 10,
+        question: "Using the Rule of 72, if general inflation averages 6% per annum, approximately how many years will it take for a retiree's living expenses to double?",
+        options: [
+          { text: "6 years", key: "a" },
+          { text: "8 years", key: "b" },
+          { text: "12 years", key: "c" },
+          { text: "18 years", key: "d" }
+        ],
+        correct: "c",
+        explanation: "By the Rule of 72, Doubling Period = 72 / Annual Inflation Rate = 72 / 6 = 12 years."
+      },
+      {
+        id: 11,
+        question: "Why is a 100% fixed-income portfolio considered hazardous for a 30-year decumulation horizon in India?",
+        options: [
+          { text: "Because fixed-income instruments carry no sovereign guarantees", key: "a" },
+          { text: "Because fixed deposits and bonds offer fixed nominal returns that fail to protect against purchasing power erosion caused by inflation and taxes", key: "b" },
+          { text: "Because banks automatically freeze fixed deposits after 10 years of retirement", key: "c" },
+          { text: "Because SEBI regulations mandate that retirees hold at least 50% equity at all times", key: "d" }
+        ],
+        correct: "b",
+        explanation: "A 100% debt portfolio generates fixed nominal interest that is fully taxable at slab rates. With inflation running at 6%, the post-tax real return is negative, rapidly eroding purchasing power over a 25-30 year lifespan."
+      },
+      {
+        id: 12,
+        question: "An investor's annual expenses at retirement are estimated at ₹10 Lakhs. If general inflation is 6% p.a., what will be the annual expense in Year 25 of retirement? (Use FV = PV * (1+e)^n)",
+        options: [
+          { text: "₹24,00,000", key: "a" },
+          { text: "₹42,91,870", key: "b" },
+          { text: "₹18,50,000", key: "c" },
+          { text: "₹35,00,000", key: "d" }
+        ],
+        correct: "b",
+        explanation: "FV = ₹10,00,000 * (1.06)^25 = ₹10,00,000 * 4.29187 = ₹42,91,870. The annual living requirement quadruples due to compounding inflation!"
+      }
+    ];
+
+    let userAnswers = {};
+
+    function renderQuiz() {
+      const container = document.getElementById("questions-container");
+      container.innerHTML = "";
+
+      questionsData.forEach((q, index) => {
+        const qDiv = document.createElement("div");
+        qDiv.className = "p-5 rounded-2xl bg-white/5 border border-white/10 space-y-4";
+        qDiv.id = `q-box-${q.id}`;
+
+        let optionsHtml = "";
+        q.options.forEach(opt => {
+          optionsHtml += `
+            <label class="flex items-center gap-3 p-3 rounded-xl bg-white/5 hover:bg-white/10 border border-white/5 cursor-pointer text-xs sm:text-sm transition-all" onclick="selectOption(${q.id}, '${opt.key}')" id="label-${q.id}-${opt.key}">
+              <input type="radio" name="question-${q.id}" value="${opt.key}" class="w-4 h-4 text-indigo-500 focus:ring-0">
+              <span class="font-bold text-indigo-300 w-5 uppercase">${opt.key}.</span>
+              <span class="text-slate-200">${opt.text}</span>
+            </label>
+          `;
+        });
+
+        qDiv.innerHTML = `
+          <div class="flex items-start justify-between gap-2">
+            <span class="text-xs font-bold text-indigo-400 uppercase tracking-wider">Question ${index + 1} of ${questionsData.length}</span>
+            <span id="badge-${q.id}" class="text-xs px-2 py-0.5 rounded-full bg-white/5 text-slate-400 font-medium">Unanswered</span>
+          </div>
+          <h4 class="font-display font-semibold text-sm sm:text-base text-white">${q.question}</h4>
+          <div class="space-y-2 mt-3">${optionsHtml}</div>
+          <div id="explanation-${q.id}" class="hidden p-4 rounded-xl text-xs sm:text-sm mt-3 space-y-1"></div>
+        `;
+        container.appendChild(qDiv);
+      });
+      if (window.lucide) lucide.createIcons();
+    }
+
+    function selectOption(qId, key) {
+      userAnswers[qId] = key;
+      document.getElementById("answered-count").innerText = Object.keys(userAnswers).length;
+      
+      const badge = document.getElementById(`badge-${qId}`);
+      if (badge) {
+        badge.innerText = "Answered";
+        badge.className = "text-xs px-2 py-0.5 rounded-full bg-indigo-500/20 text-indigo-300 font-medium";
+      }
+
+      const q = questionsData.find(item => item.id === qId);
+      q.options.forEach(opt => {
+        const lbl = document.getElementById(`label-${qId}-${opt.key}`);
+        if (opt.key === key) {
+          lbl.className = "flex items-center gap-3 p-3 rounded-xl bg-indigo-600/30 border border-indigo-400/50 cursor-pointer text-xs sm:text-sm transition-all";
+        } else {
+          lbl.className = "flex items-center gap-3 p-3 rounded-xl bg-white/5 hover:bg-white/10 border border-white/5 cursor-pointer text-xs sm:text-sm transition-all";
+        }
+      });
+    }
+
+    function submitQuiz() {
+      let score = 0;
+      questionsData.forEach(q => {
+        const selected = userAnswers[q.id];
+        const isCorrect = selected === q.correct;
+        if (isCorrect) score++;
+
+        const explanationDiv = document.getElementById(`explanation-${q.id}`);
+        explanationDiv.classList.remove("hidden");
+
+        if (isCorrect) {
+          explanationDiv.className = "p-4 rounded-xl text-xs sm:text-sm mt-3 bg-emerald-950/60 border border-emerald-600 text-emerald-200";
+          explanationDiv.innerHTML = `
+            <div class="font-bold text-emerald-400 flex items-center gap-1.5">
+              <i data-lucide="check-circle" class="w-4 h-4"></i> Correct!
+            </div>
+            <p class="mt-1 text-slate-200">${q.explanation}</p>
+          `;
+        } else {
+          explanationDiv.className = "p-4 rounded-xl text-xs sm:text-sm mt-3 bg-rose-950/60 border border-rose-600 text-rose-200";
+          explanationDiv.innerHTML = `
+            <div class="font-bold text-rose-400 flex items-center gap-1.5">
+              <i data-lucide="x-circle" class="w-4 h-4"></i> Incorrect (Correct Answer: Option ${q.correct.toUpperCase()})
+            </div>
+            <p class="mt-1 text-slate-200">${q.explanation}</p>
+          `;
+        }
+      });
+
+      const percentage = Math.round((score / questionsData.length) * 100);
+      const passed = percentage >= 60;
+      
+      const resultsDiv = document.getElementById("quiz-results");
+      resultsDiv.classList.remove("hidden");
+
+      const statusBadge = document.getElementById("result-status-badge");
+      statusBadge.innerText = passed ? "Status: Passed (60%+ Benchmark)" : "Status: Needs Revision";
+      statusBadge.className = passed ? "px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider bg-emerald-500 text-emerald-950" : "px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider bg-amber-500 text-amber-950";
+
+      document.getElementById("score-display").innerText = `${score} / ${questionsData.length}`;
+      document.getElementById("percentage-display").innerText = `${percentage}% Score (Passing criteria: 60%)`;
+
+      document.getElementById("result-summary-text").innerText = passed
+        ? `Outstanding performance! You scored ${percentage}%, demonstrating strong mastery over retirement planning essentials, longevity risks, inflation compounding, and decumulation safeguards.`
+        : `You scored ${percentage}%, which is below the 60% passing benchmark. Carefully review Section 4.2 (Longevity Risk), Section 4.4 (IRR vs Expense Method), and Section 4.6 (Sequence of Returns Risk) before retaking the test.`;
+
+      document.getElementById("submit-quiz-btn").classList.add("hidden");
+      document.getElementById("reset-quiz-btn").classList.remove("hidden");
+
+      resultsDiv.scrollIntoView({ behavior: 'smooth' });
+      if (window.lucide) lucide.createIcons();
+    }
+
+    function resetQuiz() {
+      userAnswers = {};
+      document.getElementById("answered-count").innerText = "0";
+      document.getElementById("quiz-results").classList.add("hidden");
+      document.getElementById("submit-quiz-btn").classList.remove("hidden");
+      document.getElementById("reset-quiz-btn").classList.add("hidden");
+      renderQuiz();
+      document.getElementById("interactive-quiz").scrollIntoView({ behavior: 'smooth' });
+    }
+
+    // Theme toggler
+    function initTheme() {
+      const saved = localStorage.getItem("nism-theme");
+      if (saved === "dark" || (!saved && window.matchMedia("(prefers-color-scheme: dark)").matches)) {
+        document.documentElement.classList.add("dark");
+      } else {
+        document.documentElement.classList.remove("dark");
+      }
+      updateThemeIcon();
+    }
+
+    window.toggleDarkMode = function() {
+      const isDark = document.documentElement.classList.toggle("dark");
+      localStorage.setItem("nism-theme", isDark ? "dark" : "light");
+      updateThemeIcon();
+    };
+
+    function updateThemeIcon() {
+      const btn = document.getElementById("nism-header-theme-btn");
+      if (btn) {
+        const isDark = document.documentElement.classList.contains("dark");
+        btn.innerHTML = `<i data-lucide="${isDark ? 'sun' : 'moon'}" class="w-4 h-4 ${isDark ? 'text-amber-400' : 'text-slate-600'}"></i>`;
+        if (window.lucide) lucide.createIcons();
+      }
+    }
+
+    window.addEventListener("DOMContentLoaded", () => {
+      initTheme();
+      renderQuiz();
+      const preloader = document.getElementById("eduleb-preloader");
+      if (preloader) {
+        setTimeout(() => {
+          preloader.style.opacity = "0";
+          setTimeout(() => { preloader.style.display = "none"; }, 350);
+        }, 200);
+      }
+    });
+  </script>
+</body>
+</html>

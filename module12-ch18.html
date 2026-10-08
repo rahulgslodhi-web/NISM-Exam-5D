@@ -1,0 +1,853 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Chapter 18: Risk Profiling for Investors | NISM Series X-B Notes</title>
+  
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  
+  <!-- Google Fonts: DM Sans & Jost (Eduleb Benchmark) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Jost:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+  
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+
+  <!-- Modern Documentation Design System & Zoom Engine -->
+  <link rel="stylesheet" href="modern-docs.css">
+  <script defer src="nav-sidebar.js"></script>
+
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['"DM Sans"', 'sans-serif'],
+            display: ['"Jost"', 'sans-serif'],
+            heading: ['"Jost"', 'sans-serif']
+          },
+          colors: {
+            brand: {
+              50: '#eef2ff',
+              100: '#e0e7ff',
+              500: '#525fe1',
+              600: '#434ec9',
+              700: '#353db3',
+              800: '#282f9c',
+              900: '#0b104a'
+            }
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    body {
+      font-family: 'DM Sans', sans-serif;
+      font-size: 16px;
+      line-height: 26px;
+      color: #4a5355;
+    }
+    h1, h2, h3, h4, h5, h6, .font-display, .font-heading {
+      font-family: 'Jost', sans-serif;
+      font-weight: 700;
+    }
+  </style>
+</head>
+<body class="bg-slate-50 dark:bg-slate-950 text-slate-900 dark:text-slate-100 min-h-screen flex flex-col selection:bg-indigo-500 selection:text-white antialiased transition-colors duration-200">
+
+  <!-- Smooth Opening Preloader -->
+  <div class="preloaders" id="eduleb-preloader">
+    <span class="loader"></span>
+    <div class="preloader-label">Chapter 18: Risk Profiling for Investors</div>
+  </div>
+
+  <!-- Standardized Header (Single-Tier, 64px) -->
+  <header class="sticky top-0 z-40 bg-white/95 dark:bg-slate-900/95 backdrop-blur-md border-b border-slate-200/80 dark:border-slate-800 shadow-xs">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 h-16 flex items-center justify-between">
+      <!-- Left: Logo & Context Label -->
+      <div class="flex items-center gap-3">
+        <a href="module12.html" class="flex items-center gap-2 text-slate-500 hover:text-slate-900 dark:hover:text-white transition-colors">
+          <div class="w-9 h-9 rounded-xl bg-slate-100 dark:bg-slate-800 hover:bg-slate-200 dark:hover:bg-slate-700 flex items-center justify-center text-slate-700 dark:text-slate-200 transition-colors">
+            <i data-lucide="arrow-left" class="w-4 h-4"></i>
+          </div>
+        </a>
+        <div>
+          <div class="flex items-center gap-2">
+            <span class="text-xs font-bold uppercase tracking-wider text-indigo-600 dark:text-indigo-400 bg-indigo-50 dark:bg-indigo-950/80 px-2 py-0.5 rounded border border-indigo-200 dark:border-indigo-800">Module 12</span>
+            <span class="text-xs text-slate-400 font-medium">Chapter 18 of 20</span>
+          </div>
+          <h1 class="font-display font-bold text-base sm:text-lg text-slate-900 dark:text-white leading-tight">Risk Profiling for Investors</h1>
+        </div>
+      </div>
+
+      <!-- Right: Search, Theme, Quiz CTA -->
+      <div class="flex items-center gap-2">
+        <span class="hidden sm:inline-flex items-center gap-1 px-3 py-1 rounded-full text-xs font-bold bg-amber-50 dark:bg-amber-950 text-amber-700 dark:text-amber-300 border border-amber-200 dark:border-amber-800">
+          <i data-lucide="award" class="w-3.5 h-3.5"></i>
+          Weightage: 10 Marks ⭐
+        </span>
+        <button onclick="window.openSpotlightModal()" class="flex items-center gap-2 px-3 py-1.5 rounded-full border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-800 text-slate-500 dark:text-slate-400 text-xs font-medium" title="Search (⌘K)">
+          <i data-lucide="search" class="w-3.5 h-3.5 text-indigo-600"></i>
+          <span class="hidden sm:inline">Search</span>
+          <kbd class="px-1.5 py-0.5 rounded bg-slate-100 dark:bg-slate-700 text-[10px] font-mono text-slate-400">⌘K</kbd>
+        </button>
+        <button id="nism-header-theme-btn" onclick="window.toggleDarkMode()" class="p-2 rounded-full border border-slate-200 dark:border-slate-700 text-slate-600 dark:text-slate-300 bg-white dark:bg-slate-800" title="Toggle Theme (⌘D)">
+          <i data-lucide="moon" class="w-4 h-4"></i>
+        </button>
+        <a href="#interactive-quiz" class="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-lg text-xs font-bold bg-indigo-600 hover:bg-indigo-700 text-white shadow-xs transition-all">
+          <i data-lucide="help-circle" class="w-3.5 h-3.5"></i>
+          <span class="hidden sm:inline">Chapter Quiz</span>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Content Grid -->
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 grid grid-cols-1 lg:grid-cols-12 gap-8 flex-grow">
+    
+    <!-- Sidebar Navigation -->
+    <aside class="hidden lg:block lg:col-span-3">
+      <div class="sticky top-24 space-y-4">
+        
+        <!-- Module Navigation Quick Switcher -->
+        <div class="bg-white dark:bg-slate-900 p-4 rounded-2xl border border-slate-200 dark:border-slate-800 shadow-xs">
+          <div class="text-[11px] font-bold text-indigo-600 dark:text-indigo-400 uppercase tracking-wider mb-2">Module 12 Chapters</div>
+          <div class="space-y-1">
+            <a href="module12-ch18.html" class="flex items-center justify-between px-3 py-2 rounded-xl text-xs font-bold bg-indigo-50 dark:bg-indigo-950/80 text-indigo-700 dark:text-indigo-300 border border-indigo-200 dark:border-indigo-800">
+              <span>Ch 18: Risk Profiling</span>
+              <span class="text-[10px] px-1.5 py-0.5 rounded bg-indigo-200 dark:bg-indigo-800">10M</span>
+            </a>
+            <a href="module12-ch19.html" class="flex items-center justify-between px-3 py-2 rounded-xl text-xs font-semibold text-slate-600 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800">
+              <span>Ch 19: Performance Attribution</span>
+              <span class="text-[10px] px-1.5 py-0.5 rounded bg-slate-200 dark:bg-slate-700">15M</span>
+            </a>
+            <a href="module12-ch20.html" class="flex items-center justify-between px-3 py-2 rounded-xl text-xs font-semibold text-amber-700 dark:text-amber-300 hover:bg-amber-50 dark:hover:bg-amber-950/50">
+              <span>Ch 20: 4 Solved Cases</span>
+              <span class="text-[10px] px-1.5 py-0.5 rounded bg-amber-200 dark:bg-amber-800 font-bold">20M ⭐</span>
+            </a>
+          </div>
+        </div>
+
+        <!-- Table of Contents -->
+        <div class="bg-white dark:bg-slate-900 p-5 rounded-2xl border border-slate-200 dark:border-slate-800 shadow-xs">
+          <h2 class="text-xs font-bold text-slate-400 uppercase tracking-wider mb-3">On This Page</h2>
+          <nav class="space-y-1 text-xs">
+            <a href="#section-1" class="block px-2.5 py-1.5 rounded-lg text-slate-600 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800 hover:text-indigo-600">18.1 Risk Capacity vs. Tolerance vs. Attitude ⭐</a>
+            <a href="#section-2" class="block px-2.5 py-1.5 rounded-lg text-amber-700 dark:text-amber-300 font-semibold bg-amber-50/70 dark:bg-amber-950/50 hover:bg-amber-100">18.2 The Compatibility Matrix & Override Rule ⭐</a>
+            <a href="#section-3" class="block px-2.5 py-1.5 rounded-lg text-slate-600 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800">18.3 Questionnaire Design & Behavioral Traps</a>
+            <a href="#section-4" class="block px-2.5 py-1.5 rounded-lg text-amber-700 dark:text-amber-300 font-semibold bg-amber-50/70 dark:bg-amber-950/50 hover:bg-amber-100">18.4 Asset Allocation: SAA vs. TAA vs. DAA ⭐</a>
+            <a href="#section-5" class="block px-2.5 py-1.5 rounded-lg text-slate-600 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800">18.5 Core & Satellite Construction Framework</a>
+            <a href="#interactive-quiz" class="block px-2.5 py-1.5 rounded-lg text-indigo-700 dark:text-indigo-300 font-bold bg-indigo-50 dark:bg-indigo-950 hover:bg-indigo-100 mt-2">Practice Quiz (12 MCQs)</a>
+          </nav>
+        </div>
+
+        <!-- High-Yield Callout Box -->
+        <div class="p-4 rounded-2xl bg-gradient-to-br from-indigo-600 to-indigo-800 text-white shadow-xs text-xs">
+          <div class="flex items-center gap-1.5 font-bold mb-2">
+            <i data-lucide="zap" class="w-4 h-4 text-amber-300"></i>
+            <span>Exam Golden Rules</span>
+          </div>
+          <p class="text-indigo-100 leading-relaxed space-y-1.5">
+            &bull; <strong>The Override Rule:</strong> Risk Capacity strictly overrides Risk Tolerance in portfolio asset allocation.<br>
+            &bull; <strong>Brinson Study:</strong> >90% of return variability stems from SAA, not timing or security selection.<br>
+            &bull; <strong>Core & Satellite:</strong> Core = 65–80% passive/large-cap; Satellite = 20–35% tactical/alpha.<br>
+            &bull; <strong>Mandatory Reassessment:</strong> Upon any major life milestone or at least annually.
+          </p>
+        </div>
+
+      </div>
+    </aside>
+
+    <!-- Main Notes Content -->
+    <div class="lg:col-span-9 space-y-8">
+
+      <!-- Section 18.1 -->
+      <section id="section-1" class="bg-white dark:bg-slate-900 rounded-3xl p-6 sm:p-8 border border-slate-200 dark:border-slate-800 shadow-xs space-y-5">
+        <div class="flex items-center justify-between">
+          <div class="flex items-center gap-2 text-xs font-bold text-slate-500 uppercase tracking-wider">
+            <span class="w-2 h-2 rounded-full bg-indigo-600"></span> Section 18.1 &bull; Conceptual Foundations
+          </div>
+          <span class="text-xs px-2.5 py-1 rounded-full bg-amber-50 dark:bg-amber-950 text-amber-700 dark:text-amber-300 font-bold border border-amber-200 dark:border-amber-800">
+            High-Yield Definition Matrix ⭐
+          </span>
+        </div>
+
+        <div>
+          <h2 class="font-display font-bold text-xl sm:text-2xl text-slate-900 dark:text-white">
+            The Tripartite Risk Spectrum: Capacity vs. Tolerance vs. Attitude
+          </h2>
+          <p class="text-xs sm:text-sm text-slate-600 dark:text-slate-300 mt-1 leading-relaxed">
+            In financial advisory practice under SEBI (Investment Advisers) Regulations, 2013, "Risk" is not a monolithic number. An adviser must dissect an investor's profile into three distinct dimensions:
+          </p>
+        </div>
+
+        <!-- 3-Column Concept Cards -->
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+          
+          <!-- Card 1: Risk Capacity -->
+          <div class="p-5 rounded-2xl bg-slate-50 dark:bg-slate-800/70 border border-slate-200 dark:border-slate-700 space-y-2.5">
+            <div class="flex items-center justify-between">
+              <span class="px-2 py-0.5 rounded text-[10px] font-bold uppercase tracking-wider bg-blue-100 text-blue-800 dark:bg-blue-950 dark:text-blue-300">Objective / Financial</span>
+              <i data-lucide="briefcase" class="w-4 h-4 text-blue-600"></i>
+            </div>
+            <h3 class="font-display font-bold text-base text-slate-900 dark:text-white">Risk Capacity</h3>
+            <p class="text-xs text-slate-600 dark:text-slate-300 leading-relaxed">
+              The <strong>objective, mathematical ability</strong> of the client to absorb capital loss without compromising core financial goals, baseline lifestyle, or emergency liquidity.
+            </p>
+            <div class="pt-2 border-t border-slate-200 dark:border-slate-700 text-[11px] text-slate-500 dark:text-slate-400 space-y-1">
+              <div>&bull; <strong>Driven by:</strong> Net worth, age, time horizon, income stability, liabilities, and number of dependents.</div>
+              <div>&bull; <strong>Nature:</strong> Completely quantifiable via balance sheets and cash flows.</div>
+            </div>
+          </div>
+
+          <!-- Card 2: Risk Tolerance / Appetite -->
+          <div class="p-5 rounded-2xl bg-slate-50 dark:bg-slate-800/70 border border-slate-200 dark:border-slate-700 space-y-2.5">
+            <div class="flex items-center justify-between">
+              <span class="px-2 py-0.5 rounded text-[10px] font-bold uppercase tracking-wider bg-purple-100 text-purple-800 dark:bg-purple-950 dark:text-purple-300">Subjective / Emotional</span>
+              <i data-lucide="brain" class="w-4 h-4 text-purple-600"></i>
+            </div>
+            <h3 class="font-display font-bold text-base text-slate-900 dark:text-white">Risk Tolerance</h3>
+            <p class="text-xs text-slate-600 dark:text-slate-300 leading-relaxed">
+              The <strong>psychological willingness</strong> of the investor to experience portfolio fluctuations and mark-to-market drawdowns in pursuit of higher future returns (the "sleep-at-night factor").
+            </p>
+            <div class="pt-2 border-t border-slate-200 dark:border-slate-700 text-[11px] text-slate-500 dark:text-slate-400 space-y-1">
+              <div>&bull; <strong>Driven by:</strong> Personality traits, emotional resilience, loss aversion, and financial literacy.</div>
+              <div>&bull; <strong>Nature:</strong> Subjective, psychometrically assessed via scenario-based surveys.</div>
+            </div>
+          </div>
+
+          <!-- Card 3: Risk Attitude -->
+          <div class="p-5 rounded-2xl bg-slate-50 dark:bg-slate-800/70 border border-slate-200 dark:border-slate-700 space-y-2.5">
+            <div class="flex items-center justify-between">
+              <span class="px-2 py-0.5 rounded text-[10px] font-bold uppercase tracking-wider bg-amber-100 text-amber-800 dark:bg-amber-950 dark:text-amber-300">Cognitive / Mindset</span>
+              <i data-lucide="compass" class="w-4 h-4 text-amber-600"></i>
+            </div>
+            <h3 class="font-display font-bold text-base text-slate-900 dark:text-white">Risk Attitude</h3>
+            <p class="text-xs text-slate-600 dark:text-slate-300 leading-relaxed">
+              The client's <strong>cultural belief system, preconceived notions, and past experiences</strong> regarding financial risk (e.g., trauma from suffering losses during the 2008 GFC or 2020 crash).
+            </p>
+            <div class="pt-2 border-t border-slate-200 dark:border-slate-700 text-[11px] text-slate-500 dark:text-slate-400 space-y-1">
+              <div>&bull; <strong>Driven by:</strong> Past market burns, family heritage, socio-economic conditioning.</div>
+              <div>&bull; <strong>Nature:</strong> Mutable over time through professional behavioral coaching.</div>
+            </div>
+          </div>
+
+        </div>
+      </section>
+
+      <!-- Section 18.2 -->
+      <section id="section-2" class="bg-white dark:bg-slate-900 rounded-3xl p-6 sm:p-8 border border-slate-200 dark:border-slate-800 shadow-xs space-y-5">
+        <div class="flex items-center justify-between">
+          <div class="flex items-center gap-2 text-xs font-bold text-slate-500 uppercase tracking-wider">
+            <span class="w-2 h-2 rounded-full bg-amber-500"></span> Section 18.2 &bull; Decision Framework
+          </div>
+          <span class="text-xs px-2.5 py-1 rounded-full bg-rose-50 dark:bg-rose-950 text-rose-700 dark:text-rose-300 font-bold border border-rose-200 dark:border-rose-800">
+            Mandatory Suitability Rule ⭐
+          </span>
+        </div>
+
+        <div>
+          <h2 class="font-display font-bold text-xl sm:text-2xl text-slate-900 dark:text-white">
+            The Compatibility Matrix & The Golden "Capacity Override" Rule
+          </h2>
+          <p class="text-xs sm:text-sm text-slate-600 dark:text-slate-300 mt-1 leading-relaxed">
+            What happens when an investor's psychological Risk Tolerance conflicts with their financial Risk Capacity? Under SEBI IA Regulations, 2013, the adviser must strictly enforce the <strong>Capacity Override Rule</strong>.
+          </p>
+        </div>
+
+        <!-- The 4-Quadrant Matrix -->
+        <div class="overflow-x-auto rounded-2xl border border-slate-200 dark:border-slate-800">
+          <table class="min-w-full text-xs text-left">
+            <thead class="bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 font-bold uppercase tracking-wider">
+              <tr>
+                <th class="p-3.5">Risk Capacity (Ability)</th>
+                <th class="p-3.5">Risk Tolerance (Willingness)</th>
+                <th class="p-3.5">Investor Persona</th>
+                <th class="p-3.5">Adviser Mandate & Recommended Asset Allocation</th>
+              </tr>
+            </thead>
+            <tbody class="divide-y divide-slate-200 dark:divide-slate-800">
+              <tr class="hover:bg-slate-50 dark:hover:bg-slate-800/50">
+                <td class="p-3.5 font-bold text-emerald-600 dark:text-emerald-400">HIGH CAPACITY</td>
+                <td class="p-3.5 font-bold text-emerald-600 dark:text-emerald-400">HIGH TOLERANCE</td>
+                <td class="p-3.5 font-semibold text-slate-900 dark:text-white">Aggressive Accumulator</td>
+                <td class="p-3.5 text-slate-600 dark:text-slate-300">
+                  Ideal alignment. Allocate <strong>70%–85% Equity</strong> for aggressive long-term compounding. High human capital, long horizon.
+                </td>
+              </tr>
+              <tr class="hover:bg-slate-50 dark:hover:bg-slate-800/50 bg-amber-50/40 dark:bg-amber-950/20">
+                <td class="p-3.5 font-bold text-emerald-600 dark:text-emerald-400">HIGH CAPACITY</td>
+                <td class="p-3.5 font-bold text-rose-600 dark:text-rose-400">LOW TOLERANCE</td>
+                <td class="p-3.5 font-semibold text-slate-900 dark:text-white">Hesitant Preserver</td>
+                <td class="p-3.5 text-slate-600 dark:text-slate-300">
+                  Client has surplus wealth but fears volatility. <strong>Adviser Coaching Mandate:</strong> Do not force high equity immediately. Start with Balanced Advantage Funds (40-50% equity) and educate on inflation drag.
+                </td>
+              </tr>
+              <tr class="hover:bg-slate-50 dark:hover:bg-slate-800/50 bg-rose-50/60 dark:bg-rose-950/40">
+                <td class="p-3.5 font-bold text-rose-600 dark:text-rose-400">LOW CAPACITY</td>
+                <td class="p-3.5 font-bold text-emerald-600 dark:text-emerald-400">HIGH TOLERANCE</td>
+                <td class="p-3.5 font-bold text-rose-600 dark:text-rose-400">DANGER ZONE &bull; Reckless Gambler</td>
+                <td class="p-3.5 text-slate-900 dark:text-slate-100 font-medium">
+                  <strong>CRITICAL EXAM TRAP ⭐:</strong> Capacity strictly overrides Tolerance! Even if the client begs for 100% small-cap or crypto, the adviser <strong>MUST RESTRICT equity to ≤20% or zero</strong> to protect non-negotiable living liabilities.
+                </td>
+              </tr>
+              <tr class="hover:bg-slate-50 dark:hover:bg-slate-800/50">
+                <td class="p-3.5 font-bold text-rose-600 dark:text-rose-400">LOW CAPACITY</td>
+                <td class="p-3.5 font-bold text-rose-600 dark:text-rose-400">LOW TOLERANCE</td>
+                <td class="p-3.5 font-semibold text-slate-900 dark:text-white">Defensive Pure Preserver</td>
+                <td class="p-3.5 text-slate-600 dark:text-slate-300">
+                  Full alignment on safety. Allocate <strong>80%–100% High-Grade Debt</strong> (G-Sec, T-Bills, AAA Corporate Paper) and Arbitrage funds. Focus on capital protection.
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="p-4 rounded-2xl bg-rose-50 dark:bg-rose-950/60 border border-rose-200 dark:border-rose-800 text-xs space-y-1.5">
+          <div class="flex items-center gap-2 font-bold text-rose-800 dark:text-rose-300">
+            <i data-lucide="alert-triangle" class="w-4 h-4 text-rose-600"></i>
+            <span>The SEBI IA Fiduciary Suitability Standard</span>
+          </div>
+          <p class="text-rose-900 dark:text-rose-200 leading-relaxed">
+            Regulation 17 of SEBI (Investment Advisers) Regulations, 2013 explicitly bars an adviser from recommending products aligned solely with an investor's psychological greed if the investor lacks the objective financial capacity to absorb potential losses. <strong>Risk Capacity acts as an unbreachable ceiling.</strong>
+          </p>
+        </div>
+      </section>
+
+      <!-- Section 18.3 -->
+      <section id="section-3" class="bg-white dark:bg-slate-900 rounded-3xl p-6 sm:p-8 border border-slate-200 dark:border-slate-800 shadow-xs space-y-5">
+        <div class="flex items-center justify-between">
+          <div class="flex items-center gap-2 text-xs font-bold text-slate-500 uppercase tracking-wider">
+            <span class="w-2 h-2 rounded-full bg-indigo-600"></span> Section 18.3 &bull; Psychometrics
+          </div>
+          <span class="text-xs px-2.5 py-1 rounded-full bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300 font-semibold">
+            Process Architecture
+          </span>
+        </div>
+
+        <div>
+          <h2 class="font-display font-bold text-xl sm:text-2xl text-slate-900 dark:text-white">
+            Questionnaire Design Principles & Behavioral Biases
+          </h2>
+          <p class="text-xs sm:text-sm text-slate-600 dark:text-slate-300 mt-1 leading-relaxed">
+            A poorly structured questionnaire leads to severe mis-profiling. Understanding cognitive biases and design flaws is heavily tested in NISM Series X-B:
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
+          
+          <div class="p-5 rounded-2xl bg-slate-50 dark:bg-slate-800/70 border border-slate-200 dark:border-slate-750 space-y-3">
+            <h4 class="font-display font-bold text-sm text-slate-900 dark:text-white flex items-center gap-2">
+              <i data-lucide="check-circle" class="w-4 h-4 text-emerald-600"></i>
+              Best Practices in Questionnaire Design
+            </h4>
+            <ul class="text-xs text-slate-600 dark:text-slate-300 space-y-2 leading-relaxed">
+              <li>&bull; <strong>Scenario-based questions:</strong> Frame questions around concrete rupee losses rather than abstract percentages (e.g. <i>"How would you feel if your ₹50 Lakhs became ₹37.5 Lakhs?"</i>).</li>
+              <li>&bull; <strong>Multi-dimensional scoring:</strong> Assign separate scores for Capacity and Tolerance rather than combining them into a misleading single average.</li>
+              <li>&bull; <strong>Time horizon segmentation:</strong> Differentiate risk profiles by specific goal milestones (e.g., Retirement in 20 years vs. House downpayment in 18 months).</li>
+              <li>&bull; <strong>Past experience audit:</strong> Verify past reactions during major crashes rather than hypothetical speculation.</li>
+            </ul>
+          </div>
+
+          <div class="p-5 rounded-2xl bg-slate-50 dark:bg-slate-800/70 border border-slate-200 dark:border-slate-750 space-y-3">
+            <h4 class="font-display font-bold text-sm text-slate-900 dark:text-white flex items-center gap-2">
+              <i data-lucide="x-circle" class="w-4 h-4 text-rose-600"></i>
+              Behavioral Pitfalls & Cognitive Traps
+            </h4>
+            <ul class="text-xs text-slate-600 dark:text-slate-300 space-y-2 leading-relaxed">
+              <li>&bull; <strong>Recency Bias:</strong> Clients surveyed at the peak of a bull market score as "Aggressive", but panic and redeem when surveyed during a correction.</li>
+              <li>&bull; <strong>Framing Effect:</strong> Asking <i>"Do you want a 90% chance of success?"</i> gets vastly different responses than <i>"Can you accept a 10% risk of failure?"</i>.</li>
+              <li>&bull; <strong>Hypothetical Bias:</strong> Investors routinely overestimate their emotional tolerance when answering abstract theoretical surveys without real skin in the game.</li>
+              <li>&bull; <strong>Overconfidence Effect:</strong> DIY investors attributing past market-wide bull runs to their personal stock-selection skills.</li>
+            </ul>
+          </div>
+
+        </div>
+
+        <div class="p-4 rounded-2xl bg-indigo-50 dark:bg-indigo-950/60 border border-indigo-200 dark:border-indigo-800 text-xs space-y-1">
+          <div class="font-bold text-indigo-900 dark:text-indigo-300 flex items-center gap-1.5">
+            <i data-lucide="clock" class="w-4 h-4 text-indigo-600"></i>
+            Mandatory Periodic Reassessment Triggers
+          </div>
+          <p class="text-slate-600 dark:text-slate-300 leading-relaxed">
+            Under SEBI regulations, risk profiles cannot remain static. An adviser must formally re-evaluate client risk profiling: (1) <strong>At least once every year</strong>; or (2) <strong>Immediately upon any major life milestone</strong> (marriage, birth of child, loss of employment, receipt of substantial inheritance, divorce, or when a major goal approaches within 3 years).
+          </p>
+        </div>
+      </section>
+
+      <!-- Section 18.4 -->
+      <section id="section-4" class="bg-white dark:bg-slate-900 rounded-3xl p-6 sm:p-8 border border-slate-200 dark:border-slate-800 shadow-xs space-y-5">
+        <div class="flex items-center justify-between">
+          <div class="flex items-center gap-2 text-xs font-bold text-slate-500 uppercase tracking-wider">
+            <span class="w-2 h-2 rounded-full bg-amber-500"></span> Section 18.4 &bull; Allocation Architecture
+          </div>
+          <span class="text-xs px-2.5 py-1 rounded-full bg-amber-50 dark:bg-amber-950 text-amber-700 dark:text-amber-300 font-bold border border-amber-200 dark:border-amber-800">
+            Exam Core Topic ⭐
+          </span>
+        </div>
+
+        <div>
+          <h2 class="font-display font-bold text-xl sm:text-2xl text-slate-900 dark:text-white">
+            Asset Allocation Linkages: Strategic (SAA) vs. Tactical (TAA) vs. Dynamic (DAA)
+          </h2>
+          <p class="text-xs sm:text-sm text-slate-600 dark:text-slate-300 mt-1 leading-relaxed">
+            The pioneering <i>Brinson, Hood & Beebower (1986)</i> study established that <strong>91.5% of portfolio return variation over time</strong> is determined by long-term asset allocation policy, while market timing and security selection account for under 10% combined.
+          </p>
+        </div>
+
+        <!-- Master SAA vs TAA vs DAA Comparison Table -->
+        <div class="overflow-x-auto rounded-2xl border border-slate-200 dark:border-slate-800">
+          <table class="min-w-full text-xs text-left">
+            <thead class="bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 font-bold uppercase tracking-wider">
+              <tr>
+                <th class="p-3">Parameter</th>
+                <th class="p-3 bg-indigo-50/70 dark:bg-indigo-950/60 text-indigo-900 dark:text-indigo-200">Strategic Asset Allocation (SAA)</th>
+                <th class="p-3 bg-amber-50/70 dark:bg-amber-950/60 text-amber-900 dark:text-amber-200">Tactical Asset Allocation (TAA)</th>
+                <th class="p-3 bg-emerald-50/70 dark:bg-emerald-950/60 text-emerald-900 dark:text-emerald-200">Dynamic Asset Allocation (DAA)</th>
+              </tr>
+            </thead>
+            <tbody class="divide-y divide-slate-200 dark:divide-slate-800">
+              <tr class="hover:bg-slate-50 dark:hover:bg-slate-800/50">
+                <td class="p-3 font-semibold text-slate-900 dark:text-white">Core Objective</td>
+                <td class="p-3 text-slate-600 dark:text-slate-300">Long-term baseline policy weights anchored to client risk capacity and goal horizon.</td>
+                <td class="p-3 text-slate-600 dark:text-slate-300">Active, opportunistic short/medium-term tilts to exploit market mispricing.</td>
+                <td class="p-3 text-slate-600 dark:text-slate-300">Systematic downside protection and counter-cyclical algorithmic exposure.</td>
+              </tr>
+              <tr class="hover:bg-slate-50 dark:hover:bg-slate-800/50">
+                <td class="p-3 font-semibold text-slate-900 dark:text-white">Time Horizon</td>
+                <td class="p-3 text-slate-600 dark:text-slate-300">Long-term (5 to 30 years).</td>
+                <td class="p-3 text-slate-600 dark:text-slate-300">Short to intermediate (3 months to 2 years).</td>
+                <td class="p-3 text-slate-600 dark:text-slate-300">Continuous / monthly algorithmic model shifts.</td>
+              </tr>
+              <tr class="hover:bg-slate-50 dark:hover:bg-slate-800/50">
+                <td class="p-3 font-semibold text-slate-900 dark:text-white">Decision Trigger</td>
+                <td class="p-3 text-slate-600 dark:text-slate-300">Risk profiling & life goals; rebalanced on calendar or corridor drift (&plusmn;5%).</td>
+                <td class="p-3 text-slate-600 dark:text-slate-300">Macro indicators, Yield Gap (10Y G-Sec - Earnings Yield), P/E ratios, sentiment.</td>
+                <td class="p-3 text-slate-600 dark:text-slate-300">Pre-defined quantitative models (e.g. Balanced Advantage Funds).</td>
+              </tr>
+              <tr class="hover:bg-slate-50 dark:hover:bg-slate-800/50">
+                <td class="p-3 font-semibold text-slate-900 dark:text-white">Permitted Tilt Range</td>
+                <td class="p-3 text-slate-600 dark:text-slate-300">Fixed target weights (e.g., 60% Equity : 40% Debt).</td>
+                <td class="p-3 text-slate-600 dark:text-slate-300">Controlled deviation within bounds (e.g., 60% &plusmn; 10%, i.e., 50% to 70%).</td>
+                <td class="p-3 text-slate-600 dark:text-slate-300">Wide dynamic range (e.g., 30% to 80% net equity via derivatives hedging).</td>
+              </tr>
+              <tr class="hover:bg-slate-50 dark:hover:bg-slate-800/50">
+                <td class="p-3 font-semibold text-slate-900 dark:text-white">Market Dependency</td>
+                <td class="p-3 text-slate-600 dark:text-slate-300">Independent of short-term bull or bear sentiment.</td>
+                <td class="p-3 text-slate-600 dark:text-slate-300">Highly dependent on active market views and valuation signals.</td>
+                <td class="p-3 text-slate-600 dark:text-slate-300">Rule-based model inputs (e.g., trailing P/E, moving averages).</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <!-- The Yield Gap Indicator Callout -->
+        <div class="p-4 rounded-2xl bg-amber-50 dark:bg-amber-950/50 border border-amber-200 dark:border-amber-800 text-xs space-y-1.5">
+          <div class="font-bold text-amber-800 dark:text-amber-300 flex items-center gap-1.5">
+            <i data-lucide="trending-up" class="w-4 h-4 text-amber-600"></i>
+            Tactical Asset Allocation Indicator: The Yield Gap Formula ⭐
+          </div>
+          <div class="font-mono text-slate-800 dark:text-slate-200">
+            Yield Gap = 10-Year Benchmark G-Sec Yield (%) - Equity Market Earnings Yield (%)
+          </div>
+          <p class="text-slate-600 dark:text-slate-300 leading-relaxed">
+            Where <i>Earnings Yield = 1 / (Nifty 50 P/E Ratio) &times; 100</i>. When the Yield Gap is unusually high (e.g. >2.5%), equities are expensive relative to bonds &rarr; TAA signals an underweight tilt to equity. When the Yield Gap turns negative or narrow &rarr; TAA signals an overweight tilt to equity.
+          </p>
+        </div>
+      </section>
+
+      <!-- Section 18.5 -->
+      <section id="section-5" class="bg-white dark:bg-slate-900 rounded-3xl p-6 sm:p-8 border border-slate-200 dark:border-slate-800 shadow-xs space-y-5">
+        <div class="flex items-center justify-between">
+          <div class="flex items-center gap-2 text-xs font-bold text-slate-500 uppercase tracking-wider">
+            <span class="w-2 h-2 rounded-full bg-indigo-600"></span> Section 18.5 &bull; Portfolio Strategy
+          </div>
+          <span class="text-xs px-2.5 py-1 rounded-full bg-indigo-50 dark:bg-indigo-950 text-indigo-700 dark:text-indigo-300 font-bold border border-indigo-200 dark:border-indigo-800">
+            Standard Practice Framework
+          </span>
+        </div>
+
+        <div>
+          <h2 class="font-display font-bold text-xl sm:text-2xl text-slate-900 dark:text-white">
+            Core & Satellite Portfolio Construction Architecture
+          </h2>
+          <p class="text-xs sm:text-sm text-slate-600 dark:text-slate-300 mt-1 leading-relaxed">
+            The industry benchmark architecture recommended by SEBI for balancing low cost, beta efficiency, and alpha opportunity:
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
+          
+          <div class="p-5 rounded-2xl bg-indigo-50/60 dark:bg-indigo-950/40 border border-indigo-200 dark:border-indigo-800 space-y-3">
+            <div class="flex items-center justify-between">
+              <span class="text-xs font-black uppercase text-indigo-700 dark:text-indigo-300">The Core Portfolio (65% – 80%)</span>
+              <span class="px-2 py-0.5 rounded text-[10px] font-bold bg-indigo-600 text-white">Foundation</span>
+            </div>
+            <ul class="text-xs text-slate-600 dark:text-slate-300 space-y-2 leading-relaxed">
+              <li>&bull; <strong>Instruments:</strong> Low-cost broad-market Index Funds / ETFs (Nifty 50, Nifty Next 50), Large-Cap Mutual Funds, Sovereign G-Secs, AAA Corporate Bonds.</li>
+              <li>&bull; <strong>Objective:</strong> Deliver market returns (Beta) with ultra-low Total Expense Ratio (TER) and low turnover.</li>
+              <li>&bull; <strong>Holding Philosophy:</strong> Strict Buy-and-Hold; remains constant across market cycles.</li>
+            </ul>
+          </div>
+
+          <div class="p-5 rounded-2xl bg-amber-50/60 dark:bg-amber-950/40 border border-amber-200 dark:border-amber-800 space-y-3">
+            <div class="flex items-center justify-between">
+              <span class="text-xs font-black uppercase text-amber-700 dark:text-amber-300">The Satellite Portfolio (20% – 35%)</span>
+              <span class="px-2 py-0.5 rounded text-[10px] font-bold bg-amber-500 text-slate-950">Alpha Engine</span>
+            </div>
+            <ul class="text-xs text-slate-600 dark:text-slate-300 space-y-2 leading-relaxed">
+              <li>&bull; <strong>Instruments:</strong> Active Mid-Cap and Small-Cap Funds, Thematic/Sectoral Funds (e.g. Technology, Pharma), High-Yield Debt / Credit Risk, Tactical Commodity Funds.</li>
+              <li>&bull; <strong>Objective:</strong> Generate superior risk-adjusted alpha by exploiting temporary market inefficiencies.</li>
+              <li>&bull; <strong>Holding Philosophy:</strong> Dynamically rotated or trimmed upon reaching profit targets.</li>
+            </ul>
+          </div>
+
+        </div>
+      </section>
+
+      <!-- Section 18.6: Interactive Chapter Quiz -->
+      <section id="interactive-quiz" class="p-6 sm:p-8 rounded-3xl bg-slate-900 text-white space-y-6 shadow-xl">
+        <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 border-b border-slate-800 pb-5">
+          <div>
+            <div class="flex items-center gap-2 text-xs font-bold text-indigo-400 uppercase tracking-wider mb-1">
+              <i data-lucide="check-circle" class="w-4 h-4"></i> Interactive Exam Assessment
+            </div>
+            <h3 class="font-display font-bold text-xl sm:text-2xl text-white">Chapter 18 Practice Quiz</h3>
+            <p class="text-xs text-slate-400 mt-1">12 Exam-standard questions covering Risk Capacity vs. Tolerance, override rules, questionnaire design, SAA vs. TAA, and Core & Satellite allocations.</p>
+          </div>
+          <div class="flex items-center gap-3">
+            <div class="text-right">
+              <span class="text-xs text-slate-400">Progress</span>
+              <div class="text-sm font-bold text-indigo-400"><span id="answered-count">0</span> / 12</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Questions Container -->
+        <div id="quiz-container" class="space-y-6"></div>
+
+        <!-- Action Bar -->
+        <div class="pt-4 border-t border-slate-800 flex flex-col sm:flex-row items-center justify-between gap-4">
+          <button id="submit-quiz-btn" onclick="submitQuiz()" class="w-full sm:w-auto px-6 py-3 rounded-xl bg-indigo-600 hover:bg-indigo-500 font-bold text-sm shadow-lg shadow-indigo-600/30 transition-all flex items-center justify-center gap-2 cursor-pointer">
+            <span>Submit Quiz & View Results</span>
+            <i data-lucide="arrow-right" class="w-4 h-4"></i>
+          </button>
+          <button id="reset-quiz-btn" onclick="resetQuiz()" class="hidden w-full sm:w-auto px-6 py-3 rounded-xl bg-slate-800 hover:bg-slate-700 text-slate-300 font-bold text-sm transition-all flex items-center justify-center gap-2 cursor-pointer">
+            <i data-lucide="rotate-ccw" class="w-4 h-4"></i>
+            <span>Retake Quiz</span>
+          </button>
+        </div>
+
+        <!-- Quiz Results -->
+        <div id="quiz-results" class="hidden p-6 rounded-2xl bg-slate-800/80 border border-slate-700 space-y-4">
+          <div class="flex items-center justify-between">
+            <h4 class="font-display font-bold text-lg text-white">Quiz Score Summary</h4>
+            <span id="result-status-badge" class="px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider"></span>
+          </div>
+          <div class="flex items-baseline gap-3">
+            <span id="score-display" class="font-display font-extrabold text-4xl text-indigo-400"></span>
+            <span id="percentage-display" class="text-sm text-slate-400 font-medium"></span>
+          </div>
+          <p id="result-summary-text" class="text-xs sm:text-sm text-slate-300"></p>
+        </div>
+      </section>
+
+      <!-- Bottom Navigation Footer -->
+      <footer class="pt-6 border-t border-slate-200 dark:border-slate-800 flex items-center justify-between">
+        <a href="module12.html" class="flex items-center gap-2 px-4 py-2.5 rounded-xl border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-800 hover:bg-slate-50 dark:hover:bg-slate-750 text-slate-700 dark:text-slate-300 font-medium text-xs transition-colors">
+          <i data-lucide="arrow-left" class="w-4 h-4"></i>
+          <span>Module 12 Overview</span>
+        </a>
+        <a href="module12-ch19.html" class="flex items-center gap-2 px-5 py-2.5 rounded-xl bg-indigo-600 hover:bg-indigo-700 text-white font-semibold text-xs shadow-sm transition-colors">
+          <span>Next: Chapter 19 (Performance Attribution)</span>
+          <i data-lucide="arrow-right" class="w-4 h-4"></i>
+        </a>
+      </footer>
+
+    </div>
+  </div>
+
+  <script>
+    const questionsData = [
+      {
+        id: 1,
+        question: "In comprehensive investor risk profiling, which of the following is an objective, quantifiable measure of a client's financial ability to absorb financial losses without jeopardizing non-negotiable living liabilities?",
+        options: [
+          { key: "a", text: "Risk Attitude" },
+          { key: "b", text: "Risk Tolerance" },
+          { key: "c", text: "Risk Capacity" },
+          { key: "d", text: "Risk Appetite" }
+        ],
+        correct: "c",
+        explanation: "Risk Capacity is the objective financial ability to sustain financial losses, determined by quantifiable factors such as net worth, cash flow stability, debt obligations, time horizon, and number of dependents."
+      },
+      {
+        id: 2,
+        question: "An aggressive 26-year-old software engineer has heavy outstanding personal loans, zero emergency savings, and unstable freelance income, but strongly insists on investing 100% of his capital into speculative small-cap stocks. How must an SEBI-registered Investment Adviser (RIA) act under fiduciary suitability rules?",
+        options: [
+          { key: "a", text: "Recommend 100% small-cap equity because client willingness (Risk Tolerance) is paramount" },
+          { key: "b", text: "Enforce the Capacity Override Rule: Restrict equity exposure because the client's low Risk Capacity strictly overrides his high Risk Tolerance" },
+          { key: "c", text: "Recommend equity derivatives (futures & options) to double his leverage" },
+          { key: "d", text: "Take a signed waiver form from the client and proceed with high risk" }
+        ],
+        correct: "b",
+        explanation: "Under SEBI IA Regulations 2013 and FPSB standards, Risk Capacity acts as an unbreachable ceiling. In any conflict between Capacity and Tolerance, Risk Capacity strictly overrides Risk Tolerance to prevent catastrophic ruin."
+      },
+      {
+        id: 3,
+        question: "According to the landmark empirical research study by Brinson, Hood, and Beebower (1986), what percentage of long-term portfolio return variability is determined by broad Asset Allocation policy?",
+        options: [
+          { key: "a", text: "Under 25%" },
+          { key: "b", text: "Approximately 50%" },
+          { key: "c", text: "Over 90%" },
+          { key: "d", text: "100% exactly" }
+        ],
+        correct: "c",
+        explanation: "The Brinson, Hood & Beebower study proved that over 90% (specifically 91.5%) of portfolio return variability over time is explained by long-term Strategic Asset Allocation, while market timing and security selection account for under 10% combined."
+      },
+      {
+        id: 4,
+        question: "How does Strategic Asset Allocation (SAA) primarily differ from Tactical Asset Allocation (TAA)?",
+        options: [
+          { key: "a", text: "SAA involves short-term day trading, while TAA is held for retirement" },
+          { key: "b", text: "SAA establishes the long-term baseline weights aligned to risk capacity, whereas TAA introduces deliberate, temporary deviations to exploit market mispricings" },
+          { key: "c", text: "SAA applies only to debt instruments, while TAA applies only to equities" },
+          { key: "d", text: "SAA is prohibited by SEBI, while TAA is mandatory" }
+        ],
+        correct: "b",
+        explanation: "SAA is the long-term strategic policy anchor determined by client goals and risk capacity. TAA represents deliberate, short-to-medium-term tilts (e.g. ±5% to ±10%) around the SAA to capitalize on cyclical valuation anomalies."
+      },
+      {
+        id: 5,
+        question: "In a standard Core and Satellite portfolio construction framework, what are the typical recommended percentage allocations to the Core and Satellite components respectively?",
+        options: [
+          { key: "a", text: "Core: 20–35%; Satellite: 65–80%" },
+          { key: "b", text: "Core: 50%; Satellite: 50%" },
+          { key: "c", text: "Core: 65–80%; Satellite: 20–35%" },
+          { key: "d", text: "Core: 95–100%; Satellite: 0–5%" }
+        ],
+        correct: "c",
+        explanation: "The Core portfolio represents 65% to 80% of total investments, composed of broad-market low-cost index funds, large-cap equity, and sovereign/AAA debt. The Satellite portfolio comprises 20% to 35% for tactical alpha generation."
+      },
+      {
+        id: 6,
+        question: "Which of the following describes the 'Yield Gap' formula used in Tactical Asset Allocation to evaluate relative attractiveness between equity and fixed income?",
+        options: [
+          { key: "a", text: "Yield Gap = Dividend Yield - Inflation Rate" },
+          { key: "b", text: "Yield Gap = 10-Year Benchmark G-Sec Yield (%) minus Nifty Earnings Yield (%)" },
+          { key: "c", text: "Yield Gap = Call Money Rate minus Repo Rate" },
+          { key: "d", text: "Yield Gap = Real Estate Rental Yield minus Bank Fixed Deposit Rate" }
+        ],
+        correct: "b",
+        explanation: "Yield Gap = 10-Year G-Sec Yield (%) - Equity Market Earnings Yield (where Earnings Yield = 1/PE × 100). A wide yield gap indicates equities are expensive relative to bonds, prompting a tactical debt tilt."
+      },
+      {
+        id: 7,
+        question: "What is the primary psychological hazard when administering risk profiling questionnaires immediately following an extended multi-year stock market bull rally?",
+        options: [
+          { key: "a", text: "Loss Aversion bias causes investors to become excessively fearful" },
+          { key: "b", text: "Recency Bias and Overconfidence cause investors to dramatically overestimate their true emotional risk tolerance" },
+          { key: "c", text: "Investors completely refuse to invest in equity" },
+          { key: "d", text: "Questionnaire scoring algorithms become mathematically invalid" }
+        ],
+        correct: "b",
+        explanation: "During prolonged bull runs, Recency Bias leads clients to extrapolate recent paper gains into the future, rating themselves as highly aggressive. In a subsequent market crash, they often experience severe panic and demand redemptions."
+      },
+      {
+        id: 8,
+        question: "An investor has High Risk Capacity (substantial net worth, surplus cash flows, zero debt) but Low Risk Tolerance (extreme anxiety regarding market volatility). What is the most appropriate advisory approach?",
+        options: [
+          { key: "a", text: "Force the client into 100% micro-cap funds to overcome their fear" },
+          { key: "b", text: "Acknowledge the fear, deploy a moderate conservative allocation (e.g. Balanced Advantage / Hybrid), and provide behavioral coaching regarding long-term inflation risk" },
+          { key: "c", text: "Advise the client to keep 100% of funds in physical cash under a mattress" },
+          { key: "d", text: "Immediately report the client to SEBI for being uncooperative" }
+        ],
+        correct: "b",
+        explanation: "A high-capacity, low-tolerance investor needs behavioral coaching. Forcing high risk causes panic exits, while 100% debt risks inflation erosion. A phased hybrid/balanced strategy with ongoing financial literacy is the professional standard."
+      },
+      {
+        id: 9,
+        question: "Under SEBI (Investment Advisers) Regulations, 2013, how frequently must an Investment Adviser formally review and reassess a client's risk profile?",
+        options: [
+          { key: "a", text: "Once every 5 years only" },
+          { key: "b", text: "Only when the client explicitly files a legal complaint" },
+          { key: "c", text: "At least annually (once a year), and immediately upon the occurrence of any significant life event" },
+          { key: "d", text: "Daily at market close" }
+        ],
+        correct: "c",
+        explanation: "SEBI IA Regulations mandate risk profile review at least annually, and whenever a major life event occurs (marriage, childbirth, job change, significant inheritance, retirement milestone, etc.)."
+      },
+      {
+        id: 10,
+        question: "Which of the following questionnaire design flaws is characterized by framing identical financial outcomes in a way that artificially alters client choices?",
+        options: [
+          { key: "a", text: "Framing Effect" },
+          { key: "b", text: "Mental Accounting" },
+          { key: "c", text: "Availability Cascade" },
+          { key: "d", text: "Survivorship Bias" }
+        ],
+        correct: "a",
+        explanation: "The Framing Effect occurs when presenting the same scenario as a gain vs. a loss (e.g. 90% chance of capital retention vs. 10% risk of loss) leads clients to pick opposite risk preferences."
+      },
+      {
+        id: 11,
+        question: "What is the primary role of the 'Satellite' portfolio in a Core and Satellite investment structure?",
+        options: [
+          { key: "a", text: "To guarantee 100% capital protection against sovereign default" },
+          { key: "b", text: "To deliver low-cost broad-market index returns" },
+          { key: "c", text: "To generate excess alpha and tactical outperformance through higher-conviction, specialized, or active strategies" },
+          { key: "d", text: "To manage daily ATM liquidity withdrawals" }
+        ],
+        correct: "c",
+        explanation: "The Satellite portion (20–35%) is designed for alpha generation, utilizing active mid/small-caps, thematic/sectoral funds, or tactical mispricings while the Core anchors broad stability."
+      },
+      {
+        id: 12,
+        question: "Which of the following client factors directly impacts Risk Capacity rather than Risk Tolerance?",
+        options: [
+          { key: "a", text: "Emotional fear of seeing portfolio value drop 20% on a mobile app screen" },
+          { key: "b", text: "Childhood memories of parents losing money in the 1992 Harshad Mehta scam" },
+          { key: "c", text: "Having an outstanding home loan EMI of ₹1,20,000 per month and 3 financially dependent family members" },
+          { key: "d", text: "A personal preference for high-stakes card games on weekends" }
+        ],
+        correct: "c",
+        explanation: "Financial obligations (home loan EMIs) and dependents directly constrain cash flows and balance sheet resilience, which are objective determinants of Risk Capacity. The others are psychological or behavioral (Tolerance/Attitude)."
+      }
+    ];
+
+    let userAnswers = {};
+
+    function renderQuiz() {
+      const container = document.getElementById("quiz-container");
+      container.innerHTML = "";
+      questionsData.forEach((q, idx) => {
+        const qDiv = document.createElement("div");
+        qDiv.className = "p-5 rounded-2xl bg-white/5 border border-white/10 space-y-3";
+        
+        let optionsHtml = "";
+        q.options.forEach(opt => {
+          optionsHtml += `
+            <label id="label-${q.id}-${opt.key}" onclick="selectOption(${q.id}, '${opt.key}')" class="flex items-center gap-3 p-3 rounded-xl bg-white/5 hover:bg-white/10 border border-white/5 cursor-pointer text-xs sm:text-sm transition-all">
+              <input type="radio" name="q-${q.id}" value="${opt.key}" class="hidden" />
+              <div id="circle-${q.id}-${opt.key}" class="w-6 h-6 rounded-full border border-slate-500 flex items-center justify-center font-bold text-xs shrink-0 text-slate-300">${opt.key.toUpperCase()}</div>
+              <span class="text-slate-300">${opt.text}</span>
+            </label>
+          `;
+        });
+
+        qDiv.innerHTML = `
+          <div class="flex items-center justify-between">
+            <span class="text-xs font-bold text-indigo-400">Question ${idx + 1} of ${questionsData.length}</span>
+            <span id="badge-${q.id}" class="text-xs px-2.5 py-0.5 rounded-full bg-slate-800 text-slate-400 font-medium">Unanswered</span>
+          </div>
+          <h4 class="font-display font-semibold text-sm sm:text-base text-white leading-snug">${q.question}</h4>
+          <div class="space-y-2 mt-3">${optionsHtml}</div>
+          <div id="explanation-${q.id}" class="hidden p-4 rounded-xl text-xs sm:text-sm mt-3 space-y-1"></div>
+        `;
+        container.appendChild(qDiv);
+      });
+      lucide.createIcons();
+    }
+
+    function selectOption(qId, key) {
+      userAnswers[qId] = key;
+      document.getElementById("answered-count").innerText = Object.keys(userAnswers).length;
+      
+      const badge = document.getElementById(`badge-${qId}`);
+      if (badge) {
+        badge.innerText = "Answered";
+        badge.className = "text-xs px-2.5 py-0.5 rounded-full bg-indigo-500/20 text-indigo-300 font-medium border border-indigo-500/30";
+      }
+
+      const q = questionsData.find(item => item.id === qId);
+      q.options.forEach(opt => {
+        const lbl = document.getElementById(`label-${qId}-${opt.key}`);
+        const circle = document.getElementById(`circle-${qId}-${opt.key}`);
+        if (opt.key === key) {
+          lbl.className = "flex items-center gap-3 p-3 rounded-xl bg-indigo-600/30 border border-indigo-400/60 cursor-pointer text-xs sm:text-sm transition-all shadow-sm";
+          circle.className = "w-6 h-6 rounded-full bg-indigo-600 text-white font-bold text-xs shrink-0 flex items-center justify-center border border-indigo-400";
+        } else {
+          lbl.className = "flex items-center gap-3 p-3 rounded-xl bg-white/5 hover:bg-white/10 border border-white/5 cursor-pointer text-xs sm:text-sm transition-all";
+          circle.className = "w-6 h-6 rounded-full border border-slate-500 flex items-center justify-center font-bold text-xs shrink-0 text-slate-300";
+        }
+      });
+    }
+
+    function submitQuiz() {
+      let score = 0;
+      questionsData.forEach(q => {
+        const selected = userAnswers[q.id];
+        const isCorrect = selected === q.correct;
+        if (isCorrect) score++;
+
+        const explanationDiv = document.getElementById(`explanation-${q.id}`);
+        explanationDiv.classList.remove("hidden");
+
+        q.options.forEach(opt => {
+          const lbl = document.getElementById(`label-${q.id}-${opt.key}`);
+          const circle = document.getElementById(`circle-${q.id}-${opt.key}`);
+          lbl.onclick = null;
+          lbl.classList.remove("cursor-pointer");
+
+          if (opt.key === q.correct) {
+            lbl.className = "flex items-center gap-3 p-3 rounded-xl bg-emerald-950/60 border border-emerald-500 text-emerald-200 text-xs sm:text-sm";
+            circle.className = "w-6 h-6 rounded-full bg-emerald-600 text-white font-bold text-xs shrink-0 flex items-center justify-center";
+          } else if (opt.key === selected && !isCorrect) {
+            lbl.className = "flex items-center gap-3 p-3 rounded-xl bg-rose-950/60 border border-rose-500 text-rose-200 text-xs sm:text-sm";
+            circle.className = "w-6 h-6 rounded-full bg-rose-600 text-white font-bold text-xs shrink-0 flex items-center justify-center";
+          }
+        });
+
+        if (isCorrect) {
+          explanationDiv.className = "p-4 rounded-xl text-xs sm:text-sm mt-3 bg-emerald-950/60 border border-emerald-600/80 text-emerald-200 space-y-1";
+          explanationDiv.innerHTML = `<div class="font-bold text-emerald-400 flex items-center gap-1.5"><i data-lucide="check-circle" class="w-4 h-4"></i> Correct!</div><p class="leading-relaxed">${q.explanation}</p>`;
+        } else {
+          explanationDiv.className = "p-4 rounded-xl text-xs sm:text-sm mt-3 bg-rose-950/60 border border-rose-600/80 text-rose-200 space-y-1";
+          explanationDiv.innerHTML = `<div class="font-bold text-rose-400 flex items-center gap-1.5"><i data-lucide="x-circle" class="w-4 h-4"></i> Incorrect (Correct Answer: Option ${q.correct.toUpperCase()})</div><p class="leading-relaxed">${q.explanation}</p>`;
+        }
+      });
+
+      const percentage = Math.round((score / questionsData.length) * 100);
+      const passed = percentage >= 60;
+      
+      const resultsDiv = document.getElementById("quiz-results");
+      resultsDiv.classList.remove("hidden");
+
+      const statusBadge = document.getElementById("result-status-badge");
+      statusBadge.innerText = passed ? "Passed (60%+ Benchmark)" : "Needs Revision (<60%)";
+      statusBadge.className = passed ? "px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider bg-emerald-500 text-emerald-950" : "px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider bg-amber-500 text-amber-950";
+
+      document.getElementById("score-display").innerText = `${score} / ${questionsData.length}`;
+      document.getElementById("percentage-display").innerText = `${percentage}% Score (Passing Benchmark: 60%)`;
+
+      document.getElementById("result-summary-text").innerText = passed
+        ? `Outstanding! You scored ${percentage}%, mastering Risk Capacity vs. Tolerance override rules, SAA vs. TAA dynamics, and Core & Satellite allocations.`
+        : `You scored ${percentage}%. Please review the Capacity Override principle under SEBI IA Regulations and questionnaire bias mitigation before retesting.`;
+
+      document.getElementById("submit-quiz-btn").classList.add("hidden");
+      document.getElementById("reset-quiz-btn").classList.remove("hidden");
+
+      resultsDiv.scrollIntoView({ behavior: 'smooth' });
+      lucide.createIcons();
+    }
+
+    function resetQuiz() {
+      userAnswers = {};
+      document.getElementById("answered-count").innerText = "0";
+      document.getElementById("quiz-results").classList.add("hidden");
+      document.getElementById("submit-quiz-btn").classList.remove("hidden");
+      document.getElementById("reset-quiz-btn").classList.add("hidden");
+      renderQuiz();
+      document.getElementById("interactive-quiz").scrollIntoView({ behavior: 'smooth' });
+    }
+
+    renderQuiz();
+    lucide.createIcons();
+  </script>
+</body>
+</html>

@@ -1,0 +1,957 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Chapter 1: Basics of Insurance & Risk Principles | NISM Series X-B Notes</title>
+  
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  
+  <!-- Google Fonts: DM Sans & Jost (Eduleb Benchmark) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Jost:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+  
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+
+  <!-- Modern Documentation Design System -->
+  <link rel="stylesheet" href="modern-docs.css">
+  <script defer src="nav-sidebar.js"></script>
+
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['"DM Sans"', 'sans-serif'],
+            display: ['"Jost"', 'sans-serif'],
+            heading: ['"Jost"', 'sans-serif']
+          },
+          colors: {
+            brand: {
+              50: '#fffbeb',
+              100: '#fef3c7',
+              500: '#f59e0b',
+              600: '#d97706',
+              700: '#b45309',
+              800: '#92400e',
+              900: '#78350f'
+            }
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    body {
+      font-family: 'DM Sans', sans-serif;
+      font-size: 16px;
+      line-height: 26px;
+      color: #4a5355;
+    }
+    h1, h2, h3, h4, h5, h6, .font-display, .font-heading {
+      font-family: 'Jost', sans-serif;
+      font-weight: 700;
+    }
+  </style>
+</head>
+<body class="bg-slate-50 dark:bg-slate-950 text-slate-900 dark:text-slate-100 min-h-screen flex flex-col selection:bg-amber-500 selection:text-white antialiased transition-colors duration-200">
+
+  <!-- Smooth Opening Preloader -->
+  <div class="preloaders" id="eduleb-preloader">
+    <span class="loader"></span>
+    <div class="preloader-label">Chapter 1: Basics of Insurance & Principles</div>
+  </div>
+
+  <!-- Standardized Header (Single-Tier, 64px) -->
+  <header class="sticky top-0 z-40 bg-white/95 dark:bg-slate-900/95 backdrop-blur-md border-b border-slate-200/80 dark:border-slate-800 shadow-xs">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
+      
+      <!-- Left: Navigation / Breadcrumbs -->
+      <div class="flex items-center gap-3">
+        <a href="module7.html" class="flex items-center gap-2 text-slate-500 hover:text-slate-900 dark:hover:text-white transition-colors" title="Back to Module 7 Hub">
+          <div class="w-9 h-9 rounded-xl bg-slate-100 dark:bg-slate-800 hover:bg-slate-200 dark:hover:bg-slate-700 flex items-center justify-center text-slate-700 dark:text-slate-300 transition-colors">
+            <i data-lucide="arrow-left" class="w-4 h-4"></i>
+          </div>
+        </a>
+        <div>
+          <div class="flex items-center gap-2">
+            <span class="text-[10px] font-bold uppercase tracking-wider text-amber-700 dark:text-amber-400 bg-amber-50 dark:bg-amber-950/80 px-2 py-0.5 rounded border border-amber-200 dark:border-amber-800">
+              Module 7 &bull; Chapter 1
+            </span>
+            <span class="text-xs text-slate-400 font-medium hidden sm:inline">NISM Series X-B</span>
+          </div>
+          <h1 class="font-display font-bold text-base sm:text-lg text-slate-900 dark:text-white leading-tight">
+            Basics of Insurance & Core Doctrines
+          </h1>
+        </div>
+      </div>
+
+      <!-- Right: Weightage & Quiz CTA -->
+      <div class="flex items-center gap-3">
+        <span class="hidden sm:inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-bold bg-amber-50 dark:bg-amber-950/70 text-amber-800 dark:text-amber-300 border border-amber-200 dark:border-amber-800">
+          <i data-lucide="award" class="w-3.5 h-3.5 text-amber-600"></i>
+          Weightage: ~7 Marks
+        </span>
+        <button onclick="window.openSpotlightModal()" class="p-2 rounded-full border border-slate-200 dark:border-slate-700 text-slate-600 dark:text-slate-300 bg-white dark:bg-slate-800" title="Search (⌘K)">
+          <i data-lucide="search" class="w-4 h-4 text-amber-600"></i>
+        </button>
+        <button id="nism-header-theme-btn" onclick="window.toggleDarkMode()" class="p-2 rounded-full border border-slate-200 dark:border-slate-700 text-slate-600 dark:text-slate-300 bg-white dark:bg-slate-800" title="Toggle Theme (⌘D)">
+          <i data-lucide="moon" class="w-4 h-4"></i>
+        </button>
+        <a href="#interactive-quiz" class="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-xl text-xs font-bold bg-amber-600 hover:bg-amber-700 text-white shadow-xs transition-all">
+          <i data-lucide="help-circle" class="w-3.5 h-3.5"></i>
+          <span class="hidden sm:inline">Chapter Quiz</span>
+          <span class="sm:hidden">Quiz</span>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Content Layout (Sidebar + Notes) -->
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 grid grid-cols-1 lg:grid-cols-12 gap-8 flex-grow">
+    
+    <!-- Table of Contents Sidebar (Desktop) -->
+    <aside class="hidden lg:block lg:col-span-3">
+      <div class="sticky top-24 space-y-4">
+        
+        <!-- In-Page Section Jump -->
+        <div class="rounded-2xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 shadow-xs p-4">
+          <h3 class="font-display font-bold text-xs uppercase tracking-wider text-slate-400 mb-3 flex items-center gap-1.5">
+            <i data-lucide="list" class="w-3.5 h-3.5 text-amber-600"></i>
+            <span>Chapter Sections</span>
+          </h3>
+          <nav class="space-y-1 text-xs">
+            <a href="#sec-1" class="block px-2.5 py-1.5 rounded-lg text-slate-600 dark:text-slate-300 hover:bg-amber-50 dark:hover:bg-amber-950/50 hover:text-amber-700 transition-colors">
+              1.1 Concept of Risk & Peril vs Hazard
+            </a>
+            <a href="#sec-2" class="block px-2.5 py-1.5 rounded-lg text-slate-600 dark:text-slate-300 hover:bg-amber-50 dark:hover:bg-amber-950/50 hover:text-amber-700 transition-colors">
+              1.2 Risk Management Strategies
+            </a>
+            <a href="#sec-3" class="block px-2.5 py-1.5 rounded-lg font-bold text-amber-800 dark:text-amber-300 bg-amber-50 dark:bg-amber-950/80 border border-amber-200 dark:border-amber-800">
+              1.3 The 7 Core Principles ⭐
+            </a>
+            <a href="#sec-4" class="block px-2.5 py-1.5 rounded-lg text-slate-600 dark:text-slate-300 hover:bg-amber-50 dark:hover:bg-amber-950/50 hover:text-amber-700 transition-colors pl-4">
+              &bull; Utmost Good Faith & Sec 45 ⭐
+            </a>
+            <a href="#sec-5" class="block px-2.5 py-1.5 rounded-lg text-slate-600 dark:text-slate-300 hover:bg-amber-50 dark:hover:bg-amber-950/50 hover:text-amber-700 transition-colors pl-4">
+              &bull; Insurable Interest Timing ⭐
+            </a>
+            <a href="#sec-6" class="block px-2.5 py-1.5 rounded-lg text-slate-600 dark:text-slate-300 hover:bg-amber-50 dark:hover:bg-amber-950/50 hover:text-amber-700 transition-colors pl-4">
+              &bull; Indemnity, Subrogation & Contribution
+            </a>
+            <a href="#sec-7" class="block px-2.5 py-1.5 rounded-lg text-slate-600 dark:text-slate-300 hover:bg-amber-50 dark:hover:bg-amber-950/50 hover:text-amber-700 transition-colors pl-4">
+              &bull; Proximate Cause & Mitigation
+            </a>
+            <a href="#sec-8" class="block px-2.5 py-1.5 rounded-lg text-slate-600 dark:text-slate-300 hover:bg-amber-50 dark:hover:bg-amber-950/50 hover:text-amber-700 transition-colors">
+              1.4 IRDAI Framework & Ombudsman
+            </a>
+            <a href="#interactive-quiz" class="block px-2.5 py-1.5 rounded-lg text-amber-700 dark:text-amber-400 font-bold bg-amber-50 dark:bg-amber-950/60 hover:bg-amber-100 transition-colors mt-2">
+              Practice Quiz (12 MCQs)
+            </a>
+          </nav>
+        </div>
+
+        <!-- Exam Tip Pill -->
+        <div class="p-4 rounded-2xl bg-amber-500/10 border border-amber-500/20 text-xs space-y-2">
+          <div class="flex items-center gap-1.5 font-bold text-amber-800 dark:text-amber-300">
+            <i data-lucide="zap" class="w-4 h-4 text-amber-600"></i>
+            <span>Exam Focus: Question Traps</span>
+          </div>
+          <p class="text-slate-600 dark:text-slate-300 leading-relaxed">
+            In Level 2, IRDAI tests the <strong>timing of Insurable Interest</strong> (Inception vs Loss), the strict <strong>3-year bar under Section 45</strong>, and whether <strong>Life or Personal Accident</strong> policies follow Indemnity (they are <em>Benefit</em> policies, NOT indemnity!).
+          </p>
+        </div>
+
+        <!-- Next Chapter Link -->
+        <div class="p-4 rounded-2xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 text-xs">
+          <span class="text-slate-400 block mb-1">Up Next in Module 7:</span>
+          <a href="module7-ch2.html" class="font-bold text-slate-900 dark:text-white hover:text-amber-600 dark:hover:text-amber-400 flex items-center justify-between group">
+            <span>Ch 2: Life Products & MWP Act ⭐</span>
+            <i data-lucide="chevron-right" class="w-4 h-4 group-hover:translate-x-1 transition-transform"></i>
+          </a>
+        </div>
+
+      </div>
+    </aside>
+
+    <!-- Main Study Notes -->
+    <div class="lg:col-span-9 space-y-10">
+
+      <!-- Section 1.1 -->
+      <section id="sec-1" class="bg-white dark:bg-slate-900 rounded-3xl p-6 sm:p-8 border border-slate-200 dark:border-slate-800 shadow-xs space-y-5">
+        <div class="flex items-center justify-between pb-3 border-b border-slate-100 dark:border-slate-800">
+          <span class="text-xs font-bold text-amber-600 dark:text-amber-400 uppercase tracking-wider flex items-center gap-1.5">
+            <span class="w-2 h-2 rounded-full bg-amber-500"></span> Section 1.1 &bull; Conceptual Foundation
+          </span>
+          <span class="text-xs px-2.5 py-0.5 rounded-full bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-400 font-semibold">
+            Risk & Loss Mechanisms
+          </span>
+        </div>
+
+        <h2 class="font-display text-2xl font-bold text-slate-900 dark:text-white">
+          Concept of Risk, Perils & Hazards
+        </h2>
+
+        <p class="text-sm text-slate-600 dark:text-slate-300 leading-relaxed">
+          In personal financial planning, <strong>Risk</strong> is defined as the condition in which there is a possibility of an adverse deviation from a desired or expected outcome. For insurance contracts, we distinguish strictly between <em>Pure Risk</em> and <em>Speculative Risk</em>:
+        </p>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 text-xs sm:text-sm">
+          <div class="p-4 rounded-2xl bg-slate-50 dark:bg-slate-800/60 border border-slate-200 dark:border-slate-700/80">
+            <h4 class="font-bold text-slate-900 dark:text-white flex items-center gap-2 mb-1.5">
+              <i data-lucide="shield" class="w-4 h-4 text-amber-600"></i> Pure Risk (Insurable)
+            </h4>
+            <p class="text-slate-600 dark:text-slate-300 leading-relaxed">
+              Involves only the possibility of <strong>loss or no loss</strong> (e.g., premature death, disability, factory fire, car collision, illness). There is no opportunity for financial gain. <em>Only pure risks are insurable.</em>
+            </p>
+          </div>
+          <div class="p-4 rounded-2xl bg-slate-50 dark:bg-slate-800/60 border border-slate-200 dark:border-slate-700/80">
+            <h4 class="font-bold text-slate-900 dark:text-white flex items-center gap-2 mb-1.5">
+              <i data-lucide="trending-up" class="w-4 h-4 text-slate-400"></i> Speculative Risk (Uninsurable)
+            </h4>
+            <p class="text-slate-600 dark:text-slate-300 leading-relaxed">
+              Involves the possibility of <strong>loss, breakeven, or gain</strong> (e.g., purchasing equity shares, starting a new business venture, gambling). Commercial insurers <em>never</em> insure speculative financial risks.
+            </p>
+          </div>
+        </div>
+
+        <!-- High-Yield Peril vs Hazard Comparison Table -->
+        <div class="mt-4">
+          <h3 class="font-display text-base font-bold text-slate-900 dark:text-white mb-2 flex items-center gap-2">
+            <span>Peril vs. Hazard: The Fundamental Distinction</span>
+            <span class="text-[10px] font-bold uppercase tracking-wider px-2 py-0.5 rounded bg-amber-50 dark:bg-amber-950/80 text-amber-700 border border-amber-200 dark:border-amber-800">
+              Exam Favorite
+            </span>
+          </h3>
+          <p class="text-xs text-slate-500 dark:text-slate-400 mb-3">
+            A <strong>Peril</strong> is the <em>direct prime cause of loss</em>. A <strong>Hazard</strong> is a <em>condition or situation that increases the probability or severity</em> of that peril occurring.
+          </p>
+
+          <div class="overflow-x-auto rounded-xl border border-slate-200 dark:border-slate-700">
+            <table class="w-full text-left text-xs">
+              <thead class="bg-slate-100 dark:bg-slate-800/80 text-slate-700 dark:text-slate-200 border-b border-slate-200 dark:border-slate-700">
+                <tr>
+                  <th class="p-3 font-bold">Category</th>
+                  <th class="p-3 font-bold">Definition</th>
+                  <th class="p-3 font-bold">Practical Real-World Example</th>
+                </tr>
+              </thead>
+              <tbody class="divide-y divide-slate-100 dark:divide-slate-800 text-slate-600 dark:text-slate-300">
+                <tr class="hover:bg-slate-50 dark:hover:bg-slate-800/40">
+                  <td class="p-3 font-bold text-slate-900 dark:text-white">Peril (The Cause)</td>
+                  <td class="p-3">The specific event or contingency causing the financial loss.</td>
+                  <td class="p-3">Fire, lightning, flood, burglary, heart attack, automobile accident.</td>
+                </tr>
+                <tr class="hover:bg-slate-50 dark:hover:bg-slate-800/40">
+                  <td class="p-3 font-bold text-amber-700 dark:text-amber-400">Physical Hazard</td>
+                  <td class="p-3">Tangible, physical, structural, or environmental condition increasing loss probability.</td>
+                  <td class="p-3">Defective electrical wiring in a warehouse; storing inflammable solvents near a furnace; bald tires on a car.</td>
+                </tr>
+                <tr class="hover:bg-slate-50 dark:hover:bg-slate-800/40">
+                  <td class="p-3 font-bold text-rose-700 dark:text-rose-400">Moral Hazard</td>
+                  <td class="p-3">Dishonesty, fraudulent character, or intentional bad faith of the insured person.</td>
+                  <td class="p-3">Staging an arson fire to collect building insurance; fabricating fake hospital bills; concealing pre-existing cancer on proposal form.</td>
+                </tr>
+                <tr class="hover:bg-slate-50 dark:hover:bg-slate-800/40">
+                  <td class="p-3 font-bold text-blue-700 dark:text-blue-400">Morale Hazard</td>
+                  <td class="p-3">Carelessness, indifference, or apathy to loss <em>because</em> insurance exists ("Why bother? I have insurance").</td>
+                  <td class="p-3">Leaving front doors unlocked; driving recklessly in heavy rain; failing to service fire extinguishers.</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+      </section>
+
+      <!-- Section 1.2 -->
+      <section id="sec-2" class="bg-white dark:bg-slate-900 rounded-3xl p-6 sm:p-8 border border-slate-200 dark:border-slate-800 shadow-xs space-y-5">
+        <div class="flex items-center justify-between pb-3 border-b border-slate-100 dark:border-slate-800">
+          <span class="text-xs font-bold text-amber-600 dark:text-amber-400 uppercase tracking-wider flex items-center gap-1.5">
+            <span class="w-2 h-2 rounded-full bg-amber-500"></span> Section 1.2 &bull; Risk Management Framework
+          </span>
+          <span class="text-xs px-2.5 py-0.5 rounded-full bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-400 font-semibold">
+            Advisory Strategy
+          </span>
+        </div>
+
+        <h2 class="font-display text-2xl font-bold text-slate-900 dark:text-white">
+          Techniques of Handling Pure Risk
+        </h2>
+
+        <p class="text-sm text-slate-600 dark:text-slate-300 leading-relaxed">
+          A certified financial adviser must never treat insurance as the sole risk tool. The classical risk handling matrix pairs <strong>Frequency (Probability)</strong> and <strong>Severity (Magnitude of Loss)</strong> to select the optimal technique:
+        </p>
+
+        <!-- 4-Box Risk Matrix -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 text-xs sm:text-sm">
+          <div class="p-4 rounded-2xl bg-amber-500/10 border border-amber-500/20">
+            <div class="flex items-center justify-between mb-1">
+              <span class="font-bold text-amber-900 dark:text-amber-300">High Severity + Low Frequency</span>
+              <span class="text-[10px] uppercase font-extrabold px-2 py-0.5 rounded bg-amber-600 text-white">Ideal for Insurance</span>
+            </div>
+            <h4 class="font-display font-bold text-base text-slate-900 dark:text-white">Risk Transfer (Insurance)</h4>
+            <p class="text-slate-600 dark:text-slate-300 mt-1 leading-relaxed">
+              Catastrophic events that happen rarely but would bankrupt a family (e.g., premature death of main earner, major heart bypass surgery, complete house fire). Premium is economically affordable; payout is massive.
+            </p>
+          </div>
+
+          <div class="p-4 rounded-2xl bg-rose-500/10 border border-rose-500/20">
+            <div class="flex items-center justify-between mb-1">
+              <span class="font-bold text-rose-900 dark:text-rose-300">High Severity + High Frequency</span>
+              <span class="text-[10px] uppercase font-extrabold px-2 py-0.5 rounded bg-rose-600 text-white">Avoidance</span>
+            </div>
+            <h4 class="font-display font-bold text-base text-slate-900 dark:text-white">Risk Avoidance</h4>
+            <p class="text-slate-600 dark:text-slate-300 mt-1 leading-relaxed">
+              Refusing to engage in dangerous activities that guarantee severe loss (e.g., skydiving without training, manufacturing fireworks in a residential apartment). Premium would be prohibitive or coverage refused.
+            </p>
+          </div>
+
+          <div class="p-4 rounded-2xl bg-blue-500/10 border border-blue-500/20">
+            <div class="flex items-center justify-between mb-1">
+              <span class="font-bold text-blue-900 dark:text-blue-300">Low Severity + High Frequency</span>
+              <span class="text-[10px] uppercase font-extrabold px-2 py-0.5 rounded bg-blue-600 text-white">Reduction & Control</span>
+            </div>
+            <h4 class="font-display font-bold text-base text-slate-900 dark:text-white">Risk Reduction / Mitigation</h4>
+            <p class="text-slate-600 dark:text-slate-300 mt-1 leading-relaxed">
+              Installing smoke detectors, annual medical health check-ups, burglar alarms, and ABS brakes. Reduces the chance or impact of routine losses.
+            </p>
+          </div>
+
+          <div class="p-4 rounded-2xl bg-emerald-500/10 border border-emerald-500/20">
+            <div class="flex items-center justify-between mb-1">
+              <span class="font-bold text-emerald-900 dark:text-emerald-300">Low Severity + Low Frequency</span>
+              <span class="text-[10px] uppercase font-extrabold px-2 py-0.5 rounded bg-emerald-600 text-white">Retention</span>
+            </div>
+            <h4 class="font-display font-bold text-base text-slate-900 dark:text-white">Risk Retention (Self-Insurance)</h4>
+            <p class="text-slate-600 dark:text-slate-300 mt-1 leading-relaxed">
+              Absorbing small losses out of pocket or via an emergency contingency fund (e.g., minor mobile phone scratches, ₹2,000 car bumper dent, outpatient dental scaling). Buying insurance for this is wasteful.
+            </p>
+          </div>
+        </div>
+
+        <div class="p-4 rounded-2xl bg-slate-50 dark:bg-slate-800/50 border border-slate-200 dark:border-slate-700 text-xs sm:text-sm">
+          <p class="font-bold text-slate-900 dark:text-white flex items-center gap-1.5 mb-1">
+            <i data-lucide="users" class="w-4 h-4 text-amber-600"></i> The Mathematical Engine: Pooling & Law of Large Numbers
+          </p>
+          <p class="text-slate-600 dark:text-slate-300 leading-relaxed">
+            Insurance works on <strong>Risk Pooling</strong>. Many individuals facing similar risks pay relatively modest contributions (premiums) into a common fund. Losses suffered by the unfortunate few are compensated from this collective pool. The <strong>Law of Large Numbers</strong> dictates that as the number of independent exposure units increases, the actual loss experience converges toward the expected theoretical loss, enabling insurers to accurately price risk.
+          </p>
+        </div>
+
+      </section>
+
+      <!-- Section 1.3 -->
+      <section id="sec-3" class="bg-white dark:bg-slate-900 rounded-3xl p-6 sm:p-8 border border-slate-200 dark:border-slate-800 shadow-xs space-y-6">
+        
+        <div class="flex items-center justify-between pb-3 border-b border-slate-100 dark:border-slate-800">
+          <span class="text-xs font-bold text-amber-600 dark:text-amber-400 uppercase tracking-wider flex items-center gap-1.5">
+            <span class="w-2 h-2 rounded-full bg-amber-500"></span> Section 1.3 &bull; Core Legal Doctrines
+          </span>
+          <span class="px-2.5 py-0.5 rounded-full text-[11px] font-extrabold uppercase bg-amber-500 text-slate-950 flex items-center gap-1 shadow-2xs">
+            <i data-lucide="star" class="w-3 h-3 fill-slate-950"></i> High Yield
+          </span>
+        </div>
+
+        <div>
+          <h2 class="font-display text-2xl sm:text-3xl font-bold text-slate-900 dark:text-white">
+            The Fundamental Principles of Insurance Contracts
+          </h2>
+          <p class="text-xs sm:text-sm text-slate-500 dark:text-slate-400 mt-1">
+            Unlike standard commercial contracts governed simply by the Indian Contract Act 1872, insurance policies are contracts of special legal nature subject to 6 fundamental legal doctrines.
+          </p>
+        </div>
+
+        <!-- Sub-section: Utmost Good Faith -->
+        <div id="sec-4" class="p-5 rounded-2xl bg-amber-50/50 dark:bg-amber-950/30 border border-amber-200 dark:border-amber-800/70 space-y-3">
+          <div class="flex items-center justify-between">
+            <h3 class="font-display font-bold text-lg text-slate-900 dark:text-white flex items-center gap-2">
+              <span class="w-6 h-6 rounded-full bg-amber-600 text-white text-xs flex items-center justify-center font-mono">1</span>
+              Principle of Utmost Good Faith (Uberrima Fides) ⭐
+            </h3>
+            <span class="text-[10px] font-extrabold uppercase px-2 py-0.5 rounded bg-amber-600 text-white">Critical MCQ Topic</span>
+          </div>
+
+          <p class="text-xs sm:text-sm text-slate-700 dark:text-slate-300 leading-relaxed">
+            Standard commercial contracts apply <em>Caveat Emptor</em> (Let the buyer beware). Insurance contracts, however, require <strong>Uberrima Fides</strong> (Utmost Good Faith). Both the proposer and the insurer have a mutual affirmative legal duty to disclose <strong>all material facts</strong> truthfully, fully, and accurately.
+          </p>
+
+          <div class="p-3.5 rounded-xl bg-white dark:bg-slate-900 border border-amber-200/80 dark:border-amber-800/80 text-xs space-y-2">
+            <p class="font-bold text-slate-900 dark:text-white">
+              What constitutes a "Material Fact"?
+            </p>
+            <p class="text-slate-600 dark:text-slate-300">
+              Any fact that would influence the judgment of a prudent underwriter in deciding whether to accept the risk and, if so, at what premium rate and under what terms (e.g., tobacco/smoking habits, hazardous hobbies like racing, family history of hereditary disease, existing policies with other insurers).
+            </p>
+          </div>
+
+          <!-- Section 45 Star Callout -->
+          <div class="p-4 rounded-xl bg-amber-100/70 dark:bg-amber-900/40 border-2 border-amber-400 dark:border-amber-600 text-xs sm:text-sm space-y-2">
+            <div class="flex items-center gap-2 font-bold text-amber-900 dark:text-amber-200">
+              <i data-lucide="star" class="w-4 h-4 fill-amber-500 text-amber-500"></i>
+              <span>Section 45 of Insurance Act 1938 (Amended 3-Year Incontestability Rule)</span>
+            </div>
+            <p class="text-slate-800 dark:text-slate-200 leading-relaxed">
+              Prior to amendment, insurers could repudiate claims decades later alleging minor non-disclosure. Under the amended Section 45:
+            </p>
+            <ul class="list-disc pl-5 space-y-1 text-slate-700 dark:text-slate-300">
+              <li><strong>Within 3 Years:</strong> The insurer can question or repudiate a policy on grounds of fraud, misrepresentation, or suppression of a material fact.</li>
+              <li><strong>Beyond 3 Years (Absolute Incontestability):</strong> No life insurance policy can be called in question on <em>ANY GROUND WHATSOEVER</em>, including fraud or non-disclosure, after the expiry of <strong>3 years</strong> from the date of issuance, date of commencement of risk, date of revival, or date of rider attachment, whichever is later!</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Sub-section: Insurable Interest -->
+        <div id="sec-5" class="p-5 rounded-2xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 space-y-3">
+          <div class="flex items-center justify-between">
+            <h3 class="font-display font-bold text-lg text-slate-900 dark:text-white flex items-center gap-2">
+              <span class="w-6 h-6 rounded-full bg-slate-800 dark:bg-slate-700 text-white text-xs flex items-center justify-center font-mono">2</span>
+              Principle of Insurable Interest ⭐
+            </h3>
+            <span class="text-[10px] font-bold uppercase px-2 py-0.5 rounded bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-400">Legal Prerequisite</span>
+          </div>
+
+          <p class="text-xs sm:text-sm text-slate-600 dark:text-slate-300 leading-relaxed">
+            Insurable interest means the policyholder must have a recognized <strong>financial or pecuniary interest</strong> in the survival or preservation of the subject matter, such that its continued existence benefits them, and its destruction, loss, or death causes them direct financial loss. Without insurable interest, an insurance policy is void as an illegal gambling/wagering contract under Section 30 of the Indian Contract Act.
+          </p>
+
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 text-xs">
+            <div class="p-3 bg-slate-50 dark:bg-slate-800 rounded-xl border border-slate-200 dark:border-slate-700">
+              <strong class="text-slate-900 dark:text-white block mb-1">Presumed / Unlimited Insurable Interest:</strong>
+              • An individual on their own life (unlimited).<br>
+              • Husband on wife's life & wife on husband's life (unlimited pecuniary assumption).
+            </div>
+            <div class="p-3 bg-slate-50 dark:bg-slate-800 rounded-xl border border-slate-200 dark:border-slate-700">
+              <strong class="text-slate-900 dark:text-white block mb-1">Commercial / Limited Insurable Interest:</strong>
+              • Creditor on debtor's life (strictly up to loan debt outstanding).<br>
+              • Employer on Keyman employee's life.<br>
+              • Business partner on co-partner's capital value.
+            </div>
+          </div>
+
+          <!-- Strict Timing Table -->
+          <div class="mt-3">
+            <h4 class="font-bold text-xs uppercase tracking-wider text-amber-700 dark:text-amber-400 mb-2">
+              Timing When Insurable Interest Must Exist (Heavily Tested Trap ⭐)
+            </h4>
+            <div class="overflow-x-auto rounded-xl border border-slate-200 dark:border-slate-700">
+              <table class="w-full text-left text-xs">
+                <thead class="bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-200">
+                  <tr>
+                    <th class="p-2.5 font-bold">Insurance Type</th>
+                    <th class="p-2.5 font-bold">Required at Inception?</th>
+                    <th class="p-2.5 font-bold">Required at Time of Claim / Loss?</th>
+                    <th class="p-2.5 font-bold">Practical Implication</th>
+                  </tr>
+                </thead>
+                <tbody class="divide-y divide-slate-100 dark:divide-slate-800 text-slate-600 dark:text-slate-300">
+                  <tr>
+                    <td class="p-2.5 font-bold text-slate-900 dark:text-white">Life Insurance</td>
+                    <td class="p-2.5 text-emerald-600 font-bold">YES</td>
+                    <td class="p-2.5 text-rose-500 font-semibold">NO</td>
+                    <td class="p-2.5">If a couple divorces, a life policy taken during marriage remains 100% valid and payable upon death.</td>
+                  </tr>
+                  <tr>
+                    <td class="p-2.5 font-bold text-slate-900 dark:text-white">Marine Cargo Insurance</td>
+                    <td class="p-2.5 text-rose-500 font-semibold">NO</td>
+                    <td class="p-2.5 text-emerald-600 font-bold">YES</td>
+                    <td class="p-2.5">Cargo is bought and sold while floating in transit; buyer must have interest at the time the ship sinks/loss occurs.</td>
+                  </tr>
+                  <tr>
+                    <td class="p-2.5 font-bold text-slate-900 dark:text-white">Fire & Property Insurance</td>
+                    <td class="p-2.5 text-emerald-600 font-bold">YES</td>
+                    <td class="p-2.5 text-emerald-600 font-bold">YES</td>
+                    <td class="p-2.5">If you sell your factory or house, your fire policy immediately lapses because you no longer possess interest at loss!</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+
+        <!-- Sub-section: Indemnity & Subrogation -->
+        <div id="sec-6" class="p-5 rounded-2xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 space-y-4">
+          <div class="flex items-center justify-between">
+            <h3 class="font-display font-bold text-lg text-slate-900 dark:text-white flex items-center gap-2">
+              <span class="w-6 h-6 rounded-full bg-slate-800 dark:bg-slate-700 text-white text-xs flex items-center justify-center font-mono">3-5</span>
+              Indemnity, Subrogation & Contribution
+            </h3>
+            <span class="text-[10px] font-bold uppercase px-2 py-0.5 rounded bg-blue-50 dark:bg-blue-950/80 text-blue-700">Financial Doctrines</span>
+          </div>
+
+          <!-- Principle 3: Indemnity -->
+          <div class="space-y-2 text-xs sm:text-sm">
+            <h4 class="font-bold text-slate-900 dark:text-white flex items-center gap-1.5">
+              <span>Principle of Indemnity (Exact Restoration, No Profit)</span>
+            </h4>
+            <p class="text-slate-600 dark:text-slate-300 leading-relaxed">
+              The insurer agrees to place the insured, as nearly as possible, in the <strong>exact same financial position</strong> that they occupied immediately prior to the loss. The insured can <strong>never make a profit</strong> from a claim.
+            </p>
+            <div class="p-3 bg-amber-50 dark:bg-amber-950/40 rounded-xl border border-amber-200 dark:border-amber-800 text-xs">
+              <strong class="text-amber-800 dark:text-amber-300">Exam Distinction: Indemnity vs Benefit Contracts ⭐</strong><br>
+              • <strong>Indemnity Contracts:</strong> Property, Fire, Marine, Motor Own-Damage, Health Mediclaim (hospital reimbursement).<br>
+              • <strong>Benefit Contracts (Exempt from Indemnity):</strong> <em>Life Insurance</em> (human life cannot be financially valued) and <em>Personal Accident / Critical Illness</em> (pays predetermined fixed lump sum upon contingency). One can hold multiple life or critical illness policies and claim 100% on all of them!
+            </div>
+          </div>
+
+          <!-- Principle 4: Subrogation -->
+          <div class="space-y-2 text-xs sm:text-sm pt-3 border-t border-slate-100 dark:border-slate-800">
+            <h4 class="font-bold text-slate-900 dark:text-white flex items-center gap-1.5">
+              <span>Principle of Subrogation (Substitution of Rights)</span>
+            </h4>
+            <p class="text-slate-600 dark:text-slate-300 leading-relaxed">
+              Once an insurer pays the full indemnity claim to the insured, the insurer <strong>steps into the shoes of the insured</strong> and acquires all legal rights to sue and recover damages from any third party responsible for causing the loss. The insured cannot claim from the insurer AND also recover from the negligent third party.
+            </p>
+          </div>
+
+          <!-- Principle 5: Contribution -->
+          <div class="space-y-2 text-xs sm:text-sm pt-3 border-t border-slate-100 dark:border-slate-800">
+            <h4 class="font-bold text-slate-900 dark:text-white flex items-center gap-1.5">
+              <span>Principle of Contribution (Double Insurance Rateable Sharing)</span>
+            </h4>
+            <p class="text-slate-600 dark:text-slate-300 leading-relaxed">
+              If an insured takes multiple property or non-life indemnity policies covering the exact same subject matter, each insurer shares the loss in proportion to the sum insured.
+            </p>
+            <div class="p-3 bg-slate-50 dark:bg-slate-800 rounded-xl border border-slate-200 dark:border-slate-700 font-mono text-xs">
+              <span class="text-amber-700 dark:text-amber-400 font-bold">Contribution Formula:</span><br>
+              Claim Payable by Insurer A = Total Loss &times; [Sum Insured with A / (Sum Insured with A + Sum Insured with B)]
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Sub-section: Proximate Cause & Mitigation -->
+        <div id="sec-7" class="p-5 rounded-2xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 space-y-3">
+          <div class="flex items-center justify-between">
+            <h3 class="font-display font-bold text-lg text-slate-900 dark:text-white flex items-center gap-2">
+              <span class="w-6 h-6 rounded-full bg-slate-800 dark:bg-slate-700 text-white text-xs flex items-center justify-center font-mono">6-7</span>
+              Proximate Cause (Causa Proxima) & Duty to Mitigate Loss
+            </h3>
+            <span class="text-[10px] font-bold uppercase px-2 py-0.5 rounded bg-purple-50 dark:bg-purple-950/80 text-purple-700">Causation Rule</span>
+          </div>
+
+          <p class="text-xs sm:text-sm text-slate-600 dark:text-slate-300 leading-relaxed">
+            <strong>Causa Proxima non remota spectatur:</strong> The proximate cause, not the remote cause, must be looked at. Proximate cause is the <em>active, efficient cause that sets in motion a train of events</em> which brings about a result, without the intervention of any force started and working actively from a new and independent source.
+          </p>
+
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 text-xs">
+            <div class="p-3 bg-slate-50 dark:bg-slate-800 rounded-xl border border-slate-200 dark:border-slate-700">
+              <strong class="text-slate-900 dark:text-white block mb-1">Classic Proximate Cause Example:</strong>
+              A building is hit by an earthquake (an excluded peril under basic fire policy). The earthquake snaps electrical lines, triggering a massive fire (covered peril). Since the uninterrupted dominant cause was the earthquake, the insurer is NOT liable unless earthquake addon was purchased.
+            </div>
+            <div class="p-3 bg-slate-50 dark:bg-slate-800 rounded-xl border border-slate-200 dark:border-slate-700">
+              <strong class="text-slate-900 dark:text-white block mb-1">Duty of Mitigation:</strong>
+              The policyholder is under an express duty to take all reasonable steps to prevent or minimize loss during an emergency, acting as if they were uninsured (e.g., calling the fire brigade, salvaging undamaged goods).
+            </div>
+          </div>
+        </div>
+
+      </section>
+
+      <!-- Section 1.4 -->
+      <section id="sec-8" class="bg-white dark:bg-slate-900 rounded-3xl p-6 sm:p-8 border border-slate-200 dark:border-slate-800 shadow-xs space-y-5">
+        <div class="flex items-center justify-between pb-3 border-b border-slate-100 dark:border-slate-800">
+          <span class="text-xs font-bold text-amber-600 dark:text-amber-400 uppercase tracking-wider flex items-center gap-1.5">
+            <span class="w-2 h-2 rounded-full bg-amber-500"></span> Section 1.4 &bull; Regulatory Governance
+          </span>
+          <span class="text-xs px-2.5 py-0.5 rounded-full bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-400 font-semibold">
+            IRDAI & Redressal
+          </span>
+        </div>
+
+        <h2 class="font-display text-2xl font-bold text-slate-900 dark:text-white">
+          IRDAI Regulatory Framework & Consumer Protection
+        </h2>
+
+        <p class="text-sm text-slate-600 dark:text-slate-300 leading-relaxed">
+          The <strong>Insurance Regulatory and Development Authority of India (IRDAI) Act 1999</strong> governs insurers, intermediaries, and policyholder protection under the <em>IRDAI (Protection of Policyholders' Interests and Allied Matters of Insurers) Regulations</em>:
+        </p>
+
+        <div class="grid grid-cols-1 sm:grid-cols-3 gap-3 text-xs sm:text-sm">
+          <div class="p-4 bg-slate-50 dark:bg-slate-800/60 rounded-2xl border border-slate-200 dark:border-slate-700/80">
+            <span class="font-bold text-amber-700 dark:text-amber-400 block mb-1">1. Free-Look Period</span>
+            <strong>15 Days</strong> from receipt of policy document for physical delivery; extended to <strong>30 Days</strong> for electronic policies or distance marketing sales. Full refund minus proportionate risk premium, medical charges, and stamp duty.
+          </div>
+          <div class="p-4 bg-slate-50 dark:bg-slate-800/60 rounded-2xl border border-slate-200 dark:border-slate-700/80">
+            <span class="font-bold text-amber-700 dark:text-amber-400 block mb-1">2. Claims Turnaround Times</span>
+            Insurer must settle claim or reject within <strong>30 days</strong> of receiving all final documents. If investigation is needed, it must be initiated in 30 days and completed within <strong>90 days</strong>.
+          </div>
+          <div class="p-4 bg-slate-50 dark:bg-slate-800/60 rounded-2xl border border-slate-200 dark:border-slate-700/80">
+            <span class="font-bold text-amber-700 dark:text-amber-400 block mb-1">3. Bima Bharosa Portal</span>
+            IRDAI’s integrated online grievance management system where unresolved complaints with insurer’s Grievance Redressal Officer (GRO) are escalated after 15 days.
+          </div>
+        </div>
+
+        <!-- Insurance Ombudsman Star Card -->
+        <div class="p-5 rounded-2xl bg-amber-50 dark:bg-amber-950/40 border border-amber-300 dark:border-amber-700 text-xs sm:text-sm space-y-3">
+          <div class="flex items-center justify-between">
+            <h4 class="font-bold text-amber-900 dark:text-amber-200 flex items-center gap-2 text-sm sm:text-base">
+              <i data-lucide="scale" class="w-4 h-4 text-amber-600"></i>
+              Insurance Ombudsman Rules (Heavily Tested ⭐)
+            </h4>
+            <span class="text-[10px] font-extrabold uppercase px-2 py-0.5 rounded bg-amber-600 text-white">Rule Parameters</span>
+          </div>
+
+          <p class="text-slate-700 dark:text-slate-300 leading-relaxed">
+            The Ombudsman system provides an expeditious, cost-free dispute resolution forum for retail policyholders:
+          </p>
+
+          <ul class="list-disc pl-5 space-y-1.5 text-slate-700 dark:text-slate-300">
+            <li><strong>Prerequisite:</strong> Complainant must first lodge a written complaint with the insurer’s GRO. They can approach Ombudsman only if rejected, not satisfied, or no response received within <strong>30 days</strong>.</li>
+            <li><strong>Time Limit to Approach:</strong> Complaint must be filed within <strong>1 year</strong> of receiving the insurer's rejection letter.</li>
+            <li><strong>Financial Jurisdiction:</strong> Ombudsman can award compensation up to <strong>₹50 Lakhs</strong> (inclusive of interest and ex-gratia).</li>
+            <li><strong>Legal Nature of Award:</strong> The Ombudsman’s award is <strong>strictly binding on the insurance company</strong> within 30 days. However, it is <strong>NOT binding on the consumer</strong>; if the policyholder is unhappy with the award, they are free to approach consumer dispute commissions or civil courts!</li>
+          </ul>
+        </div>
+
+      </section>
+
+      <!-- Chapter Completion Bar & Interactive 12-Question Quiz -->
+      <section id="interactive-quiz" class="rounded-3xl p-6 sm:p-8 bg-slate-900 text-white shadow-xl space-y-8 border border-slate-800">
+        
+        <!-- Header -->
+        <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 pb-6 border-b border-white/10">
+          <div>
+            <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-semibold bg-amber-500/20 text-amber-300 border border-amber-400/30 mb-2">
+              <i data-lucide="award" class="w-3.5 h-3.5"></i>
+              <span>Exam Benchmark: 60% Required to Pass</span>
+            </div>
+            <h3 class="font-display text-xl sm:text-2xl font-bold text-white">
+              Chapter 1 Interactive Mastery Quiz
+            </h3>
+            <p class="text-xs text-slate-400 mt-1">
+              12 High-Yield Multiple Choice Questions testing Perils, Insurable Interest Timing, Section 45, and Indemnity.
+            </p>
+          </div>
+          <div class="flex items-center gap-2 self-start sm:self-auto">
+            <span class="text-xs font-medium text-slate-400">Answered:</span>
+            <span id="answered-count" class="font-mono text-sm font-bold text-amber-400 bg-white/10 px-2 py-0.5 rounded">0</span>
+            <span class="text-xs text-slate-400 font-mono">/ 12</span>
+          </div>
+        </div>
+
+        <!-- Quiz Container -->
+        <div id="questions-container" class="space-y-6"></div>
+
+        <!-- Action Buttons -->
+        <div class="flex flex-col sm:flex-row items-center justify-between gap-4 pt-6 border-t border-white/10">
+          <button id="submit-quiz-btn" onclick="submitQuiz()" class="w-full sm:w-auto px-6 py-3 rounded-xl font-bold text-xs sm:text-sm text-slate-950 bg-amber-500 hover:bg-amber-400 transition-colors shadow-sm flex items-center justify-center gap-2">
+            <i data-lucide="check-circle" class="w-4 h-4"></i>
+            <span>Submit Quiz & Validate Answers</span>
+          </button>
+          <button id="reset-quiz-btn" onclick="resetQuiz()" class="hidden w-full sm:w-auto px-6 py-3 rounded-xl font-bold text-xs sm:text-sm text-white bg-slate-800 hover:bg-slate-700 transition-colors border border-white/10 flex items-center justify-center gap-2">
+            <i data-lucide="rotate-ccw" class="w-4 h-4"></i>
+            <span>Retake Quiz</span>
+          </button>
+        </div>
+
+        <!-- Quiz Results Scorecard Modal/Box -->
+        <div id="quiz-results" class="hidden rounded-2xl bg-white/5 border border-white/10 p-6 space-y-4">
+          <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-3">
+            <div>
+              <span id="result-status-badge" class="px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider bg-emerald-500 text-emerald-950">
+                Status: Passed
+              </span>
+              <h4 class="font-display text-2xl font-bold text-white mt-2">Your Chapter Performance</h4>
+            </div>
+            <div class="text-left sm:text-right">
+              <span id="score-display" class="font-mono text-3xl font-extrabold text-amber-400">0 / 12</span>
+              <span id="percentage-display" class="block text-xs text-slate-400 mt-0.5">0% (Passing criteria: 60%)</span>
+            </div>
+          </div>
+          <p id="result-summary-text" class="text-xs sm:text-sm text-slate-300 leading-relaxed border-t border-white/10 pt-3">
+            Review detailed question explanations above to cement your understanding of Section 45, timing of insurable interest, and indemnity exceptions.
+          </p>
+        </div>
+
+      </section>
+
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="bg-white dark:bg-slate-900 border-t border-slate-200 dark:border-slate-800 py-8 mt-12">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-slate-500 dark:text-slate-400">
+      <div class="flex items-center gap-2">
+        <span class="font-display font-bold text-slate-900 dark:text-white">NISM Series X-B</span>
+        <span>&bull; Module 7 &bull; Chapter 1: Basics of Insurance</span>
+      </div>
+      <div class="flex items-center gap-4 font-medium">
+        <a href="module7.html" class="hover:text-amber-600 transition-colors">Module 7 Hub</a>
+        <a href="module7-ch2.html" class="hover:text-amber-600 font-bold transition-colors">Next: Chapter 2 (Life & MWP Act) &rarr;</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Quiz Script -->
+  <script>
+    const questionsData = [
+      {
+        id: 1,
+        question: "Which of the following risks is considered an INSURABLE risk by commercial insurance companies?",
+        options: [
+          { text: "Speculative risk involving potential trading profits or losses in stock markets", key: "a" },
+          { text: "Pure risk involving only the possibility of financial loss or no loss", key: "b" },
+          { text: "Commercial venture risk of a new tech startup company failing", key: "c" },
+          { text: "Gambling losses incurred in a licensed casino", key: "d" }
+        ],
+        correct: "b",
+        explanation: "Insurers only insure 'Pure Risks' where there is solely a possibility of loss or no loss (e.g., fire, death, illness, accident). Speculative risks offering potential for financial gain are strictly uninsurable."
+      },
+      {
+        id: 2,
+        question: "Defective electrical wiring in a cotton textile warehouse that increases the probability of a fire outbreak is classified as which type of hazard?",
+        options: [
+          { text: "Moral hazard", key: "a" },
+          { text: "Physical hazard", key: "b" },
+          { text: "Morale hazard", key: "c" },
+          { text: "Legal hazard", key: "d" }
+        ],
+        correct: "b",
+        explanation: "A Physical Hazard is a tangible, physical, structural, or environmental condition that increases the probability or severity of loss (such as defective wiring, storing inflammable chemicals, or bald vehicle tires)."
+      },
+      {
+        id: 3,
+        question: "Under the classical risk handling matrix, what is the most appropriate risk management technique for losses characterized by HIGH SEVERITY and LOW FREQUENCY (such as premature death of an earner)?",
+        options: [
+          { text: "Risk Avoidance", key: "a" },
+          { text: "Risk Retention (Self-insurance)", key: "b" },
+          { text: "Risk Transfer (Insurance)", key: "c" },
+          { text: "Risk Sharing via equity partnership", key: "d" }
+        ],
+        correct: "c",
+        explanation: "Catastrophic events that happen infrequently but carry devastating financial impact (High Severity + Low Frequency) are the ideal candidates for Risk Transfer through commercial Insurance."
+      },
+      {
+        id: 4,
+        question: "Under the amended Section 45 of the Insurance Act 1938, after how many years from policy issuance or revival can a life insurance policy NOT be called in question on ANY ground whatsoever (including fraud)?",
+        options: [
+          { text: "1 Year", key: "a" },
+          { text: "2 Years", key: "b" },
+          { text: "3 Years", key: "c" },
+          { text: "5 Years", key: "d" }
+        ],
+        correct: "c",
+        explanation: "Under the amended Section 45, after the expiry of 3 years from the date of issuance, commencement of risk, revival, or rider attachment, no life insurance policy can be questioned or repudiated on any ground whatsoever, establishing complete incontestability."
+      },
+      {
+        id: 5,
+        question: "In a Marine Cargo Insurance policy, WHEN must insurable interest exist under Indian insurance law?",
+        options: [
+          { text: "Only at the inception of the policy", key: "a" },
+          { text: "Only at the time of loss / damage to the cargo", key: "b" },
+          { text: "Both at inception and at the time of loss", key: "c" },
+          { text: "At no point; marine cargo requires no insurable interest", key: "d" }
+        ],
+        correct: "b",
+        explanation: "In Marine Cargo insurance, goods are continually bought and sold while in transit across oceans. Therefore, insurable interest is legally required to exist ONLY at the time of loss, not at policy inception."
+      },
+      {
+        id: 6,
+        question: "In Fire and Property Insurance, when must insurable interest be present for a claim to be legally enforceable?",
+        options: [
+          { text: "Only at the time the policy is purchased (inception)", key: "a" },
+          { text: "Only when the fire occurs and damages the property", key: "b" },
+          { text: "Both at the time of contract inception AND at the time of loss", key: "c" },
+          { text: "Within 30 days after the claim is filed", key: "d" }
+        ],
+        correct: "c",
+        explanation: "Unlike life insurance (inception only) and marine cargo (loss only), Fire and General Property insurance requires insurable interest to exist BOTH at the time of taking the policy AND continuously at the time the loss occurs."
+      },
+      {
+        id: 7,
+        question: "Which of the following types of insurance contracts is EXEMPT from the Principle of Indemnity (i.e., is a fixed benefit contract, allowing full claims across multiple policies)?",
+        options: [
+          { text: "Mediclaim hospital reimbursement policy", key: "a" },
+          { text: "Standard Fire & Special Perils home insurance", key: "b" },
+          { text: "Life Insurance and Personal Accident policies", key: "c" },
+          { text: "Motor Own-Damage comprehensive policy", key: "d" }
+        ],
+        correct: "c",
+        explanation: "Life Insurance and Personal Accident / Critical Illness policies are Benefit Contracts, not indemnity contracts. Since human life and limb cannot be measured in exact pecuniary terms, the insurer pays the contracted sum assured without requiring proof of financial restoration."
+      },
+      {
+        id: 8,
+        question: "A factory owner insures machinery valued at ₹10 Lakhs with Insurer A for ₹6 Lakhs and with Insurer B for ₹4 Lakhs. A fire causes a partial loss of ₹3 Lakhs. Applying the Principle of Contribution, what is the claim payable by Insurer A?",
+        options: [
+          { text: "₹3,000,000", key: "a" },
+          { text: "₹1,80,000", key: "b" },
+          { text: "₹1,20,000", key: "c" },
+          { text: "₹1,50,000", key: "d" }
+        ],
+        correct: "b",
+        explanation: "Contribution Formula: Claim A = Total Loss * (Sum Insured A / Total Sum Insured) = ₹3,00,000 * (₹6,00,000 / ₹10,00,000) = ₹3,00,000 * 0.60 = ₹1,80,000. Insurer B pays the remaining ₹1,20,000."
+      },
+      {
+        id: 9,
+        question: "What does the Principle of Subrogation empower an insurer to do upon settling an indemnity claim?",
+        options: [
+          { text: "Cancel all future policies of the insured immediately without notice", key: "a" },
+          { text: "Step into the shoes of the insured to recover the loss from the liable third party", key: "b" },
+          { text: "Confiscate all assets of the policyholder", key: "c" },
+          { text: "Transfer the policy to another insurance company without policyholder consent", key: "d" }
+        ],
+        correct: "b",
+        explanation: "Subrogation gives the insurer the legal right to substitute itself in place of the insured to pursue claims or lawsuits against negligent third parties who caused the loss, ensuring the insured does not recover twice."
+      },
+      {
+        id: 10,
+        question: "A homeowner whose kitchen caught fire deliberately delayed calling the fire brigade and made no attempt to turn off the gas cylinder, hoping to collect higher compensation. Which principle was violated?",
+        options: [
+          { text: "Principle of Subrogation", key: "a" },
+          { text: "Duty of Mitigation of Loss", key: "b" },
+          { text: "Principle of Contribution", key: "c" },
+          { text: "Principle of Proximate Cause", key: "d" }
+        ],
+        correct: "b",
+        explanation: "The insured is legally bound under the Duty of Mitigation to take all reasonable care and precautions to minimize damage during a catastrophe, acting as a prudent uninsured owner."
+      },
+      {
+        id: 11,
+        question: "What is the statutory Free-Look Period allowed to a policyholder who purchases a life insurance policy through distance marketing or electronic mode?",
+        options: [
+          { text: "15 days from delivery", key: "a" },
+          { text: "30 days from policy receipt", key: "b" },
+          { text: "45 days from proposal date", key: "d" },
+          { text: "60 days from premium debit", key: "c" }
+        ],
+        correct: "b",
+        explanation: "Under IRDAI regulations, while physical offline policies have a 15-day free-look period, policies purchased through distance marketing or electronic channels have an extended 30-day free-look cancellation window."
+      },
+      {
+        id: 12,
+        question: "What is the maximum pecuniary jurisdiction for an award made by the Insurance Ombudsman, and what is its legal enforceability?",
+        options: [
+          { text: "Up to ₹30 Lakhs; award is non-binding on both parties", key: "a" },
+          { text: "Up to ₹50 Lakhs; award is binding on the insurer, but not binding on the consumer", key: "b" },
+          { text: "Up to ₹1 Crore; award is final and binding on both insurer and consumer", key: "c" },
+          { text: "Up to ₹20 Lakhs; award must be ratified by a Civil District Judge", key: "d" }
+        ],
+        correct: "b",
+        explanation: "The Insurance Ombudsman has a pecuniary jurisdiction of up to ₹50 Lakhs. The Ombudsman's award is strictly binding on the insurance company (must be complied with within 30 days), but is NOT binding on the consumer, who may still approach consumer courts if dissatisfied."
+      }
+    ];
+
+    let userAnswers = {};
+
+    function renderQuiz() {
+      const container = document.getElementById("questions-container");
+      container.innerHTML = "";
+
+      questionsData.forEach((q, index) => {
+        const qDiv = document.createElement("div");
+        qDiv.className = "p-5 rounded-2xl bg-white/5 border border-white/10 space-y-4 transition-all";
+        qDiv.id = `q-box-${q.id}`;
+
+        let optionsHtml = "";
+        q.options.forEach(opt => {
+          optionsHtml += `
+            <label class="flex items-center gap-3 p-3 rounded-xl bg-white/5 hover:bg-white/10 border border-white/5 cursor-pointer text-xs sm:text-sm transition-all" onclick="selectOption(${q.id}, '${opt.key}')" id="label-${q.id}-${opt.key}">
+              <input type="radio" name="question-${q.id}" value="${opt.key}" class="w-4 h-4 text-amber-500 focus:ring-0 focus:ring-offset-0 bg-transparent border-slate-500">
+              <span class="font-bold text-amber-400 w-5 uppercase font-mono">${opt.key}.</span>
+              <span class="text-slate-200">${opt.text}</span>
+            </label>
+          `;
+        });
+
+        qDiv.innerHTML = `
+          <div class="flex items-start justify-between gap-2">
+            <span class="text-xs font-bold text-amber-400 uppercase tracking-wider">Question ${index + 1} of ${questionsData.length}</span>
+            <span id="badge-${q.id}" class="text-xs px-2 py-0.5 rounded-full bg-white/5 text-slate-400 font-medium">Unanswered</span>
+          </div>
+          <h4 class="font-display font-semibold text-sm sm:text-base text-white">${q.question}</h4>
+          <div class="space-y-2 mt-3">
+            ${optionsHtml}
+          </div>
+          <div id="explanation-${q.id}" class="hidden p-4 rounded-xl text-xs sm:text-sm mt-3 space-y-1"></div>
+        `;
+        container.appendChild(qDiv);
+      });
+      lucide.createIcons();
+    }
+
+    function selectOption(qId, key) {
+      userAnswers[qId] = key;
+      const count = Object.keys(userAnswers).length;
+      document.getElementById("answered-count").innerText = count;
+      
+      const badge = document.getElementById(`badge-${qId}`);
+      if (badge) {
+        badge.innerText = "Answered";
+        badge.className = "text-xs px-2 py-0.5 rounded-full bg-amber-500/20 text-amber-300 font-medium";
+      }
+
+      const q = questionsData.find(item => item.id === qId);
+      q.options.forEach(opt => {
+        const lbl = document.getElementById(`label-${qId}-${opt.key}`);
+        if (opt.key === key) {
+          lbl.className = "flex items-center gap-3 p-3 rounded-xl bg-amber-500/30 border border-amber-400/50 cursor-pointer text-xs sm:text-sm transition-all";
+        } else {
+          lbl.className = "flex items-center gap-3 p-3 rounded-xl bg-white/5 hover:bg-white/10 border border-white/5 cursor-pointer text-xs sm:text-sm transition-all";
+        }
+      });
+    }
+
+    function submitQuiz() {
+      let score = 0;
+      questionsData.forEach(q => {
+        const selected = userAnswers[q.id];
+        const isCorrect = selected === q.correct;
+        if (isCorrect) score++;
+
+        const explanationDiv = document.getElementById(`explanation-${q.id}`);
+        explanationDiv.classList.remove("hidden");
+
+        if (isCorrect) {
+          explanationDiv.className = "p-4 rounded-xl text-xs sm:text-sm mt-3 bg-emerald-950/60 border border-emerald-600 text-emerald-200 space-y-1";
+          explanationDiv.innerHTML = `<div class="font-bold text-emerald-400 flex items-center gap-1.5"><i data-lucide="check" class="w-4 h-4"></i> Correct!</div><p>${q.explanation}</p>`;
+        } else {
+          explanationDiv.className = "p-4 rounded-xl text-xs sm:text-sm mt-3 bg-rose-950/60 border border-rose-600 text-rose-200 space-y-1";
+          explanationDiv.innerHTML = `<div class="font-bold text-rose-400 flex items-center gap-1.5"><i data-lucide="x" class="w-4 h-4"></i> Incorrect (Correct Answer: ${q.correct.toUpperCase()})</div><p>${q.explanation}</p>`;
+        }
+      });
+
+      const percentage = Math.round((score / questionsData.length) * 100);
+      const passed = percentage >= 60;
+      
+      const resultsDiv = document.getElementById("quiz-results");
+      resultsDiv.classList.remove("hidden");
+
+      const statusBadge = document.getElementById("result-status-badge");
+      statusBadge.innerText = passed ? "Status: Passed (60%+ Benchmark)" : "Status: Needs Revision";
+      statusBadge.className = passed ? "px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider bg-emerald-500 text-emerald-950" : "px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider bg-amber-500 text-amber-950";
+
+      document.getElementById("score-display").innerText = `${score} / ${questionsData.length}`;
+      document.getElementById("percentage-display").innerText = `${percentage}% Score (Passing criteria: 60%)`;
+
+      document.getElementById("result-summary-text").innerText = passed
+        ? `Great job! You scored ${percentage}%, successfully beating the NISM 60% passing benchmark. Re-read the explanations to cement your memory of Section 45, timing of insurable interest, and indemnity rules.`
+        : `You scored ${percentage}%. Revisit the notes on Section 45, Insurable Interest Timing across life/marine/fire, and the Principle of Contribution before retaking the quiz.`;
+
+      document.getElementById("submit-quiz-btn").classList.add("hidden");
+      document.getElementById("reset-quiz-btn").classList.remove("hidden");
+
+      resultsDiv.scrollIntoView({ behavior: 'smooth' });
+      lucide.createIcons();
+    }
+
+    function resetQuiz() {
+      userAnswers = {};
+      document.getElementById("answered-count").innerText = "0";
+      document.getElementById("quiz-results").classList.add("hidden");
+      document.getElementById("submit-quiz-btn").classList.remove("hidden");
+      document.getElementById("reset-quiz-btn").classList.add("hidden");
+      renderQuiz();
+      document.getElementById("interactive-quiz").scrollIntoView({ behavior: 'smooth' });
+    }
+
+    // Initialize Quiz
+    renderQuiz();
+    lucide.createIcons();
+  </script>
+</body>
+</html>

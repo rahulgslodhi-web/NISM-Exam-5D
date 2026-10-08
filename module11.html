@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Module 11: Behavioral Finance | NISM Series X-B Certification Notes</title>
+  
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  
+  <!-- Google Fonts: DM Sans & Jost (Eduleb Benchmark) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Jost:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+  <script src="https://unpkg.com/lucide@latest"></script>
+
+  <!-- Modern Documentation Design System & Engine -->
+  <link rel="stylesheet" href="modern-docs.css">
+  <script defer src="nav-sidebar.js"></script>
+
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['"DM Sans"', 'sans-serif'],
+            display: ['"Jost"', 'sans-serif'],
+            heading: ['"Jost"', 'sans-serif']
+          },
+          colors: {
+            brand: {
+              50: '#eef2ff',
+              100: '#e0e7ff',
+              500: '#525fe1',
+              600: '#434ec9',
+              700: '#353db3',
+              800: '#282f9c',
+              900: '#0b104a'
+            }
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    body {
+      font-family: 'DM Sans', sans-serif;
+      font-size: 16px;
+      line-height: 26px;
+      color: #4a5355;
+    }
+    h1, h2, h3, h4, h5, h6, .font-display, .font-heading {
+      font-family: 'Jost', sans-serif;
+      font-weight: 700;
+    }
+  </style>
+</head>
+<body class="bg-slate-50 dark:bg-slate-950 text-slate-900 dark:text-slate-100 min-h-screen flex flex-col selection:bg-indigo-500 selection:text-white antialiased transition-colors duration-200">
+
+  <!-- Smooth Opening Preloader -->
+  <div class="preloaders" id="eduleb-preloader">
+    <span class="loader"></span>
+    <div class="preloader-label">Module 11: Behavioral Finance</div>
+  </div>
+
+  <!-- Standardized Header (Single-Tier, 64px) -->
+  <header class="sticky top-0 z-40 bg-white/95 dark:bg-slate-900/95 backdrop-blur-md border-b border-slate-200/80 dark:border-slate-800 shadow-xs">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 h-16 flex items-center justify-between">
+      <!-- Left: Logo & Context Label -->
+      <a href="index.html" class="flex items-center gap-2.5 group">
+        <div class="w-9 h-9 rounded-xl bg-[#525fe1] flex items-center justify-center text-white font-bold shadow-xs group-hover:scale-105 transition-transform">
+          <i data-lucide="shield-check" class="w-5 h-5"></i>
+        </div>
+        <div>
+          <span class="font-display font-bold text-base tracking-tight text-[#0b104a] dark:text-white block leading-tight">NISM Portal</span>
+          <span class="block text-[10px] text-[#525fe1] dark:text-indigo-400 font-bold uppercase tracking-wider">Series X-B: Level 2</span>
+        </div>
+      </a>
+
+      <!-- Center: Minimal Navigation Links -->
+      <nav class="hidden md:flex items-center gap-1 text-sm font-medium font-display">
+        <a href="index.html#certifications" class="px-3 py-1.5 rounded-lg text-slate-600 dark:text-slate-300 hover:text-[#0b104a] hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors">All Certifications</a>
+        <a href="module11.html" class="px-3 py-1.5 rounded-lg font-semibold text-indigo-700 dark:text-indigo-300 bg-indigo-50 dark:bg-indigo-950/70 border border-indigo-200/80 dark:border-indigo-800/80 transition-colors">Module 11 Hub</a>
+        <a href="module11-ch16.html" class="px-3 py-1.5 rounded-lg text-slate-600 dark:text-slate-300 hover:text-[#0b104a] hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors">Chapter 16</a>
+        <a href="module11-ch17.html" class="px-3 py-1.5 rounded-lg text-slate-600 dark:text-slate-300 hover:text-[#0b104a] hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors">Chapter 17</a>
+      </nav>
+
+      <!-- Right: Search (⌘K), Theme (⌘D), and Take a Mock CTA -->
+      <div class="flex items-center gap-2">
+        <button onclick="window.openSpotlightModal()" class="flex items-center gap-2 px-3 py-1.5 rounded-full border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-800 text-slate-500 dark:text-slate-400 text-xs font-medium" title="Search (⌘K)">
+          <i data-lucide="search" class="w-3.5 h-3.5 text-[#525fe1]"></i>
+          <span class="hidden sm:inline">Search</span>
+          <kbd class="px-1.5 py-0.5 rounded bg-slate-100 dark:bg-slate-700 text-[10px] font-mono text-slate-400">⌘K</kbd>
+        </button>
+        <button id="nism-header-theme-btn" onclick="window.toggleDarkMode()" class="p-2 rounded-full border border-slate-200 dark:border-slate-700 text-slate-600 dark:text-slate-300 bg-white dark:bg-slate-800" title="Toggle Theme (⌘D)">
+          <i data-lucide="moon" class="w-4 h-4"></i>
+        </button>
+        <a href="#chapters-section" class="hidden sm:inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-full text-xs font-bold text-white bg-[#525fe1] hover:bg-[#404dc7] font-display">
+          <span>Start Module</span>
+          <i data-lucide="arrow-right" class="w-3 h-3"></i>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Module Banner (Indigo / Violet Dual Tone) -->
+  <section class="bg-gradient-to-b from-indigo-50/90 via-violet-50/30 to-slate-50 dark:from-slate-900 dark:via-indigo-950/20 dark:to-slate-950 py-12 border-b border-slate-200 dark:border-slate-800">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex flex-wrap items-center gap-2 mb-4">
+        <span class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-indigo-100 dark:bg-indigo-900/60 text-indigo-800 dark:text-indigo-200 text-xs font-bold">
+          <i data-lucide="brain" class="w-3.5 h-3.5 text-indigo-600 dark:text-indigo-400"></i>
+          NISM Series X-B &bull; Module 11
+        </span>
+        <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-amber-50 dark:bg-amber-950/60 text-amber-800 dark:text-amber-300 border border-amber-200 dark:border-amber-800/80 text-xs font-semibold">
+          <i data-lucide="award" class="w-3.5 h-3.5 text-amber-600 dark:text-amber-400"></i>
+          Weightage: 10 Marks (High-Yield ⭐)
+        </span>
+        <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-emerald-50 dark:bg-emerald-950/60 text-emerald-800 dark:text-emerald-300 border border-emerald-200 dark:border-emerald-800/80 text-xs font-semibold">
+          <i data-lucide="sparkles" class="w-3.5 h-3.5 text-emerald-600 dark:text-emerald-400"></i>
+          March 2026 Updated Syllabus
+        </span>
+      </div>
+      
+      <h1 class="font-display text-3xl sm:text-4xl lg:text-5xl font-extrabold text-slate-900 dark:text-white tracking-tight">
+        Module 11: Behavioral Finance
+      </h1>
+      <p class="mt-3 text-slate-600 dark:text-slate-300 max-w-4xl leading-relaxed text-sm sm:text-base">
+        Master the psychological dimensions of investment decision-making. Learn how real-world investors deviate from standard economic rationality, explore Prospect Theory, uncover the taxonomy of cognitive errors and emotional biases, analyze speculative market bubbles and crashes, and implement choice architecture and behavioral coaching to protect client wealth across market cycles.
+      </p>
+
+      <!-- Quick Metrics Chips -->
+      <div class="mt-6 flex flex-wrap gap-3 text-xs">
+        <div class="px-3.5 py-2 rounded-xl bg-white dark:bg-slate-900 border border-slate-200/90 dark:border-slate-800 shadow-xs text-slate-700 dark:text-slate-200 font-medium flex items-center gap-2">
+          <i data-lucide="book-open" class="w-4 h-4 text-indigo-600 dark:text-indigo-400"></i>
+          <span>2 Comprehensive Chapters (Ch 16 & Ch 17)</span>
+        </div>
+        <div class="px-3.5 py-2 rounded-xl bg-white dark:bg-slate-900 border border-slate-200/90 dark:border-slate-800 shadow-xs text-slate-700 dark:text-slate-200 font-medium flex items-center gap-2">
+          <i data-lucide="help-circle" class="w-4 h-4 text-indigo-600 dark:text-indigo-400"></i>
+          <span>24 Scenario-Based Practice MCQs</span>
+        </div>
+        <div class="px-3.5 py-2 rounded-xl bg-white dark:bg-slate-900 border border-slate-200/90 dark:border-slate-800 shadow-xs text-slate-700 dark:text-slate-200 font-medium flex items-center gap-2">
+          <i data-lucide="trending-up" class="w-4 h-4 text-emerald-600 dark:text-emerald-400"></i>
+          <span>Vanguard Advisor's Alpha: +150 bps Value</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Main Content Layout -->
+  <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10 flex-grow" id="chapters-section">
+    
+    <!-- Executive Summary Banner -->
+    <div class="mb-10 p-6 rounded-2xl bg-white dark:bg-slate-900 border border-slate-200/80 dark:border-slate-800 shadow-sm">
+      <div class="flex items-center gap-2.5 mb-3">
+        <div class="w-8 h-8 rounded-lg bg-indigo-100 dark:bg-indigo-950 flex items-center justify-center text-indigo-600 dark:text-indigo-400">
+          <i data-lucide="compass" class="w-4 h-4"></i>
+        </div>
+        <h2 class="font-display text-xl font-bold text-slate-900 dark:text-white">Why Behavioral Finance Matters for SEBI Registered Investment Advisers</h2>
+      </div>
+      <p class="text-sm text-slate-600 dark:text-slate-300 leading-relaxed">
+        While traditional financial theory (CAPM, Modern Portfolio Theory, Efficient Market Hypothesis) assumes that investors are perfectly rational wealth maximizers with infinite willpower and calculating power, <strong>behavioral finance proves that real human beings are boundedly rational and emotionally vulnerable</strong>. In real market conditions, investors panic at market bottoms, chase speculative momentum at peaks, refuse to cut losses on failing stocks, and compartmentalize money irrationally. According to empirical studies (including Vanguard's Advisor's Alpha framework), <strong>behavioral coaching is the single most valuable service an adviser delivers</strong>, contributing up to 150 basis points of annual risk-adjusted alpha by preventing clients from committing catastrophic behavioral errors.
+      </p>
+    </div>
+
+    <!-- Chapter Grid -->
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
+
+      <!-- Chapter 16 Card -->
+      <a href="module11-ch16.html" class="group bg-white dark:bg-slate-900 rounded-3xl p-7 border border-slate-200/90 dark:border-slate-800 shadow-sm hover:shadow-xl hover:border-indigo-300 dark:hover:border-indigo-700 transition-all flex flex-col justify-between focus:outline-none focus:ring-2 focus:ring-indigo-500">
+        <div>
+          <div class="flex items-center justify-between mb-4">
+            <span class="text-xs font-bold uppercase tracking-wider text-indigo-600 dark:text-indigo-400 bg-indigo-50 dark:bg-indigo-950/80 px-3 py-1 rounded-lg border border-indigo-100 dark:border-indigo-900">
+              Chapter 16
+            </span>
+            <span class="inline-flex items-center gap-1 text-xs font-bold text-amber-700 dark:text-amber-400 bg-amber-50 dark:bg-amber-950/60 px-2.5 py-1 rounded-md border border-amber-200 dark:border-amber-900">
+              <i data-lucide="star" class="w-3 h-3 fill-amber-500 text-amber-500"></i>
+              Weightage: 5-6 Marks
+            </span>
+          </div>
+
+          <h3 class="font-display text-2xl font-bold text-slate-900 dark:text-white group-hover:text-indigo-600 dark:group-hover:text-indigo-400 transition-colors">
+            Basics of Behavioral Finance
+          </h3>
+          <p class="text-xs sm:text-sm text-slate-600 dark:text-slate-300 mt-3 leading-relaxed">
+            Detailed exploration of foundational theories and human biases. Standard finance vs Behavioral finance, Herbert Simon's Bounded Rationality, Kahneman & Tversky's Prospect Theory (asymmetric loss aversion ~2.25x, reference dependence, framing), Cognitive errors vs Emotional biases (Anchoring, Mental Accounting, Overconfidence, Disposition Effect, Recency, Availability), market anomalies, and Minsky's 5 stages of bubbles and crashes.
+          </p>
+
+          <!-- Core Topics Checklist -->
+          <div class="mt-5 space-y-2 text-xs text-slate-500 dark:text-slate-400">
+            <div class="flex items-center gap-2">
+              <i data-lucide="check" class="w-3.5 h-3.5 text-indigo-500 shrink-0"></i>
+              <span>Standard Finance vs Behavioral Finance (Normative vs Descriptive)</span>
+            </div>
+            <div class="flex items-center gap-2">
+              <i data-lucide="check" class="w-3.5 h-3.5 text-indigo-500 shrink-0"></i>
+              <span>Prospect Theory & S-Shaped Value Function (Loss Aversion $\lambda \approx 2.25$)</span>
+            </div>
+            <div class="flex items-center gap-2">
+              <i data-lucide="check" class="w-3.5 h-3.5 text-indigo-500 shrink-0"></i>
+              <span>Cognitive Errors (Information Processing) vs Emotional Biases (Impulses)</span>
+            </div>
+            <div class="flex items-center gap-2">
+              <i data-lucide="check" class="w-3.5 h-3.5 text-indigo-500 shrink-0"></i>
+              <span>Market Anomalies & Minsky's 5 Stages of Financial Bubbles</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="mt-6 pt-4 border-t border-slate-100 dark:border-slate-800 flex items-center justify-between text-xs sm:text-sm font-bold text-indigo-600 dark:text-indigo-400">
+          <span>Read Full Chapter Notes & 12 Practice MCQs</span>
+          <i data-lucide="arrow-right" class="w-4 h-4 group-hover:translate-x-1 transition-transform"></i>
+        </div>
+      </a>
+
+      <!-- Chapter 17 Card -->
+      <a href="module11-ch17.html" class="group bg-white dark:bg-slate-900 rounded-3xl p-7 border border-slate-200/90 dark:border-slate-800 shadow-sm hover:shadow-xl hover:border-indigo-300 dark:hover:border-indigo-700 transition-all flex flex-col justify-between focus:outline-none focus:ring-2 focus:ring-indigo-500">
+        <div>
+          <div class="flex items-center justify-between mb-4">
+            <span class="text-xs font-bold uppercase tracking-wider text-indigo-600 dark:text-indigo-400 bg-indigo-50 dark:bg-indigo-950/80 px-3 py-1 rounded-lg border border-indigo-100 dark:border-indigo-900">
+              Chapter 17
+            </span>
+            <span class="inline-flex items-center gap-1 text-xs font-bold text-amber-700 dark:text-amber-400 bg-amber-50 dark:bg-amber-950/60 px-2.5 py-1 rounded-md border border-amber-200 dark:border-amber-900">
+              <i data-lucide="star" class="w-3 h-3 fill-amber-500 text-amber-500"></i>
+              Weightage: 4-5 Marks
+            </span>
+          </div>
+
+          <h3 class="font-display text-2xl font-bold text-slate-900 dark:text-white group-hover:text-indigo-600 dark:group-hover:text-indigo-400 transition-colors">
+            Behavioral Finance in Practice
+          </h3>
+          <p class="text-xs sm:text-sm text-slate-600 dark:text-slate-300 mt-3 leading-relaxed">
+            Translating behavioral theory into everyday client advisory. Navigating the 14-stage psychological cycle of market emotions (Euphoria at peak vs Despondency at trough), managing client greed and fear, goal-based portfolio bucketing, Richard Thaler's Choice Architecture & Nudges, pre-commitment contracts (IPS), cooling-off rules, and the RIA's pivotal role as a behavioral coach with field-tested conversational scripts.
+          </p>
+
+          <!-- Core Topics Checklist -->
+          <div class="mt-5 space-y-2 text-xs text-slate-500 dark:text-slate-400">
+            <div class="flex items-center gap-2">
+              <i data-lucide="check" class="w-3.5 h-3.5 text-indigo-500 shrink-0"></i>
+              <span>Cycle of Market Emotions: Euphoria (Max Risk) vs Despondency (Max Opportunity)</span>
+            </div>
+            <div class="flex items-center gap-2">
+              <i data-lucide="check" class="w-3.5 h-3.5 text-indigo-500 shrink-0"></i>
+              <span>Constructive Mental Accounting: Goal-Based Bucketing (Safety, Growth, Aspiration)</span>
+            </div>
+            <div class="flex items-center gap-2">
+              <i data-lucide="check" class="w-3.5 h-3.5 text-indigo-500 shrink-0"></i>
+              <span>Choice Architecture, Default Nudges & Pre-Commitment Contracts (IPS)</span>
+            </div>
+            <div class="flex items-center gap-2">
+              <i data-lucide="check" class="w-3.5 h-3.5 text-indigo-500 shrink-0"></i>
+              <span>Adviser's Alpha (+150 bps) & 4 Real-World Client De-escalation Scripts</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="mt-6 pt-4 border-t border-slate-100 dark:border-slate-800 flex items-center justify-between text-xs sm:text-sm font-bold text-indigo-600 dark:text-indigo-400">
+          <span>Read Full Chapter Notes & 12 Practice MCQs</span>
+          <i data-lucide="arrow-right" class="w-4 h-4 group-hover:translate-x-1 transition-transform"></i>
+        </div>
+      </a>
+
+    </div>
+
+    <!-- Comparative Behavioral Architecture Infographic Section -->
+    <section class="mb-12">
+      <div class="text-center max-w-2xl mx-auto mb-8">
+        <span class="text-xs font-bold text-indigo-600 dark:text-indigo-400 uppercase tracking-widest bg-indigo-50 dark:bg-indigo-950 px-3 py-1 rounded-full border border-indigo-200/60 dark:border-indigo-900">
+          Core Conceptual Framework
+        </span>
+        <h2 class="font-display text-2xl sm:text-3xl font-extrabold text-slate-900 dark:text-white mt-2">
+          Standard Finance vs. Behavioral Finance at a Glance
+        </h2>
+        <p class="text-xs sm:text-sm text-slate-600 dark:text-slate-400 mt-2">
+          How modern financial psychology reshaped classical wealth management assumptions.
+        </p>
+      </div>
+
+      <div class="overflow-x-auto rounded-2xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 shadow-sm">
+        <table class="w-full text-left border-collapse text-xs sm:text-sm">
+          <thead>
+            <tr class="bg-slate-50 dark:bg-slate-800/80 border-b border-slate-200 dark:border-slate-700 text-slate-700 dark:text-slate-200">
+              <th class="p-4 font-bold">Dimension</th>
+              <th class="p-4 font-bold text-slate-600 dark:text-slate-300">Standard (Traditional) Finance</th>
+              <th class="p-4 font-bold text-indigo-600 dark:text-indigo-400">Behavioral Finance</th>
+              <th class="p-4 font-bold text-emerald-700 dark:text-emerald-400">RIA Practical Takeaway</th>
+            </tr>
+          </thead>
+          <tbody class="divide-y divide-slate-100 dark:divide-slate-800 text-slate-600 dark:text-slate-300">
+            <tr>
+              <td class="p-4 font-bold text-slate-800 dark:text-slate-200">Investor Nature</td>
+              <td class="p-4">"Homo economicus" — Perfectly rational, emotionless wealth maximizer.</td>
+              <td class="p-4 font-medium text-indigo-600 dark:text-indigo-300">"Normal human" — Boundedly rational, influenced by fear, greed, pride, regret, and heuristics.</td>
+              <td class="p-4 text-emerald-700 dark:text-emerald-400 font-medium">Expect irrationality; design plans around human behavior, not textbooks.</td>
+            </tr>
+            <tr>
+              <td class="p-4 font-bold text-slate-800 dark:text-slate-200">Market Efficiency</td>
+              <td class="p-4">Markets are strictly efficient (EMH); prices reflect all available information.</td>
+              <td class="p-4 font-medium text-indigo-600 dark:text-indigo-300">Markets are often inefficient; subject to noise trading, anomalies, bubbles, and crashes.</td>
+              <td class="p-4 text-emerald-700 dark:text-emerald-400 font-medium">Use asset allocation and rebalancing to exploit valuation swings systematically.</td>
+            </tr>
+            <tr>
+              <td class="p-4 font-bold text-slate-800 dark:text-slate-200">Risk & Utility</td>
+              <td class="p-4">Expected Utility Theory: Constant risk aversion across gains and losses.</td>
+              <td class="p-4 font-medium text-indigo-600 dark:text-indigo-300">Prospect Theory: Loss aversion (losses hurt 2.25x more than gains thrill); risk-seeking in losses.</td>
+              <td class="p-4 text-emerald-700 dark:text-emerald-400 font-medium">Prevent clients from doubling down on losing assets to "break even".</td>
+            </tr>
+            <tr>
+              <td class="p-4 font-bold text-slate-800 dark:text-slate-200">Portfolio Construction</td>
+              <td class="p-4">Mean-Variance Optimization (Markowitz) viewing the portfolio as a single unified variance matrix.</td>
+              <td class="p-4 font-medium text-indigo-600 dark:text-indigo-300">Behavioral Portfolio Theory (Mental Accounting): Distinct layers or "buckets" for specific goals.</td>
+              <td class="p-4 text-emerald-700 dark:text-emerald-400 font-medium">Adopt Goal-Based Investing buckets (Emergency, Lifestyle, Retirement) to satisfy psychological safety.</td>
+            </tr>
+            <tr>
+              <td class="p-4 font-bold text-slate-800 dark:text-slate-200">Role of Adviser</td>
+              <td class="p-4">Portfolio optimizer, stock picker, mathematical calculator.</td>
+              <td class="p-4 font-medium text-indigo-600 dark:text-indigo-300">Behavioral Coach: Disciplining emotions, framing choices, preventing panic selling.</td>
+              <td class="p-4 text-emerald-700 dark:text-emerald-400 font-medium">Delivers +150 bps Advisor's Alpha through empathy and behavioural hand-holding.</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- Key Study Guide & Exam Strategy Callout -->
+    <div class="p-6 rounded-2xl bg-gradient-to-r from-indigo-500/10 via-purple-500/10 to-amber-500/10 border border-indigo-200/80 dark:border-indigo-800/80 mb-8 flex flex-col md:flex-row items-center justify-between gap-6">
+      <div class="space-y-2">
+        <div class="flex items-center gap-2">
+          <span class="px-2.5 py-0.5 rounded-full text-[11px] font-bold uppercase tracking-wider bg-amber-100 text-amber-900 dark:bg-amber-900/60 dark:text-amber-200">
+            NISM Examination Strategy
+          </span>
+          <span class="text-xs font-semibold text-slate-500 dark:text-slate-400">10 Full Marks</span>
+        </div>
+        <h3 class="font-display text-lg font-bold text-slate-900 dark:text-white">
+          How NISM Level 2 Tests Module 11
+        </h3>
+        <p class="text-xs sm:text-sm text-slate-600 dark:text-slate-300 max-w-2xl leading-relaxed">
+          NISM Series X-B asks heavily scenario-based questions in Module 11. Instead of simply asking for definitions, exam questions present realistic investor dilemmas: <em>"An investor refuses to sell a stock down 40% because he wants to wait until it recovers to his buying price. Which bias is he displaying?"</em> (Disposition Effect / Anchoring) or <em>"An adviser sets up automatic annual SIP escalation for a client who keeps forgetting to save more. Which behavioral nudge is applied?"</em> (Save More Tomorrow / Choice Architecture). Review both chapters thoroughly and test yourself with our 24 practice questions!
+        </p>
+      </div>
+      <div class="shrink-0 flex flex-col sm:flex-row gap-3">
+        <a href="module11-ch16.html" class="px-5 py-2.5 rounded-xl bg-indigo-600 hover:bg-indigo-700 text-white font-bold text-xs sm:text-sm text-center shadow-sm transition-all">
+          Start Chapter 16
+        </a>
+        <a href="module11-ch17.html" class="px-5 py-2.5 rounded-xl bg-white dark:bg-slate-800 hover:bg-slate-100 dark:hover:bg-slate-700 text-slate-800 dark:text-slate-200 border border-slate-200 dark:border-slate-700 font-bold text-xs sm:text-sm text-center transition-all">
+          Start Chapter 17
+        </a>
+      </div>
+    </div>
+
+  </main>
+
+  <!-- Standardized Footer -->
+  <footer class="bg-slate-900 text-slate-400 py-8 border-t border-slate-800 text-center text-xs">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 space-y-2">
+      <p class="font-semibold text-slate-300">NISM Series X-B (Investment Adviser Level 2) Certification Notes &bull; Module 11: Behavioral Finance</p>
+      <p class="text-slate-500">Aligned with latest SEBI RIA Regulations & March 2026 Examination Blueprint. 100% Free Study Resource.</p>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script>
+    // Lucide Icons Initialization
+    function initIcons() {
+      if (window.lucide && typeof window.lucide.createIcons === 'function') {
+        window.lucide.createIcons();
+      }
+    }
+    document.addEventListener('DOMContentLoaded', initIcons);
+    initIcons();
+
+    // Smooth Preloader Auto-dismiss
+    function dismissPreloader() {
+      const preloader = document.getElementById("eduleb-preloader");
+      if (preloader && !preloader.classList.contains("fade-out")) {
+        preloader.classList.add("fade-out");
+        setTimeout(() => { if (preloader.parentNode) preloader.parentNode.removeChild(preloader); }, 550);
+      }
+    }
+    window.addEventListener("load", () => setTimeout(dismissPreloader, 350));
+    setTimeout(dismissPreloader, 1000);
+  </script>
+</body>
+</html>

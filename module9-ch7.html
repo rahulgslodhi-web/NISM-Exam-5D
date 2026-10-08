@@ -1,0 +1,961 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Chapter 7: Concepts in Taxation | NISM Series X-B Notes</title>
+  
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  
+  <!-- Google Fonts: DM Sans & Jost (Eduleb Benchmark) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Jost:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+  
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+
+  <!-- Modern Documentation Design System -->
+  <link rel="stylesheet" href="modern-docs.css">
+  <script defer src="nav-sidebar.js"></script>
+
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['"DM Sans"', 'sans-serif'],
+            display: ['"Jost"', 'sans-serif'],
+            heading: ['"Jost"', 'sans-serif']
+          },
+          colors: {
+            brand: {
+              50: '#eef2ff',
+              100: '#e0e7ff',
+              500: '#525fe1',
+              600: '#434ec9',
+              700: '#353db3',
+              800: '#282f9c',
+              900: '#0b104a'
+            }
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    body {
+      font-family: 'DM Sans', sans-serif;
+      font-size: 16px;
+      line-height: 26px;
+      color: #4a5355;
+    }
+    h1, h2, h3, h4, h5, h6, .font-display, .font-heading {
+      font-family: 'Jost', sans-serif;
+      font-weight: 700;
+    }
+  </style>
+</head>
+<body class="bg-slate-50 dark:bg-slate-950 text-slate-900 dark:text-slate-100 min-h-screen flex flex-col selection:bg-blue-500 selection:text-white antialiased transition-colors duration-200">
+
+  <!-- Smooth Opening Preloader -->
+  <div class="preloaders" id="eduleb-preloader">
+    <span class="loader"></span>
+    <div class="preloader-label">Chapter 7: Concepts in Taxation</div>
+  </div>
+
+  <!-- Standardized Header (Single-Tier, 64px) -->
+  <header class="sticky top-0 z-40 bg-white/95 dark:bg-slate-900/95 backdrop-blur-md border-b border-slate-200/80 dark:border-slate-800 shadow-xs">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 h-16 flex items-center justify-between">
+      <!-- Left: Navigation Back & Chapter Info -->
+      <div class="flex items-center gap-3">
+        <a href="module9.html" class="flex items-center gap-2 text-slate-500 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white transition-colors" title="Back to Module 9 Hub">
+          <div class="w-9 h-9 rounded-xl bg-slate-100 dark:bg-slate-800 hover:bg-slate-200 dark:hover:bg-slate-700 flex items-center justify-center text-slate-700 dark:text-slate-200 transition-colors">
+            <i data-lucide="arrow-left" class="w-4 h-4"></i>
+          </div>
+        </a>
+        <div>
+          <div class="flex items-center gap-2">
+            <span class="text-[11px] font-bold uppercase tracking-wider text-blue-600 dark:text-blue-400 bg-blue-50 dark:bg-blue-950/70 px-2 py-0.5 rounded">Module 9</span>
+            <span class="text-[11px] text-slate-400 font-medium">Chapter 7 of 13</span>
+          </div>
+          <h1 class="font-display font-bold text-sm sm:text-base text-slate-900 dark:text-white leading-tight">Concepts in Taxation</h1>
+        </div>
+      </div>
+
+      <!-- Right: Search, Theme, Quiz Jump -->
+      <div class="flex items-center gap-2">
+        <span class="hidden md:inline-flex items-center gap-1 px-3 py-1 rounded-full text-xs font-bold bg-amber-50 dark:bg-amber-950/70 text-amber-700 dark:text-amber-300 border border-amber-200 dark:border-amber-800">
+          <i data-lucide="star" class="w-3.5 h-3.5 fill-amber-500 text-amber-500"></i>
+          High Yield Focus
+        </span>
+        <button onclick="window.openSpotlightModal()" class="flex items-center gap-2 px-3 py-1.5 rounded-full border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-800 text-slate-500 dark:text-slate-400 text-xs font-medium" title="Search (⌘K)">
+          <i data-lucide="search" class="w-3.5 h-3.5 text-blue-600"></i>
+          <span class="hidden sm:inline">Search</span>
+          <kbd class="px-1.5 py-0.5 rounded bg-slate-100 dark:bg-slate-700 text-[10px] font-mono text-slate-400">⌘K</kbd>
+        </button>
+        <button id="nism-header-theme-btn" onclick="window.toggleDarkMode()" class="p-2 rounded-full border border-slate-200 dark:border-slate-700 text-slate-600 dark:text-slate-300 bg-white dark:bg-slate-800" title="Toggle Theme (⌘D)">
+          <i data-lucide="moon" class="w-4 h-4"></i>
+        </button>
+        <a href="#interactive-quiz" class="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-full text-xs font-bold text-white bg-blue-600 hover:bg-blue-700 font-display transition-colors">
+          <i data-lucide="help-circle" class="w-3.5 h-3.5"></i>
+          <span>Chapter Quiz</span>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Content Layout -->
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 grid grid-cols-1 lg:grid-cols-12 gap-8 flex-grow">
+    
+    <!-- Table of Contents Sidebar (Desktop) -->
+    <aside class="hidden lg:block lg:col-span-3">
+      <div class="sticky top-24 space-y-4">
+        <div class="rounded-2xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 p-4 shadow-xs">
+          <div class="flex items-center gap-2 font-display font-bold text-xs uppercase tracking-wider text-slate-400 mb-3">
+            <i data-lucide="bookmark" class="w-3.5 h-3.5 text-blue-600"></i>
+            <span>Chapter Sections</span>
+          </div>
+          <nav class="space-y-1 text-xs">
+            <a href="#section-1" class="block px-2.5 py-1.5 rounded-lg text-slate-600 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800 hover:text-blue-600 transition-colors">7.1 Basic Tax Concepts & Terms</a>
+            <a href="#section-2" class="block px-2.5 py-1.5 rounded-lg text-amber-700 dark:text-amber-400 font-semibold bg-amber-50/70 dark:bg-amber-950/40 hover:bg-amber-100 transition-colors">7.2 Residential Status (Sec 6) ⭐</a>
+            <a href="#section-3" class="block px-2.5 py-1.5 rounded-lg text-slate-600 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800 hover:text-blue-600 transition-colors">7.3 Scope of Total Income (Sec 5)</a>
+            <a href="#section-4" class="block px-2.5 py-1.5 rounded-lg text-slate-600 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800 hover:text-blue-600 transition-colors">7.4 The Five Heads of Income</a>
+            <a href="#section-5" class="block px-2.5 py-1.5 rounded-lg text-blue-700 dark:text-blue-300 font-bold bg-blue-50/80 dark:bg-blue-950/50 hover:bg-blue-100 transition-colors">7.5 Old vs New Regime Sec 115BAC ⭐</a>
+            <a href="#section-6" class="block px-2.5 py-1.5 rounded-lg text-slate-600 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800 hover:text-blue-600 transition-colors">7.6 Chapter VI-A Deductions</a>
+            <a href="#section-7" class="block px-2.5 py-1.5 rounded-lg text-slate-600 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800 hover:text-blue-600 transition-colors">7.7 Surcharge, Cess & Marginal Relief</a>
+            <a href="#section-8" class="block px-2.5 py-1.5 rounded-lg text-slate-600 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800 hover:text-blue-600 transition-colors">7.8 Advance Tax & Interest (234) ⭐</a>
+            <a href="#interactive-quiz" class="block px-2.5 py-1.5 rounded-lg text-blue-600 dark:text-blue-400 font-bold bg-blue-50 dark:bg-blue-950/70 hover:bg-blue-100 transition-colors mt-2">Practice Quiz (12 Questions)</a>
+          </nav>
+        </div>
+
+        <!-- Exam Tip Card -->
+        <div class="p-4 rounded-2xl bg-gradient-to-br from-blue-600 to-indigo-700 text-white shadow-sm text-xs space-y-2">
+          <div class="flex items-center gap-1.5 font-bold">
+            <i data-lucide="zap" class="w-4 h-4 text-amber-300"></i>
+            <span>NISM Level 2 Exam Alert</span>
+          </div>
+          <p class="text-blue-100 leading-relaxed">
+            Case studies heavily test: (1) <strong>120-day vs 182-day rule</strong> for Indian citizens visiting India with Indian income &gt; ₹15 Lakhs, (2) <strong>Section 115BAC</strong> default tax calculation with ₹75,000 standard deduction, and (3) <strong>Advance Tax installment percentages</strong> (15%, 45%, 75%, 100%).
+          </p>
+        </div>
+      </div>
+    </aside>
+
+    <!-- Main Content Area -->
+    <main class="lg:col-span-9 space-y-8">
+      
+      <!-- Section 7.1 -->
+      <section id="section-1" class="bg-white dark:bg-slate-900 rounded-3xl p-6 sm:p-8 border border-slate-200/90 dark:border-slate-800 shadow-xs space-y-4">
+        <div class="flex items-center gap-2 text-xs font-bold text-blue-600 dark:text-blue-400 uppercase tracking-wider">
+          <span class="w-2 h-2 rounded-full bg-blue-600"></span> Section 7.1
+        </div>
+        <h2 class="font-display text-2xl font-bold text-slate-900 dark:text-white">
+          Basic Tax Concepts, Assessment Year & Previous Year
+        </h2>
+        <p class="text-slate-600 dark:text-slate-300 text-sm leading-relaxed">
+          The Income Tax Act, 1961 is the primary statute governing direct taxation in India. Income earned in a given financial year is taxed in the immediately following assessment year. Understanding key statutory definitions is essential:
+        </p>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 text-xs sm:text-sm">
+          <div class="p-4 rounded-xl bg-slate-50 dark:bg-slate-800/60 border border-slate-200 dark:border-slate-700">
+            <h4 class="font-bold text-slate-900 dark:text-white mb-1 flex items-center gap-1.5">
+              <i data-lucide="calendar" class="w-4 h-4 text-blue-600"></i> Previous Year (PY) vs Assessment Year (AY)
+            </h4>
+            <p class="text-slate-600 dark:text-slate-400 leading-relaxed">
+              <strong>Previous Year (PY):</strong> The 12-month financial year (1 April to 31 March) in which income is earned.<br>
+              <strong>Assessment Year (AY):</strong> The consecutive period of 12 months immediately following the previous year in which that income is assessed and taxed (e.g., for PY 2024-25, AY is 2025-26).
+            </p>
+          </div>
+          <div class="p-4 rounded-xl bg-slate-50 dark:bg-slate-800/60 border border-slate-200 dark:border-slate-700">
+            <h4 class="font-bold text-slate-900 dark:text-white mb-1 flex items-center gap-1.5">
+              <i data-lucide="user-check" class="w-4 h-4 text-emerald-600"></i> Person & Assessee (Sec 2(7) & 2(31))
+            </h4>
+            <p class="text-slate-600 dark:text-slate-400 leading-relaxed">
+              <strong>Person:</strong> Includes Individual, HUF, Company, Firm/LLP, AOP, BOI, Local Authority, and Artificial Juridical Person.<br>
+              <strong>Assessee:</strong> Any person by whom any tax, penalty, or interest is payable under the Income Tax Act.
+            </p>
+          </div>
+        </div>
+
+        <div class="p-3.5 rounded-xl bg-blue-50/70 dark:bg-blue-950/40 border border-blue-200 dark:border-blue-800/80 text-xs text-blue-950 dark:text-blue-200 flex items-center gap-3">
+          <i data-lucide="info" class="w-5 h-5 text-blue-600 shrink-0"></i>
+          <div>
+            <strong>GTI vs Total Income:</strong> <em>Gross Total Income (GTI)</em> is the aggregate of income computed under the 5 heads before Chapter VI-A deductions. <em>Total Income (Taxable Income)</em> is GTI minus eligible deductions under Chapter VI-A.
+          </div>
+        </div>
+      </section>
+
+      <!-- Section 7.2: Residential Status ⭐ -->
+      <section id="section-2" class="bg-white dark:bg-slate-900 rounded-3xl p-6 sm:p-8 border-2 border-amber-400/80 dark:border-amber-600/50 shadow-xs space-y-6">
+        <div class="flex items-center justify-between">
+          <div class="flex items-center gap-2 text-xs font-bold text-amber-600 dark:text-amber-400 uppercase tracking-wider">
+            <span class="w-2 h-2 rounded-full bg-amber-500"></span> Section 7.2 &bull; High Yield Focus
+          </div>
+          <span class="px-2.5 py-0.5 rounded-full text-xs font-bold bg-amber-100 dark:bg-amber-950 text-amber-800 dark:text-amber-300 border border-amber-300 dark:border-amber-700 flex items-center gap-1">
+            <i data-lucide="star" class="w-3 h-3 fill-amber-500"></i> Must Master
+          </span>
+        </div>
+        <h2 class="font-display text-2xl font-bold text-slate-900 dark:text-white">
+          Residential Status Determination (Section 6)
+        </h2>
+        <p class="text-slate-600 dark:text-slate-300 text-sm leading-relaxed">
+          Tax incidence in India is strictly determined by <strong>Residential Status</strong> in the previous year, NOT by citizenship or domicile. An Indian citizen can be a Non-Resident, while a foreign citizen can be a Resident and Ordinarily Resident (ROR).
+        </p>
+
+        <!-- Residential Status Decision Flowchart / Table -->
+        <div class="p-5 rounded-2xl bg-amber-50/50 dark:bg-slate-800/80 border border-amber-200 dark:border-amber-900/50 space-y-4">
+          <h3 class="font-display font-bold text-base text-slate-900 dark:text-white flex items-center gap-2">
+            <i data-lucide="git-branch" class="w-4 h-4 text-amber-600"></i> Step 1: Resident vs Non-Resident (Basic Conditions - Sec 6(1))
+          </h3>
+          <p class="text-xs text-slate-600 dark:text-slate-300">
+            An individual is considered a <strong>Resident in India</strong> if they satisfy <em>EITHER</em> of the following two basic conditions:
+          </p>
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-3 text-xs">
+            <div class="p-3.5 rounded-xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-700">
+              <span class="font-bold text-amber-800 dark:text-amber-300 block mb-1">Condition A: 182 Days Test</span>
+              Presence in India for a period of <strong>182 days or more</strong> during the relevant Previous Year.
+            </div>
+            <div class="p-3.5 rounded-xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-700">
+              <span class="font-bold text-amber-800 dark:text-amber-300 block mb-1">Condition B: 60 Days + 365 Days Test</span>
+              Presence in India for <strong>60 days or more</strong> in the relevant PY <em>AND</em> <strong>365 days or more</strong> across the 4 preceding PYs.
+            </div>
+          </div>
+
+          <!-- Exceptions & 120-Day Rule Callout -->
+          <div class="p-4 rounded-xl bg-amber-100/70 dark:bg-amber-950/60 border border-amber-300 dark:border-amber-800 text-xs space-y-2">
+            <div class="font-bold text-amber-950 dark:text-amber-200 flex items-center gap-1.5">
+              <i data-lucide="alert-triangle" class="w-4 h-4 text-amber-600"></i>
+              Critical Exceptions where Condition B (60 days) is Modified:
+            </div>
+            <ul class="list-disc pl-5 space-y-1 text-amber-900 dark:text-amber-300">
+              <li><strong>Leaving India for Employment / Crew Member:</strong> For an Indian citizen leaving India during the PY for employment abroad or as a crew member of an Indian ship, the 60-day threshold is replaced by <strong>182 days</strong> (Condition B does not apply at 60 days).</li>
+              <li><strong>Indian Citizen / PIO Visiting India (Income &le; ₹15 Lakhs):</strong> If total income (excluding foreign sources) is up to ₹15 Lakhs, 60 days is replaced by <strong>182 days</strong>.</li>
+              <li><strong>Indian Citizen / PIO Visiting India (Income &gt; ₹15 Lakhs) ⭐:</strong> If Indian taxable income exceeds ₹15 Lakhs, the 60-day threshold is substituted with <strong>120 days</strong> (i.e., &ge;120 days in PY + &ge;365 days in 4 preceding years makes them a Resident, specifically RNOR).</li>
+              <li><strong>Deemed Resident (Section 6(1A)) ⭐:</strong> An Indian citizen having total income (other than foreign sources) exceeding <strong>₹15 Lakhs</strong> who is not liable to tax in any other country by reason of domicile/residence is deemed to be a resident (and automatically classified as RNOR).</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Step 2: ROR vs RNOR -->
+        <div class="p-5 rounded-2xl bg-slate-50 dark:bg-slate-800/60 border border-slate-200 dark:border-slate-700 space-y-3">
+          <h3 class="font-display font-bold text-base text-slate-900 dark:text-white flex items-center gap-2">
+            <i data-lucide="check-circle-2" class="w-4 h-4 text-blue-600"></i> Step 2: ROR vs RNOR (Additional Conditions - Sec 6(6))
+          </h3>
+          <p class="text-xs text-slate-600 dark:text-slate-300 leading-relaxed">
+            A Resident is classified as <strong>Resident and Ordinarily Resident (ROR)</strong> only if they satisfy <em>BOTH</em> of the following additional conditions:
+          </p>
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-3 text-xs">
+            <div class="p-3 bg-white dark:bg-slate-900 rounded-lg border border-slate-200 dark:border-slate-700">
+              1. Resident in India in at least <strong>2 out of the 10 previous years</strong> preceding the relevant PY.
+            </div>
+            <div class="p-3 bg-white dark:bg-slate-900 rounded-lg border border-slate-200 dark:border-slate-700">
+              2. Physical presence in India for a total of <strong>730 days or more</strong> during the 7 preceding previous years.
+            </div>
+          </div>
+          <p class="text-xs font-semibold text-slate-700 dark:text-slate-300">
+            If a resident fails to satisfy either (or both) of these additional conditions, they are classified as <strong>Resident but Not Ordinarily Resident (RNOR)</strong>.
+          </p>
+        </div>
+      </section>
+
+      <!-- Section 7.3: Scope of Total Income -->
+      <section id="section-3" class="bg-white dark:bg-slate-900 rounded-3xl p-6 sm:p-8 border border-slate-200/90 dark:border-slate-800 shadow-xs space-y-4">
+        <div class="flex items-center gap-2 text-xs font-bold text-blue-600 dark:text-blue-400 uppercase tracking-wider">
+          <span class="w-2 h-2 rounded-full bg-blue-600"></span> Section 7.3
+        </div>
+        <h2 class="font-display text-2xl font-bold text-slate-900 dark:text-white">
+          Scope of Total Income by Residential Status (Section 5)
+        </h2>
+        <p class="text-slate-600 dark:text-slate-300 text-sm leading-relaxed">
+          The scope of income subject to Indian tax depends directly on whether the individual is ROR, RNOR, or Non-Resident (NR):
+        </p>
+
+        <div class="overflow-x-auto">
+          <table class="w-full text-left text-xs sm:text-sm border-collapse">
+            <thead>
+              <tr class="bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 border-b border-slate-200 dark:border-slate-700 font-bold">
+                <th class="p-3">Nature of Income</th>
+                <th class="p-3">ROR</th>
+                <th class="p-3">RNOR</th>
+                <th class="p-3">Non-Resident (NR)</th>
+              </tr>
+            </thead>
+            <tbody class="divide-y divide-slate-100 dark:divide-slate-800 text-slate-600 dark:text-slate-300">
+              <tr class="hover:bg-slate-50/80 dark:hover:bg-slate-800/40">
+                <td class="p-3 font-medium">Income received or deemed to be received in India</td>
+                <td class="p-3 font-bold text-emerald-600">Taxable</td>
+                <td class="p-3 font-bold text-emerald-600">Taxable</td>
+                <td class="p-3 font-bold text-emerald-600">Taxable</td>
+              </tr>
+              <tr class="hover:bg-slate-50/80 dark:hover:bg-slate-800/40">
+                <td class="p-3 font-medium">Income accruing or arising (or deemed to accrue) in India</td>
+                <td class="p-3 font-bold text-emerald-600">Taxable</td>
+                <td class="p-3 font-bold text-emerald-600">Taxable</td>
+                <td class="p-3 font-bold text-emerald-600">Taxable</td>
+              </tr>
+              <tr class="hover:bg-slate-50/80 dark:hover:bg-slate-800/40">
+                <td class="p-3 font-medium">Income accruing outside India from a business controlled from or profession set up in India</td>
+                <td class="p-3 font-bold text-emerald-600">Taxable</td>
+                <td class="p-3 font-bold text-emerald-600">Taxable</td>
+                <td class="p-3 font-bold text-rose-500">Not Taxable</td>
+              </tr>
+              <tr class="hover:bg-slate-50/80 dark:hover:bg-slate-800/40">
+                <td class="p-3 font-medium">Income accruing outside India from business outside India (pure foreign income)</td>
+                <td class="p-3 font-bold text-emerald-600">Taxable (Global)</td>
+                <td class="p-3 font-bold text-rose-500">Not Taxable</td>
+                <td class="p-3 font-bold text-rose-500">Not Taxable</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <!-- Section 7.4: The 5 Heads of Income -->
+      <section id="section-4" class="bg-white dark:bg-slate-900 rounded-3xl p-6 sm:p-8 border border-slate-200/90 dark:border-slate-800 shadow-xs space-y-4">
+        <div class="flex items-center gap-2 text-xs font-bold text-blue-600 dark:text-blue-400 uppercase tracking-wider">
+          <span class="w-2 h-2 rounded-full bg-blue-600"></span> Section 7.4
+        </div>
+        <h2 class="font-display text-2xl font-bold text-slate-900 dark:text-white">
+          The Five Heads of Income (Section 14)
+        </h2>
+        <p class="text-slate-600 dark:text-slate-300 text-sm leading-relaxed">
+          All taxable receipts of an assessee must fall strictly into one of the five mutually exclusive heads of income:
+        </p>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4 text-xs sm:text-sm">
+          <div class="p-4 rounded-xl bg-slate-50 dark:bg-slate-800/60 border border-slate-200 dark:border-slate-700">
+            <h4 class="font-bold text-slate-900 dark:text-white mb-1">1. Income from Salaries (Sec 15-17)</h4>
+            <p class="text-slate-600 dark:text-slate-400">
+              Employer-employee relationship prerequisite. Standard deduction: <strong>₹75,000</strong> under New Tax Regime (raised by Finance Act 2024 from ₹50,000); ₹50,000 under Old Regime.
+            </p>
+          </div>
+          <div class="p-4 rounded-xl bg-slate-50 dark:bg-slate-800/60 border border-slate-200 dark:border-slate-700">
+            <h4 class="font-bold text-slate-900 dark:text-white mb-1">2. Income from House Property (Sec 22-27)</h4>
+            <p class="text-slate-600 dark:text-slate-400">
+              Rental income and annual value of property. Standard deduction @ <strong>30% of Net Annual Value (NAV)</strong> under Sec 24(a). Home loan interest up to ₹2 Lakhs deductible under Sec 24(b) for self-occupied property (Old Regime only).
+            </p>
+          </div>
+          <div class="p-4 rounded-xl bg-slate-50 dark:bg-slate-800/60 border border-slate-200 dark:border-slate-700">
+            <h4 class="font-bold text-slate-900 dark:text-white mb-1">3. Profits and Gains of Business or Profession (PGBP)</h4>
+            <p class="text-slate-600 dark:text-slate-400">
+              Revenues minus admissible business expenses. Presumptive schemes: Section 44AD for small businesses (8% / 6% of turnover) and Section 44ADA for specified professionals (50% of gross receipts).
+            </p>
+          </div>
+          <div class="p-4 rounded-xl bg-slate-50 dark:bg-slate-800/60 border border-slate-200 dark:border-slate-700">
+            <h4 class="font-bold text-slate-900 dark:text-white mb-1">4. Capital Gains (Sec 45-55A)</h4>
+            <p class="text-slate-600 dark:text-slate-400">
+              Profits or gains arising from the transfer of a capital asset (Short-Term vs Long-Term). Subject to special rates under Sections 111A, 112, 112A, and 50AA.
+            </p>
+          </div>
+          <div class="p-4 rounded-xl bg-slate-50 dark:bg-slate-800/60 border border-slate-200 dark:border-slate-700 md:col-span-2">
+            <h4 class="font-bold text-slate-900 dark:text-white mb-1">5. Income from Other Sources (IFOS) (Sec 56-59)</h4>
+            <p class="text-slate-600 dark:text-slate-400">
+              Residuary head. Captures dividends, bank interest, family pension, gifts under Sec 56(2)(x), and lottery/gaming winnings (Sec 115BB).
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Section 7.5: Old vs New Regime Sec 115BAC ⭐ -->
+      <section id="section-5" class="bg-white dark:bg-slate-900 rounded-3xl p-6 sm:p-8 border-2 border-blue-400/80 dark:border-blue-600/50 shadow-xs space-y-6">
+        <div class="flex items-center justify-between">
+          <div class="flex items-center gap-2 text-xs font-bold text-blue-600 dark:text-blue-400 uppercase tracking-wider">
+            <span class="w-2 h-2 rounded-full bg-blue-600"></span> Section 7.5 &bull; Core RIA Topic
+          </div>
+          <span class="px-2.5 py-0.5 rounded-full text-xs font-bold bg-blue-100 dark:bg-blue-950 text-blue-800 dark:text-blue-300 border border-blue-300 dark:border-blue-700 flex items-center gap-1">
+            <i data-lucide="star" class="w-3 h-3 fill-blue-500"></i> Section 115BAC Default
+          </span>
+        </div>
+        <h2 class="font-display text-2xl font-bold text-slate-900 dark:text-white">
+          Old Tax Regime vs New Tax Regime (Section 115BAC)
+        </h2>
+        <p class="text-slate-600 dark:text-slate-300 text-sm leading-relaxed">
+          From FY 2023-24 onwards, the <strong>New Tax Regime under Section 115BAC</strong> is the <strong>default regime</strong>. Taxpayers must explicitly choose to opt into the Old Tax Regime. The Finance (No. 2) Act 2024 further restructured the new regime slabs to provide deeper tax relief.
+        </p>
+
+        <!-- Slabs Comparison Table -->
+        <div class="overflow-x-auto">
+          <table class="w-full text-left text-xs sm:text-sm border-collapse">
+            <thead>
+              <tr class="bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 border-b border-slate-200 dark:border-slate-700 font-bold">
+                <th class="p-3.5">Taxable Income Slabs</th>
+                <th class="p-3.5">New Regime Rate (Sec 115BAC - FA 2024)</th>
+                <th class="p-3.5">Old Regime Rate (Individual &lt; 60 yrs)</th>
+              </tr>
+            </thead>
+            <tbody class="divide-y divide-slate-100 dark:divide-slate-800 text-slate-600 dark:text-slate-300">
+              <tr class="hover:bg-slate-50/80 dark:hover:bg-slate-800/40">
+                <td class="p-3 font-semibold">Up to ₹2,50,000</td>
+                <td class="p-3 font-bold text-emerald-600">Nil</td>
+                <td class="p-3 font-bold text-emerald-600">Nil</td>
+              </tr>
+              <tr class="hover:bg-slate-50/80 dark:hover:bg-slate-800/40">
+                <td class="p-3 font-semibold">₹2,50,001 to ₹3,00,000</td>
+                <td class="p-3 font-bold text-emerald-600">Nil (Exemption limit is ₹3L)</td>
+                <td class="p-3">5%</td>
+              </tr>
+              <tr class="hover:bg-slate-50/80 dark:hover:bg-slate-800/40">
+                <td class="p-3 font-semibold">₹3,00,001 to ₹5,00,000</td>
+                <td class="p-3">5%</td>
+                <td class="p-3">5%</td>
+              </tr>
+              <tr class="hover:bg-slate-50/80 dark:hover:bg-slate-800/40">
+                <td class="p-3 font-semibold">₹5,00,001 to ₹7,00,000</td>
+                <td class="p-3">5% (5% continues up to ₹7 Lakhs)</td>
+                <td class="p-3">20%</td>
+              </tr>
+              <tr class="hover:bg-slate-50/80 dark:hover:bg-slate-800/40">
+                <td class="p-3 font-semibold">₹7,00,001 to ₹10,00,000</td>
+                <td class="p-3">10%</td>
+                <td class="p-3">20%</td>
+              </tr>
+              <tr class="hover:bg-slate-50/80 dark:hover:bg-slate-800/40">
+                <td class="p-3 font-semibold">₹10,00,001 to ₹12,00,000</td>
+                <td class="p-3">15%</td>
+                <td class="p-3">30%</td>
+              </tr>
+              <tr class="hover:bg-slate-50/80 dark:hover:bg-slate-800/40">
+                <td class="p-3 font-semibold">₹12,00,001 to ₹15,00,000</td>
+                <td class="p-3">20%</td>
+                <td class="p-3">30%</td>
+              </tr>
+              <tr class="hover:bg-slate-50/80 dark:hover:bg-slate-800/40">
+                <td class="p-3 font-semibold">Above ₹15,00,000</td>
+                <td class="p-3 font-bold text-rose-600">30%</td>
+                <td class="p-3 font-bold text-rose-600">30%</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <!-- Section 87A Rebate & Salaried Exemption -->
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4 text-xs">
+          <div class="p-4 rounded-xl bg-blue-50 dark:bg-blue-950/40 border border-blue-200 dark:border-blue-800 space-y-1.5">
+            <h4 class="font-bold text-blue-950 dark:text-blue-200 text-sm flex items-center gap-1.5">
+              <i data-lucide="shield" class="w-4 h-4 text-blue-600"></i> Section 87A Tax Rebate
+            </h4>
+            <p class="text-blue-900 dark:text-blue-300 leading-relaxed">
+              <strong>New Regime:</strong> Rebate up to <strong>₹25,000</strong> for total taxable income up to <strong>₹7,00,000</strong>. Net tax payable is ZERO for income up to ₹7 Lakhs.<br>
+              <strong>Old Regime:</strong> Rebate up to <strong>₹12,500</strong> for total taxable income up to <strong>₹5,00,000</strong>.
+            </p>
+          </div>
+          <div class="p-4 rounded-xl bg-emerald-50 dark:bg-emerald-950/40 border border-emerald-200 dark:border-emerald-800 space-y-1.5">
+            <h4 class="font-bold text-emerald-950 dark:text-emerald-200 text-sm flex items-center gap-1.5">
+              <i data-lucide="check" class="w-4 h-4 text-emerald-600"></i> Salaried Threshold: ₹7.75 Lakhs Zero Tax
+            </h4>
+            <p class="text-emerald-900 dark:text-emerald-300 leading-relaxed">
+              With the enhanced standard deduction of <strong>₹75,000</strong> under Finance Act 2024, a salaried individual earning a gross salary of up to <strong>₹7,75,000</strong> pays <strong>₹0 tax</strong> under Section 115BAC (₹7,75,000 &minus; ₹75,000 = ₹7,00,000 taxable &rarr; 87A rebate wipes out full tax).
+            </p>
+          </div>
+        </div>
+
+        <!-- Deductions Allowed vs Foregone -->
+        <div class="p-4 rounded-xl bg-slate-50 dark:bg-slate-800/60 border border-slate-200 dark:border-slate-700 text-xs space-y-2">
+          <span class="font-bold text-slate-900 dark:text-white block">Deductions Status under New Regime (Sec 115BAC):</span>
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+            <div>
+              <span class="font-semibold text-rose-600 dark:text-rose-400 block mb-1">❌ Foregone under New Regime:</span>
+              <ul class="list-disc pl-4 space-y-0.5 text-slate-600 dark:text-slate-400">
+                <li>Chapter VI-A (80C, 80CCC, 80D, 80E, 80G, 80TTA, 80TTB)</li>
+                <li>Section 80CCD(1B) additional ₹50k NPS</li>
+                <li>Section 24(b) interest on self-occupied house loan (₹2L)</li>
+                <li>House Rent Allowance (HRA) & Leave Travel Allowance (LTA)</li>
+              </ul>
+            </div>
+            <div>
+              <span class="font-semibold text-emerald-600 dark:text-emerald-400 block mb-1">✅ Specifically Retained under New Regime:</span>
+              <ul class="list-disc pl-4 space-y-0.5 text-slate-600 dark:text-slate-400">
+                <li>Standard deduction of ₹75,000 for salaried / ₹25,000 for family pension</li>
+                <li><strong>Section 80CCD(2):</strong> Employer contribution to NPS (up to 14% of Salary)</li>
+                <li>Section 80JJAA (Deduction for new employment)</li>
+                <li>Section 80CCH(2) (Agnipath scheme contributions)</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Section 7.6: Deductions under Chapter VI-A -->
+      <section id="section-6" class="bg-white dark:bg-slate-900 rounded-3xl p-6 sm:p-8 border border-slate-200/90 dark:border-slate-800 shadow-xs space-y-4">
+        <div class="flex items-center gap-2 text-xs font-bold text-blue-600 dark:text-blue-400 uppercase tracking-wider">
+          <span class="w-2 h-2 rounded-full bg-blue-600"></span> Section 7.6
+        </div>
+        <h2 class="font-display text-2xl font-bold text-slate-900 dark:text-white">
+          Deductions under Chapter VI-A (Applicable for Old Tax Regime)
+        </h2>
+        <p class="text-slate-600 dark:text-slate-300 text-sm leading-relaxed">
+          Chapter VI-A deductions allow eligible tax deductions from Gross Total Income to compute taxable income:
+        </p>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4 text-xs sm:text-sm">
+          <div class="p-4 rounded-xl bg-slate-50 dark:bg-slate-800/60 border border-slate-200 dark:border-slate-700">
+            <h4 class="font-bold text-slate-900 dark:text-white mb-1">Section 80C, 80CCC & 80CCD(1)</h4>
+            <p class="text-slate-600 dark:text-slate-400 leading-relaxed">
+              Overall aggregate cap under <strong>Section 80CCE is ₹1,50,000</strong>. Covers EPF, PPF, ELSS, Life Insurance premiums (sum assured &ge; 10x), principal repayment of home loan, tuition fees, and NPS employee contributions.
+            </p>
+          </div>
+          <div class="p-4 rounded-xl bg-slate-50 dark:bg-slate-800/60 border border-slate-200 dark:border-slate-700">
+            <h4 class="font-bold text-slate-900 dark:text-white mb-1">Section 80CCD(1B) ⭐</h4>
+            <p class="text-slate-600 dark:text-slate-400 leading-relaxed">
+              Exclusive additional deduction of up to <strong>₹50,000</strong> for self-contributions to NPS Tier I. This is <em>over and above</em> the ₹1.5 Lakh limit under Section 80CCE (total NPS deduction possible = ₹2,00,000).
+            </p>
+          </div>
+          <div class="p-4 rounded-xl bg-slate-50 dark:bg-slate-800/60 border border-slate-200 dark:border-slate-700">
+            <h4 class="font-bold text-slate-900 dark:text-white mb-1">Section 80D: Health Insurance</h4>
+            <p class="text-slate-600 dark:text-slate-400 leading-relaxed">
+              Self/Spouse/Children: <strong>₹25,000</strong> (₹50,000 if senior citizen). Parents: additional <strong>₹25,000</strong> (₹50,000 if senior citizens). Maximum deduction: <strong>₹1,00,000</strong> if both assessee and parents are &ge;60 years. Includes ₹5,000 for preventive health check-up.
+            </p>
+          </div>
+          <div class="p-4 rounded-xl bg-slate-50 dark:bg-slate-800/60 border border-slate-200 dark:border-slate-700">
+            <h4 class="font-bold text-slate-900 dark:text-white mb-1">Section 80E: Higher Education Loan</h4>
+            <p class="text-slate-600 dark:text-slate-400 leading-relaxed">
+              Deduction for interest paid on loans borrowed for higher education for self, spouse, or children. <strong>No upper monetary ceiling</strong>. Available for a maximum period of <strong>8 consecutive years</strong>.
+            </p>
+          </div>
+          <div class="p-4 rounded-xl bg-slate-50 dark:bg-slate-800/60 border border-slate-200 dark:border-slate-700 md:col-span-2">
+            <h4 class="font-bold text-slate-900 dark:text-white mb-1">Section 80TTA vs Section 80TTB</h4>
+            <p class="text-slate-600 dark:text-slate-400 leading-relaxed">
+              <strong>Sec 80TTA:</strong> Up to ₹10,000 on savings account interest for individuals &lt;60 years.<br>
+              <strong>Sec 80TTB:</strong> Up to <strong>₹50,000</strong> for resident senior citizens (&ge;60 years) on interest from <em>all bank/post-office deposits</em> (savings, FDs, RDs).
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Section 7.7: Surcharge, Cess, and Marginal Relief -->
+      <section id="section-7" class="bg-white dark:bg-slate-900 rounded-3xl p-6 sm:p-8 border border-slate-200/90 dark:border-slate-800 shadow-xs space-y-4">
+        <div class="flex items-center gap-2 text-xs font-bold text-blue-600 dark:text-blue-400 uppercase tracking-wider">
+          <span class="w-2 h-2 rounded-full bg-blue-600"></span> Section 7.7
+        </div>
+        <h2 class="font-display text-2xl font-bold text-slate-900 dark:text-white">
+          Surcharge, Health & Education Cess, and Marginal Relief
+        </h2>
+        <p class="text-slate-600 dark:text-slate-300 text-sm leading-relaxed">
+          Higher income earners pay a surcharge on base income tax, followed by a mandatory cess:
+        </p>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4 text-xs sm:text-sm">
+          <div class="p-4 rounded-xl bg-slate-50 dark:bg-slate-800/60 border border-slate-200 dark:border-slate-700">
+            <h4 class="font-bold text-slate-900 dark:text-white mb-2">Surcharge Slabs for Individuals</h4>
+            <ul class="space-y-1.5 text-slate-600 dark:text-slate-400">
+              <li>• Total Income &gt; ₹50 Lakhs to ₹1 Crore: <strong>10%</strong></li>
+              <li>• Total Income &gt; ₹1 Crore to ₹2 Crores: <strong>15%</strong></li>
+              <li>• Total Income &gt; ₹2 Crores to ₹5 Crores: <strong>25%</strong></li>
+              <li>• Total Income &gt; ₹5 Crores (Old Regime only): <strong>37%</strong></li>
+              <li>• <span class="font-bold text-blue-700 dark:text-blue-300">Under New Regime (Sec 115BAC):</span> Surcharge is <strong>CAPPED at 25%</strong> for all income exceeding ₹2 Crores!</li>
+            </ul>
+          </div>
+          <div class="p-4 rounded-xl bg-slate-50 dark:bg-slate-800/60 border border-slate-200 dark:border-slate-700">
+            <h4 class="font-bold text-slate-900 dark:text-white mb-2">Cess & Marginal Relief</h4>
+            <div class="space-y-2 text-slate-600 dark:text-slate-400">
+              <p>
+                <strong>Health & Education Cess:</strong> Levied at a uniform <strong>4%</strong> on the sum of base income tax plus surcharge.
+              </p>
+              <p>
+                <strong>Marginal Relief:</strong> Granted when the tax payable (including surcharge) exceeds the tax payable on the threshold income by an amount greater than the excess income earned beyond the threshold.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Section 7.8: Advance Tax & Penal Interest ⭐ -->
+      <section id="section-8" class="bg-white dark:bg-slate-900 rounded-3xl p-6 sm:p-8 border-2 border-amber-400/80 dark:border-amber-600/50 shadow-xs space-y-6">
+        <div class="flex items-center justify-between">
+          <div class="flex items-center gap-2 text-xs font-bold text-amber-600 dark:text-amber-400 uppercase tracking-wider">
+            <span class="w-2 h-2 rounded-full bg-amber-500"></span> Section 7.8 &bull; High Yield Focus
+          </div>
+          <span class="px-2.5 py-0.5 rounded-full text-xs font-bold bg-amber-100 dark:bg-amber-950 text-amber-800 dark:text-amber-300 border border-amber-300 dark:border-amber-700 flex items-center gap-1">
+            <i data-lucide="star" class="w-3 h-3 fill-amber-500"></i> Heavily Tested
+          </span>
+        </div>
+        <h2 class="font-display text-2xl font-bold text-slate-900 dark:text-white">
+          Advance Tax Installments & Penal Interest (Sections 208, 234A, 234B, 234C)
+        </h2>
+        <p class="text-slate-600 dark:text-slate-300 text-sm leading-relaxed">
+          Under Section 208, every person whose estimated tax liability for the financial year (after reducing TDS/TCS) is <strong>₹10,000 or more</strong> must pay advance tax in four quarterly installments.
+        </p>
+
+        <!-- Senior Citizen Exemption -->
+        <div class="p-3.5 rounded-xl bg-amber-50 dark:bg-amber-950/60 border border-amber-200 dark:border-amber-800 text-xs text-amber-900 dark:text-amber-200">
+          <strong>Senior Citizen Exemption:</strong> A resident individual aged <strong>60 years or more</strong> who does <strong>NOT have any income from business or profession</strong> is completely exempt from paying advance tax.
+        </div>
+
+        <!-- Advance Tax Installment Table -->
+        <div class="overflow-x-auto">
+          <table class="w-full text-left text-xs sm:text-sm border-collapse">
+            <thead>
+              <tr class="bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 border-b border-slate-200 dark:border-slate-700 font-bold">
+                <th class="p-3">Due Date of Installment</th>
+                <th class="p-3">Cumulative Minimum Percentage Payable</th>
+                <th class="p-3">Shortfall Trigger for Sec 234C</th>
+              </tr>
+            </thead>
+            <tbody class="divide-y divide-slate-100 dark:divide-slate-800 text-slate-600 dark:text-slate-300">
+              <tr class="hover:bg-slate-50/80 dark:hover:bg-slate-800/40">
+                <td class="p-3 font-semibold text-slate-900 dark:text-white">On or before 15th June</td>
+                <td class="p-3 font-bold text-blue-600">Not less than 15%</td>
+                <td class="p-3">Interest if paid &lt; 12% of total tax</td>
+              </tr>
+              <tr class="hover:bg-slate-50/80 dark:hover:bg-slate-800/40">
+                <td class="p-3 font-semibold text-slate-900 dark:text-white">On or before 15th September</td>
+                <td class="p-3 font-bold text-blue-600">Not less than 45%</td>
+                <td class="p-3">Interest if paid &lt; 36% of total tax</td>
+              </tr>
+              <tr class="hover:bg-slate-50/80 dark:hover:bg-slate-800/40">
+                <td class="p-3 font-semibold text-slate-900 dark:text-white">On or before 15th December</td>
+                <td class="p-3 font-bold text-blue-600">Not less than 75%</td>
+                <td class="p-3">Interest if paid &lt; 75% of total tax</td>
+              </tr>
+              <tr class="hover:bg-slate-50/80 dark:hover:bg-slate-800/40">
+                <td class="p-3 font-semibold text-slate-900 dark:text-white">On or before 15th March</td>
+                <td class="p-3 font-bold text-blue-600">100% of tax liability</td>
+                <td class="p-3">Interest if paid &lt; 100% of total tax</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <!-- Interest Sections (234A, 234B, 234C) -->
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-3 text-xs">
+          <div class="p-3.5 rounded-xl bg-slate-50 dark:bg-slate-800/60 border border-slate-200 dark:border-slate-700">
+            <span class="font-bold text-rose-600 dark:text-rose-400 block mb-1">Section 234A</span>
+            <strong>Delay in Filing Return:</strong> Interest @ <strong>1% per month</strong> or part thereof on unpaid tax from the due date of filing ITR until actual filing date.
+          </div>
+          <div class="p-3.5 rounded-xl bg-slate-50 dark:bg-slate-800/60 border border-slate-200 dark:border-slate-700">
+            <span class="font-bold text-rose-600 dark:text-rose-400 block mb-1">Section 234B</span>
+            <strong>Default in Paying Advance Tax:</strong> Triggered if advance tax paid is <strong>less than 90%</strong> of assessed tax. Interest @ <strong>1% per month</strong> from 1st April of AY.
+          </div>
+          <div class="p-3.5 rounded-xl bg-slate-50 dark:bg-slate-800/60 border border-slate-200 dark:border-slate-700">
+            <span class="font-bold text-rose-600 dark:text-rose-400 block mb-1">Section 234C</span>
+            <strong>Deferment of Installments:</strong> Interest @ <strong>1% per month</strong> for 3 months (1 month for March installment) on shortfall in individual quarterly tranches.
+          </div>
+        </div>
+      </section>
+
+      <!-- Interactive 12-Question Quiz -->
+      <section id="interactive-quiz" class="bg-gradient-to-br from-slate-900 to-indigo-950 text-white rounded-3xl p-6 sm:p-8 shadow-xl space-y-6">
+        <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 pb-4 border-b border-white/10">
+          <div>
+            <span class="px-2.5 py-1 rounded-full text-xs font-bold uppercase tracking-wider bg-blue-500/20 text-blue-300 border border-blue-400/30">
+              Self-Assessment Simulator
+            </span>
+            <h3 class="font-display text-xl sm:text-2xl font-bold mt-1 text-white">
+              Chapter 7 Practice Quiz (12 Questions)
+            </h3>
+          </div>
+          <div class="flex items-center gap-3">
+            <div class="text-right">
+              <span class="text-xs text-slate-400 block">Progress</span>
+              <span class="text-sm font-bold text-indigo-300"><span id="answered-count">0</span> / 12 Answered</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Quiz Questions Container -->
+        <div id="questions-container" class="space-y-6"></div>
+
+        <!-- Quiz Submission & Results -->
+        <div class="pt-4 border-t border-white/10 flex flex-col sm:flex-row items-center justify-between gap-4">
+          <button id="submit-quiz-btn" onclick="submitQuiz()" class="w-full sm:w-auto px-6 py-3 rounded-xl bg-blue-600 hover:bg-blue-500 text-white font-bold text-sm transition-all shadow-md flex items-center justify-center gap-2">
+            <i data-lucide="check-circle" class="w-4 h-4"></i>
+            <span>Submit Quiz & Validate Answers</span>
+          </button>
+          <button id="reset-quiz-btn" onclick="resetQuiz()" class="hidden w-full sm:w-auto px-6 py-3 rounded-xl bg-slate-800 hover:bg-slate-700 text-slate-200 font-bold text-sm transition-all border border-slate-700 flex items-center justify-center gap-2">
+            <i data-lucide="rotate-ccw" class="w-4 h-4"></i>
+            <span>Retake Chapter Quiz</span>
+          </button>
+        </div>
+
+        <!-- Results Display Box -->
+        <div id="quiz-results" class="hidden p-6 rounded-2xl bg-white/10 border border-white/20 space-y-3">
+          <div class="flex items-center justify-between">
+            <span id="result-status-badge" class="px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider"></span>
+            <span id="score-display" class="font-display font-extrabold text-2xl text-white"></span>
+          </div>
+          <p id="percentage-display" class="text-sm text-indigo-200 font-medium"></p>
+          <p id="result-summary-text" class="text-xs text-slate-300 leading-relaxed"></p>
+        </div>
+      </section>
+
+    </main>
+  </div>
+
+  <!-- Quiz Script -->
+  <script>
+    const questionsData = [
+      {
+        id: 1,
+        question: "An Indian citizen leaves India on 15th July 2024 for the purpose of employment abroad. He has never traveled outside India before. What is his residential status for PY 2024-25?",
+        options: [
+          { key: "a", text: "Resident and Ordinarily Resident (ROR)" },
+          { key: "b", text: "Resident but Not Ordinarily Resident (RNOR)" },
+          { key: "c", text: "Non-Resident (NR)" },
+          { key: "d", text: "Deemed Resident under Section 6(1A)" }
+        ],
+        correct: "c",
+        explanation: "Since he leaves India for employment abroad during the PY, the 60-day threshold under Condition B is substituted with 182 days. From 1 April to 15 July is 106 days (30+31+30+15). Because he stayed less than 182 days, he is a Non-Resident."
+      },
+      {
+        id: 2,
+        question: "An Indian citizen residing in Dubai visits India during PY 2024-25 for 135 days. His total income from Indian sources is ₹22 Lakhs. In the 4 preceding years, he was in India for 400 days. What is his residential status?",
+        options: [
+          { key: "a", text: "Non-Resident" },
+          { key: "b", text: "Resident but Not Ordinarily Resident (RNOR)" },
+          { key: "c", text: "Resident and Ordinarily Resident (ROR)" },
+          { key: "d", text: "Exempt from Indian taxation" }
+        ],
+        correct: "b",
+        explanation: "For an Indian citizen visiting India whose Indian income exceeds ₹15 Lakhs, the 60-day condition is substituted by 120 days. Having stayed 135 days in the PY and >365 days in 4 preceding years, he qualifies as a resident. Furthermore, the statute explicitly stipulates that individuals qualifying under this 120-day rule are always RNOR."
+      },
+      {
+        id: 3,
+        question: "Under the default New Tax Regime (Section 115BAC) post-Finance (No. 2) Act 2024, what is the tax rate applicable to taxable income between ₹7,00,001 and ₹10,00,000?",
+        options: [
+          { key: "a", text: "5%" },
+          { key: "b", text: "10%" },
+          { key: "c", text: "15%" },
+          { key: "d", text: "20%" }
+        ],
+        correct: "b",
+        explanation: "Under the restructured Section 115BAC slabs: 0-3L is Nil, 3-7L is 5%, 7-10L is 10%, 10-12L is 15%, 12-15L is 20%, and >15L is 30%."
+      },
+      {
+        id: 4,
+        question: "What is the standard deduction allowed on salary income under the New Tax Regime (Section 115BAC) as amended by Finance Act 2024?",
+        options: [
+          { key: "a", text: "₹40,000" },
+          { key: "b", text: "₹50,000" },
+          { key: "c", text: "₹75,000" },
+          { key: "d", text: "₹1,00,000" }
+        ],
+        correct: "c",
+        explanation: "Finance Act 2024 enhanced the standard deduction for salaried individuals under the New Tax Regime from ₹50,000 to ₹75,000."
+      },
+      {
+        id: 5,
+        question: "Under Section 87A of the Income Tax Act, what is the maximum rebate available to an individual choosing the New Tax Regime whose taxable income is up to ₹7,00,000?",
+        options: [
+          { key: "a", text: "₹12,500" },
+          { key: "b", text: "₹20,000" },
+          { key: "c", text: "₹25,000" },
+          { key: "d", text: "₹37,500" }
+        ],
+        correct: "c",
+        explanation: "Under Section 115BAC, the Section 87A rebate is available up to ₹25,000 for total taxable income up to ₹7,00,000, reducing the net tax payable to zero."
+      },
+      {
+        id: 6,
+        question: "Which of the following Chapter VI-A deductions is ALLOWED to be claimed by an individual under the New Tax Regime (Section 115BAC)?",
+        options: [
+          { key: "a", text: "Section 80C (PPF, ELSS, Insurance)" },
+          { key: "b", text: "Section 80D (Mediclaim premium)" },
+          { key: "c", text: "Section 80CCD(1B) (Additional ₹50k NPS)" },
+          { key: "d", text: "Section 80CCD(2) (Employer contribution to NPS)" }
+        ],
+        correct: "d",
+        explanation: "Section 80CCD(2) employer contribution to NPS is explicitly permitted under the New Tax Regime (up to 14% of salary). Sections 80C, 80D, and 80CCD(1B) are disallowed under Section 115BAC."
+      },
+      {
+        id: 7,
+        question: "What is the maximum surcharge rate applicable to an individual opting for the New Tax Regime (Section 115BAC) whose total income exceeds ₹5 Crores?",
+        options: [
+          { key: "a", text: "15%" },
+          { key: "b", text: "25%" },
+          { key: "c", text: "37%" },
+          { key: "d", text: "42.74%" }
+        ],
+        correct: "b",
+        explanation: "Under the New Tax Regime, the maximum surcharge is capped at 25% for income exceeding ₹2 Crores. The 37% surcharge bracket exists only under the Old Tax Regime."
+      },
+      {
+        id: 8,
+        question: "Under Section 208, what is the threshold of estimated net tax liability at or above which an assessee is obligated to pay advance tax?",
+        options: [
+          { key: "a", text: "₹5,000" },
+          { key: "b", text: "₹10,000" },
+          { key: "c", text: "₹20,000" },
+          { key: "d", text: "₹50,000" }
+        ],
+        correct: "b",
+        explanation: "Section 208 mandates advance tax payment if the estimated tax liability for the financial year (after TDS/TCS) is ₹10,000 or more."
+      },
+      {
+        id: 9,
+        question: "What cumulative percentage of advance tax must an individual assessee pay on or before 15th September of the financial year?",
+        options: [
+          { key: "a", text: "15%" },
+          { key: "b", text: "30%" },
+          { key: "c", text: "45%" },
+          { key: "d", text: "75%" }
+        ],
+        correct: "c",
+        explanation: "The advance tax installment schedule mandates: 15% by 15 June, 45% by 15 September, 75% by 15 December, and 100% by 15 March."
+      },
+      {
+        id: 10,
+        question: "Under Section 234B, penal interest is triggered if the advance tax paid by the assessee during the financial year is less than what percentage of the assessed tax?",
+        options: [
+          { key: "a", text: "75%" },
+          { key: "b", text: "80%" },
+          { key: "c", text: "90%" },
+          { key: "d", text: "100%" }
+        ],
+        correct: "c",
+        explanation: "Section 234B applies interest @ 1% per month if the advance tax paid is less than 90% of the assessed tax."
+      },
+      {
+        id: 11,
+        question: "Mr. Sharma, aged 64, is a resident individual whose only sources of income are pension, interest from bank deposits, and rental income. Is he liable to pay advance tax?",
+        options: [
+          { key: "a", text: "Yes, because his tax liability exceeds ₹10,000" },
+          { key: "b", text: "No, because resident senior citizens having no business or professional income are exempt" },
+          { key: "c", text: "Yes, because rental income is treated as business income" },
+          { key: "d", text: "No, because senior citizens are exempt from paying income tax altogether" }
+        ],
+        correct: "b",
+        explanation: "Under Section 207(2), a resident individual aged 60 years or above who does not have any income chargeable under the head 'Profits and gains of business or profession' is exempt from advance tax."
+      },
+      {
+        id: 12,
+        question: "An individual earns foreign dividend income from shares held in a UK company. The funds are credited to his London bank account and never remitted to India. In whose hands is this income taxable?",
+        options: [
+          { key: "a", text: "Taxable only if the assessee is ROR" },
+          { key: "b", text: "Taxable for ROR and RNOR, but not NR" },
+          { key: "c", text: "Taxable for all: ROR, RNOR, and NR" },
+          { key: "d", text: "Exempt for all individuals under DTAA" }
+        ],
+        correct: "a",
+        explanation: "Pure foreign income accrued and received outside India is taxable ONLY in the hands of a Resident and Ordinarily Resident (ROR). It is not taxable for RNOR or Non-Residents."
+      }
+    ];
+
+    let userAnswers = {};
+
+    function renderQuiz() {
+      const container = document.getElementById("questions-container");
+      container.innerHTML = "";
+
+      questionsData.forEach((q, index) => {
+        const qDiv = document.createElement("div");
+        qDiv.className = "p-5 rounded-2xl bg-white/5 border border-white/10 space-y-4 transition-all";
+        qDiv.id = `q-box-${q.id}`;
+
+        let optionsHtml = "";
+        q.options.forEach(opt => {
+          optionsHtml += `
+            <label class="flex items-center gap-3 p-3 rounded-xl bg-white/5 hover:bg-white/10 border border-white/5 cursor-pointer text-xs sm:text-sm transition-all" onclick="selectOption(${q.id}, '${opt.key}')" id="label-${q.id}-${opt.key}">
+              <input type="radio" name="question-${q.id}" value="${opt.key}" class="w-4 h-4 text-blue-500 focus:ring-0 focus:ring-offset-0 bg-transparent border-slate-500">
+              <span class="font-bold text-blue-300 w-5 uppercase">${opt.key}.</span>
+              <span class="text-slate-200">${opt.text}</span>
+            </label>
+          `;
+        });
+
+        qDiv.innerHTML = `
+          <div class="flex items-start justify-between gap-2">
+            <span class="text-xs font-bold text-blue-400 uppercase tracking-wider">Question ${index + 1} of ${questionsData.length}</span>
+            <span id="badge-${q.id}" class="text-xs px-2 py-0.5 rounded-full bg-white/5 text-slate-400 font-medium">Unanswered</span>
+          </div>
+          <h4 class="font-display font-semibold text-sm sm:text-base text-white">${q.question}</h4>
+          <div class="space-y-2 mt-3">
+            ${optionsHtml}
+          </div>
+          <div id="explanation-${q.id}" class="hidden p-4 rounded-xl text-xs sm:text-sm mt-3 space-y-1"></div>
+        `;
+        container.appendChild(qDiv);
+      });
+      lucide.createIcons();
+    }
+
+    function selectOption(qId, key) {
+      userAnswers[qId] = key;
+      const count = Object.keys(userAnswers).length;
+      document.getElementById("answered-count").innerText = count;
+      
+      const badge = document.getElementById(`badge-${qId}`);
+      if (badge) {
+        badge.innerText = "Answered";
+        badge.className = "text-xs px-2 py-0.5 rounded-full bg-blue-500/20 text-blue-300 font-medium";
+      }
+
+      const q = questionsData.find(item => item.id === qId);
+      q.options.forEach(opt => {
+        const lbl = document.getElementById(`label-${qId}-${opt.key}`);
+        if (opt.key === key) {
+          lbl.className = "flex items-center gap-3 p-3 rounded-xl bg-blue-600/30 border border-blue-400/50 cursor-pointer text-xs sm:text-sm transition-all";
+        } else {
+          lbl.className = "flex items-center gap-3 p-3 rounded-xl bg-white/5 hover:bg-white/10 border border-white/5 cursor-pointer text-xs sm:text-sm transition-all";
+        }
+      });
+    }
+
+    function submitQuiz() {
+      let score = 0;
+      questionsData.forEach(q => {
+        const selected = userAnswers[q.id];
+        const isCorrect = selected === q.correct;
+        if (isCorrect) score++;
+
+        const explanationDiv = document.getElementById(`explanation-${q.id}`);
+        explanationDiv.classList.remove("hidden");
+
+        if (isCorrect) {
+          explanationDiv.className = "p-4 rounded-xl text-xs sm:text-sm mt-3 bg-emerald-950/60 border border-emerald-600 text-emerald-200 space-y-1";
+          explanationDiv.innerHTML = `<div class="font-bold text-emerald-400 flex items-center gap-1.5"><i data-lucide="check" class="w-4 h-4"></i> Correct!</div><p>${q.explanation}</p>`;
+        } else {
+          explanationDiv.className = "p-4 rounded-xl text-xs sm:text-sm mt-3 bg-rose-950/60 border border-rose-600 text-rose-200 space-y-1";
+          explanationDiv.innerHTML = `<div class="font-bold text-rose-400 flex items-center gap-1.5"><i data-lucide="x" class="w-4 h-4"></i> Incorrect (Correct Answer: ${q.correct.toUpperCase()})</div><p>${q.explanation}</p>`;
+        }
+      });
+
+      const percentage = Math.round((score / questionsData.length) * 100);
+      const passed = percentage >= 60;
+      
+      const resultsDiv = document.getElementById("quiz-results");
+      resultsDiv.classList.remove("hidden");
+
+      const statusBadge = document.getElementById("result-status-badge");
+      statusBadge.innerText = passed ? "Status: Passed (60%+ Benchmark)" : "Status: Needs Revision";
+      statusBadge.className = passed ? "px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider bg-emerald-500 text-emerald-950" : "px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider bg-amber-500 text-amber-950";
+
+      document.getElementById("score-display").innerText = `${score} / ${questionsData.length}`;
+      document.getElementById("percentage-display").innerText = `${percentage}% Score (NISM Passing Benchmark: 60%)`;
+
+      document.getElementById("result-summary-text").innerText = passed
+        ? `Excellent job! You scored ${percentage}%, successfully clearing the NISM Level 2 chapter benchmark. Review the explanations above to cement your understanding.`
+        : `You scored ${percentage}%. Revisit the notes on Section 115BAC, 120-day residential rule, and Advance Tax before re-attempting.`;
+
+      document.getElementById("submit-quiz-btn").classList.add("hidden");
+      document.getElementById("reset-quiz-btn").classList.remove("hidden");
+
+      resultsDiv.scrollIntoView({ behavior: 'smooth' });
+      lucide.createIcons();
+    }
+
+    function resetQuiz() {
+      userAnswers = {};
+      document.getElementById("answered-count").innerText = "0";
+      document.getElementById("quiz-results").classList.add("hidden");
+      document.getElementById("submit-quiz-btn").classList.remove("hidden");
+      document.getElementById("reset-quiz-btn").classList.add("hidden");
+      renderQuiz();
+      document.getElementById("interactive-quiz").scrollIntoView({ behavior: 'smooth' });
+    }
+
+    // Initialize Quiz & Preloader
+    window.addEventListener('load', () => {
+      const preloader = document.getElementById('eduleb-preloader');
+      if (preloader) {
+        preloader.classList.add('loaded');
+        setTimeout(() => preloader.style.display = 'none', 400);
+      }
+      renderQuiz();
+      lucide.createIcons();
+    });
+  </script>
+</body>
+</html>

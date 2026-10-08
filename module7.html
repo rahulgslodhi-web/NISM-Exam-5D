@@ -1,0 +1,524 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Module 7: Risk Management & Insurance Planning | NISM Series X-B Study Hub</title>
+  
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  
+  <!-- Google Fonts: DM Sans & Jost (Eduleb Benchmark) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Jost:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+  
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+
+  <!-- Modern Documentation Design System -->
+  <link rel="stylesheet" href="modern-docs.css">
+  <script defer src="nav-sidebar.js"></script>
+
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['"DM Sans"', 'sans-serif'],
+            display: ['"Jost"', 'sans-serif'],
+            heading: ['"Jost"', 'sans-serif']
+          },
+          colors: {
+            brand: {
+              50: '#fffbeb',
+              100: '#fef3c7',
+              500: '#f59e0b',
+              600: '#d97706',
+              700: '#b45309',
+              800: '#92400e',
+              900: '#78350f'
+            }
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    body {
+      font-family: 'DM Sans', sans-serif;
+      font-size: 16px;
+      line-height: 26px;
+      color: #4a5355;
+    }
+    h1, h2, h3, h4, h5, h6, .font-display, .font-heading {
+      font-family: 'Jost', sans-serif;
+      font-weight: 700;
+    }
+    .hero-glow-amber {
+      background: radial-gradient(circle at 50% 20%, rgba(245, 158, 11, 0.15), transparent 70%);
+    }
+  </style>
+</head>
+<body class="bg-slate-50 dark:bg-slate-950 text-slate-900 dark:text-slate-100 min-h-screen flex flex-col selection:bg-amber-500 selection:text-white antialiased transition-colors duration-200">
+
+  <!-- Smooth Opening Preloader -->
+  <div class="preloaders" id="eduleb-preloader">
+    <span class="loader"></span>
+    <div class="preloader-label">Module 7: Risk Management & Insurance Planning</div>
+  </div>
+
+  <!-- Standardized Header (Single-Tier, 64px) -->
+  <header class="sticky top-0 z-40 bg-white/95 dark:bg-slate-900/95 backdrop-blur-md border-b border-slate-200/80 dark:border-slate-800 shadow-xs">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 h-16 flex items-center justify-between">
+      <!-- Left: Logo & Context Label -->
+      <a href="nism-10b.html" class="flex items-center gap-2.5 group">
+        <div class="w-9 h-9 rounded-xl bg-amber-600 flex items-center justify-center text-white font-bold shadow-xs group-hover:scale-105 transition-transform">
+          <i data-lucide="shield-alert" class="w-5 h-5"></i>
+        </div>
+        <div>
+          <span class="font-display font-bold text-base tracking-tight text-[#0b104a] dark:text-white block leading-tight">NISM Series X-B</span>
+          <span class="block text-[10px] text-amber-600 dark:text-amber-400 font-bold uppercase tracking-wider">Module 7: Insurance Planning (25M)</span>
+        </div>
+      </a>
+
+      <!-- Center: Navigation Links -->
+      <nav class="hidden lg:flex items-center gap-1 text-sm font-medium font-display">
+        <a href="index.html#certifications" class="px-2.5 py-1.5 rounded-lg text-slate-600 dark:text-slate-300 hover:text-[#0b104a] hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors">All Exams</a>
+        <a href="nism-10b.html" class="px-2.5 py-1.5 rounded-lg text-slate-600 dark:text-slate-300 hover:text-amber-700 hover:bg-amber-50/60 dark:hover:bg-amber-950/40 transition-colors">X-B Hub</a>
+        <a href="module7.html" class="px-2.5 py-1.5 rounded-lg font-bold text-amber-800 dark:text-amber-300 bg-amber-50 dark:bg-amber-950/80 border border-amber-200 dark:border-amber-800 transition-colors">Module 7 Hub</a>
+        <a href="module7-ch1.html" class="px-2.5 py-1.5 rounded-lg text-slate-600 dark:text-slate-300 hover:text-amber-700 hover:bg-amber-50/60 dark:hover:bg-amber-950/40 transition-colors">Ch 1: Basics</a>
+        <a href="module7-ch2.html" class="px-2.5 py-1.5 rounded-lg text-slate-600 dark:text-slate-300 hover:text-amber-700 hover:bg-amber-50/60 dark:hover:bg-amber-950/40 transition-colors">Ch 2: Life & MWP ⭐</a>
+        <a href="module7-ch3.html" class="px-2.5 py-1.5 rounded-lg text-slate-600 dark:text-slate-300 hover:text-amber-700 hover:bg-amber-50/60 dark:hover:bg-amber-950/40 transition-colors">Ch 3: Non-Life</a>
+      </nav>
+
+      <!-- Right: Search, Theme, Back Button -->
+      <div class="flex items-center gap-2">
+        <button onclick="window.openSpotlightModal()" class="flex items-center gap-2 px-3 py-1.5 rounded-full border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-800 text-slate-500 dark:text-slate-400 text-xs font-medium" title="Search (⌘K)">
+          <i data-lucide="search" class="w-3.5 h-3.5 text-amber-600"></i>
+          <span class="hidden sm:inline">Search</span>
+          <kbd class="px-1.5 py-0.5 rounded bg-slate-100 dark:bg-slate-700 text-[10px] font-mono text-slate-400">⌘K</kbd>
+        </button>
+        <button id="nism-header-theme-btn" onclick="window.toggleDarkMode()" class="p-2 rounded-full border border-slate-200 dark:border-slate-700 text-slate-600 dark:text-slate-300 bg-white dark:bg-slate-800" title="Toggle Theme (⌘D)">
+          <i data-lucide="moon" class="w-4 h-4"></i>
+        </button>
+        <a href="nism-10b.html" class="hidden sm:inline-flex items-center gap-1 px-3 py-1.5 rounded-full text-xs font-semibold text-slate-700 dark:text-slate-300 bg-slate-100 dark:bg-slate-800 hover:bg-slate-200 dark:hover:bg-slate-750 transition-colors">
+          <i data-lucide="arrow-left" class="w-3.5 h-3.5"></i>
+          <span>X-B Hub</span>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main class="flex-grow">
+    
+    <!-- Hero Banner -->
+    <section class="relative hero-glow-amber py-12 sm:py-16 border-b border-slate-200/80 dark:border-slate-800">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="max-w-4xl">
+          
+          <!-- Badge -->
+          <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-amber-50 dark:bg-amber-950/70 border border-amber-200 dark:border-amber-800 text-amber-800 dark:text-amber-300 text-xs font-semibold mb-4 shadow-2xs">
+            <span class="w-2 h-2 rounded-full bg-amber-500 animate-pulse"></span>
+            <span>NISM Series X-B: Investment Adviser (Level 2) &bull; Module 7 of 12</span>
+          </div>
+
+          <h1 class="font-display text-3xl sm:text-4xl md:text-5xl font-extrabold text-[#0b104a] dark:text-white tracking-tight leading-tight">
+            Risk Management & <span class="text-transparent bg-clip-text bg-gradient-to-r from-amber-600 via-orange-600 to-amber-700">Insurance Planning</span>
+          </h1>
+
+          <p class="mt-4 text-base sm:text-lg text-slate-600 dark:text-slate-300 leading-relaxed">
+            Master the legal doctrines of insurance contracts, human life value calculation methods, life product structuring, surrender maths, health deductibles, motor third-party mandates, and Section 6 Married Women’s Property (MWP) Act statutory asset protection.
+          </p>
+
+          <!-- Module Fast Facts -->
+          <div class="mt-8 grid grid-cols-2 sm:grid-cols-4 gap-3 text-left">
+            <div class="p-3.5 rounded-xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 shadow-2xs">
+              <span class="text-[11px] font-bold text-slate-400 uppercase tracking-wider block">Exam Weightage</span>
+              <span class="font-display font-extrabold text-2xl text-amber-600 dark:text-amber-400">25 Marks</span>
+              <span class="text-[11px] text-slate-500 dark:text-slate-400 block mt-0.5">16.7% of Total Exam</span>
+            </div>
+            <div class="p-3.5 rounded-xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 shadow-2xs">
+              <span class="text-[11px] font-bold text-slate-400 uppercase tracking-wider block">Study Scope</span>
+              <span class="font-display font-extrabold text-2xl text-slate-900 dark:text-white">3 Chapters</span>
+              <span class="text-[11px] text-slate-500 dark:text-slate-400 block mt-0.5">Theory & Practice Quizzes</span>
+            </div>
+            <div class="p-3.5 rounded-xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 shadow-2xs">
+              <span class="text-[11px] font-bold text-slate-400 uppercase tracking-wider block">Tested Questions</span>
+              <span class="font-display font-extrabold text-2xl text-slate-900 dark:text-white">36 MCQs</span>
+              <span class="text-[11px] text-slate-500 dark:text-slate-400 block mt-0.5">12 Questions per Chapter</span>
+            </div>
+            <div class="p-3.5 rounded-xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 shadow-2xs">
+              <span class="text-[11px] font-bold text-slate-400 uppercase tracking-wider block">Benchmark Pass</span>
+              <span class="font-display font-extrabold text-2xl text-emerald-600 dark:text-emerald-400">60%</span>
+              <span class="text-[11px] text-slate-500 dark:text-slate-400 block mt-0.5">Negative Marking: 25%</span>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- Three Chapter Study Tracks -->
+    <section class="py-12 sm:py-16 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex flex-col md:flex-row md:items-end justify-between mb-8 gap-4">
+        <div>
+          <span class="text-xs font-bold uppercase tracking-wider text-amber-600 dark:text-amber-400 bg-amber-50 dark:bg-amber-950/80 px-2.5 py-1 rounded-md border border-amber-200 dark:border-amber-800">
+            Curriculum Blueprint
+          </span>
+          <h2 class="font-display text-2xl sm:text-3xl font-bold text-[#0b104a] dark:text-white mt-2">
+            Module 7 Chapter Breakdown
+          </h2>
+          <p class="text-sm text-slate-500 dark:text-slate-400 mt-1">
+            Complete study notes, IRDAI regulatory updates, formula cheat cards, and interactive 12-question practice tests.
+          </p>
+        </div>
+        <div class="flex items-center gap-2">
+          <span class="text-xs font-medium text-slate-500 dark:text-slate-400">Jump quickly:</span>
+          <a href="#ch1" class="text-xs font-semibold px-2.5 py-1 rounded-lg bg-slate-100 dark:bg-slate-800 hover:bg-amber-50 hover:text-amber-700 transition-colors">Ch 1</a>
+          <a href="#ch2" class="text-xs font-semibold px-2.5 py-1 rounded-lg bg-slate-100 dark:bg-slate-800 hover:bg-amber-50 hover:text-amber-700 transition-colors">Ch 2 ⭐</a>
+          <a href="#ch3" class="text-xs font-semibold px-2.5 py-1 rounded-lg bg-slate-100 dark:bg-slate-800 hover:bg-amber-50 hover:text-amber-700 transition-colors">Ch 3</a>
+        </div>
+      </div>
+
+      <!-- Chapter Cards Grid -->
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+
+        <!-- Chapter 1 Card -->
+        <div id="ch1" class="rounded-2xl p-6 bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 shadow-xs flex flex-col justify-between hover:shadow-md hover:border-amber-300 dark:hover:border-amber-700 transition-all group">
+          <div>
+            <div class="flex items-center justify-between pb-3 mb-3 border-b border-slate-100 dark:border-slate-800">
+              <span class="px-2.5 py-0.5 rounded-md font-mono text-xs font-bold bg-amber-50 dark:bg-amber-950/80 text-amber-700 dark:text-amber-300 border border-amber-200 dark:border-amber-800">
+                Chapter 1
+              </span>
+              <span class="text-xs font-bold text-slate-600 dark:text-slate-400 bg-slate-100 dark:bg-slate-800 px-2 py-0.5 rounded-full">
+                ~7 Marks
+              </span>
+            </div>
+
+            <h3 class="font-display font-bold text-lg text-slate-900 dark:text-white group-hover:text-amber-600 dark:group-hover:text-amber-400 transition-colors">
+              Basics of Insurance & Core Principles
+            </h3>
+
+            <p class="text-xs text-slate-500 dark:text-slate-400 mt-2 leading-relaxed">
+              Foundations of risk transfer, risk pooling, peril vs hazard distinctions, and the 6 foundational doctrines governing all insurance contracts under Indian law.
+            </p>
+
+            <!-- Tested Highlights -->
+            <div class="mt-4 pt-3 border-t border-slate-100 dark:border-slate-800 space-y-2 text-xs text-slate-600 dark:text-slate-400 font-medium">
+              <div class="flex items-start gap-2">
+                <i data-lucide="check-circle" class="w-3.5 h-3.5 text-amber-600 mt-0.5 shrink-0"></i>
+                <span><strong>Peril vs Hazard:</strong> Physical, Moral, and Morale risk factors.</span>
+              </div>
+              <div class="flex items-start gap-2">
+                <i data-lucide="check-circle" class="w-3.5 h-3.5 text-amber-600 mt-0.5 shrink-0"></i>
+                <span><strong>Insurable Interest:</strong> Critical timing differences across Life, Marine & Fire insurance.</span>
+              </div>
+              <div class="flex items-start gap-2">
+                <i data-lucide="check-circle" class="w-3.5 h-3.5 text-amber-600 mt-0.5 shrink-0"></i>
+                <span><strong>Utmost Good Faith:</strong> Section 45 3-year incontestability rule.</span>
+              </div>
+              <div class="flex items-start gap-2">
+                <i data-lucide="check-circle" class="w-3.5 h-3.5 text-amber-600 mt-0.5 shrink-0"></i>
+                <span><strong>Indemnity & Subrogation:</strong> Recovery limits, contribution math & proximate cause.</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="mt-6 pt-4 border-t border-slate-100 dark:border-slate-800 flex items-center gap-2">
+            <a href="module7-ch1.html" class="flex-1 py-2.5 px-4 rounded-xl font-bold text-xs text-white bg-amber-600 hover:bg-amber-700 text-center transition-colors flex items-center justify-center gap-1.5 shadow-xs">
+              <span>Read Chapter 1 Notes</span>
+              <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i>
+            </a>
+            <a href="module7-ch1.html#interactive-quiz" class="py-2.5 px-3 rounded-xl font-bold text-xs text-amber-700 dark:text-amber-300 bg-amber-50 dark:bg-amber-950/70 border border-amber-200 dark:border-amber-800 hover:bg-amber-100 text-center transition-colors" title="Go to Quiz">
+              Quiz
+            </a>
+          </div>
+        </div>
+
+        <!-- Chapter 2 Card (HIGH YIELD ⭐) -->
+        <div id="ch2" class="rounded-2xl p-6 bg-white dark:bg-slate-900 border-2 border-amber-500 dark:border-amber-600 shadow-sm flex flex-col justify-between hover:shadow-md transition-all group relative">
+          
+          <!-- High Yield Badge -->
+          <div class="absolute -top-3 right-5">
+            <span class="px-2.5 py-1 rounded-full text-[11px] font-extrabold uppercase bg-amber-500 text-slate-950 flex items-center gap-1 shadow-xs tracking-wider">
+              <i data-lucide="star" class="w-3 h-3 fill-slate-950"></i> High Yield Core
+            </span>
+          </div>
+
+          <div>
+            <div class="flex items-center justify-between pb-3 mb-3 border-b border-slate-100 dark:border-slate-800">
+              <span class="px-2.5 py-0.5 rounded-md font-mono text-xs font-bold bg-amber-100 dark:bg-amber-950 text-amber-800 dark:text-amber-300 border border-amber-300 dark:border-amber-700">
+                Chapter 2 ⭐
+              </span>
+              <span class="text-xs font-bold text-amber-700 dark:text-amber-300 bg-amber-50 dark:bg-amber-950/70 px-2 py-0.5 rounded-full border border-amber-200 dark:border-amber-800">
+                ~11 Marks ⭐
+              </span>
+            </div>
+
+            <h3 class="font-display font-bold text-lg text-slate-900 dark:text-white group-hover:text-amber-600 dark:group-hover:text-amber-400 transition-colors">
+              Features of Life Insurance & MWP Act Trusts
+            </h3>
+
+            <p class="text-xs text-slate-500 dark:text-slate-400 mt-2 leading-relaxed">
+              HLV calculation techniques, term vs ULIP economics, surrender and paid-up mathematics, rider applications, and creditor protection under Married Women's Property Act Section 6.
+            </p>
+
+            <!-- Tested Highlights -->
+            <div class="mt-4 pt-3 border-t border-slate-100 dark:border-slate-800 space-y-2 text-xs text-slate-600 dark:text-slate-400 font-medium">
+              <div class="flex items-start gap-2">
+                <i data-lucide="check-circle" class="w-3.5 h-3.5 text-amber-600 mt-0.5 shrink-0"></i>
+                <span><strong>Human Life Value (HLV):</strong> Huebner income-replacement discounting formula.</span>
+              </div>
+              <div class="flex items-start gap-2">
+                <i data-lucide="check-circle" class="w-3.5 h-3.5 text-amber-600 mt-0.5 shrink-0"></i>
+                <span><strong>ULIP Regulatory Rules:</strong> 5-yr lock-in, 1.35% FMC cap, and ₹2.5L tax threshold.</span>
+              </div>
+              <div class="flex items-start gap-2">
+                <i data-lucide="check-circle" class="w-3.5 h-3.5 text-amber-600 mt-0.5 shrink-0"></i>
+                <span><strong>Paid-Up vs Surrender Math:</strong> Pro-rata sum assured formula and GSV/SSV calculation.</span>
+              </div>
+              <div class="flex items-start gap-2">
+                <i data-lucide="check-circle" class="w-3.5 h-3.5 text-amber-600 mt-0.5 shrink-0"></i>
+                <span><strong>MWP Act 1874 (Sec 6) ⭐:</strong> Creation of irrevocable statutory trusts beyond creditors' reach.</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="mt-6 pt-4 border-t border-slate-100 dark:border-slate-800 flex items-center gap-2">
+            <a href="module7-ch2.html" class="flex-1 py-2.5 px-4 rounded-xl font-bold text-xs text-white bg-amber-600 hover:bg-amber-700 text-center transition-colors flex items-center justify-center gap-1.5 shadow-xs">
+              <span>Read Chapter 2 Notes ⭐</span>
+              <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i>
+            </a>
+            <a href="module7-ch2.html#interactive-quiz" class="py-2.5 px-3 rounded-xl font-bold text-xs text-amber-700 dark:text-amber-300 bg-amber-50 dark:bg-amber-950/70 border border-amber-200 dark:border-amber-800 hover:bg-amber-100 text-center transition-colors" title="Go to Quiz">
+              Quiz
+            </a>
+          </div>
+        </div>
+
+        <!-- Chapter 3 Card -->
+        <div id="ch3" class="rounded-2xl p-6 bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 shadow-xs flex flex-col justify-between hover:shadow-md hover:border-amber-300 dark:hover:border-amber-700 transition-all group">
+          <div>
+            <div class="flex items-center justify-between pb-3 mb-3 border-b border-slate-100 dark:border-slate-800">
+              <span class="px-2.5 py-0.5 rounded-md font-mono text-xs font-bold bg-amber-50 dark:bg-amber-950/80 text-amber-700 dark:text-amber-300 border border-amber-200 dark:border-amber-800">
+                Chapter 3
+              </span>
+              <span class="text-xs font-bold text-slate-600 dark:text-slate-400 bg-slate-100 dark:bg-slate-800 px-2 py-0.5 rounded-full">
+                ~7 Marks
+              </span>
+            </div>
+
+            <h3 class="font-display font-bold text-lg text-slate-900 dark:text-white group-hover:text-amber-600 dark:group-hover:text-amber-400 transition-colors">
+              Features of Non-Life Insurance Products
+            </h3>
+
+            <p class="text-xs text-slate-500 dark:text-slate-400 mt-2 leading-relaxed">
+              Health insurance mechanics, deductible vs co-pay, waiting periods, super top-up advantages, motor comprehensive vs TP, IDV valuation, and home insurance under-insurance math.
+            </p>
+
+            <!-- Tested Highlights -->
+            <div class="mt-4 pt-3 border-t border-slate-100 dark:border-slate-800 space-y-2 text-xs text-slate-600 dark:text-slate-400 font-medium">
+              <div class="flex items-start gap-2">
+                <i data-lucide="check-circle" class="w-3.5 h-3.5 text-amber-600 mt-0.5 shrink-0"></i>
+                <span><strong>Health Claims:</strong> Room rent proportionate deduction, co-pay vs deductible.</span>
+              </div>
+              <div class="flex items-start gap-2">
+                <i data-lucide="check-circle" class="w-3.5 h-3.5 text-amber-600 mt-0.5 shrink-0"></i>
+                <span><strong>Waiting Periods:</strong> PED 36-month norm, 5-yr moratorium, critical illness survival period.</span>
+              </div>
+              <div class="flex items-start gap-2">
+                <i data-lucide="check-circle" class="w-3.5 h-3.5 text-amber-600 mt-0.5 shrink-0"></i>
+                <span><strong>Motor Mandates:</strong> Motor Vehicles Act TP unlimited liability, CPA ₹15L, IDV formula.</span>
+              </div>
+              <div class="flex items-start gap-2">
+                <i data-lucide="check-circle" class="w-3.5 h-3.5 text-amber-600 mt-0.5 shrink-0"></i>
+                <span><strong>Property & Home:</strong> Bharat Griha Raksha terms and Principle of Average under-insurance math.</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="mt-6 pt-4 border-t border-slate-100 dark:border-slate-800 flex items-center gap-2">
+            <a href="module7-ch3.html" class="flex-1 py-2.5 px-4 rounded-xl font-bold text-xs text-white bg-amber-600 hover:bg-amber-700 text-center transition-colors flex items-center justify-center gap-1.5 shadow-xs">
+              <span>Read Chapter 3 Notes</span>
+              <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i>
+            </a>
+            <a href="module7-ch3.html#interactive-quiz" class="py-2.5 px-3 rounded-xl font-bold text-xs text-amber-700 dark:text-amber-300 bg-amber-50 dark:bg-amber-950/70 border border-amber-200 dark:border-amber-800 hover:bg-amber-100 text-center transition-colors" title="Go to Quiz">
+              Quiz
+            </a>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- High-Yield Formula Matrix & Quick Reference -->
+    <section class="py-12 bg-slate-100/70 dark:bg-slate-900/60 border-y border-slate-200/80 dark:border-slate-800">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <div class="text-center max-w-2xl mx-auto mb-10">
+          <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-amber-50 dark:bg-amber-950/70 text-amber-700 dark:text-amber-300 text-xs font-semibold mb-2">
+            <i data-lucide="calculator" class="w-3.5 h-3.5"></i>
+            High-Frequency Numerical Formulas
+          </span>
+          <h2 class="font-display text-2xl sm:text-3xl font-bold text-[#0b104a] dark:text-white">
+            Essential Formula Cards for Series X-B
+          </h2>
+          <p class="text-xs sm:text-sm text-slate-500 dark:text-slate-400 mt-1">
+            Questions on HLV, Paid-Up Values, Under-Insurance, and Deductibles appear regularly in Level 2 exams.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+
+          <!-- Formula 1: HLV -->
+          <div class="p-5 rounded-2xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 shadow-xs">
+            <div class="flex items-center justify-between mb-2">
+              <span class="text-[11px] font-bold uppercase tracking-wider text-amber-600 dark:text-amber-400">Life Planning</span>
+              <span class="text-[10px] font-bold px-2 py-0.5 rounded bg-amber-50 dark:bg-amber-950/80 text-amber-700">HLV Model</span>
+            </div>
+            <h4 class="font-display font-bold text-sm text-slate-900 dark:text-white">Human Life Value (Income Surplus)</h4>
+            <div class="mt-3 p-2.5 rounded-lg bg-slate-50 dark:bg-slate-800 font-mono text-xs text-amber-800 dark:text-amber-300 font-semibold border border-slate-200 dark:border-slate-700">
+              HLV = PV(r, n, -(Income - Personal Expenses))
+            </div>
+            <p class="text-[11px] text-slate-500 dark:text-slate-400 mt-2 leading-relaxed">
+              Discount the breadwinner's net economic surplus to family at the real or nominal post-tax discount rate until expected retirement age.
+            </p>
+          </div>
+
+          <!-- Formula 2: Paid-Up Value -->
+          <div class="p-5 rounded-2xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 shadow-xs">
+            <div class="flex items-center justify-between mb-2">
+              <span class="text-[11px] font-bold uppercase tracking-wider text-blue-600 dark:text-blue-400">Policy Servicing</span>
+              <span class="text-[10px] font-bold px-2 py-0.5 rounded bg-blue-50 dark:bg-blue-950/80 text-blue-700">Traditional</span>
+            </div>
+            <h4 class="font-display font-bold text-sm text-slate-900 dark:text-white">Paid-Up Sum Assured</h4>
+            <div class="mt-3 p-2.5 rounded-lg bg-slate-50 dark:bg-slate-800 font-mono text-xs text-blue-800 dark:text-blue-300 font-semibold border border-slate-200 dark:border-slate-700">
+              Paid-Up SA = (Paid Prems / Total Prems) &times; Original SA
+            </div>
+            <p class="text-[11px] text-slate-500 dark:text-slate-400 mt-2 leading-relaxed">
+              Reduces death/maturity benefit pro-rata to premiums paid. Accrued bonuses prior to paid-up date remain payable at death/maturity.
+            </p>
+          </div>
+
+          <!-- Formula 3: Rateable Contribution -->
+          <div class="p-5 rounded-2xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 shadow-xs">
+            <div class="flex items-center justify-between mb-2">
+              <span class="text-[11px] font-bold uppercase tracking-wider text-emerald-600 dark:text-emerald-400">Property / Fire</span>
+              <span class="text-[10px] font-bold px-2 py-0.5 rounded bg-emerald-50 dark:bg-emerald-950/80 text-emerald-700">Contribution</span>
+            </div>
+            <h4 class="font-display font-bold text-sm text-slate-900 dark:text-white">Rateable Contribution Principle</h4>
+            <div class="mt-3 p-2.5 rounded-lg bg-slate-50 dark:bg-slate-800 font-mono text-xs text-emerald-800 dark:text-emerald-300 font-semibold border border-slate-200 dark:border-slate-700">
+              Claim A = Loss &times; (Sum Insured A / Total Sum Insured)
+            </div>
+            <p class="text-[11px] text-slate-500 dark:text-slate-400 mt-2 leading-relaxed">
+              When double insurance exists across multiple non-life insurers, each pays ratably based on its proportion of total insured value.
+            </p>
+          </div>
+
+          <!-- Formula 4: Principle of Average -->
+          <div class="p-5 rounded-2xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 shadow-xs">
+            <div class="flex items-center justify-between mb-2">
+              <span class="text-[11px] font-bold uppercase tracking-wider text-purple-600 dark:text-purple-400">Non-Life Loss</span>
+              <span class="text-[10px] font-bold px-2 py-0.5 rounded bg-purple-50 dark:bg-purple-950/80 text-purple-700">Average Clause</span>
+            </div>
+            <h4 class="font-display font-bold text-sm text-slate-900 dark:text-white">Principle of Average (Under-Insurance)</h4>
+            <div class="mt-3 p-2.5 rounded-lg bg-slate-50 dark:bg-slate-800 font-mono text-xs text-purple-800 dark:text-purple-300 font-semibold border border-slate-200 dark:border-slate-700">
+              Payable = Loss &times; (Sum Insured / Actual Asset Value)
+            </div>
+            <p class="text-[11px] text-slate-500 dark:text-slate-400 mt-2 leading-relaxed">
+              Penalizes insured for deliberately insuring less than true replacement/market value. Insured bears pro-rata fraction of the partial loss.
+            </p>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Key Exam Rules (10 Commandments for Module 7) -->
+    <section class="py-12 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="rounded-3xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 p-6 sm:p-8 shadow-xs">
+        <div class="flex items-center gap-3 mb-6">
+          <div class="w-10 h-10 rounded-xl bg-amber-50 dark:bg-amber-950/80 text-amber-600 flex items-center justify-center font-bold">
+            <i data-lucide="alert-octagon" class="w-5 h-5"></i>
+          </div>
+          <div>
+            <h3 class="font-display text-xl font-bold text-slate-900 dark:text-white">
+              10 Golden Rules for Module 7 Exam Success
+            </h3>
+            <p class="text-xs text-slate-500 dark:text-slate-400">
+              Exam traps and critical legal facts frequently tested in Level 2 MCQs and case studies
+            </p>
+          </div>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4 text-xs sm:text-sm">
+          <div class="p-3.5 rounded-xl bg-slate-50 dark:bg-slate-800/50 border border-slate-200/80 dark:border-slate-700">
+            <strong class="text-slate-900 dark:text-white block mb-1">1. Insurable Interest Timing Trap ⭐</strong>
+            Must exist at <em>inception only</em> in Life Insurance, at <em>time of loss only</em> in Marine Cargo, and <em>both inception & time of loss</em> in Fire/General property insurance.
+          </div>
+          <div class="p-3.5 rounded-xl bg-slate-50 dark:bg-slate-800/50 border border-slate-200/80 dark:border-slate-700">
+            <strong class="text-slate-900 dark:text-white block mb-1">2. Section 45 3-Year Incontestability ⭐</strong>
+            After 3 years from policy inception/revival, no life insurance policy can be questioned by an insurer for ANY reason, including fraud or non-disclosure.
+          </div>
+          <div class="p-3.5 rounded-xl bg-slate-50 dark:bg-slate-800/50 border border-slate-200/80 dark:border-slate-700">
+            <strong class="text-slate-900 dark:text-white block mb-1">3. MWP Act Irrevocable Trust ⭐</strong>
+            Policy taken under Section 6 MWP Act creates a separate statutory trust for wife/children. Creditors, tax attachments, or insolvency cannot attach the proceeds.
+          </div>
+          <div class="p-3.5 rounded-xl bg-slate-50 dark:bg-slate-800/50 border border-slate-200/80 dark:border-slate-700">
+            <strong class="text-slate-900 dark:text-white block mb-1">4. ULIP ₹2.5 Lakh Tax Threshold ⭐</strong>
+            For ULIP policies issued on or after 1 February 2021, if annual aggregate premium exceeds ₹2,50,000, maturity proceeds lose Section 10(10D) tax exemption and are taxed as capital gains.
+          </div>
+          <div class="p-3.5 rounded-xl bg-slate-50 dark:bg-slate-800/50 border border-slate-200/80 dark:border-slate-700">
+            <strong class="text-slate-900 dark:text-white block mb-1">5. Free-Look Cancellation Period</strong>
+            15 days for physical policies, extended to 30 days for policies purchased electronically or via distance marketing. Premium refunded less stamp duty and medical expenses.
+          </div>
+          <div class="p-3.5 rounded-xl bg-slate-50 dark:bg-slate-800/50 border border-slate-200/80 dark:border-slate-700">
+            <strong class="text-slate-900 dark:text-white block mb-1">6. Super Top-Up vs Top-Up Difference ⭐</strong>
+            Top-up applies deductible to <em>each individual hospitalization claim</em>; Super Top-up aggregates all hospitalization claims across the entire policy year against one single deductible.
+          </div>
+          <div class="p-3.5 rounded-xl bg-slate-50 dark:bg-slate-800/50 border border-slate-200/80 dark:border-slate-700">
+            <strong class="text-slate-900 dark:text-white block mb-1">7. Motor Third-Party is Statutorily Unlimited</strong>
+            Third-party bodily injury/death coverage is legally compulsory with unlimited liability, whereas third-party property damage (TPPD) is capped at ₹7,50,000 under Motor Vehicles Act.
+          </div>
+          <div class="p-3.5 rounded-xl bg-slate-50 dark:bg-slate-800/50 border border-slate-200/80 dark:border-slate-700">
+            <strong class="text-slate-900 dark:text-white block mb-1">8. Compulsory Personal Accident (CPA) Cover</strong>
+            Mandatory CPA cover for registered owner-driver is ₹15 Lakhs for accidental death/permanent total disability.
+          </div>
+          <div class="p-3.5 rounded-xl bg-slate-50 dark:bg-slate-800/50 border border-slate-200/80 dark:border-slate-700">
+            <strong class="text-slate-900 dark:text-white block mb-1">9. PED Waiting Period & Moratorium Clause</strong>
+            Under latest IRDAI master circular, Pre-Existing Disease (PED) waiting period is capped at 36 months (3 years), and Moratorium Period is reduced to 5 years (60 months continuous coverage).
+          </div>
+          <div class="p-3.5 rounded-xl bg-slate-50 dark:bg-slate-800/50 border border-slate-200/80 dark:border-slate-700">
+            <strong class="text-slate-900 dark:text-white block mb-1">10. Insurance Ombudsman Jurisdiction</strong>
+            Ombudsman can entertain complaints up to ₹50 Lakhs (amended from ₹30 Lakhs). Award is binding on the insurer within 30 days, but NOT binding on the complainant.
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="bg-white dark:bg-slate-900 border-t border-slate-200 dark:border-slate-800 py-8">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-slate-500 dark:text-slate-400">
+      <div class="flex items-center gap-2">
+        <span class="font-display font-bold text-slate-900 dark:text-white">NISM Series X-B</span>
+        <span>&bull; Module 7: Risk Management & Insurance Planning (25 Marks)</span>
+      </div>
+      <div class="flex items-center gap-4 font-medium">
+        <a href="nism-10b.html" class="hover:text-amber-600 transition-colors">Series X-B Hub</a>
+        <a href="module7-ch1.html" class="hover:text-amber-600 transition-colors">Start Chapter 1</a>
+        <a href="index.html#certifications" class="hover:text-amber-600 transition-colors">All Certifications</a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Initialize icons
+    lucide.createIcons();
+  </script>
+</body>
+</html>

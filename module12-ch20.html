@@ -1,0 +1,1276 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Chapter 20: Comprehensive Financial Advice & Real-World Case Studies | NISM Series X-B</title>
+  
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  
+  <!-- Google Fonts: DM Sans & Jost (Eduleb Benchmark) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Jost:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+  
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+
+  <!-- Modern Documentation Design System & Zoom Engine -->
+  <link rel="stylesheet" href="modern-docs.css">
+  <script defer src="nav-sidebar.js"></script>
+
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['"DM Sans"', 'sans-serif'],
+            display: ['"Jost"', 'sans-serif'],
+            heading: ['"Jost"', 'sans-serif']
+          },
+          colors: {
+            brand: {
+              50: '#eef2ff',
+              100: '#e0e7ff',
+              500: '#525fe1',
+              600: '#434ec9',
+              700: '#353db3',
+              800: '#282f9c',
+              900: '#0b104a'
+            }
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    body {
+      font-family: 'DM Sans', sans-serif;
+      font-size: 16px;
+      line-height: 26px;
+      color: #4a5355;
+    }
+    h1, h2, h3, h4, h5, h6, .font-display, .font-heading {
+      font-family: 'Jost', sans-serif;
+      font-weight: 700;
+    }
+  </style>
+</head>
+<body class="bg-slate-50 dark:bg-slate-950 text-slate-900 dark:text-slate-100 min-h-screen flex flex-col selection:bg-amber-500 selection:text-slate-950 antialiased transition-colors duration-200">
+
+  <!-- Smooth Opening Preloader -->
+  <div class="preloaders" id="eduleb-preloader">
+    <span class="loader"></span>
+    <div class="preloader-label">Chapter 20: 4 Master Client Case Studies</div>
+  </div>
+
+  <!-- Standardized Header (Single-Tier, 64px) -->
+  <header class="sticky top-0 z-40 bg-white/95 dark:bg-slate-900/95 backdrop-blur-md border-b border-slate-200/80 dark:border-slate-800 shadow-xs">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 h-16 flex items-center justify-between">
+      <!-- Left: Logo & Context Label -->
+      <div class="flex items-center gap-3">
+        <a href="module12.html" class="flex items-center gap-2 text-slate-500 hover:text-slate-900 dark:hover:text-white transition-colors">
+          <div class="w-9 h-9 rounded-xl bg-slate-100 dark:bg-slate-800 hover:bg-slate-200 dark:hover:bg-slate-700 flex items-center justify-center text-slate-700 dark:text-slate-200 transition-colors">
+            <i data-lucide="arrow-left" class="w-4 h-4"></i>
+          </div>
+        </a>
+        <div>
+          <div class="flex items-center gap-2">
+            <span class="text-xs font-bold uppercase tracking-wider text-amber-700 dark:text-amber-400 bg-amber-50 dark:bg-amber-950/80 px-2 py-0.5 rounded border border-amber-200 dark:border-amber-800">Module 12 Capstone</span>
+            <span class="text-xs text-slate-400 font-medium">Chapter 20 of 20</span>
+          </div>
+          <h1 class="font-display font-bold text-base sm:text-lg text-slate-900 dark:text-white leading-tight">Comprehensive Case Studies</h1>
+        </div>
+      </div>
+
+      <!-- Right: Search, Theme, Case Navigation -->
+      <div class="flex items-center gap-2">
+        <span class="hidden sm:inline-flex items-center gap-1 px-3 py-1 rounded-full text-xs font-extrabold bg-amber-50 dark:bg-amber-950 text-amber-800 dark:text-amber-300 border border-amber-300 dark:border-amber-700">
+          <i data-lucide="star" class="w-3.5 h-3.5 fill-amber-500 text-amber-600"></i>
+          Exam Core: 20M + 60M Case Exam ⭐⭐⭐
+        </span>
+        <button onclick="window.openSpotlightModal()" class="flex items-center gap-2 px-3 py-1.5 rounded-full border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-800 text-slate-500 dark:text-slate-400 text-xs font-medium" title="Search (⌘K)">
+          <i data-lucide="search" class="w-3.5 h-3.5 text-amber-600"></i>
+          <span class="hidden sm:inline">Search</span>
+          <kbd class="px-1.5 py-0.5 rounded bg-slate-100 dark:bg-slate-700 text-[10px] font-mono text-slate-400">⌘K</kbd>
+        </button>
+        <button id="nism-header-theme-btn" onclick="window.toggleDarkMode()" class="p-2 rounded-full border border-slate-200 dark:border-slate-700 text-slate-600 dark:text-slate-300 bg-white dark:bg-slate-800" title="Toggle Theme (⌘D)">
+          <i data-lucide="moon" class="w-4 h-4"></i>
+        </button>
+        <a href="#case-1" class="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-lg text-xs font-bold bg-amber-500 hover:bg-amber-400 text-slate-950 shadow-xs transition-all">
+          <i data-lucide="folder-check" class="w-3.5 h-3.5"></i>
+          <span>Launch Cases</span>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero Header Banner -->
+  <section class="bg-gradient-to-b from-amber-50/90 via-indigo-50/30 to-slate-50 dark:from-slate-900 dark:via-amber-950/20 dark:to-slate-950 py-10 sm:py-12 border-b border-slate-200 dark:border-slate-800">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="max-w-4xl">
+        <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-amber-100 dark:bg-amber-950 text-amber-800 dark:text-amber-300 text-xs font-bold border border-amber-300 dark:border-amber-700 mb-3">
+          <i data-lucide="award" class="w-3.5 h-3.5 text-amber-600"></i>
+          The 60-Mark Case Study Examination Engine
+        </span>
+        <h1 class="font-display font-black text-2xl sm:text-4xl text-[#0b104a] dark:text-white tracking-tight leading-tight">
+          4 Real-World Comprehensive Financial Planning Case Studies
+        </h1>
+        <p class="mt-3 text-sm sm:text-base text-slate-600 dark:text-slate-300 leading-relaxed">
+          In the official NISM Series X-B examination, <strong>60 of the 150 marks are delivered through 6 comprehensive client scenarios</strong> (each containing 5 sub-questions worth 2 marks each). Below are 4 complete master dossiers engineered to mirror this exact exam structure, featuring full balance sheets, cash flow statements, and <strong>20 interactive sub-questions with step-by-step mathematical solutions</strong>.
+        </p>
+      </div>
+
+      <!-- Quick Case Switcher Strip -->
+      <div class="grid grid-cols-2 sm:grid-cols-4 gap-3 mt-8 pt-6 border-t border-slate-200 dark:border-slate-800">
+        <a href="#case-1" class="p-3 rounded-2xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 hover:border-amber-400 dark:hover:border-amber-600 transition-all shadow-2xs group">
+          <div class="text-[11px] font-bold text-amber-700 dark:text-amber-400">Case Study 1</div>
+          <div class="font-display font-bold text-xs text-slate-900 dark:text-white mt-0.5 group-hover:text-amber-600">Vikram Sharma (IT VP)</div>
+          <div class="text-[10px] text-slate-500 mt-1">HLV & Insurance Shortfall</div>
+        </a>
+        <a href="#case-2" class="p-3 rounded-2xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 hover:border-amber-400 dark:hover:border-amber-600 transition-all shadow-2xs group">
+          <div class="text-[11px] font-bold text-indigo-700 dark:text-indigo-400">Case Study 2</div>
+          <div class="font-display font-bold text-xs text-slate-900 dark:text-white mt-0.5 group-hover:text-indigo-600">Rajesh Kulkarni (Mfg Dir)</div>
+          <div class="text-[10px] text-slate-500 mt-1">Step-Up Corpus & SWP</div>
+        </a>
+        <a href="#case-3" class="p-3 rounded-2xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 hover:border-amber-400 dark:hover:border-amber-600 transition-all shadow-2xs group">
+          <div class="text-[11px] font-bold text-emerald-700 dark:text-emerald-400">Case Study 3</div>
+          <div class="font-display font-bold text-xs text-slate-900 dark:text-white mt-0.5 group-hover:text-emerald-600">Dr. Sanjeev Singhania</div>
+          <div class="text-[10px] text-slate-500 mt-1">Capital Gains & Sec 54</div>
+        </a>
+        <a href="#case-4" class="p-3 rounded-2xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 hover:border-amber-400 dark:hover:border-amber-600 transition-all shadow-2xs group">
+          <div class="text-[11px] font-bold text-rose-700 dark:text-rose-400">Case Study 4</div>
+          <div class="font-display font-bold text-xs text-slate-900 dark:text-white mt-0.5 group-hover:text-rose-600">Arvind Mittal (Patriarch)</div>
+          <div class="text-[10px] text-slate-500 mt-1">Special Needs Trust & Rebalance</div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Main Content Layout -->
+  <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10 flex-grow space-y-16">
+
+    <!-- ========================================================================= -->
+    <!-- CASE STUDY 1: VIKRAM & ANANYA SHARMA (HLV & LIFE INSURANCE ADEQUACY)      -->
+    <!-- ========================================================================= -->
+    <section id="case-1" class="bg-white dark:bg-slate-900 rounded-3xl p-6 sm:p-10 border-2 border-amber-300 dark:border-amber-700/80 shadow-md space-y-8">
+      
+      <!-- Case Header -->
+      <div class="border-b border-slate-200 dark:border-slate-800 pb-6 space-y-2">
+        <div class="flex flex-wrap items-center justify-between gap-2">
+          <span class="px-3 py-1 rounded-full font-mono text-xs font-bold bg-amber-100 dark:bg-amber-950 text-amber-900 dark:text-amber-200 border border-amber-300 dark:border-amber-700">
+            CASE STUDY 1 OF 4 &bull; 10 MARKS
+          </span>
+          <span class="text-xs font-bold text-slate-500 dark:text-slate-400">
+            Core Theme: Human Life Value, Need-Based Insurance & Education Goals
+          </span>
+        </div>
+        <h2 class="font-display font-extrabold text-2xl sm:text-3xl text-slate-900 dark:text-white">
+          Client Dossier: Vikram & Ananya Sharma (Mid-Career IT Executive & Architect)
+        </h2>
+      </div>
+
+      <!-- Client Dossier Tables & Details -->
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6 text-xs">
+        
+        <!-- Column 1: Family & Demographics -->
+        <div class="p-5 rounded-2xl bg-slate-50 dark:bg-slate-800/60 border border-slate-200 dark:border-slate-700 space-y-2.5">
+          <h3 class="font-display font-bold text-sm text-slate-900 dark:text-white flex items-center gap-1.5">
+            <i data-lucide="users" class="w-4 h-4 text-amber-600"></i> Family Profile
+          </h3>
+          <div class="space-y-1 text-slate-600 dark:text-slate-300 leading-relaxed">
+            <div>&bull; <strong>Vikram (Client):</strong> Age 42, VP Software Engineering at a US MNC. Retirement age planned at 60 (18 working years remaining).</div>
+            <div>&bull; <strong>Ananya (Spouse):</strong> Age 39, Independent Architect & Partner in a design studio.</div>
+            <div>&bull; <strong>Child 1 (Aarav):</strong> Age 12, higher education planned at age 18 (6 years away).</div>
+            <div>&bull; <strong>Child 2 (Diya):</strong> Age 8, higher education planned at age 18 (10 years away).</div>
+          </div>
+        </div>
+
+        <!-- Column 2: Cash Flows & Liabilities -->
+        <div class="p-5 rounded-2xl bg-slate-50 dark:bg-slate-800/60 border border-slate-200 dark:border-slate-700 space-y-2.5">
+          <h3 class="font-display font-bold text-sm text-slate-900 dark:text-white flex items-center gap-1.5">
+            <i data-lucide="wallet" class="w-4 h-4 text-amber-600"></i> Monthly Cash Flows
+          </h3>
+          <div class="space-y-1 text-slate-600 dark:text-slate-300 leading-relaxed">
+            <div>&bull; <strong>Vikram Take-Home:</strong> ₹2,50,000 / month (Annual: ₹30,00,000 net).</div>
+            <div>&bull; <strong>Ananya Net Income:</strong> ₹1,20,000 / month (Annual: ₹14,40,000).</div>
+            <div>&bull; <strong>Household Living Expenses:</strong> ₹1,60,000 / month (excludes EMIs). Vikram's personal consumption is 25% of his salary (₹62,500/mo).</div>
+            <div>&bull; <strong>Home Loan EMI:</strong> ₹68,000 / month (Outstanding Principal: <strong>₹60 Lakhs</strong>; 12 years remaining).</div>
+          </div>
+        </div>
+
+        <!-- Column 3: Existing Assets & Insurance -->
+        <div class="p-5 rounded-2xl bg-slate-50 dark:bg-slate-800/60 border border-slate-200 dark:border-slate-700 space-y-2.5">
+          <h3 class="font-display font-bold text-sm text-slate-900 dark:text-white flex items-center gap-1.5">
+            <i data-lucide="shield" class="w-4 h-4 text-amber-600"></i> Balance Sheet & Protection
+          </h3>
+          <div class="space-y-1 text-slate-600 dark:text-slate-300 leading-relaxed">
+            <div>&bull; <strong>Liquid Equity Mutual Funds:</strong> ₹45,00,000</div>
+            <div>&bull; <strong>PPF & EPF (Vikram):</strong> ₹35,00,000</div>
+            <div>&bull; <strong>Bank Savings & FDs:</strong> ₹15,00,000</div>
+            <div>&bull; <strong>Self-Occupied House:</strong> Market Value ₹1.80 Crores (Mortgaged).</div>
+            <div>&bull; <strong>Existing Life Insurance:</strong> Vikram has ₹50 Lakhs employer corporate cover + ₹10 Lakhs personal endowment. Ananya has Nil.</div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- 5 Interactive Sub-Questions for Case 1 -->
+      <div class="space-y-6 pt-4 border-t border-slate-200 dark:border-slate-800">
+        <h3 class="font-display font-bold text-lg text-slate-900 dark:text-white flex items-center gap-2">
+          <i data-lucide="help-circle" class="w-5 h-5 text-amber-600"></i> Case 1 Questions (5 Multi-Part Problems)
+        </h3>
+
+        <!-- Q1.1 -->
+        <div class="p-5 rounded-2xl bg-slate-50 dark:bg-slate-800/50 border border-slate-200 dark:border-slate-700 space-y-3">
+          <div class="flex items-center justify-between text-xs font-bold text-amber-700 dark:text-amber-400">
+            <span>Question 1.1 &bull; Human Life Value (Income Replacement)</span>
+            <span class="px-2 py-0.5 rounded bg-amber-100 dark:bg-amber-950">2 Marks</span>
+          </div>
+          <p class="text-xs sm:text-sm text-slate-800 dark:text-slate-200 font-medium leading-relaxed">
+            Calculate Vikram's Human Life Value (HLV) using the Income Replacement Method. Assume his annual take-home is ₹30 Lakhs, personal consumption is 25%, remaining working career to age 60 is 18 years, and the net real discount rate (investment return minus inflation) is 3.0% per annum.
+          </p>
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-2 text-xs" id="opts-c1-q1">
+            <button onclick="checkCaseAnswer('c1-q1', 'b', this)" class="p-3 rounded-xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-750 hover:border-amber-400 text-left transition-all flex items-center gap-2">
+              <span class="w-5 h-5 rounded-full border border-slate-400 text-center font-bold text-[10px] flex items-center justify-center shrink-0">A</span>
+              <span>₹2.25 Crores</span>
+            </button>
+            <button onclick="checkCaseAnswer('c1-q1', 'b', this)" class="p-3 rounded-xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-750 hover:border-amber-400 text-left transition-all flex items-center gap-2">
+              <span class="w-5 h-5 rounded-full border border-slate-400 text-center font-bold text-[10px] flex items-center justify-center shrink-0">B</span>
+              <span>₹3.09 Crores</span>
+            </button>
+            <button onclick="checkCaseAnswer('c1-q1', 'b', this)" class="p-3 rounded-xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-750 hover:border-amber-400 text-left transition-all flex items-center gap-2">
+              <span class="w-5 h-5 rounded-full border border-slate-400 text-center font-bold text-[10px] flex items-center justify-center shrink-0">C</span>
+              <span>₹4.05 Crores</span>
+            </button>
+            <button onclick="checkCaseAnswer('c1-q1', 'b', this)" class="p-3 rounded-xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-750 hover:border-amber-400 text-left transition-all flex items-center gap-2">
+              <span class="w-5 h-5 rounded-full border border-slate-400 text-center font-bold text-[10px] flex items-center justify-center shrink-0">D</span>
+              <span>₹1.80 Crores</span>
+            </button>
+          </div>
+          <div id="exp-c1-q1" class="hidden p-4 rounded-xl text-xs space-y-1"></div>
+        </div>
+
+        <!-- Q1.2 -->
+        <div class="p-5 rounded-2xl bg-slate-50 dark:bg-slate-800/50 border border-slate-200 dark:border-slate-700 space-y-3">
+          <div class="flex items-center justify-between text-xs font-bold text-amber-700 dark:text-amber-400">
+            <span>Question 1.2 &bull; Need-Based Insurance Adequacy & Shortfall</span>
+            <span class="px-2 py-0.5 rounded bg-amber-100 dark:bg-amber-950">2 Marks</span>
+          </div>
+          <p class="text-xs sm:text-sm text-slate-800 dark:text-slate-200 font-medium leading-relaxed">
+            The adviser conducts a Need-Based Life Insurance Analysis. Family ongoing living expenses need a capital pool of ₹2.10 Crores (PV of family support), outstanding home loan is ₹60 Lakhs, and children's higher education requires a provision of ₹50 Lakhs. Vikram has ₹95 Lakhs in liquid financial assets (MFs, PPF/EPF, FDs) and ₹10 Lakhs in personal life insurance. His employer's ₹50 Lakh cover cannot be counted as it is contingent on employment. What is Vikram's net life insurance shortfall?
+          </p>
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-2 text-xs" id="opts-c1-q2">
+            <button onclick="checkCaseAnswer('c1-q2', 'c', this)" class="p-3 rounded-xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-750 hover:border-amber-400 text-left transition-all flex items-center gap-2">
+              <span class="w-5 h-5 rounded-full border border-slate-400 text-center font-bold text-[10px] flex items-center justify-center shrink-0">A</span>
+              <span>₹3.20 Crores</span>
+            </button>
+            <button onclick="checkCaseAnswer('c1-q2', 'c', this)" class="p-3 rounded-xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-750 hover:border-amber-400 text-left transition-all flex items-center gap-2">
+              <span class="w-5 h-5 rounded-full border border-slate-400 text-center font-bold text-[10px] flex items-center justify-center shrink-0">B</span>
+              <span>₹1.55 Crores</span>
+            </button>
+            <button onclick="checkCaseAnswer('c1-q2', 'c', this)" class="p-3 rounded-xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-750 hover:border-amber-400 text-left transition-all flex items-center gap-2">
+              <span class="w-5 h-5 rounded-full border border-slate-400 text-center font-bold text-[10px] flex items-center justify-center shrink-0">C</span>
+              <span>₹2.15 Crores</span>
+            </button>
+            <button onclick="checkCaseAnswer('c1-q2', 'c', this)" class="p-3 rounded-xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-750 hover:border-amber-400 text-left transition-all flex items-center gap-2">
+              <span class="w-5 h-5 rounded-full border border-slate-400 text-center font-bold text-[10px] flex items-center justify-center shrink-0">D</span>
+              <span>₹2.65 Crores</span>
+            </button>
+          </div>
+          <div id="exp-c1-q2" class="hidden p-4 rounded-xl text-xs space-y-1"></div>
+        </div>
+
+        <!-- Q1.3 -->
+        <div class="p-5 rounded-2xl bg-slate-50 dark:bg-slate-800/50 border border-slate-200 dark:border-slate-700 space-y-3">
+          <div class="flex items-center justify-between text-xs font-bold text-amber-700 dark:text-amber-400">
+            <span>Question 1.3 &bull; Higher Education Goal Future Value</span>
+            <span class="px-2 py-0.5 rounded bg-amber-100 dark:bg-amber-950">2 Marks</span>
+          </div>
+          <p class="text-xs sm:text-sm text-slate-800 dark:text-slate-200 font-medium leading-relaxed">
+            Son Aarav (Age 12) will enter engineering college at age 18 (in exactly 6 years). The 4-year degree currently costs ₹25,000,00 (₹25 Lakhs) in today's terms. Higher education inflation is estimated at 8.0% per annum. What will be the estimated future cost of Aarav's education at age 18?
+          </p>
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-2 text-xs" id="opts-c1-q3">
+            <button onclick="checkCaseAnswer('c1-q3', 'a', this)" class="p-3 rounded-xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-750 hover:border-amber-400 text-left transition-all flex items-center gap-2">
+              <span class="w-5 h-5 rounded-full border border-slate-400 text-center font-bold text-[10px] flex items-center justify-center shrink-0">A</span>
+              <span>₹39.67 Lakhs</span>
+            </button>
+            <button onclick="checkCaseAnswer('c1-q3', 'a', this)" class="p-3 rounded-xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-750 hover:border-amber-400 text-left transition-all flex items-center gap-2">
+              <span class="w-5 h-5 rounded-full border border-slate-400 text-center font-bold text-[10px] flex items-center justify-center shrink-0">B</span>
+              <span>₹32.50 Lakhs</span>
+            </button>
+            <button onclick="checkCaseAnswer('c1-q3', 'a', this)" class="p-3 rounded-xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-750 hover:border-amber-400 text-left transition-all flex items-center gap-2">
+              <span class="w-5 h-5 rounded-full border border-slate-400 text-center font-bold text-[10px] flex items-center justify-center shrink-0">C</span>
+              <span>₹48.20 Lakhs</span>
+            </button>
+            <button onclick="checkCaseAnswer('c1-q3', 'a', this)" class="p-3 rounded-xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-750 hover:border-amber-400 text-left transition-all flex items-center gap-2">
+              <span class="w-5 h-5 rounded-full border border-slate-400 text-center font-bold text-[10px] flex items-center justify-center shrink-0">D</span>
+              <span>₹37.00 Lakhs</span>
+            </button>
+          </div>
+          <div id="exp-c1-q3" class="hidden p-4 rounded-xl text-xs space-y-1"></div>
+        </div>
+
+        <!-- Q1.4 -->
+        <div class="p-5 rounded-2xl bg-slate-50 dark:bg-slate-800/50 border border-slate-200 dark:border-slate-700 space-y-3">
+          <div class="flex items-center justify-between text-xs font-bold text-amber-700 dark:text-amber-400">
+            <span>Question 1.4 &bull; Emergency Liquidity Buffer Adequacy</span>
+            <span class="px-2 py-0.5 rounded bg-amber-100 dark:bg-amber-950">2 Marks</span>
+          </div>
+          <p class="text-xs sm:text-sm text-slate-800 dark:text-slate-200 font-medium leading-relaxed">
+            The family has monthly household living expenses of ₹1,60,000, school fees of ₹30,000, and a mandatory home loan EMI of ₹68,000. Under prudent advisory standards, how much should be maintained in the family's emergency reserve (6 months of mandatory outflows), and is their current ₹15 Lakh bank savings/FD reserve adequate?
+          </p>
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-2 text-xs" id="opts-c1-q4">
+            <button onclick="checkCaseAnswer('c1-q4', 'd', this)" class="p-3 rounded-xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-750 hover:border-amber-400 text-left transition-all flex items-center gap-2">
+              <span class="w-5 h-5 rounded-full border border-slate-400 text-center font-bold text-[10px] flex items-center justify-center shrink-0">A</span>
+              <span>Reserve required: ₹9.60 Lakhs; Current reserve is adequate</span>
+            </button>
+            <button onclick="checkCaseAnswer('c1-q4', 'd', this)" class="p-3 rounded-xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-750 hover:border-amber-400 text-left transition-all flex items-center gap-2">
+              <span class="w-5 h-5 rounded-full border border-slate-400 text-center font-bold text-[10px] flex items-center justify-center shrink-0">B</span>
+              <span>Reserve required: ₹11.40 Lakhs; Current reserve is adequate</span>
+            </button>
+            <button onclick="checkCaseAnswer('c1-q4', 'd', this)" class="p-3 rounded-xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-750 hover:border-amber-400 text-left transition-all flex items-center gap-2">
+              <span class="w-5 h-5 rounded-full border border-slate-400 text-center font-bold text-[10px] flex items-center justify-center shrink-0">C</span>
+              <span>Reserve required: ₹22.20 Lakhs; Current reserve has a shortfall of ₹7.20 Lakhs</span>
+            </button>
+            <button onclick="checkCaseAnswer('c1-q4', 'd', this)" class="p-3 rounded-xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-750 hover:border-amber-400 text-left transition-all flex items-center gap-2">
+              <span class="w-5 h-5 rounded-full border border-slate-400 text-center font-bold text-[10px] flex items-center justify-center shrink-0">D</span>
+              <span>Reserve required: ₹15.48 Lakhs; Current reserve has a minor shortfall of ₹48,000</span>
+            </button>
+          </div>
+          <div id="exp-c1-q4" class="hidden p-4 rounded-xl text-xs space-y-1"></div>
+        </div>
+
+        <!-- Q1.5 -->
+        <div class="p-5 rounded-2xl bg-slate-50 dark:bg-slate-800/50 border border-slate-200 dark:border-slate-700 space-y-3">
+          <div class="flex items-center justify-between text-xs font-bold text-amber-700 dark:text-amber-400">
+            <span>Question 1.5 &bull; Insurance Product Restructuring (BTID Strategy)</span>
+            <span class="px-2 py-0.5 rounded bg-amber-100 dark:bg-amber-950">2 Marks</span>
+          </div>
+          <p class="text-xs sm:text-sm text-slate-800 dark:text-slate-200 font-medium leading-relaxed">
+            Vikram is paying ₹95,000 per year towards an old traditional endowment policy offering a sum assured of only ₹10 Lakhs. A pure term insurance policy offering ₹2.50 Crores cover for Vikram up to age 60 costs ₹32,000 per year. What should the adviser recommend under the "Buy Term and Invest the Difference (BTID)" principle?
+          </p>
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-2 text-xs" id="opts-c1-q5">
+            <button onclick="checkCaseAnswer('c1-q5', 'b', this)" class="p-3 rounded-xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-750 hover:border-amber-400 text-left transition-all flex items-center gap-2">
+              <span class="w-5 h-5 rounded-full border border-slate-400 text-center font-bold text-[10px] flex items-center justify-center shrink-0">A</span>
+              <span>Continue the endowment policy because traditional plans guarantee safe returns</span>
+            </button>
+            <button onclick="checkCaseAnswer('c1-q5', 'b', this)" class="p-3 rounded-xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-750 hover:border-amber-400 text-left transition-all flex items-center gap-2">
+              <span class="w-5 h-5 rounded-full border border-slate-400 text-center font-bold text-[10px] flex items-center justify-center shrink-0">B</span>
+              <span>Purchase the ₹2.50 Crore pure term plan, make the endowment policy paid-up, and invest the premium difference of ₹63,000 p.a. into a diversified equity index fund</span>
+            </button>
+            <button onclick="checkCaseAnswer('c1-q5', 'b', this)" class="p-3 rounded-xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-750 hover:border-amber-400 text-left transition-all flex items-center gap-2">
+              <span class="w-5 h-5 rounded-full border border-slate-400 text-center font-bold text-[10px] flex items-center justify-center shrink-0">C</span>
+              <span>Buy a ULIP policy with the entire ₹95,000 premium</span>
+            </button>
+            <button onclick="checkCaseAnswer('c1-q5', 'b', this)" class="p-3 rounded-xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-750 hover:border-amber-400 text-left transition-all flex items-center gap-2">
+              <span class="w-5 h-5 rounded-full border border-slate-400 text-center font-bold text-[10px] flex items-center justify-center shrink-0">D</span>
+              <span>Rely solely on the employer's group cover and cancel all individual policies</span>
+            </button>
+          </div>
+          <div id="exp-c1-q5" class="hidden p-4 rounded-xl text-xs space-y-1"></div>
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- ========================================================================= -->
+    <!-- CASE STUDY 2: RAJESH & MEENA KULKARNI (RETIREMENT STEP-UP & SWP)         -->
+    <!-- ========================================================================= -->
+    <section id="case-2" class="bg-white dark:bg-slate-900 rounded-3xl p-6 sm:p-10 border-2 border-indigo-300 dark:border-indigo-700/80 shadow-md space-y-8">
+      
+      <!-- Case Header -->
+      <div class="border-b border-slate-200 dark:border-slate-800 pb-6 space-y-2">
+        <div class="flex flex-wrap items-center justify-between gap-2">
+          <span class="px-3 py-1 rounded-full font-mono text-xs font-bold bg-indigo-100 dark:bg-indigo-950 text-indigo-900 dark:text-indigo-200 border border-indigo-300 dark:border-indigo-700">
+            CASE STUDY 2 OF 4 &bull; 10 MARKS
+          </span>
+          <span class="text-xs font-bold text-slate-500 dark:text-slate-400">
+            Core Theme: Pre-Retirement Step-Up Corpus, Real Rate of Return & SWP Decumulation
+          </span>
+        </div>
+        <h2 class="font-display font-extrabold text-2xl sm:text-3xl text-slate-900 dark:text-white">
+          Client Dossier: Rajesh & Meena Kulkarni (Pre-Retirement & Decumulation)
+        </h2>
+      </div>
+
+      <!-- Client Dossier Tables & Details -->
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6 text-xs">
+        
+        <!-- Profile & Horizon -->
+        <div class="p-5 rounded-2xl bg-slate-50 dark:bg-slate-800/60 border border-slate-200 dark:border-slate-700 space-y-2.5">
+          <h3 class="font-display font-bold text-sm text-slate-900 dark:text-white flex items-center gap-1.5">
+            <i data-lucide="clock" class="w-4 h-4 text-indigo-600"></i> Demographics & Horizon
+          </h3>
+          <div class="space-y-1 text-slate-600 dark:text-slate-300 leading-relaxed">
+            <div>&bull; <strong>Rajesh:</strong> Age 52, Senior Operations Director in Auto Manufacturing. Retiring at age 60 (8 years accumulation phase).</div>
+            <div>&bull; <strong>Meena:</strong> Age 50, Homemaker. Life expectancy: Rajesh 85, Meena 88.</div>
+            <div>&bull; <strong>Planning Horizon:</strong> 28 years post-retirement (from Rajesh age 60 to Meena age 88).</div>
+            <div>&bull; <strong>Debt Status:</strong> Completely debt-free; primary residence fully owned.</div>
+          </div>
+        </div>
+
+        <!-- Expenses & Inflation Rates -->
+        <div class="p-5 rounded-2xl bg-slate-50 dark:bg-slate-800/60 border border-slate-200 dark:border-slate-700 space-y-2.5">
+          <h3 class="font-display font-bold text-sm text-slate-900 dark:text-white flex items-center gap-1.5">
+            <i data-lucide="trending-up" class="w-4 h-4 text-indigo-600"></i> Cash Flows & Assumptions
+          </h3>
+          <div class="space-y-1 text-slate-600 dark:text-slate-300 leading-relaxed">
+            <div>&bull; <strong>Current Monthly Living Expenses:</strong> ₹1,10,000 / month (Annual: ₹13,20,000).</div>
+            <div>&bull; <strong>Pre-Retirement Inflation:</strong> 6.0% per annum.</div>
+            <div>&bull; <strong>Post-Retirement Inflation:</strong> 5.5% per annum.</div>
+            <div>&bull; <strong>Pre-Retirement Return:</strong> 11.0% p.a. (SAA 65% Equity : 35% Debt).</div>
+            <div>&bull; <strong>Post-Retirement Return:</strong> 8.5% p.a. (SAA 30% Equity : 70% Debt).</div>
+          </div>
+        </div>
+
+        <!-- Existing Assets -->
+        <div class="p-5 rounded-2xl bg-slate-50 dark:bg-slate-800/60 border border-slate-200 dark:border-slate-700 space-y-2.5">
+          <h3 class="font-display font-bold text-sm text-slate-900 dark:text-white flex items-center gap-1.5">
+            <i data-lucide="layers" class="w-4 h-4 text-indigo-600"></i> Existing Retirement Pool
+          </h3>
+          <div class="space-y-1 text-slate-600 dark:text-slate-300 leading-relaxed">
+            <div>&bull; <strong>EPF + PPF Balance:</strong> ₹70,00,000 (Expected growth: 7.5% p.a. including employee/employer contributions).</div>
+            <div>&bull; <strong>Equity Mutual Funds:</strong> ₹65,00,000 (Expected growth: 11.0% p.a.).</div>
+            <div>&bull; <strong>Non-Agricultural Plot:</strong> Market Value ₹50,00,000 (Not earmarked for retirement).</div>
+            <div>&bull; <strong>Monthly Investable Surplus:</strong> ₹95,000 / month available for fresh SIPs.</div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- 5 Interactive Sub-Questions for Case 2 -->
+      <div class="space-y-6 pt-4 border-t border-slate-200 dark:border-slate-800">
+        <h3 class="font-display font-bold text-lg text-slate-900 dark:text-white flex items-center gap-2">
+          <i data-lucide="help-circle" class="w-5 h-5 text-indigo-600"></i> Case 2 Questions (5 Multi-Part Problems)
+        </h3>
+
+        <!-- Q2.1 -->
+        <div class="p-5 rounded-2xl bg-slate-50 dark:bg-slate-800/50 border border-slate-200 dark:border-slate-700 space-y-3">
+          <div class="flex items-center justify-between text-xs font-bold text-indigo-700 dark:text-indigo-400">
+            <span>Question 2.1 &bull; First-Year Post-Retirement Living Expense</span>
+            <span class="px-2 py-0.5 rounded bg-indigo-100 dark:bg-indigo-950">2 Marks</span>
+          </div>
+          <p class="text-xs sm:text-sm text-slate-800 dark:text-slate-200 font-medium leading-relaxed">
+            Current annual household living expenses are ₹13,20,000 (₹1,10,000/month). Pre-retirement inflation is 6.0% per annum. What will be the annual household living expense required during the first year of retirement when Rajesh reaches age 60 (in 8 years)?
+          </p>
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-2 text-xs" id="opts-c2-q1">
+            <button onclick="checkCaseAnswer('c2-q1', 'b', this)" class="p-3 rounded-xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-750 hover:border-indigo-400 text-left transition-all flex items-center gap-2">
+              <span class="w-5 h-5 rounded-full border border-slate-400 text-center font-bold text-[10px] flex items-center justify-center shrink-0">A</span>
+              <span>₹18.45 Lakhs</span>
+            </button>
+            <button onclick="checkCaseAnswer('c2-q1', 'b', this)" class="p-3 rounded-xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-750 hover:border-indigo-400 text-left transition-all flex items-center gap-2">
+              <span class="w-5 h-5 rounded-full border border-slate-400 text-center font-bold text-[10px] flex items-center justify-center shrink-0">B</span>
+              <span>₹21.04 Lakhs</span>
+            </button>
+            <button onclick="checkCaseAnswer('c2-q1', 'b', this)" class="p-3 rounded-xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-750 hover:border-indigo-400 text-left transition-all flex items-center gap-2">
+              <span class="w-5 h-5 rounded-full border border-slate-400 text-center font-bold text-[10px] flex items-center justify-center shrink-0">C</span>
+              <span>₹24.80 Lakhs</span>
+            </button>
+            <button onclick="checkCaseAnswer('c2-q1', 'b', this)" class="p-3 rounded-xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-750 hover:border-indigo-400 text-left transition-all flex items-center gap-2">
+              <span class="w-5 h-5 rounded-full border border-slate-400 text-center font-bold text-[10px] flex items-center justify-center shrink-0">D</span>
+              <span>₹16.50 Lakhs</span>
+            </button>
+          </div>
+          <div id="exp-c2-q1" class="hidden p-4 rounded-xl text-xs space-y-1"></div>
+        </div>
+
+        <!-- Q2.2 -->
+        <div class="p-5 rounded-2xl bg-slate-50 dark:bg-slate-800/50 border border-slate-200 dark:border-slate-700 space-y-3">
+          <div class="flex items-center justify-between text-xs font-bold text-indigo-700 dark:text-indigo-400">
+            <span>Question 2.2 &bull; Total Retirement Corpus Requirement (Real Rate of Return)</span>
+            <span class="px-2 py-0.5 rounded bg-indigo-100 dark:bg-indigo-950">2 Marks</span>
+          </div>
+          <p class="text-xs sm:text-sm text-slate-800 dark:text-slate-200 font-medium leading-relaxed">
+            The first year's living expense at age 60 is ₹21,04,000 (payable at the beginning of each year - Annuity Due). Post-retirement return is 8.5% p.a., post-retirement inflation is 5.5% p.a., and the retirement phase is 28 years. Using the exact Fisher real rate formula <i>r = [(1 + 0.085) / (1 + 0.055)] - 1 = 2.8436%</i>, what is the total retirement corpus required at age 60?
+          </p>
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-2 text-xs" id="opts-c2-q2">
+            <button onclick="checkCaseAnswer('c2-q2', 'c', this)" class="p-3 rounded-xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-750 hover:border-indigo-400 text-left transition-all flex items-center gap-2">
+              <span class="w-5 h-5 rounded-full border border-slate-400 text-center font-bold text-[10px] flex items-center justify-center shrink-0">A</span>
+              <span>₹3.20 Crores</span>
+            </button>
+            <button onclick="checkCaseAnswer('c2-q2', 'c', this)" class="p-3 rounded-xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-750 hover:border-indigo-400 text-left transition-all flex items-center gap-2">
+              <span class="w-5 h-5 rounded-full border border-slate-400 text-center font-bold text-[10px] flex items-center justify-center shrink-0">B</span>
+              <span>₹4.85 Crores</span>
+            </button>
+            <button onclick="checkCaseAnswer('c2-q2', 'c', this)" class="p-3 rounded-xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-750 hover:border-indigo-400 text-left transition-all flex items-center gap-2">
+              <span class="w-5 h-5 rounded-full border border-slate-400 text-center font-bold text-[10px] flex items-center justify-center shrink-0">C</span>
+              <span>₹4.07 Crores</span>
+            </button>
+            <button onclick="checkCaseAnswer('c2-q2', 'c', this)" class="p-3 rounded-xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-750 hover:border-indigo-400 text-left transition-all flex items-center gap-2">
+              <span class="w-5 h-5 rounded-full border border-slate-400 text-center font-bold text-[10px] flex items-center justify-center shrink-0">D</span>
+              <span>₹5.50 Crores</span>
+            </button>
+          </div>
+          <div id="exp-c2-q2" class="hidden p-4 rounded-xl text-xs space-y-1"></div>
+        </div>
+
+        <!-- Q2.3 -->
+        <div class="p-5 rounded-2xl bg-slate-50 dark:bg-slate-800/50 border border-slate-200 dark:border-slate-700 space-y-3">
+          <div class="flex items-center justify-between text-xs font-bold text-indigo-700 dark:text-indigo-400">
+            <span>Question 2.3 &bull; Future Value of Existing Assets & Deficit</span>
+            <span class="px-2 py-0.5 rounded bg-indigo-100 dark:bg-indigo-950">2 Marks</span>
+          </div>
+          <p class="text-xs sm:text-sm text-slate-800 dark:text-slate-200 font-medium leading-relaxed">
+            Rajesh's EPF/PPF corpus of ₹70 Lakhs will grow at 7.5% p.a. over 8 years to reach ₹1.25 Crores. His Equity MFs of ₹65 Lakhs will compound at 11% p.a. over 8 years to reach ₹1.50 Crores. Total accumulated wealth from existing assets at age 60 will be ₹2.75 Crores. With the required corpus being ₹4.07 Crores, what is the net retirement corpus deficit at age 60?
+          </p>
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-2 text-xs" id="opts-c2-q3">
+            <button onclick="checkCaseAnswer('c2-q3', 'a', this)" class="p-3 rounded-xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-750 hover:border-indigo-400 text-left transition-all flex items-center gap-2">
+              <span class="w-5 h-5 rounded-full border border-slate-400 text-center font-bold text-[10px] flex items-center justify-center shrink-0">A</span>
+              <span>₹1.32 Crores</span>
+            </button>
+            <button onclick="checkCaseAnswer('c2-q3', 'a', this)" class="p-3 rounded-xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-750 hover:border-indigo-400 text-left transition-all flex items-center gap-2">
+              <span class="w-5 h-5 rounded-full border border-slate-400 text-center font-bold text-[10px] flex items-center justify-center shrink-0">B</span>
+              <span>₹2.10 Crores</span>
+            </button>
+            <button onclick="checkCaseAnswer('c2-q3', 'a', this)" class="p-3 rounded-xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-750 hover:border-indigo-400 text-left transition-all flex items-center gap-2">
+              <span class="w-5 h-5 rounded-full border border-slate-400 text-center font-bold text-[10px] flex items-center justify-center shrink-0">C</span>
+              <span>₹85 Lakhs</span>
+            </button>
+            <button onclick="checkCaseAnswer('c2-q3', 'a', this)" class="p-3 rounded-xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-750 hover:border-indigo-400 text-left transition-all flex items-center gap-2">
+              <span class="w-5 h-5 rounded-full border border-slate-400 text-center font-bold text-[10px] flex items-center justify-center shrink-0">D</span>
+              <span>₹1.75 Crores</span>
+            </button>
+          </div>
+          <div id="exp-c2-q3" class="hidden p-4 rounded-xl text-xs space-y-1"></div>
+        </div>
+
+        <!-- Q2.4 -->
+        <div class="p-5 rounded-2xl bg-slate-50 dark:bg-slate-800/50 border border-slate-200 dark:border-slate-700 space-y-3">
+          <div class="flex items-center justify-between text-xs font-bold text-indigo-700 dark:text-indigo-400">
+            <span>Question 2.4 &bull; Monthly Step-Up SIP Requirement</span>
+            <span class="px-2 py-0.5 rounded bg-indigo-100 dark:bg-indigo-950">2 Marks</span>
+          </div>
+          <p class="text-xs sm:text-sm text-slate-800 dark:text-slate-200 font-medium leading-relaxed">
+            To accumulate the ₹1.32 Crore deficit over 8 years (96 months) at an expected CAGR of 11.0% p.a., what monthly SIP is required today if Rajesh adopts a fixed flat SIP vs. can his current ₹95,000 monthly surplus comfortably support this plan?
+          </p>
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-2 text-xs" id="opts-c2-q4">
+            <button onclick="checkCaseAnswer('c2-q4', 'b', this)" class="p-3 rounded-xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-750 hover:border-indigo-400 text-left transition-all flex items-center gap-2">
+              <span class="w-5 h-5 rounded-full border border-slate-400 text-center font-bold text-[10px] flex items-center justify-center shrink-0">A</span>
+              <span>SIP required: ₹1,25,000/mo; Unaffordable with ₹95k surplus</span>
+            </button>
+            <button onclick="checkCaseAnswer('c2-q4', 'b', this)" class="p-3 rounded-xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-750 hover:border-indigo-400 text-left transition-all flex items-center gap-2">
+              <span class="w-5 h-5 rounded-full border border-slate-400 text-center font-bold text-[10px] flex items-center justify-center shrink-0">B</span>
+              <span>SIP required: ₹84,700/mo; Well within his ₹95,000 monthly surplus</span>
+            </button>
+            <button onclick="checkCaseAnswer('c2-q4', 'b', this)" class="p-3 rounded-xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-750 hover:border-indigo-400 text-left transition-all flex items-center gap-2">
+              <span class="w-5 h-5 rounded-full border border-slate-400 text-center font-bold text-[10px] flex items-center justify-center shrink-0">C</span>
+              <span>SIP required: ₹45,000/mo; Easily funded</span>
+            </button>
+            <button onclick="checkCaseAnswer('c2-q4', 'b', this)" class="p-3 rounded-xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-750 hover:border-indigo-400 text-left transition-all flex items-center gap-2">
+              <span class="w-5 h-5 rounded-full border border-slate-400 text-center font-bold text-[10px] flex items-center justify-center shrink-0">D</span>
+              <span>SIP required: ₹1,05,000/mo; Requires taking an unsecured loan</span>
+            </button>
+          </div>
+          <div id="exp-c2-q4" class="hidden p-4 rounded-xl text-xs space-y-1"></div>
+        </div>
+
+        <!-- Q2.5 -->
+        <div class="p-5 rounded-2xl bg-slate-50 dark:bg-slate-800/50 border border-slate-200 dark:border-slate-700 space-y-3">
+          <div class="flex items-center justify-between text-xs font-bold text-indigo-700 dark:text-indigo-400">
+            <span>Question 2.5 &bull; Decumulation: SWP vs. Life Insurance Annuity</span>
+            <span class="px-2 py-0.5 rounded bg-indigo-100 dark:bg-indigo-950">2 Marks</span>
+          </div>
+          <p class="text-xs sm:text-sm text-slate-800 dark:text-slate-200 font-medium leading-relaxed">
+            Rajesh's insurance agent suggests buying an Immediate Life Annuity with the entire ₹4.07 Crore corpus offering 6.2% annual payout. Why should the Investment Adviser firmly reject this in favor of a 3-Bucket Systematic Withdrawal Plan (SWP)?
+          </p>
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-2 text-xs" id="opts-c2-q5">
+            <button onclick="checkCaseAnswer('c2-q5', 'c', this)" class="p-3 rounded-xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-750 hover:border-indigo-400 text-left transition-all flex items-center gap-2">
+              <span class="w-5 h-5 rounded-full border border-slate-400 text-center font-bold text-[10px] flex items-center justify-center shrink-0">A</span>
+              <span>Annuity yields are illegal under SEBI guidelines</span>
+            </button>
+            <button onclick="checkCaseAnswer('c2-q5', 'c', this)" class="p-3 rounded-xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-750 hover:border-indigo-400 text-left transition-all flex items-center gap-2">
+              <span class="w-5 h-5 rounded-full border border-slate-400 text-center font-bold text-[10px] flex items-center justify-center shrink-0">B</span>
+              <span>Annuity payouts are tax-free under Section 10(10D)</span>
+            </button>
+            <button onclick="checkCaseAnswer('c2-q5', 'c', this)" class="p-3 rounded-xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-750 hover:border-indigo-400 text-left transition-all flex items-center gap-2">
+              <span class="w-5 h-5 rounded-full border border-slate-400 text-center font-bold text-[10px] flex items-center justify-center shrink-0">C</span>
+              <span>Annuity payouts are fixed (no inflation protection) and 100% taxable at 30% slab rate; whereas an SWP allows equity growth to beat 5.5% inflation and taxes only the capital gains component</span>
+            </button>
+            <button onclick="checkCaseAnswer('c2-q5', 'c', this)" class="p-3 rounded-xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-750 hover:border-indigo-400 text-left transition-all flex items-center gap-2">
+              <span class="w-5 h-5 rounded-full border border-slate-400 text-center font-bold text-[10px] flex items-center justify-center shrink-0">D</span>
+              <span>SWPs guarantee 25% annual returns backed by the Government of India</span>
+            </button>
+          </div>
+          <div id="exp-c2-q5" class="hidden p-4 rounded-xl text-xs space-y-1"></div>
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- ========================================================================= -->
+    <!-- CASE STUDY 3: DR. SANJEEV & RADHIKA SINGHANIA (CAPITAL GAINS & SEC 54)     -->
+    <!-- ========================================================================= -->
+    <section id="case-3" class="bg-white dark:bg-slate-900 rounded-3xl p-6 sm:p-10 border-2 border-emerald-300 dark:border-emerald-700/80 shadow-md space-y-8">
+      
+      <!-- Case Header -->
+      <div class="border-b border-slate-200 dark:border-slate-800 pb-6 space-y-2">
+        <div class="flex flex-wrap items-center justify-between gap-2">
+          <span class="px-3 py-1 rounded-full font-mono text-xs font-bold bg-emerald-100 dark:bg-emerald-950 text-emerald-900 dark:text-emerald-200 border border-emerald-300 dark:border-emerald-700">
+            CASE STUDY 3 OF 4 &bull; 10 MARKS
+          </span>
+          <span class="text-xs font-bold text-slate-500 dark:text-slate-400">
+            Core Theme: Budget 2024 Capital Gains Amendments, Section 54, 54EC & 54F Exemption Optimization
+          </span>
+        </div>
+        <h2 class="font-display font-extrabold text-2xl sm:text-3xl text-slate-900 dark:text-white">
+          Client Dossier: Dr. Sanjeev & Radhika Singhania (Asset Sale & Tax Optimization)
+        </h2>
+      </div>
+
+      <!-- Client Dossier Tables & Details -->
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6 text-xs">
+        
+        <!-- Profiles -->
+        <div class="p-5 rounded-2xl bg-slate-50 dark:bg-slate-800/60 border border-slate-200 dark:border-slate-700 space-y-2.5">
+          <h3 class="font-display font-bold text-sm text-slate-900 dark:text-white flex items-center gap-1.5">
+            <i data-lucide="user-check" class="w-4 h-4 text-emerald-600"></i> Client Profile & Tax Bracket
+          </h3>
+          <div class="space-y-1 text-slate-600 dark:text-slate-300 leading-relaxed">
+            <div>&bull; <strong>Dr. Sanjeev Singhania:</strong> Age 58, Chief of Orthopedics at a super-specialty hospital. Professional income: ₹65 Lakhs p.a.</div>
+            <div>&bull; <strong>Radhika:</strong> Age 55, Clinical Pathologist & Lab Director. Net income: ₹20 Lakhs p.a.</div>
+            <div>&bull; <strong>Tax Bracket:</strong> Highest individual income tax slab (30% + 15% Surcharge + 4% Cess = effective <strong>35.88%</strong>).</div>
+          </div>
+        </div>
+
+        <!-- Transactions Planned in FY 2024-25 -->
+        <div class="p-5 rounded-2xl bg-slate-50 dark:bg-slate-800/60 border border-slate-200 dark:border-slate-700 space-y-2.5">
+          <h3 class="font-display font-bold text-sm text-slate-900 dark:text-white flex items-center gap-1.5">
+            <i data-lucide="file-text" class="w-4 h-4 text-emerald-600"></i> Asset Liquidation Events
+          </h3>
+          <div class="space-y-1 text-slate-600 dark:text-slate-300 leading-relaxed">
+            <div>&bull; <strong>1. Ancestral House in Pune:</strong> Sold in August 2024 for <strong>₹4.80 Crores</strong> (Cost of Acquisition in May 2004 was ₹80 Lakhs; CII in 2004-05 was 113, CII in 2024-25 is 363).</div>
+            <div>&bull; <strong>2. Unlisted Diagnostic Shares:</strong> Sold for <strong>₹1.20 Crores</strong> (Purchased 5 years ago for ₹30 Lakhs).</div>
+            <div>&bull; <strong>3. Listed Equity Mutual Funds:</strong> Long-term capital gains realized: <strong>₹45 Lakhs</strong>.</div>
+          </div>
+        </div>
+
+        <!-- Planned Reinvestments -->
+        <div class="p-5 rounded-2xl bg-slate-50 dark:bg-slate-800/60 border border-slate-200 dark:border-slate-700 space-y-2.5">
+          <h3 class="font-display font-bold text-sm text-slate-900 dark:text-white flex items-center gap-1.5">
+            <i data-lucide="home" class="w-4 h-4 text-emerald-600"></i> Intended Capital Deployment
+          </h3>
+          <div class="space-y-1 text-slate-600 dark:text-slate-300 leading-relaxed">
+            <div>&bull; <strong>New Residential Apartment in Mumbai:</strong> Negotiated purchase price of <strong>₹2.50 Crores</strong> within 1 year of sale.</div>
+            <div>&bull; <strong>Section 54EC Bonds:</strong> Looking to invest maximum allowed in REC / PFC capital gains bonds.</div>
+            <div>&bull; <strong>Residual Proceeds:</strong> To be deployed into multi-asset conservative income portfolio.</div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- 5 Interactive Sub-Questions for Case 3 -->
+      <div class="space-y-6 pt-4 border-t border-slate-200 dark:border-slate-800">
+        <h3 class="font-display font-bold text-lg text-slate-900 dark:text-white flex items-center gap-2">
+          <i data-lucide="help-circle" class="w-5 h-5 text-emerald-600"></i> Case 3 Questions (5 Multi-Part Problems)
+        </h3>
+
+        <!-- Q3.1 -->
+        <div class="p-5 rounded-2xl bg-slate-50 dark:bg-slate-800/50 border border-slate-200 dark:border-slate-700 space-y-3">
+          <div class="flex items-center justify-between text-xs font-bold text-emerald-700 dark:text-emerald-400">
+            <span>Question 3.1 &bull; Real Estate LTCG under Budget 2024 Grandfathering Amendment</span>
+            <span class="px-2 py-0.5 rounded bg-emerald-100 dark:bg-emerald-950">2 Marks</span>
+          </div>
+          <p class="text-xs sm:text-sm text-slate-800 dark:text-slate-200 font-medium leading-relaxed">
+            Under the revised Budget 2024 amendments to Section 112, resident individuals who acquired immovable property prior to July 23, 2024 have the option to pay tax at: <strong>(A) 20% with indexation</strong> OR <strong>(B) 12.5% without indexation</strong>, whichever is lower! Given the sale price of ₹4.80 Crores and indexed cost of ₹2.57 Crores (₹80L &times; 363 / 113), which option yields lower tax and what is the base tax payable before exemptions?
+          </p>
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-2 text-xs" id="opts-c3-q1">
+            <button onclick="checkCaseAnswer('c3-q1', 'b', this)" class="p-3 rounded-xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-750 hover:border-emerald-400 text-left transition-all flex items-center gap-2">
+              <span class="w-5 h-5 rounded-full border border-slate-400 text-center font-bold text-[10px] flex items-center justify-center shrink-0">A</span>
+              <span>Option A (20% with indexation) is lower: Tax = ₹58.00 Lakhs</span>
+            </button>
+            <button onclick="checkCaseAnswer('c3-q1', 'b', this)" class="p-3 rounded-xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-750 hover:border-emerald-400 text-left transition-all flex items-center gap-2">
+              <span class="w-5 h-5 rounded-full border border-slate-400 text-center font-bold text-[10px] flex items-center justify-center shrink-0">B</span>
+              <span>Option A (20% with indexation) is lower: Tax = ₹44.60 Lakhs (vs ₹50.00 Lakhs under 12.5% flat)</span>
+            </button>
+            <button onclick="checkCaseAnswer('c3-q1', 'b', this)" class="p-3 rounded-xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-750 hover:border-emerald-400 text-left transition-all flex items-center gap-2">
+              <span class="w-5 h-5 rounded-full border border-slate-400 text-center font-bold text-[10px] flex items-center justify-center shrink-0">C</span>
+              <span>Option B (12.5% flat) is lower: Tax = ₹32.00 Lakhs</span>
+            </button>
+            <button onclick="checkCaseAnswer('c3-q1', 'b', this)" class="p-3 rounded-xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-750 hover:border-emerald-400 text-left transition-all flex items-center gap-2">
+              <span class="w-5 h-5 rounded-full border border-slate-400 text-center font-bold text-[10px] flex items-center justify-center shrink-0">D</span>
+              <span>Both options yield identical tax of ₹40.00 Lakhs</span>
+            </button>
+          </div>
+          <div id="exp-c3-q1" class="hidden p-4 rounded-xl text-xs space-y-1"></div>
+        </div>
+
+        <!-- Q3.2 -->
+        <div class="p-5 rounded-2xl bg-slate-50 dark:bg-slate-800/50 border border-slate-200 dark:border-slate-700 space-y-3">
+          <div class="flex items-center justify-between text-xs font-bold text-emerald-700 dark:text-emerald-400">
+            <span>Question 3.2 &bull; Section 54 Residential Property Exemption</span>
+            <span class="px-2 py-0.5 rounded bg-emerald-100 dark:bg-emerald-950">2 Marks</span>
+          </div>
+          <p class="text-xs sm:text-sm text-slate-800 dark:text-slate-200 font-medium leading-relaxed">
+            The Long-Term Capital Gain from the Pune house under indexation is ₹2.23 Crores (₹4.80 Cr - ₹2.57 Cr). Dr. Singhania reinvests ₹2.50 Crores to purchase a new residential apartment in Mumbai within 1 year. Under Section 54 of the Income Tax Act, how much capital gain is exempt from income tax?
+          </p>
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-2 text-xs" id="opts-c3-q2">
+            <button onclick="checkCaseAnswer('c3-q2', 'c', this)" class="p-3 rounded-xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-750 hover:border-emerald-400 text-left transition-all flex items-center gap-2">
+              <span class="w-5 h-5 rounded-full border border-slate-400 text-center font-bold text-[10px] flex items-center justify-center shrink-0">A</span>
+              <span>Exempt amount: ₹50 Lakhs (maximum annual statutory cap)</span>
+            </button>
+            <button onclick="checkCaseAnswer('c3-q2', 'c', this)" class="p-3 rounded-xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-750 hover:border-emerald-400 text-left transition-all flex items-center gap-2">
+              <span class="w-5 h-5 rounded-full border border-slate-400 text-center font-bold text-[10px] flex items-center justify-center shrink-0">B</span>
+              <span>Exempt amount: ₹1.25 Crores (50% of investment)</span>
+            </button>
+            <button onclick="checkCaseAnswer('c3-q2', 'c', this)" class="p-3 rounded-xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-750 hover:border-emerald-400 text-left transition-all flex items-center gap-2">
+              <span class="w-5 h-5 rounded-full border border-slate-400 text-center font-bold text-[10px] flex items-center justify-center shrink-0">C</span>
+              <span>Exempt amount: ₹2.23 Crores (100% of capital gain is exempt; net taxable real estate gain is ZERO)</span>
+            </button>
+            <button onclick="checkCaseAnswer('c3-q2', 'c', this)" class="p-3 rounded-xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-750 hover:border-emerald-400 text-left transition-all flex items-center gap-2">
+              <span class="w-5 h-5 rounded-full border border-slate-400 text-center font-bold text-[10px] flex items-center justify-center shrink-0">D</span>
+              <span>Exempt amount: ₹2.50 Crores, creating a carry-forward tax loss of ₹27 Lakhs</span>
+            </button>
+          </div>
+          <div id="exp-c3-q2" class="hidden p-4 rounded-xl text-xs space-y-1"></div>
+        </div>
+
+        <!-- Q3.3 -->
+        <div class="p-5 rounded-2xl bg-slate-50 dark:bg-slate-800/50 border border-slate-200 dark:border-slate-700 space-y-3">
+          <div class="flex items-center justify-between text-xs font-bold text-emerald-700 dark:text-emerald-400">
+            <span>Question 3.3 &bull; Section 54EC Capital Gain Bonds Rules</span>
+            <span class="px-2 py-0.5 rounded bg-emerald-100 dark:bg-emerald-950">2 Marks</span>
+          </div>
+          <p class="text-xs sm:text-sm text-slate-800 dark:text-slate-200 font-medium leading-relaxed">
+            What is the maximum statutory investment limit per financial year under Section 54EC in specified bonds (REC, PFC, NHAI), what is their lock-in period, and how is the annual interest coupon taxed?
+          </p>
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-2 text-xs" id="opts-c3-q3">
+            <button onclick="checkCaseAnswer('c3-q3', 'a', this)" class="p-3 rounded-xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-750 hover:border-emerald-400 text-left transition-all flex items-center gap-2">
+              <span class="w-5 h-5 rounded-full border border-slate-400 text-center font-bold text-[10px] flex items-center justify-center shrink-0">A</span>
+              <span>Maximum limit: ₹50 Lakhs; Lock-in: 5 years; Annual interest is fully taxable at investor's marginal slab rate</span>
+            </button>
+            <button onclick="checkCaseAnswer('c3-q3', 'a', this)" class="p-3 rounded-xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-750 hover:border-emerald-400 text-left transition-all flex items-center gap-2">
+              <span class="w-5 h-5 rounded-full border border-slate-400 text-center font-bold text-[10px] flex items-center justify-center shrink-0">B</span>
+              <span>Maximum limit: ₹1 Crore; Lock-in: 3 years; Annual interest is 100% tax-free</span>
+            </button>
+            <button onclick="checkCaseAnswer('c3-q3', 'a', this)" class="p-3 rounded-xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-750 hover:border-emerald-400 text-left transition-all flex items-center gap-2">
+              <span class="w-5 h-5 rounded-full border border-slate-400 text-center font-bold text-[10px] flex items-center justify-center shrink-0">C</span>
+              <span>Maximum limit: ₹25 Lakhs; Lock-in: 7 years; Annual interest is taxed at 10%</span>
+            </button>
+            <button onclick="checkCaseAnswer('c3-q3', 'a', this)" class="p-3 rounded-xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-750 hover:border-emerald-400 text-left transition-all flex items-center gap-2">
+              <span class="w-5 h-5 rounded-full border border-slate-400 text-center font-bold text-[10px] flex items-center justify-center shrink-0">D</span>
+              <span>No investment limit; Lock-in: 1 year; Coupon is tax-exempt</span>
+            </button>
+          </div>
+          <div id="exp-c3-q3" class="hidden p-4 rounded-xl text-xs space-y-1"></div>
+        </div>
+
+        <!-- Q3.4 -->
+        <div class="p-5 rounded-2xl bg-slate-50 dark:bg-slate-800/50 border border-slate-200 dark:border-slate-700 space-y-3">
+          <div class="flex items-center justify-between text-xs font-bold text-emerald-700 dark:text-emerald-400">
+            <span>Question 3.4 &bull; Unlisted Shares Capital Gains & Section 54F Proportionality</span>
+            <span class="px-2 py-0.5 rounded bg-emerald-100 dark:bg-emerald-950">2 Marks</span>
+          </div>
+          <p class="text-xs sm:text-sm text-slate-800 dark:text-slate-200 font-medium leading-relaxed">
+            Dr. Singhania sold unlisted diagnostic shares for ₹1.20 Crores (Net Consideration) which generated a long-term capital gain of ₹90 Lakhs. If he wishes to claim exemption under Section 54F by investing in a residential house, what is the crucial condition regarding the investment amount compared to Section 54?
+          </p>
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-2 text-xs" id="opts-c3-q4">
+            <button onclick="checkCaseAnswer('c3-q4', 'b', this)" class="p-3 rounded-xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-750 hover:border-emerald-400 text-left transition-all flex items-center gap-2">
+              <span class="w-5 h-5 rounded-full border border-slate-400 text-center font-bold text-[10px] flex items-center justify-center shrink-0">A</span>
+              <span>Under Section 54F, only the capital gain (₹90 Lakhs) needs to be reinvested</span>
+            </button>
+            <button onclick="checkCaseAnswer('c3-q4', 'b', this)" class="p-3 rounded-xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-750 hover:border-emerald-400 text-left transition-all flex items-center gap-2">
+              <span class="w-5 h-5 rounded-full border border-slate-400 text-center font-bold text-[10px] flex items-center justify-center shrink-0">B</span>
+              <span>Under Section 54F, the ENTIRE net sales consideration (₹1.20 Crores) must be reinvested; if only a fraction is reinvested, exemption is strictly proportionate [Capital Gain × (Amount Invested / Net Consideration)]</span>
+            </button>
+            <button onclick="checkCaseAnswer('c3-q4', 'b', this)" class="p-3 rounded-xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-750 hover:border-emerald-400 text-left transition-all flex items-center gap-2">
+              <span class="w-5 h-5 rounded-full border border-slate-400 text-center font-bold text-[10px] flex items-center justify-center shrink-0">C</span>
+              <span>Section 54F does not apply to unlisted shares</span>
+            </button>
+            <button onclick="checkCaseAnswer('c3-q4', 'b', this)" class="p-3 rounded-xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-750 hover:border-emerald-400 text-left transition-all flex items-center gap-2">
+              <span class="w-5 h-5 rounded-full border border-slate-400 text-center font-bold text-[10px] flex items-center justify-center shrink-0">D</span>
+              <span>Section 54F allows owning multiple residential houses without restriction</span>
+            </button>
+          </div>
+          <div id="exp-c3-q4" class="hidden p-4 rounded-xl text-xs space-y-1"></div>
+        </div>
+
+        <!-- Q3.5 -->
+        <div class="p-5 rounded-2xl bg-slate-50 dark:bg-slate-800/50 border border-slate-200 dark:border-slate-700 space-y-3">
+          <div class="flex items-center justify-between text-xs font-bold text-emerald-700 dark:text-emerald-400">
+            <span>Question 3.5 &bull; Equity Mutual Funds LTCG Tax Calculation (Budget 2024 Rates)</span>
+            <span class="px-2 py-0.5 rounded bg-emerald-100 dark:bg-emerald-950">2 Marks</span>
+          </div>
+          <p class="text-xs sm:text-sm text-slate-800 dark:text-slate-200 font-medium leading-relaxed">
+            Dr. Singhania liquidated equity mutual funds units held for over 2 years, realizing a Long-Term Capital Gain of ₹45,00,000. Under the post-Budget 2024 tax regime (Section 112A), the annual exemption is increased to ₹1,25,000 and the tax rate is revised to 12.5%. What is the total tax payable on these gains (excluding surcharge and cess)?
+          </p>
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-2 text-xs" id="opts-c3-q5">
+            <button onclick="checkCaseAnswer('c3-q5', 'b', this)" class="p-3 rounded-xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-750 hover:border-emerald-400 text-left transition-all flex items-center gap-2">
+              <span class="w-5 h-5 rounded-full border border-slate-400 text-center font-bold text-[10px] flex items-center justify-center shrink-0">A</span>
+              <span>₹4,50,000 (10% flat)</span>
+            </button>
+            <button onclick="checkCaseAnswer('c3-q5', 'b', this)" class="p-3 rounded-xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-750 hover:border-emerald-400 text-left transition-all flex items-center gap-2">
+              <span class="w-5 h-5 rounded-full border border-slate-400 text-center font-bold text-[10px] flex items-center justify-center shrink-0">B</span>
+              <span>₹5,46,875 [12.5% on (₹45,00,000 - ₹1,25,000)]</span>
+            </button>
+            <button onclick="checkCaseAnswer('c3-q5', 'b', this)" class="p-3 rounded-xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-750 hover:border-emerald-400 text-left transition-all flex items-center gap-2">
+              <span class="w-5 h-5 rounded-full border border-slate-400 text-center font-bold text-[10px] flex items-center justify-center shrink-0">C</span>
+              <span>₹9,00,000 (20% with indexation)</span>
+            </button>
+            <button onclick="checkCaseAnswer('c3-q5', 'b', this)" class="p-3 rounded-xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-750 hover:border-emerald-400 text-left transition-all flex items-center gap-2">
+              <span class="w-5 h-5 rounded-full border border-slate-400 text-center font-bold text-[10px] flex items-center justify-center shrink-0">D</span>
+              <span>₹5,62,500 [12.5% on full ₹45,00,000 without exemption]</span>
+            </button>
+          </div>
+          <div id="exp-c3-q5" class="hidden p-4 rounded-xl text-xs space-y-1"></div>
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- ========================================================================= -->
+    <!-- CASE STUDY 4: ARVIND & KAVITA MITTAL (SPECIAL NEEDS TRUST & REBALANCING)  -->
+    <!-- ========================================================================= -->
+    <section id="case-4" class="bg-white dark:bg-slate-900 rounded-3xl p-6 sm:p-10 border-2 border-rose-300 dark:border-rose-700/80 shadow-md space-y-8">
+      
+      <!-- Case Header -->
+      <div class="border-b border-slate-200 dark:border-slate-800 pb-6 space-y-2">
+        <div class="flex flex-wrap items-center justify-between gap-2">
+          <span class="px-3 py-1 rounded-full font-mono text-xs font-bold bg-rose-100 dark:bg-rose-950 text-rose-900 dark:text-rose-200 border border-rose-300 dark:border-rose-700">
+            CASE STUDY 4 OF 4 &bull; 10 MARKS
+          </span>
+          <span class="text-xs font-bold text-slate-500 dark:text-slate-400">
+            Core Theme: Private Family Trust, Special Needs Succession, Relative Exemptions & Portfolio Rebalancing
+          </span>
+        </div>
+        <h2 class="font-display font-extrabold text-2xl sm:text-3xl text-slate-900 dark:text-white">
+          Client Dossier: Arvind & Kavita Mittal (Estate Planning & Trust Structuring)
+        </h2>
+      </div>
+
+      <!-- Client Dossier Tables & Details -->
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6 text-xs">
+        
+        <!-- Demographics -->
+        <div class="p-5 rounded-2xl bg-slate-50 dark:bg-slate-800/60 border border-slate-200 dark:border-slate-700 space-y-2.5">
+          <h3 class="font-display font-bold text-sm text-slate-900 dark:text-white flex items-center gap-1.5">
+            <i data-lucide="shield-alert" class="w-4 h-4 text-rose-600"></i> Family & Succession Dynamics
+          </h3>
+          <div class="space-y-1 text-slate-600 dark:text-slate-300 leading-relaxed">
+            <div>&bull; <strong>Arvind Mittal:</strong> Age 64, Patriarch & Founder of a precision components manufacturing enterprise.</div>
+            <div>&bull; <strong>Kavita (Spouse):</strong> Age 62, Co-Director.</div>
+            <div>&bull; <strong>Son Rohan:</strong> Age 34, Managing Director, actively running factory operations (married with 1 child).</div>
+            <div>&bull; <strong>Daughter Pooja:</strong> Age 30, unmarried daughter with severe cognitive disability requiring lifetime medical care and legal guardianship.</div>
+          </div>
+        </div>
+
+        <!-- Asset Portfolio -->
+        <div class="p-5 rounded-2xl bg-slate-50 dark:bg-slate-800/60 border border-slate-200 dark:border-slate-700 space-y-2.5">
+          <h3 class="font-display font-bold text-sm text-slate-900 dark:text-white flex items-center gap-1.5">
+            <i data-lucide="building" class="w-4 h-4 text-rose-600"></i> Total Estate Value: ₹48 Crores
+          </h3>
+          <div class="space-y-1 text-slate-600 dark:text-slate-300 leading-relaxed">
+            <div>&bull; <strong>Operating Business Shares:</strong> ₹24.00 Crores (60% unlisted equity).</div>
+            <div>&bull; <strong>Commercial Real Estate:</strong> ₹6.00 Crores (generating ₹30 Lakhs annual rental income).</div>
+            <div>&bull; <strong>Liquid Financial Portfolio:</strong> ₹8.00 Crores (Equity MFs: ₹6.0 Cr; Debt: ₹2.0 Cr; drifted to <strong>75% Equity : 25% Debt</strong>).</div>
+            <div>&bull; <strong>Residential Bungalow in Mumbai:</strong> ₹10.00 Crores.</div>
+          </div>
+        </div>
+
+        <!-- Goals & Concerns -->
+        <div class="p-5 rounded-2xl bg-slate-50 dark:bg-slate-800/60 border border-slate-200 dark:border-slate-700 space-y-2.5">
+          <h3 class="font-display font-bold text-sm text-slate-900 dark:text-white flex items-center gap-1.5">
+            <i data-lucide="heart" class="w-4 h-4 text-rose-600"></i> Succession Objectives
+          </h3>
+          <div class="space-y-1 text-slate-600 dark:text-slate-300 leading-relaxed">
+            <div>&bull; <strong>Pooja's Protection:</strong> Guarantee lifetime care, accommodation, and institutional medical funding insulated from family disputes or business bankruptcy.</div>
+            <div>&bull; <strong>Business Continuity:</strong> Seamless transfer of operating company control to son Rohan without probate delays.</div>
+            <div>&bull; <strong>Portfolio Risk Reduction:</strong> Restore liquid portfolio to Strategic Asset Allocation (40% Equity : 60% Debt).</div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- 5 Interactive Sub-Questions for Case 4 -->
+      <div class="space-y-6 pt-4 border-t border-slate-200 dark:border-slate-800">
+        <h3 class="font-display font-bold text-lg text-slate-900 dark:text-white flex items-center gap-2">
+          <i data-lucide="help-circle" class="w-5 h-5 text-rose-600"></i> Case 4 Questions (5 Multi-Part Problems)
+        </h3>
+
+        <!-- Q4.1 -->
+        <div class="p-5 rounded-2xl bg-slate-50 dark:bg-slate-800/50 border border-slate-200 dark:border-slate-700 space-y-3">
+          <div class="flex items-center justify-between text-xs font-bold text-rose-700 dark:text-rose-400">
+            <span>Question 4.1 &bull; Special Needs Trust Structuring vs. Will</span>
+            <span class="px-2 py-0.5 rounded bg-rose-100 dark:bg-rose-950">2 Marks</span>
+          </div>
+          <p class="text-xs sm:text-sm text-slate-800 dark:text-slate-200 font-medium leading-relaxed">
+            Why is creating an <strong>Irrevocable Private Family Trust</strong> with a professional corporate trustee and protector significantly superior to relying solely on a testamentary Will for securing daughter Pooja's lifetime welfare?
+          </p>
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-2 text-xs" id="opts-c4-q1">
+            <button onclick="checkCaseAnswer('c4-q1', 'b', this)" class="p-3 rounded-xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-750 hover:border-rose-400 text-left transition-all flex items-center gap-2">
+              <span class="w-5 h-5 rounded-full border border-slate-400 text-center font-bold text-[10px] flex items-center justify-center shrink-0">A</span>
+              <span>A Will takes effect immediately while the settlor is alive</span>
+            </button>
+            <button onclick="checkCaseAnswer('c4-q1', 'b', this)" class="p-3 rounded-xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-750 hover:border-rose-400 text-left transition-all flex items-center gap-2">
+              <span class="w-5 h-5 rounded-full border border-slate-400 text-center font-bold text-[10px] flex items-center justify-center shrink-0">B</span>
+              <span>A Trust becomes operational immediately during Arvind's lifetime, ring-fences assets from creditors, avoids public probate delays and family disputes, and ensures continuous institutional care through corporate trustees</span>
+            </button>
+            <button onclick="checkCaseAnswer('c4-q1', 'b', this)" class="p-3 rounded-xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-750 hover:border-rose-400 text-left transition-all flex items-center gap-2">
+              <span class="w-5 h-5 rounded-full border border-slate-400 text-center font-bold text-[10px] flex items-center justify-center shrink-0">C</span>
+              <span>Private Trusts are completely exempt from all stamp duty and registration laws</span>
+            </button>
+            <button onclick="checkCaseAnswer('c4-q1', 'b', this)" class="p-3 rounded-xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-750 hover:border-rose-400 text-left transition-all flex items-center gap-2">
+              <span class="w-5 h-5 rounded-full border border-slate-400 text-center font-bold text-[10px] flex items-center justify-center shrink-0">D</span>
+              <span>A Will cannot bequeath commercial real estate under Indian law</span>
+            </button>
+          </div>
+          <div id="exp-c4-q1" class="hidden p-4 rounded-xl text-xs space-y-1"></div>
+        </div>
+
+        <!-- Q4.2 -->
+        <div class="p-5 rounded-2xl bg-slate-50 dark:bg-slate-800/50 border border-slate-200 dark:border-slate-700 space-y-3">
+          <div class="flex items-center justify-between text-xs font-bold text-rose-700 dark:text-rose-400">
+            <span>Question 4.2 &bull; Taxation of Private Trust for Dependent with Disability (Section 164)</span>
+            <span class="px-2 py-0.5 rounded bg-rose-100 dark:bg-rose-950">2 Marks</span>
+          </div>
+          <p class="text-xs sm:text-sm text-slate-800 dark:text-slate-200 font-medium leading-relaxed">
+            Under Section 164(1) of the Income Tax Act, discretionary trusts are normally taxed at the Maximum Marginal Rate (MMR = 39% or 42.74%). What is the crucial statutory exception provided for a trust created solely for a beneficiary with disability (like Pooja)?
+          </p>
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-2 text-xs" id="opts-c4-q2">
+            <button onclick="checkCaseAnswer('c4-q2', 'a', this)" class="p-3 rounded-xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-750 hover:border-rose-400 text-left transition-all flex items-center gap-2">
+              <span class="w-5 h-5 rounded-full border border-slate-400 text-center font-bold text-[10px] flex items-center justify-center shrink-0">A</span>
+              <span>The trust income is NOT taxed at MMR; it is taxed at the normal individual slab rates applicable to the disabled beneficiary</span>
+            </button>
+            <button onclick="checkCaseAnswer('c4-q2', 'a', this)" class="p-3 rounded-xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-750 hover:border-rose-400 text-left transition-all flex items-center gap-2">
+              <span class="w-5 h-5 rounded-full border border-slate-400 text-center font-bold text-[10px] flex items-center justify-center shrink-0">B</span>
+              <span>The trust income is subjected to a flat 50% penalty</span>
+            </button>
+            <button onclick="checkCaseAnswer('c4-q2', 'a', this)" class="p-3 rounded-xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-750 hover:border-rose-400 text-left transition-all flex items-center gap-2">
+              <span class="w-5 h-5 rounded-full border border-slate-400 text-center font-bold text-[10px] flex items-center justify-center shrink-0">C</span>
+              <span>The trust must distribute 100% of income to charitable institutions</span>
+            </button>
+            <button onclick="checkCaseAnswer('c4-q2', 'a', this)" class="p-3 rounded-xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-750 hover:border-rose-400 text-left transition-all flex items-center gap-2">
+              <span class="w-5 h-5 rounded-full border border-slate-400 text-center font-bold text-[10px] flex items-center justify-center shrink-0">D</span>
+              <span>The trust income is completely exempt from GST only</span>
+            </button>
+          </div>
+          <div id="exp-c4-q2" class="hidden p-4 rounded-xl text-xs space-y-1"></div>
+        </div>
+
+        <!-- Q4.3 -->
+        <div class="p-5 rounded-2xl bg-slate-50 dark:bg-slate-800/50 border border-slate-200 dark:border-slate-700 space-y-3">
+          <div class="flex items-center justify-between text-xs font-bold text-rose-700 dark:text-rose-400">
+            <span>Question 4.3 &bull; Business Share Transfer to Son Rohan (Section 56(2)(x) Relative Exemption)</span>
+            <span class="px-2 py-0.5 rounded bg-rose-100 dark:bg-rose-950">2 Marks</span>
+          </div>
+          <p class="text-xs sm:text-sm text-slate-800 dark:text-slate-200 font-medium leading-relaxed">
+            Arvind transfers his unlisted company shares worth ₹24 Crores to his son Rohan via an executed Gift Deed during his lifetime. How is this transaction treated under Section 56(2)(x) of the Income Tax Act?
+          </p>
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-2 text-xs" id="opts-c4-q3">
+            <button onclick="checkCaseAnswer('c4-q3', 'c', this)" class="p-3 rounded-xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-750 hover:border-rose-400 text-left transition-all flex items-center gap-2">
+              <span class="w-5 h-5 rounded-full border border-slate-400 text-center font-bold text-[10px] flex items-center justify-center shrink-0">A</span>
+              <span>Taxable in Rohan's hands as Income from Other Sources at 30% slab</span>
+            </button>
+            <button onclick="checkCaseAnswer('c4-q3', 'c', this)" class="p-3 rounded-xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-750 hover:border-rose-400 text-left transition-all flex items-center gap-2">
+              <span class="w-5 h-5 rounded-full border border-slate-400 text-center font-bold text-[10px] flex items-center justify-center shrink-0">B</span>
+              <span>Taxable in Arvind's hands as Capital Gains under Section 45</span>
+            </button>
+            <button onclick="checkCaseAnswer('c4-q3', 'c', this)" class="p-3 rounded-xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-750 hover:border-rose-400 text-left transition-all flex items-center gap-2">
+              <span class="w-5 h-5 rounded-full border border-slate-400 text-center font-bold text-[10px] flex items-center justify-center shrink-0">C</span>
+              <span>Completely EXEMPT from income tax in Rohan's hands as gifts received from a 'Relative' (father to son) are fully excluded under Section 56(2)(x)</span>
+            </button>
+            <button onclick="checkCaseAnswer('c4-q3', 'c', this)" class="p-3 rounded-xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-750 hover:border-rose-400 text-left transition-all flex items-center gap-2">
+              <span class="w-5 h-5 rounded-full border border-slate-400 text-center font-bold text-[10px] flex items-center justify-center shrink-0">D</span>
+              <span>Exempt up to ₹50,000 only; balance ₹23.995 Crores is fully taxable</span>
+            </button>
+          </div>
+          <div id="exp-c4-q3" class="hidden p-4 rounded-xl text-xs space-y-1"></div>
+        </div>
+
+        <!-- Q4.4 -->
+        <div class="p-5 rounded-2xl bg-slate-50 dark:bg-slate-800/50 border border-slate-200 dark:border-slate-700 space-y-3">
+          <div class="flex items-center justify-between text-xs font-bold text-rose-700 dark:text-rose-400">
+            <span>Question 4.4 &bull; Liquid Portfolio Rebalancing Calculation</span>
+            <span class="px-2 py-0.5 rounded bg-rose-100 dark:bg-rose-950">2 Marks</span>
+          </div>
+          <p class="text-xs sm:text-sm text-slate-800 dark:text-slate-200 font-medium leading-relaxed">
+            Arvind's liquid portfolio is ₹8.00 Crores, currently standing at <strong>75% Equity (₹6.00 Crores) and 25% Debt (₹2.00 Crores)</strong>. His strategic target asset allocation is <strong>40% Equity : 60% Debt</strong>. How much equity must be liquidated and shifted to debt to re-align with the target SAA?
+          </p>
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-2 text-xs" id="opts-c4-q4">
+            <button onclick="checkCaseAnswer('c4-q4', 'b', this)" class="p-3 rounded-xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-750 hover:border-rose-400 text-left transition-all flex items-center gap-2">
+              <span class="w-5 h-5 rounded-full border border-slate-400 text-center font-bold text-[10px] flex items-center justify-center shrink-0">A</span>
+              <span>Liquidate ₹1.50 Crores of Equity</span>
+            </button>
+            <button onclick="checkCaseAnswer('c4-q4', 'b', this)" class="p-3 rounded-xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-750 hover:border-rose-400 text-left transition-all flex items-center gap-2">
+              <span class="w-5 h-5 rounded-full border border-slate-400 text-center font-bold text-[10px] flex items-center justify-center shrink-0">B</span>
+              <span>Liquidate ₹2.80 Crores of Equity (Shift to Debt to make Equity ₹3.20 Cr and Debt ₹4.80 Cr)</span>
+            </button>
+            <button onclick="checkCaseAnswer('c4-q4', 'b', this)" class="p-3 rounded-xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-750 hover:border-rose-400 text-left transition-all flex items-center gap-2">
+              <span class="w-5 h-5 rounded-full border border-slate-400 text-center font-bold text-[10px] flex items-center justify-center shrink-0">C</span>
+              <span>Liquidate ₹3.50 Crores of Equity</span>
+            </button>
+            <button onclick="checkCaseAnswer('c4-q4', 'b', this)" class="p-3 rounded-xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-750 hover:border-rose-400 text-left transition-all flex items-center gap-2">
+              <span class="w-5 h-5 rounded-full border border-slate-400 text-center font-bold text-[10px] flex items-center justify-center shrink-0">D</span>
+              <span>Take no action to avoid paying LTCG tax</span>
+            </button>
+          </div>
+          <div id="exp-c4-q4" class="hidden p-4 rounded-xl text-xs space-y-1"></div>
+        </div>
+
+        <!-- Q4.5 -->
+        <div class="p-5 rounded-2xl bg-slate-50 dark:bg-slate-800/50 border border-slate-200 dark:border-slate-700 space-y-3">
+          <div class="flex items-center justify-between text-xs font-bold text-rose-700 dark:text-rose-400">
+            <span>Question 4.5 &bull; Will Execution & Mandatory Probate Rules</span>
+            <span class="px-2 py-0.5 rounded bg-rose-100 dark:bg-rose-950">2 Marks</span>
+          </div>
+          <p class="text-xs sm:text-sm text-slate-800 dark:text-slate-200 font-medium leading-relaxed">
+            Arvind executes a registered Will in Mumbai for his residual estate (including the ₹10 Crore residential bungalow in Mumbai). Under Section 213 and Section 57 of the Indian Succession Act, 1925, is obtaining a court Probate mandatory for a Hindu testator's Will in Mumbai?
+          </p>
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-2 text-xs" id="opts-c4-q5">
+            <button onclick="checkCaseAnswer('c4-q5', 'a', this)" class="p-3 rounded-xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-750 hover:border-rose-400 text-left transition-all flex items-center gap-2">
+              <span class="w-5 h-5 rounded-full border border-slate-400 text-center font-bold text-[10px] flex items-center justify-center shrink-0">A</span>
+              <span>Yes, obtaining Probate from the High Court is legally mandatory because the Will was executed in Mumbai (Presidency town) and deals with immovable property situated in Mumbai</span>
+            </button>
+            <button onclick="checkCaseAnswer('c4-q5', 'a', this)" class="p-3 rounded-xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-750 hover:border-rose-400 text-left transition-all flex items-center gap-2">
+              <span class="w-5 h-5 rounded-full border border-slate-400 text-center font-bold text-[10px] flex items-center justify-center shrink-0">B</span>
+              <span>No, registration of a Will completely waives the requirement of probate across India</span>
+            </button>
+            <button onclick="checkCaseAnswer('c4-q5', 'a', this)" class="p-3 rounded-xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-750 hover:border-rose-400 text-left transition-all flex items-center gap-2">
+              <span class="w-5 h-5 rounded-full border border-slate-400 text-center font-bold text-[10px] flex items-center justify-center shrink-0">C</span>
+              <span>Probate is only required if the estate value exceeds ₹100 Crores</span>
+            </button>
+            <button onclick="checkCaseAnswer('c4-q5', 'a', this)" class="p-3 rounded-xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-750 hover:border-rose-400 text-left transition-all flex items-center gap-2">
+              <span class="w-5 h-5 rounded-full border border-slate-400 text-center font-bold text-[10px] flex items-center justify-center shrink-0">D</span>
+              <span>Probate applies only to Christians and Parsis, never to Hindus under any circumstance</span>
+            </button>
+          </div>
+          <div id="exp-c4-q5" class="hidden p-4 rounded-xl text-xs space-y-1"></div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Master Exam Results Summary Card -->
+    <section class="p-8 rounded-3xl bg-slate-900 text-white shadow-xl space-y-6">
+      <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 border-b border-slate-800 pb-5">
+        <div>
+          <span class="text-xs font-bold text-amber-400 uppercase tracking-wider">Exam Simulator Scorecard</span>
+          <h3 class="font-display font-extrabold text-2xl text-white mt-1">Case Studies Mastery Summary</h3>
+          <p class="text-xs text-slate-400 mt-1">Real-time validation across all 20 case sub-questions (40 Marks Benchmark).</p>
+        </div>
+        <div class="text-right">
+          <span class="text-xs text-slate-400">Total Solved</span>
+          <div class="text-2xl font-black text-amber-400 font-display"><span id="case-answered-count">0</span> / 20</div>
+        </div>
+      </div>
+
+      <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
+        <div class="p-4 rounded-2xl bg-white/5 border border-white/10">
+          <div class="text-xs text-slate-400">Your Current Score</div>
+          <div class="text-3xl font-black text-emerald-400 mt-1 font-display"><span id="case-correct-count">0</span> / 20</div>
+          <div class="text-[11px] text-slate-400 mt-0.5"><span id="case-marks-count">0</span> of 40 Case Marks</div>
+        </div>
+        <div class="p-4 rounded-2xl bg-white/5 border border-white/10">
+          <div class="text-xs text-slate-400">Percentage Score</div>
+          <div class="text-3xl font-black text-indigo-400 mt-1 font-display"><span id="case-percentage">0%</span></div>
+          <div class="text-[11px] text-slate-400 mt-0.5">Passing benchmark: 60%</div>
+        </div>
+        <div class="p-4 rounded-2xl bg-white/5 border border-white/10 flex flex-col justify-between">
+          <div class="text-xs text-slate-400">Status</div>
+          <div id="case-status-badge" class="mt-1 px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider text-center bg-slate-800 text-slate-400 w-max">
+            In Progress
+          </div>
+          <div class="text-[11px] text-slate-400 mt-1">Answer all 20 questions</div>
+        </div>
+      </div>
+
+      <div class="pt-4 border-t border-slate-800 flex justify-end">
+        <button onclick="resetAllCases()" class="px-5 py-2.5 rounded-xl bg-slate-800 hover:bg-slate-700 text-slate-300 font-bold text-xs transition-all flex items-center gap-2 cursor-pointer">
+          <i data-lucide="rotate-ccw" class="w-4 h-4"></i>
+          <span>Reset All Case Studies</span>
+        </button>
+      </div>
+    </section>
+
+    <!-- Bottom Navigation Footer -->
+    <footer class="pt-6 border-t border-slate-200 dark:border-slate-800 flex flex-col sm:flex-row items-center justify-between gap-4">
+      <a href="module12-ch19.html" class="flex items-center gap-2 px-4 py-2.5 rounded-xl border border-slate-200 dark:border-slate-750 bg-white dark:bg-slate-800 hover:bg-slate-50 dark:hover:bg-slate-750 text-slate-700 dark:text-slate-300 font-medium text-xs transition-colors">
+        <i data-lucide="arrow-left" class="w-4 h-4"></i>
+        <span>Prev: Chapter 19 (Performance Attribution)</span>
+      </a>
+      <div class="flex items-center gap-3">
+        <a href="module12.html" class="flex items-center gap-2 px-5 py-2.5 rounded-xl border border-indigo-200 dark:border-indigo-800 bg-indigo-50 dark:bg-indigo-950/70 text-indigo-700 dark:text-indigo-300 font-bold text-xs transition-colors">
+          <span>Module 12 Hub</span>
+        </a>
+        <a href="nism-10b.html" class="flex items-center gap-2 px-5 py-2.5 rounded-xl bg-amber-500 hover:bg-amber-400 text-slate-950 font-black text-xs shadow-sm transition-colors">
+          <span>Series X-B Master Hub</span>
+          <i data-lucide="arrow-right" class="w-4 h-4"></i>
+        </a>
+      </div>
+    </footer>
+
+  </main>
+
+  <script>
+    // Master Explanations Dictionary for all 20 Case Questions
+    const caseExplanations = {
+      "c1-q1": {
+        correct: "b",
+        text: "Vikram's take-home is ₹30,00,000 p.a. Less 25% personal consumption (₹7,50,000) = ₹22,50,000 net contribution to family per year. Remaining working horizon = 18 years (60 - 42). Net real discount rate = 3.0%. PV of an annuity of ₹22,50,000 for 18 years at 3.0% = ₹22,50,000 × [(1 - (1.03)^(-18)) / 0.03] = ₹22,50,000 × 13.7535 = <strong>₹3.09 Crores</strong>."
+      },
+      "c1-q2": {
+        correct: "c",
+        text: "Total Financial Needs = PV of family living support (₹2.10 Cr) + Home loan payoff (₹0.60 Cr) + Children education (₹0.50 Cr) = ₹3.20 Crores. Available Resources = Liquid assets (₹45L MFs + ₹35L PPF/EPF + ₹15L FDs = ₹95 Lakhs) + Personal insurance (₹10 Lakhs) = ₹1.05 Crores. Net Life Insurance Shortfall = ₹3.20 Crores - ₹1.05 Crores = <strong>₹2.15 Crores</strong>. (Employer cover is excluded because it ceases upon job change/termination)."
+      },
+      "c1-q3": {
+        correct: "a",
+        text: "Future Cost FV = PV × (1 + r)^n = ₹25,00,000 × (1 + 0.08)^6 = ₹25,00,000 × 1.58687 = <strong>₹39.67 Lakhs</strong>."
+      },
+      "c1-q4": {
+        correct: "d",
+        text: "Monthly mandatory commitments = Living expenses ₹1,60,000 + School fees ₹30,000 + Home loan EMI ₹68,000 = ₹2,58,000 per month. Recommended 6-month emergency buffer = ₹2,58,000 × 6 = <strong>₹15,48,000 (₹15.48 Lakhs)</strong>. Vikram has ₹15,00,000 in bank savings/FDs, reflecting a minor deficit of ₹48,000."
+      },
+      "c1-q5": {
+        correct: "b",
+        text: "BTID Principle: Pure term cover provides massive protection (₹2.50 Cr for ₹32,000), leaving ₹63,000 p.a. to compound in high-growth equity index funds. Traditional endowment policies yield substandard returns (4-5%) while severely under-insuring the family."
+      },
+      "c2-q1": {
+        correct: "b",
+        text: "Current living expenses = ₹13,20,000 p.a. First year retirement expense in 8 years at 6% inflation: FV = ₹13,20,000 × (1 + 0.06)^8 = ₹13,20,000 × 1.59385 = <strong>₹21,03,880 ≈ ₹21.04 Lakhs</strong>."
+      },
+      "c2-q2": {
+        correct: "c",
+        text: "Real rate of return r = [(1 + 0.085) / (1 + 0.055)] - 1 = 2.8436%. Horizon = 28 years. Using Annuity Due formula: Corpus = Initial Expense × [(1 - (1 + r)^(-n)) / r] × (1 + r) = ₹21,04,000 × [(1 - (1.028436)^(-28)) / 0.028436] × 1.028436 = ₹21,04,000 × 19.336 = <strong>₹4.07 Crores</strong>."
+      },
+      "c2-q3": {
+        correct: "a",
+        text: "Net Retirement Deficit = Total Required Corpus (₹4.07 Crores) - Future Value of Existing Assets (₹2.75 Crores) = <strong>₹1.32 Crores</strong>."
+      },
+      "c2-q4": {
+        correct: "b",
+        text: "Target FV = ₹1,32,00,000 in 8 years (96 months) at expected monthly return of 11%/12 = 0.9167%. Monthly SIP = ₹1,32,00,000 / [((1 + 0.009167)^96 - 1) / 0.009167 × 1.009167] = <strong>₹84,700/month</strong>. This is comfortably within his monthly surplus of ₹95,000."
+      },
+      "c2-q5": {
+        correct: "c",
+        text: "Immediate annuities provide flat nominal cash flows that lose ~50% of purchasing power over 15 years due to 5.5% inflation, and 100% of the annuity is taxed at 30% slab rate. An SWP portfolio keeps a growth engine in equity to beat inflation and only the capital gain portion is taxed."
+      },
+      "c3-q1": {
+        correct: "b",
+        text: "Under Budget 2024 grandfathering for pre-July 23, 2024 property: Option A (20% with indexation) = LTCG = ₹4.80 Cr - ₹2.57 Cr = ₹2.23 Cr × 20% = <strong>₹44.60 Lakhs</strong>. Option B (12.5% without indexation) = LTCG = ₹4.80 Cr - ₹0.80 Cr = ₹4.00 Cr × 12.5% = ₹50.00 Lakhs. Option A yields lower tax by ₹5.40 Lakhs!"
+      },
+      "c3-q2": {
+        correct: "c",
+        text: "Under Section 54, if the amount reinvested in a new residential house (₹2.50 Crores) is equal to or greater than the net capital gain (₹2.23 Crores), the <strong>entire 100% of the capital gain is exempt from tax</strong>!"
+      },
+      "c3-q3": {
+        correct: "a",
+        text: "Section 54EC allows investment in REC/PFC/NHAI bonds up to a statutory ceiling of ₹50 Lakhs per financial year, with a mandatory lock-in of 5 years. Annual interest coupons are fully taxable at the investor's marginal slab rate."
+      },
+      "c3-q4": {
+        correct: "b",
+        text: "Unlike Section 54 (which requires only capital gains to be reinvested), Section 54F strictly mandates reinvestment of the <strong>ENTIRE Net Sales Consideration</strong>. If less is reinvested, exemption is reduced proportionally: Exemption = Capital Gain × (Amount Invested / Net Consideration)."
+      },
+      "c3-q5": {
+        correct: "b",
+        text: "Under Section 112A post Budget 2024: LTCG is exempt up to ₹1,25,000. Taxable gain = ₹45,00,000 - ₹1,25,000 = ₹43,75,000. Tax at 12.5% = ₹43,75,000 × 12.5% = <strong>₹5,46,875</strong>."
+      },
+      "c4-q1": {
+        correct: "b",
+        text: "A Private Family Trust operates immediately during lifetime, insulates assets from future business insolvency or family litigations, bypasses court probate delays, and ensures institutional care through appointed professional trustees."
+      },
+      "c4-q2": {
+        correct: "a",
+        text: "Proviso to Section 164(1) provides a special benevolent carve-out: Where a private discretionary trust is established solely for the maintenance of a relative with disability, the trust income is NOT taxed at MMR, but at normal individual slab rates!"
+      },
+      "c4-q3": {
+        correct: "c",
+        text: "Under Section 56(2)(x), gifts received from a 'Relative' (defined to include parents, spouse, siblings, lineal ascendants/descendants) are 100% exempt from income tax, regardless of the value transferred."
+      },
+      "c4-q4": {
+        correct: "b",
+        text: "Current portfolio: Equity = ₹6.00 Cr (75%), Debt = ₹2.00 Cr (25%). Target SAA: Equity = 40% of ₹8.00 Cr = ₹3.20 Cr; Debt = 60% of ₹8.00 Cr = ₹4.80 Cr. Equity to liquidate = ₹6.00 Cr - ₹3.20 Cr = <strong>₹2.80 Crores</strong>, to be shifted into Debt."
+      },
+      "c4-q5": {
+        correct: "a",
+        text: "Under Section 57 and Section 213 of the Indian Succession Act 1925, obtaining Probate from the High Court is mandatory if the Will is made by a Hindu within the local limits of the ordinary original civil jurisdiction of the High Courts of Bombay (Mumbai), Calcutta (Kolkata), or Madras (Chennai)."
+      }
+    };
+
+    let caseUserAnswers = {};
+
+    function checkCaseAnswer(qKey, correctOpt, btnEl) {
+      if (caseUserAnswers[qKey]) return; // already answered
+      caseUserAnswers[qKey] = correctOpt;
+
+      const parentGrid = btnEl.parentElement;
+      const allBtns = parentGrid.querySelectorAll("button");
+      const isCorrect = btnEl.querySelector("span:first-child").innerText.toLowerCase() === correctOpt;
+
+      allBtns.forEach(b => {
+        b.onclick = null;
+        b.classList.remove("hover:border-amber-400", "hover:border-indigo-400", "hover:border-emerald-400", "hover:border-rose-400");
+        const letter = b.querySelector("span:first-child").innerText.toLowerCase();
+        if (letter === correctOpt) {
+          b.className = "p-3 rounded-xl bg-emerald-950/60 border border-emerald-500 text-emerald-200 text-left text-xs transition-all flex items-center gap-2";
+          b.querySelector("span:first-child").className = "w-5 h-5 rounded-full bg-emerald-600 text-white font-bold text-[10px] flex items-center justify-center shrink-0";
+        } else if (b === btnEl && !isCorrect) {
+          b.className = "p-3 rounded-xl bg-rose-950/60 border border-rose-500 text-rose-200 text-left text-xs transition-all flex items-center gap-2";
+          b.querySelector("span:first-child").className = "w-5 h-5 rounded-full bg-rose-600 text-white font-bold text-[10px] flex items-center justify-center shrink-0";
+        }
+      });
+
+      // Display Explanation
+      const expDiv = document.getElementById(`exp-${qKey}`);
+      if (expDiv) {
+        expDiv.classList.remove("hidden");
+        const expData = caseExplanations[qKey];
+        if (isCorrect) {
+          expDiv.className = "p-4 rounded-xl text-xs mt-3 bg-emerald-950/60 border border-emerald-600/80 text-emerald-200 space-y-1";
+          expDiv.innerHTML = `<div class="font-bold text-emerald-400 flex items-center gap-1.5"><i data-lucide="check-circle" class="w-4 h-4"></i> Correct! (2 Marks)</div><p class="leading-relaxed">${expData.text}</p>`;
+        } else {
+          expDiv.className = "p-4 rounded-xl text-xs mt-3 bg-rose-950/60 border border-rose-600/80 text-rose-200 space-y-1";
+          expDiv.innerHTML = `<div class="font-bold text-rose-400 flex items-center gap-1.5"><i data-lucide="x-circle" class="w-4 h-4"></i> Incorrect (Correct Answer: Option ${expData.correct.toUpperCase()})</div><p class="leading-relaxed">${expData.text}</p>`;
+        }
+      }
+
+      updateScorecard();
+      lucide.createIcons();
+    }
+
+    function updateScorecard() {
+      const answeredKeys = Object.keys(caseUserAnswers);
+      const totalAnswered = answeredKeys.length;
+      let totalCorrect = 0;
+
+      answeredKeys.forEach(k => {
+        const expected = caseExplanations[k].correct;
+        if (caseUserAnswers[k] === expected) {
+          totalCorrect++;
+        }
+      });
+
+      const marks = totalCorrect * 2;
+      const percentage = totalAnswered > 0 ? Math.round((totalCorrect / totalAnswered) * 100) : 0;
+      const isPassed = percentage >= 60;
+
+      document.getElementById("case-answered-count").innerText = totalAnswered;
+      document.getElementById("case-correct-count").innerText = totalCorrect;
+      document.getElementById("case-marks-count").innerText = marks;
+      document.getElementById("case-percentage").innerText = `${percentage}%`;
+
+      const badge = document.getElementById("case-status-badge");
+      if (totalAnswered === 20) {
+        badge.innerText = isPassed ? "PASSED WITH DISTINCTION" : "NEEDS REVISION";
+        badge.className = isPassed 
+          ? "mt-1 px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider text-center bg-emerald-500 text-emerald-950 w-max"
+          : "mt-1 px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider text-center bg-rose-500 text-white w-max";
+      } else {
+        badge.innerText = `${totalAnswered} / 20 Completed`;
+        badge.className = "mt-1 px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider text-center bg-amber-500 text-slate-950 w-max";
+      }
+    }
+
+    function resetAllCases() {
+      caseUserAnswers = {};
+      window.location.reload();
+    }
+
+    lucide.createIcons();
+  </script>
+</body>
+</html>

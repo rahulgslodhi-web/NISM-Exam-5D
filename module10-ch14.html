@@ -1,0 +1,1127 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Chapter 14: Basics of Estate Planning | NISM Series X-B Level 2</title>
+  
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  
+  <!-- Google Fonts: DM Sans & Jost (Eduleb Benchmark) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Jost:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+  <script src="https://unpkg.com/lucide@latest"></script>
+
+  <!-- Modern Documentation Design System -->
+  <link rel="stylesheet" href="modern-docs.css">
+  <script defer src="nav-sidebar.js"></script>
+
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['"DM Sans"', 'sans-serif'],
+            display: ['"Jost"', 'sans-serif'],
+            heading: ['"Jost"', 'sans-serif']
+          },
+          colors: {
+            brand: {
+              50: '#eef2ff',
+              100: '#e0e7ff',
+              500: '#525fe1',
+              600: '#434ec9',
+              700: '#353db3',
+              800: '#282f9c',
+              900: '#0b104a'
+            }
+          }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    body {
+      font-family: 'DM Sans', sans-serif;
+      font-size: 16px;
+      line-height: 26px;
+      color: #4a5355;
+    }
+    h1, h2, h3, h4, h5, h6, .font-display, .font-heading {
+      font-family: 'Jost', sans-serif;
+      font-weight: 700;
+    }
+    .star-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.35rem;
+      padding: 0.25rem 0.65rem;
+      border-radius: 9999px;
+      font-size: 0.75rem;
+      font-weight: 700;
+      background: linear-gradient(135deg, #fef3c7, #fde68a);
+      color: #92400e;
+      border: 1px solid #f59e0b;
+      box-shadow: 0 1px 2px rgba(245, 158, 11, 0.15);
+    }
+    .dark .star-badge {
+      background: linear-gradient(135deg, #78350f, #92400e);
+      color: #fef3c7;
+      border-color: #d97706;
+    }
+  </style>
+</head>
+<body class="bg-slate-50 dark:bg-slate-950 text-slate-900 dark:text-slate-100 min-h-screen flex flex-col selection:bg-indigo-500 selection:text-white antialiased transition-colors duration-200">
+
+  <!-- Smooth Opening Preloader -->
+  <div class="preloaders" id="eduleb-preloader">
+    <span class="loader"></span>
+    <div class="preloader-label">Chapter 14: Basics of Estate Planning</div>
+  </div>
+
+  <!-- Standardized Header (Single-Tier, 64px) -->
+  <header class="sticky top-0 z-40 bg-white/95 dark:bg-slate-900/95 backdrop-blur-md border-b border-slate-200/80 dark:border-slate-800 shadow-xs">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 h-16 flex items-center justify-between">
+      <div class="flex items-center gap-3">
+        <a href="module10.html" class="flex items-center gap-2 text-slate-500 hover:text-slate-900 dark:hover:text-white transition-colors">
+          <div class="w-9 h-9 rounded-xl bg-slate-100 dark:bg-slate-800 hover:bg-slate-200 dark:hover:bg-slate-700 flex items-center justify-center text-slate-700 dark:text-slate-200 transition-colors">
+            <i data-lucide="arrow-left" class="w-4 h-4"></i>
+          </div>
+        </a>
+        <div>
+          <div class="flex items-center gap-2">
+            <span class="text-xs font-bold uppercase tracking-wider text-indigo-600 dark:text-indigo-400 bg-indigo-50 dark:bg-indigo-950 px-2 py-0.5 rounded border border-indigo-200/60 dark:border-indigo-800">Module 10</span>
+            <span class="text-xs text-slate-400 font-medium">Chapter 14 of 15</span>
+          </div>
+          <h1 class="font-display font-bold text-base sm:text-lg text-[#0b104a] dark:text-white leading-tight">Basics of Estate Planning</h1>
+        </div>
+      </div>
+
+      <!-- Chapter Navigation & Weightage -->
+      <div class="flex items-center gap-2.5">
+        <span class="hidden sm:inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-bold bg-indigo-50 dark:bg-indigo-950 text-indigo-700 dark:text-indigo-300 border border-indigo-200/80 dark:border-indigo-800">
+          <i data-lucide="award" class="w-3.5 h-3.5"></i>
+          Exam Weightage: ~8-10 Marks
+        </span>
+        <button onclick="window.openSpotlightModal()" class="hidden md:flex items-center gap-2 px-3 py-1.5 rounded-full border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-800 text-slate-500 dark:text-slate-400 text-xs font-medium" title="Search (⌘K)">
+          <i data-lucide="search" class="w-3.5 h-3.5 text-[#525fe1]"></i>
+          <span>Search</span>
+          <kbd class="px-1.5 py-0.5 rounded bg-slate-100 dark:bg-slate-700 text-[10px] font-mono text-slate-400">⌘K</kbd>
+        </button>
+        <button id="nism-header-theme-btn" onclick="window.toggleDarkMode()" class="p-2 rounded-full border border-slate-200 dark:border-slate-700 text-slate-600 dark:text-slate-300 bg-white dark:bg-slate-800" title="Toggle Theme (⌘D)">
+          <i data-lucide="moon" class="w-4 h-4"></i>
+        </button>
+        <a href="#interactive-quiz" class="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-full text-xs font-bold text-white bg-[#525fe1] hover:bg-[#404dc7] shadow-xs transition-all font-display">
+          <i data-lucide="help-circle" class="w-3.5 h-3.5"></i>
+          <span>Chapter Quiz</span>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Grid Layout -->
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 grid grid-cols-1 lg:grid-cols-12 gap-8 flex-grow">
+    
+    <!-- Table of Contents Sidebar (Desktop) -->
+    <aside class="hidden lg:block lg:col-span-3">
+      <div class="sticky top-24 space-y-4">
+        
+        <!-- Module 10 Chapter Quick Switcher -->
+        <div class="p-3.5 rounded-2xl bg-white dark:bg-slate-900 border border-slate-200/80 dark:border-slate-800 shadow-xs space-y-2">
+          <span class="text-[11px] font-bold uppercase tracking-wider text-slate-400 block">Module 10 Chapters</span>
+          <div class="space-y-1">
+            <a href="module10-ch14.html" class="flex items-center justify-between px-2.5 py-2 rounded-xl text-xs font-bold bg-indigo-50 dark:bg-indigo-950 text-indigo-700 dark:text-indigo-300 border border-indigo-200/80 dark:border-indigo-800">
+              <span class="flex items-center gap-2">
+                <span class="w-5 h-5 rounded-md bg-indigo-600 text-white flex items-center justify-center text-[10px]">14</span>
+                <span>Basics of Estate Planning</span>
+              </span>
+              <span class="text-[10px] bg-indigo-200/60 dark:bg-indigo-900 px-1.5 py-0.5 rounded">Active</span>
+            </a>
+            <a href="module10-ch15.html" class="flex items-center justify-between px-2.5 py-2 rounded-xl text-xs font-medium text-slate-600 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors">
+              <span class="flex items-center gap-2">
+                <span class="w-5 h-5 rounded-md bg-amber-500 text-white flex items-center justify-center text-[10px]">15</span>
+                <span>Tools for Estate Planning</span>
+              </span>
+              <span class="star-badge !text-[10px] !py-0 !px-1.5">⭐ Top</span>
+            </a>
+          </div>
+        </div>
+
+        <!-- In-Page Section Jump (Collapsible) -->
+        <details class="group rounded-2xl bg-white dark:bg-slate-900 border border-slate-200/80 dark:border-slate-800 shadow-xs overflow-hidden text-xs" open>
+          <summary class="flex items-center justify-between p-3.5 cursor-pointer select-none bg-slate-50/70 dark:bg-slate-800/50 hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors font-bold text-slate-700 dark:text-slate-200">
+            <span class="flex items-center gap-2">
+              <i data-lucide="bookmark" class="w-3.5 h-3.5 text-indigo-600"></i>
+              <span>On This Page (Sections)</span>
+            </span>
+            <i data-lucide="chevron-down" class="w-3.5 h-3.5 text-slate-400 transition-transform duration-200 group-open:rotate-180"></i>
+          </summary>
+          <nav class="p-3 pt-1 space-y-1 text-xs max-h-64 overflow-y-auto border-t border-slate-100 dark:border-slate-800 text-slate-600 dark:text-slate-300">
+            <a href="#section-14-1" class="block px-2.5 py-1.5 rounded-lg hover:bg-slate-100 dark:hover:bg-slate-800 hover:text-indigo-600 transition-colors">14.1 Constituents of an Estate</a>
+            <a href="#section-14-2" class="block px-2.5 py-1.5 rounded-lg hover:bg-slate-100 dark:hover:bg-slate-800 hover:text-indigo-600 transition-colors">14.2 Testamentary vs. Intestate</a>
+            <a href="#section-14-3" class="block px-2.5 py-1.5 rounded-lg hover:bg-slate-100 dark:hover:bg-slate-800 hover:text-indigo-600 transition-colors">14.3 Ancestral vs. Self-Acquired</a>
+            <a href="#section-14-4" class="block px-2.5 py-1.5 rounded-lg font-semibold text-indigo-600 dark:text-indigo-400 bg-indigo-50/60 dark:bg-indigo-950/40 hover:bg-indigo-100 transition-colors">14.4 Hindu Succession Act: Male Heirs ⭐</a>
+            <a href="#section-14-5" class="block px-2.5 py-1.5 rounded-lg font-semibold text-amber-700 dark:text-amber-300 bg-amber-50/60 dark:bg-amber-950/40 hover:bg-amber-100 transition-colors">14.5 Female Intestate & Reversion ⭐</a>
+            <a href="#section-14-6" class="block px-2.5 py-1.5 rounded-lg hover:bg-slate-100 dark:hover:bg-slate-800 hover:text-indigo-600 transition-colors">14.6 Indian Succession Act & Other Laws</a>
+            <a href="#section-14-7" class="block px-2.5 py-1.5 rounded-lg hover:bg-slate-100 dark:hover:bg-slate-800 hover:text-indigo-600 transition-colors">14.7 Mutation vs. Legal Title</a>
+            <a href="#interactive-quiz" class="block px-2.5 py-1.5 rounded-lg font-bold text-white bg-[#525fe1] hover:bg-[#434ec9] transition-colors mt-2 text-center">Practice Quiz (12 Questions)</a>
+          </nav>
+        </details>
+
+        <!-- Exam Focus Callout -->
+        <div class="p-4 rounded-2xl bg-gradient-to-br from-indigo-600 to-purple-700 text-white shadow-sm text-xs space-y-2">
+          <div class="flex items-center gap-1.5 font-bold">
+            <i data-lucide="zap" class="w-4 h-4 text-amber-300"></i>
+            <span>Exam Focus Insight</span>
+          </div>
+          <p class="text-indigo-100 leading-relaxed">
+            In Chapter 14, NISM Level 2 consistently tests <strong>Class I vs Class II exclusion</strong> (e.g. Mother gets, Father excluded) and <strong>Section 15(2) female property reversion</strong> to father's heirs when childless.
+          </p>
+        </div>
+      </div>
+    </aside>
+
+    <!-- Main Study Notes Area -->
+    <div class="lg:col-span-9 space-y-10">
+
+      <!-- Section 14.1 -->
+      <section id="section-14-1" class="bg-white dark:bg-slate-900 rounded-3xl p-6 sm:p-8 border border-slate-200/90 dark:border-slate-800 shadow-sm space-y-5">
+        <div class="flex items-center justify-between">
+          <div class="flex items-center gap-2 text-xs font-bold text-slate-500 uppercase tracking-wider">
+            <span class="w-2 h-2 rounded-full bg-indigo-500"></span> Section 14.1 &bull; Estate Definition
+          </div>
+          <span class="px-2 py-0.5 rounded text-[11px] font-semibold bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300">Foundation</span>
+        </div>
+
+        <h2 class="font-display text-xl sm:text-2xl font-bold text-slate-900 dark:text-white">What Constitutes an "Estate"?</h2>
+
+        <p class="text-sm sm:text-base text-slate-600 dark:text-slate-300 leading-relaxed">
+          In legal and financial planning terminology, an <strong>Estate</strong> refers to the total net worth of an individual at any given point in time or upon demise. It encompasses all assets—movable and immovable, tangible and intangible, physical and digital—owned solely or jointly by the individual, reduced by all legal debts, liabilities, and obligations.
+        </p>
+
+        <!-- Net Estate Formula Box -->
+        <div class="p-4 rounded-2xl bg-indigo-50 dark:bg-indigo-950/60 border border-indigo-200 dark:border-indigo-800 text-xs sm:text-sm">
+          <span class="font-bold text-indigo-950 dark:text-indigo-200 block mb-1">Fundamental Net Estate Equation:</span>
+          <div class="font-mono text-xs sm:text-base font-bold text-indigo-700 dark:text-indigo-300 bg-white dark:bg-slate-900 px-3 py-2 rounded-xl border border-indigo-200 dark:border-indigo-800 inline-block">
+            Net Distributable Estate = Total Gross Assets &minus; (Secured Debts + Unsecured Liabilities + Outstanding Tax Dues + Funeral & Administration Expenses)
+          </div>
+        </div>
+
+        <!-- Inventory of Estate Constituents -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3.5 text-xs sm:text-sm">
+          <div class="p-4 rounded-2xl bg-slate-50 dark:bg-slate-800/60 border border-slate-200 dark:border-slate-800 space-y-1.5">
+            <span class="font-bold text-slate-900 dark:text-white flex items-center gap-1.5">
+              <i data-lucide="home" class="w-4 h-4 text-indigo-500"></i> Immovable Real Estate
+            </span>
+            <p class="text-slate-600 dark:text-slate-400 text-xs">
+              Freehold land, residential flats, commercial properties, agricultural plots, undivided shares in common amenities, leasehold rights.
+            </p>
+          </div>
+
+          <div class="p-4 rounded-2xl bg-slate-50 dark:bg-slate-800/60 border border-slate-200 dark:border-slate-800 space-y-1.5">
+            <span class="font-bold text-slate-900 dark:text-white flex items-center gap-1.5">
+              <i data-lucide="trending-up" class="w-4 h-4 text-indigo-500"></i> Financial Assets
+            </span>
+            <p class="text-slate-600 dark:text-slate-400 text-xs">
+              Bank savings/term deposits, mutual fund units, demat equities, corporate bonds, government securities, PPF, EPF, and insurance maturity/death proceeds.
+            </p>
+          </div>
+
+          <div class="p-4 rounded-2xl bg-slate-50 dark:bg-slate-800/60 border border-slate-200 dark:border-slate-800 space-y-1.5">
+            <span class="font-bold text-slate-900 dark:text-white flex items-center gap-1.5">
+              <i data-lucide="briefcase" class="w-4 h-4 text-indigo-500"></i> Business Interests
+            </span>
+            <p class="text-slate-600 dark:text-slate-400 text-xs">
+              Sole proprietorship capital, partnership firm capital and share in profits/goodwill, LLP partner rights, unlisted/listed shares in private limited companies.
+            </p>
+          </div>
+
+          <div class="p-4 rounded-2xl bg-slate-50 dark:bg-slate-800/60 border border-slate-200 dark:border-slate-800 space-y-1.5">
+            <span class="font-bold text-slate-900 dark:text-white flex items-center gap-1.5">
+              <i data-lucide="gem" class="w-4 h-4 text-indigo-500"></i> Tangible Movables
+            </span>
+            <p class="text-slate-600 dark:text-slate-400 text-xs">
+              Gold bullion, silver, family jewellery, vintage artifacts, artwork, luxury motor vehicles, household furnishings, safe deposit locker contents.
+            </p>
+          </div>
+
+          <div class="p-4 rounded-2xl bg-slate-50 dark:bg-slate-800/60 border border-slate-200 dark:border-slate-800 space-y-1.5">
+            <span class="font-bold text-slate-900 dark:text-white flex items-center gap-1.5">
+              <i data-lucide="cpu" class="w-4 h-4 text-indigo-500"></i> Digital & IP Assets
+            </span>
+            <p class="text-slate-600 dark:text-slate-400 text-xs">
+              Cryptocurrency wallets, non-fungible tokens (NFTs), patents, trademarks, software copyrights, book royalties, monetized digital channels.
+            </p>
+          </div>
+
+          <div class="p-4 rounded-2xl bg-rose-50/70 dark:bg-rose-950/30 border border-rose-200 dark:border-rose-900 space-y-1.5">
+            <span class="font-bold text-rose-900 dark:text-rose-200 flex items-center gap-1.5">
+              <i data-lucide="credit-card" class="w-4 h-4 text-rose-600"></i> Liabilities & Deductions
+            </span>
+            <p class="text-rose-800/80 dark:text-rose-300 text-xs">
+              Housing loans, personal loans, business overdrafts, unpaid direct taxes (ITD claims), pending consumer or civil litigation awards, estate administration costs.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Section 14.2 -->
+      <section id="section-14-2" class="bg-white dark:bg-slate-900 rounded-3xl p-6 sm:p-8 border border-slate-200/90 dark:border-slate-800 shadow-sm space-y-5">
+        <div class="flex items-center justify-between">
+          <div class="flex items-center gap-2 text-xs font-bold text-slate-500 uppercase tracking-wider">
+            <span class="w-2 h-2 rounded-full bg-indigo-500"></span> Section 14.2 &bull; Modes of Succession
+          </div>
+          <span class="px-2 py-0.5 rounded text-[11px] font-semibold bg-indigo-50 dark:bg-indigo-950 text-indigo-600 dark:text-indigo-400">Core Legal Distinction</span>
+        </div>
+
+        <h2 class="font-display text-xl sm:text-2xl font-bold text-slate-900 dark:text-white">Testamentary vs. Intestate Succession</h2>
+
+        <p class="text-sm sm:text-base text-slate-600 dark:text-slate-300 leading-relaxed">
+          Succession is the legal process through which the property of a deceased person is transferred to living persons. The entire framework of succession hinges on whether the deceased left behind a legally binding declaration of intent:
+        </p>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4 text-xs sm:text-sm">
+          <div class="p-5 rounded-2xl bg-indigo-50/70 dark:bg-indigo-950/40 border border-indigo-200 dark:border-indigo-800 space-y-3">
+            <div class="flex items-center justify-between">
+              <h3 class="font-bold text-base text-indigo-950 dark:text-indigo-200 flex items-center gap-2">
+                <i data-lucide="file-text" class="w-4 h-4 text-indigo-600"></i>
+                Testamentary Succession
+              </h3>
+              <span class="text-[10px] font-bold px-2 py-0.5 rounded-full bg-indigo-200 dark:bg-indigo-900 text-indigo-800 dark:text-indigo-200">With Valid Will</span>
+            </div>
+            <p class="text-slate-600 dark:text-slate-300 leading-relaxed">
+              Occurs when an individual (the <strong>Testator</strong>) dies having executed a legally valid <strong>Will or Codicil</strong> disposing of their self-acquired assets. The distribution follows the testator's instructions, overriding default statutory succession laws.
+            </p>
+            <ul class="space-y-1.5 text-xs text-slate-700 dark:text-slate-300">
+              <li class="flex items-center gap-2">
+                <i data-lucide="check" class="w-3.5 h-3.5 text-emerald-500"></i>
+                <span>Complete autonomy over asset division.</span>
+              </li>
+              <li class="flex items-center gap-2">
+                <i data-lucide="check" class="w-3.5 h-3.5 text-emerald-500"></i>
+                <span>Allows appointment of trusted <strong>Executors</strong>.</span>
+              </li>
+              <li class="flex items-center gap-2">
+                <i data-lucide="check" class="w-3.5 h-3.5 text-emerald-500"></i>
+                <span>Can provide for minors through testamentary guardians.</span>
+              </li>
+            </ul>
+          </div>
+
+          <div class="p-5 rounded-2xl bg-amber-50/70 dark:bg-amber-950/40 border border-amber-200 dark:border-amber-800 space-y-3">
+            <div class="flex items-center justify-between">
+              <h3 class="font-bold text-base text-amber-950 dark:text-amber-200 flex items-center gap-2">
+                <i data-lucide="alert-circle" class="w-4 h-4 text-amber-600"></i>
+                Intestate Succession
+              </h3>
+              <span class="text-[10px] font-bold px-2 py-0.5 rounded-full bg-amber-200 dark:bg-amber-900 text-amber-800 dark:text-amber-200">Without Will</span>
+            </div>
+            <p class="text-slate-600 dark:text-slate-300 leading-relaxed">
+              Occurs when an individual dies without executing a valid Will, or where the Will is found invalid/void. The estate (the deceased is called the <strong>Intestate</strong>) devolves automatically according to personal religious succession laws.
+            </p>
+            <ul class="space-y-1.5 text-xs text-slate-700 dark:text-slate-300">
+              <li class="flex items-center gap-2">
+                <i data-lucide="x" class="w-3.5 h-3.5 text-rose-500"></i>
+                <span>Deceased's personal wishes are completely irrelevant.</span>
+              </li>
+              <li class="flex items-center gap-2">
+                <i data-lucide="x" class="w-3.5 h-3.5 text-rose-500"></i>
+                <span>Rigid statutory division across defined classes of heirs.</span>
+              </li>
+              <li class="flex items-center gap-2">
+                <i data-lucide="x" class="w-3.5 h-3.5 text-rose-500"></i>
+                <span>Requires court-issued <strong>Succession Certificate</strong> or <strong>Letters of Administration</strong>.</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <!-- Section 14.3 -->
+      <section id="section-14-3" class="bg-white dark:bg-slate-900 rounded-3xl p-6 sm:p-8 border border-slate-200/90 dark:border-slate-800 shadow-sm space-y-5">
+        <div class="flex items-center justify-between">
+          <div class="flex items-center gap-2 text-xs font-bold text-slate-500 uppercase tracking-wider">
+            <span class="w-2 h-2 rounded-full bg-indigo-500"></span> Section 14.3 &bull; Nature of Property
+          </div>
+          <span class="star-badge">⭐ High Exam Yield</span>
+        </div>
+
+        <h2 class="font-display text-xl sm:text-2xl font-bold text-slate-900 dark:text-white">Ancestral Property vs. Self-Acquired Property</h2>
+
+        <p class="text-sm sm:text-base text-slate-600 dark:text-slate-300 leading-relaxed">
+          Under Hindu Law, the distinction between self-acquired property and ancestral property is pivotal because it dictates whether an individual can freely alienate the property through a Will or gift:
+        </p>
+
+        <div class="overflow-x-auto rounded-2xl border border-slate-200 dark:border-slate-800">
+          <table class="w-full text-left text-xs sm:text-sm">
+            <thead class="bg-slate-100 dark:bg-slate-800/80 font-bold text-slate-800 dark:text-slate-200 border-b border-slate-200 dark:border-slate-700">
+              <tr>
+                <th class="p-3.5 sm:p-4">Criterion</th>
+                <th class="p-3.5 sm:p-4 text-emerald-700 dark:text-emerald-300">Self-Acquired Property</th>
+                <th class="p-3.5 sm:p-4 text-amber-700 dark:text-amber-300">Ancestral Property (Coparcenary)</th>
+              </tr>
+            </thead>
+            <tbody class="divide-y divide-slate-100 dark:divide-slate-800 text-slate-600 dark:text-slate-300">
+              <tr class="hover:bg-slate-50 dark:hover:bg-slate-800/40">
+                <td class="p-3.5 sm:p-4 font-bold text-slate-900 dark:text-white">Definition</td>
+                <td class="p-3.5 sm:p-4">Acquired through own earnings, personal investments, gifts from non-ancestors, or unencumbered testamentary bequest.</td>
+                <td class="p-3.5 sm:p-4">Inherited undivided up to four generations of male lineage (father, grandfather, great-grandfather).</td>
+              </tr>
+              <tr class="hover:bg-slate-50 dark:hover:bg-slate-800/40">
+                <td class="p-3.5 sm:p-4 font-bold text-slate-900 dark:text-white">Right by Birth</td>
+                <td class="p-3.5 sm:p-4">No child or heir acquires any right by birth. Absolute ownership rests with the acquirer during their lifetime.</td>
+                <td class="p-3.5 sm:p-4 font-semibold text-indigo-600 dark:text-indigo-400">
+                  Every coparcener acquires an equal undivided share <strong>by birth</strong> automatically.
+                </td>
+              </tr>
+              <tr class="hover:bg-slate-50 dark:hover:bg-slate-800/40">
+                <td class="p-3.5 sm:p-4 font-bold text-slate-900 dark:text-white">Power of Alienation (Gift / Will)</td>
+                <td class="p-3.5 sm:p-4">Full, unrestricted power to sell, gift, mortgage, or bequeath via Will to anyone, completely disinheriting children.</td>
+                <td class="p-3.5 sm:p-4 text-rose-600 dark:text-rose-400">
+                  Cannot be gifted or bequeathed through Will to the exclusion of other coparceners without their explicit consent (except undivided notional share under Sec 30).
+                </td>
+              </tr>
+              <tr class="hover:bg-slate-50 dark:hover:bg-slate-800/40">
+                <td class="p-3.5 sm:p-4 font-bold text-slate-900 dark:text-white">Daughter's Status Post-2005</td>
+                <td class="p-3.5 sm:p-4">Daughter inherits as Class I heir if parent dies intestate. Parent can choose not to bequeath in Will.</td>
+                <td class="p-3.5 sm:p-4 font-bold text-emerald-700 dark:text-emerald-400">
+                  Daughter is a <strong>Coparcener by birth</strong> with identical rights and liabilities as a son (HSA Amendment 2005).
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <!-- Supreme Court Callout Box -->
+        <div class="p-4 rounded-2xl bg-amber-50 dark:bg-amber-950/40 border border-amber-300 dark:border-amber-800 text-xs sm:text-sm space-y-2">
+          <div class="flex items-center gap-2 font-bold text-amber-900 dark:text-amber-200">
+            <i data-lucide="scale" class="w-4 h-4 text-amber-600"></i>
+            <span>Landmark Supreme Court Ruling: <em>Vineeta Sharma v. Rakesh Sharma (2020)</em></span>
+          </div>
+          <p class="text-amber-800 dark:text-amber-300 leading-relaxed">
+            The Supreme Court of India held that daughters have coparcenary rights by birth under Section 6 of the Hindu Succession Act, 1956 (as amended in 2005). <strong>It is irrelevant whether the father was alive on September 9, 2005</strong> (the date of amendment). The right is conferred by birth and has retroactive effect, settling years of conflicting High Court precedents.
+          </p>
+        </div>
+      </section>
+
+      <!-- Section 14.4 -->
+      <section id="section-14-4" class="bg-white dark:bg-slate-900 rounded-3xl p-6 sm:p-8 border border-slate-200/90 dark:border-slate-800 shadow-sm space-y-6">
+        <div class="flex items-center justify-between">
+          <div class="flex items-center gap-2 text-xs font-bold text-slate-500 uppercase tracking-wider">
+            <span class="w-2 h-2 rounded-full bg-indigo-500"></span> Section 14.4 &bull; Hindu Succession Act, 1956
+          </div>
+          <span class="star-badge">⭐ ULTRA HIGH YIELD</span>
+        </div>
+
+        <div>
+          <h2 class="font-display text-xl sm:text-2xl font-bold text-slate-900 dark:text-white">Male Intestate Succession (Section 8)</h2>
+          <p class="text-sm sm:text-base text-slate-600 dark:text-slate-300 leading-relaxed mt-2">
+            When a Hindu male dies intestate, his property devolves strictly according to Section 8 of the Hindu Succession Act, 1956 in the following cascading order of priority:
+          </p>
+        </div>
+
+        <!-- Four-Tier Hierarchy -->
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-3">
+          <div class="p-3.5 rounded-2xl bg-indigo-50 dark:bg-indigo-950/60 border border-indigo-200 dark:border-indigo-800 text-center">
+            <span class="text-xs font-bold text-indigo-600 dark:text-indigo-400 block mb-1">Tier 1 (Simultaneous)</span>
+            <span class="text-base font-bold text-indigo-950 dark:text-indigo-100 block">Class I Heirs</span>
+            <span class="text-[11px] text-slate-500 dark:text-slate-400 mt-1 block">Takes priority over all other tiers</span>
+          </div>
+          <div class="p-3.5 rounded-2xl bg-slate-50 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 text-center">
+            <span class="text-xs font-bold text-slate-500 block mb-1">Tier 2 (If No Class I)</span>
+            <span class="text-base font-bold text-slate-800 dark:text-slate-200 block">Class II Heirs</span>
+            <span class="text-[11px] text-slate-500 dark:text-slate-400 mt-1 block">Category I excludes Category II</span>
+          </div>
+          <div class="p-3.5 rounded-2xl bg-slate-50 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 text-center">
+            <span class="text-xs font-bold text-slate-500 block mb-1">Tier 3 (If No Class II)</span>
+            <span class="text-base font-bold text-slate-800 dark:text-slate-200 block">Agnates</span>
+            <span class="text-[11px] text-slate-500 dark:text-slate-400 mt-1 block">Wholly male bloodline</span>
+          </div>
+          <div class="p-3.5 rounded-2xl bg-slate-50 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 text-center">
+            <span class="text-xs font-bold text-slate-500 block mb-1">Tier 4 (If No Agnates)</span>
+            <span class="text-base font-bold text-slate-800 dark:text-slate-200 block">Cognates</span>
+            <span class="text-[11px] text-slate-500 dark:text-slate-400 mt-1 block">Bloodline with female link</span>
+          </div>
+        </div>
+
+        <!-- Class I Heirs Deep Dive -->
+        <div class="p-5 rounded-2xl bg-indigo-50/60 dark:bg-indigo-950/40 border border-indigo-200 dark:border-indigo-800 space-y-3">
+          <div class="flex items-center justify-between">
+            <h3 class="font-display font-bold text-base text-indigo-950 dark:text-indigo-200 flex items-center gap-2">
+              <i data-lucide="users" class="w-4 h-4 text-indigo-600"></i>
+              Class I Heirs (Simultaneous & Equal Inheritors)
+            </h3>
+            <span class="text-xs font-bold text-rose-600 dark:text-rose-400 bg-rose-50 dark:bg-rose-950/60 px-2.5 py-0.5 rounded-full border border-rose-200 dark:border-rose-800">
+              Critical: Father is NOT Class I!
+            </span>
+          </div>
+
+          <p class="text-xs sm:text-sm text-slate-600 dark:text-slate-300">
+            Class I heirs inherit <strong>simultaneously and to the total exclusion</strong> of all Class II heirs. The primary Class I heirs are:
+          </p>
+
+          <div class="grid grid-cols-2 sm:grid-cols-4 gap-2.5 text-xs font-medium">
+            <div class="p-2.5 bg-white dark:bg-slate-900 rounded-xl border border-indigo-100 dark:border-slate-800 text-slate-800 dark:text-slate-200">
+              &bull; <strong>Son</strong>
+            </div>
+            <div class="p-2.5 bg-white dark:bg-slate-900 rounded-xl border border-indigo-100 dark:border-slate-800 text-slate-800 dark:text-slate-200">
+              &bull; <strong>Daughter</strong>
+            </div>
+            <div class="p-2.5 bg-white dark:bg-slate-900 rounded-xl border border-indigo-100 dark:border-slate-800 text-slate-800 dark:text-slate-200">
+              &bull; <strong>Widow</strong>
+            </div>
+            <div class="p-2.5 bg-white dark:bg-slate-900 rounded-xl border border-indigo-100 dark:border-slate-800 text-emerald-700 dark:text-emerald-300 font-bold">
+              &bull; <strong>Mother</strong> ⭐
+            </div>
+          </div>
+
+          <div class="pt-2 text-xs text-slate-600 dark:text-slate-400">
+            <strong>Branch Heirs of Predeceased Children:</strong>
+            <span class="block mt-1">
+              Son of predeceased son, Daughter of predeceased son, Widow of predeceased son; Son of predeceased daughter, Daughter of predeceased daughter; Son of predeceased son of predeceased son, Daughter of predeceased son of predeceased son, Widow of predeceased son of predeceased son; and descendants of predeceased daughters added in 2005.
+            </span>
+          </div>
+        </div>
+
+        <!-- Class II Heirs Breakdown -->
+        <div class="p-5 rounded-2xl bg-slate-50 dark:bg-slate-800/60 border border-slate-200 dark:border-slate-800 space-y-3">
+          <h3 class="font-display font-bold text-base text-slate-900 dark:text-white flex items-center gap-2">
+            <i data-lucide="list-ordered" class="w-4 h-4 text-slate-600"></i>
+            Class II Heirs (Ordered by Nine Categories)
+          </h3>
+          <p class="text-xs sm:text-sm text-slate-600 dark:text-slate-300">
+            Class II heirs only inherit if there is <strong>NOT A SINGLE Class I heir</strong> alive. Among Class II heirs, <strong>Category I excludes Category II</strong>, Category II excludes Category III, and so on:
+          </p>
+
+          <div class="space-y-2 text-xs">
+            <div class="p-2.5 bg-white dark:bg-slate-900 rounded-xl border border-slate-200 dark:border-slate-700 flex items-start gap-2">
+              <span class="font-bold text-indigo-600 dark:text-indigo-400 w-24 shrink-0">Category I:</span>
+              <span class="font-bold text-slate-900 dark:text-white">Father</span>
+              <span class="text-slate-500 dark:text-slate-400 ml-auto">(Takes 100% if no Class I heirs; completely excludes Categories II to IX)</span>
+            </div>
+            <div class="p-2.5 bg-white dark:bg-slate-900 rounded-xl border border-slate-200 dark:border-slate-700 flex items-start gap-2">
+              <span class="font-bold text-indigo-600 dark:text-indigo-400 w-24 shrink-0">Category II:</span>
+              <span class="text-slate-700 dark:text-slate-300">(1) Son's daughter's son, (2) Son's daughter's daughter, (3) <strong>Brother</strong>, (4) <strong>Sister</strong> (Divide equally)</span>
+            </div>
+            <div class="p-2.5 bg-white dark:bg-slate-900 rounded-xl border border-slate-200 dark:border-slate-700 flex items-start gap-2">
+              <span class="font-bold text-indigo-600 dark:text-indigo-400 w-24 shrink-0">Category III:</span>
+              <span class="text-slate-700 dark:text-slate-300">Daughter's son's son, Daughter's son's daughter, Daughter's daughter's son, Daughter's daughter's daughter</span>
+            </div>
+            <div class="p-2.5 bg-white dark:bg-slate-900 rounded-xl border border-slate-200 dark:border-slate-700 flex items-start gap-2">
+              <span class="font-bold text-indigo-600 dark:text-indigo-400 w-24 shrink-0">Category IV:</span>
+              <span class="text-slate-700 dark:text-slate-300">Brother's son, Sister's son, Brother's daughter, Sister's daughter (Nephews and Nieces)</span>
+            </div>
+            <div class="p-2.5 bg-white dark:bg-slate-900 rounded-xl border border-slate-200 dark:border-slate-700 flex items-start gap-2">
+              <span class="font-bold text-indigo-600 dark:text-indigo-400 w-24 shrink-0">Categories V–IX:</span>
+              <span class="text-slate-700 dark:text-slate-300">Paternal & Maternal Grandparents, Widows of Father/Brother, Uncles and Aunts (Paternal then Maternal)</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Practical Case Scenario -->
+        <div class="p-5 rounded-2xl bg-emerald-50/70 dark:bg-emerald-950/30 border border-emerald-200 dark:border-emerald-800 space-y-2 text-xs sm:text-sm">
+          <span class="font-bold text-emerald-950 dark:text-emerald-200 flex items-center gap-1.5">
+            <i data-lucide="calculator" class="w-4 h-4 text-emerald-600"></i>
+            Practical Level 2 Calculation Example:
+          </span>
+          <p class="text-slate-700 dark:text-slate-300 leading-relaxed">
+            <strong>Scenario:</strong> Ramesh, a Hindu male, dies intestate leaving a self-acquired estate of ₹50 Lakhs. He is survived by his <strong>Mother</strong>, his <strong>Widow</strong>, <strong>1 Son</strong>, <strong>2 Daughters</strong>, and his <strong>Father</strong>. How will his estate be distributed?
+          </p>
+          <div class="p-3 bg-white dark:bg-slate-900 rounded-xl border border-emerald-200 dark:border-slate-800 text-xs text-slate-800 dark:text-slate-200 space-y-1">
+            <p>1. <strong>Father gets ₹0</strong> because Father is a Class II heir, and the presence of Class I heirs completely excludes Class II.</p>
+            <p>2. <strong>Class I Heirs alive:</strong> Mother (1 share), Widow (1 share), Son (1 share), Daughter 1 (1 share), Daughter 2 (1 share) = <strong>Total 5 equal shares</strong>.</p>
+            <p class="font-bold text-emerald-700 dark:text-emerald-400">
+              Each of the 5 Class I heirs receives ₹10 Lakhs (1/5th share each).
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Section 14.5 -->
+      <section id="section-14-5" class="bg-white dark:bg-slate-900 rounded-3xl p-6 sm:p-8 border border-slate-200/90 dark:border-slate-800 shadow-sm space-y-6">
+        <div class="flex items-center justify-between">
+          <div class="flex items-center gap-2 text-xs font-bold text-slate-500 uppercase tracking-wider">
+            <span class="w-2 h-2 rounded-full bg-amber-500"></span> Section 14.5 &bull; Hindu Succession Act, 1956
+          </div>
+          <span class="star-badge">⭐ ULTRA HIGH YIELD EXAM TRAP</span>
+        </div>
+
+        <div>
+          <h2 class="font-display text-xl sm:text-2xl font-bold text-slate-900 dark:text-white">Female Intestate Succession (Sections 15 & 16)</h2>
+          <p class="text-sm sm:text-base text-slate-600 dark:text-slate-300 leading-relaxed mt-2">
+            The rules governing the devolution of property of a female Hindu dying intestate are fundamentally different from those applicable to males. They are governed by Section 15 of the Act:
+          </p>
+        </div>
+
+        <!-- General Order of Succession Section 15(1) -->
+        <div class="p-5 rounded-2xl bg-slate-50 dark:bg-slate-800/60 border border-slate-200 dark:border-slate-800 space-y-3">
+          <h3 class="font-display font-bold text-base text-slate-900 dark:text-white">
+            General Rule of Devolution (Section 15(1))
+          </h3>
+          <p class="text-xs sm:text-sm text-slate-600 dark:text-slate-300">
+            Applies to property acquired by the female by her own skill, purchase, gift from non-parents, or general investments:
+          </p>
+          <div class="grid grid-cols-1 sm:grid-cols-5 gap-2 text-xs">
+            <div class="p-3 bg-white dark:bg-slate-900 rounded-xl border border-slate-200 dark:border-slate-700">
+              <span class="font-bold text-indigo-600 block mb-0.5">1st Priority</span>
+              <span>Sons, Daughters (including predeceased children's issues) & <strong>Husband</strong></span>
+            </div>
+            <div class="p-3 bg-white dark:bg-slate-900 rounded-xl border border-slate-200 dark:border-slate-700">
+              <span class="font-bold text-slate-500 block mb-0.5">2nd Priority</span>
+              <span>Heirs of the <strong>Husband</strong></span>
+            </div>
+            <div class="p-3 bg-white dark:bg-slate-900 rounded-xl border border-slate-200 dark:border-slate-700">
+              <span class="font-bold text-slate-500 block mb-0.5">3rd Priority</span>
+              <span><strong>Mother and Father</strong></span>
+            </div>
+            <div class="p-3 bg-white dark:bg-slate-900 rounded-xl border border-slate-200 dark:border-slate-700">
+              <span class="font-bold text-slate-500 block mb-0.5">4th Priority</span>
+              <span>Heirs of the <strong>Father</strong></span>
+            </div>
+            <div class="p-3 bg-white dark:bg-slate-900 rounded-xl border border-slate-200 dark:border-slate-700">
+              <span class="font-bold text-slate-500 block mb-0.5">5th Priority</span>
+              <span>Heirs of the <strong>Mother</strong></span>
+            </div>
+          </div>
+        </div>
+
+        <!-- The Non-Obstante Special Exceptions Section 15(2) -->
+        <div class="p-5 rounded-2xl bg-amber-50/80 dark:bg-amber-950/40 border border-amber-300 dark:border-amber-800 space-y-4">
+          <div class="flex items-center gap-2">
+            <span class="p-2 rounded-xl bg-amber-500 text-white">
+              <i data-lucide="alert-triangle" class="w-5 h-5"></i>
+            </span>
+            <div>
+              <h3 class="font-display font-bold text-base text-amber-950 dark:text-amber-100">
+                Special Reversion Exceptions (Section 15(2)) — HEAVILY TESTED
+              </h3>
+              <p class="text-xs text-amber-800 dark:text-amber-300">
+                When a female Hindu dies without leaving any son or daughter (or children of predeceased son/daughter):
+              </p>
+            </div>
+          </div>
+
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-4 text-xs sm:text-sm">
+            <div class="p-4 rounded-xl bg-white dark:bg-slate-900 border border-amber-200 dark:border-slate-800 space-y-2">
+              <span class="font-bold text-rose-700 dark:text-rose-400 block">
+                Rule 1: Property Inherited from Father or Mother (Sec 15(2)(a))
+              </span>
+              <p class="text-slate-600 dark:text-slate-300 leading-relaxed text-xs">
+                If the property was inherited from her father or mother, and she dies <strong>childless</strong>, the property does <strong>NOT</strong> go to her husband or husband's heirs! Instead, it devolves upon the <strong>heirs of her father</strong>.
+              </p>
+              <div class="text-[11px] p-2 rounded bg-amber-50 dark:bg-slate-800 text-amber-900 dark:text-amber-200 font-medium">
+                Example: Childless female dies leaving husband and brother. Property inherited from father goes 100% to brother (father's heir). Husband gets ₹0!
+              </div>
+            </div>
+
+            <div class="p-4 rounded-xl bg-white dark:bg-slate-900 border border-amber-200 dark:border-slate-800 space-y-2">
+              <span class="font-bold text-indigo-700 dark:text-indigo-400 block">
+                Rule 2: Property Inherited from Husband or Father-in-Law (Sec 15(2)(b))
+              </span>
+              <p class="text-slate-600 dark:text-slate-300 leading-relaxed text-xs">
+                If the property was inherited from her husband or father-in-law, and she dies <strong>childless</strong>, the property does <strong>NOT</strong> go to her own parents or siblings! Instead, it devolves upon the <strong>heirs of the husband</strong>.
+              </p>
+              <div class="text-[11px] p-2 rounded bg-indigo-50 dark:bg-slate-800 text-indigo-900 dark:text-indigo-200 font-medium">
+                Example: Widow dies childless leaving her mother and husband's nephew. Property inherited from husband goes 100% to husband's nephew. Mother gets ₹0!
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Section 14.6 -->
+      <section id="section-14-6" class="bg-white dark:bg-slate-900 rounded-3xl p-6 sm:p-8 border border-slate-200/90 dark:border-slate-800 shadow-sm space-y-5">
+        <div class="flex items-center justify-between">
+          <div class="flex items-center gap-2 text-xs font-bold text-slate-500 uppercase tracking-wider">
+            <span class="w-2 h-2 rounded-full bg-indigo-500"></span> Section 14.6 &bull; Other Succession Frameworks
+          </div>
+          <span class="px-2 py-0.5 rounded text-[11px] font-semibold bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300">Comparative Law</span>
+        </div>
+
+        <h2 class="font-display text-xl sm:text-2xl font-bold text-slate-900 dark:text-white">Indian Succession Act, 1925 & Personal Laws</h2>
+
+        <p class="text-sm sm:text-base text-slate-600 dark:text-slate-300 leading-relaxed">
+          The <strong>Indian Succession Act, 1925 (ISA)</strong> serves two distinct functions: it governs testamentary succession (Wills) uniformly across most communities, and it provides default intestate succession rules for Christians, Jews, and Parsis:
+        </p>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-4 text-xs sm:text-sm">
+          <div class="p-4 rounded-2xl bg-slate-50 dark:bg-slate-800/60 border border-slate-200 dark:border-slate-800 space-y-2">
+            <span class="font-bold text-indigo-900 dark:text-indigo-200 block text-sm">Christian Intestate Rules</span>
+            <p class="text-slate-600 dark:text-slate-300 text-xs leading-relaxed">
+              &bull; <strong>With Children:</strong> Widow gets <strong>1/3rd share</strong>, remaining <strong>2/3rd share</strong> is divided equally among children.<br>
+              &bull; <strong>No Children, with Kindred:</strong> Widow gets <strong>1/2 share</strong>, kindred get 1/2 share.<br>
+              &bull; <strong>No Kindred:</strong> Widow takes 100% of the estate.
+            </p>
+          </div>
+
+          <div class="p-4 rounded-2xl bg-slate-50 dark:bg-slate-800/60 border border-slate-200 dark:border-slate-800 space-y-2">
+            <span class="font-bold text-purple-900 dark:text-purple-200 block text-sm">Parsi Intestate Rules</span>
+            <p class="text-slate-600 dark:text-slate-300 text-xs leading-relaxed">
+              Governed by Sections 50 to 56 of the ISA.<br>
+              &bull; Widow/husband and each child receive equal shares.<br>
+              &bull; Each parent receives a share equal to <strong>half</strong> the share of each child.
+            </p>
+          </div>
+
+          <div class="p-4 rounded-2xl bg-slate-50 dark:bg-slate-800/60 border border-slate-200 dark:border-slate-800 space-y-2">
+            <span class="font-bold text-emerald-900 dark:text-emerald-200 block text-sm">Muslim Law (Shariat)</span>
+            <p class="text-slate-600 dark:text-slate-300 text-xs leading-relaxed">
+              &bull; Intestate succession is divided strictly among fixed Quranic <strong>Sharers</strong> and <strong>Residuaries</strong>.<br>
+              &bull; ⭐ <strong>Testamentary Restriction:</strong> A Muslim cannot bequeath more than <strong>1/3rd</strong> of their net estate by Will without the express consent of all legal heirs.
+            </p>
+          </div>
+        </div>
+
+        <!-- Special Marriage Act Note -->
+        <div class="p-4 rounded-2xl bg-indigo-50/60 dark:bg-indigo-950/40 border border-indigo-200 dark:border-indigo-800 text-xs text-slate-700 dark:text-slate-300 space-y-1">
+          <span class="font-bold text-indigo-900 dark:text-indigo-200 flex items-center gap-1.5">
+            <i data-lucide="info" class="w-4 h-4 text-indigo-600"></i>
+            Special Marriage Act, 1954 (SMA) Application:
+          </span>
+          <p>
+            Under Section 21 of the SMA, succession to the property of persons married under the SMA is governed by the <strong>Indian Succession Act, 1925</strong>. <em>However</em>, by virtue of the 1976 amendment (Section 21A), if both parties to the marriage are Hindus, Buddhists, Sikhs, or Jains, the <strong>Hindu Succession Act, 1956 continues to apply</strong> to them.
+          </p>
+        </div>
+      </section>
+
+      <!-- Section 14.7 -->
+      <section id="section-14-7" class="bg-white dark:bg-slate-900 rounded-3xl p-6 sm:p-8 border border-slate-200/90 dark:border-slate-800 shadow-sm space-y-5">
+        <div class="flex items-center justify-between">
+          <div class="flex items-center gap-2 text-xs font-bold text-slate-500 uppercase tracking-wider">
+            <span class="w-2 h-2 rounded-full bg-indigo-500"></span> Section 14.7 &bull; Real Estate Records
+          </div>
+          <span class="star-badge">⭐ Critical Legal Distinction</span>
+        </div>
+
+        <h2 class="font-display text-xl sm:text-2xl font-bold text-slate-900 dark:text-white">Mutation of Property vs. Legal Title</h2>
+
+        <p class="text-sm sm:text-base text-slate-600 dark:text-slate-300 leading-relaxed">
+          One of the most frequent misconceptions in Indian estate planning is confusing <strong>Mutation (Dakhil Kharij / Namantaran)</strong> with legal ownership. In real estate advisory, clear appreciation of this distinction is paramount:
+        </p>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4 text-xs sm:text-sm">
+          <div class="p-5 rounded-2xl bg-rose-50/70 dark:bg-rose-950/30 border border-rose-200 dark:border-rose-900 space-y-2">
+            <span class="font-bold text-rose-900 dark:text-rose-200 flex items-center gap-1.5 text-base">
+              <i data-lucide="file-x" class="w-4 h-4 text-rose-600"></i>
+              What Mutation IS NOT
+            </span>
+            <ul class="space-y-1.5 text-xs text-rose-800 dark:text-rose-300">
+              <li>&bull; Mutation does <strong>NOT create or extinguish legal title</strong>.</li>
+              <li>&bull; Mutation entry is NOT a document of ownership.</li>
+              <li>&bull; Having one's name in municipal / land revenue records does NOT defeat the legitimate claims of co-owners or legal heirs.</li>
+            </ul>
+          </div>
+
+          <div class="p-5 rounded-2xl bg-emerald-50/70 dark:bg-emerald-950/30 border border-emerald-200 dark:border-emerald-800 space-y-2">
+            <span class="font-bold text-emerald-950 dark:text-emerald-200 flex items-center gap-1.5 text-base">
+              <i data-lucide="file-check" class="w-4 h-4 text-emerald-600"></i>
+              What Mutation ACTUALLY IS
+            </span>
+            <ul class="space-y-1.5 text-xs text-emerald-800 dark:text-emerald-300">
+              <li>&bull; Purely an administrative recording for <strong>fiscal / revenue collection</strong>.</li>
+              <li>&bull; Enables the municipal corporation or Panchayat to levy and collect property tax from the designated person.</li>
+              <li>&bull; Legal title is derived only through registered sale deeds, registered gift deeds, probate, or statutory succession.</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Supreme Court Ruling Box -->
+        <div class="p-4 rounded-2xl bg-slate-50 dark:bg-slate-800/60 border border-slate-200 dark:border-slate-700 text-xs sm:text-sm space-y-2">
+          <span class="font-bold text-slate-900 dark:text-white flex items-center gap-1.5">
+            <i data-lucide="landmark" class="w-4 h-4 text-indigo-600"></i>
+            Supreme Court Jurisprudence: <em>Bhimabai Mahadeo Kambekar (2021)</em>:
+          </span>
+          <p class="text-slate-600 dark:text-slate-300 leading-relaxed text-xs">
+            The Supreme Court has consistently held across dozens of authoritative rulings that: <em>"Mutation of property in revenue records neither creates nor extinguishes title to the property, nor has it any presumptive value on title. Such entries are relevant only for the purpose of paying property tax and land revenue."</em>
+          </p>
+        </div>
+      </section>
+
+      <!-- Section 14.8: Interactive Quiz Section -->
+      <section id="interactive-quiz" class="bg-gradient-to-br from-slate-900 via-[#0b104a] to-slate-900 rounded-3xl p-6 sm:p-8 text-white shadow-xl space-y-6">
+        
+        <!-- Quiz Chrome Header -->
+        <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 pb-4 border-b border-white/10">
+          <div>
+            <div class="flex items-center gap-2 mb-1">
+              <span class="px-2.5 py-0.5 rounded-full text-[10px] font-bold uppercase tracking-wider bg-indigo-500/30 text-indigo-300 border border-indigo-400/40">
+                Chapter 14 Exam Simulator
+              </span>
+              <span class="text-xs text-slate-400 font-medium">12 Questions &bull; 20 M Module Scope</span>
+            </div>
+            <h3 class="font-display text-xl sm:text-2xl font-bold text-white">
+              Basics of Estate Planning: Interactive Quiz
+            </h3>
+          </div>
+
+          <div class="flex items-center gap-3">
+            <div class="text-right">
+              <span class="text-xs text-slate-400 block">Progress</span>
+              <span class="font-mono text-sm font-bold text-indigo-300"><span id="answered-count">0</span> / 12 Answered</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Quiz Questions Container -->
+        <div id="questions-container" class="space-y-6"></div>
+
+        <!-- Quiz Action Buttons -->
+        <div class="flex flex-wrap items-center justify-between gap-4 pt-4 border-t border-white/10">
+          <div class="text-xs text-slate-400">
+            Passing benchmark: <strong>60% (8 of 12 correct)</strong> &bull; Direct NISM Level 2 exam patterns
+          </div>
+          <div class="flex items-center gap-3">
+            <button id="reset-quiz-btn" onclick="resetQuiz()" class="hidden px-4 py-2.5 rounded-xl text-xs font-bold bg-white/10 hover:bg-white/20 text-white border border-white/20 transition-all flex items-center gap-1.5">
+              <i data-lucide="rotate-ccw" class="w-3.5 h-3.5"></i>
+              <span>Retake Quiz</span>
+            </button>
+            <button id="submit-quiz-btn" onclick="submitQuiz()" class="px-6 py-2.5 rounded-xl text-xs font-bold bg-[#525fe1] hover:bg-[#434ec9] text-white shadow-md transition-all flex items-center gap-1.5 font-display">
+              <i data-lucide="check-circle" class="w-4 h-4"></i>
+              <span>Submit & Check Answers</span>
+            </button>
+          </div>
+        </div>
+
+        <!-- Scorecard Results Box (Hidden by default) -->
+        <div id="quiz-results" class="hidden p-6 rounded-2xl bg-white/10 border border-white/20 space-y-4">
+          <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-3">
+            <div>
+              <span id="result-status-badge" class="px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider bg-emerald-500 text-emerald-950">
+                Status: Passed
+              </span>
+              <h4 class="font-display text-2xl font-bold text-white mt-2">
+                Your Score: <span id="score-display">0 / 12</span>
+              </h4>
+            </div>
+            <div class="text-right">
+              <span class="text-xs text-slate-300 block">Performance</span>
+              <span id="percentage-display" class="text-xl font-bold text-indigo-300 font-mono">0%</span>
+            </div>
+          </div>
+          <p id="result-summary-text" class="text-xs sm:text-sm text-slate-200 leading-relaxed"></p>
+        </div>
+
+      </section>
+
+      <!-- Bottom Chapter Navigation -->
+      <div class="flex flex-col sm:flex-row items-center justify-between gap-4 p-6 rounded-3xl bg-white dark:bg-slate-900 border border-slate-200/90 dark:border-slate-800 shadow-sm">
+        <a href="module10.html" class="flex items-center gap-2 text-xs font-bold text-slate-600 dark:text-slate-300 hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors">
+          <i data-lucide="chevron-left" class="w-4 h-4"></i>
+          <span>Back to Module 10 Hub</span>
+        </a>
+
+        <a href="module10-ch15.html" class="flex items-center gap-2 px-5 py-2.5 rounded-xl text-xs font-bold text-white bg-[#525fe1] hover:bg-[#434ec9] shadow-xs transition-colors">
+          <span>Proceed to Chapter 15: Tools for Estate Planning</span>
+          <i data-lucide="arrow-right" class="w-4 h-4"></i>
+        </a>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- Standardized Footer -->
+  <footer class="bg-white dark:bg-slate-900 border-t border-slate-200 dark:border-slate-800 py-8 mt-12">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-slate-500 dark:text-slate-400">
+      <div class="flex items-center gap-2">
+        <div class="w-6 h-6 rounded-lg bg-[#525fe1] flex items-center justify-center text-white font-bold text-[10px]">
+          X-B
+        </div>
+        <span>NISM Series X-B (Investment Adviser Level 2) &bull; Chapter 14</span>
+      </div>
+      <div class="flex items-center gap-4">
+        <a href="module10.html" class="hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors">Module 10 Hub</a>
+        <a href="module10-ch14.html" class="hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors font-bold text-indigo-600 dark:text-indigo-400">Chapter 14</a>
+        <a href="module10-ch15.html" class="hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors">Chapter 15 ⭐</a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Smooth Preloader Auto-dismiss
+    function dismissPreloader() {
+      const preloader = document.getElementById("eduleb-preloader");
+      if (preloader && !preloader.classList.contains("fade-out")) {
+        preloader.classList.add("fade-out");
+        setTimeout(() => { if (preloader.parentNode) preloader.parentNode.removeChild(preloader); }, 550);
+      }
+    }
+    window.addEventListener("load", () => setTimeout(dismissPreloader, 350));
+    setTimeout(dismissPreloader, 1000);
+
+    // 12 High-Yield Exam Questions for Chapter 14
+    const questionsData = [
+      {
+        id: 1,
+        question: "Under the Hindu Succession Act, 1956, into which category of heirs does the biological father of a deceased Hindu male fall?",
+        options: [
+          { text: "Class I Heir (inherits simultaneously with mother, widow, and children)", key: "a" },
+          { text: "Class II Heir (Category I - inherits only if no Class I heir survives)", key: "b" },
+          { text: "Agnate Heir (inherits along with male relatives by blood)", key: "c" },
+          { text: "Preferential Coparcener with right of survivorship", key: "d" }
+        ],
+        correct: "b",
+        explanation: "Under Section 8 and the Schedule to the Hindu Succession Act, 1956, the Mother is a Class I heir, but the Father is placed exclusively in Class II (Category I). He inherits only if there is not a single Class I heir alive."
+      },
+      {
+        id: 2,
+        question: "A Hindu male dies intestate leaving his Mother, Widow, Father, one Son, and two Daughters. His self-acquired estate is worth ₹60 Lakhs. How will his estate be distributed?",
+        options: [
+          { text: "Father gets ₹10 Lakhs, and the remaining ₹50 Lakhs is divided equally among the other 5 heirs", key: "a" },
+          { text: "Father gets ₹0; Mother, Widow, Son, and each Daughter receive ₹12 Lakhs each (5 equal shares)", key: "b" },
+          { text: "Widow gets 50% (₹30 Lakhs), and the 3 children divide the remaining 50% equally", key: "c" },
+          { text: "Son gets a double share (₹20 Lakhs), daughters and widow get ₹10 Lakhs each", key: "d" }
+        ],
+        correct: "b",
+        explanation: "Father is a Class II heir and is completely excluded by the surviving Class I heirs. The surviving Class I heirs are Mother, Widow, Son, and 2 Daughters (5 persons). The estate of ₹60 Lakhs is divided into 5 equal shares of ₹12 Lakhs each."
+      },
+      {
+        id: 3,
+        question: "Following the landmark Supreme Court ruling in Vineeta Sharma v. Rakesh Sharma (2020), what is the legal coparcenary status of daughters under Hindu law?",
+        options: [
+          { text: "Daughters are coparceners only if their father was alive on 9th September 2005", key: "a" },
+          { text: "Daughters are coparceners by birth with equal rights and liabilities, irrespective of whether the father was alive on 9th September 2005", key: "b" },
+          { text: "Daughters only have maintenance rights and cannot demand partition of ancestral property", key: "c" },
+          { text: "Daughters only become coparceners if they remain unmarried", key: "d" }
+        ],
+        correct: "b",
+        explanation: "The Supreme Court in Vineeta Sharma v. Rakesh Sharma (2020) held that the amended Section 6 of HSA 1956 confers coparcenary rights by birth to daughters with retroactive effect. The death of the father prior to 9th September 2005 does not affect this right."
+      },
+      {
+        id: 4,
+        question: "Sunita, a Hindu female, dies intestate leaving no children or grandchildren. She is survived by her Husband and her Brother. A residential flat owned by Sunita was inherited by her from her Father. Who inherits this flat?",
+        options: [
+          { text: "Her Husband inherits 100% under the general rule of Section 15(1)", key: "a" },
+          { text: "Her Husband and Brother divide the flat equally (50% each)", key: "b" },
+          { text: "Her Brother inherits 100% under Section 15(2)(a) as the heir of her father, excluding her husband", key: "c" },
+          { text: "The flat escheats to the State Government", key: "d" }
+        ],
+        correct: "c",
+        explanation: "Under Section 15(2)(a) of the Hindu Succession Act, any property inherited by a female Hindu from her father or mother shall devolve, in the absence of any son or daughter (or children of predeceased child), not upon the husband or his heirs, but upon the heirs of the father. Thus, Sunita's brother inherits 100%."
+      },
+      {
+        id: 5,
+        question: "What is the legal effect of property mutation (Dakhil Kharij) in local municipal or village revenue records as per settled Supreme Court precedents?",
+        options: [
+          { text: "Mutation creates conclusive and unquestionable legal ownership title in favor of the applicant", key: "a" },
+          { text: "Mutation is purely for fiscal and property tax assessment purposes; it neither creates nor extinguishes legal title", key: "b" },
+          { text: "Mutation automatically invalidates any existing registered sale deed or Will", key: "c" },
+          { text: "Mutation converts leasehold rights into freehold rights", key: "d" }
+        ],
+        correct: "b",
+        explanation: "The Supreme Court (e.g., in Bhimabai Mahadeo Kambekar and Balwant Singh) has repeatedly affirmed that mutation entries in revenue/municipal records are strictly for fiscal/tax-collection purposes and do not confer or extinguish legal title to the property."
+      },
+      {
+        id: 6,
+        question: "Under the Indian Succession Act, 1925, how is the estate of an intestate Christian distributed if the deceased is survived by a widow and three children?",
+        options: [
+          { text: "Widow gets 1/2 share, and the children divide the remaining 1/2 share equally", key: "a" },
+          { text: "Widow gets 1/3rd share, and the remaining 2/3rd share is divided equally among the children", key: "b" },
+          { text: "Widow gets 100% of the estate if all children are adults", key: "c" },
+          { text: "Widow gets an equal share with each child (1/4th each)", key: "d" }
+        ],
+        correct: "b",
+        explanation: "Under Section 33 of the Indian Succession Act, 1925, if an intestate Christian leaves a widow and lineal descendants, 1/3rd of the estate goes to the widow and the remaining 2/3rd goes to the lineal descendants (children) equally."
+      },
+      {
+        id: 7,
+        question: "Under Muslim Personal Law (Shariat), what is the maximum portion of their net estate that an individual can dispose of through a Will (Wasiyat) without the consent of their legal heirs?",
+        options: [
+          { text: "Entire estate (100%)", key: "a" },
+          { text: "Up to 50% of the estate", key: "b" },
+          { text: "Up to one-third (1/3rd) of the net estate", key: "c" },
+          { text: "Up to one-fourth (1/4th) of the net estate", key: "d" }
+        ],
+        correct: "c",
+        explanation: "Under Muslim personal law, a testator cannot bequeath more than one-third (1/3rd) of their net estate (after paying funeral expenses and debts) via Will unless all the legal heirs give their free consent after the testator's death."
+      },
+      {
+        id: 8,
+        question: "Under Section 8 of the Hindu Succession Act, who among the following is categorized as an 'Agnate'?",
+        options: [
+          { text: "A person related to the deceased through one or more female links", key: "a" },
+          { text: "A person related to the deceased wholly through males by blood or adoption", key: "b" },
+          { text: "A relative related solely through the maternal grandmother", key: "c" },
+          { text: "The spouse of a deceased sister", key: "d" }
+        ],
+        correct: "b",
+        explanation: "Under Section 3(1)(a) of HSA 1956, one person is said to be an 'agnate' of another if the two are related by blood or adoption wholly through males. If there is a female relative intervening in the chain of relationship, they are classified as 'cognates'."
+      },
+      {
+        id: 9,
+        question: "Anjali, a Hindu widow, dies intestate leaving no children. She owns a house which she had inherited from her late husband. She is survived by her own Mother and her late husband's Nephew (brother's son). Who inherits the house?",
+        options: [
+          { text: "Her Mother inherits 100% under Section 15(1)", key: "a" },
+          { text: "Her late husband's Nephew inherits 100% under Section 15(2)(b)", key: "b" },
+          { text: "Her Mother and husband's Nephew share the property 50:50", key: "c" },
+          { text: "The house is auctioned and proceeds deposited in PM Cares Fund", key: "d" }
+        ],
+        correct: "b",
+        explanation: "Under Section 15(2)(b) of the Hindu Succession Act, property inherited by a female from her husband or father-in-law reverts to the heirs of the husband if she dies childless. Therefore, the husband's nephew (an heir of the husband) inherits the entire house, to the exclusion of her mother."
+      },
+      {
+        id: 10,
+        question: "Two Hindus marry under the provisions of the Special Marriage Act, 1954. Which law governs the intestate succession to their property upon their death?",
+        options: [
+          { text: "Indian Succession Act, 1925 in all circumstances", key: "a" },
+          { text: "Hindu Succession Act, 1956 (by virtue of Section 21A inserted by the 1976 amendment)", key: "b" },
+          { text: "Uniform Civil Code of Goa", key: "c" },
+          { text: "The succession is frozen until a civil court executes a settlement deed", key: "d" }
+        ],
+        correct: "b",
+        explanation: "Section 21A inserted into the Special Marriage Act in 1976 provides that if two persons who are both Hindus, Buddhists, Sikhs, or Jains marry under the Special Marriage Act, the Hindu Succession Act, 1956 continues to govern their succession."
+      },
+      {
+        id: 11,
+        question: "Which of the following is true regarding a Hindu individual's power to alienate their self-acquired property?",
+        options: [
+          { text: "The individual must obtain prior written consent from all adult children before selling or gifting it", key: "a" },
+          { text: "The individual has absolute right to dispose of it through gift, sale, or Will, and may completely disinherit any child", key: "b" },
+          { text: "Children acquire an undivided coparcenary share in the self-acquired property by birth", key: "c" },
+          { text: "At least 50% must be reserved for the surviving spouse under statutory forced heirship", key: "d" }
+        ],
+        correct: "b",
+        explanation: "Unlike ancestral property where coparceners hold rights by birth, an owner of self-acquired property enjoys complete, unrestricted freedom to alienate it by gift, sale, or Will to anyone, and can legally disinherit any or all children."
+      },
+      {
+        id: 12,
+        question: "If a Hindu male dies intestate with no Class I heirs, no Class II heirs, no agnates, and no cognates, what happens to his estate?",
+        options: [
+          { text: "It is distributed to the residents of the village/locality equally", key: "a" },
+          { text: "It devolves upon the Government under the doctrine of Escheat (Section 29 of HSA)", key: "b" },
+          { text: "It is automatically converted into a public charitable trust", key: "c" },
+          { text: "The court auctions the property and distributes proceeds among local creditors only", key: "d" }
+        ],
+        correct: "b",
+        explanation: "Under Section 29 of the Hindu Succession Act, 1956, if an intestate has left no qualified heir under Class I, Class II, Agnates, or Cognates, the property devolves on the Government under the doctrine of 'Escheat', subject to all obligations and liabilities of the deceased."
+      }
+    ];
+
+    let userAnswers = {};
+
+    function renderQuiz() {
+      const container = document.getElementById("questions-container");
+      container.innerHTML = "";
+
+      questionsData.forEach((q, index) => {
+        const qDiv = document.createElement("div");
+        qDiv.className = "p-5 rounded-2xl bg-white/5 border border-white/10 space-y-4 transition-all";
+        qDiv.id = `q-box-${q.id}`;
+
+        let optionsHtml = "";
+        q.options.forEach(opt => {
+          optionsHtml += `
+            <label class="flex items-start gap-3 p-3.5 rounded-xl bg-white/5 hover:bg-white/10 border border-white/5 cursor-pointer text-xs sm:text-sm transition-all" onclick="selectOption(${q.id}, '${opt.key}')" id="label-${q.id}-${opt.key}">
+              <input type="radio" name="question-${q.id}" value="${opt.key}" class="w-4 h-4 mt-0.5 text-indigo-500 focus:ring-0 focus:ring-offset-0 bg-transparent border-slate-500">
+              <div class="flex-grow">
+                <span class="font-bold text-indigo-300 mr-1.5 uppercase">${opt.key}.</span>
+                <span class="text-slate-200">${opt.text}</span>
+              </div>
+            </label>
+          `;
+        });
+
+        qDiv.innerHTML = `
+          <div class="flex items-start justify-between gap-2">
+            <span class="text-xs font-bold text-indigo-400 uppercase tracking-wider">Question ${index + 1} of ${questionsData.length}</span>
+            <span id="badge-${q.id}" class="text-xs px-2.5 py-0.5 rounded-full bg-white/5 text-slate-400 font-medium">Unanswered</span>
+          </div>
+          <h4 class="font-display font-semibold text-sm sm:text-base text-white leading-relaxed">${q.question}</h4>
+          <div class="space-y-2 mt-3">
+            ${optionsHtml}
+          </div>
+          <div id="explanation-${q.id}" class="hidden p-4 rounded-xl text-xs sm:text-sm mt-3 space-y-1"></div>
+        `;
+        container.appendChild(qDiv);
+      });
+      lucide.createIcons();
+    }
+
+    function selectOption(qId, key) {
+      userAnswers[qId] = key;
+      const count = Object.keys(userAnswers).length;
+      document.getElementById("answered-count").innerText = count;
+      
+      const badge = document.getElementById(`badge-${qId}`);
+      if (badge) {
+        badge.innerText = "Answered";
+        badge.className = "text-xs px-2.5 py-0.5 rounded-full bg-indigo-500/20 text-indigo-300 font-medium";
+      }
+
+      // Highlight selected label
+      const q = questionsData.find(item => item.id === qId);
+      q.options.forEach(opt => {
+        const lbl = document.getElementById(`label-${qId}-${opt.key}`);
+        if (opt.key === key) {
+          lbl.className = "flex items-start gap-3 p-3.5 rounded-xl bg-indigo-600/30 border border-indigo-400/50 cursor-pointer text-xs sm:text-sm transition-all";
+        } else {
+          lbl.className = "flex items-start gap-3 p-3.5 rounded-xl bg-white/5 hover:bg-white/10 border border-white/5 cursor-pointer text-xs sm:text-sm transition-all";
+        }
+      });
+    }
+
+    function submitQuiz() {
+      let score = 0;
+      questionsData.forEach(q => {
+        const selected = userAnswers[q.id];
+        const isCorrect = selected === q.correct;
+        if (isCorrect) score++;
+
+        const explanationDiv = document.getElementById(`explanation-${q.id}`);
+        explanationDiv.classList.remove("hidden");
+
+        if (isCorrect) {
+          explanationDiv.className = "p-4 rounded-xl text-xs sm:text-sm mt-3 bg-emerald-950/70 border border-emerald-600 text-emerald-200 space-y-1";
+          explanationDiv.innerHTML = `<div class="font-bold text-emerald-400 flex items-center gap-1.5"><i data-lucide="check" class="w-4 h-4"></i> Correct!</div><p>${q.explanation}</p>`;
+        } else {
+          explanationDiv.className = "p-4 rounded-xl text-xs sm:text-sm mt-3 bg-rose-950/70 border border-rose-600 text-rose-200 space-y-1";
+          explanationDiv.innerHTML = `<div class="font-bold text-rose-400 flex items-center gap-1.5"><i data-lucide="x" class="w-4 h-4"></i> Incorrect (Correct Answer: ${q.correct.toUpperCase()})</div><p>${q.explanation}</p>`;
+        }
+      });
+
+      const percentage = Math.round((score / questionsData.length) * 100);
+      const passed = percentage >= 60;
+      
+      const resultsDiv = document.getElementById("quiz-results");
+      resultsDiv.classList.remove("hidden");
+
+      const statusBadge = document.getElementById("result-status-badge");
+      statusBadge.innerText = passed ? "Status: Passed (60%+ Benchmark)" : "Status: Needs Revision";
+      statusBadge.className = passed ? "px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider bg-emerald-500 text-emerald-950" : "px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider bg-amber-500 text-amber-950";
+
+      document.getElementById("score-display").innerText = `${score} / ${questionsData.length}`;
+      document.getElementById("percentage-display").innerText = `${percentage}% (Benchmark: 60%)`;
+
+      document.getElementById("result-summary-text").innerText = passed
+        ? `Congratulations! You scored ${percentage}%, clearing the NISM Level 2 pass mark. You have demonstrated a solid command of the Hindu Succession Act, Class I & II heir distributions, and property rights.`
+        : `You scored ${percentage}%. Review the explanations above regarding Father's exclusion by Class I heirs, Section 15(2) female property reversion, and the legal nature of mutation before retaking.`;
+
+      document.getElementById("submit-quiz-btn").classList.add("hidden");
+      document.getElementById("reset-quiz-btn").classList.remove("hidden");
+
+      resultsDiv.scrollIntoView({ behavior: 'smooth' });
+      lucide.createIcons();
+    }
+
+    function resetQuiz() {
+      userAnswers = {};
+      document.getElementById("answered-count").innerText = "0";
+      document.getElementById("quiz-results").classList.add("hidden");
+      document.getElementById("submit-quiz-btn").classList.remove("hidden");
+      document.getElementById("reset-quiz-btn").classList.add("hidden");
+      renderQuiz();
+      document.getElementById("interactive-quiz").scrollIntoView({ behavior: 'smooth' });
+    }
+
+    document.addEventListener("DOMContentLoaded", () => {
+      renderQuiz();
+      if (window.lucide && typeof window.lucide.createIcons === "function") {
+        window.lucide.createIcons();
+      }
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,964 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Chapter 2: Features of Life Insurance Products & MWP Act | NISM Series X-B Notes</title>
+  
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  
+  <!-- Google Fonts: DM Sans & Jost (Eduleb Benchmark) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Jost:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+  
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+
+  <!-- Modern Documentation Design System -->
+  <link rel="stylesheet" href="modern-docs.css">
+  <script defer src="nav-sidebar.js"></script>
+
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['"DM Sans"', 'sans-serif'],
+            display: ['"Jost"', 'sans-serif'],
+            heading: ['"Jost"', 'sans-serif']
+          },
+          colors: {
+            brand: {
+              50: '#fffbeb',
+              100: '#fef3c7',
+              500: '#f59e0b',
+              600: '#d97706',
+              700: '#b45309',
+              800: '#92400e',
+              900: '#78350f'
+            }
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    body {
+      font-family: 'DM Sans', sans-serif;
+      font-size: 16px;
+      line-height: 26px;
+      color: #4a5355;
+    }
+    h1, h2, h3, h4, h5, h6, .font-display, .font-heading {
+      font-family: 'Jost', sans-serif;
+      font-weight: 700;
+    }
+  </style>
+</head>
+<body class="bg-slate-50 dark:bg-slate-950 text-slate-900 dark:text-slate-100 min-h-screen flex flex-col selection:bg-amber-500 selection:text-white antialiased transition-colors duration-200">
+
+  <!-- Smooth Opening Preloader -->
+  <div class="preloaders" id="eduleb-preloader">
+    <span class="loader"></span>
+    <div class="preloader-label">Chapter 2: Life Products & MWP Act (⭐ High Yield)</div>
+  </div>
+
+  <!-- Standardized Header (Single-Tier, 64px) -->
+  <header class="sticky top-0 z-40 bg-white/95 dark:bg-slate-900/95 backdrop-blur-md border-b border-slate-200/80 dark:border-slate-800 shadow-xs">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
+      
+      <!-- Left: Navigation / Breadcrumbs -->
+      <div class="flex items-center gap-3">
+        <a href="module7.html" class="flex items-center gap-2 text-slate-500 hover:text-slate-900 dark:hover:text-white transition-colors" title="Back to Module 7 Hub">
+          <div class="w-9 h-9 rounded-xl bg-slate-100 dark:bg-slate-800 hover:bg-slate-200 dark:hover:bg-slate-750 flex items-center justify-center text-slate-700 dark:text-slate-300 transition-colors">
+            <i data-lucide="arrow-left" class="w-4 h-4"></i>
+          </div>
+        </a>
+        <div>
+          <div class="flex items-center gap-2">
+            <span class="text-[10px] font-bold uppercase tracking-wider text-amber-700 dark:text-amber-400 bg-amber-50 dark:bg-amber-950/80 px-2 py-0.5 rounded border border-amber-200 dark:border-amber-800">
+              Module 7 &bull; Chapter 2 ⭐
+            </span>
+            <span class="text-xs text-slate-400 font-medium hidden sm:inline">NISM Series X-B</span>
+          </div>
+          <h1 class="font-display font-bold text-base sm:text-lg text-slate-900 dark:text-white leading-tight">
+            Features of Life Insurance & MWP Act Trusts
+          </h1>
+        </div>
+      </div>
+
+      <!-- Right: Weightage & Quiz CTA -->
+      <div class="flex items-center gap-3">
+        <span class="hidden sm:inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-bold bg-amber-50 dark:bg-amber-950/70 text-amber-800 dark:text-amber-300 border border-amber-200 dark:border-amber-800">
+          <i data-lucide="star" class="w-3.5 h-3.5 fill-amber-500 text-amber-500"></i>
+          Weightage: ~11 Marks ⭐
+        </span>
+        <button onclick="window.openSpotlightModal()" class="p-2 rounded-full border border-slate-200 dark:border-slate-700 text-slate-600 dark:text-slate-300 bg-white dark:bg-slate-800" title="Search (⌘K)">
+          <i data-lucide="search" class="w-4 h-4 text-amber-600"></i>
+        </button>
+        <button id="nism-header-theme-btn" onclick="window.toggleDarkMode()" class="p-2 rounded-full border border-slate-200 dark:border-slate-700 text-slate-600 dark:text-slate-300 bg-white dark:bg-slate-800" title="Toggle Theme (⌘D)">
+          <i data-lucide="moon" class="w-4 h-4"></i>
+        </button>
+        <a href="#interactive-quiz" class="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-xl text-xs font-bold bg-amber-600 hover:bg-amber-700 text-white shadow-xs transition-all">
+          <i data-lucide="help-circle" class="w-3.5 h-3.5"></i>
+          <span class="hidden sm:inline">Chapter Quiz</span>
+          <span class="sm:hidden">Quiz</span>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Content Layout (Sidebar + Notes) -->
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 grid grid-cols-1 lg:grid-cols-12 gap-8 flex-grow">
+    
+    <!-- Table of Contents Sidebar (Desktop) -->
+    <aside class="hidden lg:block lg:col-span-3">
+      <div class="sticky top-24 space-y-4">
+        
+        <!-- In-Page Section Jump -->
+        <div class="rounded-2xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 shadow-xs p-4">
+          <h3 class="font-display font-bold text-xs uppercase tracking-wider text-slate-400 mb-3 flex items-center gap-1.5">
+            <i data-lucide="list" class="w-3.5 h-3.5 text-amber-600"></i>
+            <span>Chapter Sections</span>
+          </h3>
+          <nav class="space-y-1 text-xs">
+            <a href="#sec-hlv" class="block px-2.5 py-1.5 rounded-lg font-bold text-amber-800 dark:text-amber-300 bg-amber-50 dark:bg-amber-950/80 border border-amber-200 dark:border-amber-800">
+              2.1 Needs Estimation (HLV vs Expense) ⭐
+            </a>
+            <a href="#sec-products" class="block px-2.5 py-1.5 rounded-lg text-slate-600 dark:text-slate-300 hover:bg-amber-50 dark:hover:bg-amber-950/50 hover:text-amber-700 transition-colors">
+              2.2 Life Insurance Product Classes
+            </a>
+            <a href="#sec-ulip" class="block px-2.5 py-1.5 rounded-lg text-slate-600 dark:text-slate-300 hover:bg-amber-50 dark:hover:bg-amber-950/50 hover:text-amber-700 transition-colors">
+              2.3 ULIPs: Charges, Lock-in & Taxes ⭐
+            </a>
+            <a href="#sec-servicing" class="block px-2.5 py-1.5 rounded-lg text-slate-600 dark:text-slate-300 hover:bg-amber-50 dark:hover:bg-amber-950/50 hover:text-amber-700 transition-colors">
+              2.4 Paid-Up & Surrender Value Math
+            </a>
+            <a href="#sec-riders" class="block px-2.5 py-1.5 rounded-lg text-slate-600 dark:text-slate-300 hover:bg-amber-50 dark:hover:bg-amber-950/50 hover:text-amber-700 transition-colors">
+              2.5 Critical Policy Riders & Caps
+            </a>
+            <a href="#sec-mwp" class="block px-2.5 py-1.5 rounded-lg font-extrabold text-amber-900 dark:text-amber-200 bg-amber-100 dark:bg-amber-900/40 border border-amber-300 dark:border-amber-700">
+              2.6 MWP Act 1874 (Section 6) ⭐⭐⭐
+            </a>
+            <a href="#interactive-quiz" class="block px-2.5 py-1.5 rounded-lg text-amber-700 dark:text-amber-400 font-bold bg-amber-50 dark:bg-amber-950/60 hover:bg-amber-100 transition-colors mt-2">
+              Practice Quiz (12 MCQs)
+            </a>
+          </nav>
+        </div>
+
+        <!-- High-Yield Callout Pill -->
+        <div class="p-4 rounded-2xl bg-amber-500/10 border border-amber-500/20 text-xs space-y-2">
+          <div class="flex items-center gap-1.5 font-bold text-amber-800 dark:text-amber-300">
+            <i data-lucide="star" class="w-4 h-4 fill-amber-500 text-amber-500"></i>
+            <span>Module 7 Kingmaker: MWP Act</span>
+          </div>
+          <p class="text-slate-600 dark:text-slate-300 leading-relaxed">
+            NISM Level 2 consistently examines <strong>Section 6 MWP Act trusts</strong>: How they shield insurance proceeds from court attachments, insolvency receivers, and business creditors. Know the rules on irrevocability and trustee endorsement!
+          </p>
+        </div>
+
+        <!-- Chapter Nav -->
+        <div class="flex items-center justify-between p-3 rounded-xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 text-xs">
+          <a href="module7-ch1.html" class="text-slate-500 hover:text-amber-600 transition-colors flex items-center gap-1">
+            <i data-lucide="chevron-left" class="w-3.5 h-3.5"></i>
+            <span>Ch 1 Notes</span>
+          </a>
+          <a href="module7-ch3.html" class="font-bold text-amber-700 dark:text-amber-400 hover:underline flex items-center gap-1">
+            <span>Ch 3 (Non-Life)</span>
+            <i data-lucide="chevron-right" class="w-3.5 h-3.5"></i>
+          </a>
+        </div>
+
+      </div>
+    </aside>
+
+    <!-- Main Notes Area -->
+    <div class="lg:col-span-9 space-y-10">
+
+      <!-- Section 2.1: Needs Estimation (HLV vs Expense Protection) -->
+      <section id="sec-hlv" class="bg-white dark:bg-slate-900 rounded-3xl p-6 sm:p-8 border border-slate-200 dark:border-slate-800 shadow-xs space-y-6">
+        
+        <div class="flex items-center justify-between pb-3 border-b border-slate-100 dark:border-slate-800">
+          <span class="text-xs font-bold text-amber-600 dark:text-amber-400 uppercase tracking-wider flex items-center gap-1.5">
+            <span class="w-2 h-2 rounded-full bg-amber-500"></span> Section 2.1 &bull; Life Insurance Need Assessment
+          </span>
+          <span class="px-2.5 py-0.5 rounded-full text-[11px] font-extrabold uppercase bg-amber-500 text-slate-950 flex items-center gap-1 shadow-2xs">
+            <i data-lucide="star" class="w-3 h-3 fill-slate-950"></i> High Yield
+          </span>
+        </div>
+
+        <div>
+          <h2 class="font-display text-2xl sm:text-3xl font-bold text-slate-900 dark:text-white">
+            Methods for Estimating Life Insurance Coverage
+          </h2>
+          <p class="text-xs sm:text-sm text-slate-500 dark:text-slate-400 mt-1">
+            How much insurance is enough? In advisory practice and Level 2 case studies, two analytical methodologies predominate: the <strong>Human Life Value (HLV)</strong> method and the <strong>Expense Protection / Needs Analysis</strong> method.
+          </p>
+        </div>
+
+        <!-- Method 1: HLV Formula Card & Worked Numerical -->
+        <div class="p-5 rounded-2xl bg-amber-50/60 dark:bg-amber-950/30 border border-amber-200 dark:border-amber-800 space-y-4">
+          <div class="flex items-center justify-between">
+            <h3 class="font-display font-bold text-lg text-slate-900 dark:text-white flex items-center gap-2">
+              <span class="w-6 h-6 rounded-full bg-amber-600 text-white text-xs flex items-center justify-center font-mono">1</span>
+              The Human Life Value (HLV) Method (Huebner Model) ⭐
+            </h3>
+            <span class="text-[10px] font-bold px-2 py-0.5 rounded bg-amber-600 text-white uppercase">Formula Required</span>
+          </div>
+
+          <p class="text-xs sm:text-sm text-slate-700 dark:text-slate-300 leading-relaxed">
+            Formulated by Prof. Solomon S. Huebner, HLV capitalizes the individual's future economic earning capacity dedicated to dependents. It represents the <strong>Present Value of the person's future net earnings surplus</strong> after deducting personal income taxes and personal maintenance expenses until retirement.
+          </p>
+
+          <!-- Formula Card -->
+          <div class="p-4 rounded-xl bg-white dark:bg-slate-900 border border-amber-300 dark:border-amber-700 space-y-2">
+            <span class="text-[11px] font-bold text-slate-400 uppercase tracking-wider block">Theoretical HLV Formula:</span>
+            <div class="font-mono text-sm sm:text-base font-bold text-amber-800 dark:text-amber-300">
+              HLV = &Sigma;<sub>t=1</sub><sup>n</sup> [ (E<sub>t</sub> - T<sub>t</sub> - C<sub>t</sub>) / (1 + r)<sup>t</sup> ]
+            </div>
+            <p class="text-xs text-slate-500 dark:text-slate-400">
+              Where: <strong>E<sub>t</sub></strong> = Gross Annual Earnings in year t; <strong>T<sub>t</sub></strong> = Income Taxes; <strong>C<sub>t</sub></strong> = Personal Consumption/Living expenses of the earner; <strong>r</strong> = Post-tax discount rate; <strong>n</strong> = Remaining working years until retirement.
+            </p>
+          </div>
+
+          <!-- Step-by-Step Worked Case Example -->
+          <div class="p-4 rounded-xl bg-slate-50 dark:bg-slate-800/80 border border-slate-200 dark:border-slate-700 text-xs sm:text-sm space-y-2.5">
+            <div class="flex items-center gap-1.5 font-bold text-slate-900 dark:text-white">
+              <i data-lucide="calculator" class="w-4 h-4 text-amber-600"></i>
+              <span>Level 2 Exam Calculation Example:</span>
+            </div>
+            <p class="text-slate-600 dark:text-slate-300 leading-relaxed">
+              <strong>Client Profile:</strong> Rajesh, age 35, plans to retire at age 60 (remaining working life = 25 years). Current annual income is ₹18,00,000. Taxes are ₹3,00,000 p.a. His personal consumption is ₹3,00,000 p.a. The appropriate discount rate is 6% p.a. Calculate his HLV.
+            </p>
+            <div class="p-3 rounded-lg bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 font-mono text-xs space-y-1 text-slate-700 dark:text-slate-300">
+              <div>1. Net Annual Surplus to Family = ₹18,00,000 - ₹3,00,000 (Tax) - ₹3,00,000 (Personal) = <strong>₹12,00,000 p.a.</strong></div>
+              <div>2. Period (n) = 60 - 35 = <strong>25 years</strong></div>
+              <div>3. Discount Rate (r) = <strong>6% = 0.06</strong></div>
+              <div>4. Annuity PV Factor = [1 - (1 + 0.06)<sup>-25</sup>] / 0.06 = [1 - 0.233] / 0.06 &asymp; <strong>12.783</strong></div>
+              <div class="pt-1 text-amber-700 dark:text-amber-400 font-bold">5. HLV = ₹12,00,000 &times; 12.783 &asymp; <strong>₹1,53,39,600 (₹1.53 Crores)</strong></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Method 2: Expense Protection / Needs Approach -->
+        <div class="p-5 rounded-2xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 space-y-4">
+          <div class="flex items-center justify-between">
+            <h3 class="font-display font-bold text-lg text-slate-900 dark:text-white flex items-center gap-2">
+              <span class="w-6 h-6 rounded-full bg-slate-800 dark:bg-slate-700 text-white text-xs flex items-center justify-center font-mono">2</span>
+              Expense Protection / Needs Analysis Method ⭐
+            </h3>
+            <span class="text-[10px] font-bold px-2 py-0.5 rounded bg-blue-50 dark:bg-blue-950/80 text-blue-700 uppercase">Balance Sheet Approach</span>
+          </div>
+
+          <p class="text-xs sm:text-sm text-slate-600 dark:text-slate-300 leading-relaxed">
+            Rather than looking at earning capacity, the Needs Approach calculates the <strong>exact capital required by surviving family members</strong> to sustain their standard of living, pay off liabilities, and meet future milestone goals.
+          </p>
+
+          <div class="p-4 rounded-xl bg-slate-50 dark:bg-slate-800 font-mono text-xs sm:text-sm text-slate-800 dark:text-slate-200 border border-slate-200 dark:border-slate-700">
+            <strong>Required Life Insurance Cover = Total Family Financial Needs - Available Realisable Assets</strong><br><br>
+            <span class="text-amber-700 dark:text-amber-400 font-bold">Total Needs = </span><br>
+            &bull; <strong>Immediate Clearance Fund:</strong> Outstanding Home Loan, Car Loan, Personal Debt + Funeral / Final Medical costs<br>
+            &bull; <strong>Income Replacement Fund:</strong> Capitalized PV of family monthly household expenses until spouse life expectancy<br>
+            &bull; <strong>Specific Lump-Sum Goals:</strong> Child Higher Education Fund + Marriage Fund + Emergency Reserve<br>
+            <span class="text-emerald-700 dark:text-emerald-400 font-bold">Less Available Liquid Assets = </span><br>
+            &bull; Fixed Deposits, Mutual Funds, Equity Shares, Existing Life Policies (Excluding primary self-occupied home!)
+          </div>
+        </div>
+
+      </section>
+
+      <!-- Section 2.2: Life Insurance Products Comparison -->
+      <section id="sec-products" class="bg-white dark:bg-slate-900 rounded-3xl p-6 sm:p-8 border border-slate-200 dark:border-slate-800 shadow-xs space-y-6">
+        
+        <div class="flex items-center justify-between pb-3 border-b border-slate-100 dark:border-slate-800">
+          <span class="text-xs font-bold text-amber-600 dark:text-amber-400 uppercase tracking-wider flex items-center gap-1.5">
+            <span class="w-2 h-2 rounded-full bg-amber-500"></span> Section 2.2 &bull; Product Architectures
+          </span>
+          <span class="text-xs px-2.5 py-0.5 rounded-full bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-400 font-semibold">
+            Product Classification
+          </span>
+        </div>
+
+        <div>
+          <h2 class="font-display text-2xl font-bold text-slate-900 dark:text-white">
+            Traditional Life Insurance Products & Comparison
+          </h2>
+          <p class="text-xs sm:text-sm text-slate-500 dark:text-slate-400 mt-1">
+            Understanding the structural mechanics, cost profiles, and cash-value accumulation across traditional plans.
+          </p>
+        </div>
+
+        <!-- 4-Product Grid -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 text-xs sm:text-sm">
+          
+          <!-- Term Plan -->
+          <div class="p-4 rounded-2xl bg-amber-50/50 dark:bg-amber-950/20 border border-amber-200 dark:border-amber-800/60">
+            <div class="flex items-center justify-between mb-1">
+              <span class="font-bold text-amber-900 dark:text-amber-300">Pure Term Assurance</span>
+              <span class="text-[10px] font-bold px-2 py-0.5 rounded bg-amber-600 text-white">Recommended</span>
+            </div>
+            <p class="text-slate-600 dark:text-slate-300 mt-1 leading-relaxed">
+              Provides high financial protection at lowest cost. Pays Sum Assured <em>only upon death</em> during policy term. Zero maturity benefit.
+            </p>
+            <div class="mt-2.5 pt-2 border-t border-amber-200/60 dark:border-amber-800/60 text-[11px] text-amber-900 dark:text-amber-300">
+              <strong>TROP Variant:</strong> Term with Return of Premium charges 2x to 3x higher premium just to refund nominal premiums at maturity. Yields a sub-par ~2% IRR; RIA recommends pure term + investing difference in PPF/MF.
+            </div>
+          </div>
+
+          <!-- Whole Life Plan -->
+          <div class="p-4 rounded-2xl bg-slate-50 dark:bg-slate-800/60 border border-slate-200 dark:border-slate-700/80">
+            <div class="flex items-center justify-between mb-1">
+              <span class="font-bold text-slate-900 dark:text-white">Whole Life Assurance</span>
+              <span class="text-[10px] font-bold px-2 py-0.5 rounded bg-slate-200 dark:bg-slate-700 text-slate-700 dark:text-slate-300">Age 99 / 100</span>
+            </div>
+            <p class="text-slate-600 dark:text-slate-300 mt-1 leading-relaxed">
+              Provides permanent risk cover for the insured's entire lifetime (typically matures at age 99 or 100). Guaranteed death benefit payout whenever death occurs, or endowment payout if client survives to age 100.
+            </p>
+            <div class="mt-2.5 pt-2 border-t border-slate-200 dark:border-slate-700 text-[11px] text-slate-500 dark:text-slate-400">
+              Frequently used for estate liquidity to pay inheritance liabilities or equal distribution of assets among heirs.
+            </div>
+          </div>
+
+          <!-- Endowment Plan -->
+          <div class="p-4 rounded-2xl bg-slate-50 dark:bg-slate-800/60 border border-slate-200 dark:border-slate-700/80">
+            <div class="flex items-center justify-between mb-1">
+              <span class="font-bold text-slate-900 dark:text-white">Endowment Assurance</span>
+              <span class="text-[10px] font-bold px-2 py-0.5 rounded bg-slate-200 dark:bg-slate-700 text-slate-700 dark:text-slate-300">Savings Combo</span>
+            </div>
+            <p class="text-slate-600 dark:text-slate-300 mt-1 leading-relaxed">
+              Pays Sum Assured + Accrued Bonuses on <em>either</em> premature death during term OR upon survival to maturity date.
+            </p>
+            <div class="mt-2.5 pt-2 border-t border-slate-200 dark:border-slate-700 text-[11px] text-slate-500 dark:text-slate-400">
+              Low transparency; effective annualized return (IRR) is historically modest at ~4.5% to 5.5% p.a.
+            </div>
+          </div>
+
+          <!-- Money-Back Plan -->
+          <div class="p-4 rounded-2xl bg-slate-50 dark:bg-slate-800/60 border border-slate-200 dark:border-slate-700/80">
+            <div class="flex items-center justify-between mb-1">
+              <span class="font-bold text-slate-900 dark:text-white">Money-Back Policy</span>
+              <span class="text-[10px] font-bold px-2 py-0.5 rounded bg-slate-200 dark:bg-slate-700 text-slate-700 dark:text-slate-300">Periodic Payouts</span>
+            </div>
+            <p class="text-slate-600 dark:text-slate-300 mt-1 leading-relaxed">
+              Pays periodic survival benefits (e.g. 20% of Sum Assured every 5 years) and remaining balance + bonuses at term end.
+            </p>
+            <div class="mt-2.5 pt-2 border-t border-slate-200 dark:border-slate-700 text-[11px] text-amber-700 dark:text-amber-400 font-semibold">
+              ⭐ Critical Rule: In the event of death during the policy term, FULL Sum Assured is paid without deducting any previous survival payouts!
+            </div>
+          </div>
+
+        </div>
+
+      </section>
+
+      <!-- Section 2.3: ULIPs - Regulatory Caps, Charges & Taxes -->
+      <section id="sec-ulip" class="bg-white dark:bg-slate-900 rounded-3xl p-6 sm:p-8 border border-slate-200 dark:border-slate-800 shadow-xs space-y-6">
+        
+        <div class="flex items-center justify-between pb-3 border-b border-slate-100 dark:border-slate-800">
+          <span class="text-xs font-bold text-amber-600 dark:text-amber-400 uppercase tracking-wider flex items-center gap-1.5">
+            <span class="w-2 h-2 rounded-full bg-amber-500"></span> Section 2.3 &bull; Unit Linked Insurance Plans
+          </span>
+          <span class="px-2.5 py-0.5 rounded-full text-[11px] font-extrabold uppercase bg-amber-500 text-slate-950 flex items-center gap-1 shadow-2xs">
+            <i data-lucide="star" class="w-3 h-3 fill-slate-950"></i> High Yield
+          </span>
+        </div>
+
+        <div>
+          <h2 class="font-display text-2xl font-bold text-slate-900 dark:text-white">
+            ULIPs: Fee Structure, Lock-in & Budget 2021 Taxation ⭐
+          </h2>
+          <p class="text-xs sm:text-sm text-slate-500 dark:text-slate-400 mt-1">
+            ULIPs combine market investment with insurance cover. Units are credited to the investor's fund based on Net Asset Value (NAV).
+          </p>
+        </div>
+
+        <!-- ULIP Fee Deductions Table -->
+        <div class="overflow-x-auto rounded-xl border border-slate-200 dark:border-slate-700">
+          <table class="w-full text-left text-xs">
+            <thead class="bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-200">
+              <tr>
+                <th class="p-3 font-bold">Charge Category</th>
+                <th class="p-3 font-bold">Deduction Method</th>
+                <th class="p-3 font-bold">Regulatory Limit / IRDAI Mandate</th>
+              </tr>
+            </thead>
+            <tbody class="divide-y divide-slate-100 dark:divide-slate-800 text-slate-600 dark:text-slate-300">
+              <tr>
+                <td class="p-3 font-bold text-slate-900 dark:text-white">Premium Allocation Charge (PAC)</td>
+                <td class="p-3">Deducted directly from gross premium before units are allocated.</td>
+                <td class="p-3">Covers initial marketing and distributor commissions. Tends to front-load in year 1.</td>
+              </tr>
+              <tr>
+                <td class="p-3 font-bold text-slate-900 dark:text-white">Mortality Charge</td>
+                <td class="p-3">Monthly cancellation of units based on client age and Sum at Risk (SAR).</td>
+                <td class="p-3">Sum at Risk = Higher of (Sum Assured - Fund Value, 0). As fund value grows, SAR falls!</td>
+              </tr>
+              <tr>
+                <td class="p-3 font-bold text-amber-700 dark:text-amber-400">Fund Management Charge (FMC) ⭐</td>
+                <td class="p-3">Adjusted daily in NAV computation before publishing unit price.</td>
+                <td class="p-3 font-bold text-amber-800 dark:text-amber-300">Strictly capped at a maximum of 1.35% p.a. by IRDAI regulations.</td>
+              </tr>
+              <tr>
+                <td class="p-3 font-bold text-slate-900 dark:text-white">Surrender / Discontinuance Charge</td>
+                <td class="p-3">Deducted if policy is surrendered within the initial 5-year lock-in.</td>
+                <td class="p-3">Graduated caps mandated by IRDAI (max ₹6,000 in Year 1 down to ₹2,000 in Year 4; NIL from Year 5).</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <!-- Lock-In & Tax Warning Card -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 text-xs sm:text-sm">
+          <div class="p-4 rounded-2xl bg-slate-50 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 space-y-1.5">
+            <h4 class="font-bold text-slate-900 dark:text-white flex items-center gap-1.5">
+              <i data-lucide="lock" class="w-4 h-4 text-amber-600"></i> Mandatory 5-Year Lock-In & DPF
+            </h4>
+            <p class="text-slate-600 dark:text-slate-300 leading-relaxed">
+              ULIPs have a statutory lock-in period of <strong>5 complete policy years</strong>. If the policyholder stops paying premiums or surrenders during the first 5 years, the funds are shifted into the <strong>Discontinued Policy Fund (DPF)</strong>, earning a guaranteed minimum interest rate of <strong>4.0% p.a.</strong> Proceeds can only be withdrawn after the completion of Year 5.
+            </p>
+          </div>
+
+          <div class="p-4 rounded-2xl bg-amber-50 dark:bg-amber-950/40 border border-amber-300 dark:border-amber-700 space-y-1.5">
+            <h4 class="font-bold text-amber-900 dark:text-amber-200 flex items-center gap-1.5">
+              <i data-lucide="alert-triangle" class="w-4 h-4 text-amber-600"></i> Budget 2021 Taxation (₹2.5 Lakh Limit) ⭐
+            </h4>
+            <p class="text-slate-700 dark:text-slate-300 leading-relaxed">
+              For ULIPs purchased on or after <strong>1 February 2021</strong>, if the aggregate annual premium payable on all ULIP policies exceeds <strong>₹2,50,000</strong> in any year, the maturity proceeds <strong>lose exemption under Section 10(10D)</strong> and are taxed as capital gains identical to equity mutual funds! (Death benefit, however, remains 100% tax-exempt).
+            </p>
+          </div>
+        </div>
+
+      </section>
+
+      <!-- Section 2.4: Paid-Up & Surrender Value Mathematics -->
+      <section id="sec-servicing" class="bg-white dark:bg-slate-900 rounded-3xl p-6 sm:p-8 border border-slate-200 dark:border-slate-800 shadow-xs space-y-5">
+        
+        <div class="flex items-center justify-between pb-3 border-b border-slate-100 dark:border-slate-800">
+          <span class="text-xs font-bold text-amber-600 dark:text-amber-400 uppercase tracking-wider flex items-center gap-1.5">
+            <span class="w-2 h-2 rounded-full bg-amber-500"></span> Section 2.4 &bull; Policy Servicing & Formulas
+          </span>
+          <span class="text-xs px-2.5 py-0.5 rounded-full bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-400 font-semibold">
+            Numerical Mechanics
+          </span>
+        </div>
+
+        <h2 class="font-display text-2xl font-bold text-slate-900 dark:text-white">
+          Paid-Up Value vs. Surrender Value Calculations
+        </h2>
+
+        <p class="text-sm text-slate-600 dark:text-slate-300 leading-relaxed">
+          When a policyholder cannot continue paying premiums on an endowment or whole life policy after paying for a minimum period (usually 2 to 3 years), the policy does not lapse completely. It either converts into a <strong>Paid-Up Policy</strong> or can be <strong>Surrendered</strong> for cash:
+        </p>
+
+        <!-- Paid-Up Formula Card -->
+        <div class="p-5 rounded-2xl bg-slate-50 dark:bg-slate-800/80 border border-slate-200 dark:border-slate-700 space-y-3">
+          <div class="flex items-center justify-between">
+            <h4 class="font-display font-bold text-base text-slate-900 dark:text-white">
+              Formula: Paid-Up Sum Assured ⭐
+            </h4>
+            <span class="text-[10px] font-bold px-2 py-0.5 rounded bg-blue-100 dark:bg-blue-900/60 text-blue-800 dark:text-blue-300">Pro-Rata Formula</span>
+          </div>
+
+          <div class="p-3.5 bg-white dark:bg-slate-900 rounded-xl border border-slate-200 dark:border-slate-700 font-mono text-xs sm:text-sm text-slate-900 dark:text-white">
+            Paid-Up Sum Assured = [ (Number of Premiums Paid) / (Total Number of Premiums Payable) ] &times; Original Sum Assured
+          </div>
+
+          <p class="text-xs text-slate-600 dark:text-slate-300 leading-relaxed">
+            <strong>Treatment of Bonuses:</strong> Bonuses accrued prior to the date the policy became paid-up remain attached and will be paid at maturity or death. However, once paid-up, the policy ceases to participate in future bonus declarations!
+          </p>
+
+          <div class="p-3 bg-amber-50 dark:bg-amber-950/40 rounded-xl border border-amber-200 dark:border-amber-800 text-xs text-slate-700 dark:text-slate-300">
+            <strong>Worked Example:</strong> A 20-year endowment policy of ₹10,00,000 has annual premiums. The policyholder pays premiums regularly for 8 years and then stops. Accrued bonuses till year 8 equal ₹1,60,000.<br>
+            &bull; Paid-Up Sum Assured = (8 / 20) &times; ₹10,00,000 = <strong>₹4,00,000</strong>.<br>
+            &bull; Total Maturity / Death Payable = ₹4,00,000 + ₹1,60,000 (accrued bonus) = <strong>₹5,60,000</strong>.
+          </div>
+        </div>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 text-xs">
+          <div class="p-3.5 bg-slate-50 dark:bg-slate-800 rounded-xl border border-slate-200 dark:border-slate-700">
+            <strong class="text-slate-900 dark:text-white block mb-1">Guaranteed Surrender Value (GSV):</strong>
+            Calculated as a statutory percentage of total premiums paid (excluding 1st year premium, rider premiums, and taxes). The GSV factor scales upwards with policy duration.
+          </div>
+          <div class="p-3.5 bg-slate-50 dark:bg-slate-800 rounded-xl border border-slate-200 dark:border-slate-700">
+            <strong class="text-slate-900 dark:text-white block mb-1">Special Surrender Value (SSV):</strong>
+            Usually higher than GSV. Calculated actuarially: <span class="font-mono text-amber-700 dark:text-amber-400 font-semibold">SSV = (Paid-up Value + Accrued Bonuses) &times; SSV Discount Factor</span>. Under IRDAI Master Circular 2024, surrender payouts must be fair and equitable even in early durations.
+          </div>
+        </div>
+
+      </section>
+
+      <!-- Section 2.5: Riders -->
+      <section id="sec-riders" class="bg-white dark:bg-slate-900 rounded-3xl p-6 sm:p-8 border border-slate-200 dark:border-slate-800 shadow-xs space-y-4">
+        <div class="flex items-center justify-between pb-3 border-b border-slate-100 dark:border-slate-800">
+          <span class="text-xs font-bold text-amber-600 dark:text-amber-400 uppercase tracking-wider flex items-center gap-1.5">
+            <span class="w-2 h-2 rounded-full bg-amber-500"></span> Section 2.5 &bull; Policy Enhancement
+          </span>
+          <span class="text-xs px-2.5 py-0.5 rounded-full bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-400 font-semibold">
+            Add-On Riders
+          </span>
+        </div>
+
+        <h2 class="font-display text-2xl font-bold text-slate-900 dark:text-white">
+          Life Insurance Riders & Regulatory Limits
+        </h2>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 text-xs sm:text-sm">
+          <div class="p-3.5 rounded-xl bg-slate-50 dark:bg-slate-800 border border-slate-200 dark:border-slate-700">
+            <strong class="text-slate-900 dark:text-white block mb-0.5">Accidental Death Benefit (ADB)</strong>
+            Pays an additional lump sum (usually equal to 100% of base Sum Assured) if death occurs due to an accident within 90 or 180 days of the injury.
+          </div>
+          <div class="p-3.5 rounded-xl bg-slate-50 dark:bg-slate-800 border border-slate-200 dark:border-slate-700">
+            <strong class="text-slate-900 dark:text-white block mb-0.5">Waiver of Premium (WOP) Rider ⭐</strong>
+            In the event of disability or death of the proposer (e.g. father on child policy), all future premiums are waived while the policy continues with full maturity benefits.
+          </div>
+          <div class="p-3.5 rounded-xl bg-slate-50 dark:bg-slate-800 border border-slate-200 dark:border-slate-700">
+            <strong class="text-slate-900 dark:text-white block mb-0.5">Accidental Total & Permanent Disability (ATPD)</strong>
+            Pays monthly income or lump sum if accident results in total permanent loss of limbs or sight, preventing any occupational employment.
+          </div>
+          <div class="p-3.5 rounded-xl bg-slate-50 dark:bg-slate-800 border border-slate-200 dark:border-slate-700">
+            <strong class="text-slate-900 dark:text-white block mb-0.5">Critical Illness (CI) Rider</strong>
+            Provides lump sum payment upon first diagnosis of specified major illnesses (stroke, cancer, kidney failure), subject to surviving a 28-30 day survival window.
+          </div>
+        </div>
+
+        <div class="p-3 bg-amber-50 dark:bg-amber-950/40 rounded-xl border border-amber-200 dark:border-amber-800 text-xs">
+          <strong>IRDAI Rider Premium Cap:</strong> Total premium for all non-health life riders cannot exceed <strong>30% of the base policy premium</strong>. Health-related riders cannot exceed 100% of base policy premium.
+        </div>
+      </section>
+
+      <!-- Section 2.6: Married Women's Property Act 1874 (Section 6) -->
+      <section id="sec-mwp" class="bg-white dark:bg-slate-900 rounded-3xl p-6 sm:p-8 border-2 border-amber-500 dark:border-amber-600 shadow-md space-y-6">
+        
+        <div class="flex items-center justify-between pb-3 border-b border-amber-200 dark:border-amber-800">
+          <div class="flex items-center gap-2">
+            <div class="w-8 h-8 rounded-lg bg-amber-500 text-slate-950 flex items-center justify-center font-bold">
+              <i data-lucide="shield-check" class="w-5 h-5"></i>
+            </div>
+            <span class="text-xs font-bold text-amber-800 dark:text-amber-300 uppercase tracking-wider">
+              Section 2.6 &bull; Statutory Asset Protection
+            </span>
+          </div>
+          <span class="px-3 py-1 rounded-full text-xs font-extrabold uppercase bg-amber-500 text-slate-950 flex items-center gap-1 shadow-2xs">
+            <i data-lucide="star" class="w-3.5 h-3.5 fill-slate-950"></i> Heavily Tested Topic
+          </span>
+        </div>
+
+        <div>
+          <h2 class="font-display text-2xl sm:text-3xl font-bold text-slate-900 dark:text-white">
+            Married Women's Property Act 1874 (Section 6) ⭐⭐⭐
+          </h2>
+          <p class="text-xs sm:text-sm text-slate-600 dark:text-slate-300 mt-1">
+            Section 6 of the MWP Act provides the most impenetrable asset-protection structure available under Indian law for business owners, corporate executives, doctors, and high-net-worth individuals.
+          </p>
+        </div>
+
+        <!-- The Core Legal Doctrine -->
+        <div class="p-5 rounded-2xl bg-amber-50/80 dark:bg-amber-950/40 border border-amber-300 dark:border-amber-700 space-y-3">
+          <h4 class="font-display font-bold text-base text-amber-900 dark:text-amber-200 flex items-center gap-2">
+            <i data-lucide="lock" class="w-4 h-4 text-amber-600"></i>
+            Creation of an Irrevocable Statutory Trust
+          </h4>
+          <p class="text-xs sm:text-sm text-slate-800 dark:text-slate-200 leading-relaxed">
+            When a married man effects an insurance policy on his own life and declares on the proposal that the policy is taken under <strong>Section 6 of the Married Women's Property Act 1874</strong> for the benefit of his <strong>wife, or wife and children, or children alone</strong>, the policy immediately creates an automatic statutory trust.
+          </p>
+          <div class="p-3.5 bg-white dark:bg-slate-900 rounded-xl border border-amber-300 dark:border-amber-700 text-xs space-y-2">
+            <p class="font-bold text-slate-900 dark:text-white">
+              The Legal Shield from Creditors & Court Attachments:
+            </p>
+            <p class="text-slate-700 dark:text-slate-300 leading-relaxed">
+              Section 6 explicitly provides: <em>"The money so insured shall not, so long as any object of the trust remains, be subject to the control of the husband, or to his creditors, or form part of his estate."</em>
+            </p>
+          </div>
+        </div>
+
+        <!-- High-Yield Features Table / Matrix -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 text-xs sm:text-sm">
+          
+          <div class="p-4 rounded-xl bg-slate-50 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 space-y-1.5">
+            <strong class="text-slate-900 dark:text-white block flex items-center gap-1.5">
+              <i data-lucide="check" class="w-4 h-4 text-emerald-600"></i> Irrevocability & No Policy Loan
+            </strong>
+            <p class="text-slate-600 dark:text-slate-300">
+              The husband/policyholder <strong>cannot alter or delete beneficiaries</strong> once registered. He <strong>cannot take a loan, surrender, or assign</strong> the policy without the express written consent of the beneficiaries/trustee.
+            </p>
+          </div>
+
+          <div class="p-4 rounded-xl bg-slate-50 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 space-y-1.5">
+            <strong class="text-slate-900 dark:text-white block flex items-center gap-1.5">
+              <i data-lucide="check" class="w-4 h-4 text-emerald-600"></i> Beyond Reach of Creditors & Taxmen
+            </strong>
+            <p class="text-slate-600 dark:text-slate-300">
+              Insolvency liquidators, Official Assignees under the Insolvency & Bankruptcy Code, civil court attachment warrants, and Income Tax attachment orders <strong>CANNOT attach MWP Act policy proceeds</strong>!
+            </p>
+          </div>
+
+          <div class="p-4 rounded-xl bg-slate-50 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 space-y-1.5">
+            <strong class="text-slate-900 dark:text-white block flex items-center gap-1.5">
+              <i data-lucide="check" class="w-4 h-4 text-emerald-600"></i> Does NOT Pass Under Will
+            </strong>
+            <p class="text-slate-600 dark:text-slate-300">
+              The policy proceeds do not form part of the husband's estate. Even if he writes a Will bequeathing the insurance proceeds to someone else, the <strong>MWP Act trust overrides the Will completely</strong>!
+            </p>
+          </div>
+
+          <div class="p-4 rounded-xl bg-slate-50 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 space-y-1.5">
+            <strong class="text-slate-900 dark:text-white block flex items-center gap-1.5">
+              <i data-lucide="check" class="w-4 h-4 text-emerald-600"></i> Proposal Stage Mandate
+            </strong>
+            <p class="text-slate-600 dark:text-slate-300">
+              The MWP Act endorsement <strong>must be executed at the time of proposal inception</strong>. An existing regular life insurance policy <em>cannot be converted</em> into an MWP policy at a later date.
+            </p>
+          </div>
+
+        </div>
+
+      </section>
+
+      <!-- Chapter Completion & Interactive 12-Question Quiz -->
+      <section id="interactive-quiz" class="rounded-3xl p-6 sm:p-8 bg-slate-900 text-white shadow-xl space-y-8 border border-slate-800">
+        
+        <!-- Header -->
+        <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 pb-6 border-b border-white/10">
+          <div>
+            <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-semibold bg-amber-500/20 text-amber-300 border border-amber-400/30 mb-2">
+              <i data-lucide="award" class="w-3.5 h-3.5"></i>
+              <span>High Yield Benchmark Quiz &bull; 60% Passing Score</span>
+            </div>
+            <h3 class="font-display text-xl sm:text-2xl font-bold text-white">
+              Chapter 2 Interactive Mastery Quiz
+            </h3>
+            <p class="text-xs text-slate-400 mt-1">
+              12 High-Yield Questions testing HLV calculations, Paid-Up formulas, ULIP regulations, and MWP Act Section 6 trusts.
+            </p>
+          </div>
+          <div class="flex items-center gap-2 self-start sm:self-auto">
+            <span class="text-xs font-medium text-slate-400">Answered:</span>
+            <span id="answered-count" class="font-mono text-sm font-bold text-amber-400 bg-white/10 px-2 py-0.5 rounded">0</span>
+            <span class="text-xs text-slate-400 font-mono">/ 12</span>
+          </div>
+        </div>
+
+        <!-- Quiz Container -->
+        <div id="questions-container" class="space-y-6"></div>
+
+        <!-- Action Buttons -->
+        <div class="flex flex-col sm:flex-row items-center justify-between gap-4 pt-6 border-t border-white/10">
+          <button id="submit-quiz-btn" onclick="submitQuiz()" class="w-full sm:w-auto px-6 py-3 rounded-xl font-bold text-xs sm:text-sm text-slate-950 bg-amber-500 hover:bg-amber-400 transition-colors shadow-sm flex items-center justify-center gap-2">
+            <i data-lucide="check-circle" class="w-4 h-4"></i>
+            <span>Submit Quiz & Validate Answers</span>
+          </button>
+          <button id="reset-quiz-btn" onclick="resetQuiz()" class="hidden w-full sm:w-auto px-6 py-3 rounded-xl font-bold text-xs sm:text-sm text-white bg-slate-800 hover:bg-slate-700 transition-colors border border-white/10 flex items-center justify-center gap-2">
+            <i data-lucide="rotate-ccw" class="w-4 h-4"></i>
+            <span>Retake Quiz</span>
+          </button>
+        </div>
+
+        <!-- Quiz Results Scorecard Modal/Box -->
+        <div id="quiz-results" class="hidden rounded-2xl bg-white/5 border border-white/10 p-6 space-y-4">
+          <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-3">
+            <div>
+              <span id="result-status-badge" class="px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider bg-emerald-500 text-emerald-950">
+                Status: Passed
+              </span>
+              <h4 class="font-display text-2xl font-bold text-white mt-2">Your Chapter Performance</h4>
+            </div>
+            <div class="text-left sm:text-right">
+              <span id="score-display" class="font-mono text-3xl font-extrabold text-amber-400">0 / 12</span>
+              <span id="percentage-display" class="block text-xs text-slate-400 mt-0.5">0% (Passing criteria: 60%)</span>
+            </div>
+          </div>
+          <p id="result-summary-text" class="text-xs sm:text-sm text-slate-300 leading-relaxed border-t border-white/10 pt-3">
+            Review detailed question explanations above to cement your understanding of HLV, Paid-Up formulas, and Section 6 MWP Act statutory trusts.
+          </p>
+        </div>
+
+      </section>
+
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="bg-white dark:bg-slate-900 border-t border-slate-200 dark:border-slate-800 py-8 mt-12">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-slate-500 dark:text-slate-400">
+      <div class="flex items-center gap-2">
+        <span class="font-display font-bold text-slate-900 dark:text-white">NISM Series X-B</span>
+        <span>&bull; Module 7 &bull; Chapter 2: Life Insurance & MWP Act</span>
+      </div>
+      <div class="flex items-center gap-4 font-medium">
+        <a href="module7.html" class="hover:text-amber-600 transition-colors">Module 7 Hub</a>
+        <a href="module7-ch3.html" class="hover:text-amber-600 font-bold transition-colors">Next: Chapter 3 (Non-Life Products) &rarr;</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Quiz Script -->
+  <script>
+    const questionsData = [
+      {
+        id: 1,
+        question: "Under the Human Life Value (HLV) approach developed by Prof. Solomon Huebner, what is discounted to arrive at the required life insurance cover?",
+        options: [
+          { text: "Total lifetime gross earnings without adjusting for taxes or personal consumption", key: "a" },
+          { text: "Future net earnings after deducting taxes and personal expenses of the earner", key: "b" },
+          { text: "Total future household expenditure and children's marriage expenses", key: "c" },
+          { text: "The current market value of all real estate and financial investments", key: "d" }
+        ],
+        correct: "b",
+        explanation: "The HLV approach discounts the future net financial surplus that the earner would have contributed to their dependents (Gross earnings minus taxes and personal maintenance expenses) over their remaining working lifespan."
+      },
+      {
+        id: 2,
+        question: "In the Needs Analysis / Expense Protection method, how are the existing liquid financial assets of the client treated?",
+        options: [
+          { text: "They are added to the gross life insurance cover required", key: "a" },
+          { text: "They are deducted from the total capital needs to determine the net life cover required", key: "b" },
+          { text: "They are ignored completely as insurance only looks at liabilities", key: "c" },
+          { text: "They are transferred directly into a statutory trust", key: "d" }
+        ],
+        correct: "b",
+        explanation: "Needs Analysis subtracts existing realizable financial assets (mutual funds, deposits, equity) and existing life covers from total gross capital requirements (debt payoff + capitalized living expenses + education goals) to determine net insurance needed."
+      },
+      {
+        id: 3,
+        question: "An insured holds a 20-year Money-Back policy with a Sum Assured of ₹10 Lakhs. They receive survival benefits of ₹2 Lakhs in Year 5 and ₹2 Lakhs in Year 10. If the insured dies in Year 12, what amount is payable as death benefit?",
+        options: [
+          { text: "₹6 Lakhs (Sum Assured minus the ₹4 Lakhs already paid)", key: "a" },
+          { text: "₹10 Lakhs plus accrued bonuses (Full Sum Assured without any deduction)", key: "b" },
+          { text: "₹4 Lakhs plus surrender value", key: "c" },
+          { text: "Zero, because survival benefits exceed mortality threshold", key: "d" }
+        ],
+        correct: "b",
+        explanation: "In a Money-Back policy, death benefit is ALWAYS the full Sum Assured (+ accrued bonuses) without deducting any survival benefit installments already disbursed to the insured."
+      },
+      {
+        id: 4,
+        question: "What is the maximum Fund Management Charge (FMC) that an insurer is permitted to charge on a ULIP equity or debt fund under IRDAI regulations?",
+        options: [
+          { text: "0.50% p.a.", key: "a" },
+          { text: "1.35% p.a.", key: "b" },
+          { text: "2.25% p.a.", key: "c" },
+          { text: "3.00% p.a.", key: "d" }
+        ],
+        correct: "b",
+        explanation: "Under IRDAI regulations, the Fund Management Charge (FMC) in Unit Linked Insurance Plans (ULIPs) is strictly capped at a maximum of 1.35% per annum."
+      },
+      {
+        id: 5,
+        question: "What is the mandatory statutory lock-in period for Unit-Linked Insurance Plans (ULIPs) before which surrender proceeds cannot be paid out to the policyholder?",
+        options: [
+          { text: "1 Year", key: "a" },
+          { text: "3 Years", key: "b" },
+          { text: "5 Years", key: "c" },
+          { text: "7 Years", key: "d" }
+        ],
+        correct: "c",
+        explanation: "ULIPs carry a mandatory 5-year lock-in period. If surrendered or discontinued within 5 years, the funds are parked in the Discontinued Policy Fund (DPF) earning at least 4% p.a. and can only be withdrawn after 5 years."
+      },
+      {
+        id: 6,
+        question: "Under the tax amendment introduced in Finance Act 2021, under what condition do maturity proceeds of a ULIP policy lose exemption under Section 10(10D)?",
+        options: [
+          { text: "If the annual premium exceeds ₹1,50,000 in any financial year", key: "a" },
+          { text: "If the aggregate annual premium on all ULIP policies exceeds ₹2,50,000 (issued on or after 1 Feb 2021)", key: "b" },
+          { text: "If the policy term is less than 15 years", key: "c" },
+          { text: "If equity fund allocation exceeds 65%", key: "d" }
+        ],
+        correct: "b",
+        explanation: "For ULIP policies issued on or after February 1, 2021, if the aggregate annual premium payable on one or more ULIP policies exceeds ₹2,50,000, maturity proceeds are NOT exempt under Section 10(10D) and are taxed as capital gains."
+      },
+      {
+        id: 7,
+        question: "A policyholder took an Endowment policy for Sum Assured ₹15 Lakhs for a 15-year term. They paid 5 annual premiums and then stopped paying. What is the Paid-Up Sum Assured?",
+        options: [
+          { text: "₹3,00,000", key: "a" },
+          { text: "₹5,00,000", key: "b" },
+          { text: "₹7,50,000", key: "c" },
+          { text: "₹10,00,000", key: "d" }
+        ],
+        correct: "b",
+        explanation: "Paid-up Sum Assured = (Number of premiums paid / Total premiums payable) * Original Sum Assured = (5 / 15) * ₹15,00,000 = (1/3) * ₹15,00,000 = ₹5,00,000."
+      },
+      {
+        id: 8,
+        question: "What happens to bonuses accrued on a participating life insurance policy prior to the date it becomes paid-up?",
+        options: [
+          { text: "They are forfeited and retained by the insurer", key: "a" },
+          { text: "They remain attached and are paid along with the paid-up sum assured at death or maturity", key: "b" },
+          { text: "They are immediately paid out in cash within 30 days", key: "c" },
+          { text: "They are converted into additional life risk cover", key: "d" }
+        ],
+        correct: "b",
+        explanation: "Bonuses already accrued prior to the date of paid-up status remain securely attached and are payable along with the reduced paid-up sum assured at maturity or upon death. However, no future bonuses accrue."
+      },
+      {
+        id: 9,
+        question: "Why is a Waiver of Premium (WOP) rider highly recommended when a parent purchases a policy for funding their child's future higher education?",
+        options: [
+          { text: "It doubles the maturity payout if the child scores top grades", key: "a" },
+          { text: "If the parent dies, future premiums are waived by the insurer while the policy continues with full maturity benefits for the child", key: "b" },
+          { text: "It makes the policy exempt from all GST charges", key: "c" },
+          { text: "It converts the traditional policy into an equity mutual fund", key: "d" }
+        ],
+        correct: "b",
+        explanation: "With a Waiver of Premium (WOP) rider, if the parent (proposer) dies or suffers permanent disability, all future premiums are waived and paid by the insurer, ensuring the planned education corpus matures intact."
+      },
+      {
+        id: 10,
+        question: "When a married man takes a life insurance policy under Section 6 of the Married Women's Property Act 1874, what legal entity is automatically created?",
+        options: [
+          { text: "A private limited corporate company", key: "a" },
+          { text: "An irrevocable statutory trust for the benefit of his wife and/or children", key: "b" },
+          { text: "A Hindu Undivided Family (HUF)", key: "c" },
+          { text: "A joint bank holding account", key: "d" }
+        ],
+        correct: "b",
+        explanation: "Section 6 of the MWP Act provides that a policy effected by a married man on his own life for the benefit of his wife or children creates an immediate, irrevocable statutory trust in their favor."
+      },
+      {
+        id: 11,
+        question: "Which of the following is TRUE regarding a creditor's or court's ability to attach proceeds of an insurance policy taken under Section 6 of the MWP Act?",
+        options: [
+          { text: "Creditors can attach the policy anytime the business goes into liquidation", key: "a" },
+          { text: "The policy proceeds do not form part of the deceased's estate and CANNOT be attached by creditors, court decrees, or tax authorities", key: "b" },
+          { text: "Creditors can claim 50% of the proceeds by filing an appeal in the High Court", key: "c" },
+          { text: "Creditors can attach proceeds if the husband wrote a subsequent Will", key: "d" }
+        ],
+        correct: "b",
+        explanation: "Under Section 6 MWP Act, the policy proceeds do not form part of the husband's estate. They are completely immune from commercial creditors, insolvency receivers, court attachment decrees, and tax attachment orders."
+      },
+      {
+        id: 12,
+        question: "When can an endorsement under Section 6 of the Married Women's Property (MWP) Act be executed on a life insurance policy?",
+        options: [
+          { text: "At any time during the policy tenure by submitting an amendment form", key: "a" },
+          { text: "Only at the proposal/inception stage of the policy", key: "b" },
+          { text: "Only after the death of the policyholder", key: "c" },
+          { text: "Only when the policy is transferred to a public trust", key: "d" }
+        ],
+        correct: "b",
+        explanation: "An MWP Act Section 6 declaration can ONLY be made at the time of proposing the policy. An existing regular policy cannot be converted into an MWP Act policy at a subsequent date."
+      }
+    ];
+
+    let userAnswers = {};
+
+    function renderQuiz() {
+      const container = document.getElementById("questions-container");
+      container.innerHTML = "";
+
+      questionsData.forEach((q, index) => {
+        const qDiv = document.createElement("div");
+        qDiv.className = "p-5 rounded-2xl bg-white/5 border border-white/10 space-y-4 transition-all";
+        qDiv.id = `q-box-${q.id}`;
+
+        let optionsHtml = "";
+        q.options.forEach(opt => {
+          optionsHtml += `
+            <label class="flex items-center gap-3 p-3 rounded-xl bg-white/5 hover:bg-white/10 border border-white/5 cursor-pointer text-xs sm:text-sm transition-all" onclick="selectOption(${q.id}, '${opt.key}')" id="label-${q.id}-${opt.key}">
+              <input type="radio" name="question-${q.id}" value="${opt.key}" class="w-4 h-4 text-amber-500 focus:ring-0 focus:ring-offset-0 bg-transparent border-slate-500">
+              <span class="font-bold text-amber-400 w-5 uppercase font-mono">${opt.key}.</span>
+              <span class="text-slate-200">${opt.text}</span>
+            </label>
+          `;
+        });
+
+        qDiv.innerHTML = `
+          <div class="flex items-start justify-between gap-2">
+            <span class="text-xs font-bold text-amber-400 uppercase tracking-wider">Question ${index + 1} of ${questionsData.length}</span>
+            <span id="badge-${q.id}" class="text-xs px-2 py-0.5 rounded-full bg-white/5 text-slate-400 font-medium">Unanswered</span>
+          </div>
+          <h4 class="font-display font-semibold text-sm sm:text-base text-white">${q.question}</h4>
+          <div class="space-y-2 mt-3">
+            ${optionsHtml}
+          </div>
+          <div id="explanation-${q.id}" class="hidden p-4 rounded-xl text-xs sm:text-sm mt-3 space-y-1"></div>
+        `;
+        container.appendChild(qDiv);
+      });
+      lucide.createIcons();
+    }
+
+    function selectOption(qId, key) {
+      userAnswers[qId] = key;
+      const count = Object.keys(userAnswers).length;
+      document.getElementById("answered-count").innerText = count;
+      
+      const badge = document.getElementById(`badge-${qId}`);
+      if (badge) {
+        badge.innerText = "Answered";
+        badge.className = "text-xs px-2 py-0.5 rounded-full bg-amber-500/20 text-amber-300 font-medium";
+      }
+
+      const q = questionsData.find(item => item.id === qId);
+      q.options.forEach(opt => {
+        const lbl = document.getElementById(`label-${qId}-${opt.key}`);
+        if (opt.key === key) {
+          lbl.className = "flex items-center gap-3 p-3 rounded-xl bg-amber-500/30 border border-amber-400/50 cursor-pointer text-xs sm:text-sm transition-all";
+        } else {
+          lbl.className = "flex items-center gap-3 p-3 rounded-xl bg-white/5 hover:bg-white/10 border border-white/5 cursor-pointer text-xs sm:text-sm transition-all";
+        }
+      });
+    }
+
+    function submitQuiz() {
+      let score = 0;
+      questionsData.forEach(q => {
+        const selected = userAnswers[q.id];
+        const isCorrect = selected === q.correct;
+        if (isCorrect) score++;
+
+        const explanationDiv = document.getElementById(`explanation-${q.id}`);
+        explanationDiv.classList.remove("hidden");
+
+        if (isCorrect) {
+          explanationDiv.className = "p-4 rounded-xl text-xs sm:text-sm mt-3 bg-emerald-950/60 border border-emerald-600 text-emerald-200 space-y-1";
+          explanationDiv.innerHTML = `<div class="font-bold text-emerald-400 flex items-center gap-1.5"><i data-lucide="check" class="w-4 h-4"></i> Correct!</div><p>${q.explanation}</p>`;
+        } else {
+          explanationDiv.className = "p-4 rounded-xl text-xs sm:text-sm mt-3 bg-rose-950/60 border border-rose-600 text-rose-200 space-y-1";
+          explanationDiv.innerHTML = `<div class="font-bold text-rose-400 flex items-center gap-1.5"><i data-lucide="x" class="w-4 h-4"></i> Incorrect (Correct Answer: ${q.correct.toUpperCase()})</div><p>${q.explanation}</p>`;
+        }
+      });
+
+      const percentage = Math.round((score / questionsData.length) * 100);
+      const passed = percentage >= 60;
+      
+      const resultsDiv = document.getElementById("quiz-results");
+      resultsDiv.classList.remove("hidden");
+
+      const statusBadge = document.getElementById("result-status-badge");
+      statusBadge.innerText = passed ? "Status: Passed (60%+ Benchmark)" : "Status: Needs Revision";
+      statusBadge.className = passed ? "px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider bg-emerald-500 text-emerald-950" : "px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider bg-amber-500 text-amber-950";
+
+      document.getElementById("score-display").innerText = `${score} / ${questionsData.length}`;
+      document.getElementById("percentage-display").innerText = `${percentage}% Score (Passing criteria: 60%)`;
+
+      document.getElementById("result-summary-text").innerText = passed
+        ? `Great job! You scored ${percentage}%, clearing the NISM Level 2 benchmark. Re-read the explanations to cement your memory of Section 6 MWP Act and Paid-up formulas.`
+        : `You scored ${percentage}%. Revisit the notes on HLV calculations, Paid-Up formulas, and Section 6 MWP Act before re-attempting.`;
+
+      document.getElementById("submit-quiz-btn").classList.add("hidden");
+      document.getElementById("reset-quiz-btn").classList.remove("hidden");
+
+      resultsDiv.scrollIntoView({ behavior: 'smooth' });
+      lucide.createIcons();
+    }
+
+    function resetQuiz() {
+      userAnswers = {};
+      document.getElementById("answered-count").innerText = "0";
+      document.getElementById("quiz-results").classList.add("hidden");
+      document.getElementById("submit-quiz-btn").classList.remove("hidden");
+      document.getElementById("reset-quiz-btn").classList.add("hidden");
+      renderQuiz();
+      document.getElementById("interactive-quiz").scrollIntoView({ behavior: 'smooth' });
+    }
+
+    // Initialize Quiz
+    renderQuiz();
+    lucide.createIcons();
+  </script>
+</body>
+</html>

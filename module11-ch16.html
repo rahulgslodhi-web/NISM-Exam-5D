@@ -1,0 +1,1308 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Chapter 16: Basics of Behavioral Finance | NISM Series X-B Certification Notes</title>
+  
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  
+  <!-- Google Fonts: DM Sans & Jost (Eduleb Benchmark) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Jost:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+  <script src="https://unpkg.com/lucide@latest"></script>
+
+  <!-- KaTeX for formula rendering -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.min.css">
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.min.js"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/contrib/auto-render.min.js" onload="renderMathInElement(document.body);"></script>
+
+  <!-- Modern Documentation Design System & Navigation -->
+  <link rel="stylesheet" href="modern-docs.css">
+  <script defer src="nav-sidebar.js"></script>
+
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['"DM Sans"', 'sans-serif'],
+            display: ['"Jost"', 'sans-serif'],
+            heading: ['"Jost"', 'sans-serif']
+          },
+          colors: {
+            brand: {
+              50: '#eef2ff',
+              100: '#e0e7ff',
+              500: '#525fe1',
+              600: '#434ec9',
+              700: '#353db3',
+              800: '#282f9c',
+              900: '#0b104a'
+            }
+          }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    body {
+      font-family: 'DM Sans', sans-serif;
+      font-size: 16px;
+      line-height: 26px;
+      color: #4a5355;
+    }
+    h1, h2, h3, h4, h5, h6, .font-display, .font-heading {
+      font-family: 'Jost', sans-serif;
+      font-weight: 700;
+    }
+    .star-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.25rem;
+      background: linear-gradient(135deg, #fef3c7 0%, #fde68a 100%);
+      color: #92400e;
+      border: 1px solid #f59e0b;
+      padding: 0.15rem 0.5rem;
+      border-radius: 9999px;
+      font-size: 0.75rem;
+      font-weight: 700;
+    }
+    html.dark .star-badge {
+      background: linear-gradient(135deg, #451a03 0%, #78350f 100%);
+      color: #fde68a;
+      border-color: #d97706;
+    }
+  </style>
+</head>
+<body class="bg-slate-50 dark:bg-slate-950 text-slate-900 dark:text-slate-100 min-h-screen flex flex-col selection:bg-indigo-500 selection:text-white antialiased transition-colors duration-200">
+
+  <!-- Smooth Opening Preloader -->
+  <div class="preloaders" id="eduleb-preloader">
+    <span class="loader"></span>
+    <div class="preloader-label">Chapter 16: Basics of Behavioral Finance</div>
+  </div>
+
+  <!-- Standardized Header (Single-Tier, 64px) -->
+  <header class="sticky top-0 z-40 bg-white/95 dark:bg-slate-900/95 backdrop-blur-md border-b border-slate-200/80 dark:border-slate-800 shadow-xs">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 h-16 flex items-center justify-between">
+      <!-- Left: Logo, Module & Chapter Label -->
+      <div class="flex items-center gap-3">
+        <a href="module11.html" class="flex items-center gap-2 text-slate-500 hover:text-slate-900 dark:hover:text-white transition-colors" title="Back to Module 11 Hub">
+          <div class="w-9 h-9 rounded-xl bg-slate-100 dark:bg-slate-800 hover:bg-slate-200 dark:hover:bg-slate-700 flex items-center justify-center text-slate-700 dark:text-slate-200 transition-colors">
+            <i data-lucide="arrow-left" class="w-4 h-4"></i>
+          </div>
+        </a>
+        <div>
+          <div class="flex items-center gap-2">
+            <span class="text-xs font-bold uppercase tracking-wider text-indigo-600 dark:text-indigo-400 bg-indigo-50 dark:bg-indigo-950/80 px-2 py-0.5 rounded">Module 11</span>
+            <span class="text-xs text-slate-400 dark:text-slate-500 font-medium">Chapter 16 of 17</span>
+          </div>
+          <h1 class="font-display font-bold text-base sm:text-lg text-slate-900 dark:text-white leading-tight">Basics of Behavioral Finance</h1>
+        </div>
+      </div>
+
+      <!-- Right: Weightage Badge, Theme Toggle & Quiz Jump -->
+      <div class="flex items-center gap-2.5">
+        <span class="hidden sm:inline-flex items-center gap-1 px-3 py-1 rounded-full text-xs font-bold bg-amber-50 dark:bg-amber-950/70 text-amber-700 dark:text-amber-300 border border-amber-200 dark:border-amber-800">
+          <i data-lucide="star" class="w-3.5 h-3.5 fill-amber-500 text-amber-500"></i>
+          Weightage: 5-6 Marks
+        </span>
+        <button id="nism-header-theme-btn" onclick="window.toggleDarkMode()" class="p-2 rounded-full border border-slate-200 dark:border-slate-700 text-slate-600 dark:text-slate-300 bg-white dark:bg-slate-800" title="Toggle Theme (⌘D)">
+          <i data-lucide="moon" class="w-4 h-4"></i>
+        </button>
+        <a href="#interactive-quiz" class="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-full text-xs font-bold bg-indigo-600 hover:bg-indigo-700 text-white shadow-xs transition-all font-display">
+          <i data-lucide="help-circle" class="w-3.5 h-3.5"></i>
+          <span>Chapter Quiz</span>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Grid Layout -->
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 grid grid-cols-1 lg:grid-cols-12 gap-8 flex-grow">
+    
+    <!-- Table of Contents Sidebar (Desktop) -->
+    <aside class="hidden lg:block lg:col-span-3">
+      <div class="sticky top-24 space-y-4">
+        
+        <!-- Module 11 Quick Navigation Card -->
+        <div class="p-4 rounded-2xl bg-white dark:bg-slate-900 border border-slate-200/90 dark:border-slate-800 shadow-xs space-y-3">
+          <div class="flex items-center justify-between text-xs font-bold text-slate-700 dark:text-slate-300 uppercase tracking-wider">
+            <span class="flex items-center gap-1.5">
+              <i data-lucide="layers" class="w-4 h-4 text-indigo-600 dark:text-indigo-400"></i>
+              Module 11 Chapters
+            </span>
+            <span class="text-indigo-600 dark:text-indigo-400">10 Marks</span>
+          </div>
+          <div class="space-y-1.5 text-xs">
+            <a href="module11.html" class="flex items-center justify-between px-2.5 py-2 rounded-xl text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors">
+              <span>Module 11 Hub</span>
+              <i data-lucide="home" class="w-3.5 h-3.5"></i>
+            </a>
+            <a href="module11-ch16.html" class="flex items-center justify-between px-2.5 py-2 rounded-xl bg-indigo-50 dark:bg-indigo-950/80 font-bold text-indigo-700 dark:text-indigo-300 border border-indigo-200 dark:border-indigo-800 transition-colors">
+              <span>16. Basics of Behavioral Finance</span>
+              <span class="w-2 h-2 rounded-full bg-indigo-600"></span>
+            </a>
+            <a href="module11-ch17.html" class="flex items-center justify-between px-2.5 py-2 rounded-xl text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors">
+              <span>17. Behavioral Finance in Practice</span>
+              <i data-lucide="chevron-right" class="w-3.5 h-3.5"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- In-Page Section Jump (Collapsible) -->
+        <details open class="group rounded-2xl bg-white dark:bg-slate-900 border border-slate-200/90 dark:border-slate-800 shadow-xs overflow-hidden text-xs">
+          <summary class="flex items-center justify-between p-3.5 cursor-pointer select-none bg-slate-50/70 dark:bg-slate-800/50 hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors font-bold text-slate-700 dark:text-slate-200">
+            <span class="flex items-center gap-2">
+              <i data-lucide="bookmark" class="w-3.5 h-3.5 text-indigo-600 dark:text-indigo-400"></i>
+              <span>On This Page (Sections)</span>
+            </span>
+            <i data-lucide="chevron-down" class="w-3.5 h-3.5 text-slate-400 transition-transform duration-200 group-open:rotate-180"></i>
+          </summary>
+          <nav class="p-3 pt-1 space-y-1 text-xs max-h-72 overflow-y-auto border-t border-slate-100 dark:border-slate-800">
+            <a href="#section-16-1" class="block px-2.5 py-1.5 rounded-lg text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800 hover:text-indigo-600 transition-colors">16.1 Standard vs Behavioral Finance</a>
+            <a href="#section-16-2" class="block px-2.5 py-1.5 rounded-lg text-amber-700 dark:text-amber-400 font-semibold bg-amber-50/60 dark:bg-amber-950/40 hover:bg-amber-100 transition-colors">16.2 Prospect Theory & Value Function ⭐</a>
+            <a href="#section-16-3" class="block px-2.5 py-1.5 rounded-lg text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800 hover:text-indigo-600 transition-colors">16.3 Cognitive vs Emotional Biases ⭐</a>
+            <a href="#section-16-4" class="block px-2.5 py-1.5 rounded-lg text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800 hover:text-indigo-600 transition-colors">16.4 Key Cognitive Errors (Anchoring, Mental Accounting)</a>
+            <a href="#section-16-5" class="block px-2.5 py-1.5 rounded-lg text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800 hover:text-indigo-600 transition-colors">16.5 Key Emotional Biases (Disposition, Herding)</a>
+            <a href="#section-16-6" class="block px-2.5 py-1.5 rounded-lg text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800 hover:text-indigo-600 transition-colors">16.6 Market Anomalies</a>
+            <a href="#section-16-7" class="block px-2.5 py-1.5 rounded-lg text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800 hover:text-indigo-600 transition-colors">16.7 Minsky's 5 Stages of Bubbles ⭐</a>
+            <a href="#interactive-quiz" class="block px-2.5 py-1.5 rounded-lg text-indigo-700 dark:text-indigo-300 font-bold bg-indigo-50 dark:bg-indigo-950/80 hover:bg-indigo-100 transition-colors mt-2">Practice Quiz (12 MCQs)</a>
+          </nav>
+        </details>
+
+        <!-- High-Yield Exam Tip Card -->
+        <div class="p-4 rounded-2xl bg-gradient-to-br from-indigo-600 to-violet-700 text-white shadow-sm text-xs space-y-2">
+          <div class="flex items-center gap-1.5 font-bold">
+            <i data-lucide="zap" class="w-4 h-4 text-amber-300"></i>
+            <span>NISM High-Yield Rule</span>
+          </div>
+          <p class="text-indigo-100 leading-relaxed">
+            Memorize this rule for the exam: <strong>Cognitive errors</strong> result from faulty reasoning and can be <em>moderated/corrected</em> with information. <strong>Emotional biases</strong> stem from visceral feelings/impulses and advisers must usually <em>adapt</em> to them!
+          </p>
+        </div>
+
+      </div>
+    </aside>
+
+    <!-- Main Content Area -->
+    <main class="lg:col-span-9 space-y-10">
+
+      <!-- Chapter Hero / Introduction Banner -->
+      <div class="p-6 sm:p-8 rounded-3xl bg-white dark:bg-slate-900 border border-slate-200/90 dark:border-slate-800 shadow-sm relative overflow-hidden">
+        <div class="relative z-10 space-y-3">
+          <div class="flex flex-wrap items-center gap-2">
+            <span class="star-badge">
+              <i data-lucide="star" class="w-3 h-3 fill-amber-500"></i>
+              Core Exam Focus: 5-6 Marks
+            </span>
+            <span class="px-2.5 py-0.5 rounded-full text-xs font-semibold bg-indigo-50 dark:bg-indigo-950 text-indigo-700 dark:text-indigo-300 border border-indigo-200/60 dark:border-indigo-800">
+              NISM Series X-B Syllabus
+            </span>
+          </div>
+          <h2 class="font-display text-2xl sm:text-3xl font-extrabold text-slate-900 dark:text-white">
+            Basics of Behavioral Finance
+          </h2>
+          <p class="text-slate-600 dark:text-slate-300 text-sm sm:text-base leading-relaxed">
+            For decades, standard financial models treated investors as calculating automations with infinite processing power, perfect self-control, and unemotional risk aversion. Real market history reveals a completely different reality: investors panic, chase speculative manias, anchor on arbitrary numbers, and suffer intensely from losses. This chapter deconstructs the foundational theories, psychological value functions, cognitive heuristics, and market anomalies that every investment adviser must master.
+          </p>
+        </div>
+      </div>
+
+      <!-- Section 16.1 -->
+      <section id="section-16-1" class="space-y-5">
+        <div class="flex items-center gap-2.5 border-b border-slate-200 dark:border-slate-800 pb-3">
+          <div class="w-8 h-8 rounded-xl bg-indigo-100 dark:bg-indigo-950 flex items-center justify-center text-indigo-600 dark:text-indigo-400 font-bold text-sm">
+            16.1
+          </div>
+          <h3 class="font-display text-xl sm:text-2xl font-bold text-slate-900 dark:text-white">
+            Standard Finance vs. Behavioral Finance & Bounded Rationality
+          </h3>
+        </div>
+
+        <div class="prose dark:prose-invert max-w-none text-xs sm:text-sm text-slate-600 dark:text-slate-300 space-y-4 leading-relaxed">
+          <p>
+            The fundamental distinction between <strong>Standard (Traditional) Finance</strong> and <strong>Behavioral Finance</strong> lies between <em>normative</em> models (how investors <em>should</em> behave in an idealized friction-free world) and <em>descriptive</em> models (how human investors <em>actually</em> behave in the real world).
+          </p>
+
+          <!-- Core Comparison Grid -->
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-4 my-4">
+            <div class="p-5 rounded-2xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 shadow-xs space-y-3">
+              <div class="flex items-center gap-2 text-indigo-600 dark:text-indigo-400 font-bold text-sm">
+                <i data-lucide="scale" class="w-4 h-4"></i>
+                <span>Standard Finance (Traditional Paradigm)</span>
+              </div>
+              <ul class="space-y-2 text-xs text-slate-600 dark:text-slate-300">
+                <li class="flex items-start gap-2">
+                  <i data-lucide="circle-dot" class="w-3.5 h-3.5 text-indigo-500 shrink-0 mt-0.5"></i>
+                  <span><strong>Rational Economic Agent ("Homo Economicus"):</strong> Investors are perfectly rational, objective, self-interested wealth maximizers.</span>
+                </li>
+                <li class="flex items-start gap-2">
+                  <i data-lucide="circle-dot" class="w-3.5 h-3.5 text-indigo-500 shrink-0 mt-0.5"></i>
+                  <span><strong>Efficient Market Hypothesis (EMH):</strong> Security prices instantaneously incorporate all available information; asset prices equal intrinsic values.</span>
+                </li>
+                <li class="flex items-start gap-2">
+                  <i data-lucide="circle-dot" class="w-3.5 h-3.5 text-indigo-500 shrink-0 mt-0.5"></i>
+                  <span><strong>Expected Utility Theory (EUT):</strong> Investors evaluate outcomes based on total terminal wealth with continuous concave utility (risk aversion).</span>
+                </li>
+                <li class="flex items-start gap-2">
+                  <i data-lucide="circle-dot" class="w-3.5 h-3.5 text-indigo-500 shrink-0 mt-0.5"></i>
+                  <span><strong>Modern Portfolio Theory (MPT):</strong> Portfolios are constructed strictly along the Mean-Variance Efficient Frontier (Harry Markowitz) and CAPM.</span>
+                </li>
+              </ul>
+            </div>
+
+            <div class="p-5 rounded-2xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 shadow-xs space-y-3">
+              <div class="flex items-center gap-2 text-indigo-600 dark:text-indigo-400 font-bold text-sm">
+                <i data-lucide="brain" class="w-4 h-4"></i>
+                <span>Behavioral Finance (Modern Empirical Paradigm)</span>
+              </div>
+              <ul class="space-y-2 text-xs text-slate-600 dark:text-slate-300">
+                <li class="flex items-start gap-2">
+                  <i data-lucide="check" class="w-3.5 h-3.5 text-emerald-500 shrink-0 mt-0.5"></i>
+                  <span><strong>"Normal" Humans:</strong> Real investors are boundedly rational, subject to emotions, cognitive biases, mental shortcuts, and social influences.</span>
+                </li>
+                <li class="flex items-start gap-2">
+                  <i data-lucide="check" class="w-3.5 h-3.5 text-emerald-500 shrink-0 mt-0.5"></i>
+                  <span><strong>Inefficient Markets & Limits to Arbitrage:</strong> Prices frequently deviate from fundamentals due to noise traders, panic selling, and asset bubbles.</span>
+                </li>
+                <li class="flex items-start gap-2">
+                  <i data-lucide="check" class="w-3.5 h-3.5 text-emerald-500 shrink-0 mt-0.5"></i>
+                  <span><strong>Prospect Theory (Kahneman & Tversky):</strong> Decisions are evaluated in terms of gains and losses relative to a reference point; losses hurt ~2.25x more.</span>
+                </li>
+                <li class="flex items-start gap-2">
+                  <i data-lucide="check" class="w-3.5 h-3.5 text-emerald-500 shrink-0 mt-0.5"></i>
+                  <span><strong>Behavioral Portfolio Theory (BPT):</strong> Portfolios are built as multi-layered pyramids or "mental accounts" addressing specific life goals.</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Bounded Rationality Concept Box -->
+          <div class="p-4 rounded-2xl bg-indigo-50/80 dark:bg-indigo-950/60 border border-indigo-200 dark:border-indigo-800/80">
+            <h4 class="font-bold text-indigo-900 dark:text-indigo-200 text-xs sm:text-sm flex items-center gap-1.5 mb-1.5">
+              <i data-lucide="cpu" class="w-4 h-4 text-indigo-600 dark:text-indigo-400"></i>
+              <span>Herbert Simon's Bounded Rationality & Satisficing ⭐</span>
+            </h4>
+            <p class="text-xs text-indigo-950 dark:text-indigo-200/90 leading-relaxed">
+              Nobel Laureate Herbert Simon established that human decision-makers do not have infinite processing power or access to all global information. Constrained by cognitive limits, imperfect data, and finite time, humans employ <strong>heuristics (mental rules of thumb)</strong> and settle for <strong>"satisficing"</strong> (selecting a decision that meets a minimum acceptability threshold) rather than mathematically <strong>"optimizing"</strong>. These heuristics allow rapid decision-making but systematically generate predictable behavioral biases.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Section 16.2 -->
+      <section id="section-16-2" class="space-y-5">
+        <div class="flex items-center gap-2.5 border-b border-slate-200 dark:border-slate-800 pb-3">
+          <div class="w-8 h-8 rounded-xl bg-amber-100 dark:bg-amber-950 flex items-center justify-center text-amber-700 dark:text-amber-400 font-bold text-sm">
+            16.2
+          </div>
+          <div>
+            <div class="flex items-center gap-2">
+              <h3 class="font-display text-xl sm:text-2xl font-bold text-slate-900 dark:text-white">
+                Prospect Theory & The S-Shaped Value Function
+              </h3>
+              <span class="star-badge">⭐ Heavily Tested</span>
+            </div>
+            <p class="text-xs text-slate-500 dark:text-slate-400">Daniel Kahneman & Amos Tversky (1979 / 1992)</p>
+          </div>
+        </div>
+
+        <div class="prose dark:prose-invert max-w-none text-xs sm:text-sm text-slate-600 dark:text-slate-300 space-y-4 leading-relaxed">
+          <p>
+            Prospect Theory won Daniel Kahneman the 2002 Nobel Memorial Prize in Economic Sciences. It overturned classical Expected Utility Theory by empirically proving that human beings evaluate risk in terms of <strong>changes in wealth (gains and losses) relative to a reference point</strong>, rather than total final wealth.
+          </p>
+
+          <!-- Core Pillars of Prospect Theory -->
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-4 my-4">
+            
+            <div class="p-4 rounded-2xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 shadow-xs space-y-2">
+              <div class="w-7 h-7 rounded-lg bg-emerald-100 dark:bg-emerald-950 flex items-center justify-center text-emerald-600 dark:text-emerald-400 font-bold text-xs">
+                1
+              </div>
+              <h4 class="font-bold text-slate-900 dark:text-white text-sm">Reference Dependence</h4>
+              <p class="text-xs text-slate-500 dark:text-slate-400 leading-relaxed">
+                Outcomes are coded as positive gains or negative losses relative to a psychological benchmark (usually the original purchase price or a recent peak), not total net worth.
+              </p>
+            </div>
+
+            <div class="p-4 rounded-2xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 shadow-xs space-y-2">
+              <div class="w-7 h-7 rounded-lg bg-rose-100 dark:bg-rose-950 flex items-center justify-center text-rose-600 dark:text-rose-400 font-bold text-xs">
+                2
+              </div>
+              <h4 class="font-bold text-slate-900 dark:text-white text-sm">Loss Aversion ($\lambda \approx 2.25$)</h4>
+              <p class="text-xs text-slate-500 dark:text-slate-400 leading-relaxed">
+                <strong>Losses loom larger than gains.</strong> The psychological pain of losing ₹1,00,000 is roughly 2.0 to 2.5 times more intense than the joy of making ₹1,00,000.
+              </p>
+            </div>
+
+            <div class="p-4 rounded-2xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 shadow-xs space-y-2">
+              <div class="w-7 h-7 rounded-lg bg-indigo-100 dark:bg-indigo-950 flex items-center justify-center text-indigo-600 dark:text-indigo-400 font-bold text-xs">
+                3
+              </div>
+              <h4 class="font-bold text-slate-900 dark:text-white text-sm">Diminishing Sensitivity</h4>
+              <p class="text-xs text-slate-500 dark:text-slate-400 leading-relaxed">
+                The marginal psychological impact of both gains and losses declines as distance from the reference point increases (e.g., ₹0 to ₹1,000 feels far bigger than ₹1,00,000 to ₹1,01,000).
+              </p>
+            </div>
+
+          </div>
+
+          <!-- S-Shaped Value Function Graphical Card -->
+          <div class="p-6 rounded-2xl bg-slate-900 text-white border border-slate-800 shadow-md space-y-4">
+            <div class="flex items-center justify-between border-b border-slate-800 pb-3">
+              <div class="flex items-center gap-2">
+                <i data-lucide="activity" class="w-4 h-4 text-amber-400"></i>
+                <h4 class="font-display font-bold text-base text-white">The S-Shaped Value Function (Kahneman & Tversky)</h4>
+              </div>
+              <span class="text-[11px] px-2.5 py-0.5 rounded-full bg-amber-500/20 text-amber-300 font-mono">Asymmetric Value Curve</span>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6 text-xs text-slate-300">
+              <div class="space-y-2.5 p-4 rounded-xl bg-white/5 border border-white/10">
+                <div class="flex items-center gap-2 font-bold text-emerald-400">
+                  <i data-lucide="trending-up" class="w-4 h-4"></i>
+                  <span>Domain of Gains: Concave & Risk-Averse</span>
+                </div>
+                <p class="leading-relaxed text-slate-300">
+                  In positive territory, the curve is <strong>concave</strong>. Investors display <strong>risk aversion</strong>: they prefer a guaranteed gain of ₹5,000 over a 50% chance at ₹10,000. Investors rush to "lock in profits" prematurely because additional gains bring diminishing psychological satisfaction.
+                </p>
+              </div>
+
+              <div class="space-y-2.5 p-4 rounded-xl bg-white/5 border border-white/10">
+                <div class="flex items-center gap-2 font-bold text-rose-400">
+                  <i data-lucide="trending-down" class="w-4 h-4"></i>
+                  <span>Domain of Losses: Convex & Risk-Seeking</span>
+                </div>
+                <p class="leading-relaxed text-slate-300">
+                  In negative territory, the curve is <strong>convex and far steeper</strong>. Investors display <strong>risk-seeking behavior</strong>: when facing a certain loss of ₹5,000, they will gamble on a 50% chance of losing ₹10,000 (and 50% of losing nothing). This drives investors to hold onto losing stocks, doubling down in hopes of "breaking even"!
+                </p>
+              </div>
+            </div>
+
+            <!-- Mathematical Formulation -->
+            <div class="p-3 rounded-xl bg-black/40 border border-white/10 text-center font-mono text-xs text-amber-300">
+              $$V(x) = \begin{cases} x^\alpha & \text{for } x \ge 0 \quad (\alpha \approx 0.88) \\ -\lambda (-x)^\beta & \text{for } x < 0 \quad (\beta \approx 0.88, \;\lambda \approx 2.25) \end{cases}$$
+              <span class="text-[11px] text-slate-400 block mt-1">Loss Aversion Coefficient $\lambda \approx 2.25$: Slopes roughly 2.25x steeper for losses than gains.</span>
+            </div>
+          </div>
+
+          <!-- Non-linear Probability Weighting & Framing -->
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <div class="p-4 rounded-2xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 shadow-xs space-y-2">
+              <h4 class="font-bold text-slate-900 dark:text-white text-xs sm:text-sm flex items-center gap-1.5">
+                <i data-lucide="pie-chart" class="w-4 h-4 text-indigo-600"></i>
+                <span>Probability Weighting Function $\pi(p)$</span>
+              </h4>
+              <p class="text-xs text-slate-500 dark:text-slate-400 leading-relaxed">
+                People do not weigh decisions by objective probabilities. They <strong>overweight small probabilities</strong> (buying lottery tickets, paying massive premiums for catastrophe insurance) and <strong>underweight moderate-to-high probabilities</strong> (treating a 95% probability as far less than certainty).
+              </p>
+            </div>
+
+            <div class="p-4 rounded-2xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 shadow-xs space-y-2">
+              <h4 class="font-bold text-slate-900 dark:text-white text-xs sm:text-sm flex items-center gap-1.5">
+                <i data-lucide="frame" class="w-4 h-4 text-indigo-600"></i>
+                <span>The Framing Effect</span>
+              </h4>
+              <p class="text-xs text-slate-500 dark:text-slate-400 leading-relaxed">
+                Human choices shift dramatically based on whether identical information is framed positively (in terms of gains/survival) or negatively (in terms of losses/mortality). An investment presented as having a "90% chance of capital preservation" is accepted readily, while one with a "10% chance of capital loss" is rejected.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Section 16.3 -->
+      <section id="section-16-3" class="space-y-5">
+        <div class="flex items-center gap-2.5 border-b border-slate-200 dark:border-slate-800 pb-3">
+          <div class="w-8 h-8 rounded-xl bg-indigo-100 dark:bg-indigo-950 flex items-center justify-center text-indigo-600 dark:text-indigo-400 font-bold text-sm">
+            16.3
+          </div>
+          <div>
+            <div class="flex items-center gap-2">
+              <h3 class="font-display text-xl sm:text-2xl font-bold text-slate-900 dark:text-white">
+                Cognitive Errors vs. Emotional Biases
+              </h3>
+              <span class="star-badge">⭐ Core NISM Distinction</span>
+            </div>
+            <p class="text-xs text-slate-500 dark:text-slate-400">The essential behavioral classification tested in NISM Level 2</p>
+          </div>
+        </div>
+
+        <div class="prose dark:prose-invert max-w-none text-xs sm:text-sm text-slate-600 dark:text-slate-300 space-y-4 leading-relaxed">
+          <p>
+            In NISM Series X-B, one of the most heavily tested conceptual frameworks is the classification of behavioral biases into <strong>Cognitive Errors</strong> versus <strong>Emotional Biases</strong>. An adviser's corrective strategy depends entirely on this distinction!
+          </p>
+
+          <!-- Master Comparison Table -->
+          <div class="overflow-x-auto rounded-2xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 shadow-sm">
+            <table class="w-full text-left border-collapse text-xs sm:text-sm">
+              <thead>
+                <tr class="bg-slate-50 dark:bg-slate-800/80 border-b border-slate-200 dark:border-slate-700 text-slate-700 dark:text-slate-200">
+                  <th class="p-3.5 font-bold">Feature</th>
+                  <th class="p-3.5 font-bold text-indigo-600 dark:text-indigo-400">Cognitive Errors (Information Processing)</th>
+                  <th class="p-3.5 font-bold text-rose-600 dark:text-rose-400">Emotional Biases (Visceral Impulses)</th>
+                </tr>
+              </thead>
+              <tbody class="divide-y divide-slate-100 dark:divide-slate-800 text-slate-600 dark:text-slate-300">
+                <tr>
+                  <td class="p-3.5 font-bold text-slate-800 dark:text-slate-200">Root Cause</td>
+                  <td class="p-3.5">Faulty reasoning, mental shortcuts (heuristics), statistical miscalculations, or memory limitations.</td>
+                  <td class="p-3.5 text-rose-600 dark:text-rose-400 font-medium">Subconscious feelings, emotional impulses, ego preservation, fear, greed, or regret.</td>
+                </tr>
+                <tr>
+                  <td class="p-3.5 font-bold text-slate-800 dark:text-slate-200">Adviser Strategy ⭐</td>
+                  <td class="p-3.5 font-medium text-emerald-700 dark:text-emerald-400"><strong>Moderate / Correct:</strong> Can be corrected through education, objective financial data, and structured analysis.</td>
+                  <td class="p-3.5 font-medium text-amber-700 dark:text-amber-400"><strong>Adapt:</strong> Very difficult to eliminate; adviser must design portfolios that accommodate or adapt to them.</td>
+                </tr>
+                <tr>
+                  <td class="p-3.5 font-bold text-slate-800 dark:text-slate-200">Key Biases in Exam</td>
+                  <td class="p-3.5">
+                    <ul class="list-disc pl-4 space-y-1">
+                      <li>Anchoring & Adjustment</li>
+                      <li>Mental Accounting</li>
+                      <li>Availability Heuristic</li>
+                      <li>Recency Bias</li>
+                      <li>Representativeness Bias</li>
+                      <li>Confirmation Bias</li>
+                      <li>Hindsight Bias</li>
+                      <li>Framing Effect</li>
+                    </ul>
+                  </td>
+                  <td class="p-3.5">
+                    <ul class="list-disc pl-4 space-y-1">
+                      <li>Loss Aversion / Disposition Effect</li>
+                      <li>Overconfidence Bias</li>
+                      <li>Status Quo Bias / Inertia</li>
+                      <li>Endowment Effect</li>
+                      <li>Regret Aversion (FOMO)</li>
+                      <li>Herd Mentality</li>
+                    </ul>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </section>
+
+      <!-- Section 16.4 -->
+      <section id="section-16-4" class="space-y-5">
+        <div class="flex items-center gap-2.5 border-b border-slate-200 dark:border-slate-800 pb-3">
+          <div class="w-8 h-8 rounded-xl bg-indigo-100 dark:bg-indigo-950 flex items-center justify-center text-indigo-600 dark:text-indigo-400 font-bold text-sm">
+            16.4
+          </div>
+          <h3 class="font-display text-xl sm:text-2xl font-bold text-slate-900 dark:text-white">
+            In-Depth Analysis: Cognitive Biases
+          </h3>
+        </div>
+
+        <div class="space-y-4">
+          
+          <!-- Cognitive Bias 1: Anchoring -->
+          <div class="p-5 rounded-2xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 shadow-xs space-y-3">
+            <div class="flex items-center justify-between">
+              <div class="flex items-center gap-2">
+                <span class="w-6 h-6 rounded-lg bg-indigo-100 dark:bg-indigo-950 flex items-center justify-center text-xs font-bold text-indigo-600">1</span>
+                <h4 class="font-display font-bold text-base text-slate-900 dark:text-white">Anchoring and Adjustment</h4>
+              </div>
+              <span class="text-[11px] px-2 py-0.5 rounded-full bg-indigo-50 dark:bg-indigo-950 text-indigo-700 dark:text-indigo-300 font-semibold">Cognitive Heuristic</span>
+            </div>
+            <p class="text-xs sm:text-sm text-slate-600 dark:text-slate-300 leading-relaxed">
+              Investors fixate on an initial piece of information (the "anchor")—often the purchase price, a 52-week high, or an arbitrary analyst target—and fail to adjust adequately when new fundamental information arrives.
+            </p>
+            <div class="p-3 rounded-xl bg-slate-50 dark:bg-slate-800/60 border border-slate-200/80 dark:border-slate-700 text-xs space-y-1">
+              <strong class="text-slate-800 dark:text-slate-200">Real-World Investor Dilemma:</strong>
+              <p class="text-slate-600 dark:text-slate-400">An investor buys shares of a cyclical company at ₹1,200. The stock collapses to ₹600 following permanent industry headwinds. The investor refuses to sell, declaring: <em>"I will sell the moment it gets back to my cost of ₹1,200."</em> The purchase price has zero economic relevance to future returns.</p>
+              <div class="pt-1 text-emerald-600 dark:text-emerald-400 font-semibold">
+                <strong>RIA Solution:</strong> Reframe the problem: <em>"If you had ₹600 in cash today, would you buy this stock? If not, why keep your money trapped in it?"</em>
+              </div>
+            </div>
+          </div>
+
+          <!-- Cognitive Bias 2: Mental Accounting -->
+          <div class="p-5 rounded-2xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 shadow-xs space-y-3">
+            <div class="flex items-center justify-between">
+              <div class="flex items-center gap-2">
+                <span class="w-6 h-6 rounded-lg bg-indigo-100 dark:bg-indigo-950 flex items-center justify-center text-xs font-bold text-indigo-600">2</span>
+                <h4 class="font-display font-bold text-base text-slate-900 dark:text-white">Mental Accounting (Richard Thaler) ⭐</h4>
+              </div>
+              <span class="text-[11px] px-2 py-0.5 rounded-full bg-indigo-50 dark:bg-indigo-950 text-indigo-700 dark:text-indigo-300 font-semibold">Violation of Fungibility</span>
+            </div>
+            <p class="text-xs sm:text-sm text-slate-600 dark:text-slate-300 leading-relaxed">
+              Formulated by Nobel Laureate Richard Thaler. People assign subjective values to money based on its <strong>source</strong> (e.g., hard-earned salary vs unexpected bonus or tax refund) or its <strong>intended use</strong> (e.g., child's education vs holiday fund), directly violating the economic law of <strong>fungibility</strong> (every rupee has identical purchasing power).
+            </p>
+            <div class="p-3 rounded-xl bg-slate-50 dark:bg-slate-800/60 border border-slate-200/80 dark:border-slate-700 text-xs space-y-1">
+              <strong class="text-slate-800 dark:text-slate-200">Real-World Investor Dilemma:</strong>
+              <p class="text-slate-600 dark:text-slate-400">A client keeps ₹10,00,000 in a savings account yielding 3% interest to preserve "safe emergency money" while concurrently paying 14% interest on a ₹5,00,000 personal loan. Alternatively, treating dividend payouts as "free money" to splurge while refusing to touch capital gains.</p>
+              <div class="pt-1 text-emerald-600 dark:text-emerald-400 font-semibold">
+                <strong>RIA Solution:</strong> While mental accounting is mathematically inefficient, an adviser can harness it positively through <strong>Goal-Based Investing Buckets</strong>.
+              </div>
+            </div>
+          </div>
+
+          <!-- Cognitive Bias 3: Availability & Recency -->
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+            
+            <div class="p-5 rounded-2xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 shadow-xs space-y-2">
+              <div class="flex items-center gap-2">
+                <span class="w-6 h-6 rounded-lg bg-indigo-100 dark:bg-indigo-950 flex items-center justify-center text-xs font-bold text-indigo-600">3</span>
+                <h4 class="font-display font-bold text-sm sm:text-base text-slate-900 dark:text-white">Availability Heuristic</h4>
+              </div>
+              <p class="text-xs text-slate-600 dark:text-slate-400 leading-relaxed">
+                Estimating the probability of an outcome based on how easily and vividly past examples are recalled from memory. Highly sensationalized media events (market crashes, fraud scandals) dominate memory, causing investors to overestimate crash risks.
+              </p>
+            </div>
+
+            <div class="p-5 rounded-2xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 shadow-xs space-y-2">
+              <div class="flex items-center gap-2">
+                <span class="w-6 h-6 rounded-lg bg-indigo-100 dark:bg-indigo-950 flex items-center justify-center text-xs font-bold text-indigo-600">4</span>
+                <h4 class="font-display font-bold text-sm sm:text-base text-slate-900 dark:text-white">Recency Bias</h4>
+              </div>
+              <p class="text-xs text-slate-600 dark:text-slate-400 leading-relaxed">
+                Overweighting the most recent events and extrapolating current market conditions into the indefinite future. Chasing top-performing mutual funds over the last 6 months at market peaks, or stopping SIPs after a 3-month correction.
+              </p>
+            </div>
+
+          </div>
+
+          <!-- Cognitive Bias 4: Representativeness & Confirmation -->
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+            
+            <div class="p-5 rounded-2xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 shadow-xs space-y-2">
+              <div class="flex items-center gap-2">
+                <span class="w-6 h-6 rounded-lg bg-indigo-100 dark:bg-indigo-950 flex items-center justify-center text-xs font-bold text-indigo-600">5</span>
+                <h4 class="font-display font-bold text-sm sm:text-base text-slate-900 dark:text-white">Representativeness Bias</h4>
+              </div>
+              <p class="text-xs text-slate-600 dark:text-slate-400 leading-relaxed">
+                Judging likelihood by matching new information to existing mental prototypes or stereotypes. Manifests as <strong>Base-Rate Neglect</strong> (ignoring historical statistical probabilities) and the <strong>"Good Company = Good Stock" Fallacy</strong> (confusing corporate quality with attractive valuation).
+              </p>
+            </div>
+
+            <div class="p-5 rounded-2xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 shadow-xs space-y-2">
+              <div class="flex items-center gap-2">
+                <span class="w-6 h-6 rounded-lg bg-indigo-100 dark:bg-indigo-950 flex items-center justify-center text-xs font-bold text-indigo-600">6</span>
+                <h4 class="font-display font-bold text-sm sm:text-base text-slate-900 dark:text-white">Confirmation Bias</h4>
+              </div>
+              <p class="text-xs text-slate-600 dark:text-slate-400 leading-relaxed">
+                Actively searching for, interpreting, and remembering information that confirms one's pre-existing investment thesis while filtering out, ignoring, or rationalizing away contradictory warnings and red flags.
+              </p>
+            </div>
+
+          </div>
+
+          <!-- Cognitive Bias 5: Hindsight & Conservatism -->
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+            
+            <div class="p-5 rounded-2xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 shadow-xs space-y-2">
+              <div class="flex items-center gap-2">
+                <span class="w-6 h-6 rounded-lg bg-indigo-100 dark:bg-indigo-950 flex items-center justify-center text-xs font-bold text-indigo-600">7</span>
+                <h4 class="font-display font-bold text-sm sm:text-base text-slate-900 dark:text-white">Hindsight Bias</h4>
+              </div>
+              <p class="text-xs text-slate-600 dark:text-slate-400 leading-relaxed">
+                The "I knew it all along" delusion. Viewing past market crashes or rallies as having been obvious and foreseeable in hindsight, leading to unwarranted overconfidence in forecasting future market cycles.
+              </p>
+            </div>
+
+            <div class="p-5 rounded-2xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 shadow-xs space-y-2">
+              <div class="flex items-center gap-2">
+                <span class="w-6 h-6 rounded-lg bg-indigo-100 dark:bg-indigo-950 flex items-center justify-center text-xs font-bold text-indigo-600">8</span>
+                <h4 class="font-display font-bold text-sm sm:text-base text-slate-900 dark:text-white">Conservatism Bias</h4>
+              </div>
+              <p class="text-xs text-slate-600 dark:text-slate-400 leading-relaxed">
+                Under-reacting to new statistical evidence and clinging stubbornly to prior forecasts. Explains why stock prices often drift slowly over weeks after unexpected quarterly earnings beats (Post-Earnings Announcement Drift).
+              </p>
+            </div>
+
+          </div>
+
+        </div>
+      </section>
+
+      <!-- Section 16.5 -->
+      <section id="section-16-5" class="space-y-5">
+        <div class="flex items-center gap-2.5 border-b border-slate-200 dark:border-slate-800 pb-3">
+          <div class="w-8 h-8 rounded-xl bg-rose-100 dark:bg-rose-950 flex items-center justify-center text-rose-600 dark:text-rose-400 font-bold text-sm">
+            16.5
+          </div>
+          <div>
+            <div class="flex items-center gap-2">
+              <h3 class="font-display text-xl sm:text-2xl font-bold text-slate-900 dark:text-white">
+                In-Depth Analysis: Emotional Biases
+              </h3>
+              <span class="star-badge">⭐ High Exam Yield</span>
+            </div>
+            <p class="text-xs text-slate-500 dark:text-slate-400">Visceral and psychological barriers to sound decision-making</p>
+          </div>
+        </div>
+
+        <div class="space-y-4">
+          
+          <!-- Emotional Bias 1: Loss Aversion & Disposition Effect -->
+          <div class="p-5 rounded-2xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 shadow-xs space-y-3">
+            <div class="flex items-center justify-between">
+              <div class="flex items-center gap-2">
+                <span class="w-6 h-6 rounded-lg bg-rose-100 dark:bg-rose-950 flex items-center justify-center text-xs font-bold text-rose-600">1</span>
+                <h4 class="font-display font-bold text-base text-slate-900 dark:text-white">Loss Aversion & The Disposition Effect (Shefrin & Statman) ⭐</h4>
+              </div>
+              <span class="text-[11px] px-2 py-0.5 rounded-full bg-rose-50 dark:bg-rose-950 text-rose-700 dark:text-rose-300 font-semibold">Most Common Trap</span>
+            </div>
+            <p class="text-xs sm:text-sm text-slate-600 dark:text-slate-300 leading-relaxed">
+              Because realized losses inflict severe emotional pain, investors exhibit the <strong>Disposition Effect</strong>: the tendency to <strong>sell winning investments prematurely</strong> (to realize the feeling of pride and secure a sure gain) while <strong>holding onto losing investments for far too long</strong> (to postpone the painful admission of regret and in the vain hope of breaking even).
+            </p>
+            <div class="p-3 rounded-xl bg-slate-50 dark:bg-slate-800/60 border border-slate-200/80 dark:border-slate-700 text-xs space-y-1">
+              <strong class="text-slate-800 dark:text-slate-200">The Devastating Portfolio Impact:</strong>
+              <p class="text-slate-600 dark:text-slate-400">The investor's portfolio becomes a "graveyard of losers"—high-conviction compounding winners are cut down early, while declining, fundamentally broken companies accumulate and drag down overall long-term wealth.</p>
+              <div class="pt-1 text-emerald-600 dark:text-emerald-400 font-semibold">
+                <strong>Adviser Adaptation:</strong> Establish systematic rebalancing thresholds and pre-agreed stop-loss or fundamental exit mandates in the client's Investment Policy Statement (IPS).
+              </div>
+            </div>
+          </div>
+
+          <!-- Emotional Bias 2: Overconfidence Bias -->
+          <div class="p-5 rounded-2xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 shadow-xs space-y-3">
+            <div class="flex items-center justify-between">
+              <div class="flex items-center gap-2">
+                <span class="w-6 h-6 rounded-lg bg-rose-100 dark:bg-rose-950 flex items-center justify-center text-xs font-bold text-rose-600">2</span>
+                <h4 class="font-display font-bold text-base text-slate-900 dark:text-white">Overconfidence Bias & Sub-Components</h4>
+              </div>
+              <span class="text-[11px] px-2 py-0.5 rounded-full bg-rose-50 dark:bg-rose-950 text-rose-700 dark:text-rose-300 font-semibold">Excessive Trading</span>
+            </div>
+            <p class="text-xs sm:text-sm text-slate-600 dark:text-slate-300 leading-relaxed">
+              Investors overestimate their knowledge, precision of forecasts, and ability to control outcomes. Studies (Odean & Barber) demonstrate that overconfident investors trade hyperactively, incurring massive brokerage costs, bid-ask drag, and lower net returns.
+            </p>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-3 text-xs pt-1">
+              <div class="p-3 rounded-xl bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700">
+                <strong class="text-indigo-600 dark:text-indigo-400 block mb-1">Illusion of Knowledge</strong>
+                <span class="text-slate-500 dark:text-slate-400">Believing that reading news feeds and market forums grants superior analytical predictive ability over institutional consensus.</span>
+              </div>
+              <div class="p-3 rounded-xl bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700">
+                <strong class="text-indigo-600 dark:text-indigo-400 block mb-1">Illusion of Control</strong>
+                <span class="text-slate-500 dark:text-slate-400">Believing one can influence market outcomes by active screen monitoring or choosing one's own strike prices.</span>
+              </div>
+              <div class="p-3 rounded-xl bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700">
+                <strong class="text-indigo-600 dark:text-indigo-400 block mb-1">Self-Attribution Bias</strong>
+                <span class="text-slate-500 dark:text-slate-400">Attributing profitable trades to personal genius and foresight, while blaming losing trades on bad luck, manipulators, or regulatory shocks.</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Emotional Bias 3: Status Quo, Endowment, Regret, Herd -->
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+            
+            <div class="p-5 rounded-2xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 shadow-xs space-y-2">
+              <div class="flex items-center gap-2">
+                <span class="w-6 h-6 rounded-lg bg-rose-100 dark:bg-rose-950 flex items-center justify-center text-xs font-bold text-rose-600">3</span>
+                <h4 class="font-display font-bold text-sm sm:text-base text-slate-900 dark:text-white">Status Quo Bias & Inertia</h4>
+              </div>
+              <p class="text-xs text-slate-600 dark:text-slate-400 leading-relaxed">
+                The emotional preference to maintain current allocations by doing nothing. Investors stay stuck in sub-optimal legacy investments (e.g., traditional endowment insurance policies yielding 4%) because switching requires active decision energy and emotional accountability.
+              </p>
+            </div>
+
+            <div class="p-5 rounded-2xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 shadow-xs space-y-2">
+              <div class="flex items-center gap-2">
+                <span class="w-6 h-6 rounded-lg bg-rose-100 dark:bg-rose-950 flex items-center justify-center text-xs font-bold text-rose-600">4</span>
+                <h4 class="font-display font-bold text-sm sm:text-base text-slate-900 dark:text-white">Endowment Effect (Richard Thaler)</h4>
+              </div>
+              <p class="text-xs text-slate-600 dark:text-slate-400 leading-relaxed">
+                Valuing an asset significantly higher simply because one owns it. Common with inherited ancestral land or employer stock options. Investors demand an exorbitant price to part with it, far higher than they would ever pay to acquire it fresh.
+              </p>
+            </div>
+
+            <div class="p-5 rounded-2xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 shadow-xs space-y-2">
+              <div class="flex items-center gap-2">
+                <span class="w-6 h-6 rounded-lg bg-rose-100 dark:bg-rose-950 flex items-center justify-center text-xs font-bold text-rose-600">5</span>
+                <h4 class="font-display font-bold text-sm sm:text-base text-slate-900 dark:text-white">Regret Aversion & FOMO</h4>
+              </div>
+              <p class="text-xs text-slate-600 dark:text-slate-400 leading-relaxed">
+                Refusing to take action to avoid the sting of a wrong decision. Distinguishes between <strong>Error of Commission</strong> (regret from doing something that failed) vs <strong>Error of Omission</strong> (regret from missing a booming trend). Drives severe <strong>FOMO</strong> (Fear Of Missing Out).
+              </p>
+            </div>
+
+            <div class="p-5 rounded-2xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 shadow-xs space-y-2">
+              <div class="flex items-center gap-2">
+                <span class="w-6 h-6 rounded-lg bg-rose-100 dark:bg-rose-950 flex items-center justify-center text-xs font-bold text-rose-600">6</span>
+                <h4 class="font-display font-bold text-sm sm:text-base text-slate-900 dark:text-white">Herd Behavior (Bandwagon Effect)</h4>
+              </div>
+              <p class="text-xs text-slate-600 dark:text-slate-400 leading-relaxed">
+                Blindly mimicking the actions of the broader crowd or social influencers. Herding provides false psychological comfort ("If everyone is doing it, I cannot look foolish"). The primary driver of speculative asset bubbles and sudden panic crashes.
+              </p>
+            </div>
+
+          </div>
+
+        </div>
+      </section>
+
+      <!-- Section 16.6 -->
+      <section id="section-16-6" class="space-y-5">
+        <div class="flex items-center gap-2.5 border-b border-slate-200 dark:border-slate-800 pb-3">
+          <div class="w-8 h-8 rounded-xl bg-indigo-100 dark:bg-indigo-950 flex items-center justify-center text-indigo-600 dark:text-indigo-400 font-bold text-sm">
+            16.6
+          </div>
+          <h3 class="font-display text-xl sm:text-2xl font-bold text-slate-900 dark:text-white">
+            Market Anomalies (Challenging the Efficient Market Hypothesis)
+          </h3>
+        </div>
+
+        <div class="prose dark:prose-invert max-w-none text-xs sm:text-sm text-slate-600 dark:text-slate-300 space-y-4 leading-relaxed">
+          <p>
+            Anomalies are persistent empirical return patterns that contradict the predictions of modern asset pricing models (CAPM / EMH). Behavioral finance explains these anomalies as the systematic aggregate result of human cognitive errors and emotional biases.
+          </p>
+
+          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 my-4">
+            
+            <div class="p-4 rounded-2xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 shadow-xs space-y-2">
+              <span class="text-indigo-600 dark:text-indigo-400 font-bold text-xs flex items-center gap-1">
+                <i data-lucide="calendar" class="w-3.5 h-3.5"></i>
+                Calendar Anomalies
+              </span>
+              <h4 class="font-bold text-slate-900 dark:text-white text-sm">January Effect & Weekend Effect</h4>
+              <p class="text-xs text-slate-500 dark:text-slate-400 leading-relaxed">
+                Small-cap stocks historically showing abnormal returns in January following year-end tax-loss selling in December. Similarly, the <strong>Weekend/Monday Effect</strong> where stock returns on Mondays have historically been lower than on Fridays.
+              </p>
+            </div>
+
+            <div class="p-4 rounded-2xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 shadow-xs space-y-2">
+              <span class="text-indigo-600 dark:text-indigo-400 font-bold text-xs flex items-center gap-1">
+                <i data-lucide="tag" class="w-3.5 h-3.5"></i>
+                Cross-Sectional Anomalies
+              </span>
+              <h4 class="font-bold text-slate-900 dark:text-white text-sm">Value & Size Premiums</h4>
+              <p class="text-xs text-slate-500 dark:text-slate-400 leading-relaxed">
+                <strong>Value Effect (Fama-French):</strong> Stocks with low Price-to-Earnings (P/E) and low Price-to-Book (P/B) ratios consistently generate higher risk-adjusted returns than glamour growth stocks. <strong>Size Effect (Banz):</strong> Small-cap stocks outperforming large caps over long cycles.
+              </p>
+            </div>
+
+            <div class="p-4 rounded-2xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 shadow-xs space-y-2">
+              <span class="text-indigo-600 dark:text-indigo-400 font-bold text-xs flex items-center gap-1">
+                <i data-lucide="zap" class="w-3.5 h-3.5"></i>
+                Under-reaction Anomaly
+              </span>
+              <h4 class="font-bold text-slate-900 dark:text-white text-sm">PEAD & Momentum Effect</h4>
+              <p class="text-xs text-slate-500 dark:text-slate-400 leading-relaxed">
+                <strong>Post-Earnings Announcement Drift (PEAD):</strong> Due to conservatism bias, stock prices take weeks to fully adjust to positive earnings surprises. <strong>Momentum (Jegadeesh & Titman):</strong> Assets with high returns over past 3–12 months tend to persist over intermediate terms.
+              </p>
+            </div>
+
+          </div>
+
+          <!-- Limits to Arbitrage Callout -->
+          <div class="p-4 rounded-2xl bg-slate-100 dark:bg-slate-800/80 border border-slate-200 dark:border-slate-700 text-xs space-y-1.5">
+            <div class="font-bold text-slate-800 dark:text-slate-200 flex items-center gap-1.5">
+              <i data-lucide="shield-alert" class="w-4 h-4 text-amber-600"></i>
+              <span>Why Do Anomalies Persist? Limits to Arbitrage</span>
+            </div>
+            <p class="text-slate-600 dark:text-slate-400 leading-relaxed">
+              Standard finance claims rational arbitrageurs will instantly trade against mispricings to restore equilibrium. In reality, arbitrage is limited by <strong>Noise Trader Risk</strong> (irrational traders driving prices even further away from fair value, as Keynes noted: <em>"The market can remain irrational longer than you can remain solvent"</em>), borrowing costs for short-selling, liquidity constraints, and fund manager career risk.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Section 16.7 -->
+      <section id="section-16-7" class="space-y-5">
+        <div class="flex items-center gap-2.5 border-b border-slate-200 dark:border-slate-800 pb-3">
+          <div class="w-8 h-8 rounded-xl bg-amber-100 dark:bg-amber-950 flex items-center justify-center text-amber-700 dark:text-amber-400 font-bold text-sm">
+            16.7
+          </div>
+          <div>
+            <div class="flex items-center gap-2">
+              <h3 class="font-display text-xl sm:text-2xl font-bold text-slate-900 dark:text-white">
+                Market Bubbles & Crashes — Anatomy of Euphoria
+              </h3>
+              <span class="star-badge">⭐ Minsky's 5 Stages</span>
+            </div>
+            <p class="text-xs text-slate-500 dark:text-slate-400">Hyman Minsky & Charles Kindleberger Model</p>
+          </div>
+        </div>
+
+        <div class="prose dark:prose-invert max-w-none text-xs sm:text-sm text-slate-600 dark:text-slate-300 space-y-4 leading-relaxed">
+          <p>
+            Financial history is punctuated by recurrent speculative manias and subsequent catastrophic crashes. Economists Hyman Minsky and Charles Kindleberger identified five distinct chronological phases in every asset bubble:
+          </p>
+
+          <!-- 5 Stages Grid -->
+          <div class="space-y-3 my-4">
+            
+            <div class="p-4 rounded-2xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 flex items-start gap-3 shadow-xs">
+              <div class="w-8 h-8 rounded-xl bg-indigo-50 dark:bg-indigo-950 text-indigo-600 dark:text-indigo-400 font-bold flex items-center justify-center shrink-0 text-sm">
+                1
+              </div>
+              <div class="space-y-1">
+                <h4 class="font-bold text-slate-900 dark:text-white text-sm">Displacement</h4>
+                <p class="text-xs text-slate-600 dark:text-slate-400 leading-relaxed">
+                  An external shock, revolutionary new technology (railways, internet, artificial intelligence), or monetary policy easing creates a compelling new economic narrative with massive prospective growth.
+                </p>
+              </div>
+            </div>
+
+            <div class="p-4 rounded-2xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 flex items-start gap-3 shadow-xs">
+              <div class="w-8 h-8 rounded-xl bg-blue-50 dark:bg-blue-950 text-blue-600 dark:text-blue-400 font-bold flex items-center justify-center shrink-0 text-sm">
+                2
+              </div>
+              <div class="space-y-1">
+                <h4 class="font-bold text-slate-900 dark:text-white text-sm">Boom</h4>
+                <p class="text-xs text-slate-600 dark:text-slate-400 leading-relaxed">
+                  Early investors generate spectacular profits. Positive feedback loops emerge: rising prices stimulate corporate investments, media coverage swells, and credit expands to finance further purchases.
+                </p>
+              </div>
+            </div>
+
+            <div class="p-4 rounded-2xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 flex items-start gap-3 shadow-xs">
+              <div class="w-8 h-8 rounded-xl bg-amber-50 dark:bg-amber-950 text-amber-600 dark:text-amber-400 font-bold flex items-center justify-center shrink-0 text-sm">
+                3
+              </div>
+              <div class="space-y-1">
+                <div class="flex items-center gap-2">
+                  <h4 class="font-bold text-slate-900 dark:text-white text-sm">Euphoria (Maximum Financial Risk) ⭐</h4>
+                  <span class="text-[10px] px-2 py-0.5 rounded-full bg-amber-100 text-amber-800 dark:bg-amber-900 dark:text-amber-200 font-bold">Dangerous Peak</span>
+                </div>
+                <p class="text-xs text-slate-600 dark:text-slate-400 leading-relaxed">
+                  Caution is completely abandoned. Retail participants flood in with borrowed money. Established valuation metrics (P/E, cash flows) are mocked as obsolete: <em>"This time is different; we are in a new paradigm!"</em> Herd behavior and overconfidence reach all-time highs.
+                </p>
+              </div>
+            </div>
+
+            <div class="p-4 rounded-2xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 flex items-start gap-3 shadow-xs">
+              <div class="w-8 h-8 rounded-xl bg-purple-50 dark:bg-purple-950 text-purple-600 dark:text-purple-400 font-bold flex items-center justify-center shrink-0 text-sm">
+                4
+              </div>
+              <div class="space-y-1">
+                <h4 class="font-bold text-slate-900 dark:text-white text-sm">Profit-Taking / Financial Distress</h4>
+                <p class="text-xs text-slate-600 dark:text-slate-400 leading-relaxed">
+                  Insiders and institutional "smart money" recognize the absurdity of valuations and quietly begin liquidating positions. Interest rates begin rising or regulatory scrutiny tightens. First isolated defaults occur.
+                </p>
+              </div>
+            </div>
+
+            <div class="p-4 rounded-2xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 flex items-start gap-3 shadow-xs">
+              <div class="w-8 h-8 rounded-xl bg-rose-50 dark:bg-rose-950 text-rose-600 dark:text-rose-400 font-bold flex items-center justify-center shrink-0 text-sm">
+                5
+              </div>
+              <div class="space-y-1">
+                <div class="flex items-center gap-2">
+                  <h4 class="font-bold text-slate-900 dark:text-white text-sm">Panic & Capitulation (Maximum Financial Opportunity) ⭐</h4>
+                  <span class="text-[10px] px-2 py-0.5 rounded-full bg-rose-100 text-rose-800 dark:bg-rose-900 dark:text-rose-200 font-bold">Bottoming Out</span>
+                </div>
+                <p class="text-xs text-slate-600 dark:text-slate-400 leading-relaxed">
+                  Prices plunge suddenly. Margin calls trigger forced liquidation cascades. Fear turns into sheer desperation and despair. Retail investors capitulate and dump assets at catastrophic discounts just to end the psychological pain.
+                </p>
+              </div>
+            </div>
+
+          </div>
+
+          <!-- Historical Bubble Vignettes -->
+          <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3 text-xs">
+            <div class="p-3 rounded-xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800">
+              <strong class="text-indigo-600 dark:text-indigo-400 block mb-0.5">Tulip Mania (1637)</strong>
+              <span class="text-slate-500 dark:text-slate-400">Single rare tulip bulbs traded for the value of mansions before total collapse within weeks.</span>
+            </div>
+            <div class="p-3 rounded-xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800">
+              <strong class="text-indigo-600 dark:text-indigo-400 block mb-0.5">Dot-Com Crash (2000)</strong>
+              <span class="text-slate-500 dark:text-slate-400">Unprofitable internet firms with zero revenue collapsed by 80-95% when liquidity dried up.</span>
+            </div>
+            <div class="p-3 rounded-xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800">
+              <strong class="text-indigo-600 dark:text-indigo-400 block mb-0.5">Global Crisis (2008)</strong>
+              <span class="text-slate-500 dark:text-slate-400">US subprime mortgage securitization backed by excessive leverage caused systemic global banking freeze.</span>
+            </div>
+            <div class="p-3 rounded-xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800">
+              <strong class="text-indigo-600 dark:text-indigo-400 block mb-0.5">Harshad Mehta (1992)</strong>
+              <span class="text-slate-500 dark:text-slate-400">Illicit banking receipts diverted funds into equities, skyrocketing Sensex before bursting.</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Chapter Completion Card -->
+      <div id="chapter-completion-box" class="p-5 rounded-2xl bg-white dark:bg-slate-900 border border-slate-200/90 dark:border-slate-800 shadow-xs flex flex-col sm:flex-row items-center justify-between gap-4">
+        <div class="flex items-center gap-3 text-left">
+          <div class="w-10 h-10 rounded-xl bg-indigo-100 dark:bg-indigo-950 text-indigo-600 dark:text-indigo-400 flex items-center justify-center shrink-0">
+            <i data-lucide="book-open" class="w-5 h-5"></i>
+          </div>
+          <div>
+            <h4 class="font-bold text-slate-900 dark:text-white text-sm">Chapter 16 Theory Completed</h4>
+            <p class="text-xs text-slate-500 dark:text-slate-400 mt-0.5" id="ch-completion-desc">
+              Test your mastery of behavioral finance foundations and bias taxonomy with the interactive quiz below.
+            </p>
+          </div>
+        </div>
+        <a href="#interactive-quiz" class="px-4 py-2.5 rounded-xl text-xs font-bold transition-all duration-200 flex items-center gap-2 shadow-xs shrink-0 bg-indigo-600 hover:bg-indigo-700 text-white font-display">
+          <i data-lucide="check-circle" class="w-4 h-4"></i>
+          <span>Take 12-Question Quiz</span>
+        </a>
+      </div>
+
+      <!-- Interactive Quiz Section -->
+      <section id="interactive-quiz" class="space-y-6 pt-6">
+        <div class="p-6 rounded-3xl bg-slate-900 text-white border border-slate-800 shadow-xl space-y-6">
+          
+          <!-- Quiz Header -->
+          <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-3 border-b border-slate-800 pb-4">
+            <div>
+              <div class="flex items-center gap-2">
+                <span class="px-2.5 py-0.5 rounded-full text-xs font-bold uppercase tracking-wider bg-indigo-500/20 text-indigo-300 border border-indigo-500/30">
+                  Interactive Practice Simulator
+                </span>
+                <span class="text-xs text-slate-400">12 High-Yield Questions</span>
+              </div>
+              <h3 class="font-display font-bold text-xl sm:text-2xl text-white mt-1">
+                Chapter 16: Basics of Behavioral Finance Quiz
+              </h3>
+            </div>
+
+            <!-- Score Summary Widget -->
+            <div class="flex items-center gap-3">
+              <div class="text-right">
+                <div class="text-xs text-slate-400">Answered</div>
+                <div class="text-base font-bold text-indigo-400 font-mono"><span id="answered-count">0</span> / 12</div>
+              </div>
+              <div class="h-8 w-px bg-slate-800"></div>
+              <div class="text-right">
+                <div class="text-xs text-slate-400">Pass Mark</div>
+                <div class="text-base font-bold text-emerald-400 font-mono">60%</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Questions Container -->
+          <div id="questions-container" class="space-y-5">
+            <!-- Dynamically injected via JavaScript -->
+          </div>
+
+          <!-- Quiz Action Buttons -->
+          <div class="flex flex-col sm:flex-row items-center justify-between gap-4 pt-4 border-t border-slate-800">
+            <button id="submit-quiz-btn" onclick="submitQuiz()" class="w-full sm:w-auto px-6 py-3 rounded-xl bg-indigo-600 hover:bg-indigo-700 text-white font-bold text-xs sm:text-sm font-display flex items-center justify-center gap-2 shadow-lg transition-all">
+              <i data-lucide="check-check" class="w-4 h-4"></i>
+              <span>Submit & Evaluate Answers</span>
+            </button>
+            <button id="reset-quiz-btn" onclick="resetQuiz()" class="hidden w-full sm:w-auto px-6 py-3 rounded-xl bg-slate-800 hover:bg-slate-700 text-slate-200 font-bold text-xs sm:text-sm font-display flex items-center justify-center gap-2 transition-all">
+              <i data-lucide="rotate-ccw" class="w-4 h-4"></i>
+              <span>Retake Quiz</span>
+            </button>
+          </div>
+
+          <!-- Results Scorecard Container -->
+          <div id="quiz-results" class="hidden p-6 rounded-2xl bg-white/5 border border-white/10 space-y-4">
+            <div class="flex items-center justify-between">
+              <span id="result-status-badge" class="px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider"></span>
+              <span class="text-xs text-slate-400">NISM X-B Module 11 Benchmark</span>
+            </div>
+            <div class="flex items-baseline gap-3">
+              <div class="text-3xl font-extrabold text-white font-mono" id="score-display">0 / 12</div>
+              <div class="text-sm font-semibold text-slate-300" id="percentage-display">0% Score</div>
+            </div>
+            <p class="text-xs sm:text-sm text-slate-300 leading-relaxed" id="result-summary-text"></p>
+          </div>
+
+        </div>
+      </section>
+
+      <!-- Bottom Chapter Navigation -->
+      <div class="flex flex-col sm:flex-row items-center justify-between gap-4 pt-6 border-t border-slate-200 dark:border-slate-800">
+        <a href="module11.html" class="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-5 py-2.5 rounded-xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 hover:bg-slate-100 dark:hover:bg-slate-800 text-slate-700 dark:text-slate-300 font-bold text-xs sm:text-sm transition-all">
+          <i data-lucide="arrow-left" class="w-4 h-4"></i>
+          <span>Module 11 Hub</span>
+        </a>
+        <a href="module11-ch17.html" class="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-5 py-2.5 rounded-xl bg-indigo-600 hover:bg-indigo-700 text-white font-bold text-xs sm:text-sm shadow-sm transition-all font-display">
+          <span>Next: Chapter 17 (Behavioral Finance in Practice)</span>
+          <i data-lucide="arrow-right" class="w-4 h-4"></i>
+        </a>
+      </div>
+
+    </main>
+  </div>
+
+  <!-- Standardized Footer -->
+  <footer class="bg-slate-900 text-slate-400 py-6 border-t border-slate-800 text-center text-xs">
+    NISM Series X-B Certification Notes &bull; Chapter 16: Basics of Behavioral Finance (March 2026 Edition)
+  </footer>
+
+  <!-- Quiz Engine Script -->
+  <script>
+    const questionsData = [
+      {
+        id: 1,
+        question: "According to Herbert Simon's concept of 'Bounded Rationality', what do real-world decision makers do when confronted with complex financial choices?",
+        options: [
+          { text: "They run exhaustive mathematical algorithms to achieve a globally optimal outcome.", key: "a" },
+          { text: "They engage in 'satisficing' by using mental heuristics to pick a solution that meets a threshold of acceptability.", key: "b" },
+          { text: "They achieve complete market efficiency by instantly eliminating all pricing anomalies.", key: "c" },
+          { text: "They eliminate risk aversion entirely through linear expected utility maximization.", key: "d" }
+        ],
+        correct: "b",
+        explanation: "Herbert Simon established that due to cognitive constraints and finite information, humans cannot 'optimize' globally. Instead, they 'satisfice'—using heuristic rules of thumb to select an option that is good enough."
+      },
+      {
+        id: 2,
+        question: "Under Kahneman and Tversky's Prospect Theory, what is the shape of the psychological value function in the domain of losses?",
+        options: [
+          { text: "Concave and risk-averse", key: "a" },
+          { text: "Convex and risk-seeking", key: "b" },
+          { text: "Strictly linear and risk-neutral", key: "c" },
+          { text: "Symmetric and identical to the domain of gains", key: "d" }
+        ],
+        correct: "b",
+        explanation: "Under Prospect Theory, the value function is concave in the domain of gains (risk-averse) and convex in the domain of losses (risk-seeking). In the loss domain, investors prefer to gamble on a risky alternative rather than accepting a certain loss."
+      },
+      {
+        id: 3,
+        question: "What is the empirical loss aversion coefficient (λ) established in Prospect Theory research?",
+        options: [
+          { text: "Approximately 1.0 (losses and gains have equal psychological impact)", key: "a" },
+          { text: "Approximately 0.5 (gains are twice as pleasurable as losses are painful)", key: "b" },
+          { text: "Approximately 2.0 to 2.5 (losses are more than twice as painful as equivalent gains)", key: "c" },
+          { text: "Infinite (investors never accept any probability of loss under any condition)", key: "d" }
+        ],
+        correct: "c",
+        explanation: "The loss aversion coefficient λ is typically estimated at roughly 2.0 to 2.5 (commonly 2.25). The psychological pain of losing ₹10,000 is approximately 2.25 times greater than the pleasure of gaining ₹10,000."
+      },
+      {
+        id: 4,
+        question: "How should an investment adviser fundamentally approach Cognitive Errors versus Emotional Biases?",
+        options: [
+          { text: "Cognitive errors must be adapted to, while emotional biases should be corrected with mathematical data.", key: "a" },
+          { text: "Cognitive errors can generally be moderated/corrected with education and logic, while emotional biases must usually be adapted to.", key: "b" },
+          { text: "Both cognitive errors and emotional biases must be completely eliminated before constructing any portfolio.", key: "c" },
+          { text: "Neither bias affects portfolio returns if the client invests in broad index ETFs.", key: "d" }
+        ],
+        correct: "b",
+        explanation: "Cognitive errors stem from faulty information processing and can be moderated or corrected through education and objective data. Emotional biases stem from feelings/impulses and are difficult or impossible to eliminate; advisers must adapt portfolio strategies around them."
+      },
+      {
+        id: 5,
+        question: "An investor bought shares of ABC Ltd at ₹1,500. The stock is currently trading at ₹900 after severe earnings deterioration. The investor refuses to sell because he is waiting for the price to return to ₹1,500. Which behavioral bias is this?",
+        options: [
+          { text: "Anchoring and Adjustment Bias", key: "a" },
+          { text: "Availability Heuristic", key: "b" },
+          { text: "Confirmation Bias", key: "c" },
+          { text: "Conservatism Bias", key: "d" }
+        ],
+        correct: "a",
+        explanation: "The investor is anchoring on his initial purchase price of ₹1,500 and failing to adjust his valuation despite the arrival of negative fundamental information. The purchase price has no relevance to the stock's future prospects."
+      },
+      {
+        id: 6,
+        question: "A client maintains ₹8,00,000 in a fixed deposit earning 6% per annum for 'emergencies', while simultaneously servicing an expensive credit card debt of ₹3,00,000 at 36% per annum. What bias is being displayed?",
+        options: [
+          { text: "Overconfidence Bias", key: "a" },
+          { text: "Mental Accounting (Violation of Fungibility)", key: "b" },
+          { text: "Hindsight Bias", key: "c" },
+          { text: "Representativeness Bias", key: "d" }
+        ],
+        correct: "b",
+        explanation: "Mental accounting violates the principle of fungibility by assigning subjective labels ('emergency savings' vs 'credit card bill') to pools of money, leading to suboptimal financial behavior like keeping low-yield deposits while paying exorbitant debt interest."
+      },
+      {
+        id: 7,
+        question: "What is the 'Disposition Effect' identified by Hersh Shefrin and Meir Statman?",
+        options: [
+          { text: "The tendency to hold cash during all bull markets and buy equities during bear panics.", key: "a" },
+          { text: "The tendency of investors to sell winning investments too quickly and hold losing investments for too long.", key: "b" },
+          { text: "The habit of disposing of all equity mutual funds at retirement age regardless of longevity.", key: "c" },
+          { text: "The legal requirement to dispose of insider shares within 48 hours of quarterly results.", key: "d" }
+        ],
+        correct: "b",
+        explanation: "The Disposition Effect is an extension of loss aversion and regret aversion: investors sell winning positions prematurely to lock in a certain gain and experience pride, while refusing to sell losing stocks to avoid realizing the loss and admitting regret."
+      },
+      {
+        id: 8,
+        question: "An investor who claims that a 25% portfolio gain was entirely due to his superior stock picking, but blames a 30% loss in another stock on 'SEBI regulatory intervention and bad luck', is exhibiting:",
+        options: [
+          { text: "Self-Attribution Bias (a facet of Overconfidence)", key: "a" },
+          { text: "Endowment Effect", key: "b" },
+          { text: "Status Quo Bias", key: "c" },
+          { text: "Availability Heuristic", key: "d" }
+        ],
+        correct: "a",
+        explanation: "Self-attribution bias occurs when individuals credit their own talent and skill for positive outcomes, but blame external circumstances, bad luck, or other parties for negative outcomes. It feeds overconfidence."
+      },
+      {
+        id: 9,
+        question: "Assuming that a prestigious, well-known corporation with award-winning products is automatically a guaranteed winning stock investment is an example of:",
+        options: [
+          { text: "Representativeness Bias (Good Company = Good Stock Fallacy)", key: "a" },
+          { text: "Anchoring Bias", key: "b" },
+          { text: "Endowment Effect", key: "c" },
+          { text: "January Effect", key: "d" }
+        ],
+        correct: "a",
+        explanation: "Representativeness bias leads investors to judge an investment by how closely it matches a prototype ('good company'). It ignores base-rate statistics and valuation: a great company can be an awful investment if purchased at an exorbitant multiple."
+      },
+      {
+        id: 10,
+        question: "Why do market anomalies (such as value outperformance or post-earnings drift) fail to be completely eliminated by rational arbitrageurs in the real world?",
+        options: [
+          { text: "Because arbitrage is completely prohibited under SEBI regulations.", key: "a" },
+          { text: "Due to 'Limits to Arbitrage', including noise trader risk, borrowing costs, margin requirements, and liquidity constraints.", key: "b" },
+          { text: "Because all market participants are identical in their risk tolerances and analytical tools.", key: "c" },
+          { text: "Because the Efficient Market Hypothesis prevents rational traders from identifying mispricings.", key: "d" }
+        ],
+        correct: "b",
+        explanation: "Limits to Arbitrage (Shleifer & Vishny) explain that real-world arbitrage is risky and costly. Noise traders can push prices even further from intrinsic value, creating mark-to-market margin calls that force arbitrageurs to liquidate early."
+      },
+      {
+        id: 11,
+        question: "In Hyman Minsky's 5 stages of a financial bubble, which stage is characterized by peak unbridled optimism, leverage explosion, and the declaration that 'This time is different'?",
+        options: [
+          { text: "Displacement", key: "a" },
+          { text: "Boom", key: "b" },
+          { text: "Euphoria", key: "c" },
+          { text: "Profit-Taking", key: "d" }
+        ],
+        correct: "c",
+        explanation: "During the Euphoria phase, rationality is discarded, leverage spikes, retail investors rush in, and traditional valuation metrics are abandoned under the narrative that 'This time is different'. It represents the point of maximum financial risk."
+      },
+      {
+        id: 12,
+        question: "An investor who refused to participate in the stock market for five years after reading sensational news stories about the March 2020 COVID crash is primarily influenced by:",
+        options: [
+          { text: "Availability Heuristic", key: "a" },
+          { text: "Endowment Effect", key: "b" },
+          { text: "Conservatism Bias", key: "c" },
+          { text: "Hindsight Bias", key: "d" }
+        ],
+        correct: "a",
+        explanation: "The Availability Heuristic causes investors to judge the likelihood of an event by how vividly or easily recent examples come to mind. Sensational media headlines about severe crashes make downside tail risks seem far more probable than historical base rates indicate."
+      }
+    ];
+
+    let userAnswers = {};
+
+    function renderQuiz() {
+      const container = document.getElementById("questions-container");
+      container.innerHTML = "";
+
+      questionsData.forEach((q, index) => {
+        const qDiv = document.createElement("div");
+        qDiv.className = "p-5 rounded-2xl bg-white/5 border border-white/10 space-y-4 transition-all";
+        qDiv.id = `q-box-${q.id}`;
+
+        let optionsHtml = "";
+        q.options.forEach(opt => {
+          optionsHtml += `
+            <label class="flex items-center gap-3 p-3 rounded-xl bg-white/5 hover:bg-white/10 border border-white/5 cursor-pointer text-xs sm:text-sm transition-all" onclick="selectOption(${q.id}, '${opt.key}')" id="label-${q.id}-${opt.key}">
+              <input type="radio" name="question-${q.id}" value="${opt.key}" class="w-4 h-4 text-indigo-500 focus:ring-0 focus:ring-offset-0 bg-transparent border-slate-500">
+              <span class="font-bold text-indigo-300 w-5 uppercase font-mono">${opt.key}.</span>
+              <span class="text-slate-200">${opt.text}</span>
+            </label>
+          `;
+        });
+
+        qDiv.innerHTML = `
+          <div class="flex items-start justify-between gap-2">
+            <span class="text-xs font-bold text-indigo-400 uppercase tracking-wider font-mono">Question ${index + 1} of ${questionsData.length}</span>
+            <span id="badge-${q.id}" class="text-[11px] px-2.5 py-0.5 rounded-full bg-white/5 text-slate-400 font-medium">Unanswered</span>
+          </div>
+          <h4 class="font-display font-semibold text-sm sm:text-base text-white leading-snug">${q.question}</h4>
+          <div class="space-y-2 mt-3">
+            ${optionsHtml}
+          </div>
+          <div id="explanation-${q.id}" class="hidden p-4 rounded-xl text-xs sm:text-sm mt-3 space-y-1"></div>
+        `;
+        container.appendChild(qDiv);
+      });
+      lucide.createIcons();
+    }
+
+    function selectOption(qId, key) {
+      userAnswers[qId] = key;
+      const count = Object.keys(userAnswers).length;
+      document.getElementById("answered-count").innerText = count;
+      
+      const badge = document.getElementById(`badge-${qId}`);
+      if (badge) {
+        badge.innerText = "Answered";
+        badge.className = "text-[11px] px-2.5 py-0.5 rounded-full bg-indigo-500/20 text-indigo-300 font-medium";
+      }
+
+      // Highlight selected label
+      const q = questionsData.find(item => item.id === qId);
+      q.options.forEach(opt => {
+        const lbl = document.getElementById(`label-${qId}-${opt.key}`);
+        if (opt.key === key) {
+          lbl.className = "flex items-center gap-3 p-3 rounded-xl bg-indigo-600/30 border border-indigo-400/50 cursor-pointer text-xs sm:text-sm transition-all";
+        } else {
+          lbl.className = "flex items-center gap-3 p-3 rounded-xl bg-white/5 hover:bg-white/10 border border-white/5 cursor-pointer text-xs sm:text-sm transition-all";
+        }
+      });
+    }
+
+    function submitQuiz() {
+      let score = 0;
+      questionsData.forEach(q => {
+        const selected = userAnswers[q.id];
+        const isCorrect = selected === q.correct;
+        if (isCorrect) score++;
+
+        const explanationDiv = document.getElementById(`explanation-${q.id}`);
+        explanationDiv.classList.remove("hidden");
+
+        if (isCorrect) {
+          explanationDiv.className = "p-4 rounded-xl text-xs sm:text-sm mt-3 bg-emerald-950/60 border border-emerald-600 text-emerald-200 space-y-1";
+          explanationDiv.innerHTML = `<div class="font-bold text-emerald-400 flex items-center gap-1.5"><i data-lucide="check" class="w-4 h-4"></i> Correct!</div><p>${q.explanation}</p>`;
+        } else {
+          explanationDiv.className = "p-4 rounded-xl text-xs sm:text-sm mt-3 bg-rose-950/60 border border-rose-600 text-rose-200 space-y-1";
+          explanationDiv.innerHTML = `<div class="font-bold text-rose-400 flex items-center gap-1.5"><i data-lucide="x" class="w-4 h-4"></i> Incorrect (Correct Answer: ${q.correct.toUpperCase()})</div><p>${q.explanation}</p>`;
+        }
+      });
+
+      // Show results scorecard
+      const percentage = Math.round((score / questionsData.length) * 100);
+      const passed = percentage >= 60;
+      
+      const resultsDiv = document.getElementById("quiz-results");
+      resultsDiv.classList.remove("hidden");
+
+      const statusBadge = document.getElementById("result-status-badge");
+      statusBadge.innerText = passed ? "Status: Passed (60%+ Benchmark)" : "Status: Needs Revision";
+      statusBadge.className = passed ? "px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider bg-emerald-500 text-emerald-950" : "px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider bg-amber-500 text-amber-950";
+
+      document.getElementById("score-display").innerText = `${score} / ${questionsData.length}`;
+      document.getElementById("percentage-display").innerText = `${percentage}% Score (Passing criteria: 60%)`;
+
+      document.getElementById("result-summary-text").innerText = passed
+        ? `Outstanding job! You scored ${percentage}%, successfully clearing the NISM Series X-B Chapter 16 benchmark. You have mastered the cognitive vs emotional bias distinction and Prospect Theory.`
+        : `You scored ${percentage}%. Review the core sections on Prospect Theory, Anchoring, Disposition Effect, and Minsky's Bubble Stages before re-attempting.`;
+
+      document.getElementById("submit-quiz-btn").classList.add("hidden");
+      document.getElementById("reset-quiz-btn").classList.remove("hidden");
+
+      resultsDiv.scrollIntoView({ behavior: 'smooth' });
+      lucide.createIcons();
+    }
+
+    function resetQuiz() {
+      userAnswers = {};
+      document.getElementById("answered-count").innerText = "0";
+      document.getElementById("quiz-results").classList.add("hidden");
+      document.getElementById("submit-quiz-btn").classList.remove("hidden");
+      document.getElementById("reset-quiz-btn").classList.add("hidden");
+      renderQuiz();
+      document.getElementById("interactive-quiz").scrollIntoView({ behavior: 'smooth' });
+    }
+
+    // Initialize Quiz
+    renderQuiz();
+    lucide.createIcons();
+
+    // Preloader Auto-dismiss
+    function dismissPreloader() {
+      const preloader = document.getElementById("eduleb-preloader");
+      if (preloader && !preloader.classList.contains("fade-out")) {
+        preloader.classList.add("fade-out");
+        setTimeout(() => { if (preloader.parentNode) preloader.parentNode.removeChild(preloader); }, 550);
+      }
+    }
+    window.addEventListener("load", () => setTimeout(dismissPreloader, 350));
+    setTimeout(dismissPreloader, 1000);
+  </script>
+</body>
+</html>

@@ -1,0 +1,922 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Chapter 6: Miscellaneous Aspects & Corpus Math | NISM Series X-B (Level 2)</title>
+  
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  
+  <!-- Google Fonts: DM Sans & Jost (Eduleb Benchmark) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Jost:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+  <script src="https://unpkg.com/lucide@latest"></script>
+
+  <!-- Modern Documentation Design System -->
+  <link rel="stylesheet" href="modern-docs.css">
+
+  <!-- KaTeX for formula rendering -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.min.css">
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.min.js"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/contrib/auto-render.min.js" onload="renderMathInElement(document.body);"></script>
+
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['"DM Sans"', 'sans-serif'],
+            display: ['"Jost"', 'sans-serif'],
+            heading: ['"Jost"', 'sans-serif']
+          },
+          colors: {
+            brand: {
+              50: '#eef2ff',
+              100: '#e0e7ff',
+              500: '#525fe1',
+              600: '#434ec9',
+              700: '#353db3',
+              800: '#282f9c',
+              900: '#0b104a'
+            }
+          }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    body {
+      font-family: 'DM Sans', sans-serif;
+      font-size: 16px;
+      line-height: 26px;
+    }
+    h1, h2, h3, h4, h5, h6, .font-display, .font-heading {
+      font-family: 'Jost', sans-serif;
+      font-weight: 700;
+    }
+  </style>
+</head>
+<body class="bg-slate-50 dark:bg-slate-950 text-slate-900 dark:text-slate-100 min-h-screen flex flex-col antialiased transition-colors duration-200 selection:bg-indigo-500 selection:text-white">
+
+  <!-- Smooth Opening Preloader -->
+  <div class="preloaders" id="eduleb-preloader">
+    <span class="loader"></span>
+    <div class="preloader-label">Chapter 6: Miscellaneous Aspects & Corpus Math</div>
+  </div>
+
+  <!-- Standardized Header (Single-Tier, 64px) -->
+  <header class="sticky top-0 z-40 bg-white/95 dark:bg-slate-900/95 backdrop-blur-md border-b border-slate-200/80 dark:border-slate-800 shadow-xs">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
+      <!-- Left: Logo & Context Label -->
+      <div class="flex items-center gap-3">
+        <a href="module8.html" class="flex items-center gap-2 text-slate-500 hover:text-slate-900 dark:text-slate-400 dark:hover:text-white transition-colors">
+          <div class="w-9 h-9 rounded-xl bg-slate-100 dark:bg-slate-800 hover:bg-slate-200 dark:hover:bg-slate-700 flex items-center justify-center text-slate-700 dark:text-slate-200 transition-colors">
+            <i data-lucide="arrow-left" class="w-4 h-4"></i>
+          </div>
+        </a>
+        <div>
+          <div class="flex items-center gap-2">
+            <span class="text-xs font-bold uppercase tracking-wider text-indigo-600 dark:text-indigo-400 bg-indigo-50 dark:bg-indigo-950/80 px-2 py-0.5 rounded">Module 8</span>
+            <span class="text-xs text-slate-400 font-medium">Chapter 6 of 6</span>
+          </div>
+          <h1 class="font-display font-bold text-base sm:text-lg text-slate-900 dark:text-white leading-tight">Miscellaneous Aspects & Corpus Math</h1>
+        </div>
+      </div>
+
+      <!-- Right: Badges, Theme, and Quiz Link -->
+      <div class="flex items-center gap-2 sm:gap-3">
+        <span class="hidden sm:inline-flex items-center gap-1 px-3 py-1 rounded-full text-xs font-bold bg-amber-50 dark:bg-amber-950/60 text-amber-700 dark:text-amber-300 border border-amber-200 dark:border-amber-800">
+          <i data-lucide="calculator" class="w-3.5 h-3.5"></i>
+          Mathematical Core
+        </span>
+        <button onclick="window.toggleDarkMode()" id="nism-header-theme-btn" class="p-2 rounded-full border border-slate-200 dark:border-slate-700 text-slate-600 dark:text-slate-300 bg-white dark:bg-slate-800 hover:bg-slate-50 dark:hover:bg-slate-700 transition-colors" title="Toggle Theme (⌘D)">
+          <i data-lucide="moon" class="w-4 h-4"></i>
+        </button>
+        <a href="#interactive-quiz" class="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-full text-xs font-bold bg-indigo-600 hover:bg-indigo-700 text-white shadow-xs transition-all">
+          <i data-lucide="help-circle" class="w-3.5 h-3.5"></i>
+          <span>Chapter Quiz (12 Q)</span>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Content Grid -->
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 grid grid-cols-1 lg:grid-cols-12 gap-8 flex-grow">
+    
+    <!-- Sidebar Navigation -->
+    <aside class="hidden lg:block lg:col-span-3">
+      <div class="sticky top-24 space-y-4">
+        
+        <div class="bg-white dark:bg-slate-900 p-5 rounded-2xl border border-slate-200 dark:border-slate-800 shadow-xs">
+          <h2 class="text-xs font-bold text-slate-400 uppercase tracking-wider mb-3">Chapter Navigation</h2>
+          <nav class="space-y-1 text-xs">
+            <a href="#section-1" class="block px-2.5 py-1.5 rounded-lg text-amber-700 dark:text-amber-400 font-semibold bg-amber-50/70 dark:bg-amber-950/40 hover:bg-amber-100">6.1 Core Math Variables & Real Return ⭐</a>
+            <a href="#section-2" class="block px-2.5 py-1.5 rounded-lg text-amber-700 dark:text-amber-400 font-semibold bg-amber-50/70 dark:bg-amber-950/40 hover:bg-amber-100">6.2 Master 3-Stage Corpus Model ⭐</a>
+            <a href="#section-3" class="block px-2.5 py-1.5 rounded-lg text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800 hover:text-indigo-600">6.3 Worked Numerical Case Studies ⭐</a>
+            <a href="#section-4" class="block px-2.5 py-1.5 rounded-lg text-amber-700 dark:text-amber-400 font-semibold bg-amber-50/70 dark:bg-amber-950/40 hover:bg-amber-100">6.4 Safe Withdrawal Rates (4% Rule) ⭐</a>
+            <a href="#section-5" class="block px-2.5 py-1.5 rounded-lg text-amber-700 dark:text-amber-400 font-semibold bg-amber-50/70 dark:bg-amber-950/40 hover:bg-amber-100">6.5 Annuity Evaluation & Solvency ⭐</a>
+            <a href="#section-6" class="block px-2.5 py-1.5 rounded-lg text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800 hover:text-indigo-600">6.6 Philanthropy & Estate Planning ⭐</a>
+            <a href="#interactive-quiz" class="block px-2.5 py-1.5 rounded-lg text-indigo-700 dark:text-indigo-300 font-bold bg-indigo-50 dark:bg-indigo-950/70 hover:bg-indigo-100 dark:hover:bg-indigo-900/80 mt-2">Interactive Quiz (12 MCQs)</a>
+          </nav>
+        </div>
+
+        <div class="p-4 rounded-2xl bg-gradient-to-br from-indigo-600 to-purple-700 text-white shadow-xs text-xs space-y-2">
+          <div class="flex items-center gap-1.5 font-bold">
+            <i data-lucide="zap" class="w-4 h-4 text-amber-300"></i>
+            <span>Exam Math Formulas</span>
+          </div>
+          <p class="text-indigo-100 leading-relaxed space-y-1">
+            • <strong>Real Rate:</strong> $r_{\text{real}} = \frac{1+r}{1+e} - 1$<br>
+            • <strong>Expense at Ret:</strong> $FV = PV \times (1+e)^n$<br>
+            • <strong>Annuity Due Mode:</strong> Set calculator to <strong>BGN</strong> mode!<br>
+            • <strong>Capital Preservation:</strong> $\text{Corpus} = \frac{\text{Expense}}{r_{\text{real}}}$<br>
+            • <strong>IRDAI Solvency Ratio:</strong> Min 1.50 (150%).<br>
+            • <strong>4% SWR:</strong> Bengen (1994); adjust to 3.0%-3.5% in India.
+          </p>
+        </div>
+
+        <!-- Quick Module Nav Links -->
+        <div class="p-3 bg-white dark:bg-slate-900 rounded-2xl border border-slate-200 dark:border-slate-800 text-xs space-y-2">
+          <span class="text-[10px] uppercase font-bold text-slate-400 tracking-wider">Module 8 Chapters</span>
+          <div class="flex flex-col gap-1 font-medium">
+            <a href="module8-ch4.html" class="text-slate-600 dark:text-slate-400 hover:text-indigo-600">Ch 4: Retirement Basics</a>
+            <a href="module8-ch5.html" class="text-slate-600 dark:text-slate-400 hover:text-indigo-600">Ch 5: Retirement Products</a>
+            <a href="module8-ch6.html" class="text-indigo-600 dark:text-indigo-400 font-bold">Ch 6: Miscellaneous & Corpus Math</a>
+          </div>
+        </div>
+
+      </div>
+    </aside>
+
+    <!-- Main Notes -->
+    <div class="lg:col-span-9 space-y-8">
+
+      <!-- Section 6.1 -->
+      <section id="section-1" class="bg-white dark:bg-slate-900 rounded-3xl p-6 sm:p-8 border border-amber-200 dark:border-amber-800/80 shadow-xs space-y-6">
+        <div class="flex items-center justify-between">
+          <div class="flex items-center gap-2 text-xs font-bold text-amber-700 dark:text-amber-400 uppercase tracking-wider">
+            <span class="w-2 h-2 rounded-full bg-amber-500"></span> Section 6.1 &bull; ⭐ Super High Exam Yield
+          </div>
+          <span class="px-2.5 py-0.5 rounded-full text-xs font-extrabold bg-amber-100 dark:bg-amber-950 text-amber-800 dark:text-amber-300 border border-amber-300 dark:border-amber-700">
+            Real Rate of Return
+          </span>
+        </div>
+
+        <div>
+          <h2 class="font-display text-xl sm:text-2xl font-bold text-slate-900 dark:text-white">Core Math Variables & The Exact Real Rate of Return</h2>
+          <p class="text-xs sm:text-sm text-slate-600 dark:text-slate-300 mt-1 leading-relaxed">
+            In NISM Series X-B, candidates are tested rigorously on the mathematical precision of retirement models. Approximations that pass in casual discussions are penalised on the exam.
+          </p>
+        </div>
+
+        <!-- The Real Rate Formula Card -->
+        <div class="p-5 rounded-2xl bg-gradient-to-br from-indigo-900 via-slate-900 to-indigo-950 text-white space-y-3">
+          <div class="flex items-center justify-between">
+            <span class="text-xs font-bold text-indigo-300 uppercase tracking-wider">Exam Formula Card</span>
+            <span class="text-xs px-2.5 py-0.5 rounded bg-white/10 text-amber-300 font-mono">Fisher Real Rate of Return</span>
+          </div>
+          <div class="text-center font-mono text-base sm:text-xl text-amber-300 py-2">
+            $$r_{\text{real}} = \frac{1 + r}{1 + e} - 1 = \frac{r - e}{1 + e}$$
+          </div>
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 text-xs text-slate-300 pt-2 border-t border-indigo-800/60">
+            <div><strong class="text-white">$r$:</strong> Nominal annual investment return (post-tax).</div>
+            <div><strong class="text-white">$e$:</strong> Projected annual inflation rate.</div>
+          </div>
+        </div>
+
+        <!-- Approximation vs Exact Table -->
+        <div class="p-4 rounded-2xl bg-amber-50/60 dark:bg-amber-950/30 border border-amber-200 dark:border-amber-800 space-y-3 text-xs sm:text-sm">
+          <strong class="text-amber-950 dark:text-amber-300 block font-bold text-sm flex items-center gap-1.5">
+            <i data-lucide="alert-octagon" class="w-4 h-4 text-amber-600 dark:text-amber-400"></i>
+            Exam Trap: Why Simple Subtraction ($r - e$) is Fatal
+          </strong>
+          <p class="text-slate-700 dark:text-slate-300 leading-relaxed">
+            Suppose a post-retirement portfolio earns a nominal return of $r = 8.0\%$ and inflation is $e = 6.0\%$:
+          </p>
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 pt-1">
+            <div class="p-3 bg-white dark:bg-slate-900 rounded-xl border border-rose-300 dark:border-rose-800 text-xs">
+              <span class="text-rose-600 font-bold block mb-1">Incorrect Simple Subtraction:</span>
+              $$r_{\text{approx}} = r - e = 8.0\% - 6.0\% = \mathbf{2.0000\%}$$
+              Overstates real return, leading to an <em>underfunded retirement corpus</em>!
+            </div>
+            <div class="p-3 bg-white dark:bg-slate-900 rounded-xl border border-emerald-300 dark:border-emerald-800 text-xs">
+              <span class="text-emerald-600 font-bold block mb-1">Correct Fisher Exact Formula ⭐:</span>
+              $$r_{\text{real}} = \frac{1 + 0.08}{1 + 0.06} - 1 = \frac{1.08}{1.06} - 1 = \mathbf{1.8868\%}$$
+              Mandatory on NISM Level 2 exam calculations!
+            </div>
+          </div>
+        </div>
+
+        <!-- Annuity Due vs Ordinary Annuity -->
+        <div class="p-4 bg-slate-50 dark:bg-slate-800/60 rounded-2xl border border-slate-200 dark:border-slate-700 space-y-2 text-xs sm:text-sm">
+          <div class="flex items-center justify-between font-bold text-slate-900 dark:text-white">
+            <span>Annuity Due (BGN Mode) vs Ordinary Annuity (END Mode)</span>
+            <span class="px-2 py-0.5 rounded bg-indigo-100 dark:bg-indigo-950 text-indigo-700 dark:text-indigo-300 text-xs">Timing Convention</span>
+          </div>
+          <p class="text-slate-600 dark:text-slate-400 leading-relaxed">
+            In accumulation, investments can be made at month-end or month-beginning. <strong>However, in decumulation (retirement living), expenses must be paid at the BEGINNING of each period</strong> because a retiree needs money to buy groceries on Day 1 of retirement, not 365 days later!
+          </p>
+          <div class="p-2.5 bg-white dark:bg-slate-900 rounded-xl border border-slate-200 dark:border-slate-800 text-xs font-mono text-indigo-700 dark:text-indigo-300">
+            $$PV_{\text{due}} = PV_{\text{ordinary}} \times (1 + r_{\text{real}})$$
+          </div>
+        </div>
+      </section>
+
+      <!-- Section 6.2 -->
+      <section id="section-2" class="bg-white dark:bg-slate-900 rounded-3xl p-6 sm:p-8 border border-amber-200 dark:border-amber-800/80 shadow-xs space-y-6">
+        <div class="flex items-center justify-between">
+          <div class="flex items-center gap-2 text-xs font-bold text-amber-700 dark:text-amber-400 uppercase tracking-wider">
+            <span class="w-2 h-2 rounded-full bg-amber-500"></span> Section 6.2 &bull; ⭐ Super High Exam Yield
+          </div>
+          <span class="px-2.5 py-0.5 rounded-full text-xs font-extrabold bg-amber-100 dark:bg-amber-950 text-amber-800 dark:text-amber-300 border border-amber-300 dark:border-amber-700">
+            Master 3-Stage Model
+          </span>
+        </div>
+
+        <div>
+          <h2 class="font-display text-xl sm:text-2xl font-bold text-slate-900 dark:text-white">The Master 3-Stage Retirement Corpus Calculation</h2>
+          <p class="text-xs sm:text-sm text-slate-600 dark:text-slate-300 mt-1 leading-relaxed">
+            Every comprehensive retirement planning problem in NISM Series X-B breaks down into three sequential stages:
+          </p>
+        </div>
+
+        <!-- 3 Stages Breakdown -->
+        <div class="space-y-4">
+          
+          <!-- Stage 1 -->
+          <div class="p-4 rounded-2xl bg-indigo-50/60 dark:bg-indigo-950/30 border border-indigo-200 dark:border-indigo-800 space-y-2">
+            <div class="flex items-center justify-between">
+              <span class="text-xs font-bold uppercase tracking-wider text-indigo-700 dark:text-indigo-400">Stage 1</span>
+              <span class="text-xs font-semibold text-slate-500 dark:text-slate-400">Future Value of Living Needs</span>
+            </div>
+            <h3 class="font-display font-bold text-slate-900 dark:text-white text-base">Calculate Annual Expense at Retirement Date</h3>
+            <p class="text-xs text-slate-600 dark:text-slate-400">Compound current living expenses from today until the retirement year at the pre-retirement inflation rate:</p>
+            <div class="p-3 bg-white dark:bg-slate-900 rounded-xl text-center font-mono text-sm text-indigo-700 dark:text-indigo-300 border border-indigo-200 dark:border-indigo-800">
+              $$FV_{\text{exp}} = \text{Current Expenses} \times (1 + e_1)^{N_1}$$
+            </div>
+          </div>
+
+          <!-- Stage 2 -->
+          <div class="p-4 rounded-2xl bg-amber-50/60 dark:bg-amber-950/30 border border-amber-200 dark:border-amber-800 space-y-2">
+            <div class="flex items-center justify-between">
+              <span class="text-xs font-bold uppercase tracking-wider text-amber-700 dark:text-amber-400">Stage 2 ⭐</span>
+              <span class="text-xs font-semibold text-slate-500 dark:text-slate-400">Capital Depletion Annuity Due</span>
+            </div>
+            <h3 class="font-display font-bold text-slate-900 dark:text-white text-base">Calculate Required Corpus at Retirement ($PV_{\text{corpus}}$)</h3>
+            <p class="text-xs text-slate-600 dark:text-slate-400">Find the Present Value of an Annuity Due for $N_2$ decumulation years discounted at the exact post-retirement real rate $r_{\text{real}}$:</p>
+            <div class="p-3 bg-white dark:bg-slate-900 rounded-xl text-center font-mono text-sm text-amber-700 dark:text-amber-300 border border-amber-200 dark:border-amber-800">
+              $$\text{Corpus} = FV_{\text{exp}} \times \left[ \frac{1 - (1 + r_{\text{real}})^{-N_2}}{r_{\text{real}}} \right] \times (1 + r_{\text{real}})$$
+            </div>
+          </div>
+
+          <!-- Stage 3 -->
+          <div class="p-4 rounded-2xl bg-purple-50/60 dark:bg-purple-950/30 border border-purple-200 dark:border-purple-800 space-y-2">
+            <div class="flex items-center justify-between">
+              <span class="text-xs font-bold uppercase tracking-wider text-purple-700 dark:text-purple-400">Stage 3</span>
+              <span class="text-xs font-semibold text-slate-500 dark:text-slate-400">Accumulation Savings Requirement</span>
+            </div>
+            <h3 class="font-display font-bold text-slate-900 dark:text-white text-base">Calculate Periodic Investment Required ($PMT$)</h3>
+            <p class="text-xs text-slate-600 dark:text-slate-400">Determine the annual or monthly investment required over $N_1$ accumulation years earning nominal rate $r_1$ to accumulate the required corpus:</p>
+            <div class="p-3 bg-white dark:bg-slate-900 rounded-xl text-center font-mono text-sm text-purple-700 dark:text-purple-300 border border-purple-200 dark:border-purple-800">
+              $$PMT = \frac{\text{Required Corpus}}{\left[ \frac{(1 + r_1)^{N_1} - 1}{r_1} \right]}$$
+            </div>
+          </div>
+
+        </div>
+      </section>
+
+      <!-- Section 6.3 -->
+      <section id="section-3" class="bg-white dark:bg-slate-900 rounded-3xl p-6 sm:p-8 border border-slate-200 dark:border-slate-800 shadow-xs space-y-6">
+        <div class="flex items-center justify-between">
+          <div class="flex items-center gap-2 text-xs font-bold text-slate-500 uppercase tracking-wider">
+            <span class="w-2 h-2 rounded-full bg-slate-400"></span> Section 6.3 &bull; ⭐ Step-by-Step Numerical Walkthrough
+          </div>
+          <span class="px-2.5 py-0.5 rounded-full text-xs font-bold bg-indigo-100 dark:bg-indigo-950 text-indigo-700 dark:text-indigo-300 border border-indigo-200 dark:border-indigo-800">
+            Case Studies
+          </span>
+        </div>
+
+        <div>
+          <h2 class="font-display text-xl sm:text-2xl font-bold text-slate-900 dark:text-white">Worked Numerical Case Studies</h2>
+        </div>
+
+        <!-- Case Study 1 Card -->
+        <div class="p-5 rounded-2xl bg-slate-50 dark:bg-slate-800/60 border border-slate-200 dark:border-slate-700 space-y-4 text-xs sm:text-sm">
+          <div class="flex items-center justify-between font-bold border-b border-slate-200 dark:border-slate-700 pb-2">
+            <span class="text-slate-900 dark:text-white text-base">Case Study 1: Complete 3-Stage Retirement Plan</span>
+            <span class="text-xs text-indigo-600 dark:text-indigo-400 font-mono">Exam Typical Pattern</span>
+          </div>
+
+          <div class="p-3 bg-white dark:bg-slate-900 rounded-xl border border-slate-200 dark:border-slate-700 space-y-1">
+            <strong class="text-slate-900 dark:text-white block font-bold">Client Profile & Assumptions:</strong>
+            <div class="grid grid-cols-2 sm:grid-cols-4 gap-2 text-slate-600 dark:text-slate-400 text-xs">
+              <div>• Current Age: <strong>35 Years</strong></div>
+              <div>• Retirement Age: <strong>60 Years</strong> ($N_1 = 25$)</div>
+              <div>• Life Expectancy: <strong>85 Years</strong> ($N_2 = 25$)</div>
+              <div>• Current Annual Exp: <strong>₹6,00,000</strong></div>
+              <div>• Pre-Ret Inflation: <strong>6.0% p.a.</strong></div>
+              <div>• Post-Ret Inflation: <strong>6.0% p.a.</strong></div>
+              <div>• Pre-Ret Return: <strong>12.0% p.a.</strong></div>
+              <div>• Post-Ret Return: <strong>8.0% p.a.</strong></div>
+            </div>
+          </div>
+
+          <!-- Step 1 Solution -->
+          <div class="space-y-1">
+            <strong class="text-indigo-600 dark:text-indigo-400 font-bold block">Step 1: Calculate Living Expense at Age 60</strong>
+            <p class="text-slate-600 dark:text-slate-400">
+              $$FV_{\text{exp}} = 6,00,000 \times (1 + 0.06)^{25} = 6,00,000 \times 4.291871 = \mathbf{₹25,75,123\text{ per year}}$$
+            </p>
+          </div>
+
+          <!-- Step 2 Solution -->
+          <div class="space-y-1">
+            <strong class="text-indigo-600 dark:text-indigo-400 font-bold block">Step 2: Calculate Exact Real Rate & Corpus at Age 60</strong>
+            <p class="text-slate-600 dark:text-slate-400">
+              Exact Real Rate:
+              $$r_{\text{real}} = \frac{1 + 0.08}{1 + 0.06} - 1 = \frac{1.08}{1.06} - 1 = \mathbf{1.88679\%} \quad (0.0188679)$$
+            </p>
+            <p class="text-slate-600 dark:text-slate-400 mt-1">
+              Corpus Required (Annuity Due for 25 years):
+              $$\text{PVIFA}(1.88679\%, 25) = \frac{1 - (1.0188679)^{-25}}{0.0188679} = \frac{1 - 0.626821}{0.0188679} = 19.7785$$
+              $$\text{Corpus} = 25,75,123 \times 19.7785 \times (1 + 0.0188679) = \mathbf{₹5,18,94,815} \approx \mathbf{₹5.19\text{ Crores}}$$
+            </p>
+          </div>
+
+          <!-- Step 3 Solution -->
+          <div class="space-y-1">
+            <strong class="text-indigo-600 dark:text-indigo-400 font-bold block">Step 3: Calculate Annual Savings Required over 25 Years</strong>
+            <p class="text-slate-600 dark:text-slate-400">
+              Future value annuity factor at 12% for 25 years:
+              $$\text{FVIFA}(12\%, 25) = \frac{(1.12)^{25} - 1}{0.12} = \frac{17.00006 - 1}{0.12} = 133.3339$$
+              $$PMT = \frac{5,18,94,815}{133.3339} = \mathbf{₹3,89,209\text{ per year}} \quad (\approx \mathbf{₹32,434\text{ per month}})$$
+            </p>
+          </div>
+        </div>
+
+        <!-- Case Study 2: Capital Preservation vs Capital Depletion -->
+        <div class="p-5 rounded-2xl bg-amber-50/60 dark:bg-amber-950/30 border border-amber-200 dark:border-amber-800 space-y-3 text-xs sm:text-sm">
+          <strong class="text-amber-950 dark:text-amber-300 block font-bold text-base">
+            Case Study 2: Capital Preservation Method vs Capital Depletion Method ⭐
+          </strong>
+          <p class="text-slate-700 dark:text-slate-300 leading-relaxed">
+            What if the client in Case Study 1 insists that the entire principal corpus must remain 100% intact to leave as an inheritance for children (Capital Preservation)?
+          </p>
+
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-1">
+            <div class="p-3.5 bg-white dark:bg-slate-900 rounded-xl border border-amber-300 dark:border-amber-700 space-y-1 text-xs">
+              <strong class="text-slate-900 dark:text-white font-bold block">Capital Depletion Method (Target = ₹0 at death)</strong>
+              <p class="text-slate-600 dark:text-slate-400">Principal + interest are systematically consumed over 25 years.</p>
+              <div class="text-indigo-600 dark:text-indigo-400 font-mono font-bold text-sm">Required Corpus: ₹5.19 Crores</div>
+            </div>
+
+            <div class="p-3.5 bg-white dark:bg-slate-900 rounded-xl border border-amber-300 dark:border-amber-700 space-y-1 text-xs">
+              <strong class="text-slate-900 dark:text-white font-bold block">Capital Preservation Method (Perpetuity)</strong>
+              <p class="text-slate-600 dark:text-slate-400">Only the real rate of return is drawn as income: $\text{Corpus} = \frac{\text{Expense}}{r_{\text{real}}}$.</p>
+              <div class="text-rose-600 dark:text-rose-400 font-mono font-bold text-sm">
+                $$\text{Corpus} = \frac{25,75,123}{0.0188679} = \mathbf{₹13.65\text{ Crores}}$$
+              </div>
+            </div>
+          </div>
+          <p class="text-[11px] text-amber-950 dark:text-amber-200 italic">
+            Exam Takeaway: Capital preservation requires more than <strong>2.6 times the capital</strong> (₹13.65 Cr vs ₹5.19 Cr), demanding drastically higher savings during accumulation!
+          </p>
+        </div>
+      </section>
+
+      <!-- Section 6.4 -->
+      <section id="section-4" class="bg-white dark:bg-slate-900 rounded-3xl p-6 sm:p-8 border border-amber-200 dark:border-amber-800/80 shadow-xs space-y-6">
+        <div class="flex items-center justify-between">
+          <div class="flex items-center gap-2 text-xs font-bold text-amber-700 dark:text-amber-400 uppercase tracking-wider">
+            <span class="w-2 h-2 rounded-full bg-amber-500"></span> Section 6.4 &bull; ⭐ Super High Exam Yield
+          </div>
+          <span class="px-2.5 py-0.5 rounded-full text-xs font-extrabold bg-amber-100 dark:bg-amber-950 text-amber-800 dark:text-amber-300 border border-amber-300 dark:border-amber-700">
+            SWR & 4% Rule
+          </span>
+        </div>
+
+        <div>
+          <h2 class="font-display text-xl sm:text-2xl font-bold text-slate-900 dark:text-white">Safe Withdrawal Rates (SWR) & The 4% Rule</h2>
+          <p class="text-xs sm:text-sm text-slate-600 dark:text-slate-300 mt-1 leading-relaxed">
+            The concept of the <strong>Safe Withdrawal Rate (SWR)</strong> answers the central dilemma of decumulation: <em>"What percentage can a retiree safely withdraw from their portfolio each year without running out of money before death?"</em>
+          </p>
+        </div>
+
+        <!-- 4% Rule Mechanics -->
+        <div class="p-5 rounded-2xl bg-indigo-50/60 dark:bg-indigo-950/30 border border-indigo-200 dark:border-indigo-800 space-y-3 text-xs sm:text-sm">
+          <div class="flex items-center justify-between">
+            <strong class="text-indigo-950 dark:text-indigo-300 font-bold text-base">William Bengen’s 4% Rule (1994) & The Trinity Study (1998)</strong>
+            <span class="px-2 py-0.5 rounded bg-indigo-200 dark:bg-indigo-900 text-indigo-800 dark:text-indigo-200 text-xs font-bold">Landmark Theory</span>
+          </div>
+          <p class="text-slate-700 dark:text-slate-300 leading-relaxed">
+            William Bengen analyzed historical rolling 30-year periods of US market data (including the Great Depression of 1929 and the 1970s stagflation). He proved that a portfolio composed of <strong>50% to 75% equities and the rest intermediate bonds</strong> had a 100% historical success rate over a 30-year horizon if the retiree followed this exact rule:
+          </p>
+          <div class="p-3 bg-white dark:bg-slate-900 rounded-xl border border-indigo-200 dark:border-indigo-800 text-xs text-slate-700 dark:text-slate-300 space-y-1">
+            <p>1. In <strong>Year 1</strong> of retirement, withdraw exactly <strong>4.0%</strong> of the initial portfolio value.</p>
+            <p>2. In <strong>Year 2 and all subsequent years</strong>, do NOT take 4% of the new portfolio! Instead, take the <strong>rupee amount from Year 1 adjusted upwards for inflation</strong>.</p>
+            <p><em>Example:</em> On a ₹1 Crore corpus, Year 1 withdrawal is ₹4,00,000. If Year 1 inflation is 6%, Year 2 withdrawal is $₹4,00,000 \times 1.06 = \mathbf{₹4,24,000}$, regardless of whether the portfolio went up or down!</p>
+          </div>
+        </div>
+
+        <!-- Application in India -->
+        <div class="p-4 rounded-2xl bg-slate-50 dark:bg-slate-800/60 border border-slate-200 dark:border-slate-700 space-y-2 text-xs sm:text-sm">
+          <strong class="text-slate-900 dark:text-white font-bold block text-sm">Critical Caveats for Applying the 4% Rule in India ⭐</strong>
+          <div class="space-y-1 text-slate-600 dark:text-slate-400 text-xs">
+            <p>• <strong>Higher & More Volatile Inflation:</strong> US long-term inflation was ~2.5% to 3.0%, whereas Indian CPI averages 5.5% to 7.0% with medical inflation at 12%.</p>
+            <p>• <strong>Shorter Indian Capital Market History:</strong> Unlike the US with 100+ years of equity data, Indian public equity markets have only ~45 years of modern trading history.</p>
+            <p>• <strong>Longevity Horizon:</strong> Urban Indian retirees at age 58-60 frequently live 30 to 35+ years in decumulation.</p>
+            <p>• <strong>The Indian SWR Benchmark:</strong> Most financial researchers and SEBI Investment Advisers recommend a conservative withdrawal rate of <strong>3.0% to 3.5%</strong> in India to ensure portfolio survival across adverse return sequences!</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Section 6.5 -->
+      <section id="section-5" class="bg-white dark:bg-slate-900 rounded-3xl p-6 sm:p-8 border border-amber-200 dark:border-amber-800/80 shadow-xs space-y-6">
+        <div class="flex items-center justify-between">
+          <div class="flex items-center gap-2 text-xs font-bold text-amber-700 dark:text-amber-400 uppercase tracking-wider">
+            <span class="w-2 h-2 rounded-full bg-amber-500"></span> Section 6.5 &bull; ⭐ Super High Exam Yield
+          </div>
+          <span class="px-2.5 py-0.5 rounded-full text-xs font-extrabold bg-amber-100 dark:bg-amber-950 text-amber-800 dark:text-amber-300 border border-amber-300 dark:border-amber-700">
+            Annuity Evaluation
+          </span>
+        </div>
+
+        <div>
+          <h2 class="font-display text-xl sm:text-2xl font-bold text-slate-900 dark:text-white">Annuity Provider Evaluation & Inflation Drag</h2>
+          <p class="text-xs sm:text-sm text-slate-600 dark:text-slate-300 mt-1 leading-relaxed">
+            Selecting an annuity provider is an irreversible multi-decade commitment. Under SEBI and IRDAI fiduciary standards, advisers evaluate providers using three institutional pillars:
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 sm:grid-cols-3 gap-3 text-xs">
+          <div class="p-3.5 bg-slate-50 dark:bg-slate-800/60 rounded-xl border border-slate-200 dark:border-slate-700 space-y-1">
+            <strong class="text-slate-900 dark:text-white font-bold block">1. Solvency Ratio ⭐</strong>
+            <span class="text-indigo-600 dark:text-indigo-400 font-bold block text-sm">&ge; 1.50 (150%)</span>
+            <p class="text-slate-500 dark:text-slate-400">IRDAI mandates a statutory minimum Solvency Ratio of 1.50 to guarantee ability to honor lifetime payouts.</p>
+          </div>
+
+          <div class="p-3.5 bg-slate-50 dark:bg-slate-800/60 rounded-xl border border-slate-200 dark:border-slate-700 space-y-1">
+            <strong class="text-slate-900 dark:text-white font-bold block">2. Claim Settlement Ratio</strong>
+            <span class="text-emerald-600 dark:text-emerald-400 font-bold block text-sm">&gt; 98.0%</span>
+            <p class="text-slate-500 dark:text-slate-400">Published annually in IRDAI handbook; ensures prompt payout of ROP corpus to surviving nominees.</p>
+          </div>
+
+          <div class="p-3.5 bg-slate-50 dark:bg-slate-800/60 rounded-xl border border-slate-200 dark:border-slate-700 space-y-1">
+            <strong class="text-slate-900 dark:text-white font-bold block">3. Internal Rate of Return</strong>
+            <span class="text-slate-900 dark:text-white font-bold block text-sm">Real IRR ~ 5.5% - 6.5%</span>
+            <p class="text-slate-500 dark:text-slate-400">Evaluate net post-tax internal return; life annuity with ROP usually yields lower effective IRR than No-ROP.</p>
+          </div>
+        </div>
+
+        <!-- Annuity Inflation Drag Demonstration -->
+        <div class="p-4 rounded-2xl bg-rose-50/70 dark:bg-rose-950/40 border border-rose-200 dark:border-rose-900/60 space-y-2 text-xs sm:text-sm">
+          <strong class="text-rose-950 dark:text-rose-300 block font-bold text-sm">The Lethal "Inflation Drag" on Flat Annuities</strong>
+          <p class="text-slate-700 dark:text-slate-300 leading-relaxed">
+            Most Indian retirees choose a flat nominal life annuity. However, because the rupee payout never increases, <strong>its purchasing power declines relentlessly</strong>:
+          </p>
+          <div class="grid grid-cols-1 sm:grid-cols-3 gap-2 pt-1 font-mono text-xs">
+            <div class="p-2.5 bg-white dark:bg-slate-900 rounded-xl border border-rose-300 dark:border-rose-800 text-center">
+              <span class="block text-slate-500 text-[10px]">Year 1</span>
+              <strong class="text-slate-900 dark:text-white">₹50,000 / mo</strong>
+              <span class="text-[10px] text-emerald-600 block">100% Value</span>
+            </div>
+            <div class="p-2.5 bg-white dark:bg-slate-900 rounded-xl border border-rose-300 dark:border-rose-800 text-center">
+              <span class="block text-slate-500 text-[10px]">Year 12 (at 6% inflation)</span>
+              <strong class="text-slate-900 dark:text-white">₹50,000 / mo</strong>
+              <span class="text-[10px] text-amber-600 block">Worth only ₹24,848</span>
+            </div>
+            <div class="p-2.5 bg-white dark:bg-slate-900 rounded-xl border border-rose-300 dark:border-rose-800 text-center">
+              <span class="block text-slate-500 text-[10px]">Year 24 (at 6% inflation)</span>
+              <strong class="text-slate-900 dark:text-white">₹50,000 / mo</strong>
+              <span class="text-[10px] text-rose-600 block">Worth only ₹12,348!</span>
+            </div>
+          </div>
+          <p class="text-[11px] text-rose-900 dark:text-rose-300">
+            <strong>Advisory Solution:</strong> Never annuitize 100% of a retirement nest egg into a flat annuity. Maintain a hybrid architecture: Annuitize only enough to cover baseline non-discretionary expenses, and deploy the remainder into equity/hybrid Mutual Fund Systematic Withdrawal Plans (SWP) for growth.
+          </p>
+        </div>
+      </section>
+
+      <!-- Section 6.6 -->
+      <section id="section-6" class="bg-white dark:bg-slate-900 rounded-3xl p-6 sm:p-8 border border-slate-200 dark:border-slate-800 shadow-xs space-y-6">
+        <div class="flex items-center justify-between">
+          <div class="flex items-center gap-2 text-xs font-bold text-slate-500 uppercase tracking-wider">
+            <span class="w-2 h-2 rounded-full bg-slate-400"></span> Section 6.6 &bull; Estate Planning Integration
+          </div>
+          <span class="px-2 py-0.5 rounded text-[11px] font-semibold bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300">Legacy Planning</span>
+        </div>
+
+        <div>
+          <h2 class="font-display text-xl sm:text-2xl font-bold text-slate-900 dark:text-white">Philanthropy, Estate Planning & Cognitive Safeguards</h2>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-4 text-xs sm:text-sm">
+          
+          <div class="p-4 rounded-2xl bg-slate-50 dark:bg-slate-800/60 border border-slate-200 dark:border-slate-700 space-y-2">
+            <strong class="text-slate-900 dark:text-white block font-bold text-base">Philanthropy & Section 80G</strong>
+            <div class="text-slate-600 dark:text-slate-400 space-y-1 text-xs">
+              <p>• Planned giving integrated into annual decumulation withdrawals.</p>
+              <p>• Donations to eligible registered trusts qualify for <strong>50% or 100% tax deductions</strong> under Section 80G (subject to 10% of Adjusted GTI cap).</p>
+              <p>• Creation of private charitable family foundations for perpetual social impact.</p>
+            </div>
+          </div>
+
+          <div class="p-4 rounded-2xl bg-slate-50 dark:bg-slate-800/60 border border-slate-200 dark:border-slate-700 space-y-2">
+            <strong class="text-slate-900 dark:text-white block font-bold text-base">Wills vs Nomination Laws ⭐</strong>
+            <div class="text-slate-600 dark:text-slate-400 space-y-1 text-xs">
+              <p>• <strong>Supreme Court Precedent:</strong> A nominee is merely a <em>trustee / custodian</em>, NOT the legal owner (except for shares/debentures under specific company law contexts).</p>
+              <p>• A valid, registered <strong>Will</strong> supersedes nominations and personal succession laws.</p>
+              <p>• Probate is mandatory for wills executed in Presidency towns (Mumbai, Kolkata, Chennai).</p>
+            </div>
+          </div>
+
+          <div class="p-4 rounded-2xl bg-slate-50 dark:bg-slate-800/60 border border-slate-200 dark:border-slate-700 space-y-2">
+            <strong class="text-slate-900 dark:text-white block font-bold text-base">Cognitive Impairment Safeguards</strong>
+            <div class="text-slate-600 dark:text-slate-400 space-y-1 text-xs">
+              <p>• <strong>Durable Power of Attorney (POA):</strong> Appointing a trusted attorney-in-fact before onset of dementia or Alzheimer's disease.</p>
+              <p>• <strong>Private Family Living Trusts:</strong> Ensures seamless asset management by corporate trustees without court intervention if the retiree becomes incapacitated.</p>
+              <p>• Mandated dual authorization for large financial liquidations.</p>
+            </div>
+          </div>
+
+        </div>
+      </section>
+
+      <!-- Interactive Quiz Section -->
+      <section id="interactive-quiz" class="bg-gradient-to-br from-indigo-950 via-slate-900 to-slate-950 rounded-3xl p-6 sm:p-10 text-white shadow-xl space-y-8 border border-indigo-800/60">
+        <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 border-b border-indigo-800/80 pb-6">
+          <div>
+            <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-indigo-500/20 text-indigo-300 text-xs font-semibold mb-2">
+              <i data-lucide="calculator" class="w-3.5 h-3.5 text-indigo-400"></i>
+              Chapter 6 Mathematical Assessment
+            </div>
+            <h2 class="font-display text-2xl sm:text-3xl font-bold text-white">Chapter 6 Interactive Assessment Test</h2>
+            <p class="text-xs sm:text-sm text-slate-300 mt-1">12 high-yield mathematical and strategic questions on real rates of return, corpus sizing, annuity due calculations, 4% SWR, and solvency norms.</p>
+          </div>
+          <div class="flex items-center gap-2 px-4 py-2 rounded-xl bg-white/10 backdrop-blur-md border border-white/10 text-xs font-semibold">
+            <span id="answered-count" class="text-indigo-300 font-bold">0</span> / 12 Answered
+          </div>
+        </div>
+
+        <form id="quiz-form" class="space-y-6">
+          <div id="questions-container" class="space-y-6"></div>
+
+          <div class="pt-6 border-t border-indigo-800/80 flex flex-col sm:flex-row items-center justify-between gap-4">
+            <button type="button" id="submit-quiz-btn" onclick="submitQuiz()" class="w-full sm:w-auto px-8 py-3.5 rounded-xl bg-indigo-600 hover:bg-indigo-500 text-white font-bold text-sm shadow-lg shadow-indigo-600/30 transition-all flex items-center justify-center gap-2">
+              <i data-lucide="send" class="w-4 h-4"></i>
+              <span>Submit Assessment & View Detailed Solutions</span>
+            </button>
+            <button type="button" id="reset-quiz-btn" onclick="resetQuiz()" class="hidden w-full sm:w-auto px-6 py-3.5 rounded-xl bg-white/10 hover:bg-white/20 text-slate-200 font-semibold text-sm transition-all flex items-center justify-center gap-2">
+              <i data-lucide="rotate-ccw" class="w-4 h-4"></i>
+              <span>Retake Quiz</span>
+            </button>
+          </div>
+        </form>
+
+        <!-- Quiz Result & Scorecard -->
+        <div id="quiz-results" class="hidden rounded-2xl bg-white/10 p-6 sm:p-8 border border-white/15 backdrop-blur-lg space-y-6">
+          <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+            <div>
+              <span id="result-status-badge" class="px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider"></span>
+              <h3 class="font-display text-2xl font-bold mt-2 text-white">Your Chapter 6 Scorecard</h3>
+            </div>
+            <div class="text-right">
+              <span id="score-display" class="font-display text-4xl font-extrabold text-indigo-300">0 / 12</span>
+              <span id="percentage-display" class="block text-xs text-slate-300 mt-0.5">0%</span>
+            </div>
+          </div>
+          <p id="result-summary-text" class="text-sm text-slate-200 leading-relaxed"></p>
+        </div>
+      </section>
+
+      <!-- Bottom Navigation -->
+      <div class="flex items-center justify-between p-6 rounded-2xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800">
+        <a href="module8-ch5.html" class="inline-flex items-center gap-2 text-sm font-semibold text-slate-600 dark:text-slate-400 hover:text-indigo-600 transition-colors">
+          <i data-lucide="arrow-left" class="w-4 h-4"></i>
+          <span>Previous: Chapter 5 (Retirement Products)</span>
+        </a>
+        <a href="module8.html" class="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl bg-indigo-600 hover:bg-indigo-700 text-white font-semibold text-sm shadow-xs transition-all">
+          <span>Return to Module 8 Hub</span>
+          <i data-lucide="check-circle" class="w-4 h-4"></i>
+        </a>
+      </div>
+
+    </div>
+  </div>
+
+  <footer class="bg-white dark:bg-slate-900 border-t border-slate-200 dark:border-slate-800 py-6 text-center text-xs text-slate-500 dark:text-slate-400">
+    NISM Series X-B Certification Notes &bull; Module 8: Chapter 6 (Miscellaneous Aspects & Corpus Math) &bull; Level 2 Curriculum
+  </footer>
+
+  <script>
+    const questionsData = [
+      {
+        id: 1,
+        question: "If an investment portfolio earns a nominal return of 9.0% per annum and annual inflation is 6.0%, what is the EXACT real rate of return?",
+        options: [
+          { text: "3.0000%", key: "a" },
+          { text: "2.8302%", key: "b" },
+          { text: "3.1800%", key: "c" },
+          { text: "2.5000%", key: "d" }
+        ],
+        correct: "b",
+        explanation: "Exact Real Rate = [(1 + 0.09) / (1 + 0.06)] - 1 = [1.09 / 1.06] - 1 = 0.028302 or 2.8302%. Simple subtraction gives 3.0%, which is incorrect for multi-year compounding."
+      },
+      {
+        id: 2,
+        question: "Why MUST retirement decumulation calculations be conducted using the 'Annuity Due' (BGN) mode rather than 'Ordinary Annuity' (END) mode?",
+        options: [
+          { text: "Because financial calculator software cannot calculate ordinary annuities", key: "a" },
+          { text: "Because living expenses must be withdrawn at the beginning of each period to fund day-to-day survival", key: "b" },
+          { text: "Because SEBI regulations mandate that all annuities be compounded continuously", key: "c" },
+          { text: "Because ordinary annuities apply only to real estate lease rentals", key: "d" }
+        ],
+        correct: "b",
+        explanation: "Retirement withdrawals occur at the beginning of each year or month (Annuity Due) because a retiree requires cash immediately to meet living needs, unlike commercial loans paid in arrears."
+      },
+      {
+        id: 3,
+        question: "A client currently spends ₹8,00,000 annually. If the client plans to retire in 20 years and inflation is projected at 6% p.a., what will be the annual living expenditure in Year 1 of retirement? (Use FV = PV * (1+e)^n)",
+        options: [
+          { text: "₹17,60,000", key: "a" },
+          { text: "₹25,65,708", key: "b" },
+          { text: "₹32,15,400", key: "c" },
+          { text: "₹19,20,000", key: "d" }
+        ],
+        correct: "b",
+        explanation: "FV = 8,00,000 * (1.06)^20 = 8,00,000 * 3.207135 = ₹25,65,708."
+      },
+      {
+        id: 4,
+        question: "Under the Capital Preservation Method, how is the required retirement corpus mathematically calculated?",
+        options: [
+          { text: "Corpus = Annual Living Expenses / Post-Retirement Real Rate of Return", key: "a" },
+          { text: "Corpus = Annual Living Expenses * Number of Decumulation Years", key: "b" },
+          { text: "Corpus = Present Value of an amortizing annuity maturing at zero", key: "c" },
+          { text: "Corpus = Annual Living Expenses / Nominal Interest Rate", key: "d" }
+        ],
+        correct: "a",
+        explanation: "In Capital Preservation, the principal corpus remains untouched forever (perpetuity). The retiree only consumes the real return generated: Corpus = Expense / r_real."
+      },
+      {
+        id: 5,
+        question: "What was the fundamental premise of William Bengen's famous 1994 Safe Withdrawal Rate (4% Rule) study?",
+        options: [
+          { text: "The retiree withdraws 4% of the current portfolio value every year without fail", key: "a" },
+          { text: "The retiree withdraws 4% of the initial portfolio in Year 1, and adjusts that rupee amount for inflation in all subsequent years", key: "b" },
+          { text: "The portfolio must be 100% invested in 10-year US Treasury bonds", key: "c" },
+          { text: "Withdrawals should only be taken in years when the stock market rises", key: "d" }
+        ],
+        correct: "b",
+        explanation: "Bengen's rule specifies taking 4% of the initial corpus in Year 1, and in subsequent years withdrawing that exact dollar/rupee amount adjusted for annual inflation."
+      },
+      {
+        id: 6,
+        question: "Why is a Safe Withdrawal Rate of 4% considered too aggressive for retirees in India, prompting advisers to recommend 3.0% to 3.5% instead?",
+        options: [
+          { text: "Because Indian stock markets deliver zero long-term returns", key: "a" },
+          { text: "Because India experiences higher and more volatile inflation, shorter market history, and extended post-retirement horizons", key: "b" },
+          { text: "Because Indian banks charge a 1% mandatory fee on all monthly retirement withdrawals", key: "c" },
+          { text: "Because the RBI legally prohibits withdrawing more than 3.5% from mutual funds", key: "d" }
+        ],
+        correct: "b",
+        explanation: "Higher average headline inflation (6-7%), medical inflation (12%), and potential for prolonged adverse return sequences mean a 4% withdrawal rate carries a significant probability of premature portfolio depletion in India. A 3% to 3.5% SWR is much safer."
+      },
+      {
+        id: 7,
+        question: "What is the statutory minimum Solvency Ratio mandated by IRDAI for life insurance companies operating in India?",
+        options: [
+          { text: "1.00 (100%)", key: "a" },
+          { text: "1.25 (125%)", key: "b" },
+          { text: "1.50 (150%)", key: "c" },
+          { text: "2.00 (200%)", key: "d" }
+        ],
+        correct: "c",
+        explanation: "Under IRDAI regulations, every life insurer in India must maintain a minimum Solvency Ratio of 1.50 (150%) to ensure it possesses adequate financial buffers to meet policyholder claims."
+      },
+      {
+        id: 8,
+        question: "What is the primary danger of putting 100% of a retiree's corpus into a fixed flat life annuity?",
+        options: [
+          { text: "The insurer will unilaterally seize the principal after 3 years", key: "a" },
+          { text: "Inflation drag: because nominal payouts remain flat, real purchasing power is cut in half every 12 to 14 years at 6% inflation", key: "b" },
+          { text: "Annuity payouts are subject to a 50% flat penalty tax under Section 80CCD", key: "c" },
+          { text: "Flat annuities violate SEBI mutual fund guidelines", key: "d" }
+        ],
+        correct: "b",
+        explanation: "A flat annuity never adjusts for inflation. At 6% inflation, a ₹50,000 monthly payout loses half its purchasing power within 12 years and 75% within 24 years, creating severe poverty in advanced old age."
+      },
+      {
+        id: 9,
+        question: "In Indian estate law, what is the legal standing of a 'Nominee' relative to the beneficiaries named in a valid Will?",
+        options: [
+          { text: "The nominee automatically becomes the absolute owner of the asset, overriding the Will", key: "a" },
+          { text: "The nominee is merely a trustee/custodian responsible for receiving the asset and handing it to legal heirs named in the Will", key: "b" },
+          { text: "A nominee has no right to receive the proceeds from banks or insurers", key: "c" },
+          { text: "A nominee shares 50% ownership with the executor of the Will", key: "d" }
+        ],
+        correct: "b",
+        explanation: "As upheld by the Supreme Court of India, a nominee is merely a caretaker/trustee authorized to receive the funds to provide valid discharge to the financial institution. The actual ownership vests with the legal heirs under the Will."
+      },
+      {
+        id: 10,
+        question: "If an investor requires an annual income of ₹12,00,000 at retirement for 20 years, and the exact real rate of return is 2.0% p.a., what is the required corpus under Annuity Due? (Given: PVIFA(2%, 20) = 16.3514)",
+        options: [
+          { text: "₹1,96,21,680", key: "a" },
+          { text: "₹2,00,14,114", key: "b" },
+          { text: "₹2,40,00,000", key: "c" },
+          { text: "₹1,80,50,000", key: "d" }
+        ],
+        correct: "b",
+        explanation: "Corpus (Annuity Due) = Expense * PVIFA * (1 + r_real) = 12,00,000 * 16.3514 * (1.02) = ₹2,00,14,114."
+      },
+      {
+        id: 11,
+        question: "Which legal instrument is specifically designed to allow a designated representative to manage a retiree's financial affairs if they suffer cognitive decline or dementia?",
+        options: [
+          { text: "Power of Attorney (Durable POA)", key: "a" },
+          { text: "Promissory Note", key: "b" },
+          { text: "Letter of Administration", key: "c" },
+          { text: "Memorandum of Association", key: "d" }
+        ],
+        correct: "a",
+        explanation: "A Durable Power of Attorney allows an individual to grant authority to an agent to handle financial transactions, healthcare decisions, and asset management in the event of future cognitive incapacity."
+      },
+      {
+        id: 12,
+        question: "Under Section 80G of the Income Tax Act, 1961, what is the maximum deduction allowed for philanthropic donations to eligible charitable institutions?",
+        options: [
+          { text: "100% of the donation with no upper limit under any circumstances", key: "a" },
+          { text: "50% or 100% of the donation, generally subject to a qualifying limit of 10% of Adjusted Gross Total Income", key: "b" },
+          { text: "Flat ₹50,000 per financial year", key: "c" },
+          { text: "Deductions are restricted exclusively to contributions made to the Prime Minister's Relief Fund", key: "d" }
+        ],
+        correct: "b",
+        explanation: "Donations under Section 80G qualify for either 50% or 100% deduction depending on the recipient fund. For general charitable institutions, the deduction is subject to a ceiling of 10% of the donor's Adjusted Gross Total Income."
+      }
+    ];
+
+    let userAnswers = {};
+
+    function renderQuiz() {
+      const container = document.getElementById("questions-container");
+      container.innerHTML = "";
+
+      questionsData.forEach((q, index) => {
+        const qDiv = document.createElement("div");
+        qDiv.className = "p-5 rounded-2xl bg-white/5 border border-white/10 space-y-4";
+        qDiv.id = `q-box-${q.id}`;
+
+        let optionsHtml = "";
+        q.options.forEach(opt => {
+          optionsHtml += `
+            <label class="flex items-center gap-3 p-3 rounded-xl bg-white/5 hover:bg-white/10 border border-white/5 cursor-pointer text-xs sm:text-sm transition-all" onclick="selectOption(${q.id}, '${opt.key}')" id="label-${q.id}-${opt.key}">
+              <input type="radio" name="question-${q.id}" value="${opt.key}" class="w-4 h-4 text-indigo-500 focus:ring-0">
+              <span class="font-bold text-indigo-300 w-5 uppercase">${opt.key}.</span>
+              <span class="text-slate-200">${opt.text}</span>
+            </label>
+          `;
+        });
+
+        qDiv.innerHTML = `
+          <div class="flex items-start justify-between gap-2">
+            <span class="text-xs font-bold text-indigo-400 uppercase tracking-wider">Question ${index + 1} of ${questionsData.length}</span>
+            <span id="badge-${q.id}" class="text-xs px-2 py-0.5 rounded-full bg-white/5 text-slate-400 font-medium">Unanswered</span>
+          </div>
+          <h4 class="font-display font-semibold text-sm sm:text-base text-white">${q.question}</h4>
+          <div class="space-y-2 mt-3">${optionsHtml}</div>
+          <div id="explanation-${q.id}" class="hidden p-4 rounded-xl text-xs sm:text-sm mt-3 space-y-1"></div>
+        `;
+        container.appendChild(qDiv);
+      });
+      if (window.lucide) lucide.createIcons();
+    }
+
+    function selectOption(qId, key) {
+      userAnswers[qId] = key;
+      document.getElementById("answered-count").innerText = Object.keys(userAnswers).length;
+      
+      const badge = document.getElementById(`badge-${qId}`);
+      if (badge) {
+        badge.innerText = "Answered";
+        badge.className = "text-xs px-2 py-0.5 rounded-full bg-indigo-500/20 text-indigo-300 font-medium";
+      }
+
+      const q = questionsData.find(item => item.id === qId);
+      q.options.forEach(opt => {
+        const lbl = document.getElementById(`label-${qId}-${opt.key}`);
+        if (opt.key === key) {
+          lbl.className = "flex items-center gap-3 p-3 rounded-xl bg-indigo-600/30 border border-indigo-400/50 cursor-pointer text-xs sm:text-sm transition-all";
+        } else {
+          lbl.className = "flex items-center gap-3 p-3 rounded-xl bg-white/5 hover:bg-white/10 border border-white/5 cursor-pointer text-xs sm:text-sm transition-all";
+        }
+      });
+    }
+
+    function submitQuiz() {
+      let score = 0;
+      questionsData.forEach(q => {
+        const selected = userAnswers[q.id];
+        const isCorrect = selected === q.correct;
+        if (isCorrect) score++;
+
+        const explanationDiv = document.getElementById(`explanation-${q.id}`);
+        explanationDiv.classList.remove("hidden");
+
+        if (isCorrect) {
+          explanationDiv.className = "p-4 rounded-xl text-xs sm:text-sm mt-3 bg-emerald-950/60 border border-emerald-600 text-emerald-200";
+          explanationDiv.innerHTML = `
+            <div class="font-bold text-emerald-400 flex items-center gap-1.5">
+              <i data-lucide="check-circle" class="w-4 h-4"></i> Correct!
+            </div>
+            <p class="mt-1 text-slate-200">${q.explanation}</p>
+          `;
+        } else {
+          explanationDiv.className = "p-4 rounded-xl text-xs sm:text-sm mt-3 bg-rose-950/60 border border-rose-600 text-rose-200";
+          explanationDiv.innerHTML = `
+            <div class="font-bold text-rose-400 flex items-center gap-1.5">
+              <i data-lucide="x-circle" class="w-4 h-4"></i> Incorrect (Correct Answer: Option ${q.correct.toUpperCase()})
+            </div>
+            <p class="mt-1 text-slate-200">${q.explanation}</p>
+          `;
+        }
+      });
+
+      const percentage = Math.round((score / questionsData.length) * 100);
+      const passed = percentage >= 60;
+      
+      const resultsDiv = document.getElementById("quiz-results");
+      resultsDiv.classList.remove("hidden");
+
+      const statusBadge = document.getElementById("result-status-badge");
+      statusBadge.innerText = passed ? "Status: Passed (60%+ Benchmark)" : "Status: Needs Revision";
+      statusBadge.className = passed ? "px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider bg-emerald-500 text-emerald-950" : "px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider bg-amber-500 text-amber-950";
+
+      document.getElementById("score-display").innerText = `${score} / ${questionsData.length}`;
+      document.getElementById("percentage-display").innerText = `${percentage}% Score (Passing criteria: 60%)`;
+
+      document.getElementById("result-summary-text").innerText = passed
+        ? `Incredible! You scored ${percentage}%, demonstrating quantitative precision in real rate computations, corpus sizing formulas, safe withdrawal rate strategies, and estate planning legalities.`
+        : `You scored ${percentage}%, below the 60% passing benchmark. Review Section 6.1 (Real Rate Formula), Section 6.2 (3-Stage Corpus Model), Section 6.4 (4% Bengen Rule), and Section 6.5 (Annuity Solvency & Inflation Drag) before re-attempting.`;
+
+      document.getElementById("submit-quiz-btn").classList.add("hidden");
+      document.getElementById("reset-quiz-btn").classList.remove("hidden");
+
+      resultsDiv.scrollIntoView({ behavior: 'smooth' });
+      if (window.lucide) lucide.createIcons();
+    }
+
+    function resetQuiz() {
+      userAnswers = {};
+      document.getElementById("answered-count").innerText = "0";
+      document.getElementById("quiz-results").classList.add("hidden");
+      document.getElementById("submit-quiz-btn").classList.remove("hidden");
+      document.getElementById("reset-quiz-btn").classList.add("hidden");
+      renderQuiz();
+      document.getElementById("interactive-quiz").scrollIntoView({ behavior: 'smooth' });
+    }
+
+    // Theme toggler
+    function initTheme() {
+      const saved = localStorage.getItem("nism-theme");
+      if (saved === "dark" || (!saved && window.matchMedia("(prefers-color-scheme: dark)").matches)) {
+        document.documentElement.classList.add("dark");
+      } else {
+        document.documentElement.classList.remove("dark");
+      }
+      updateThemeIcon();
+    }
+
+    window.toggleDarkMode = function() {
+      const isDark = document.documentElement.classList.toggle("dark");
+      localStorage.setItem("nism-theme", isDark ? "dark" : "light");
+      updateThemeIcon();
+    };
+
+    function updateThemeIcon() {
+      const btn = document.getElementById("nism-header-theme-btn");
+      if (btn) {
+        const isDark = document.documentElement.classList.contains("dark");
+        btn.innerHTML = `<i data-lucide="${isDark ? 'sun' : 'moon'}" class="w-4 h-4 ${isDark ? 'text-amber-400' : 'text-slate-600'}"></i>`;
+        if (window.lucide) lucide.createIcons();
+      }
+    }
+
+    window.addEventListener("DOMContentLoaded", () => {
+      initTheme();
+      renderQuiz();
+      const preloader = document.getElementById("eduleb-preloader");
+      if (preloader) {
+        setTimeout(() => {
+          preloader.style.opacity = "0";
+          setTimeout(() => { preloader.style.display = "none"; }, 350);
+        }, 200);
+      }
+    });
+  </script>
+</body>
+</html>
