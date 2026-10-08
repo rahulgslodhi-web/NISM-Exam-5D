@@ -81,7 +81,12 @@
   // Immediate Zero-FOUC Theme Invocation
   initTheme();
 
-  const NISM_DATA = [
+  // ==========================================
+  // 0. Dedicated Curriculum Data Architecture
+  // ==========================================
+
+  // Series V-D (Mutual Funds, Equity & IR Derivatives) - 3 Modules, 22 Chapters, 150 Marks
+  const NISM_5D_DATA = [
     {
       id: "module1",
       title: "Module 1: Mutual Funds",
@@ -148,11 +153,135 @@
     }
   ];
 
+  // Series X-B (Investment Adviser Level 2) - 6 Modules, 20 Chapters, 150 Marks
+  const NISM_10B_DATA = [
+    {
+      id: "module7",
+      title: "Module 7: Risk Mgmt & Insurance",
+      subtitle: "Life & Non-Life Insurance, Products & MWP Act",
+      marks: "25 Marks",
+      themeColor: "amber",
+      accentBg: "bg-amber-50/80",
+      accentBorder: "border-amber-200",
+      accentText: "text-amber-700",
+      dotBg: "bg-amber-600",
+      activeBg: "bg-amber-100 text-amber-900 border border-amber-300 font-bold dark:bg-amber-950/70 dark:text-amber-200 dark:border-amber-500/60",
+      chapters: [
+        { num: 1, title: "Basics of Insurance", marks: "7 M", url: "module7-ch1.html", tags: "risk pooling peril hazard utmost good faith insurable interest indemnity subrogation proximate cause contribution irdai section 45" },
+        { num: 2, title: "Features of Life Insurance Products", marks: "10 M ⭐", url: "module7-ch2.html", tags: "term insurance whole life endowment money back ulip charges surrender value paid up value riders mwp act section 6 trust" },
+        { num: 3, title: "Features of Non-Life Insurance Products", marks: "8 M", url: "module7-ch3.html", tags: "health insurance floater critical illness copay deductible waiting period exclusions motor third party comprehensive property" }
+      ]
+    },
+    {
+      id: "module8",
+      title: "Module 8: Retirement Planning",
+      subtitle: "Longevity Risk, Products, Formulas & Calculations",
+      marks: "30 Marks",
+      themeColor: "emerald",
+      accentBg: "bg-emerald-50/80",
+      accentBorder: "border-emerald-200",
+      accentText: "text-emerald-700",
+      dotBg: "bg-emerald-600",
+      activeBg: "bg-emerald-100 text-emerald-900 border border-emerald-300 font-bold dark:bg-emerald-950/70 dark:text-emerald-200 dark:border-emerald-500/60",
+      chapters: [
+        { num: 4, title: "Retirement Planning Basics", marks: "8 M", url: "module8-ch4.html", tags: "longevity risk inflation healthcare escalation income replacement ratio expense method accumulation decumulation phase" },
+        { num: 5, title: "Retirement Products", marks: "12 M ⭐", url: "module8-ch5.html", tags: "nps tier I tier II active choice auto choice apy epf eps edli ppf scss pmvvy annuity immediate deferred reverse mortgage" },
+        { num: 6, title: "Miscellaneous Aspects of Retirement", marks: "10 M ⭐", url: "module8-ch6.html", tags: "corpus calculation pv fv pmt safe withdrawal rate 4% rule annuity evaluation philanthropy decumulation" }
+      ]
+    },
+    {
+      id: "module9",
+      title: "Module 9: Taxation",
+      subtitle: "Income Tax Heads, Capital Gains & Product Tax Rules",
+      marks: "20 Marks",
+      themeColor: "blue",
+      accentBg: "bg-blue-50/80",
+      accentBorder: "border-blue-200",
+      accentText: "text-blue-700",
+      dotBg: "bg-blue-600",
+      activeBg: "bg-blue-100 text-blue-900 border border-blue-300 font-bold dark:bg-blue-950/70 dark:text-blue-200 dark:border-blue-500/60",
+      chapters: [
+        { num: 7, title: "Concepts in Taxation", marks: "3 M", url: "module9-ch7.html", tags: "residential status ror rnor nr 5 heads of income old vs new regime 115bac chapter vi-a surcharge cess advance tax" },
+        { num: 8, title: "Capital Gains", marks: "4 M ⭐", url: "module9-ch8.html", tags: "holding periods stcg ltcg 12.5% indexation grandfathering 112a section 54 54ec 54f budget 2024" },
+        { num: 9, title: "Income from Other Sources", marks: "2 M", url: "module9-ch9.html", tags: "dividend taxation interest securities deemed gifts 56(2)(x) relative family pension" },
+        { num: 10, title: "Taxation of Debt Products", marks: "3 M ⭐", url: "module9-ch10.html", tags: "fixed deposits corporate bonds section 50aa specified mutual funds slab rate mld market linked debentures" },
+        { num: 11, title: "Taxation of Equity Products", marks: "3 M", url: "module9-ch11.html", tags: "shares equity mutual funds section 111a 112a stt bonus stripping 94(8) dividend stripping 94(7)" },
+        { num: 12, title: "Taxation of Other Products", marks: "2 M", url: "module9-ch12.html", tags: "real estate physical gold silver sovereign gold bond sgb reits invits aifs cat I II III" },
+        { num: 13, title: "Tax Provisions for Special Cases", marks: "3 M", url: "module9-ch13.html", tags: "set off carry forward losses inter-source inter-head slb mergers acquisitions segregated portfolios scheme consolidation" }
+      ]
+    },
+    {
+      id: "module10",
+      title: "Module 10: Estate Planning",
+      subtitle: "Succession Laws, Trusts, Wills & Legal Architecture",
+      marks: "20 Marks",
+      themeColor: "rose",
+      accentBg: "bg-rose-50/80",
+      accentBorder: "border-rose-200",
+      accentText: "text-rose-700",
+      dotBg: "bg-rose-600",
+      activeBg: "bg-rose-100 text-rose-900 border border-rose-300 font-bold dark:bg-rose-950/70 dark:text-rose-200 dark:border-rose-500/60",
+      chapters: [
+        { num: 14, title: "Basics of Estate Planning", marks: "10 M", url: "module10-ch14.html", tags: "estate constituents hindu succession act class I class II heirs intestate testamentary reversion mutation indian succession act" },
+        { num: 15, title: "Tools for Estate Planning", marks: "10 M ⭐", url: "module10-ch15.html", tags: "wills codicil probate letters of administration gifts 56(2)(x) joint holding nomination shakti yezdani sarbati devi private family trust poa" }
+      ]
+    },
+    {
+      id: "module11",
+      title: "Module 11: Behavioral Finance",
+      subtitle: "Prospect Theory, Cognitive & Emotional Biases, Coaching",
+      marks: "10 Marks",
+      themeColor: "purple",
+      accentBg: "bg-purple-50/80",
+      accentBorder: "border-purple-200",
+      accentText: "text-purple-700",
+      dotBg: "bg-purple-600",
+      activeBg: "bg-purple-100 text-purple-900 border border-purple-300 font-bold dark:bg-purple-950/70 dark:text-purple-200 dark:border-purple-500/60",
+      chapters: [
+        { num: 16, title: "Basics of Behavioral Finance", marks: "6 M ⭐", url: "module11-ch16.html", tags: "prospect theory loss aversion framing anchoring mental accounting overconfidence herd behavior recency availability bubbles" },
+        { num: 17, title: "Behavioral Finance in Practice", marks: "4 M", url: "module11-ch17.html", tags: "emotional management market extremes nudging choice architecture financial advisor coach" }
+      ]
+    },
+    {
+      id: "module12",
+      title: "Module 12: Financial Advice & Cases",
+      subtitle: "Risk Profiling, Attribution & 4 Master Dossiers",
+      marks: "45 Marks ⭐",
+      themeColor: "indigo",
+      accentBg: "bg-indigo-50/80",
+      accentBorder: "border-indigo-200",
+      accentText: "text-indigo-700",
+      dotBg: "bg-indigo-600",
+      activeBg: "bg-indigo-100 text-indigo-900 border border-indigo-300 font-bold dark:bg-indigo-950/70 dark:text-indigo-200 dark:border-indigo-500/60",
+      chapters: [
+        { num: 18, title: "Risk Profiling for Investors", marks: "10 M ⭐", url: "module12-ch18.html", tags: "risk capacity tolerance appetite questionnaire strategic tactical asset allocation saa taa core satellite" },
+        { num: 19, title: "Comparison of Products", marks: "15 M ⭐", url: "module12-ch19.html", tags: "pms aif sharpe treynor sortino jensen alpha information ratio tracking error rebalancing corridor" },
+        { num: 20, title: "Comprehensive Case Studies", marks: "20 M ⭐⭐⭐", url: "module12-ch20.html", tags: "case studies vikram sharma hlv rajesh kulkarni step up retirement dr sanjeev singhania capital gains 54 arvind mittal trust" }
+      ]
+    }
+  ];
+
   // Helper: Detect Current File Name
   function getCurrentPageName() {
     const path = window.location.pathname;
     const parts = path.split("/");
     return parts[parts.length - 1] || "index.html";
+  }
+
+  // Context Detection: 10b vs 5d vs portal
+  function detectExamContext() {
+    const page = getCurrentPageName().toLowerCase();
+    if (/module(7|8|9|10|11|12)/.test(page) || page === "nism-10b.html") {
+      return "10b";
+    }
+    if (/module(1|2|3)/.test(page) || page === "nism-5d.html") {
+      return "5d";
+    }
+    return "portal";
+  }
+
+  function getActiveCurriculum() {
+    return detectExamContext() === "10b" ? NISM_10B_DATA : NISM_5D_DATA;
   }
 
   // Inject Modern Docs Theme Stylesheet
@@ -169,34 +298,40 @@
   // ==========================================
   // 1. macOS Study Progress Tracking Engine
   // ==========================================
-  function getCompletedChapters() {
+  function getCompletedChapters(examType) {
+    const ctx = examType || detectExamContext();
+    const key = ctx === "10b" ? "nism_10b_completed_chapters" : "nism_completed_chapters";
     try {
-      const raw = localStorage.getItem("nism_completed_chapters");
+      const raw = localStorage.getItem(key);
       return raw ? JSON.parse(raw) : [];
     } catch (e) {
       return [];
     }
   }
 
-  function isChapterCompleted(num) {
-    return getCompletedChapters().includes(num);
+  function isChapterCompleted(num, examType) {
+    return getCompletedChapters(examType).includes(num);
   }
 
-  window.toggleChapterCompleted = function (chNum) {
-    let completed = getCompletedChapters();
+  window.toggleChapterCompleted = function (chNum, examType) {
+    const ctx = examType || detectExamContext();
+    const key = ctx === "10b" ? "nism_10b_completed_chapters" : "nism_completed_chapters";
+    let completed = getCompletedChapters(ctx);
     if (completed.includes(chNum)) {
       completed = completed.filter((c) => c !== chNum);
     } else {
       completed.push(chNum);
     }
-    localStorage.setItem("nism_completed_chapters", JSON.stringify(completed));
+    localStorage.setItem(key, JSON.stringify(completed));
     updateAllProgressUI();
   };
 
   function updateAllProgressUI() {
-    const completed = getCompletedChapters();
+    const ctx = detectExamContext();
+    const is10B = ctx === "10b";
+    const completed = getCompletedChapters(ctx);
     const count = completed.length;
-    const total = 22;
+    const total = is10B ? 20 : 22;
     const percent = Math.round((count / total) * 100);
 
     // Update sidebar progress stats & bar
@@ -242,7 +377,7 @@
 
       if (desc) {
         desc.textContent = isCurrentDone
-          ? "Great job! This chapter is marked as complete in your progress dashboard."
+          ? `Great job! Chapter ${currentCh} is marked as complete in your ${is10B ? "Series X-B" : "Series V-D"} progress dashboard.`
           : "Done reviewing all theory and formulas? Mark this chapter completed to update your progress.";
       }
       if (btn) {
@@ -275,11 +410,13 @@
     const match = page.match(/module\d+-ch(\d+)\.html/);
     if (!match) return;
 
+    const ctx = detectExamContext();
+    const is10B = ctx === "10b";
     const chNum = parseInt(match[1], 10);
     const quiz = document.getElementById("interactive-quiz");
     if (!quiz || document.getElementById("chapter-completion-box")) return;
 
-    const isDone = isChapterCompleted(chNum);
+    const isDone = isChapterCompleted(chNum, ctx);
     const card = document.createElement("div");
     card.id = "chapter-completion-box";
     card.className = "chapter-completion-card";
@@ -291,13 +428,13 @@
         <div>
           <h4 class="font-bold text-slate-900 dark:text-white text-sm">Chapter ${chNum} Study Completion</h4>
           <p class="text-xs text-slate-500 dark:text-slate-400 mt-0.5" id="ch-completion-desc">
-            ${isDone ? "Great job! This chapter is marked as complete in your progress dashboard." : "Done reviewing all theory and formulas? Mark this chapter completed to update your progress."}
+            ${isDone ? `Great job! Chapter ${chNum} is marked as complete in your ${is10B ? "Series X-B" : "Series V-D"} progress dashboard.` : "Done reviewing all theory and formulas? Mark this chapter completed to update your progress."}
           </p>
         </div>
       </div>
       <button 
         type="button"
-        onclick="window.toggleChapterCompleted(${chNum})"
+        onclick="window.toggleChapterCompleted(${chNum}, '${ctx}')"
         id="ch-completion-btn"
         class="px-4 py-2.5 rounded-xl text-xs font-bold transition-all duration-200 flex items-center gap-2 shadow-sm shrink-0 ${
           isDone 
@@ -337,6 +474,69 @@
       icon: "book-open",
       keywords: "series vd 5d mutual fund sif specialized investment fund dashboard chapters",
       action: () => { window.location.href = "nism-5d.html"; }
+    },
+    {
+      type: "action",
+      title: "Series X-B Master Hub (Investment Adviser L2)",
+      sub: "All 6 Modules • 20 Chapters • 150 Marks Full Advisory Blueprint",
+      badge: "Series X-B",
+      icon: "award",
+      keywords: "series xb 10b investment adviser level 2 insurance retirement tax estate behavioral case studies",
+      action: () => { window.location.href = "nism-10b.html"; }
+    },
+    {
+      type: "action",
+      title: "Module 7: Risk Mgmt & Insurance (25M)",
+      sub: "Core Doctrines, Life Products, MWP Act Sec 6 Trusts & Health Insurance",
+      badge: "Mod 7 (25M)",
+      icon: "shield-alert",
+      keywords: "module 7 insurance mwp act term ulip health irdai section 45 risk management",
+      action: () => { window.location.href = "module7.html"; }
+    },
+    {
+      type: "action",
+      title: "Module 8: Retirement Planning (30M)",
+      sub: "NPS, APY, EPF, Annuities & Step-Up Corpus Calculation Mathematics",
+      badge: "Mod 8 (30M)",
+      icon: "clock",
+      keywords: "module 8 retirement nps epf annuity swp 4% rule corpus calculation pmt longevity",
+      action: () => { window.location.href = "module8.html"; }
+    },
+    {
+      type: "action",
+      title: "Module 9: Taxation of Products (20M)",
+      sub: "Capital Gains 12.5%, Sec 50AA Debt MFs, Sec 54 Exemptions & Losses",
+      badge: "Mod 9 (20M)",
+      icon: "percent",
+      keywords: "module 9 taxation capital gains ltcg stcg 50aa 54 54ec 56(2)(x) dividend stripping",
+      action: () => { window.location.href = "module9.html"; }
+    },
+    {
+      type: "action",
+      title: "Module 10: Estate Planning & Trusts (20M)",
+      sub: "Hindu Succession Act, Wills, Private Family Trusts & Power of Attorney",
+      badge: "Mod 10 (20M)",
+      icon: "scale",
+      keywords: "module 10 estate planning succession will trust probate gift nominee shakti yezdani sarbati devi mmr",
+      action: () => { window.location.href = "module10.html"; }
+    },
+    {
+      type: "action",
+      title: "Module 11: Behavioral Finance (10M)",
+      sub: "Prospect Theory, Loss Aversion, Heuristics & Client Coaching Architecture",
+      badge: "Mod 11 (10M)",
+      icon: "activity",
+      keywords: "module 11 behavioral finance prospect theory loss aversion mental accounting anchoring biases",
+      action: () => { window.location.href = "module11.html"; }
+    },
+    {
+      type: "action",
+      title: "Module 12: Comprehensive Case Studies (45M ⭐)",
+      sub: "4 Master Client Dossiers with 20 Exam-Style Mathematical Sub-Questions",
+      badge: "Mod 12 (45M ⭐)",
+      icon: "folder-check",
+      keywords: "module 12 case study comprehensive financial advice vikram sharma rajesh kulkarni sanjeev singhania arvind mittal",
+      action: () => { window.location.href = "module12-ch20.html"; }
     },
     {
       type: "action",
@@ -561,7 +761,7 @@
             <span><kbd class="spotlight-kbd">↵</kbd> Open</span>
             <span><kbd class="spotlight-kbd">ESC</kbd> Close</span>
           </div>
-          <span class="font-semibold text-slate-500">NISM Series V-D Master Spotlight</span>
+          <span class="font-semibold text-slate-500">NISM Master Certifications Spotlight</span>
         </div>
       </div>
     `;
@@ -644,14 +844,26 @@
     const chapters = [];
 
     if (query === "") {
-      NISM_QUICK_ACTIONS.slice(0, 4).forEach((act) => actions.push(act));
-      NISM_DATA.forEach((mod) => {
+      NISM_QUICK_ACTIONS.slice(0, 5).forEach((act) => actions.push(act));
+      NISM_10B_DATA.forEach((mod) => {
         mod.chapters.forEach((ch) => {
           chapters.push({
             type: "chapter",
             ...ch,
             moduleTitle: mod.title,
-            dotBg: mod.dotBg
+            dotBg: mod.dotBg,
+            examBadge: "Series X-B"
+          });
+        });
+      });
+      NISM_5D_DATA.forEach((mod) => {
+        mod.chapters.forEach((ch) => {
+          chapters.push({
+            type: "chapter",
+            ...ch,
+            moduleTitle: mod.title,
+            dotBg: mod.dotBg,
+            examBadge: "Series V-D"
           });
         });
       });
@@ -661,15 +873,33 @@
         if (text.includes(query)) actions.push(act);
       });
 
-      NISM_DATA.forEach((mod) => {
+      // Search across Series X-B (Modules 7-12)
+      NISM_10B_DATA.forEach((mod) => {
         mod.chapters.forEach((ch) => {
-          const text = `${mod.title} chapter ${ch.num} ${ch.title} ${ch.marks} ${ch.tags || ""}`.toLowerCase();
+          const text = `series xb 10b ${mod.title} chapter ${ch.num} ${ch.title} ${ch.marks} ${ch.tags || ""}`.toLowerCase();
           if (text.includes(query)) {
             chapters.push({
               type: "chapter",
               ...ch,
               moduleTitle: mod.title,
-              dotBg: mod.dotBg
+              dotBg: mod.dotBg,
+              examBadge: "Series X-B"
+            });
+          }
+        });
+      });
+
+      // Search across Series V-D (Modules 1-3)
+      NISM_5D_DATA.forEach((mod) => {
+        mod.chapters.forEach((ch) => {
+          const text = `series vd 5d ${mod.title} chapter ${ch.num} ${ch.title} ${ch.marks} ${ch.tags || ""}`.toLowerCase();
+          if (text.includes(query)) {
+            chapters.push({
+              type: "chapter",
+              ...ch,
+              moduleTitle: mod.title,
+              dotBg: mod.dotBg,
+              examBadge: "Series V-D"
             });
           }
         });
@@ -683,7 +913,7 @@
         <div class="py-10 text-center text-slate-400 text-xs">
           <i data-lucide="help-circle" class="w-8 h-8 mx-auto mb-2 text-slate-300 stroke-1"></i>
           <p class="font-medium text-slate-600">No matching chapters or formulas found for "${query}"</p>
-          <p class="text-[11px] mt-1">Try searching for "nav", "duration", "delta", "cram", or "tax"</p>
+          <p class="text-[11px] mt-1">Try searching for "insurance", "retirement", "tax", "estate", "case", "nav", or "options"</p>
         </div>
       `;
       if (window.lucide && typeof window.lucide.createIcons === "function") window.lucide.createIcons();
@@ -694,7 +924,7 @@
     let globalIndex = 0;
 
     if (actions.length > 0) {
-      html += `<div class="spotlight-group-title">Exam Calculators & Tools</div>`;
+      html += `<div class="spotlight-group-title">Exam Portals & Calculators</div>`;
       actions.forEach((act) => {
         const isActive = globalIndex === spotlightActiveIndex;
         html += `
@@ -724,6 +954,7 @@
       html += `<div class="spotlight-group-title">Curriculum Chapters</div>`;
       chapters.forEach((ch) => {
         const isActive = globalIndex === spotlightActiveIndex;
+        const isXB = ch.examBadge === "Series X-B";
         html += `
           <div class="spotlight-item ${isActive ? "active" : ""}" data-spotlight-idx="${globalIndex}" onclick="window.triggerSpotlightItem(${globalIndex})">
             <div class="flex items-center gap-3 min-w-0">
@@ -736,6 +967,9 @@
               </div>
             </div>
             <div class="flex items-center gap-2 shrink-0 ml-2">
+              <span class="text-[10px] px-2 py-0.5 rounded font-mono font-bold ${isXB ? 'bg-amber-50 text-amber-800 dark:bg-amber-950 dark:text-amber-300 border border-amber-200/80 dark:border-amber-800' : 'bg-indigo-50 text-indigo-800 dark:bg-indigo-950 dark:text-indigo-300 border border-indigo-200/80 dark:border-indigo-800'}">
+                ${ch.examBadge}
+              </span>
               <span class="text-[10px] px-2 py-0.5 rounded-full font-bold bg-slate-100 text-slate-600 dark:bg-slate-800 dark:text-slate-300 border border-slate-200/80 dark:border-slate-700">
                 ${ch.marks}
               </span>
@@ -887,10 +1121,12 @@
     // 2. Chapter Switcher Card (Sidebar)
     const switcherCard = document.querySelector("#sidebar-chapter-switcher > div");
     if (switcherCard && !switcherCard.querySelector(".macos-traffic-lights")) {
+      const ctx = detectExamContext();
+      const is10B = ctx === "10b";
       switcherCard.classList.add("macos-window");
       const topBar = switcherCard.querySelector(".p-3\\.5");
       if (topBar) {
-        topBar.classList.remove("bg-gradient-to-r", "from-slate-900", "via-slate-800", "to-indigo-950");
+        topBar.classList.remove("bg-gradient-to-r", "from-slate-900", "via-slate-800", "to-indigo-950", "to-amber-950");
         topBar.classList.add("macos-window-header");
         topBar.innerHTML = `
           <div class="macos-traffic-lights">
@@ -898,12 +1134,12 @@
             <span class="traffic-light minimize" onclick="const p = this.closest('.macos-window').querySelector('.space-y-2'); if(p) p.classList.toggle('hidden');"></span>
             <span class="traffic-light maximize" onclick="window.openSpotlightModal()"></span>
           </div>
-          <div class="macos-window-title flex items-center gap-1.5 font-bold text-slate-800">
-            <i data-lucide="layers" class="w-3.5 h-3.5 text-indigo-600"></i>
-            <span>Course Navigator</span>
+          <div class="macos-window-title flex items-center gap-1.5 font-bold text-slate-800 dark:text-slate-200">
+            <i data-lucide="layers" class="w-3.5 h-3.5 ${is10B ? "text-amber-600" : "text-indigo-600"}"></i>
+            <span>${is10B ? "Series X-B Navigator" : "Series V-D Navigator"}</span>
           </div>
-          <span class="px-1.5 py-0.5 rounded text-[9px] font-bold bg-slate-200 text-slate-700">
-            22 Chs
+          <span class="px-1.5 py-0.5 rounded text-[9px] font-bold ${is10B ? "bg-amber-100 text-amber-800 dark:bg-amber-950 dark:text-amber-300" : "bg-slate-200 text-slate-700 dark:bg-slate-800 dark:text-slate-300"}">
+            ${is10B ? "20 Chs" : "22 Chs"}
           </span>
         `;
       }
@@ -916,29 +1152,45 @@
   function generateChapterSwitcherHtml(isMobile) {
     const currentPage = getCurrentPageName();
     const prefix = isMobile ? "mob-" : "desk-";
+    const ctx = detectExamContext();
+    const is10B = ctx === "10b";
+    const data = is10B ? NISM_10B_DATA : NISM_5D_DATA;
+    const totalUnits = is10B ? 20 : 22;
+    const totalModules = is10B ? 6 : 3;
+    const examBadge = is10B ? "NISM X-B" : "NISM V-D";
+    const examTitle = is10B ? "Series X-B" : "Series V-D";
+    const badgeColorClass = is10B
+      ? "bg-amber-500/20 text-amber-200 border-amber-400/40"
+      : "bg-indigo-500/20 text-indigo-200 border-indigo-400/40";
+    const headerBg = is10B
+      ? "bg-gradient-to-r from-slate-900 via-slate-800 to-amber-950"
+      : "bg-gradient-to-r from-slate-900 via-slate-800 to-indigo-950";
+    const completed = getCompletedChapters(ctx);
+    const count = completed.length;
+    const percent = Math.round((count / totalUnits) * 100);
 
     let html = `
-      <div class="rounded-2xl bg-white border border-slate-200/90 shadow-sm overflow-hidden text-xs transition-all">
+      <div class="rounded-2xl bg-white dark:bg-slate-900 border border-slate-200/90 dark:border-slate-800 shadow-sm overflow-hidden text-xs transition-all">
         <!-- Header -->
-        <div class="p-3.5 bg-gradient-to-r from-slate-900 via-slate-800 to-indigo-950 text-white flex items-center justify-between">
+        <div class="p-3.5 ${headerBg} text-white flex items-center justify-between">
           <div class="flex items-center gap-2">
-            <div class="w-6 h-6 rounded-lg bg-indigo-500/30 border border-indigo-400/40 flex items-center justify-center text-indigo-200 shadow-inner">
+            <div class="w-6 h-6 rounded-lg ${badgeColorClass} border flex items-center justify-center shadow-inner">
               <i data-lucide="layers" class="w-3.5 h-3.5"></i>
             </div>
             <div>
-              <span class="font-display font-bold text-xs uppercase tracking-wider block text-white">All Chapters</span>
-              <span class="text-[10px] text-slate-400 block -mt-0.5">3 Modules &bull; 22 Units</span>
+              <span class="font-display font-bold text-xs uppercase tracking-wider block text-white">${examTitle} Chapters</span>
+              <span class="text-[10px] text-slate-400 block -mt-0.5">${totalModules} Modules &bull; ${totalUnits} Units</span>
             </div>
           </div>
-          <span class="px-2 py-0.5 rounded-full text-[10px] font-bold bg-white/10 text-indigo-200 border border-white/10">
-            NISM V-D
+          <span class="px-2 py-0.5 rounded-full text-[10px] font-bold ${is10B ? "bg-amber-400/20 text-amber-300 border border-amber-400/30" : "bg-white/10 text-indigo-200 border border-white/10"}">
+            ${examBadge}
           </span>
         </div>
 
         <!-- Quick Spotlight Search Launcher Button -->
         <div class="p-2.5 border-b border-slate-100 dark:border-slate-800 bg-slate-50/70 dark:bg-slate-900/50">
           <button 
-            type="button"
+            type="button" 
             onclick="window.openSpotlightModal()"
             class="w-full flex items-center justify-between px-3 py-1.5 text-[11px] rounded-xl border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-800 hover:border-indigo-400 text-slate-500 hover:text-slate-800 dark:hover:text-slate-200 transition-all shadow-2xs group"
           >
@@ -955,12 +1207,12 @@
           <div class="flex items-center justify-between text-[11px] font-bold text-slate-600 dark:text-slate-300 mb-1">
             <span class="flex items-center gap-1.5">
               <i data-lucide="check-circle-2" class="w-3.5 h-3.5 text-emerald-500"></i>
-              Study Progress
+              <span>${examTitle} Progress</span>
             </span>
-            <span class="nism-progress-stats text-[10px] font-mono font-semibold text-slate-500">0/22 (0%)</span>
+            <span class="nism-progress-stats text-[10px] font-mono font-semibold text-slate-500">${count}/${totalUnits} (${percent}%)</span>
           </div>
           <div class="w-full bg-slate-200 dark:bg-slate-700 h-1.5 rounded-full overflow-hidden">
-            <div class="nism-progress-bar h-full bg-emerald-500 rounded-full transition-all duration-300" style="width: 0%"></div>
+            <div class="nism-progress-bar h-full bg-emerald-500 rounded-full transition-all duration-300" style="width: ${percent}%"></div>
           </div>
         </div>
 
@@ -968,7 +1220,7 @@
         <div class="p-2.5 space-y-2">
     `;
 
-    NISM_DATA.forEach((mod) => {
+    data.forEach((mod) => {
       const isCurrentModule = mod.chapters.some((ch) => ch.url === currentPage);
       const isOpenAttr = isCurrentModule ? "open" : "";
 
@@ -994,7 +1246,7 @@
 
       mod.chapters.forEach((ch) => {
         const isCurrent = ch.url === currentPage;
-        const isDone = isChapterCompleted(ch.num);
+        const isDone = isChapterCompleted(ch.num, ctx);
         const activeClass = isCurrent
           ? `${mod.activeBg} shadow-xs`
           : "text-slate-700 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800/80 hover:text-slate-900 dark:hover:text-white transition-colors";
@@ -1014,7 +1266,7 @@
               type="button" 
               class="chapter-check-btn ${isDone ? "completed" : ""}" 
               data-ch-check="${ch.num}"
-              onclick="event.preventDefault(); event.stopPropagation(); window.toggleChapterCompleted(${ch.num});"
+              onclick="event.preventDefault(); event.stopPropagation(); window.toggleChapterCompleted(${ch.num}, '${ctx}');"
               title="${isDone ? "Mark as Incomplete" : "Mark as Completed"}"
             >
               <i data-lucide="${isDone ? "check" : "circle"}" class="w-2.5 h-2.5"></i>
@@ -1058,12 +1310,21 @@
           <a href="index.html" class="flex items-center gap-1 hover:text-indigo-600 font-semibold transition-colors" title="Master NISM Portal">
             <i data-lucide="compass" class="w-3.5 h-3.5"></i> All Exams
           </a>
+          ${is10B ? `
+          <a href="nism-10b.html" class="flex items-center gap-1 hover:text-amber-600 font-semibold transition-colors" title="Series X-B Hub">
+            <i data-lucide="award" class="w-3.5 h-3.5 text-amber-500"></i> X-B Hub
+          </a>
+          <a href="module12-ch20.html" class="flex items-center gap-1 text-amber-700 dark:text-amber-400 hover:text-amber-900 font-bold transition-colors" title="4 Exam Case Studies">
+            <i data-lucide="folder-check" class="w-3.5 h-3.5"></i> Cases (4)
+          </a>
+          ` : `
           <a href="nism-5d.html" class="flex items-center gap-1 hover:text-indigo-600 font-semibold transition-colors" title="Series V-D Study Hub">
-            <i data-lucide="book-open" class="w-3.5 h-3.5"></i> V-D Hub
+            <i data-lucide="book-open" class="w-3.5 h-3.5 text-blue-500"></i> V-D Hub
           </a>
           <a href="mock-tests.html" class="flex items-center gap-1 text-indigo-600 hover:text-indigo-800 font-bold transition-colors">
             <i data-lucide="award" class="w-3.5 h-3.5"></i> 10 Mocks
           </a>
+          `}
         </div>
       </div>
     `;
@@ -1077,6 +1338,9 @@
   function injectMacOSDock() {
     if (document.getElementById("nism-macos-dock")) return;
     const isDark = isDarkModeActive();
+    const ctx = detectExamContext();
+    const is10B = ctx === "10b";
+
     const dock = document.createElement("div");
     dock.id = "nism-macos-dock";
     dock.className = "macos-dock";
@@ -1087,11 +1351,18 @@
         <span class="macos-dock-tooltip">All Certifications</span>
       </a>
 
-      <!-- Series V-D Hub -->
+      <!-- Exam Hub (Contextual) -->
+      ${is10B ? `
+      <a href="nism-10b.html" class="macos-dock-item" aria-label="Series X-B Hub">
+        <i data-lucide="award" class="w-4 h-4 text-amber-500"></i>
+        <span class="macos-dock-tooltip">Series X-B Hub</span>
+      </a>
+      ` : `
       <a href="nism-5d.html" class="macos-dock-item" aria-label="Series V-D Hub">
         <i data-lucide="book-open" class="w-4 h-4 text-blue-600"></i>
         <span class="macos-dock-tooltip">Series V-D Hub</span>
       </a>
+      `}
 
       <!-- Spotlight Search -->
       <button onclick="window.openSpotlightModal()" class="macos-dock-item primary" aria-label="Spotlight Search">
@@ -1126,7 +1397,7 @@
       <!-- Chapters Drawer -->
       <button onclick="window.toggleMobileChapterDrawer(true)" class="macos-dock-item chapters-btn" aria-label="Open Chapters">
         <i data-lucide="layers" class="w-4 h-4"></i>
-        <span class="macos-dock-tooltip">All Chapters (22)</span>
+        <span class="macos-dock-tooltip">${is10B ? "All Chapters (20)" : "All Chapters (22)"}</span>
       </button>
 
       <!-- On This Page Sections -->
@@ -1243,6 +1514,9 @@
     if (window.location.pathname.includes("mock-tests") || document.getElementById("exam-view")) return;
     if (document.getElementById("nism-mobile-drawer")) return;
 
+    const ctx = detectExamContext();
+    const is10B = ctx === "10b";
+
     const overlay = document.createElement("div");
     overlay.id = "nism-mobile-overlay";
     overlay.className = "fixed inset-0 bg-slate-900/50 backdrop-blur-xs z-50 transition-opacity duration-300 opacity-0 hidden";
@@ -1251,19 +1525,19 @@
 
     const drawer = document.createElement("div");
     drawer.id = "nism-mobile-drawer";
-    drawer.className = "fixed top-0 bottom-0 left-0 w-84 max-w-[85vw] bg-white z-50 shadow-2xl transition-transform duration-300 -translate-x-full flex flex-col";
+    drawer.className = "fixed top-0 bottom-0 left-0 w-84 max-w-[85vw] bg-white dark:bg-slate-900 z-50 shadow-2xl transition-transform duration-300 -translate-x-full flex flex-col";
     drawer.innerHTML = `
-      <div class="p-4 border-b border-slate-200 flex items-center justify-between bg-slate-50">
+      <div class="p-4 border-b border-slate-200 dark:border-slate-800 flex items-center justify-between bg-slate-50 dark:bg-slate-900">
         <div class="flex items-center gap-2.5">
-          <div class="w-8 h-8 rounded-xl bg-gradient-to-tr from-indigo-600 to-violet-600 text-white flex items-center justify-center font-bold text-xs shadow-sm">
-            VD
+          <div class="w-8 h-8 rounded-xl ${is10B ? "bg-amber-600" : "bg-[#525fe1]"} text-white flex items-center justify-center font-bold text-xs shadow-sm">
+            ${is10B ? "XB" : "VD"}
           </div>
           <div>
-            <h3 class="font-display font-bold text-sm text-slate-900">All Modules & Chapters</h3>
-            <span class="text-[10px] text-slate-500">22 Comprehensive Units</span>
+            <h3 class="font-display font-bold text-sm text-slate-900 dark:text-white">${is10B ? "Series X-B Curriculum" : "Series V-D Curriculum"}</h3>
+            <span class="text-[10px] text-slate-500 dark:text-slate-400">${is10B ? "6 Modules • 20 Units" : "3 Modules • 22 Units"}</span>
           </div>
         </div>
-        <button onclick="window.toggleMobileChapterDrawer(false)" class="w-8 h-8 rounded-lg bg-slate-200/80 hover:bg-slate-300 text-slate-700 flex items-center justify-center text-sm font-bold transition-colors">
+        <button onclick="window.toggleMobileChapterDrawer(false)" class="w-8 h-8 rounded-lg bg-slate-200/80 hover:bg-slate-300 dark:bg-slate-800 dark:hover:bg-slate-700 text-slate-700 dark:text-slate-200 flex items-center justify-center text-sm font-bold transition-colors">
           &times;
         </button>
       </div>
@@ -1317,8 +1591,9 @@
   }
 
   function mountDesktopSidebar() {
-    // Strictly exclude Mock Test pages and Exam views from chapter navigation injection
-    if (window.location.pathname.includes("mock-tests") || document.getElementById("exam-view") || document.getElementById("exam-palette-aside")) {
+    const page = getCurrentPageName().toLowerCase();
+    // Strictly exclude Mock Test pages, master portal index, and Exam views from chapter navigation injection
+    if (page === "index.html" || window.location.pathname.includes("mock-tests") || document.getElementById("exam-view") || document.getElementById("exam-palette-aside")) {
       return;
     }
     let target = document.getElementById("sidebar-chapter-switcher");
