@@ -1451,7 +1451,7 @@
   // 5. Header Controls (Theme Toggle & Spotlight)
   // ==========================================
   function injectHeaderControls() {
-    const headerRight = document.querySelector("header .max-w-7xl > div:last-child");
+    const headerRight = document.querySelector("header .max-w-7xl > div:last-child, header .max-w-6xl > div:last-child, header div[class*='max-w'] > div:last-child");
     if (!headerRight) return;
 
     // Theme Switcher Button

@@ -18,6 +18,27 @@
   <link rel="stylesheet" href="modern-docs.css">
   <script defer src="nav-sidebar.js"></script>
 
+  <!-- Immediate Theme Synchronization (Zero-FOUC) & Fail-Safe Controller -->
+  <script>
+    (function() {
+      const saved = localStorage.getItem("nism-theme");
+      if (saved === "dark" || (!saved && window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches)) {
+        document.documentElement.classList.add("dark");
+      } else if (saved === "light") {
+        document.documentElement.classList.remove("dark");
+      }
+    })();
+    window.toggleDarkMode = function() {
+      const isDark = document.documentElement.classList.toggle("dark");
+      localStorage.setItem("nism-theme", isDark ? "dark" : "light");
+      const btn = document.getElementById("nism-header-theme-btn");
+      if (btn) {
+        btn.innerHTML = isDark ? '<i data-lucide="sun" class="w-4 h-4 text-amber-400"></i>' : '<i data-lucide="moon" class="w-4 h-4"></i>';
+        if (window.lucide && typeof window.lucide.createIcons === "function") window.lucide.createIcons();
+      }
+    };
+  </script>
+
   <script>
     tailwind.config = {
       darkMode: 'class',
@@ -85,34 +106,43 @@
   <!-- Standardized Header (Single-Tier, 64px) -->
   <header class="sticky top-0 z-40 bg-white/95 dark:bg-slate-900/95 backdrop-blur-md border-b border-slate-200/80 dark:border-slate-800 shadow-xs">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 h-16 flex items-center justify-between">
-      <!-- Left: Logo, Module & Chapter Label -->
-      <div class="flex items-center gap-3">
-        <a href="module11.html" class="flex items-center gap-2 text-slate-500 hover:text-slate-900 dark:hover:text-white transition-colors" title="Back to Module 11 Hub">
-          <div class="w-9 h-9 rounded-xl bg-slate-100 dark:bg-slate-800 hover:bg-slate-200 dark:hover:bg-slate-700 flex items-center justify-center text-slate-700 dark:text-slate-200 transition-colors">
-            <i data-lucide="arrow-left" class="w-4 h-4"></i>
-          </div>
-        </a>
-        <div>
-          <div class="flex items-center gap-2">
-            <span class="text-xs font-bold uppercase tracking-wider text-indigo-600 dark:text-indigo-400 bg-indigo-50 dark:bg-indigo-950/80 px-2 py-0.5 rounded">Module 11</span>
-            <span class="text-xs text-slate-400 dark:text-slate-500 font-medium">Chapter 17 of 17</span>
-          </div>
-          <h1 class="font-display font-bold text-base sm:text-lg text-slate-900 dark:text-white leading-tight">Behavioral Finance in Practice</h1>
+      <!-- Left: Logo & Context Label -->
+      <a href="nism-10b.html" class="flex items-center gap-2.5 group">
+        <div class="w-9 h-9 rounded-xl bg-purple-600 flex items-center justify-center text-white font-bold shadow-xs group-hover:scale-105 transition-transform">
+          <i data-lucide="activity" class="w-5 h-5"></i>
         </div>
-      </div>
+        <div>
+          <span class="font-display font-bold text-base tracking-tight text-[#0b104a] dark:text-white block leading-tight">NISM Series X-B</span>
+          <span class="block text-[10px] text-purple-600 dark:text-purple-400 font-bold uppercase tracking-wider">Module 11: Behavioral Finance</span>
+        </div>
+      </a>
 
-      <!-- Right: Weightage Badge, Theme Toggle & Quiz Jump -->
-      <div class="flex items-center gap-2.5">
-        <span class="hidden sm:inline-flex items-center gap-1 px-3 py-1 rounded-full text-xs font-bold bg-amber-50 dark:bg-amber-950/70 text-amber-700 dark:text-amber-300 border border-amber-200 dark:border-amber-800">
-          <i data-lucide="star" class="w-3.5 h-3.5 fill-amber-500 text-amber-500"></i>
-          Weightage: 4-5 Marks
+      <!-- Center: Clean, Minimal Navigation Links -->
+      <nav class="hidden md:flex items-center gap-1 text-sm font-medium font-display">
+        <a href="index.html#certifications" class="px-2.5 py-1.5 rounded-lg text-slate-600 dark:text-slate-300 hover:text-purple-600 hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors">Portal Home</a>
+        <a href="nism-10b.html" class="px-2.5 py-1.5 rounded-lg text-slate-600 dark:text-slate-300 hover:text-purple-600 hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors">Series X-B Hub</a>
+        <a href="module11.html" class="px-2.5 py-1.5 rounded-lg text-slate-600 dark:text-slate-300 hover:text-purple-600 hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors">Module 11 Hub</a>
+        <a href="module11-ch16.html" class="px-2.5 py-1.5 rounded-lg text-slate-600 dark:text-slate-300 hover:text-purple-600 hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors">Ch 16: Biases & Heuristics ⭐</a>
+        <a href="module11-ch17.html" class="px-2.5 py-1.5 rounded-lg font-semibold text-purple-700 dark:text-purple-300 bg-purple-50 dark:bg-purple-950/70 border border-purple-200/80 dark:border-purple-800/80 transition-colors">Ch 17: Advising Practice</a>
+      </nav>
+
+      <!-- Right Controls: Weightage, Search (⌘K), Theme (⌘D), Return CTA -->
+      <div class="flex items-center gap-2">
+        <span class="hidden lg:inline-flex items-center gap-1 px-2.5 py-1 rounded-full text-xs font-bold bg-amber-50 dark:bg-amber-950/70 text-amber-700 dark:text-amber-300 border border-amber-200 dark:border-amber-800">
+          <i data-lucide="award" class="w-3.5 h-3.5 text-amber-600"></i>
+          <span>10 Marks</span>
         </span>
+        <button onclick="window.openSpotlightModal()" class="flex items-center gap-2 px-3 py-1.5 rounded-full border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-800 text-slate-500 dark:text-slate-400 text-xs font-medium" title="Search (⌘K)">
+          <i data-lucide="search" class="w-3.5 h-3.5 text-purple-600"></i>
+          <span class="hidden sm:inline">Search</span>
+          <kbd class="px-1.5 py-0.5 rounded bg-slate-100 dark:bg-slate-700 text-[10px] font-mono text-slate-400">⌘K</kbd>
+        </button>
         <button id="nism-header-theme-btn" onclick="window.toggleDarkMode()" class="p-2 rounded-full border border-slate-200 dark:border-slate-700 text-slate-600 dark:text-slate-300 bg-white dark:bg-slate-800" title="Toggle Theme (⌘D)">
           <i data-lucide="moon" class="w-4 h-4"></i>
         </button>
-        <a href="#interactive-quiz" class="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-full text-xs font-bold bg-indigo-600 hover:bg-indigo-700 text-white shadow-xs transition-all font-display">
-          <i data-lucide="help-circle" class="w-3.5 h-3.5"></i>
-          <span>Chapter Quiz</span>
+        <a href="nism-10b.html" class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full text-xs font-bold text-amber-800 dark:text-amber-200 bg-amber-100 dark:bg-amber-950 hover:bg-amber-200 dark:hover:bg-amber-900 border border-amber-300 dark:border-amber-800 transition-all font-display shadow-xs">
+          <i data-lucide="arrow-left" class="w-3.5 h-3.5 text-amber-600"></i>
+          <span>X-B Hub</span>
         </a>
       </div>
     </div>
@@ -805,14 +835,20 @@
 
       <!-- Bottom Chapter Navigation -->
       <div class="flex flex-col sm:flex-row items-center justify-between gap-4 pt-6 border-t border-slate-200 dark:border-slate-800">
-        <a href="module11-ch16.html" class="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-5 py-2.5 rounded-xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 hover:bg-slate-100 dark:hover:bg-slate-800 text-slate-700 dark:text-slate-300 font-bold text-xs sm:text-sm transition-all">
+        <a href="module11-ch16.html" class="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-5 py-2.5 rounded-xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 hover:bg-slate-100 dark:hover:bg-slate-800 text-slate-700 dark:text-slate-300 font-bold text-xs sm:text-sm transition-all font-display">
           <i data-lucide="arrow-left" class="w-4 h-4"></i>
           <span>Previous: Chapter 16 (Basics of Behavioral Finance)</span>
         </a>
-        <a href="module11.html" class="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-5 py-2.5 rounded-xl bg-indigo-600 hover:bg-indigo-700 text-white font-bold text-xs sm:text-sm shadow-sm transition-all font-display">
-          <span>Module 11 Hub Overview</span>
-          <i data-lucide="home" class="w-4 h-4"></i>
-        </a>
+        <div class="flex flex-wrap items-center gap-2 w-full sm:w-auto justify-end">
+          <a href="module11.html" class="inline-flex items-center justify-center gap-1.5 px-4 py-2.5 rounded-xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 hover:bg-slate-100 dark:hover:bg-slate-800 text-slate-700 dark:text-slate-300 font-bold text-xs sm:text-sm transition-all font-display">
+            <i data-lucide="home" class="w-4 h-4"></i>
+            <span>Module 11 Hub</span>
+          </a>
+          <a href="nism-10b.html" class="inline-flex items-center justify-center gap-1.5 px-5 py-2.5 rounded-xl bg-amber-600 hover:bg-amber-700 text-white font-bold text-xs sm:text-sm shadow-sm transition-all font-display">
+            <i data-lucide="award" class="w-4 h-4"></i>
+            <span>Return to Series X-B Hub</span>
+          </a>
+        </div>
       </div>
 
     </main>
@@ -1101,6 +1137,9 @@
     }
     window.addEventListener("load", () => setTimeout(dismissPreloader, 350));
     setTimeout(dismissPreloader, 1000);
+    if (window.lucide && typeof window.lucide.createIcons === "function") {
+      window.lucide.createIcons();
+    }
   </script>
 </body>
 </html>

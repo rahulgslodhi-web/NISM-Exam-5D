@@ -21,6 +21,26 @@
   <script defer src="nav-sidebar.js"></script>
 
   <script>
+    (function() {
+      const saved = localStorage.getItem("nism-theme");
+      if (saved === "dark" || (!saved && window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches)) {
+        document.documentElement.classList.add("dark");
+      } else if (saved === "light") {
+        document.documentElement.classList.remove("dark");
+      }
+    })();
+    window.toggleDarkMode = function() {
+      const isDark = document.documentElement.classList.toggle("dark");
+      localStorage.setItem("nism-theme", isDark ? "dark" : "light");
+      const btn = document.getElementById("nism-header-theme-btn");
+      if (btn) {
+        btn.innerHTML = isDark ? '<i data-lucide="sun" class="w-4 h-4 text-amber-400"></i>' : '<i data-lucide="moon" class="w-4 h-4"></i>';
+        if (window.lucide && typeof window.lucide.createIcons === "function") window.lucide.createIcons();
+      }
+    };
+  </script>
+
+  <script>
     tailwind.config = {
       darkMode: 'class',
       theme: {
@@ -79,22 +99,26 @@
         </div>
         <div>
           <span class="font-display font-bold text-base tracking-tight text-[#0b104a] dark:text-white block leading-tight">NISM Series X-B</span>
-          <span class="block text-[10px] text-amber-600 dark:text-amber-400 font-bold uppercase tracking-wider">Module 7: Insurance Planning (25M)</span>
+          <span class="block text-[10px] text-amber-600 dark:text-amber-400 font-bold uppercase tracking-wider">Module 7: Insurance Planning</span>
         </div>
       </a>
 
       <!-- Center: Navigation Links -->
       <nav class="hidden lg:flex items-center gap-1 text-sm font-medium font-display">
-        <a href="index.html#certifications" class="px-2.5 py-1.5 rounded-lg text-slate-600 dark:text-slate-300 hover:text-[#0b104a] hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors">All Exams</a>
-        <a href="nism-10b.html" class="px-2.5 py-1.5 rounded-lg text-slate-600 dark:text-slate-300 hover:text-amber-700 hover:bg-amber-50/60 dark:hover:bg-amber-950/40 transition-colors">X-B Hub</a>
+        <a href="index.html#certifications" class="px-2.5 py-1.5 rounded-lg text-slate-600 dark:text-slate-300 hover:text-[#0b104a] hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors">Portal Home</a>
+        <a href="nism-10b.html" class="px-2.5 py-1.5 rounded-lg text-slate-600 dark:text-slate-300 hover:text-amber-700 hover:bg-amber-50/60 dark:hover:bg-amber-950/40 transition-colors">Series X-B Hub</a>
         <a href="module7.html" class="px-2.5 py-1.5 rounded-lg font-bold text-amber-800 dark:text-amber-300 bg-amber-50 dark:bg-amber-950/80 border border-amber-200 dark:border-amber-800 transition-colors">Module 7 Hub</a>
         <a href="module7-ch1.html" class="px-2.5 py-1.5 rounded-lg text-slate-600 dark:text-slate-300 hover:text-amber-700 hover:bg-amber-50/60 dark:hover:bg-amber-950/40 transition-colors">Ch 1: Basics</a>
         <a href="module7-ch2.html" class="px-2.5 py-1.5 rounded-lg text-slate-600 dark:text-slate-300 hover:text-amber-700 hover:bg-amber-50/60 dark:hover:bg-amber-950/40 transition-colors">Ch 2: Life & MWP ⭐</a>
         <a href="module7-ch3.html" class="px-2.5 py-1.5 rounded-lg text-slate-600 dark:text-slate-300 hover:text-amber-700 hover:bg-amber-50/60 dark:hover:bg-amber-950/40 transition-colors">Ch 3: Non-Life</a>
       </nav>
 
-      <!-- Right: Search, Theme, Back Button -->
+      <!-- Right: Weightage, Search, Theme, Return CTA -->
       <div class="flex items-center gap-2">
+        <span class="hidden sm:inline-flex items-center gap-1 px-2.5 py-1 rounded-full text-xs font-bold bg-amber-50 dark:bg-amber-950/70 text-amber-800 dark:text-amber-300 border border-amber-200 dark:border-amber-800">
+          <i data-lucide="award" class="w-3.5 h-3.5 text-amber-600"></i>
+          <span>25 Marks</span>
+        </span>
         <button onclick="window.openSpotlightModal()" class="flex items-center gap-2 px-3 py-1.5 rounded-full border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-800 text-slate-500 dark:text-slate-400 text-xs font-medium" title="Search (⌘K)">
           <i data-lucide="search" class="w-3.5 h-3.5 text-amber-600"></i>
           <span class="hidden sm:inline">Search</span>
@@ -103,8 +127,8 @@
         <button id="nism-header-theme-btn" onclick="window.toggleDarkMode()" class="p-2 rounded-full border border-slate-200 dark:border-slate-700 text-slate-600 dark:text-slate-300 bg-white dark:bg-slate-800" title="Toggle Theme (⌘D)">
           <i data-lucide="moon" class="w-4 h-4"></i>
         </button>
-        <a href="nism-10b.html" class="hidden sm:inline-flex items-center gap-1 px-3 py-1.5 rounded-full text-xs font-semibold text-slate-700 dark:text-slate-300 bg-slate-100 dark:bg-slate-800 hover:bg-slate-200 dark:hover:bg-slate-750 transition-colors">
-          <i data-lucide="arrow-left" class="w-3.5 h-3.5"></i>
+        <a href="nism-10b.html" class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full text-xs font-bold text-amber-800 dark:text-amber-200 bg-amber-100 dark:bg-amber-950 hover:bg-amber-200 dark:hover:bg-amber-900 border border-amber-300 dark:border-amber-800 transition-all font-display">
+          <i data-lucide="arrow-left" class="w-3.5 h-3.5 text-amber-600"></i>
           <span>X-B Hub</span>
         </a>
       </div>
@@ -517,8 +541,18 @@
   </footer>
 
   <script>
-    // Initialize icons
-    lucide.createIcons();
+    function dismissPreloader() {
+      const preloader = document.getElementById("eduleb-preloader");
+      if (preloader && !preloader.classList.contains("fade-out")) {
+        preloader.classList.add("fade-out");
+        setTimeout(() => { if (preloader.parentNode) preloader.parentNode.removeChild(preloader); }, 550);
+      }
+    }
+    window.addEventListener("load", () => setTimeout(dismissPreloader, 350));
+    setTimeout(dismissPreloader, 1000);
+    if (window.lucide && typeof window.lucide.createIcons === "function") {
+      window.lucide.createIcons();
+    }
   </script>
 </body>
 </html>

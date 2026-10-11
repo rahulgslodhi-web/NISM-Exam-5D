@@ -18,6 +18,27 @@
   <link rel="stylesheet" href="modern-docs.css">
   <script defer src="nav-sidebar.js"></script>
 
+  <!-- Inline Fail-Safe Theme Controller -->
+  <script>
+    (function() {
+      const saved = localStorage.getItem("nism-theme");
+      if (saved === "dark" || (!saved && window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches)) {
+        document.documentElement.classList.add("dark");
+      } else if (saved === "light") {
+        document.documentElement.classList.remove("dark");
+      }
+    })();
+    window.toggleDarkMode = function() {
+      const isDark = document.documentElement.classList.toggle("dark");
+      localStorage.setItem("nism-theme", isDark ? "dark" : "light");
+      const btn = document.getElementById("nism-header-theme-btn");
+      if (btn) {
+        btn.innerHTML = isDark ? '<i data-lucide="sun" class="w-4 h-4 text-amber-400"></i>' : '<i data-lucide="moon" class="w-4 h-4"></i>';
+        if (window.lucide && typeof window.lucide.createIcons === "function") window.lucide.createIcons();
+      }
+    };
+  </script>
+
   <script>
     tailwind.config = {
       darkMode: 'class',
@@ -86,7 +107,7 @@
     }
   </style>
 </head>
-<body class="bg-slate-50 dark:bg-slate-950 text-slate-900 dark:text-slate-100 min-h-screen flex flex-col selection:bg-amber-500 selection:text-white antialiased transition-colors duration-200">
+<body class="bg-slate-50 dark:bg-slate-950 text-slate-900 dark:text-slate-100 min-h-screen flex flex-col selection:bg-rose-500 selection:text-white antialiased transition-colors duration-200">
 
   <!-- Smooth Opening Preloader -->
   <div class="preloaders" id="eduleb-preloader">
@@ -97,38 +118,43 @@
   <!-- Standardized Header (Single-Tier, 64px) -->
   <header class="sticky top-0 z-40 bg-white/95 dark:bg-slate-900/95 backdrop-blur-md border-b border-slate-200/80 dark:border-slate-800 shadow-xs">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 h-16 flex items-center justify-between">
-      <div class="flex items-center gap-3">
-        <a href="module10.html" class="flex items-center gap-2 text-slate-500 hover:text-slate-900 dark:hover:text-white transition-colors">
-          <div class="w-9 h-9 rounded-xl bg-slate-100 dark:bg-slate-800 hover:bg-slate-200 dark:hover:bg-slate-700 flex items-center justify-center text-slate-700 dark:text-slate-200 transition-colors">
-            <i data-lucide="arrow-left" class="w-4 h-4"></i>
-          </div>
-        </a>
-        <div>
-          <div class="flex items-center gap-2">
-            <span class="text-xs font-bold uppercase tracking-wider text-amber-600 dark:text-amber-400 bg-amber-50 dark:bg-amber-950 px-2 py-0.5 rounded border border-amber-200/60 dark:border-amber-800">Module 10</span>
-            <span class="text-xs text-slate-400 font-medium">Chapter 15 of 15 &bull; Flagship</span>
-          </div>
-          <h1 class="font-display font-bold text-base sm:text-lg text-[#0b104a] dark:text-white leading-tight">Tools for Estate Planning ⭐</h1>
+      <!-- Left: Logo & Context Label -->
+      <a href="nism-10b.html" class="flex items-center gap-2.5 group">
+        <div class="w-9 h-9 rounded-xl bg-rose-600 flex items-center justify-center text-white font-bold shadow-xs group-hover:scale-105 transition-transform">
+          <i data-lucide="scale" class="w-5 h-5"></i>
         </div>
-      </div>
+        <div>
+          <span class="font-display font-bold text-base tracking-tight text-[#0b104a] dark:text-white block leading-tight">NISM Series X-B</span>
+          <span class="block text-[10px] text-rose-600 dark:text-rose-400 font-bold uppercase tracking-wider">Module 10: Estate Planning</span>
+        </div>
+      </a>
 
-      <!-- Chapter Navigation & Weightage -->
-      <div class="flex items-center gap-2.5">
-        <span class="hidden sm:inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-bold bg-amber-50 dark:bg-amber-950 text-amber-800 dark:text-amber-300 border border-amber-200/80 dark:border-amber-800">
-          <i data-lucide="sparkles" class="w-3.5 h-3.5 text-amber-600"></i>
-          Exam Weightage: ~10-12 Marks ⭐
+      <!-- Center: Navigation Links -->
+      <nav class="hidden lg:flex items-center gap-1 text-sm font-medium font-display">
+        <a href="index.html#certifications" class="px-2.5 py-1.5 rounded-lg text-slate-600 dark:text-slate-300 hover:text-[#0b104a] hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors">Portal Home</a>
+        <a href="nism-10b.html" class="px-2.5 py-1.5 rounded-lg text-slate-600 dark:text-slate-300 hover:text-amber-700 hover:bg-amber-50/60 dark:hover:bg-amber-950/40 transition-colors">Series X-B Hub</a>
+        <a href="module10.html" class="px-2.5 py-1.5 rounded-lg text-slate-600 dark:text-slate-300 hover:text-rose-700 hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors">Module 10 Hub</a>
+        <a href="module10-ch14.html" class="px-2.5 py-1.5 rounded-lg text-slate-600 dark:text-slate-300 hover:text-rose-700 hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors">Ch 14: Basics of Estate</a>
+        <a href="module10-ch15.html" class="px-2.5 py-1.5 rounded-lg font-semibold text-rose-700 dark:text-rose-300 bg-rose-50 dark:bg-rose-950/70 border border-rose-200/80 dark:border-rose-800/80 transition-colors">Ch 15: Wills & Trusts ⭐</a>
+      </nav>
+
+      <!-- Right: Controls & Series X-B Return CTA -->
+      <div class="flex items-center gap-2">
+        <span class="hidden sm:inline-flex items-center gap-1 px-2.5 py-1 rounded-full text-xs font-bold bg-rose-50 dark:bg-rose-950/70 text-rose-700 dark:text-rose-300 border border-rose-200 dark:border-rose-800">
+          <i data-lucide="award" class="w-3.5 h-3.5"></i>
+          20 Marks
         </span>
-        <button onclick="window.openSpotlightModal()" class="hidden md:flex items-center gap-2 px-3 py-1.5 rounded-full border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-800 text-slate-500 dark:text-slate-400 text-xs font-medium" title="Search (⌘K)">
-          <i data-lucide="search" class="w-3.5 h-3.5 text-[#525fe1]"></i>
-          <span>Search</span>
+        <button onclick="window.openSpotlightModal()" class="flex items-center gap-2 px-3 py-1.5 rounded-full border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-800 text-slate-500 dark:text-slate-400 text-xs font-medium" title="Search (⌘K)">
+          <i data-lucide="search" class="w-3.5 h-3.5 text-rose-600 dark:text-rose-400"></i>
+          <span class="hidden sm:inline">Search</span>
           <kbd class="px-1.5 py-0.5 rounded bg-slate-100 dark:bg-slate-700 text-[10px] font-mono text-slate-400">⌘K</kbd>
         </button>
         <button id="nism-header-theme-btn" onclick="window.toggleDarkMode()" class="p-2 rounded-full border border-slate-200 dark:border-slate-700 text-slate-600 dark:text-slate-300 bg-white dark:bg-slate-800" title="Toggle Theme (⌘D)">
           <i data-lucide="moon" class="w-4 h-4"></i>
         </button>
-        <a href="#interactive-quiz" class="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-full text-xs font-bold text-white bg-[#525fe1] hover:bg-[#404dc7] shadow-xs transition-all font-display">
-          <i data-lucide="help-circle" class="w-3.5 h-3.5"></i>
-          <span>Chapter Quiz</span>
+        <a href="nism-10b.html" class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full text-xs font-bold text-amber-800 dark:text-amber-200 bg-amber-100 dark:bg-amber-950 hover:bg-amber-200 dark:hover:bg-amber-900 border border-amber-300 dark:border-amber-800 transition-all font-display shadow-2xs">
+          <i data-lucide="arrow-left" class="w-3.5 h-3.5 text-amber-600"></i>
+          <span>X-B Hub</span>
         </a>
       </div>
     </div>
@@ -793,15 +819,17 @@
   <footer class="bg-white dark:bg-slate-900 border-t border-slate-200 dark:border-slate-800 py-8 mt-12">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-slate-500 dark:text-slate-400">
       <div class="flex items-center gap-2">
-        <div class="w-6 h-6 rounded-lg bg-amber-500 flex items-center justify-center text-white font-bold text-[10px]">
+        <div class="w-6 h-6 rounded-lg bg-rose-600 flex items-center justify-center text-white font-bold text-[10px]">
           X-B
         </div>
         <span>NISM Series X-B (Investment Adviser Level 2) &bull; Chapter 15</span>
       </div>
       <div class="flex items-center gap-4">
-        <a href="module10.html" class="hover:text-amber-600 transition-colors">Module 10 Hub</a>
-        <a href="module10-ch14.html" class="hover:text-amber-600 transition-colors">Chapter 14</a>
-        <a href="module10-ch15.html" class="hover:text-amber-600 transition-colors font-bold text-amber-600 dark:text-amber-400">Chapter 15 ⭐</a>
+        <a href="index.html#certifications" class="hover:text-rose-600 dark:hover:text-rose-400 transition-colors">Portal Home</a>
+        <a href="nism-10b.html" class="hover:text-amber-600 dark:hover:text-amber-400 transition-colors font-semibold text-amber-700 dark:text-amber-300">Series X-B Hub</a>
+        <a href="module10.html" class="hover:text-rose-600 dark:hover:text-rose-400 transition-colors">Module 10 Hub</a>
+        <a href="module10-ch14.html" class="hover:text-rose-600 dark:hover:text-rose-400 transition-colors">Chapter 14</a>
+        <a href="module10-ch15.html" class="hover:text-rose-600 dark:hover:text-rose-400 transition-colors font-bold text-rose-600 dark:text-rose-400">Chapter 15 ⭐</a>
       </div>
     </div>
   </footer>

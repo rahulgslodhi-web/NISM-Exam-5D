@@ -108,11 +108,16 @@ html.dark h1, html.dark h2, html.dark h3, html.dark h4, html.dark h5, html.dark 
   justify-content: center;
   gap: 16px;
   transition: opacity 0.5s ease, visibility 0.5s ease;
+  animation: preloaderFailsafe 2s ease forwards;
 }
 .preloaders.fade-out {
-  opacity: 0;
-  visibility: hidden;
-  pointer-events: none;
+  opacity: 0 !important;
+  visibility: hidden !important;
+  pointer-events: none !important;
+}
+@keyframes preloaderFailsafe {
+  0%, 80% { opacity: 1; visibility: visible; }
+  100% { opacity: 0; visibility: hidden; pointer-events: none; }
 }
 .loader {
   width: 50px;
