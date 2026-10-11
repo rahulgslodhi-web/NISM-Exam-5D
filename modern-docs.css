@@ -3626,3 +3626,12 @@ html.dark .palette-filter-btn.active {
 }
 
 
+
+/* Ensure header containers strictly never overflow or spill text */
+header.sticky {
+  height: 4rem !important; /* 64px */
+  overflow: hidden !important;
+}
+header.sticky > div {
+  height: 100% !important;
+}

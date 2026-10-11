@@ -1454,32 +1454,32 @@
     const headerRight = document.querySelector("header .max-w-7xl > div:last-child, header .max-w-6xl > div:last-child, header div[class*='max-w'] > div:last-child");
     if (!headerRight) return;
 
-    // Theme Switcher Button
-    if (!document.getElementById("nism-header-theme-btn")) {
+    // Theme Switcher Button (only if not already present in header)
+    if (!document.getElementById("nism-header-theme-btn") && !headerRight.querySelector("button[onclick*='toggleDarkMode']")) {
       const isDark = isDarkModeActive();
       const themeBtn = document.createElement("button");
       themeBtn.id = "nism-header-theme-btn";
-      themeBtn.className = "theme-toggle-btn active:scale-95";
+      themeBtn.className = "p-2 rounded-xl border border-slate-200 dark:border-slate-700 text-slate-600 dark:text-slate-300 bg-white/90 dark:bg-slate-800 hover:border-slate-300 dark:hover:border-slate-600 transition-colors shadow-2xs active:scale-95";
       themeBtn.setAttribute("aria-label", "Toggle Dark/Light Theme");
       themeBtn.title = isDark ? "Switch to Light Mode (⌘D)" : "Switch to Dark Mode (⌘D)";
       themeBtn.onclick = () => window.toggleDarkMode();
       themeBtn.innerHTML = isDark
         ? `<i data-lucide="sun" class="w-4 h-4 text-amber-400"></i>`
-        : `<i data-lucide="moon" class="w-4 h-4 text-indigo-600"></i>`;
+        : `<i data-lucide="moon" class="w-4 h-4"></i>`;
       headerRight.insertBefore(themeBtn, headerRight.firstChild);
     }
 
-    // Quick Spotlight Search Button
-    if (!document.getElementById("nism-header-spotlight-btn")) {
+    // Quick Spotlight Search Button (only if not already present in header)
+    if (!document.getElementById("nism-header-spotlight-btn") && !headerRight.querySelector("button[onclick*='openSpotlightModal']")) {
       const btn = document.createElement("button");
       btn.id = "nism-header-spotlight-btn";
       btn.onclick = () => window.openSpotlightModal();
-      btn.className = "hidden sm:inline-flex items-center gap-2 px-3 py-1.5 rounded-xl text-xs font-semibold bg-slate-100/90 hover:bg-slate-200/90 text-slate-700 border border-slate-200/80 transition-all shadow-2xs active:scale-95";
+      btn.className = "hidden sm:inline-flex items-center gap-1.5 px-2.5 py-1.5 rounded-xl text-xs font-medium bg-white/90 dark:bg-slate-800 text-slate-500 dark:text-slate-400 border border-slate-200 dark:border-slate-700 transition-all shadow-2xs active:scale-95";
       btn.setAttribute("aria-label", "Search chapters");
       btn.innerHTML = `
-        <i data-lucide="search" class="w-3.5 h-3.5 text-indigo-600"></i>
-        <span>Search...</span>
-        <kbd class="spotlight-kbd text-[10px] text-slate-500 ml-1">⌘K</kbd>
+        <i data-lucide="search" class="w-3.5 h-3.5"></i>
+        <span>Search</span>
+        <kbd class="hidden md:inline-block px-1.5 py-0.5 rounded bg-slate-100 dark:bg-slate-700 text-[10px] font-mono text-slate-400">⌘K</kbd>
       `;
       headerRight.insertBefore(btn, headerRight.firstChild);
     }
